@@ -1,0 +1,85 @@
+name: 投资工作台 · 每交易日更新
+
+# 北京时间 07:00 与 20:30，各跑一次
+# GitHub 的 cron 用 UTC，且实际触发常延迟 5–15 分钟，属正常现象
+on:
+  schedule:
+    - cron: "0 23 * * 0-4"    # UTC 周日–周四 23:00 = 北京 周一–周五 07:00
+    - cron: "30 12 * * 1-5"   # UTC 周一–周五 12:30 = 北京 周一–周五 20:30
+  workflow_dispatch:           # 支持在 Actions 页面手动触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: desk-daily
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 抓核心行情（Yahoo 版 live-data.js）
+        run: node sync-core.mjs
+        continue-on-error: true
+
+      - name: 抓辅助数据与财报日历（live-extra.js）
+        run: node sync-extra.mjs
+        continue-on-error: true
+
+      - name: 抓业绩内容（live-news.js，走东方财富）
+        run: node sync-news.mjs
+        continue-on-error: true
+
+      - name: 校验产物
+        run: |
+          for f in live-data.js live-extra.js live-news.js; do
+            if [ ! -s "$f" ]; then echo "::error::$f 为空或缺失"; exit 1; fi
+            node --check "$f" 2>/dev/null || node -e "new Function(require('fs').readFileSync('$f','utf8'))" || { echo "::error::$f 语法错误"; exit 1; }
+            echo "✓ $f $(wc -c < $f) 字节"
+          done
+
+      - name: 提交数据回仓库
+        run: |
+          git config user.name "desk-bot"
+          git config user.email "desk-bot@users.noreply.github.com"
+          git add live-data.js live-extra.js live-news.js cal-cache.json
+          if git diff --staged --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "data: $(TZ=Asia/Shanghai date +'%Y-%m-%d %H:%M') 自动更新"
+            git push
+          fi
+
+      - name: 组装发布目录
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp live-data.js live-extra.js live-news.js _site/ 2>/dev/null || true
+          ls -la _site
+
+      - name: 上传页面产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 发布到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

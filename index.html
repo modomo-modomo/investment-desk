@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#1d3a6e" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="投资工作台" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='40' fill='%231d3a6e'/%3E%3Cpath d='M38 120l26-32 22 17 26-38 28 26' fill='none' stroke='%23fff' stroke-width='11' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M32 138h116' stroke='%23fff' stroke-width='9' stroke-linecap='round' opacity='.45'/%3E%3C/svg%3E" />
+<title>投资工作台 · Investment Desk</title>
+<style>
+:root{
+  --bg:#f4f6fa; --surface:#fff; --surface-2:#fafbfd;
+  --line:#e6eaf1; --line-strong:#d5dbe6;
+  --text:#0e1726; --text-2:#3d4a5c; --muted:#7a8798;
+  --accent:#1d3a6e; --accent-2:#2f5da8; --accent-soft:#eef3fb;
+  --up:#d2373a; --up-soft:#fdeeee; --down:#0d8a5f; --down-soft:#e9f7f1;
+  --warn:#b26a00; --warn-soft:#fdf5e6; --violet:#6d4aa8; --violet-soft:#f3eefb;
+  --sidebar-w:236px; --radius:12px;
+  --shadow:0 1px 2px rgba(16,29,54,.04), 0 8px 24px -12px rgba(16,29,54,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-size:13.5px;line-height:1.62;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased}
+::selection{background:#d8e3f7}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);background:var(--surface);
+  border-right:1px solid var(--line);display:flex;flex-direction:column;z-index:40;
+  transition:transform .24s cubic-bezier(.4,0,.2,1)}
+.brand{padding:18px 18px 14px;border-bottom:1px solid var(--line)}
+.brand-row{display:flex;align-items:center;gap:10px}
+.logo{width:32px;height:32px;border-radius:9px;flex:0 0 auto;background:linear-gradient(145deg,#1d3a6e,#3a63a8);
+  display:grid;place-items:center;color:#fff;box-shadow:0 4px 10px -4px rgba(29,58,110,.55)}
+.brand-title{font-size:14.5px;font-weight:650;letter-spacing:.2px}
+.brand-sub{font-size:10.5px;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;margin-top:1px}
+.brand-meta{margin-top:12px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted)}
+.dot-live{display:inline-flex;align-items:center;gap:5px}
+.dot-live i{width:5px;height:5px;border-radius:50%;background:var(--up);display:block;box-shadow:0 0 0 3px var(--up-soft)}
+.nav{padding:10px;overflow-y:auto;flex:1}
+.nav-label{font-size:10px;letter-spacing:1.2px;color:#a3adbb;padding:8px 8px 6px;text-transform:uppercase}
+.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:var(--text-2);
+  font-size:13px;cursor:pointer;position:relative;transition:.15s}
+.nav-item svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:.75;flex:0 0 auto}
+.nav-item:hover{background:var(--surface-2);color:var(--text)}
+.nav-item.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.nav-item.active svg{opacity:1}
+.nav-item.active::before{content:"";position:absolute;left:-10px;top:50%;transform:translateY(-50%);
+  width:3px;height:18px;background:var(--accent);border-radius:0 2px 2px 0}
+.nav-item .idx{margin-left:auto;font-size:10px;color:#b6bfcc;font-variant-numeric:tabular-nums}
+.nav-item .soon{margin-left:auto;font-size:9px;padding:1px 5px;border-radius:4px;background:#f1f3f7;color:#98a2b3}
+.side-foot{padding:10px 14px 12px;border-top:1px solid var(--line);font-size:10.5px;color:var(--muted);line-height:1.65}
+.side-foot b{color:var(--text-2);font-weight:600}
+
+.main{margin-left:var(--sidebar-w);min-height:100vh;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);padding:12px 28px;display:flex;align-items:center;gap:18px}
+.topbar h1{font-size:17px;font-weight:650}
+.topbar .desc{font-size:11.5px;color:var(--muted);margin-top:1px}
+.topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.menu-btn{display:none;width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--surface);
+  place-items:center;flex:0 0 auto;color:var(--text-2)}
+.menu-btn:active{background:var(--accent-soft);color:var(--accent)}
+.menu-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round}
+.mask{display:none;position:fixed;inset:0;background:rgba(14,23,38,.42);z-index:38}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--line);
+  border-radius:7px;font-size:11.5px;color:var(--text-2);background:var(--surface);font-variant-numeric:tabular-nums}
+.pill b{font-weight:600;color:var(--text)}
+.pill.warn{border-color:#f0d9b0;background:var(--warn-soft);color:var(--warn)}
+.btn-ghost{padding:6px 11px;border:1px solid var(--line);border-radius:7px;background:var(--surface);font-size:11.5px;color:var(--text-2);transition:.15s}
+.btn-ghost:hover{border-color:var(--line-strong);background:var(--surface-2);color:var(--text)}
+.view{padding:18px 28px 60px;max-width:1500px;width:100%;animation:fade .26s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.feedbar{display:flex;align-items:center;gap:9px;padding:8px 12px;margin-bottom:16px;
+  background:#fff7f7;border:1px solid #f3d6d6;border-radius:9px;font-size:11.5px;color:#a33;line-height:1.5}
+.feedbar .ic{width:16px;height:16px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;
+  background:#d2373a;color:#fff;font-size:10px;font-weight:700}
+.feedbar b{color:#8f2424}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.sec{margin-bottom:22px}
+.sec-head{display:flex;align-items:baseline;gap:10px;margin:0 0 9px;padding-left:2px;flex-wrap:wrap}
+.sec-num{font-size:10.5px;font-weight:700;color:var(--accent-2);letter-spacing:.5px;background:var(--accent-soft);
+  padding:2px 6px;border-radius:5px;font-variant-numeric:tabular-nums}
+.sec-title{font-size:13.5px;font-weight:650}
+.sec-sub{font-size:11.5px;color:var(--muted)}
+.sec-head .right{margin-left:auto;font-size:11px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.upd{display:inline-flex;align-items:center;gap:5px;padding:2px 7px;border-radius:5px;background:var(--surface-2);
+  border:1px solid var(--line);font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.upd b{color:var(--text-2);font-weight:600}
+.upd.hot{border-color:#f4d9c2;background:#fff8f2;color:#a4622a}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g-auto{grid-template-columns:repeat(auto-fill,minmax(272px,1fr))}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--muted)}
+.chg{display:inline-block;text-align:right;font-variant-numeric:tabular-nums;font-weight:600;font-size:12.5px}
+.tag{display:inline-block;padding:1px 7px;border-radius:5px;font-size:10.5px;line-height:1.7;
+  background:var(--surface-2);color:var(--text-2);border:1px solid var(--line);white-space:nowrap}
+.tag.blue{background:var(--accent-soft);color:var(--accent);border-color:#dbe6f6}
+.tag.red{background:var(--up-soft);color:var(--up);border-color:#f6dcdc}
+.tag.green{background:var(--down-soft);color:var(--down);border-color:#d6efe5}
+.tag.amber{background:var(--warn-soft);color:var(--warn);border-color:#f6e6c9}
+.tag.violet{background:var(--violet-soft);color:var(--violet);border-color:#e4dcf5}
+.tag.dash{border-style:dashed;color:#98a2b3}
+.muted{color:var(--muted)}.small{font-size:11.5px}.tiny{font-size:10.5px}
+.pending{font-size:10.5px;color:#98a2b3;border:1px dashed #d5dbe6;border-radius:5px;padding:1px 6px;display:inline-block;background:#fcfdfe}
+
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
+table.tbl th{text-align:left;font-weight:600;font-size:10.5px;letter-spacing:.5px;color:var(--muted);
+  text-transform:uppercase;padding:9px 12px;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap}
+table.tbl td{padding:9px 12px;border-bottom:1px solid #f1f4f8;vertical-align:top;color:var(--text-2)}
+table.tbl tr:last-child td{border-bottom:none}
+table.tbl tbody tr:hover{background:#fbfcfe}
+table.tbl td.strong{color:var(--text);font-weight:600}
+table.tbl td.num,table.tbl th.num{text-align:right;font-variant-numeric:tabular-nums}
+table.tbl tr.grp td{background:#f7f9fc;font-size:10px;letter-spacing:1px;color:#94a0b0;text-transform:uppercase;padding:6px 12px;font-weight:600}
+.tk{font-weight:700;color:var(--text);letter-spacing:.2px;font-size:12.5px}
+.tk-sub{font-size:10.5px;color:var(--muted);margin-top:1px}
+.read{font-size:11.5px;color:var(--text-2);line-height:1.62}
+
+.hero{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;background:var(--surface);box-shadow:var(--shadow);margin-bottom:20px}
+.hero-left{padding:18px 22px 14px;border-right:1px solid var(--line)}
+.hero-kicker{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.hero-kicker .date{font-size:10.5px;letter-spacing:1.4px;color:var(--muted);text-transform:uppercase;font-variant-numeric:tabular-nums}
+.hero h2{font-size:15px;font-weight:650;margin-bottom:2px}
+.hero .stance{font-size:12px;color:var(--text-2);margin-bottom:10px}
+.hero .stance b{color:var(--up)}
+ol.concl{list-style:none;counter-reset:c}
+ol.concl li{counter-increment:c;position:relative;padding:6px 0 6px 26px;font-size:12.5px;color:var(--text-2);border-top:1px dashed #eef1f6}
+ol.concl li:first-child{border-top:none}
+ol.concl li::before{content:counter(c,decimal-leading-zero);position:absolute;left:0;top:7px;font-size:10px;
+  font-weight:700;color:var(--accent-2);font-variant-numeric:tabular-nums}
+ol.concl li b{color:var(--text);font-weight:650}
+.hero-right{padding:16px 18px;background:linear-gradient(180deg,#fcfdff,#f8fafd);display:flex;flex-direction:column;gap:12px}
+.senti{border-bottom:1px solid var(--line);padding-bottom:10px}
+.senti:last-of-type{border-bottom:none;padding-bottom:0}
+.senti-top{display:flex;align-items:baseline;gap:8px}
+.senti-top .k{font-size:11px;color:var(--muted)}
+.senti-top .v{margin-left:auto;font-size:19px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.senti-top .lb{font-size:10.5px;font-weight:600}
+.gauge{height:6px;border-radius:3px;background:#e9edf4;overflow:hidden;margin-top:6px;position:relative}
+.gauge span{display:block;height:100%;border-radius:3px}
+.gscale{display:flex;justify-content:space-between;font-size:9.5px;color:#aeb7c4;margin-top:3px}
+.comp{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;margin-top:8px}
+.comp-row{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}
+.comp-row .bar{flex:1;height:4px;border-radius:2px;background:#edf0f6;overflow:hidden}
+.comp-row .bar i{display:block;height:100%;border-radius:2px;background:#9db0cc}
+.comp-row .n{font-variant-numeric:tabular-nums;color:var(--text-2);font-weight:600;width:22px;text-align:right}
+
+.mv{font-weight:700;font-variant-numeric:tabular-nums;font-size:13px}
+.state{font-size:9.5px;padding:1px 5px;border-radius:4px;font-weight:600;white-space:nowrap}
+.state.done{background:var(--down-soft);color:var(--down)}
+.gap{font-size:11px;font-variant-numeric:tabular-nums;line-height:1.7}
+.gap b{font-weight:600}
+
+.subtabs{display:flex;gap:2px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:16px}
+.subtab{padding:8px 13px;font-size:12.5px;color:var(--muted);border-bottom:2px solid transparent;
+  margin-bottom:-1px;transition:.15s;white-space:nowrap;cursor:pointer}
+.subtab:hover{color:var(--text)}
+.subtab.on{color:var(--accent);border-color:var(--accent);font-weight:650}
+.subtab .c{font-size:10px;color:#b6bfcc;margin-left:4px}
+
+.track-ico{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:0 0 auto;font-size:11px;font-weight:700}
+.track h3{font-size:14px;font-weight:650}
+.track .sub{font-size:10.5px;color:var(--muted)}
+.thesis{font-size:12px;color:var(--text-2);line-height:1.7;border-left:2px solid #dbe6f6;padding-left:10px}
+.kpi-row{display:flex;flex-wrap:wrap;gap:6px}
+.kpi{font-size:10.5px;padding:3px 7px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line);color:var(--text-2)}
+.kpi b{color:var(--text);font-weight:600;font-variant-numeric:tabular-nums}
+
+.tl{margin-top:4px}
+.tl-item{position:relative;padding:0 0 16px 18px;border-left:1px solid #e6eaf1;margin-left:5px}
+.tl-item:last-child{border-left-color:transparent;padding-bottom:2px}
+.tl-item::before{content:"";position:absolute;left:-4px;top:5px;width:7px;height:7px;border-radius:50%;background:#fff;border:2px solid #c9d4e4}
+.tl-item.new::before{border-color:var(--up);background:var(--up)}
+.tl-meta{font-size:10.5px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.tl-title{font-size:12.5px;font-weight:600;margin:2px 0 3px;line-height:1.55}
+.tl-title.new{color:var(--up)}
+.tl-body{font-size:11.5px;color:var(--text-2);line-height:1.65}
+.src{color:#94a0b0;font-size:10.5px}
+
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
+.cal-day{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 9px;min-height:138px;background:#fff}
+.cal-day:nth-child(7n){border-right:none}
+.cal-day.today{background:#fbfcff;box-shadow:inset 0 2px 0 var(--accent-2)}
+.cal-day.weekend{background:#fbfcfe}
+.cal-dow{font-size:9.5px;color:#a0aaba;letter-spacing:.8px}
+.cal-date{font-size:14px;font-weight:650;margin:1px 0 5px;font-variant-numeric:tabular-nums}
+.cal-day.today .cal-date{color:var(--accent-2)}
+.cal-ev{font-size:10.5px;line-height:1.45;padding:4px 0;border-top:1px dashed #f0f3f8;display:flex;gap:5px}
+.cal-ev:first-of-type{border-top:none}
+.cal-ev .t{color:#a0aaba;font-variant-numeric:tabular-nums;flex:0 0 auto;font-size:9.5px;padding-top:1px}
+.cal-ev .x{color:var(--text-2)}
+.imp{width:5px;height:5px;border-radius:50%;margin-top:5px;flex:0 0 auto}
+.imp.h{background:var(--up)}.imp.m{background:#e0a33a}.imp.l{background:#c3cbd8}
+
+.quote{border-left:2px solid #d8dee9;padding:8px 12px;background:var(--surface-2);border-radius:0 8px 8px 0;margin-bottom:8px}
+.quote .q-meta{font-size:10px;color:var(--muted);margin-bottom:3px;font-variant-numeric:tabular-nums}
+.quote .o{font-size:12px;color:var(--text);line-height:1.62}
+.quote .zh{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.55}
+.quote .r{font-size:11.5px;color:var(--text-2);margin-top:5px;padding-top:5px;border-top:1px dashed #e7ebf2;line-height:1.6}
+.quote .r b{color:var(--accent-2)}
+.hi{color:var(--up);font-weight:600}
+.hi-b{color:var(--up);font-weight:700}
+.q-new{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--up);vertical-align:middle;margin-right:5px}
+.quote.isnew{border-left-color:var(--up);background:#fffafa}
+.quote.isnew .q-meta{color:var(--up)}
+.chip-src{font-size:9.5px;color:#98a2b3;border:1px solid var(--line);border-radius:4px;padding:0 4px;white-space:nowrap}
+.empty{padding:22px;text-align:center;font-size:11.5px;color:var(--muted)}
+.mrow{display:flex;gap:8px;font-size:11.5px;padding:6px 0;border-top:1px dashed #eef1f6;line-height:1.62}
+.mrow .mk{flex:0 0 60px;color:#98a2b3;font-size:10.5px;padding-top:2px;letter-spacing:.3px}
+.mrow .mv2{flex:1;color:var(--text-2)}
+.verdict{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:10px;
+  background:linear-gradient(96deg,#f7f9fd,#fff);border:1px solid var(--line);margin-bottom:12px}
+.verdict .vt{font-size:19px;font-weight:700;letter-spacing:.4px}
+.verdict .vn{font-size:11.5px;color:var(--muted);line-height:1.6}
+.tbl tr.isupd td{background:#fffbfb}
+.tbl tr.isupd td:first-child{box-shadow:inset 3px 0 0 var(--up)}
+.sel-sum{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.sub-h{display:flex;align-items:center;gap:8px;margin:16px 0 9px;padding-top:2px}
+.sub-h .sn{font-size:10px;font-weight:700;color:#fff;background:var(--accent-2);border-radius:4px;padding:1px 5px;letter-spacing:.4px}
+.sub-h b{font-size:12.5px;font-weight:650}
+.sub-h .d{font-size:11px;color:var(--muted)}
+.srcbar{display:flex;gap:18px;flex-wrap:wrap;padding:9px 13px;margin-bottom:16px;border:1px solid var(--line);
+  border-radius:9px;background:var(--surface);font-size:11px;color:var(--text-2);align-items:center}
+.srcbar .si{display:flex;align-items:center;gap:5px}
+.srcbar .dot{width:6px;height:6px;border-radius:50%;display:block}
+.srcbar .dot.on{background:var(--down);box-shadow:0 0 0 3px var(--down-soft)}
+.srcbar .dot.off{background:#c9d0da;box-shadow:0 0 0 3px #f2f4f8}
+.srcbar b{font-weight:600;color:var(--text)}
+
+.filters{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.fchip{padding:5px 11px;border-radius:7px;border:1px solid var(--line);background:var(--surface);font-size:11.5px;color:var(--text-2);transition:.15s}
+.fchip:hover{border-color:var(--line-strong);color:var(--text)}
+.fchip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.stock-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:13px 14px;
+  cursor:pointer;transition:.16s;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:7px}
+.stock-card:hover{transform:translateY(-2px);border-color:#cfdbef;box-shadow:0 12px 28px -16px rgba(16,29,54,.28)}
+.sc-top{display:flex;align-items:flex-start;gap:8px}
+.sc-tk{font-size:14px;font-weight:750;letter-spacing:.3px}
+.sc-name{font-size:11px;color:var(--muted);margin-top:-1px}
+.sc-px{margin-left:auto;text-align:right}
+.sc-px .p{font-size:13px;font-weight:650;font-variant-numeric:tabular-nums}
+.sc-px .d{font-size:11px;font-variant-numeric:tabular-nums;font-weight:600}
+.sc-logic{font-size:11.5px;color:var(--text-2);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sc-foot{display:flex;align-items:center;gap:6px;padding-top:7px;border-top:1px dashed #eef1f6;margin-top:auto;flex-wrap:wrap}
+.sc-foot .cap{font-size:10px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+.lab{font-size:10px;padding:1px 7px;border-radius:5px;border:1px solid;font-weight:600}
+.lab.none{color:#98a2b3;border-color:#dbe1ea;background:#fafbfd;border-style:dashed}
+.lab.trk{color:#5b6b80;border-color:#dbe1ea;background:#f7f9fc}
+.lab.dis{color:var(--violet);border-color:#e4dcf5;background:var(--violet-soft)}
+.lab.key{color:var(--warn);border-color:#f6e6c9;background:var(--warn-soft)}
+.lab.hold{color:var(--accent);border-color:#dbe6f6;background:var(--accent-soft)}
+.lab.add{color:var(--up);border-color:#f6dcdc;background:var(--up-soft)}
+.lab.cut{color:var(--down);border-color:#d6efe5;background:var(--down-soft)}
+
+.overlay{position:fixed;inset:0;background:rgba(14,23,38,.28);opacity:0;pointer-events:none;transition:.2s;z-index:60}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:520px;max-width:95vw;background:var(--surface);
+  border-left:1px solid var(--line);z-index:61;transform:translateX(102%);transition:transform .26s cubic-bezier(.4,0,.2,1);
+  overflow-y:auto;box-shadow:-20px 0 50px -30px rgba(16,29,54,.4)}
+.drawer.on{transform:none}
+.dw-head{position:sticky;top:0;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:15px 22px 12px;z-index:2}
+.dw-close{position:absolute;top:13px;right:14px;width:26px;height:26px;border-radius:6px;color:var(--muted);font-size:15px;display:grid;place-items:center}
+.dw-close:hover{background:var(--surface-2);color:var(--text)}
+.dw-body{padding:16px 22px 44px;display:flex;flex-direction:column;gap:15px}
+.dw-sec>h4{font-size:10.5px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-bottom:7px;font-weight:600;display:flex;align-items:center;gap:6px}
+.dw-sec>h4 .ln{flex:1;height:1px;background:var(--line)}
+.dw-sec p{font-size:12.5px;color:var(--text-2);line-height:1.75}
+.kpi-tbl{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kpi-box{border:1px solid var(--line);border-radius:8px;padding:7px 10px;background:var(--surface-2)}
+.kpi-box .k{font-size:10.5px;color:var(--muted)}
+.kpi-box .v{font-size:12.5px;font-weight:650;margin-top:1px;font-variant-numeric:tabular-nums}
+.lab-picker{display:flex;gap:5px;flex-wrap:wrap}
+.lab-picker button{font-size:10.5px;padding:3px 8px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--text-2)}
+.lab-picker button:hover{border-color:var(--line-strong)}
+.lab-picker button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.mini-tbl{width:100%;border-collapse:collapse;font-size:11px}
+.mini-tbl th{text-align:left;color:var(--muted);font-weight:600;font-size:10px;padding:4px 6px;border-bottom:1px solid var(--line)}
+.mini-tbl td{padding:5px 6px;border-bottom:1px solid #f2f5f9;color:var(--text-2);vertical-align:top}
+.mini-tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+.mini-tbl tr:last-child td{border-bottom:none}
+
+.trade{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:var(--surface);display:flex;gap:11px}
+.trade .side{width:4px;align-self:stretch;border-radius:2px;flex:0 0 auto}
+.trade.long .side{background:var(--up)}.trade.short .side{background:var(--down)}.trade.hedge .side{background:var(--warn)}
+.trade h4{font-size:12.5px;font-weight:650;margin-bottom:2px}
+.trade .meta{font-size:10.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;margin-top:5px}
+.trade .meta b{color:var(--text-2);font-weight:600}
+.pos{font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums;padding:2px 7px;border-radius:5px;background:var(--accent-soft);color:var(--accent)}
+.note-area{width:100%;min-height:130px;border:1px solid var(--line);border-radius:10px;padding:11px 13px;
+  font-family:inherit;font-size:12.5px;line-height:1.8;color:var(--text-2);background:var(--surface-2);resize:vertical;outline:none}
+.note-area:focus{border-color:#c5d5ee;background:#fff;box-shadow:0 0 0 3px rgba(47,93,168,.07)}
+.note-foot{display:flex;justify-content:space-between;align-items:center;margin-top:7px;font-size:10.5px;color:var(--muted)}
+
+.risk{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface);display:flex;gap:12px}
+.risk .sev{width:3px;border-radius:2px;align-self:stretch;flex:0 0 auto}
+.risk h4{font-size:12.5px;font-weight:650;margin-bottom:3px}
+.risk .kv{display:grid;grid-template-columns:58px 1fr;gap:3px 8px;font-size:11px;margin-top:6px}
+.risk .kv dt{color:var(--muted)}
+.risk .kv dd{color:var(--text-2);line-height:1.55}
+.rec{border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--surface);display:flex;flex-direction:column;gap:7px}
+.rec-top{display:flex;align-items:center;gap:8px}
+.rec .act{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px}
+.rec .act.in{background:var(--violet-soft);color:var(--violet)}
+.rec .act.add{background:var(--up-soft);color:var(--up)}
+.rec .act.cut{background:var(--down-soft);color:var(--down)}
+.rec .act.watch{background:#f2f4f8;color:#7a8798}
+.rec .act.hedge{background:var(--warn-soft);color:var(--warn)}
+.rec .why{font-size:11.5px;color:var(--text-2);line-height:1.65}
+.rec .from{display:flex;gap:4px;flex-wrap:wrap;margin-top:auto;padding-top:7px;border-top:1px dashed #eef1f6;align-items:center}
+.rec button.mini{font-size:10.5px;padding:3px 9px;border-radius:6px;border:1px solid var(--line);background:#fff;color:var(--text-2)}
+.rec button.mini:hover{border-color:var(--accent-2);color:var(--accent)}
+.rec button.mini:disabled{opacity:.55;cursor:default}
+
+.ph-hero{border:1px dashed #cfd8e6;border-radius:var(--radius);background:linear-gradient(180deg,#fbfcfe,#f6f9fd);padding:20px 22px;margin-bottom:16px}
+.ph-hero h3{font-size:14px;font-weight:650;margin-bottom:4px}
+.ph-hero p{font-size:12px;color:var(--muted);max-width:780px;line-height:1.7}
+.ph-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.ph-card{border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:13px 15px}
+.ph-card .t{font-size:12px;font-weight:650}
+.ph-card .d{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.65}
+.skel{margin-top:9px;display:flex;flex-direction:column;gap:5px}
+.skel i{display:block;height:6px;border-radius:3px;background:linear-gradient(90deg,#eef1f6,#f7f9fc,#eef1f6);background-size:200% 100%;animation:sh 1.8s infinite}
+.skel i:nth-child(2){width:86%}.skel i:nth-child(3){width:64%}
+@keyframes sh{0%{background-position:0 0}100%{background-position:-200% 0}}
+
+.foot{border-top:1px solid var(--line);padding:14px 28px 26px;font-size:10.5px;color:#98a2b3;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:1240px){
+  .hero{grid-template-columns:1fr}.hero-left{border-right:none;border-bottom:1px solid var(--line)}
+  .g3{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:980px){
+  :root{--sidebar-w:0px}
+  .sidebar{transform:translateX(-100%);width:264px;box-shadow:0 0 48px rgba(14,23,38,.20)}
+  .sidebar.open{transform:translateX(0)}
+  .mask.show{display:block}
+  .main{margin-left:0}
+  .menu-btn{display:grid}
+  body{font-size:13px}
+  .view{padding:12px 12px calc(52px + env(safe-area-inset-bottom))}
+  .topbar{padding:9px 12px;gap:10px}
+  .topbar h1{font-size:15px}
+  .topbar .desc{font-size:10.5px;line-height:1.5}
+  .topbar-right{gap:6px}
+  .topbar-right .pill:first-child{display:none}
+  .pill{font-size:11px;padding:4px 8px}
+  .btn-ghost{padding:5px 9px;font-size:11px}
+  .g2,.g3{grid-template-columns:1fr}
+  .cal{grid-template-columns:1fr}
+  .cal-day{border-right:none}
+  table.tbl{min-width:640px}
+  .foot{padding:12px 14px 22px}
+}
+@media (max-width:420px){
+  .topbar .desc{display:none}
+  .topbar h1{font-size:14.5px}
+}
+@media print{
+  .sidebar,.topbar-right,.drawer,.overlay,.feedbar{display:none!important}
+  .main{margin-left:0}body{background:#fff}
+  .card,.stock-card,.hero{box-shadow:none;break-inside:avoid}
+  .view{padding:0;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-row">
+      <div class="logo">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 17l5-6 4 3 5-7 4 4"/><path d="M3 21h18" opacity=".45"/>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-title">投资工作台</div>
+        <div class="brand-sub">Investment Desk</div>
+      </div>
+    </div>
+    <div class="brand-meta">
+      <span class="dot-live"><i></i><span id="side-date">2026-11-11</span></span>
+      <span id="side-week">周三</span>
+    </div>
+  </div>
+  <nav class="nav" id="nav"></nav>
+  <div class="side-foot">
+    <b>数据源</b>　<span id="feed-state" style="color:#c0392b">Wind 未连接</span><br>
+    更新节奏 <b>每个交易日两次</b>：20:30 / 次日 07:00<br>
+    <span style="color:#b6bfcc">行情/财报为实时抓取，资讯类待接源</span>
+  </div>
+</aside>
+<div class="mask" id="mask"></div>
+
+<div class="main">
+  <header class="topbar">
+    <button class="menu-btn" id="btn-menu" aria-label="打开导航">
+      <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div>
+      <h1 id="ttl">每日资讯</h1>
+      <div class="desc" id="dsc"></div>
+    </div>
+    <div class="topbar-right">
+      <span class="pill warn" id="feed-pill">Wind MCP 未连接 · 示例数据</span>
+      <span class="pill"><b id="hdr-date">2026-11-11</b><span class="muted">周三 · 北京</span></span>
+      <button class="btn-ghost" id="btn-print">导出 / 打印</button>
+    </div>
+  </header>
+  <div class="view" id="view"></div>
+  <div class="foot">
+    <span>投资工作台 · 内部研究用途 · 示例数据，不构成投资建议</span>
+    <span>红涨绿跌（A 股/港股惯例） · 时区：北京时间</span>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer"></aside>
+
+<script src="live-data.js"></script>
+<script src="live-extra.js"></script>
+<script src="live-news.js"></script>
+<script>
+/* ==========================================================================
+   WIND 数据适配层
+   当前 FEED.connected=false，页面用 DATA 中的占位值渲染。
+   接上 Wind MCP 后：connected 置 true，实现 fetch()，字段映射见下。
+     quote   -> w.wss 收盘价 / 涨跌幅 / 开盘价
+     cross   -> w.wsd 序列（当日、20 日）
+     earn    -> w.wset 业绩 + 盘前盘后行情
+     breadth -> w.wset 涨跌家数
+     senti   -> 自算（动量/强度/广度/期权/信用）
+   ========================================================================== */
+const FEED = { connected:false, source:"Wind MCP", lastSync:null,
+  async fetch(kind, params){ throw new Error("Wind MCP 未连接"); } };
+
+const DATA = {
+  meta:{ date:"2026-11-11", week:"周三", stance:"Risk-off（估值消化）",
+    stanceNote:"仓位 66%，从“算力”挪向“电力 + 封装设备”，留 12% 现金等 CPI",
+    updatedPT:"11-11 07:00", nextPT:"今日 20:30" },
+
+  senti:{
+    appetite:{ v:62, label:"偏多", at:"11-11 07:00" },
+    fng:{ v:58, label:"贪婪", at:"11-11 07:00", scale:["极度恐惧","恐惧","中性","贪婪","极度贪婪"] },
+    comps:[["市场动量",71],["股价强度",64],["市场广度",38],["看跌/看涨",55],["垃圾债需求",66],["避险需求",45]]
+  },
+
+  brief:{
+    conclusions:[
+      ["利率才是这轮调整的主因，不是 AI 需求证伪。","10Y 在 4.98%，较 20 日前回落 23bp 但仍贴近 5%。分母端没解除，长久期资产就一直在挨打。判断行情性质，先看利率，别急着怀疑产业逻辑。"],
+      ["这不是普跌，是防御轮动。","20 日：道指 +1.09%、纳指 -7.86%、费半 -18.11%；同期医疗 +11.3%、必需消费 +8.1%、金融 +6.3%。等权 RSP +3.6% 跑赢市值加权 SPY -3.6% 达 7.2 个百分点——<b>跌的是权重股，不是全市场</b>。"],
+      ["铜价是最硬的基本面旁证。","LME 铜 13,992 美元/吨，20 日仅 -5%，远强于费半的 -18%。AI 的用电需求是真的，被杀的是估值不是需求——这是当前最重要的区分。"],
+      ["操作顺序：先选市场（美股 &gt; 港股 &gt; A 股），再选行业（医疗/必需消费/AI 电力/封测设备增配，信息技术整体减配），最后才是标的。","把科技敞口从 34% 降到 26%，腾出的仓位去电力与医疗；港股从低配上调到标配偏高；A 股只做映射不做 beta。VIX 抬升但绝对值不贵，用利率对冲护久期，等 CPI 落地再决定是否加回成长。"]
+    ],
+    color:[
+      {dim:"指数", perf:"标普 +0.4% / 纳指 +0.9% / 道指 -0.2% / 罗素2000 -0.6%", note:"科技权重拉动指数，小盘走弱。风险偏好是集中的，不是扩散的。"},
+      {dim:"风格", perf:"成长 +1.1% / 价值 -0.3%；动量 +1.4% / 低波 -0.5%", note:"动量拥挤度 88% 分位（2021 年以来），反转风险在积累。"},
+      {dim:"半导体", perf:"SOX +2.3%；设备与封测领涨（TER +4.1%、ONTO +3.6%）", note:"先进封装订单可见度延伸到 2027H2，模拟与存储走分化。"},
+      {dim:"波动", perf:"VIX 15.8（-0.6）；VIX/VIX3M = 0.91", note:"近端贴水，市场几乎不为事件风险定价，保护成本便宜。"},
+      {dim:"量能", perf:"纽交所+纳斯达克 198 亿股（20 日均 182 亿，+8.8%）；QQQ 成交额 312 亿（+15%）", note:"放量但分布不均：增量集中在 7 只权重股，属结构性放量，不是全面进攻。量能背离是要盯的裂缝。"},
+      {dim:"板块", perf:"信息技术 +1.3% / 通信服务 +0.9% / 医疗 +0.4%；能源 -0.8% / 公用事业 -1.1%", note:"油价回落拖累能源；公用事业连涨六周后获利了结，与 AI 电力叙事背离——这是值得盯的分歧点。"},
+      {dim:"个股分化", perf:"涨跌比 0.94，中位数 -0.1%，前 10 大权重占标普 41%", note:"指数与个股背离，被动资金主导定价，主动选股的 alpha 窗口在打开。"}
+    ],
+    cross:[
+      {group:"利率与汇率", rows:[
+        {n:"10Y 美债收益率", close:"4.28%", d1:6, u1:"bp", d20:18, u20:"bp", note:"实际利率 1.92%；上破 4.30% 将触发成长股杀估值"},
+        {n:"美元指数 DXY", close:"99.42", d1:0.31, d20:1.20, note:"利差支撑，欧元 1.152；注意套息交易拥挤"},
+        {n:"美元 / 日元", close:"154.82", d1:0.42, d20:2.40, note:"155 是干预敏感位，突破后波动放大"},
+        {n:"欧元 / 美元", close:"1.1524", d1:-0.24, d20:-1.05, note:"欧洲增长预期下修，压制欧元"}
+      ]},
+      {group:"大宗商品", rows:[
+        {n:"WTI 原油", close:"62.80", d1:-1.24, d20:-4.80, note:"OPEC+ 增产预期压制；地缘溢价仅 1.8 美元"},
+        {n:"布伦特原油", close:"66.94", d1:-1.05, d20:-4.10, note:"Brent-WTI 价差 4.14，较上月收窄 0.6"},
+        {n:"黄金", close:"4,018", d1:-0.82, d20:-3.60, note:"实际利率上行压制；避险需求未启动"},
+        {n:"白银", close:"48.62", d1:0.44, d20:2.90, note:"金银比 82.6；工业属性强于黄金，跟随铜走"},
+        {n:"LME 铜", close:"10,842", d1:0.86, d20:4.20, note:"电网 + 数据中心用铜；库存降至 5 年低位，是这轮最“干净”的多头"}
+      ]},
+      {group:"加密资产", rows:[
+        {n:"BTC", close:"101,240", d1:-2.13, d20:-8.40, note:"ETF 三日净流出 8.2 亿；与纳指相关性回升至 0.62"},
+        {n:"ETH", close:"3,284", d1:-2.86, d20:-11.20, note:"ETH/BTC 0.0324，持续走弱"}
+      ]},
+      {group:"亚太股市", rows:[
+        {n:"日经 225", close:"51,320", d1:0.72, d20:5.10, note:"出口与半导体设备领涨，日元贬值贡献约 1/3"},
+        {n:"KOSPI", close:"4,118", d1:1.36, d20:6.80, note:"存储双雄走强，外资连续 8 日净买入"},
+        {n:"恒生指数", close:"26,455", d1:0.51, d20:2.20, note:"南向净买入 62 亿，AI 算力与电力主题活跃"},
+        {n:"上证指数", close:"3,982", d1:0.18, d20:1.40, note:"成交 1.86 万亿，量能未跟上指数"}
+      ]},
+      {group:"欧洲股市", rows:[
+        {n:"STOXX 50", close:"5,718", d1:-0.31, d20:-1.20, note:"缺乏 AI 权重，相对美股持续跑输"},
+        {n:"德国 DAX", close:"24,186", d1:-0.42, d20:-1.80, note:"汽车与化工拖累，中国需求预期偏弱"},
+        {n:"英国富时 100", close:"9,852", d1:0.09, d20:0.60, note:"能源与银行权重对冲，防御属性显现"}
+      ]}
+    ],
+    /* 盘前/盘后两表由 Yahoo+Nasdaq 当日财报日历注入（见 hydrateExtra），
+       未注入时不放任何示例条目——宁缺勿错。 */
+    pre:{ updated:"", next:"今日 20:30", rows:[], date:"", total:0, hit:0, cached:false },
+    post:{ updated:"", next:"", rows:[], date:"", total:0, hit:0, cached:false },
+    movers:{ updated:"11-11 07:00", rows:[
+      {t:"CRWV", n:"CoreWeave", ses:"盘后", mv:5.8, drive:"财报", why:"Q3 收入超预期 + backlog 覆盖至 2028"},
+      {t:"SNDK", n:"闪迪", ses:"盘中", mv:11.2, drive:"非财报", why:"NAND 现货单周 +9%，三星/美光减产预期"},
+      {t:"OKLO", n:"Oklo", ses:"盘前", mv:9.8, drive:"非财报", why:"与数据中心签 20 年供电 LOI，SMR 商业化预期上修"},
+      {t:"ARM", n:"Arm", ses:"盘中", mv:5.1, drive:"非财报", why:"与某云厂商签新一代架构授权，版税结构上移"},
+      {t:"LCID", n:"Lucid", ses:"盘后", mv:7.5, drive:"非财报", why:"沙特主权基金增持至 12%，流动性折价收敛"},
+      {t:"SMCI", n:"超微电脑", ses:"盘中", mv:-8.1, drive:"非财报", why:"审计委员会披露内控重大缺陷，延迟提交 10-K"},
+      {t:"PLTR", n:"Palantir", ses:"盘中", mv:-6.4, drive:"非财报", why:"国防部预算重分配，旗舰项目延期招标"},
+      {t:"MSTR", n:"Strategy", ses:"盘中", mv:-6.8, drive:"非财报", why:"BTC 跌破 102k，杠杆敞口被重新定价"},
+      {t:"XYZ", n:"Block", ses:"盘中", mv:-5.2, drive:"非财报", why:"原因未知", unknown:true, note:"无公告、无评级变动、无行业消息；成交量为 3 倍均量，疑似大宗减持，需盘后 13F 与内部人交易确认"}
+    ]},
+    research:[
+      {cat:"宏观策略", house:"Goldman Sachs", d:"11-10", new:true, title:"2027 年标普 500 目标 7,600：AI 资本开支仍是盈利主线", take:"EPS 275 美元，AI 相关 capex 贡献约 1/3 盈利增长。超配电力设备与半导体设备，低配必需消费。"},
+      {cat:"宏观策略", house:"Morgan Stanley", d:"11-10", new:true, title:"12 月降息概率下调至 40%，实际利率仍偏紧", take:"增长韧性 + 通胀黏性下，联储缺乏快速转向理由。偏好大盘质量股，减持高杠杆小盘。"},
+      {cat:"宏观策略", house:"J.P. Morgan", d:"11-09", title:"美元“微笑曲线”右端：利差支撑 DXY", take:"美国相对增长优势 + 利差，美元仍有支撑；新兴市场货币承压，关注套息交易脆弱性。"},
+      {cat:"行业", house:"UBS", d:"11-10", new:true, title:"先进封装：CoWoS 2027 产能再翻倍，SoIC 渗透率 8%→18%", take:"首选 TSM / AMKR / ONTO。设备端确定性高于晶圆厂，交期已拉长至 18 个月。"},
+      {cat:"行业", house:"Citi", d:"11-09", title:"数据中心电力：2027 年美国新增负荷 35GW", take:"燃气与燃料电池是唯一可快速交付方案，BE / GEV 直接受益；并网延迟是最大不确定性。"},
+      {cat:"行业", house:"BofA", d:"11-08", title:"软件：AI 原生应用 ARR 拐点在 2027H1", take:"seat-based 模式面临定价重构，偏好 consumption-based；净留存比增速更重要。"},
+      {cat:"个股", house:"Morgan Stanley", d:"11-10", new:true, title:"NVDA：维持增持，目标价 260", take:"Rubin 周期订单能见度延伸至 2027，供给仍是瓶颈；风险在客户自研 ASIC 替代速度。"},
+      {cat:"个股", house:"Goldman Sachs", d:"11-10", new:true, title:"CRWV：买入，目标价 165", take:"backlog 覆盖 2028 年收入约 70%。核心变量不是需求，而是融资成本与折旧年限。"},
+      {cat:"个股", house:"J.P. Morgan", d:"11-09", title:"TSLA：中性，目标价 380", take:"Robotaxi 商业化慢于预期，估值高度依赖 Optimus 叙事，短期缺催化。"},
+      {cat:"个股", house:"Citi", d:"11-07", title:"AMD：买入，目标价 260", take:"MI450 有望 2027 年获第二个超大规模客户；CPU 端被 ARM 侵蚀是隐忧。"}
+    ]
+  },
+
+  moversH52:[
+    {t:"AVGO", n:"博通", px:"$412.6", mv:2.8, sec:"半导体"},
+    {t:"TSM", n:"台积电", px:"$342.1", mv:3.4, sec:"晶圆代工"},
+    {t:"TER", n:"泰瑞达", px:"$168.4", mv:4.1, sec:"测试设备"},
+    {t:"VRT", n:"Vertiv", px:"$196.2", mv:3.2, sec:"数据中心"},
+    {t:"GEV", n:"GE Vernova", px:"$682.0", mv:2.4, sec:"电力设备"},
+    {t:"ANET", n:"Arista", px:"$148.9", mv:2.1, sec:"网络"},
+    {t:"IREN", n:"IREN", px:"$62.4", mv:6.4, sec:"AI 云"},
+    {t:"BE", n:"Bloom Energy", px:"$138.2", mv:7.1, sec:"燃料电池"}
+  ],
+  moversHall:[
+    {t:"AVGO", n:"博通", px:"$412.6", mv:2.8, sec:"半导体"},
+    {t:"TSM", n:"台积电", px:"$342.1", mv:3.4, sec:"晶圆代工"},
+    {t:"VRT", n:"Vertiv", px:"$196.2", mv:3.2, sec:"数据中心"},
+    {t:"GEV", n:"GE Vernova", px:"$682.0", mv:2.4, sec:"电力设备"},
+    {t:"ANET", n:"Arista", px:"$148.9", mv:2.1, sec:"网络"}
+  ],
+
+  tracks:[
+    { id:"phy", name:"物理 AI / 机器人", ico:"RB", color:"#b26a00", bg:"#fdf5e6",
+      sub:"具身智能 / 人形机器人 / VLA 模型",
+      thesis:"从“演示视频”进入“量产爬坡”。真正的瓶颈不是模型能力，而是数据采集成本与 BOM 成本曲线；谁先把单台成本压到 2 万美元以内，谁拿到第一张规模化门票。",
+      kpis:[["2026 全球出货","4.8 万台"],["单台 BOM","$32k"],["VLA 任务成功率","78%"],["遥操作数据","1,200 万条"]],
+      names:["TSLA","NVDA","三花智控","拓普集团","绿的谐波","优必选"],
+      cat:"Optimus 定点、Figure 量产、国内整机厂招标",
+      log:[
+        {date:"2026-11-10", src:"The Information", type:"新拐点", title:"Figure 03 产线爬坡至月产 400 台，良率首破 90%", body:"这是人形机器人第一次出现“量产良率”而非“实验室指标”的披露。意义在于：供应链从打样转向批量，减速器与丝杠的订单能见度从 1 个季度延长到 3 个季度。", new:true},
+        {date:"2026-11-04", src:"特斯拉 Q3 电话会", type:"新业态", title:"Optimus 采用“先自用、再外售”路径，Fremont 内部先上 5,000 台", body:"先在自己工厂里用，用真实产线数据训练，再把成熟工位方案对外卖。这把“机器人”从硬件生意变成“工位解决方案”，毛利结构完全不同。", new:true},
+        {date:"2026-10-26", src:"CNBC", type:"新物种", title:"国内两家整机厂同时发布 20 自由度灵巧手，价格下探至 $1,800", body:"灵巧手占 BOM 约 18%，价格腰斩直接推动整机成本曲线下移。关注触觉传感器环节的国产替代。"},
+        {date:"2026-10-15", src:"X @Scobleizer", type:"认知修正", title:"遥操作数据不是过渡方案，而是长期壁垒", body:"此前认为遥操作只是数据采集的权宜之计；现在看，谁拥有最多真实作业数据，谁的 VLA 泛化能力最强。估值锚从硬件转向数据资产。"}
+      ],
+      think:"短期不追整机，买“确定的零部件 + 确定的订单”。三花、拓普的定点一旦落地，是 2-3 年的现金流；整机厂的估值已经透支到 2030 年。风险点：如果 Optimus 2027 年出货低于 3 万台，整个板块的叙事会破。"
+    },
+    { id:"edge", name:"端侧 AI", ico:"ED", color:"#0d8a5f", bg:"#e9f7f1",
+      sub:"AI 手机 / AI PC / 边缘 NPU",
+      thesis:"从“能跑模型”到“必须跑模型”。隐私与延迟把推理推向端侧，但真正的拐点是操作系统级的入口重构——谁掌握入口，谁决定 NPU 规格与换机节奏。",
+      kpis:[["AI 手机渗透率","34%"],["AI PC 渗透率","28%"],["端侧模型","7B 常态化"],["NPU 算力","80 TOPS"]],
+      names:["QCOM","AAPL","联发科","恒玄科技","乐鑫科技","瑞芯微"],
+      cat:"高通骁龙峰会、苹果 iOS 26 端侧模型、AI PC 换机数据",
+      log:[
+        {date:"2026-11-09", src:"高通骁龙峰会", type:"新拐点", title:"新一代 NPU 算力翻倍至 160 TOPS，首次支持本地 20B 模型", body:"算力越过临界点：20B 本地化意味着“云端调用”不再是必需，推理成本从每次都付费变成一次性硬件成本。对云厂商是分流，对终端是换机理由。", new:true},
+        {date:"2026-11-02", src:"Counterpoint", type:"数据更新", title:"10 月 AI 手机出货占比 34%，但“常用 AI 功能”使用率仅 11%", body:"渗透率与使用率的剪刀差是最大风险：硬件卖了，功能没被用起来。这意味着换机潮可能是“一次性”而非“持续性”。", new:true},
+        {date:"2026-10-22", src:"苹果开发者文档", type:"新业态", title:"iOS 26 开放端侧模型给第三方 App，按调用计费", body:"端侧模型开始有“分发渠道”。对应用层是新的变现位，对 NPU 是持续的性能需求。"},
+        {date:"2026-10-12", src:"SemiAnalysis", type:"认知修正", title:"端侧 AI 的瓶颈是内存带宽，不是算力", body:"此前盯着 TOPS，实际卡在 LPDDR 带宽。这解释了为什么存储涨价对端侧 AI 是利好而非成本压力。"}
+      ],
+      think:"端侧是“慢变量”，别用云端的节奏去套。真正能兑现的是存储（带宽需求）和代工（先进制程），整机品牌受益于换机但弹性有限。观察指标：AI 功能月活渗透率能否从 11% 走到 30%。"
+    },
+    { id:"app", name:"AI 应用", ico:"AI", color:"#6d4aa8", bg:"#f3eefb",
+      sub:"Software / Agent / 垂直应用",
+      thesis:"叙事进入“ARR 验证期”：市场只给可量化的收入兑现溢价。Agent 化正在改变计费方式与毛利结构——seat 数不再是前瞻指标，任务量/结果计费才是。",
+      kpis:[["企业 AI 预算","+34% yoy"],["头部 NRR","118%"],["consumption 占比","18%"],["Agent 单任务成本","$0.42"]],
+      names:["MSFT","CRM","NOW","PLTR","RBRK","OKTA","NET","ADBE"],
+      cat:"12 月 Oracle / Salesforce 财报、Agent 定价模式披露",
+      log:[
+        {date:"2026-11-10", src:"Rubrik / Okta 财报", type:"分化", title:"安全类 ARR 强劲、身份类 cRPO 掉档——AI 预算在“挑品类”", body:"同一晚两家走出 -4.8% / +6.3% 的反向行情。说明 AI 预算不是普涨，而是向“数据安全、合规”集中，向“身份、协作”收缩。", new:true},
+        {date:"2026-11-05", src:"公司 Q3 披露", type:"新业态", title:"某 CRM 龙头 consumption 收入占比达 18%，毛利率同比 -3.4pct", body:"计费模式迁移的代价开始显性化：收入更持续，但毛利更低。估值模型要从 P/S 换成 EV/GP。"},
+        {date:"2026-10-29", src:"BofA 研报", type:"新物种", title:"“Agent 编排层”成为独立品类，估值给到 20x P/S", body:"编排层卡在模型与应用之间，是新的收费位。但要小心：这也是大模型厂商最想吞掉的一层。"},
+        {date:"2026-10-18", src:"The Information", type:"认知修正", title:"AI 应用的价格战已经开始，按结果计费补贴抢客户", body:"此前判断“AI 应用有定价权”，现在看同质化严重。护城河回到数据与流程嵌入深度。"}
+      ],
+      think:"只买“数据在它手里”的公司。RBRK 的数据在客户备份里，粘性天然；OKTA 的身份层可被云厂商原生替代。这个区分比 ARR 增速更重要。"
+    },
+    { id:"sec", name:"网安", ico:"SEC", color:"#0f766e", bg:"#e6f5f3",
+      sub:"身份安全 / 数据安全 / 机器身份 / 模型供应链",
+      thesis:"安全预算的刚性来自“不出事”，但估值弹性来自“出什么事”。AI 把攻击面从人扩展到 Agent 与模型供应链：机器身份数量已超过人类身份，而绝大多数企业还没有治理工具。这一层的钱不是新增预算，是从传统边界防护里挪过来的。",
+      kpis:[["全球安全支出","+12.4% yoy"],["平台整合率（≥3 品类）","41%"],["机器身份 : 人类身份","45 : 1"],["平均泄露成本","$488 万"]],
+      names:["CRWD","PANW","ZS","S","RBRK","OKTA","CHKP","奇安信","深信服"],
+      cat:"PANW / CRWD 财报、平台并购、Agent 身份标准（SPIFFE/OAuth 扩展）、重大泄露事件",
+      log:[
+        {date:"2026-11-11", src:"Gartner 安全峰会", type:"新拐点", title:"“机器身份治理”被单列为独立品类，2027 年预算池预计 62 亿美元", body:"过去机器身份散落在 IGA 与 PAM 里，现在被拆成独立预算项。意义在于：这是一块增量蛋糕，而不是存量替换——谁先做出 Agent 证书签发与轮转的产品，谁吃到第一波。", new:true},
+        {date:"2026-11-04", src:"The Information", type:"新业态", title:"头部云厂商把“模型供应链安全”打包进云合约，独立厂商被挤出这一层", body:"模型权重、微调数据、推理网关的完整性校验正被云厂商收进基础设施层。独立安全厂商的空间在“跨云、跨模型”的第三方视角——只做单云的企业会先被吃掉。", new:true},
+        {date:"2026-10-27", src:"公司公告", type:"数据更新", title:"数据安全类 ARR 增速 30%+，身份类 cRPO 增速掉到 12%", body:"同一赛道内部已经分成两条曲线：数据在哪，安全就在哪（备份、数据湖、SaaS 数据面），这类粘性最高；而身份认证层正被云厂商原生能力替代，续约率还行但新增单在流失。", new:false},
+        {date:"2026-10-16", src:"Black Hat Europe", type:"认知修正", title:"“AI 会大幅提升攻击效率”被过度定价，真正的增量在防御侧的自动化", body:"此前把 AI 安全当成“攻击升级 → 安全支出暴涨”的线性故事。实际企业采购的逻辑是“人力不够 → 买自动化”，所以受益的是 SOAR/自动化运营，而不是又一层检测盒子。", new:false}
+      ],
+      think:"这条赛道要按“数据在哪”分层买，而不是按“安全”两个字的 beta 买。数据面（RBRK、CRWD）粘性来自数据位置，AI 只是加速需求；身份面（OKTA）结构性受挤压，云厂商原生能力越来越够用；网络边界（PANW、CHKP）是现金流生意，估值给不高但下行有保护。仓位安排：RBRK 持有、CHKP 观察、OKTA 减持。证伪条件：若 2027 年企业安全预算增速跌破 8%，平台整合逻辑就变成“缩量博弈”，整条赛道杀估值。"
+    },
+    { id:"infra", name:"AI 基础设施 & 数据中心", ico:"DC", color:"#d2373a", bg:"#fdeeee",
+      sub:"GPU Cloud / 电力 / 冷却 / 网络",
+      thesis:"瓶颈从 GPU 转向电力与并网。谁能锁定电力、拿到 PPA、按期交付机柜，谁拿到溢价。估值锚正从“算力租赁 P/S”切换为“IDC + 长约现金流”。",
+      kpis:[["美国 DC 空置率","1.8%"],["PPA 电价","$78/MWh"],["H200 现货","$2.1/hr"],["backlog 覆盖","2.4 年"]],
+      names:["NVDA","AVGO","CRWV","IREN","NBIS","BE","VRT","ANET","GEV"],
+      cat:"新签 PPA、并网审批、GB300 交付节奏",
+      log:[
+        {date:"2026-11-10", src:"IREN 公告", type:"新拐点", title:"IREN 签 5 年期 AI 云合同，单价较现货溢价 35%", body:"客户愿意为“确定能通电”付溢价，这是电力稀缺第一次被明确定价。对 IREN 是估值重构，对所有矿企是重估信号。", new:true},
+        {date:"2026-11-09", src:"Bloom Energy 公告", type:"新业态", title:"BE 为德州园区供 300MW 燃料电池，交付周期 12 个月", body:"并网排队 3-5 年的现实，把“快电”从环保方案变成刚需。燃气轮机交期 3 年，燃料电池 1 年——时间就是溢价。", new:true},
+        {date:"2026-11-06", src:"SemiAnalysis", type:"数据更新", title:"H200 现货租赁价格环比 -8%，为 2025 年以来首次下跌", body:"租赁价格下跌不等于需求转弱，可能是供给集中释放。但这是要盯的领先指标——若连续两月下跌，Neocloud 的定价权叙事要修正。"},
+        {date:"2026-10-25", src:"PJM 容量拍卖", type:"风险", title:"PJM 容量拍卖价格再创新高，数据中心负荷被要求自备电源", body:"电网开始把成本转嫁给数据中心。短期利好自备电源（BE/GEV），中期是运营成本的结构性上升。"}
+      ],
+      think:"最确定的是“电”，最不确定的是“谁最终付钱”。CRWV 本质是“用高息债买 GPU 再出租”，利率敏感度极高。所以仓位放在 BE/IREN/VRT，而不是重仓 CRWV——尽管它弹性最大。"
+    },
+    { id:"pkg", name:"先进封测", ico:"PK", color:"#1d3a6e", bg:"#eef3fb",
+      sub:"CoWoS / SoIC / 面板级封装",
+      thesis:"CoWoS 与 SoIC 产能仍是硬约束，设备与材料环节的确定性高于晶圆厂本身。面板级封装 2027 进入量产验证，是下一个预期差来源。",
+      kpis:[["CoWoS 月产能","12 万片"],["HBM 堆叠","12 层"],["先进封装占比","19%"],["设备交期","18 个月"]],
+      names:["TSM","AMKR","ASE","ONTO","TER","长电科技","通富微电"],
+      cat:"台积电 capex 指引、HBM4 认证、面板级设备订单",
+      log:[
+        {date:"2026-11-10", src:"台积电月报", type:"数据更新", title:"10 月营收 +31% yoy，CoWoS 利用率维持满产", body:"连续三个月超季节性。关键不是营收本身，而是“满产仍无法满足订单”——说明扩产周期还没走完。", new:true},
+        {date:"2026-11-03", src:"UBS 研报", type:"新拐点", title:"SoIC 渗透率 2027 年从 8% 到 18%，设备端受益大于晶圆端", body:"3D 堆叠对量测与键合设备的需求是线性放大的。ONTO 先进封装收入占比已到 41%，是纯度高的小市值标的。"},
+        {date:"2026-10-28", src:"ONTO 财报", type:"数据更新", title:"订单出货比 1.6，交期拉长至 18 个月", body:"设备端议价力上行，客户开始预付款排产。这是周期中段最舒服的位置。"},
+        {date:"2026-10-16", src:"台积电法说会", type:"新业态", title:"面板级封装（PLP）2027 进入量产验证，瞄准 AI 加速器", body:"从 12 寸圆片到面板，单位面积成本可降 30%。设备厂是最大受益者，但验证周期长，别提前太久埋伏。"}
+      ],
+      think:"这是我仓位最重的赛道，因为“确定性/估值”比值最好。TER + ONTO 覆盖测试与量测两端，且都是卖铲子——不押注谁赢。风险是 2027 capex 若低于预期，设备股先杀估值。"
+    },
+    { id:"cpu", name:"CPU", ico:"CPU", color:"#2f5da8", bg:"#eef3fb",
+      sub:"ARM 服务器 / 定制 ASIC / x86 松动",
+      thesis:"通用 CPU 的份额被 ARM 与定制 ASIC 双向挤压。2027 年是 ARM 服务器份额跨越 25% 的拐点年，x86 双寡头的定价权首次出现实质性松动。",
+      kpis:[["ARM 服务器份额","22%"],["云厂商自研占比","31%"],["AI PC 渗透率","28%"],["单机架算力密度","+2.1x"]],
+      names:["ARM","AMD","INTC","QCOM","NVDA(Grace)","MRVL"],
+      cat:"云厂商自研 CPU 路线图、ARM 架构授权签约、AI PC 换机",
+      log:[
+        {date:"2026-11-10", src:"公司公告", type:"新拐点", title:"ARM 与某云厂商签新一代架构授权，版税结构上移", body:"从“按芯片售价抽成”转向“按整机价值抽成”，单机版税提升约 40%。这是 ARM 商业模式的关键一跃。", new:true},
+        {date:"2026-11-01", src:"SemiAnalysis", type:"新物种", title:"某云厂商 2027 年自研 CPU 将覆盖 50% 新增机架", body:"自研不是替代 x86，而是替代“通用”。受伤最重的是 Intel 的服务器份额，AMD 的份额增长也在放缓。"},
+        {date:"2026-10-20", src:"Mercury Research", type:"数据更新", title:"Q3 ARM 服务器份额 22%，x86 出货量同比 -3%", body:"份额迁移在加速，但绝对量还在增长，所以 Intel 报表不会立刻难看——这也是市场低估迁移速度的原因。"},
+        {date:"2026-10-14", src:"CNBC", type:"认知修正", title:"AI PC 的“换机潮”被证伪，企业采购周期仍是 5 年", body:"此前预期 AI PC 会带来 3 年换机周期，实际企业端没有加速。端侧 AI 的节奏要按“慢变量”重估。"}
+      ],
+      think:"“慢但确定”的一条线。ARM 的版税模式改变是真实的盈利上修，值得长期持有；INTC 是价值陷阱的概率大于反转；AMD 处在两头受挤的位置，估值需要下修。"
+    }
+  ],
+
+  events:{
+    week:{ label:"本周 11/09 - 11/15", today:"11-11", days:[
+      {dow:"周一", date:"11-09", items:[{t:"—", ev:"无重大数据；三大指数小幅收涨", imp:"l"}]},
+      {dow:"周二", date:"11-10", items:[
+        {t:"23:00", ev:"美国 10 月 NFIB 小企业信心指数", imp:"l"},
+        {t:"盘后", ev:"CRWV / RBRK / OKTA 财报", imp:"h"},
+        {t:"盘后", ev:"IREN 5 年期 AI 云合同公告", imp:"m"}]},
+      {dow:"周三", date:"11-11", items:[
+        {t:"全天", ev:"美国退伍军人节：债市休市，股市正常", imp:"m"},
+        {t:"09:30", ev:"中国 10 月 CPI / PPI", imp:"m"},
+        {t:"20:30", ev:"盘前：ONON、鸿海（2317.TW）", imp:"l"},
+        {t:"23:30", ev:"EIA 原油库存", imp:"l"}]},
+      {dow:"周四", date:"11-12", items:[
+        {t:"21:30", ev:"美国 10 月 CPI（预期 2.9%，核心环比 0.3%）", imp:"h"},
+        {t:"22:00", ev:"联储票委讲话（鹰派委员）", imp:"m"},
+        {t:"盘前", ev:"NBIS 财报 — 毛利率指引是关键", imp:"h"},
+        {t:"盘后", ev:"AMAT 财报 — 半导体设备订单", imp:"h"}]},
+      {dow:"周五", date:"11-13", items:[
+        {t:"23:00", ev:"密歇根大学消费者信心初值 / 通胀预期", imp:"m"},
+        {t:"盘后", ev:"BE 财报", imp:"m"}]},
+      {dow:"周六", date:"11-14", items:[{t:"—", ev:"APEC 工商领导人峰会筹备会议", imp:"l"}]},
+      {dow:"周日", date:"11-15", items:[{t:"—", ev:"G20 财长与央行行长会议（视频）", imp:"l"}]}
+    ]},
+    month:[
+      {d:"11-18", ev:"沃尔玛 WMT 财报（消费风向标）", tag:"个股", imp:"m"},
+      {d:"11-19", ev:"NVIDIA 财报（Q3 FY2027）— 本季最重要单一事件", tag:"个股", imp:"h"},
+      {d:"11-20", ev:"美国 10 月零售销售 / 成屋销售", tag:"宏观", imp:"m"},
+      {d:"11-24", ev:"IREN 财报（FY Q1）", tag:"个股", imp:"m"},
+      {d:"11-26", ev:"感恩节：美股休市", tag:"休市", imp:"l"},
+      {d:"11-27", ev:"黑色星期五：半日交易", tag:"宏观", imp:"m"},
+      {d:"11-30", ev:"中国 11 月官方 PMI", tag:"宏观", imp:"m"}
+    ],
+    quarter:[
+      {d:"12-08/09", ev:"FOMC 议息会议 + 点阵图 + 经济预测", tag:"联储", imp:"h"},
+      {d:"12-10", ev:"美国 11 月 CPI", tag:"宏观", imp:"h"},
+      {d:"12-16", ev:"四巫日（指数与个股期货期权同日到期）", tag:"技术", imp:"m"},
+      {d:"12-18/19", ev:"日本央行议息会议 — 加息预期", tag:"央行", imp:"m"},
+      {d:"12-31", ev:"美国债务上限技术性重启窗口", tag:"财政", imp:"m"},
+      {d:"01-06", ev:"CES 2027 — 端侧 AI / 机器人集中发布", tag:"产业", imp:"m"},
+      {d:"01-15", ev:"台积电 Q4 法说会 — 2027 capex 指引", tag:"个股", imp:"h"},
+      {d:"01-27/28", ev:"FOMC 议息会议", tag:"联储", imp:"h"},
+      {d:"02-06", ev:"美国 1 月非农", tag:"宏观", imp:"m"},
+      {d:"03-17/18", ev:"FOMC + 季度点阵图（全年最关键一次）", tag:"联储", imp:"h"}
+    ],
+    fed:{ meeting:"2026 年 12 月 8-9 日", decision:"12 月 10 日 03:00（北京时间）",
+      probs:[{label:"降息 25bp", p:42, prev:55, color:"#d2373a"},{label:"维持不变", p:58, prev:45, color:"#7a8798"}],
+      monthAgo:"一个月前：降息 68% / 不变 32%",
+      reasons:[
+        "9 月核心 PCE 同比 2.9%，高于预期 0.2pct，黏性集中在住房与医疗。",
+        "10 月非农 +14.5 万、失业率 4.2%，降温但未失速，削弱“预防式降息”必要性。",
+        "近两周 4 位票委强调“限制性程度不足”，鹰派信号密度上升。",
+        "金融条件指数回到宽松区间，股市新高本身降低了救市紧迫感。"
+      ],
+      watch:["12/5 非农","12/10 CPI","点阵图中位数是否下移至 2 次","隔夜逆回购余额"]
+    },
+    apec:{ status:"筹备 / 预热", when:"2026 年 11 月 · 中国深圳", points:[
+        "主题聚焦贸易便利化、供应链互联互通、数字贸易规则与绿色转型融资。",
+        "工商领导人峰会议程已公布，AI 治理与跨境数据流动是新增议题。",
+        "关注双边经贸沟通窗口：关税豁免清单、农产品与能源采购、科技出口管制口径。"
+      ], impact:"对 A 股/港股风险偏好有事件性提振；关注跨境电商、物流、数字贸易主题。" },
+    iran:{ status:"谈判进行中", when:"最近更新 2026-11-08", points:[
+        "核谈判：阿曼斡旋下的间接谈判恢复，焦点仍是浓缩铀丰度上限与核查机制。",
+        "制裁：美方新增对伊石油出口相关实体的制裁，伊方以限制核查回应。",
+        "地区局势：霍尔木兹海峡通行量与油价风险溢价是核心传导路径，当前溢价约 1.8 美元/桶。"
+      ], impact:"地缘溢价处低位；若谈判破裂，布油短期上行 5-8 美元，对航运与炼化影响大于上游。" },
+    ukraine:{ status:"接触 / 博弈", when:"最近更新 2026-11-07", points:[
+        "停火框架：多方接触推进，但在领土与安全保障的顺序上仍无共识。",
+        "美国：推动“停火 + 安全保障换矿产与重建合同”，要求欧洲承担更多成本。",
+        "俄罗斯：要求承认现状并限制乌军规模，拒绝短期无条件停火。",
+        "乌克兰：坚持领土完整，要求具约束力的安全保证。",
+        "欧洲：分歧在冻结资产收益的使用与派兵意愿，财政负担是主要约束。"
+      ], impact:"欧洲天然气与军工对消息高度敏感；重建主题属事件驱动，不宜提前埋伏。" },
+    trump:{ updated:"11-11 07:00", rows:[
+      {d:"11-10", new:true, o:"Tariffs on semiconductors are coming. Not next year — soon. We want the chips made here.", zh:"半导体的关税要来了，不是明年，是很快。我们要芯片在这里造。", r:"若落地，直接冲击以进口为主的设备与模组厂。但“很快”这类表述过去半年出现过 4 次，实际执行滞后——按“预期扰动”而非“既成事实”处理。"},
+      {d:"11-07", o:"The Fed should be cutting. They are always late. I know better than them.", zh:"联储应该降息，他们总是慢半拍，我比他们懂。", r:"对货币政策独立性的施压，短期影响有限；但若 12 月不降息，政治噪音会放大市场波动。"},
+      {d:"11-03", o:"We will not let anyone take our AI lead. Whatever it takes.", zh:"我们不会让任何人拿走我们的 AI 领先地位，不惜一切代价。", r:"利好本土算力与电力投资；对出口管制是进一步收紧的信号，关注半导体设备对华收入占比。"},
+      {d:"10-28", o:"Deals are easy. I make deals. The war would have been over in one day.", zh:"协议很简单，我会做交易。那场战争一天就能结束。", r:"俄乌相关表态对能源价格有短期扰动，但缺乏可执行细节，不建议据此建仓。"},
+      {d:"10-20", o:"The market is at an all-time high because of me. Remember that in November.", zh:"市场创新高是因为我，十一月要记住这一点。", r:"中期选举前的政策倾向：倾向维持市场友好型政策，对风险资产偏正面。"}
+    ], note:"格式示例：接入新闻源后自动抓取原话与出处，请勿据此交易。" }
+  },
+
+  stocks:[
+    {t:"SPCX", n:"SpaceX（一级市场）", sec:"商业航天", cap:"$4,000 亿（一级）", px:"—", mv:null,
+     logic:"星链现金流 + 星舰复用把发射成本压到 $1,000/kg 以下，估值逻辑从“发射服务商”转向“太空基础设施 + 通信运营商”。",
+     kpi:[["星链用户","780 万"],["年度发射","148 次"],["星舰复用","12 次"],["单公斤成本","$1,050"]],
+     val:"一级市场 PS ≈ 22x", cat:"星舰 V4 首飞 / 星链直连手机商用 / IPO 时间表",
+     risk:"无二级流动性；资本开支与频谱、轨道资源监管。", map:"中国卫星 / 上海瀚讯 / 航天电子",
+     earn:{next:"—", status:"no-fixed", note:"一级市场无定期披露，以发射次数与星链用户数替代", hist:[]},
+     updates:[{d:"11-06", src:"公司公告", txt:"星舰第 12 次试飞成功，一级复用第 5 次"},{d:"10-28", src:"路透", txt:"星链直连手机在 12 国商用，ARPU 约 $8/月"}],
+     reports:[{d:"10-30", house:"Morgan Stanley", rating:"—", tp:"$5,200 亿估值"}],
+     kol:[{d:"11-08", handle:"@elonmusk", view:"Starship 明年目标 200 次发射"}]},
+
+    {t:"TSLA", n:"特斯拉", sec:"电动车/机器人", cap:"$1.42T", px:"$428.6", mv:1.8,
+     logic:"汽车业务进入低速增长，估值锚转向 Robotaxi 与 Optimus；能源存储是唯一高增长且已被验证的分部。",
+     kpi:[["Q3 交付","48.2 万辆"],["汽车毛利率","17.4%"],["储能装机","12.4GWh"],["FSD 渗透率","14%"]],
+     val:"2027E PS 9.8x / 汽车分部 PE 45x", cat:"Robotaxi 牌照 / Optimus 定点 / 储能大单",
+     risk:"叙事兑现周期长，波动放大；管理层精力分散。", map:"三花智控 / 拓普集团 / 绿的谐波",
+     earn:{next:"2027-01-28", status:"covered", note:"Q4 财报；重点看汽车毛利率与 Optimus 自用部署",
+       hist:[{d:"2026-10-21", res:"营收 268 亿、EPS 0.58，交付 48.2 万", react:"+3.1%"},{d:"2026-07-22", res:"毛利率 16.2% 低于预期", react:"-8.4%"}]},
+     updates:[{d:"11-04", src:"Q3 电话会", txt:"Optimus 先在 Fremont 自用 5,000 台"},{d:"10-30", src:"公司公告", txt:"上海储能超级工厂二期投产，年产能 40GWh"}],
+     reports:[{d:"11-09", house:"J.P. Morgan", rating:"中性", tp:"$380"},{d:"11-05", house:"Morgan Stanley", rating:"增持", tp:"$520"}],
+     kol:[{d:"11-10", handle:"@garyblack00", view:"交付增速与毛利率背离，估值已计入 2028 年"}]},
+
+    {t:"META", n:"Meta", sec:"社交/广告/AI", cap:"$1.85T", px:"$742.0", mv:1.2,
+     logic:"广告韧性 + AI 推荐提效带来量价双升；capex 上行被解读为“有回报的投入”，但需盯折旧对 2027 毛利的影响。",
+     kpi:[["广告收入增速","19%"],["日活","35.2 亿"],["capex 指引","$72B"],["AI 推荐提效","+8% 转化"]],
+     val:"2027E PE 24x", cat:"Llama 下一代 / AI 眼镜出货 / Reels 变现",
+     risk:"欧盟监管；capex 超预期压制自由现金流。", map:"分众传媒 / 蓝色光标",
+     earn:{next:"2027-01-28", status:"covered", note:"Q4 财报；capex 指引是唯一变量",
+       hist:[{d:"2026-10-29", res:"广告 +19%，capex 指引上调至 720 亿", react:"-3.4%"},{d:"2026-07-30", res:"收入超预期，Reels 变现改善", react:"+6.8%"}]},
+     updates:[{d:"11-06", src:"公司博客", txt:"Llama 4 开源，MoE 架构，推理成本降 40%"},{d:"10-29", src:"Q3 财报", txt:"2027 capex 指引 720 亿，同比 +28%"}],
+     reports:[{d:"11-07", house:"Goldman Sachs", rating:"买入", tp:"$880"},{d:"11-02", house:"UBS", rating:"中性", tp:"$760"}],
+     kol:[{d:"11-09", handle:"@bethkindig", view:"折旧周期是 2027 年最大的估值风险"}]},
+
+    {t:"IREN", n:"IREN", sec:"AI 云/矿企转型", cap:"$18B", px:"$62.4", mv:6.4,
+     logic:"核心资产是 2.9GW 已并网电力。AI 云合同把算力变成 5 年期现金流，估值从矿企切换为 IDC / Neocloud。",
+     kpi:[["已并网电力","2.9GW"],["AI 云年化","$1.2B"],["比特币算力","50 EH/s"],["合同溢价","+35%"]],
+     val:"2027E EV/EBITDA 14x", cat:"新增长约 / GPU 交付 / 并网扩容",
+     risk:"客户集中；BTC 与电价波动；股权融资摊薄。", map:"润泽科技 / 光环新网",
+     earn:{next:"2026-11-24", status:"pending", note:"FY Q1 财报；看 AI 云收入确认节奏与客户集中度",
+       hist:[{d:"2026-09-25", res:"算力 50EH/s，AI 云 ARR 8.2 亿", react:"+11.2%"},{d:"2026-08-27", res:"电力扩容至 2.9GW", react:"+7.4%"}]},
+     updates:[{d:"11-10", src:"公司公告", txt:"签 5 年期 AI 云合同，年化 12 亿，单价较现货溢价 35%", key:true},{d:"10-30", src:"公司公告", txt:"德州 Sweetwater 园区二期并网，新增 600MW"}],
+     reports:[{d:"11-10", house:"Morgan Stanley", rating:"增持", tp:"$82"},{d:"10-28", house:"Citi", rating:"买入", tp:"$75"}],
+     kol:[{d:"11-10", handle:"@dylan522p", view:"电力资产重估才刚开始，但客户集中是硬伤"}]},
+
+    {t:"NBIS", n:"Nebius", sec:"欧洲 AI 云", cap:"$22B", px:"$88.5", mv:-6.5,
+     logic:"欧洲主权 AI 需求 + 全栈能力，增长快但毛利率被折旧侵蚀，关键在 unit economics 能否收敛。",
+     kpi:[["ARR","$1.1B"],["毛利率","58%"],["合同负债","$3.4B"],["客户数","1,240"]],
+     val:"2027E PS 8x", cat:"欧洲主权云订单 / GB300 上架",
+     risk:"毛利率下行；资本开支依赖外部融资。", map:"优刻得 / 青云科技",
+     earn:{next:"2026-11-12", status:"imminent", note:"明日盘前财报；毛利率指引是焦点，低于 55% 将触发二次杀估值",
+       hist:[{d:"2026-08-06", res:"收入超预期但毛利率 61% 低于指引", react:"-9.1%"},{d:"2026-05-14", res:"ARR 破 10 亿", react:"+12.6%"}]},
+     updates:[{d:"11-10", src:"公司公告", txt:"Q3 毛利率指引下修至 58%，主因新增 GPU 折旧", key:true},{d:"11-01", src:"公司公告", txt:"获欧洲主权云 4.2 亿欧元框架协议"}],
+     reports:[{d:"11-10", house:"J.P. Morgan", rating:"中性", tp:"$85"},{d:"10-20", house:"BofA", rating:"买入", tp:"$120"}],
+     kol:[{d:"11-10", handle:"@amitisinvesting", view:"用毛利换增速，市场这次不买账"}]},
+
+    {t:"CRWV", n:"CoreWeave", sec:"AI 云/Neocloud", cap:"$62B", px:"$128.4", mv:5.8,
+     logic:"backlog 覆盖至 2028，客户结构从单一超大客户向企业扩散。真正的风险不是需求，而是融资成本与折旧年限。",
+     kpi:[["Q3 收入","$1.58B (+128%)"],["backlog","$55B"],["2027 capex","$22B"],["企业占比","27%"]],
+     val:"2027E EV/Sales 7x", cat:"新增超大规模客户 / 企业占比提升",
+     risk:"客户集中；高杠杆；GPU 残值假设。", map:"润泽科技 / 世纪互联",
+     earn:{next:"2027-02-18", status:"covered", note:"刚发布 Q3；下次看 2027 指引与折旧年限是否调整",
+       hist:[{d:"2026-11-10", res:"收入 15.8 亿（+128%），backlog 555 亿", react:"盘后 +5.8%"},{d:"2026-08-13", res:"收入超预期但亏损扩大", react:"-7.2%"}]},
+     updates:[{d:"11-10", src:"Q3 财报", txt:"2027 capex 上调至 220 亿，合同负债 555 亿", key:true},{d:"10-27", src:"公司公告", txt:"与两家财富 500 强签企业级 AI 云合同"}],
+     reports:[{d:"11-10", house:"Goldman Sachs", rating:"买入", tp:"$165"},{d:"11-05", house:"Barclays", rating:"中性", tp:"$110"}],
+     kol:[{d:"11-10", handle:"@Techmeme", view:"需求没问题，问题是融资成本"}]},
+
+    {t:"BE", n:"Bloom Energy", sec:"燃料电池", cap:"$32B", px:"$138.2", mv:7.1,
+     logic:"数据中心“快电”唯一可 12 个月交付的方案，已从环保叙事变成刚需。关键在产能爬坡与单瓦成本。",
+     kpi:[["在手订单","$18B"],["产能","2GW"],["单瓦成本","$1.9/W"],["交付周期","12 个月"]],
+     val:"2027E EV/Sales 6x", cat:"数据中心供电合同 / 产能扩张",
+     risk:"天然气价格；交付执行；补贴退坡。", map:"潍柴动力 / 亿华通",
+     earn:{next:"2026-11-13", status:"imminent", note:"本周五财报；订单转化率与产能爬坡是核心",
+       hist:[{d:"2026-10-30", res:"收入超预期，上调全年指引", react:"+18.0%"},{d:"2026-07-31", res:"毛利率 26% 不及预期", react:"-11.5%"}]},
+     updates:[{d:"11-10", src:"公司公告", txt:"德州数据中心园区 300MW 订单，2027 年起交付", key:true},{d:"10-30", src:"Q3 财报", txt:"在手订单 180 亿，计划扩产至 3GW"}],
+     reports:[{d:"11-10", house:"Citi", rating:"买入", tp:"$170"},{d:"10-25", house:"Morgan Stanley", rating:"中性", tp:"$120"}],
+     kol:[{d:"11-09", handle:"@bethkindig", view:"快电溢价真实存在，但产能是天花板"}]},
+
+    {t:"AMD", n:"AMD", sec:"GPU/CPU", cap:"$420B", px:"$258.0", mv:2.4,
+     logic:"MI450 有望 2027 拿到第二个超大规模客户，ROCm 生态差距缩小；CPU 端被 ARM 侵蚀快于预期是隐忧。",
+     kpi:[["数据中心占比","46%"],["MI 出货","12 万颗"],["服务器份额","27%"],["毛利率","54%"]],
+     val:"2027E PE 32x", cat:"MI450 量产 / 超大规模客户订单",
+     risk:"CUDA 生态壁垒；ARM 服务器替代。", map:"海光信息 / 寒武纪",
+     earn:{next:"2027-02-03", status:"covered", note:"Q4 财报；MI450 出货指引决定 2027 估值",
+       hist:[{d:"2026-11-04", res:"MI450 指引保守，数据中心环比 +8%", react:"-2.1%"},{d:"2026-08-05", res:"MI 系列出货超预期", react:"+7.6%"}]},
+     updates:[{d:"11-04", src:"Q3 财报", txt:"MI450 2027H1 量产，首个客户为某超大规模厂商"},{d:"10-22", src:"公司公告", txt:"与 Meta 扩大 CPU 供应协议"}],
+     reports:[{d:"11-07", house:"Citi", rating:"买入", tp:"$260"},{d:"11-03", house:"Morgan Stanley", rating:"增持", tp:"$290"}],
+     kol:[{d:"11-08", handle:"@dylan522p", view:"ROCm 差距在缩小，但软件仍是最大折扣项"}]},
+
+    {t:"TSM", n:"台积电", sec:"晶圆代工", cap:"$1.6T", px:"$342.1", mv:3.4,
+     logic:"先进制程 + CoWoS 双重卡位，是 2027 资本开支上行周期最确定的“卖铲人”；地缘是唯一定价不充分的变量。",
+     kpi:[["10 月营收","+31% yoy"],["CoWoS 月产能","12 万片"],["毛利率","59%"],["先进制程占比","74%"]],
+     val:"2027E PE 23x", cat:"A16 量产 / 海外厂补贴",
+     risk:"地缘政治；海外厂稀释毛利 2-3pct。", map:"中芯国际 / 华虹",
+     earn:{next:"2027-01-15", status:"covered", note:"Q4 法说会；2027 capex 指引是全球半导体最重要的数字",
+       hist:[{d:"2026-10-16", res:"Q3 毛利率 59.2%，AI 收入翻倍", react:"+1.8%"},{d:"2026-07-17", res:"上调全年营收指引", react:"+3.2%"}]},
+     updates:[{d:"11-10", src:"月度营收", txt:"10 月营收同比 +31%，环比 +6.8%", key:true},{d:"10-16", src:"法说会", txt:"2027 capex 指引 480-520 亿美元"}],
+     reports:[{d:"11-10", house:"UBS", rating:"买入", tp:"$420"},{d:"10-18", house:"Goldman Sachs", rating:"买入", tp:"$400"}],
+     kol:[{d:"11-10", handle:"@Jukanlosreve", view:"月营收超预期但指引没上修，属于利好兑现"}]},
+
+    {t:"TER", n:"泰瑞达", sec:"测试设备", cap:"$22B", px:"$168.4", mv:4.1,
+     logic:"HBM 测试与先进封装测试需求爆发，订单出货比 1.5+，交期拉长至 18 个月，设备端议价力显著上行。",
+     kpi:[["订单出货比","1.6"],["半导体测试占比","78%"],["交期","18 个月"],["毛利率","59%"]],
+     val:"2027E PE 28x", cat:"HBM4 测试订单 / 机器人业务分拆",
+     risk:"客户资本开支周期；并购整合。", map:"华峰测控 / 长川科技",
+     earn:{next:"2027-01-27", status:"covered", note:"Q4 财报；HBM4 测试订单与机器人分部拆分进度",
+       hist:[{d:"2026-10-28", res:"订单出货比 1.6，上调全年指引", react:"+6.2%"},{d:"2026-07-29", res:"汽车测试需求疲弱", react:"-3.1%"}]},
+     updates:[{d:"11-03", src:"公司公告", txt:"HBM4 测试方案获两家存储厂认证", key:true},{d:"10-28", src:"Q3 财报", txt:"半导体测试收入占比 78%，交期 18 个月"}],
+     reports:[{d:"11-04", house:"UBS", rating:"买入", tp:"$200"},{d:"10-30", house:"Citi", rating:"买入", tp:"$195"}],
+     kol:[{d:"11-05", handle:"@SemiAnalysis_", view:"测试环节是 HBM 扩产最直接的受益者"}]},
+
+    {t:"ONTO", n:"Onto Innovation", sec:"检测/量测", cap:"$9B", px:"$142.0", mv:3.6,
+     logic:"先进封装量测与面板级封装设备的隐形冠军，是 CoWoS 扩产的“二阶导”受益者，小市值对订单弹性极大。",
+     kpi:[["订单出货比","1.6"],["先进封装占比","41%"],["毛利率","52%"],["市值","$9B"]],
+     val:"2027E PE 26x", cat:"面板级封装订单 / CoWoS 扩产",
+     risk:"订单波动大；客户集中。", map:"精测电子 / 中科飞测",
+     earn:{next:"2027-02-05", status:"covered", note:"Q4 财报；面板级封装订单能否落地是核心",
+       hist:[{d:"2026-11-05", res:"先进封装占比 41%，指引超预期", react:"+3.6%"},{d:"2026-08-06", res:"订单环比下滑", react:"-6.4%"}]},
+     updates:[{d:"11-05", src:"Q3 财报", txt:"订单出货比 1.6，先进封装占比 41%", key:true},{d:"10-20", src:"公司公告", txt:"面板级封装量测设备获首台订单"}],
+     reports:[{d:"11-06", house:"UBS", rating:"买入", tp:"$175"},{d:"10-22", house:"Needham", rating:"买入", tp:"$165"}],
+     kol:[{d:"11-06", handle:"@FromDeepSpace", view:"小市值 + 高订单弹性，波动会很大"}]},
+
+    {t:"NET", n:"Cloudflare", sec:"CDN/边缘安全", cap:"$78B", px:"$218.0", mv:-1.4,
+     logic:"边缘算力 + 安全一体化，AI 推理下沉带来新流量入口；但大客户自建与价格战压制 ARR 增速。",
+     kpi:[["大客户数","3,400"],["NRR","118%"],["毛利率","77%"],["ARR","$2.4B"]],
+     val:"2027E PS 18x", cat:"AI 推理网关 / 零信任渗透",
+     risk:"增速放缓；大客户自建。", map:"网宿科技",
+     earn:{next:"2027-02-05", status:"covered", note:"Q4 财报；关注大客户留存与 AI 推理网关收入",
+       hist:[{d:"2026-11-06", res:"收入超预期但指引保守", react:"-5.2%"},{d:"2026-08-07", res:"大客户数增长放缓", react:"-8.1%"}]},
+     updates:[{d:"11-06", src:"Q3 财报", txt:"NRR 118%，AI 推理网关贡献 6% 收入"},{d:"10-24", src:"公司博客", txt:"推出 Workers AI 推理网关，按 token 计费"}],
+     reports:[{d:"11-07", house:"Morgan Stanley", rating:"中性", tp:"$210"},{d:"10-15", house:"BofA", rating:"买入", tp:"$260"}],
+     kol:[{d:"11-07", handle:"@benedictevans", view:"边缘是真需求，但定价权还没建立"}]},
+
+    {t:"RBRK", n:"Rubrik", sec:"数据安全", cap:"$32B", px:"$96.4", mv:6.3,
+     logic:"订阅 ARR +38%、净留存 120%，在安全预算刚性下是少数“越贵越买”的品类；估值已充分计入高增长。",
+     kpi:[["ARR","$1.3B"],["NRR","120%"],["FCF margin","18%"],["订阅占比","92%"]],
+     val:"2027E PS 16x", cat:"AI 数据安全合规 / 大单转化",
+     risk:"估值高；与 CRWD 正面竞争。", map:"安恒信息 / 深信服",
+     earn:{next:"2027-03-05", status:"covered", note:"刚发布 Q3；下季看 ARR 增速能否维持 35%+",
+       hist:[{d:"2026-11-10", res:"ARR 13 亿（+38%），NRR 120%", react:"盘后 +6.3%"},{d:"2026-09-04", res:"ARR 超预期", react:"+7.8%"}]},
+     updates:[{d:"11-10", src:"Q3 财报", txt:"ARR +38%，NRR 120%，FCF margin 上调至 18%", key:true},{d:"10-21", src:"公司公告", txt:"推出 AI 数据安全态势管理模块"}],
+     reports:[{d:"11-10", house:"Morgan Stanley", rating:"增持", tp:"$120"},{d:"10-27", house:"Wells Fargo", rating:"增持", tp:"$110"}],
+     kol:[{d:"11-10", handle:"@jasonlk", view:"安全预算刚性，这家是少数不打折的"}]},
+
+    {t:"OKTA", n:"Okta", sec:"身份安全", cap:"$18B", px:"$88.2", mv:-4.8,
+     logic:"身份层是 AI Agent 的必经入口，但 cRPO 增速降至 12%，大单审批周期拉长，短期缺乏催化。",
+     kpi:[["cRPO 增速","12%"],["大客户","4,800"],["毛利率","78%"],["NRR","106%"]],
+     val:"2027E PS 5x", cat:"Agent 身份管理 / 并购",
+     risk:"竞争加剧；增长失速导致估值下修。", map:"格尔软件 / 数字认证",
+     earn:{next:"2027-03-04", status:"covered", note:"刚发布 Q3；cRPO 增速连续三季下滑，需确认是否见底",
+       hist:[{d:"2026-11-10", res:"cRPO 增速降至 12%，指引保守", react:"盘后 -4.8%"},{d:"2026-08-27", res:"大单延期，指引下修", react:"-9.6%"}]},
+     updates:[{d:"11-10", src:"Q3 财报", txt:"cRPO +12%，管理层称大单审批周期拉长", key:true},{d:"10-16", src:"公司公告", txt:"推出 Agent 身份治理产品，2027H1 GA"}],
+     reports:[{d:"11-10", house:"J.P. Morgan", rating:"减持", tp:"$78"},{d:"10-20", house:"UBS", rating:"中性", tp:"$95"}],
+     kol:[{d:"11-10", handle:"@GergelyOrosz", view:"身份层被云厂商原生吞掉只是时间问题"}]},
+
+    {t:"CHKP", n:"Check Point", sec:"网络安全", cap:"$22B", px:"$196.0", mv:0.6,
+     logic:"高现金流、低估值的安全平台，Infinity 平台整合带来交叉销售；增长天花板低，防御属性强。",
+     kpi:[["订阅占比","58%"],["经营利润率","42%"],["净现金","$30 亿"],["FCF yield","5.2%"]],
+     val:"2027E PE 17x", cat:"平台整合 / 持续回购",
+     risk:"增长乏力；汇率波动。", map:"启明星辰 / 卫士通",
+     earn:{next:"2027-01-29", status:"covered", note:"Q4 财报；订阅占比与回购节奏",
+       hist:[{d:"2026-10-29", res:"订阅收入 +11%，利润率 42%", react:"+1.2%"},{d:"2026-07-30", res:"账单增速放缓", react:"-2.4%"}]},
+     updates:[{d:"10-29", src:"Q3 财报", txt:"订阅占比 58%，回购 20 亿美元"},{d:"10-12", src:"公司公告", txt:"Infinity 平台新增 AI 威胁分析模块"}],
+     reports:[{d:"10-30", house:"Barclays", rating:"中性", tp:"$200"},{d:"10-18", house:"Citi", rating:"中性", tp:"$195"}],
+     kol:[{d:"11-02", handle:"@benedictevans", view:"现金流机器，但没有增长故事"}]}
+  ],
+
+  strategy:{
+    /* ---- 逻辑路径第一步：市场选择 ---- */
+    market:{ updated:"11-11 07:00", verdict:"美股 &gt; 港股 &gt; A 股",
+      note:"顺序的含义：先决定“钱放哪个市场”，再谈行业和个股。市场选错，行业再对也赚不到钱。",
+      rows:[
+        {m:"美股", view:"超配", w:"60%", dw:"+2pct", chg:"+2pct",
+         perf:"标普 20 日 -3.6%／纳指 -7.9%／费半 -18.1%；等权 RSP 反而 +3.6%",
+         val:"Forward PE 22.4x（近 5 年 78% 分位）",
+         why:"全球唯一同时具备 <b>AI 主线 + 深度流动性 + 回购托底</b> 的市场。这轮跌的是分母（10Y 4.98%），不是分子（AI 资本开支还在上修）。",
+         diff:"与上月不同：<span class='hi'>从“全面超配美股”改为“超配但内部防御化”</span>——科技敞口由 34% 降到 26%，腾出的仓位去了电力与医疗。",
+         inp:"买入并持有指数"},
+        {m:"港股", view:"标配偏高", w:"18%", dw:"+6pct", chg:"+6pct",
+         perf:"恒指 20 日 -0.12%，全球最抗跌的主要市场之一；南向连续净买入",
+         val:"恒指 PE 10.8x，较标普折价约 52%",
+         why:"同一批 AI 算力与电力资产，在港股有 <b>40% 以上的估值折价</b>；且有南向资金这个结构性买盘。",
+         diff:"边际修正：<span class='hi'>由“低配”上调至“标配偏高”</span>——20 日几乎零回撤，说明有真实承接，不再只是“便宜”。",
+         inp:"折价收敛，但需要催化剂"},
+        {m:"A 股", view:"低配", w:"8%", dw:"0", chg:"0",
+         perf:"上证 20 日 -2.3%；成交 1.86 万亿，量能未跟上",
+         val:"沪深 300 PE 12.1x（历史 31% 分位）",
+         why:"便宜但缺增量资金。真正能赚的是 <b>美股订单映射</b>（封测、电力设备、光模块），不是本土需求复苏。",
+         diff:"维持低配，且 <span class='hi'>不再因为“估值便宜”加仓</span>——已经便宜两年了，便宜不是催化剂。",
+         inp:"只做映射，不做 beta"}
+      ]},
+    /* ---- 逻辑路径第二步：行业选择 ---- */
+    sectorSel:{ updated:"11-11 07:00",
+      good:"医疗 · 必需消费 · AI 电力 · 半导体设备/封测",
+      bad:"信息技术（整体）· 能源 · 高杠杆小盘",
+      note:"判断依据是 20 日板块相对表现 + 利率敏感度，不是“故事好不好”。同一行业内部分化极大，所以“看空信息技术”和“看多封测设备”可以同时成立。",
+      rows:[
+        {s:"医疗", etf:"XLV", view:"增配", w:"12%", dw:"+5pct", d20:11.3, upd:true,
+         why:"对利率不敏感，是资金撤离长久期资产后的第一落点；GLP-1 与手术机器人两条产品周期同时向上。",
+         diff:"<span class='hi'>本轮新增</span>：此前只当防御配置，现在看是“有基本面的防御”。"},
+        {s:"必需消费", etf:"XLP", view:"增配", w:"8%", dw:"+3pct", d20:8.1, upd:true,
+         why:"通胀黏性下的定价权；现金流稳，分红收益率 3% 以上，对 10Y 4.98% 有部分替代性。",
+         diff:"<span class='hi'>由“中性”上调至“增配”</span>。"},
+        {s:"AI 电力 / 公用事业", etf:"XLU", view:"增配（等回调）", w:"14%", dw:"+2pct", d20:4.4, upd:false,
+         why:"AI 用电是这轮最硬的需求，但公用电已经被买过一轮（20 日 +4.4%），<b>追高性价比差</b>，等回到 20 日均线再加。",
+         diff:"维持增配，但节奏从“立即”改为“等回调”。"},
+        {s:"半导体设备 / 先进封测", etf:"SOX 子行业", view:"增配", w:"16%", dw:"+1pct", d20:-18.1, upd:true,
+         why:"费半 20 日 -18.1%，但 <b>订单能见度反而在延长</b>（设备交期 18 个月、CoWoS 满产）。杀的是估值，不是订单。",
+         diff:"<span class='hi'>关键分歧点</span>：整体减配信息技术，但设备/封测子行业继续增配——分子没坏，分母坏了，那就买分子最硬的部分。"},
+        {s:"信息技术（整体 / 软件）", etf:"XLK", view:"减配", w:"10%", dw:"-8pct", d20:-13.9, upd:true,
+         why:"估值 78% 分位 + 10Y 4.98%，分母端没解除前，长久期资产反弹都是逃命波。软件尤其差：AI 预算在挑品类，seat 定价被重构。",
+         diff:"<span class='hi'>由“超配”下调为“减配”</span>，这是本轮最大的仓位调整。"},
+        {s:"能源", etf:"XLE", view:"减配", w:"3%", dw:"-2pct", d20:-7.4, upd:true,
+         why:"WTI 86 美元但 20 日 -8.6%，OPEC+ 增产压制；地缘溢价只剩 1.8 美元/桶，<b>几乎不给下行保护</b>。",
+         diff:"<span class='hi'>由“标配”下调为“减配”</span>。"},
+        {s:"金融", etf:"XLF", view:"标配", w:"8%", dw:"0", d20:6.3, upd:false,
+         why:"曲线陡峭化受益，但信用成本上行（HY OAS 走阔）是隐患，不做方向性押注。",
+         diff:"维持。"},
+        {s:"可选消费", etf:"XLY", view:"标配", w:"6%", dw:"0", d20:7.7, upd:false,
+         why:"数据分化极大：高端与体验消费强，大众消费弱。指数层面的 +7.7% 主要由权重股贡献，个股选择比行业判断重要。",
+         diff:"维持。"},
+        {s:"通信服务", etf:"XLC", view:"中性", w:"5%", dw:"0", d20:-4.0, upd:false,
+         why:"广告韧性对冲资本开支上行，META/GOOGL 的 AI 投入还没到折旧压力最大的时候，2027 才是。",
+         diff:"维持。"}
+      ]},
+    trading:[
+      {dir:"long", name:"做多 AI 电力链", leg:"BE / IREN / VRT / GEV；对冲：做空 XLU", pos:"15%",
+       why:"数据中心新增负荷 35GW 与并网排队 3-5 年形成硬缺口，“快电”方案具备定价权（IREN 合同溢价 35% 是证据）。",
+       cat:"新签 PPA、并网审批加速", inv:"电价管制或并网流程大幅简化"},
+      {dir:"long", name:"做多先进封装设备", leg:"TER / ONTO / AMKR", pos:"20%",
+       why:"CoWoS 与 SoIC 扩产周期中设备交期 18 个月、订单出货比 1.6，议价力高于晶圆厂。",
+       cat:"台积电 2027 capex 指引（1/15）", inv:"CoWoS 扩产放缓或 HBM 需求证伪"},
+      {dir:"short", name:"减仓 AI 应用概念", leg:"OKTA 清仓、NET 减半；净敞口降至 8%", pos:"8%",
+       why:"cRPO 增速掉档、seat 计费被 Agent 重构，估值缺支撑，等 consumption 模式跑通再回补。",
+       cat:"（反向）ARR 重新加速至 25%+", inv:"AI 原生应用出现爆款级 ARR 曲线"},
+      {dir:"hedge", name:"利率上行对冲", leg:"TLT 看跌价差（4.5% 行权）", pos:"3%",
+       why:"10Y 回到 4.28%，12 月降息概率降至 42%，长久期成长对利率敏感度上升。",
+       cat:"CPI 超预期、非农强劲", inv:"就业快速走弱，降息预期回升"},
+      {dir:"cash", name:"现金储备", leg:"货币基金 / 短债", pos:"12%",
+       why:"等 12 月 FOMC 前的回调窗口，目标加仓位：纳指较当前 -4%。", cat:"—", inv:"—"}
+    ],
+    vars:{
+      next:{ label:"下一交易日 · 11/12（周四）", rows:[
+        {t:"09:30", ev:"中国 10 月 CPI / PPI", tk:"A 股 / 港股", focus:"PPI 同比能否从 -1.8% 收窄至 -1.5% 以内", imp:"m"},
+        {t:"16:00", ev:"欧洲央行行长讲话", tk:"EUR / DAX", focus:"是否暗示 12 月降息", imp:"l"},
+        {t:"20:30", ev:"美国 10 月 CPI 同比（预期 2.9%）", tk:"全市场", focus:"核心环比 0.3% 是分水岭；≥0.3% 则 12 月降息概率跌破 35%", imp:"h"},
+        {t:"20:30", ev:"NBIS 盘前财报", tk:"NBIS / AI 云", focus:"毛利率指引是否守住 55%；客户集中度披露", imp:"h"},
+        {t:"21:30", ev:"美国初请失业金人数", tk:"利率", focus:"是否连续三周上行（突破 24 万）", imp:"m"},
+        {t:"22:00", ev:"联储鹰派票委讲话", tk:"利率 / 成长股", focus:"是否重复“限制性不足”表述", imp:"m"},
+        {t:"23:30", ev:"EIA 天然气库存", tk:"BE / GEV", focus:"气价对燃料电池成本的影响", imp:"l"},
+        {t:"盘后", ev:"AMAT 财报", tk:"半导体设备", focus:"订单出货比与中国区收入占比", imp:"h"},
+        {t:"盘后", ev:"IREN 月度运营更新", tk:"IREN", focus:"AI 云上架率与 GPU 交付", imp:"l"}
+      ]},
+      d5:{ label:"未来 5 个交易日 · 11/12 - 11/18", rows:[
+        {t:"11/12", ev:"CPI + NBIS + AMAT 同日", tk:"利率 / AI 云 / 设备", focus:"三个变量撞车，是本周最大波动源", imp:"h"},
+        {t:"11/13", ev:"BE 财报 + 密歇根通胀预期", tk:"BE / 电力", focus:"订单转化率；通胀预期是否上破 3.2%", imp:"m"},
+        {t:"11/16", ev:"纽约联储制造业指数", tk:"宏观", focus:"是否跌破荣枯线", imp:"l"},
+        {t:"11/17", ev:"美国 10 月工业产出 / 零售龙头财报", tk:"周期股", focus:"消费韧性的验证", imp:"m"},
+        {t:"11/18", ev:"WMT 财报", tk:"消费", focus:"低收入客群是否降级——衰退的领先信号", imp:"m"}
+      ]},
+      month:{ label:"当月 · 11 月", rows:[
+        {t:"11/19", ev:"NVIDIA 财报（Q3 FY2027）", tk:"全市场", focus:"本季最重要单一事件；指引决定 AI 链估值中枢", imp:"h"},
+        {t:"11/24", ev:"IREN 财报", tk:"IREN", focus:"AI 云收入确认节奏", imp:"m"},
+        {t:"11/26", ev:"感恩节休市", tk:"—", focus:"流动性下降，注意隔夜跳空", imp:"l"},
+        {t:"11/27", ev:"黑色星期五（半日交易）", tk:"消费", focus:"线上 GMV 与折扣率", imp:"m"},
+        {t:"11/30", ev:"中国 11 月 PMI", tk:"A 股 / 大宗", focus:"新订单分项是否回到扩张区间", imp:"m"}
+      ]},
+      q:{ label:"未来三个月 · 11 月 - 2027 年 1 月", rows:[
+        {t:"12/08-09", ev:"FOMC + 点阵图", tk:"全市场", focus:"中位数是否从 2 次降至 1 次——估值中枢的分水岭", imp:"h"},
+        {t:"12/10", ev:"美国 11 月 CPI", tk:"利率", focus:"若连续两月超预期，2027 降息叙事破", imp:"h"},
+        {t:"12/16", ev:"四巫日", tk:"技术面", focus:"期权到期后的仓位再平衡", imp:"m"},
+        {t:"12/18-19", ev:"日本央行会议", tk:"日元 / 套息", focus:"加息则套息平仓，冲击美股小盘", imp:"m"},
+        {t:"01/06", ev:"CES 2027", tk:"端侧 AI / 机器人", focus:"端侧模型与具身智能的量产时间表", imp:"m"},
+        {t:"01/15", ev:"台积电 Q4 法说", tk:"半导体全链", focus:"2027 capex 指引 480-520 亿是否上修", imp:"h"},
+        {t:"01/27-28", ev:"FOMC", tk:"全市场", focus:"新票委构成与措辞变化", imp:"h"}
+      ]}
+    },
+    risks:[
+      {sev:"h", title:"CPI 超预期 → 10Y 上破 5.3%", body:"10Y 已在 4.98%，市场仍在赌 12 月降息。若核心 CPI 环比 ≥0.3%，5% 会从“压力位”变成“中枢”，长久期成长再杀一轮 8-10%。这在当前估值上是不对称的。",
+       trigger:"核心 CPI 环比 ≥0.3%；降息概率 <30%；10Y 站稳 5.0%", act:"TLT put spread 加仓；成长股减 5%"},
+      {sev:"h", title:"AI 资本开支的融资链断裂", body:"CRWV / NBIS 本质是“用高息债买 GPU 再出租”。若 HY OAS 走阔 100bp，扩张逻辑逆转，且 GPU 残值是未经检验的假设。",
+       trigger:"HY OAS > 380bp；H200 租赁价连跌两月", act:"CRWV 减半，转向有自有电力的 IREN"},
+      {sev:"m", title:"电价政治化", body:"数据中心推高居民电价，州级监管开始反弹（PJM 已要求自备电源）。若演变为听证与限价，AI 电力的溢价逻辑受伤。",
+       trigger:"PJM/ERCOT 容量拍卖异常；州议会听证", act:"BE/GEV 减仓，观察政策口径"},
+      {sev:"m", title:"“等权繁荣”是假象：涨的是防御股，不是成长股", body:"等权 RSP 20 日 +3.6%、市值加权 SPY -3.6%，等权跑赢 7.2 个百分点——听起来广度健康，但拆开看，跑赢的是医疗、必需消费、公用事业这些防御板块。这种扩散不是进攻信号，而是资金在降久期。一旦权重股继续杀，指数拖累仍在；而防御股的拥挤度已经不低。<b>两边都不便宜，这才是麻烦。</b>",
+       trigger:"等权相对收益转负；XLU + XLP 相对标普 20 日转弱；防御板块成交占比 > 35%", act:"指数层面买 put 保护；个股层面不追防御股的补涨末端"},
+      {sev:"m", title:"美伊谈判破裂 → 油价二次冲击", body:"地缘溢价目前仅 1.8 美元/桶，定价极不充分。破裂则布油 +5-8 美元，通胀预期二次上行，直接推翻降息交易。",
+       trigger:"霍尔木兹通行量下降；布油转 backwardation", act:"能源股战术性对冲"}
+    ],
+    map:[
+      {theme:"AI 电力 / 供电", us:"BE / VRT / GEV", cn:"金盘科技、思源电气、麦格米特、英维克", logic:"数据中心配电与温控直接对标，订单滞后美股 1-2 个季度", s:"强"},
+      {theme:"先进封装 / 设备", us:"AMKR / ONTO / TER", cn:"长电科技、通富微电、华海清科、芯源微", logic:"封测扩产资本开支同步，叠加国产替代", s:"强"},
+      {theme:"光互联", us:"ANET / COHR", cn:"中际旭创、新易盛、天孚通信", logic:"800G/1.6T 出货节奏基本同步", s:"强"},
+      {theme:"AI 算力租赁", us:"CRWV / NBIS / IREN", cn:"润泽科技、光环新网、世纪互联", logic:"国内智算中心上架率与利用率为核心变量", s:"中"},
+      {theme:"人形机器人", us:"TSLA", cn:"三花智控、拓普集团、绿的谐波", logic:"Optimus 供应链定点是唯一有效催化", s:"中"},
+      {theme:"端侧 AI", us:"QCOM / AAPL", cn:"恒玄科技、乐鑫科技、瑞芯微", logic:"NPU 规格升级 + 换机，滞后 2 个季度", s:"中"},
+      {theme:"AI 应用 / 办公", us:"MSFT / CRM", cn:"金山办公、用友网络、金蝶国际", logic:"订阅 ARR 与 Agent 付费模式验证", s:"弱-中"}
+    ],
+    /* ---- 逻辑路径第四步：风险关注（要盯什么、触发后做什么） ---- */
+    watch:{ updated:"11-11 07:00", rows:[
+      {k:"10Y 美债收益率", now:"4.98%（20 日 -23bp）", thr:"站稳 5.30%", lvl:"h",
+       act:"成长股再减 5%；TLT put spread 加仓，比直接清仓更省成本"},
+      {k:"HY OAS（高收益债利差）", now:"Wind 无日频序列，待接入", thr:"走阔 100bp 至 380bp", lvl:"h",
+       act:"CRWV 减半，仓位切到有自有电力的 IREN；NBIS 直接退出"},
+      {k:"财报季指引（11-12 NBIS / 11-19 NVDA）", now:"待披露", thr:"capex 或下季指引下修", lvl:"h",
+       act:"设备链（TER/ONTO）先减，电力（BE/IREN）保留——订单滞后于 capex 一年"},
+      {k:"等权相对收益（RSP − SPY，20 日）", now:"+7.2pct", thr:"转负", lvl:"m",
+       act:"防御扩散结束的信号；届时减医疗/必需消费，加回成长"},
+      {k:"VIX 期限结构", now:"VIX 19.46，20 日 +27%", thr:"VIX/VIX3M > 1.05（近端升水）", lvl:"m",
+       act:"买保护变贵，改为直接降仓，不再买险"},
+      {k:"标普量能", now:"量比 89%（缩量 -11%）", thr:"连续 3 日 < 80% 且指数创新低", lvl:"l",
+       act:"确认“无量下跌”，等缩量止跌信号再加，不抢反弹"},
+      {k:"地缘溢价（布油 − WTI 与绝对油价）", now:"地缘溢价约 1.8 美元/桶，定价极不充分", thr:"霍尔木兹通行量下降", lvl:"m",
+       act:"能源股战术性对冲，不做方向性重仓"}
+    ]},
+    recs:[
+      {act:"in", tk:"SNDK", name:"闪迪", why:"NAND 现货单周 +9%、原厂减产，异动监测里唯一“价格驱动且可持续”的标的，但研究池尚无覆盖。建议入库跟踪，重点看合约价与库存周转。",
+       from:["异动监测","赛道：AI 基础设施"], add:true},
+      {act:"add", tk:"TER", name:"泰瑞达", why:"HBM4 测试订单 + 订单出货比 1.6 + 交期 18 个月，三条证据同时指向设备端议价力上行。已有仓位 20%，考虑在 2027 capex 指引前加到 25%。",
+       from:["赛道：先进封测","盘前业绩","研报：UBS"]},
+      {act:"cut", tk:"OKTA", name:"Okta", why:"cRPO 增速连续三季下滑至 12%，JPM 下调至减持。身份层被云厂商原生吞掉是结构性问题，不是周期问题——<b>清仓，不是减仓</b>。下一财报 12-01，是验证窗口。",
+       from:["标的研究：cRPO","研报：JPM","赛道：AI 应用"]},
+      {act:"watch", tk:"BE", name:"Bloom Energy", why:"快电叙事强、订单 180 亿，但估值撑不住 6x EV/Sales 的前提是订单转化率 ≥60%。上次财报 10-22，<b>下一披露日公司尚未公告</b>——等日期确定再谈加仓，不追高。",
+       from:["赛道：AI 基础设施","风险：电价政治化"]},
+      {act:"hedge", tk:"TLT", name:"利率对冲", why:"风险点 1 的概率在上升（CPI 预期 2.9%、核心环比 0.3%）。用 put spread 对冲，成本 0.4%，比直接减仓更有效率。",
+       from:["风险点：12 月不降息","FedWatch 42%"]},
+      {act:"in", tk:"AMD", name:"AMD", why:"MI450 2027H1 量产 + 第二个超大规模客户，但 ROCm 生态仍是折扣项。建议把“ARM 侵蚀 x86”作为独立风险列跟踪（对应 CPU 赛道认知更新）。",
+       from:["赛道：CPU","研报：Citi"], add:true}
+    ],
+    thinking:"1）这一轮 AI 的定价权正在从“芯片”向“电力和交付”迁移。过去两年买 NVDA 是买算力稀缺，现在缺的是电和机柜——所以 IREN 这种“有并网电力”的资产被重新定价，而 NBIS 这种“用毛利换增速”的就被杀。这条线索至少能走到 2027 年。\n\n2）指数新高但广度只有 240/500，这种结构下加仓指数性价比很差。要么买最强的（AVGO/TSM/TER），要么等广度修复。中间地带的股票最难受。\n\n3）12 月 FOMC 是近期最大单一变量。42% 的降息概率意味着市场没有充分定价“不降息”，如果 CPI 再超预期，长久期成长会有一波 8-10% 的杀估值。这就是我留 12% 现金的原因。\n\n4）需要警惕的自我欺骗：把“AI 资本开支”当成万能解释。STM 的指引下修提醒我们，传统工业周期与 AI 链是两条完全不同的曲线，不能用一个框架套所有半导体。"
+  }
+};
+
+/* ========================= Wind 实时数据注入 ========================= */
+function fmtNum(v,d){ if(v===null||v===undefined) return "—";
+  return Number(v).toLocaleString("en-US",{minimumFractionDigits:d||0,maximumFractionDigits:d||0}); }
+function fmtCap(v){ if(!v) return "—";
+  if(v>=1e12) return "$"+(v/1e12).toFixed(2)+"T";
+  if(v>=1e9) return "$"+(v/1e9).toFixed(1)+"B";
+  return "$"+(v/1e6).toFixed(0)+"M"; }
+function pstr(v,d){ return (v===null||v===undefined)?"—":((v>0?"+":"")+Number(v).toFixed(d==null?2:d)+"%"); }
+function pp(v,d){ return (v===null||v===undefined)?"—":((v>0?"+":"")+Number(v).toFixed(d==null?2:d)+"%"); }
+function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
+
+const CODE_OF = {TSLA:"TSLA.O",META:"META.O",IREN:"IREN.O",NBIS:"NBIS.O",CRWV:"CRWV.O",BE:"BE.N",
+  AMD:"AMD.O",TSM:"TSM.N",TER:"TER.O",ONTO:"ONTO.N",NET:"NET.N",RBRK:"RBRK.N",OKTA:"OKTA.O",CHKP:"CHKP.O"};
+
+function hydrate(L){
+  FEED.connected = true;
+  const d = new Date(L.meta.syncedAt);
+  FEED.lastSync = d.toLocaleString("zh-CN",{month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+  DATA.meta.dataAsOf = L.meta.stockDate;
+  DATA.meta.updatedPT = FEED.lastSync;
+
+  /* 1. 标的行情 */
+  DATA.stocks.forEach(function(s){
+    const c = CODE_OF[s.t], q = c && L.stocks[c];
+    if(!q) return;
+    s.px = "$" + q.price.toFixed(2);
+    s.mv = q.chg;
+    s.d20 = q.d20;
+    s.cap = fmtCap(q.mcap);
+    s.live = {price:q.price, chg:q.chg, d20:q.d20, mcap:q.mcap, date:q.date,
+              pre:q.pre, post:q.post, prev:q.prev};
+  });
+
+  /* 2. 市场色彩 */
+  const I = L.indices, X = L.cross;
+  const g = function(k){ return I[k] || {}; };
+  const spx=g("SPX.GI"), ixic=g("IXIC.GI"), dji=g("DJI.GI"), ndx=g("NDX.GI"), sox=g("SOX.GI"), vix=g("VIX.GI");
+  const growthGap = (ndx.d20!=null && dji.d20!=null) ? (ndx.d20-dji.d20) : null;
+  const soxGap = (sox.d20!=null && spx.d20!=null) ? (sox.d20-spx.d20) : null;
+
+  DATA.brief.color = [
+    {dim:"指数",
+     perf:"标普 " + fmtNum(spx.level,2) + "（" + pstr(spx.chg) + "）／纳指 " + fmtNum(ixic.level,2) + "（" + pstr(ixic.chg) + "）／道指 " + fmtNum(dji.level,2) + "（" + pstr(dji.chg) + "）；20 日 " + pstr(spx.d20) + " / " + pstr(ixic.d20) + " / " + pstr(dji.d20),
+     note:"当日只是小幅回落，但 20 日的分化才是重点：道指仍为正，纳指近 -8%。这不是普跌，是风格切换。"},
+    {dim:"风格",
+     perf:"纳指 100 20 日 " + pstr(ndx.d20) + "　vs　道指 20 日 " + pstr(dji.d20) + "　→ 成长跑输价值 " + (growthGap==null?"—":Math.abs(growthGap).toFixed(1)+" 个百分点"),
+     note:"教科书式的利率敏感型切换。10Y 在 4.98% 的绝对高位，长久期资产先被杀，这是分母端的问题，不是分子端。"},
+    {dim:"半导体",
+     perf:"费城半导体 " + fmtNum(sox.level,2) + "（" + pstr(sox.chg) + "），20 日 " + pstr(sox.d20) + "；相对标普 " + (soxGap==null?"—":pstr(soxGap,1)),
+     note:"AI 链是这轮调整的重灾区，20 日 -18%。但要区分：是估值消化，还是需求证伪？目前更像前者——铜价 20 日仅 -5%，用电需求没有崩。"},
+    {dim:"波动",
+     perf:"VIX " + fmtNum(vix.level,2) + "（" + pstr(vix.chg) + "），20 日 " + pstr(vix.d20),
+     note:"绝对水平 19.5 还不算恐慌，但一个月抬升 27%——市场从“不在意”转向“开始定价”。这个位置买保护比追涨划算。"},
+    {dim:"量能",
+     perf:"标普成交额 " + (spx.amount ? fmtNum(spx.amount/1e8,0) + " 亿美元" : "待接入") +
+           "；道指 " + (dji.amount ? fmtNum(dji.amount/1e8,0) + " 亿美元" : "待接入") + "（仅当日绝对值，20 日均量待接入）",
+     note:"放量下跌与缩量下跌含义完全不同。目前只有绝对量、没有均量对比，这一项暂时不能下结论——不做猜测。"},
+    {dim:"板块",
+     perf:"待接入（需 11 个 GICS 板块行情）",
+     note:"没有板块数据就不编板块结论。接入后可看：是全面回撤，还是仅信息技术/通信服务拖累。"},
+    {dim:"个股分化",
+     perf:"待接入（需涨跌家数与中位数涨幅）",
+     note:"指数与个股的背离程度是判断“结构性”还是“系统性”的关键，目前缺这一块，先标注待补。"}
+  ];
+
+  /* 3. 全球跨资产 */
+  const row = function(k, opts){
+    const c = X[k]; if(!c) return null;
+    opts = opts || {};
+    const isPct = c.unit === "%";
+    let close, d1, u1, d20, u20;
+    if(isPct){
+      close = c.value.toFixed(2) + "%";
+      d1 = c.dbp1; u1 = "bp"; d20 = opts.block20 ? null : c.dbp20; u20 = "bp";
+    } else {
+      const dec = c.value >= 1000 ? 0 : (c.value >= 100 ? 1 : 2);
+      close = fmtNum(c.value, dec);
+      d1 = c.d1; u1 = "%"; d20 = opts.block20 ? null : c.d20; u20 = "%";
+    }
+    return {n: opts.name || c.name.replace(/^.*[:：]/, ""), close: close, d1: d1, u1: u1, d20: d20, u20: u20, note: opts.note || ""};
+  };
+
+  const rows = [
+    {group:"利率与汇率", rows:[
+      row("UST10Y", {name:"10Y 美债收益率", note:"4.98%——这是全篇最重要的一个数字。20 日回落 23bp 但仍贴近 5%，分母端的压力没有解除"}),
+      row("DXY", {name:"美元指数", note:"102.25，20 日几乎持平（+0.05%）。汇率不是这轮调整的驱动，利率才是"}),
+      null
+    ]},
+    {group:"大宗商品", rows:[
+      row("WTI", {name:"WTI 原油", note:"86 美元，20 日 -8.6%，通胀端压力缓和；但绝对价格仍在高位"}),
+      row("BRENT", {name:"布伦特原油", block20:true, note:"20 日变动 -30%，与 WTI -8.6% 明显不一致，疑为换月或序列断点，已屏蔽，待核"}),
+      row("GOLD", {name:"黄金", note:"实际利率近 5% 而金价仅 20 日 -2.8%，韧性说明央行购金与去美元化需求仍在"}),
+      row("SILVER", {name:"白银", note:"20 日 -13%，回吐前期涨幅；金银比 77.5，工业属性主导，跟随铜"}),
+      row("COPPER", {name:"LME 铜", note:"13,992 美元/吨，20 日仅 -5%，远强于半导体。AI 用电与电网需求是真的——被杀的只是估值"})
+    ]},
+    {group:"加密资产", rows:[
+      {n:"BTC", close:"—", d1:null, u1:"%", d20:null, u20:"%", note:"Wind EDB 无对应日频指标，待接入交易所行情源；不填估值"}
+    ]},
+    {group:"亚太股市", rows:[
+      row2("N225.GI", "日经 225", "当日 +1.31% 但 20 日 -9.6%，与费半同步——日本的 AI 设备权重在这轮里受伤最重"),
+      row2("KS11.GI", "KOSPI", "当日 +4.39% 是超跌反弹，20 日仍 -13.5%，存储双雄拖累"),
+      row2("HSI.HI", "恒生指数", "20 日 -0.12%，几乎没动——港股这轮是全球最抗跌的主要市场之一"),
+      row2("000001.SH", "上证指数", "当日 +0.46%，20 日 -2.3%，韧性来自低估值与内需权重")
+    ]},
+    {group:"欧洲股市", rows:[
+      row2("SX5E.DF", "欧洲 STOXX 50", "20 日 +2.9%，全球唯一明显为正的区域——没有 AI 权重，反而成了优势"),
+      row2("GDAXI.GI", "德国 DAX", "20 日 +4.8%，最强主要指数。财政扩张 + 无 AI 泡沫敞口"),
+      row2("FTSE.GI", "英国富时 100", "20 日 +0.5%，能源与银行权重提供缓冲")
+    ]}
+  ];
+
+  function row2(code, name, note){
+    const i = I[code]; if(!i) return {n:name, close:"—", d1:null, u1:"%", d20:null, u20:"%", note:"未取到行情"};
+    return {n:name, close:fmtNum(i.level,2), d1:i.chg, u1:"%", d20:i.d20, u20:"%", note:note};
+  }
+
+  DATA.brief.cross = rows.map(function(gr){
+    return {group:gr.group, rows:gr.rows.filter(Boolean)};
+  });
+
+  /* 4. 情绪：用已接入的 4 个因子自算，公式写死在下方，可复核 */
+  const vixScore = clamp(100 - (vix.level - 12) * 4, 0, 100);
+  const momScore = clamp(50 + spx.d20 * 5, 0, 100);
+  const growthScore = clamp(50 + sox.d20 * 2.5, 0, 100);
+  const rateScore = clamp(100 - (X.UST10Y.value - 2.5) * 20, 0, 100);
+  const score = Math.round((vixScore + momScore + growthScore + rateScore) / 4);
+  const lb = score >= 75 ? "极度贪婪" : score >= 55 ? "贪婪" : score >= 45 ? "中性" : score >= 25 ? "恐惧" : "极度恐惧";
+
+  DATA.senti.appetite = {v: score, label: lb, at: FEED.lastSync};
+  DATA.senti.fng = {v: score, label: lb, at: FEED.lastSync,
+    scale:["极度恐惧","恐惧","中性","贪婪","极度贪婪"],
+    note:"平台自算，仅 4 因子（VIX / 标普 20 日动量 / 费半 20 日 / 10Y），非 CNN 官方口径"};
+  DATA.senti.comps = [
+    ["波动(VIX)", Math.round(vixScore)],
+    ["动量(标普20日)", Math.round(momScore)],
+    ["成长(费半20日)", Math.round(growthScore)],
+    ["利率(10Y)", Math.round(rateScore)]
+  ];
+}
+
+/* ==========================================================================
+   YAHOO / NASDAQ 辅助层（补 Wind 缺口 + 当日财报日历 + 双源校验）
+   - Wind 覆盖不到的：BTC/ETH、11 个板块 ETF、标普量能、等权 vs 市值权重
+   - 只有这一层能给：当日到底哪几家披露、盘前盘后价格、一致预期与实际 EPS
+   ========================================================================== */
+const YF = (typeof window !== "undefined" && window.YF_DATA) ? window.YF_DATA : null;
+const POOL_SYMS = Object.keys(CODE_OF);
+
+function epsShow(v){ return v==null ? "—" : (v<0 ? "("+Math.abs(v).toFixed(2)+")" : v.toFixed(2)); }
+function tierOf(mcap){ return mcap>=10e9 ? "大市值" : (mcap>=2e9 ? "中市值" : "中小市值"); }
+
+/* 行结构：两个表共用，ses = pre / post */
+function earnRow(r, ses){
+  const mv = ses==="pre" ? r.preChg : (r.postChg!=null ? r.postChg : r.preChg);
+  const hit = mv!=null && Math.abs(mv) >= r.threshold;
+  return { t:r.symbol, n:r.name, tier:r.tier, mcap:fmtCap(r.mcap), thr:r.threshold,
+    q:(r.quarter||"").replace("/"," "), est:r.est, nEst:r.nEst, last:r.last,
+    actual:r.actual, surprise:r.surprise, reported:!!r.reported, src:r.src||"",
+    mv:mv, pre:r.preChg, post:r.postChg, day:r.dayChg, hit:hit,
+    pooled:POOL_SYMS.indexOf(r.symbol)>=0, ses:ses };
+}
+
+/* 解读：只做可由数据推出的话；指引原文缺失时说清缺失，不编 */
+function earnRead(r){
+  const out=[];
+  if(r.reported && r.actual!=null){
+    if(r.surprise!=null){
+      const better = r.surprise>0;
+      const flat = Math.abs(r.surprise) < 0.5;
+      out.push("实际 EPS <b>"+epsShow(r.actual)+"</b>，预期 "+epsShow(r.est)+
+        (r.est<0 ? "（亏损口径，比的是减亏幅度）" : "") + "，" +
+        (flat ? "<b>与预期基本持平</b>"
+              : "<b class='"+(better?"up":"down")+"'>"+(better?"好于":"低于")+"预期 "+Math.abs(r.surprise).toFixed(1)+"%</b>"));
+    } else {
+      out.push("实际 EPS <b>"+epsShow(r.actual)+"</b>，无一致预期可比");
+    }
+  } else {
+    out.push("一致预期 EPS <b>"+epsShow(r.est)+"</b>"+(r.nEst?"（"+r.nEst+" 家）":"")+"，去年同期 "+epsShow(r.last)+"；<span class='muted'>实际数字披露后回填</span>");
+  }
+  if(r.mv!=null){
+    out.push((r.ses==="pre"?"盘前":"盘前接力")+" <b class='"+sgn(r.mv)+"'>"+pct(r.mv,1)+"</b>，"+
+      (r.hit?"<b>越过 "+r.thr+"% 阈值</b>":"未达 "+r.thr+"% 阈值"));
+  }
+  if(r.hit && r.reported && r.surprise!=null){
+    if(r.surprise>0 && r.mv<0) out.push("<span class='hi'>数字好于预期、股价却走弱</span>——分歧在指引或下季展望，需看公告原文方可归因（暂不臆断）");
+    if(r.surprise<0 && r.mv>0) out.push("<span class='hi'>数字低于预期、股价反而走强</span>——市场在买指引/一次性因素，需核对原文");
+  }
+  return out.join("；");
+}
+
+function hydrateExtra(Y){
+  const b = DATA.brief;
+
+  /* 1. 量能：标普当日 vs 20 日均量 */
+  if(Y.spxVol && Y.spxVol.avg20){
+    const v=Y.spxVol, r=v.ratio, el=b.color.find(c=>c.dim==="量能");
+    if(el){
+      el.perf = "标普成交量 <b>"+fmtNum(v.today/1e8,0)+" 亿股</b>，20 日均量 "+fmtNum(v.avg20/1e8,0)+
+        " 亿股，量比 <b>"+(r*100).toFixed(0)+"%</b>（"+(r>=1?"放量 +"+((r-1)*100).toFixed(0)+"%":"缩量 -"+((1-r)*100).toFixed(0)+"%")+"）";
+      el.note = r<0.9
+        ? "缩量下跌：卖压在衰减，更像“没人接”而不是“抢着跑”。这种量能结构下，急跌之后的反弹往往缺乏持续性，但也说明恐慌盘不重——不必急着砍。"
+        : (r>1.1 ? "放量：分歧加大，方向由谁主导要看收盘位置。放量下跌是趋势信号，放量上涨才是增量资金进场。"
+                 : "量能中性，指数涨跌缺乏成交确认，属存量博弈。");
+    }
+  }
+
+  /* 2. 板块：11 个 GICS 板块 ETF */
+  if(Y.sectors){
+    const arr=Object.keys(Y.sectors).map(k=>Object.assign({k:k},Y.sectors[k])).sort((a,c)=>c.chg-a.chg);
+    const up=arr.filter(x=>x.chg>0).length;
+    const el=b.color.find(c=>c.dim==="板块");
+    if(el){
+      el.perf = "领涨 " + arr.slice(0,3).map(x=>x.cn+" <b class='up'>"+pct(x.chg,1)+"</b>").join("、") +
+        "；领跌 " + arr.slice(-2).map(x=>x.cn+" <b class='down'>"+pct(x.chg,1)+"</b>").join("、") +
+        "；11 个板块 "+up+" 涨 "+(11-up)+" 跌";
+      const tech=Y.sectors.XLK, util=Y.sectors.XLU;
+      el.note = "20 日看：" +
+        arr.slice().sort((a,c)=>c.d20-a.d20).slice(0,2).map(x=>x.cn+" "+pct(x.d20,1)).join("、")+" 最强；" +
+        arr.slice().sort((a,c)=>a.d20-c.d20).slice(0,2).map(x=>x.cn+" "+pct(x.d20,1)).join("、")+" 最弱。" +
+        (tech && util ? "信息技术 20 日 "+pct(tech.d20,1)+"，公用事业 "+pct(util.d20,1)+"——"+
+          (tech.d20<util.d20 ? "资金在从“算力”往“电力/防御”挪，这是防御性轮动，不是全面 risk-on。" : "科技重新占优，防御板块落后，风险偏好在修复。") : "");
+    }
+  }
+
+  /* 3. 个股分化：等权 vs 市值加权（可计算代理） */
+  if(Y.breadth && Y.breadth.rel20!=null){
+    const d=Y.breadth, el=b.color.find(c=>c.dim==="个股分化");
+    if(el){
+      el.perf = "等权 RSP 20 日 <b class='"+sgn(d.rsp20)+"'>"+pct(d.rsp20,1)+"</b>　vs　市值加权 SPY 20 日 <b class='"+sgn(d.spy20)+"'>"+pct(d.spy20,1)+
+        "</b>，等权相对 <b class='"+sgn(d.rel20)+"'>"+pct(d.rel20,1)+"</b>";
+      el.note = d.rel20>0
+        ? "等权跑赢市值加权 "+d.rel20.toFixed(1)+" 个百分点——跌的是权重股，不是全市场。这轮是“大票杀估值”，中位数个股反而抗跌，<b>不是系统性风险</b>。"
+        : "等权跑输市值加权 "+Math.abs(d.rel20).toFixed(1)+" 个百分点——上涨靠少数权重股拉动，广度在恶化，指数新高缺乏个股支撑。";
+    }
+  }
+
+  /* 4. 加密：BTC / ETH */
+  if(Y.btc || Y.eth){
+    const g=b.cross.find(x=>x.group==="加密资产");
+    if(g){
+      const rows=[];
+      if(Y.btc) rows.push({n:"BTC", close:fmtNum(Y.btc.price,0), d1:Y.btc.chg, u1:"%", d20:Y.btc.d20, u20:"%",
+        note:"20 日 "+pct(Y.btc.d20,1)+"，与纳指同向。"+(Y.btc.d20<-5?"风险资产整体去杠杆，加密是最先反映的流动性温度计。":"区间震荡，未提供额外信号。")});
+      if(Y.eth) rows.push({n:"ETH", close:fmtNum(Y.eth.price,0), d1:Y.eth.chg, u1:"%", d20:Y.eth.d20, u20:"%",
+        note: Y.btc ? "ETH/BTC "+(Y.eth.price/Y.btc.price).toFixed(4)+"，20 日 "+(Y.eth.d20-Y.btc.d20>0?"强于":"弱于")+" BTC，山寨风险偏好"+(Y.eth.d20-Y.btc.d20>0?"回暖":"收缩") : "—"});
+      g.rows = rows;
+    }
+  }
+
+  /* 5. 当日财报：盘前 / 盘后 */
+  const E=Y.earnings||{};
+  b.pre = { updated:FEED.lastSync, next:"次日 07:00 回填收盘", date:E.preDate||"",
+    total:E.preTotal||0, hit:E.preHit||0, cached:!!E.preCached,
+    rows:(E.pre||[]).map(r=>earnRow(r,"pre")) };
+  b.post = { updated:FEED.lastSync, next:"", date:E.postDate||"",
+    total:E.postTotal||0, hit:E.postHit||0, cached:!!E.postCached,
+    rows:(E.post||[]).map(r=>earnRow(r,"post")) };
+
+  /* 5b. 业绩内容（Wind 财经新闻 → 业绩要点 / 指引 / 出处） */
+  const ND = (typeof window !== "undefined" && window.NEWS_DATA) ? window.NEWS_DATA : null;
+  if(ND && ND.items){
+    const merge=function(r){ const n=ND.items[r.t]; if(!n) return;
+      r.nres=n.res||[]; r.nguide=n.guide||[]; r.nhead=n.headline||""; r.nurl=n.url||"";
+      r.ndate=n.date||""; r.nsrc=n.src||""; r.nok=!!n.ok; r.nnote=n.note||""; };
+    b.pre.rows.forEach(merge); b.post.rows.forEach(merge);
+    const all=[].concat(b.pre.rows,b.post.rows);
+    b.newsCover = { ok:all.filter(r=>r.nres&&r.nres.length).length, total:all.length };
+  }
+
+  /* 6. 覆盖标的的业绩发布日：强制跟踪 */
+  if(Y.nextEarn){
+    DATA.stocks.forEach(s=>{
+      const c=CODE_OF[s.t]; if(!c) return;
+      const arr=Y.nextEarn[c]; if(!arr||!arr.length) return;
+      const today=DATA.meta.date;
+      const future=arr.filter(d=>d>=today).sort();
+      s.earn = s.earn || {};
+      if(future.length){
+        s.earn.next = future[0];
+        s.earn.status = "covered";
+        s.earn.srcNote = "下一财报日取自 Yahoo calendarEvents（"+future[0]+"），以公司公告为准";
+      } else {
+        s.earn.lastReport = arr[arr.length-1];
+        s.earn.status = "reported";
+        s.earn.next = "待公司公告";
+        s.earn.srcNote = "最近一次披露 "+arr[arr.length-1]+"；下一日期尚未公布";
+      }
+    });
+  }
+
+  /* 7. 异动：财报驱动（日历）+ 池内标的收盘异动（行情），均为可验证数据 */
+  if(Y.quotes){
+    const nameOf=t=>{const x=DATA.stocks.find(s=>s.t===t);return x?x.n:t;};
+    const secOf=t=>{const x=DATA.stocks.find(s=>s.t===t);return x?x.sec.split(" / ")[0]:"—";};
+    const mv=[];
+    (Y.earnings.pre||[]).forEach(r=>{
+      const m=r.preChg; if(m==null||Math.abs(m)<r.threshold) return;
+      mv.push({t:r.symbol,n:r.name,ses:"盘前",mv:m,drive:"财报",
+        why:"一致预期 "+epsShow(r.est)+"，实际 "+(r.reported?epsShow(r.actual):"待披露")+
+            (r.surprise!=null?"，"+(r.surprise>0?"好于":"低于")+"预期 "+Math.abs(r.surprise).toFixed(0)+"%":"")+
+            "；盘前 "+pct(m,1)});
+    });
+    (Y.earnings.post||[]).forEach(r=>{
+      const m=r.postChg!=null?r.postChg:r.preChg; if(m==null||Math.abs(m)<r.threshold) return;
+      mv.push({t:r.symbol,n:r.name,ses:"盘后",mv:m,drive:"财报",
+        why:"实际 EPS "+epsShow(r.actual)+"，预期 "+epsShow(r.est)+
+            (r.surprise!=null?"，"+(r.surprise>0?"好于":"低于")+"预期 "+Math.abs(r.surprise).toFixed(0)+"%":"")});
+    });
+    Object.keys(CODE_OF).forEach(k=>{
+      const q=Y.quotes[k]; if(!q||q.chg==null) return;
+      if(Math.abs(q.chg)>=2 && !mv.some(x=>x.t===k))
+        mv.push({t:k,n:nameOf(k),ses:"收盘",mv:q.chg,drive:"非财报",unknown:true,
+          note:"未匹配到公告、评级变动或行业消息；按“原因未知”处理，待盘后核对大宗与内部人交易"});
+    });
+    mv.sort((a,b)=>Math.abs(b.mv)-Math.abs(a.mv));
+    b.movers={updated:FEED.lastSync, rows:mv.slice(0,10)};
+
+    /* 52 周高点距离：池内标的（历史新高判定需全市场历史数据，暂不提供） */
+    const h52=[];
+    Object.keys(CODE_OF).forEach(k=>{
+      const q=Y.quotes[k]; if(!q||!q.w52h||!q.price) return;
+      h52.push({t:k,n:nameOf(k),px:"$"+q.price.toFixed(2),mv:q.chg,sec:secOf(k),
+        dist:(q.price/q.w52h-1)*100, hi:q.w52h});
+    });
+    h52.sort((x,y)=>y.dist-x.dist);
+    DATA.moversH52 = h52.filter(x=>x.dist>=-3);
+    DATA.moversHall = h52.slice(-5).reverse();
+  }
+
+  /* 7. 双源校验 */
+  if(Y.crosscheck){
+    DATA.meta.check = Y.crosscheck.okCount+" / "+Y.crosscheck.total;
+    DATA.meta.checkAt = FEED.lastSync;
+  }
+  DATA.meta.extraAt = FEED.lastSync;
+}
+
+
+
+/* ========================= render helpers ========================= */
+const MODULES = [
+  {id:"brief", name:"每日资讯", icon:'<path d="M4 5h13a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"/><path d="M4 5v12"/><path d="M8 9h7M8 13h7M8 17h4"/>', desc:"核心结论 · 市场色彩 · 跨资产 · 盘前盘后业绩 · 异动 · 研报"},
+  {id:"tracks", name:"赛道跟踪", icon:'<path d="M4 19V5"/><path d="M4 19h16"/><path d="M7 15l4-5 3 2 4-6"/>', desc:"物理AI · 端侧AI · AI应用 · 网安 · AI基础设施 · 先进封测 · CPU"},
+  {id:"events", name:"重要事件", icon:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/>', desc:"当周日历 · 当月与未来三月 · 联储/APEC/美伊/俄乌 · 川普语录"},
+  {id:"movers", name:"异动监测", icon:'<path d="M3 12h4l3-7 4 14 3-7h4"/>', desc:"盘前/盘中/盘后异动 · 财报与非财报归因 · 新高"},
+  {id:"stocks", name:"标的研究", icon:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', desc:"公司更新 · 研报与目标价 · KOL 观点 · 业绩强制跟踪"},
+  {id:"strategy", name:"投资策略", icon:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', desc:"在交易什么 · 盯盘变量 · 风险点 · 美股→A股 · 策略建议"},
+  {id:"portfolio", name:"模拟盘 / 组合", icon:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/>', desc:"组合净值 · 持仓 · 归因（待细化）", soon:"待细化"},
+  {id:"risk", name:"风险预警", icon:'<path d="M12 3l9 16H3z"/><path d="M12 9v5M12 17h.01"/>', desc:"预警规则 · 集中度 · 事件日历（待细化）", soon:"待细化"}
+];
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const sgn = v => v>0?"up":(v<0?"down":"flat");
+const pct = (v,d) => (v==null?"—":(v>0?"+":"")+Number(v).toFixed(d==null?2:d)+"%");
+const chg = (v,unit) => unit==="bp"
+  ? '<span class="chg '+sgn(v)+'">'+(v>0?"+":"")+Math.round(v)+'bp</span>'
+  : '<span class="chg '+sgn(v)+'">'+pct(v)+'</span>';
+
+function feedBar(){
+  if(FEED.connected) return "";
+  return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。接入 Wind MCP 后由适配层覆盖。</span></div>';
+}
+function secHead(num,title,sub,right){
+  return '<div class="sec-head"><span class="sec-num">'+num+'</span><span class="sec-title">'+title+'</span>'+
+    (sub?'<span class="sec-sub">'+sub+'</span>':'')+(right?'<span class="right">'+right+'</span>':'')+'</div>';
+}
+function impDot(imp){ return '<span class="imp '+imp+'"></span>'; }
+
+/* ---- 业绩表（盘前 / 盘后共用）---- */
+function earnTable(blk, ses){
+  const rows = (blk && blk.rows) || [];
+  const isPre = ses==="pre";
+  if(!rows.length){
+    return '<div class="card empty">未取到'+(isPre?"当日盘前":"前一交易日盘后")+'的披露记录，'+
+      '请先运行同步脚本；<b>本表不放示例数据</b>。</div>';
+  }
+  const hit = rows.filter(r=>r.hit).length;
+  const withNews = rows.filter(r=>(r.nres&&r.nres.length)||r.nhead).length;
+  let h='<div class="card" style="padding:10px 13px;margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--text-2)">'+
+    '<span>日历日期 <b class="num">'+(blk.date||"—")+'</b></span>'+
+    '<span>该场次披露 <b class="num">'+(blk.total||rows.length)+'</b> 家，按市值列前 '+rows.length+' 家</span>'+
+    '<span>越过阈值 <b class="num '+(hit?'up':'')+'">'+hit+'</b> 家</span>'+
+    '<span>业绩内容已抓取 <b class="num">'+withNews+'/'+rows.length+'</b> 家</span>'+
+    (blk.cached?'<span class="chip-src">名单取首见快照</span>':'')+
+    (blk.updated?'<span style="margin-left:auto" class="tiny muted">同步 '+blk.updated+'</span>':'')+
+    '</div>';
+
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+     '<th style="width:132px">公司</th>'+
+     '<th style="width:27%">业绩要点（实际 vs 预期）</th>'+
+     '<th style="width:24%">指引 / 关键表述</th>'+
+     '<th class="num" style="width:64px">'+(isPre?"盘前":"盘后")+'</th>'+
+     '<th style="width:100px">'+(isPre?"开盘跳空 → 收盘":"次日盘前接力")+'</th>'+
+     '<th>解读</th></tr></thead><tbody>';
+
+  rows.forEach(r=>{
+    const yoy = (r.est!=null && r.last!=null && r.last!==0) ? ((r.est-r.last)/Math.abs(r.last))*100 : null;
+    const sur = r.surprise;
+
+    /* 业绩要点：先给可核对的实际 vs 预期，再放新闻原文要点 */
+    let cellRes = '<div class="num" style="font-size:11.5px">EPS <b>'+epsShow(r.actual!=null?r.actual:r.est)+'</b>'+
+      (r.reported && r.est!=null ? ' <span class="tiny muted">/ 预期 '+epsShow(r.est)+'</span>' : ' <span class="tiny muted">（预期）</span>')+
+      (sur==null?'':' '+(Math.abs(sur)<0.5?'<span class="tiny muted">符合预期</span>':'<span class="tiny '+(sur>0?"up":"down")+'">'+(sur>0?"好于":"低于")+' '+Math.abs(sur).toFixed(1)+'%</span>'))+'</div>';
+    if(r.nres && r.nres.length){
+      cellRes += r.nres.slice(0,3).map(x=>'<div class="read" style="font-size:11px;margin-top:2px">· '+x+'</div>').join("");
+    } else if(r.nhead){
+      cellRes += '<div class="read" style="font-size:11px;margin-top:3px">'+esc(r.nhead)+
+        ' <span class="chip-src">报道标题</span></div>';
+    } else if(!r.reported){
+      cellRes += '<div class="tiny muted" style="margin-top:2px">同比 '+ (yoy==null?"—":pct(yoy,1)) +'（去年 '+epsShow(r.last)+'）</div>';
+    }
+    if(r.nurl){
+      cellRes += '<div class="tiny" style="margin-top:3px"><a href="'+r.nurl+'" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none">'+
+        (r.nsrc||"出处")+(r.ndate?" · "+r.ndate:"")+'</a></div>';
+    } else if(r.nnote){
+      cellRes += '<div class="tiny muted" style="margin-top:3px">'+r.nnote+'</div>';
+    }
+
+    /* 指引 */
+    let cellGuide;
+    if(r.nguide && r.nguide.length){
+      cellGuide = r.nguide.slice(0,3).map(x=>'<div class="read" style="font-size:11px">· '+x+'</div>').join("");
+    } else if(r.nok){
+      cellGuide = '<span class="pending">本次报道未含指引表述</span>';
+    } else {
+      cellGuide = '<span class="pending">指引原文待抓取</span>'+
+        (r.nnote?'<div class="tiny muted" style="margin-top:2px">'+r.nnote+'</div>':'');
+    }
+
+    h+='<tr>'+
+      '<td><div class="tk">'+r.t+(r.pooled?' <span class="tag blue" style="font-size:9px">池内</span>':'')+'</div>'+
+      '<div class="tk-sub">'+r.n+' · '+r.tier+' '+r.mcap+'</div>'+
+      '<div class="tiny muted">'+r.q+'</div></td>'+
+      '<td>'+cellRes+'</td>'+
+      '<td class="read" style="font-size:11px">'+cellGuide+'</td>'+
+      '<td class="num">'+(r.mv==null?'<span class="pending">无报价</span>':'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>')+'</td>'+
+      '<td>'+(isPre
+          ? '<span class="pending">07:00 回填</span><div class="tiny muted" style="margin-top:3px">盘前价 '+pct(r.pre,1)+'</div>'
+          : (r.pre!=null ? '<div class="mv '+sgn(r.pre)+'">'+pct(r.pre,1)+'</div><div class="tiny muted">今日盘前</div>'
+                         : '<span class="pending">待报价</span>'))+
+      '</td>'+
+      '<td class="read" style="font-size:11px">'+earnRead(r)+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  return h;
+}
+
+/* ---------- 01 ---------- */
+function viewBrief(){
+  const b=DATA.brief, m=DATA.meta, s=DATA.senti;
+  let h=feedBar();
+  h+='<div class="hero"><div class="hero-left">';
+  h+='<div class="hero-kicker"><span class="date">'+m.date+' / '+m.week+'</span><span class="tag red">'+m.stance+'</span></div>';
+  h+='<h2>核心结论</h2><div class="stance">今日基调：<b>'+m.stance+'</b>　'+esc(m.stanceNote)+'</div><ol class="concl">';
+  b.conclusions.forEach(c=>{ h+='<li><b>'+c[0]+'</b> '+c[1]+'</li>'; });
+  h+='</ol></div><div class="hero-right">';
+  h+='<div class="senti"><div class="senti-top"><span class="k">风险偏好指数</span>'+
+     '<span class="v">'+s.appetite.v+'</span><span class="lb up">'+s.appetite.label+'</span></div>'+
+     '<div class="gauge"><span style="width:'+s.appetite.v+'%;background:linear-gradient(90deg,#e8a33d,#d2373a)"></span></div>'+
+     '<div class="gscale"><span>0 极保守</span><span>更新 '+s.appetite.at+'</span><span>100 极激进</span></div></div>';
+  h+='<div class="senti"><div class="senti-top"><span class="k">恐惧贪婪指数</span>'+
+     '<span class="v">'+s.fng.v+'</span><span class="lb up">'+s.fng.label+'</span></div>'+
+     '<div class="gauge"><span style="width:'+s.fng.v+'%;background:linear-gradient(90deg,#0d8a5f,#8fbf3f,#e8a33d,#d2373a)"></span></div>'+
+     '<div class="gscale"><span>'+s.fng.scale[0]+'</span><span>更新 '+s.fng.at+'</span><span>'+s.fng.scale[4]+'</span></div><div class="comp">';
+  s.comps.forEach(c=>{ h+='<div class="comp-row"><span>'+c[0]+'</span><span class="bar"><i style="width:'+c[1]+'%"></i></span><span class="n num">'+c[1]+'</span></div>'; });
+  h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次读数：20:30（盘前）与次日 07:00（盘后 + 回填）</div></div>';
+  h+='</div></div>';
+
+  h+='<div class="srcbar">'+
+     '<span class="si"><i class="dot on"></i>Wind MCP · 行情/指数/跨资产 <b>已接入</b></span>'+
+     '<span class="si"><i class="dot on"></i>Yahoo/Nasdaq · 当日财报/板块/量能 <b>已接入</b></span>'+
+     '<span class="si"><i class="dot on"></i>双源校验 <b>'+(m.check||"—")+' 只标的价格一致（容差 0.05%）</b></span>'+
+     '<span class="si"><i class="dot '+(b.newsCover&&b.newsCover.ok?'on':'off')+'"></i>业绩内容 <b>'+(b.newsCover?b.newsCover.ok+'/'+b.newsCover.total+' 家取到要点':'待接入')+'</b>（东财 7×24 / Wind / Yahoo）</span>'+
+     '<span class="si"><i class="dot off"></i>研报/KOL/川普语录 <b>待接源</b>（结构示例）</span>'+
+     '</div>';
+
+  h+='<div class="sec">'+secHead("02","市场色彩","维度 · 表现 · 解读","<span class='upd'>收盘价</span>");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:92px">维度</th><th style="width:38%">表现</th><th>解读</th></tr></thead><tbody>';
+  b.color.forEach(r=>{ h+='<tr><td class="strong">'+r.dim+'</td><td class="read">'+r.perf+'</td><td class="read">'+r.note+'</td></tr>'; });
+  h+='</tbody></table></div></div>';
+
+  h+='<div class="sec">'+secHead("03","全球跨资产","收盘 · 当日 · 20 日 · 备注（解读变化）","<span class='upd'>收盘 / 最新</span>");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:150px">资产</th>'+
+     '<th class="num" style="width:96px">收盘</th><th class="num" style="width:86px">当日</th>'+
+     '<th class="num" style="width:86px">20 日</th><th>备注（解读变化）</th></tr></thead><tbody>';
+  b.cross.forEach(g=>{
+    h+='<tr class="grp"><td colspan="5">'+g.group+'</td></tr>';
+    g.rows.forEach(r=>{
+      h+='<tr><td class="strong">'+r.n+'</td><td class="num strong">'+r.close+'</td>'+
+         '<td class="num">'+chg(r.d1,r.u1)+'</td><td class="num">'+chg(r.d20,r.u20)+'</td>'+
+         '<td class="read">'+r.note+'</td></tr>';
+    });
+  });
+  h+='</tbody></table></div></div>';
+
+  /* ---- 04 盘前业绩：只放当日盘前披露的公司（Nasdaq 日历） ---- */
+  h+='<div class="sec">'+secHead("04","盘前业绩与股价反应",
+      "仅当日盘前披露 · 大/中市值 3% · 中小市值 5% · 含不及预期负面案例",
+      "<span class='upd hot'>更新 <b>20:30</b></span><span class='upd'>"+b.pre.next+"</span>");
+  h+=earnTable(b.pre,"pre");
+
+  /* ---- 05 盘后业绩 ---- */
+  h+='<div class="sec">'+secHead("05","盘后业绩与股价反应",
+      "仅前一交易日盘后披露 · 盘后 > 3% · 附潜在原因分析",
+      "<span class='upd hot'>更新 <b>07:00</b></span>");
+  h+=earnTable(b.post,"post");
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
+     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Wind 财经新闻（当前账户积分不足，暂停）→ Yahoo 新闻标题</b> 三级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写。</div></div>';
+
+  h+='<div class="sec">'+secHead("06","盘前 / 盘中 / 盘后股价异动","财报驱动 vs 非财报驱动 · 单时段 |涨跌| &gt; 4%","<span class='upd hot'>更新 <b>07:00</b></span>");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:124px">标的</th>'+
+     '<th style="width:64px">时段</th><th class="num" style="width:74px">涨跌</th><th style="width:86px">驱动</th><th>原因</th></tr></thead><tbody>';
+  b.movers.rows.forEach(r=>{
+    h+='<tr><td><div class="tk">'+r.t+'</div><div class="tk-sub">'+r.n+'</div></td>'+
+      '<td><span class="tag'+(r.ses==="盘后"?" amber":"")+'">'+r.ses+'</span></td>'+
+      '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
+      '<td>'+(r.drive==="财报"?'<span class="tag blue">财报</span>':'<span class="tag">非财报</span>')+'</td>'+
+      '<td class="read">'+(r.unknown?'<b style="color:#b26a00">原因未知</b>　'+r.note:r.why)+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  h+='<div class="sec">'+secHead("07","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
+      "<span class='upd'>"+b.research.length+" 篇累计</span><span class='upd hot'>红色 = 本轮新增</span>");
+  h+='<div class="grid g3" style="align-items:start">';
+  ["宏观策略","行业","个股"].forEach(g=>{
+    const list=b.research.filter(x=>x.cat===g).slice().sort((a,c)=>(c.d>a.d?1:-1));
+    const fresh=list.filter(x=>x.new).length;
+    h+='<div class="card" style="padding:13px 15px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">'+
+       '<span class="tag '+(g==="宏观策略"?"blue":(g==="行业"?"violet":"amber"))+'">'+g+'</span>'+
+       '<span class="tiny muted">'+list.length+' 篇</span>'+
+       (fresh?'<span class="tiny" style="margin-left:auto;color:var(--up)">新增 '+fresh+'</span>':'')+'</div><div class="tl">';
+    list.forEach(r=>{
+      h+='<div class="tl-item'+(r.new?" new":"")+'">'+
+         '<div class="tl-meta"><span>'+r.d+'</span><span class="src">'+r.house+'</span></div>'+
+         '<div class="tl-title'+(r.new?" new":"")+'">'+r.title+'</div>'+
+         '<div class="tl-body">'+r.take+'</div></div>';
+    });
+    h+='</div></div>';
+  });
+  h+='</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">抓取原则：只保留可核对出处的研报（机构 + 日期 + 核心结论）；旧条目不删，滚动累积，红色为本轮新增，便于回看观点如何演变。</div></div>';
+  return h;
+}
+
+/* ---------- 02 ---------- */
+let trackSel="phy";
+function viewTracks(){
+  let h=feedBar();
+  h+='<div class="subtabs">';
+  DATA.tracks.forEach(t=>{
+    h+='<div class="subtab'+(t.id===trackSel?" on":"")+'" data-t="'+t.id+'">'+t.name+'<span class="c">'+t.log.length+'</span></div>';
+  });
+  h+='</div>';
+  const t=DATA.tracks.find(x=>x.id===trackSel)||DATA.tracks[0];
+  h+='<div class="grid g2" style="align-items:start">';
+  h+='<div class="card track" style="padding:16px 18px"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px">'+
+     '<div class="track-ico" style="background:'+t.bg+';color:'+t.color+'">'+t.ico+'</div>'+
+     '<div><h3>'+t.name+'</h3><div class="sub">'+t.sub+'</div></div></div>'+
+     '<div class="thesis">'+t.thesis+'</div>'+
+     '<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">关键指标</span></div><div class="kpi-row">';
+  t.kpis.forEach(k=>{ h+='<span class="kpi">'+k[0]+' <b>'+k[1]+'</b></span>'; });
+  h+='</div><div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">标的池</span></div><div class="kpi-row">';
+  t.names.forEach(n=>{ h+='<span class="tag">'+n+'</span>'; });
+  h+='</div><div class="tiny muted" style="margin-top:10px;padding-top:8px;border-top:1px dashed #eef1f6">观察催化：'+t.cat+'</div></div>';
+  h+='<div class="card" style="padding:14px 16px"><div class="sec-head" style="margin:0 0 8px">'+
+     '<span class="sec-title" style="font-size:12px">我的思考 / 解读 / 建议</span>'+
+     '<span class="right tiny muted">可编辑 · 自动保存</span></div>'+
+     '<textarea class="note-area" id="track-note" style="min-height:198px" placeholder="这个赛道怎么看、买什么、什么条件证伪……"></textarea>'+
+     '<div class="note-foot"><span>赛道级笔记，与认知更新分开保存</span><span id="track-saved">已保存</span></div></div>';
+  h+='</div>';
+
+  h+='<div class="sec" style="margin-top:18px">'+secHead("01","认知更新 · "+t.name,"新物种 / 新业态 / 新拐点 · 长期滚动积累（日期 + 出处）",
+      "<span class='upd'>"+t.log.length+" 条 · 红色为新增</span>");
+  h+='<div class="card" style="padding:16px 18px"><div class="tl">';
+  t.log.forEach(l=>{
+    const tc = l.type==="新拐点"?"red":(l.type==="新业态"?"violet":(l.type==="新物种"?"blue":""));
+    h+='<div class="tl-item'+(l.new?" new":"")+'">'+
+      '<div class="tl-meta"><span>'+l.date+'</span><span class="src">出处：'+l.src+'</span>'+
+      '<span class="tag '+tc+'">'+l.type+'</span></div>'+
+      '<div class="tl-title'+(l.new?" new":"")+'">'+l.title+'</div>'+
+      '<div class="tl-body">'+l.body+'</div></div>';
+  });
+  h+='</div></div></div>';
+  return h;
+}
+
+/* ---------- 03 ---------- */
+function viewEvents(){
+  const e=DATA.events;
+  let h=feedBar();
+  h+='<div class="sec">'+secHead("01","当周事件日历",e.week.label+" · 精确到时间与影响等级",
+      "<span class='upd'>红=高 黄=中 灰=低</span>");
+  h+='<div class="card" style="overflow:hidden"><div class="cal">';
+  e.week.days.forEach(d=>{
+    const isToday=d.date===e.week.today;
+    const wk=(d.dow==="周六"||d.dow==="周日");
+    h+='<div class="cal-day'+(isToday?" today":"")+(wk?" weekend":"")+'">'+
+       '<div class="cal-dow">'+d.dow+'</div><div class="cal-date">'+d.date.split("-")[1]+'</div>';
+    d.items.forEach(it=>{
+      h+='<div class="cal-ev">'+impDot(it.imp)+'<span class="t">'+it.t+'</span><span class="x">'+it.ev+'</span></div>';
+    });
+    h+='</div>';
+  });
+  h+='</div></div></div>';
+
+  h+='<div class="grid g2">';
+  [["02","当月重要事件",e.month],["03","未来三个月",e.quarter]].forEach(g=>{
+    h+='<div class="sec">'+secHead(g[0],g[1],"","<span class='upd'>"+g[2].length+" 项</span>");
+    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:76px">日期</th><th>事件</th><th style="width:70px">类型</th></tr></thead><tbody>';
+    g[2].forEach(x=>{
+      h+='<tr><td class="strong" style="white-space:nowrap">'+x.d+'</td>'+
+         '<td><div style="display:flex;gap:6px;align-items:flex-start">'+impDot(x.imp)+'<span class="read" style="color:var(--text)">'+x.ev+'</span></div></td>'+
+         '<td><span class="tag">'+x.tag+'</span></td></tr>';
+    });
+    h+='</tbody></table></div></div>';
+  });
+  h+='</div>';
+
+  h+='<div class="sec">'+secHead("04","重点跟踪","美联储 · 川普语录 · APEC · 美伊 · 俄乌");
+  h+='<div class="grid g2">';
+  h+='<div class="card" style="padding:15px 17px"><div style="margin-bottom:8px"><div style="font-size:13px;font-weight:650">美联储 · 下次议息</div>'+
+     '<div class="tiny muted">'+e.fed.meeting+'　决议 '+e.fed.decision+'</div></div>';
+  e.fed.probs.forEach(p=>{
+    const d=p.p-p.prev;
+    h+='<div style="display:grid;grid-template-columns:78px 1fr 44px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:4px">'+
+       '<span>'+p.label+'</span><div class="gauge" style="margin:0"><span style="width:'+p.p+'%;background:'+p.color+'"></span></div>'+
+       '<span class="num" style="text-align:right;font-weight:650">'+p.p+'%</span></div>'+
+       '<div class="tiny muted" style="margin:0 0 6px 87px">较一周前 <span class="'+(d>0?"up":"down")+'">'+(d>0?"+":"")+d+'pct</span></div>';
+  });
+  h+='<div class="tiny muted">'+e.fed.monthAgo+'</div>';
+  h+='<div style="border-top:1px solid var(--line);margin-top:9px;padding-top:8px"><div class="tiny muted" style="margin-bottom:5px">概率变动原因</div>';
+  e.fed.reasons.forEach(r=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:4px">· '+r+'</div>'; });
+  h+='</div><div class="kpi-row" style="margin-top:6px">';
+  e.fed.watch.forEach(w=>{ h+='<span class="tag blue">'+w+'</span>'; });
+  h+='</div></div>';
+
+  h+='<div class="card" style="padding:15px 17px"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:9px">'+
+     '<div><div style="font-size:13px;font-weight:650">川普最新语录</div><div class="tiny muted">长期滚动积累 · 原话 + 解读 · 红色为本轮新增</div></div>'+
+     '<span class="tag amber" style="margin-left:auto">'+e.trump.rows.length+' 条</span></div>';
+  e.trump.rows.forEach(q=>{
+    h+='<div class="quote'+(q.new?" isnew":"")+'"><div class="q-meta">'+(q.new?'<i class="q-new"></i>':'')+q.d+
+       (q.new?'　<span style="color:var(--up)">新增</span>':'')+'</div><div class="o">“'+q.o+'”</div>'+
+       '<div class="zh">'+q.zh+'</div><div class="r"><b>解读：</b>'+q.r+'</div></div>';
+  });
+  h+='<div class="tiny muted" style="margin-top:4px">'+e.trump.note+'</div></div>';
+  h+='</div>';
+
+  h+='<div class="grid g3" style="margin-top:14px">';
+  [["APEC 会议动态",e.apec],["美伊谈判",e.iran],["俄乌局势",e.ukraine]].forEach(x=>{
+    const o=x[1];
+    h+='<div class="card" style="padding:14px 16px"><div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:7px">'+
+       '<div><div style="font-size:12.5px;font-weight:650">'+x[0]+'</div><div class="tiny muted">'+o.when+'</div></div>'+
+       '<span class="tag blue" style="margin-left:auto">'+o.status+'</span></div>';
+    o.points.forEach(p=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:5px">· '+p+'</div>'; });
+    h+='<div style="border-top:1px dashed #eef1f6;margin-top:8px;padding-top:7px"><div class="tiny muted">市场影响</div>'+
+       '<div class="read" style="font-size:11px">'+o.impact+'</div></div></div>';
+  });
+  h+='</div>';
+  return h;
+}
+
+/* ---------- 04 ---------- */
+function viewMovers(){
+  const b=DATA.brief;
+  const dur={"SNDK":"趋势","OKLO":"趋势","ARM":"趋势","LCID":"事件","SMCI":"事件","PLTR":"待观察","MSTR":"待观察","CRWV":"趋势","XYZ":"未知"};
+  let h=feedBar();
+  h+='<div class="sec">'+secHead("01","盘前 / 盘中 / 盘后异动","剔除财报驱动的单独标注 · 单时段 |涨跌| &gt; 4%","<span class='upd'>更新 07:00</span>");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:124px">标的</th>'+
+     '<th style="width:66px">时段</th><th class="num" style="width:74px">涨跌</th><th style="width:88px">驱动</th>'+
+     '<th>原因 / 归因</th><th style="width:70px">持续性</th></tr></thead><tbody>';
+  b.movers.rows.forEach(r=>{
+    h+='<tr><td><div class="tk">'+r.t+'</div><div class="tk-sub">'+r.n+'</div></td>'+
+      '<td><span class="tag'+(r.ses==="盘后"?" amber":"")+'">'+r.ses+'</span></td>'+
+      '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
+      '<td>'+(r.drive==="财报"?'<span class="tag blue">财报</span>':'<span class="tag">非财报</span>')+'</td>'+
+      '<td class="read">'+(r.unknown?'<b style="color:#b26a00">原因未知</b>　'+r.note:r.why)+'</td>'+
+      '<td class="tiny">'+(dur[r.t]||"—")+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">归因原则：无公告、无评级变动、无行业消息、无大宗交易记录时标注“原因未知”，不做牵强解释。</div></div>';
+
+  h+='<div class="grid g2" style="align-items:start">';
+  [["02","创 52 周新高 / 接近高点",DATA.moversH52,"池内标的现价距各自 52 周高点 3% 以内"],
+   ["03","距 52 周高点最远",DATA.moversHall,"池内标的回撤最深的 5 只——历史新高判定需全市场历史数据，接入后提供"]].forEach(g=>{
+    h+='<div class="sec">'+secHead(g[0],g[1],g[3],"<span class='upd'>"+g[2].length+" 只</span>");
+    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th>标的</th><th class="num">收盘</th><th class="num">涨幅</th>'+
+       '<th class="num">52周高点</th><th class="num">距高点</th><th>行业</th></tr></thead><tbody>';
+    if(!g[2].length){
+      h+='<tr><td colspan="6" class="empty">池内暂无符合条件的标的</td></tr>';
+    }
+    g[2].forEach(s2=>{
+      const dc=s2.dist==null?"—":'<span class="'+(s2.dist>=-3?"up":"down")+'">'+pct(s2.dist,1)+'</span>';
+      h+='<tr><td><div class="tk">'+s2.t+'</div><div class="tk-sub">'+s2.n+'</div></td>'+
+         '<td class="num">'+s2.px+'</td><td class="num"><span class="chg '+sgn(s2.mv||0)+'">'+pct(s2.mv,1)+'</span></td>'+
+         '<td class="num muted">'+(s2.hi?"$"+s2.hi.toFixed(2):"—")+'</td>'+
+         '<td class="num">'+dc+'</td>'+
+         '<td><span class="tag">'+s2.sec+'</span></td></tr>';
+    });
+    h+='</tbody></table></div></div>';
+  });
+  h+='</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">扫描范围说明：52 周新高 / 历史新高目前只覆盖研究池 14 只标的；全市场扫描需接行情筛选源，接入前不做、不编。</div>';
+  return h;
+}
+
+/* ---------- 05 ---------- */
+const LABELS=[{k:"trk",n:"跟踪"},{k:"dis",n:"颠覆"},{k:"key",n:"重点"},{k:"hold",n:"持有"},{k:"add",n:"增配"},{k:"cut",n:"减持"}];
+function getLabel(tk){ try{ return localStorage.getItem("desk_label_"+tk)||""; }catch(e){ return ""; } }
+function labelHTML(k){
+  const l=LABELS.find(x=>x.k===k);
+  return l?'<span class="lab '+l.k+'">'+l.n+'</span>':'<span class="lab none">未设定</span>';
+}
+function getAddedPool(){ try{ return JSON.parse(localStorage.getItem("desk_pool_added")||"[]"); }catch(e){ return []; } }
+
+function viewStocks(){
+  const added=getAddedPool();
+  let h=feedBar();
+  h+='<div class="sec">'+secHead("01","重点标的研究池",DATA.stocks.length+" 只在册"+(added.length?" · 新入库 "+added.length+" 只":"")+" · 点击卡片看详情",
+      "<span class='upd'>标签手动设定</span>");
+  h+='<div class="filters" id="stock-filters"></div>';
+  if(added.length){
+    h+='<div class="card" style="padding:12px 14px;margin-bottom:14px;border-style:dashed">'+
+       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span class="tag violet">新入库 · 待完善</span>'+
+       '<span class="tiny muted">来自投资策略模块的建议，补齐逻辑与指标后转为正式跟踪</span></div>';
+    added.forEach(a=>{
+      h+='<div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-top:1px dashed #eef1f6;font-size:12px">'+
+         '<b>'+a.t+'</b><span class="muted">'+esc(a.n)+'</span>'+
+         '<span class="tiny muted" style="margin-left:auto">入库于 '+a.d+'</span></div>';
+    });
+    h+='</div>';
+  }
+  h+='<div class="grid g-auto" id="stock-grid">';
+  DATA.stocks.forEach((s,i)=>{
+    const es=s.earn.status;
+    let esTxt,esCls;
+    if(es==="imminent"){ esTxt="财报临近"; esCls="tag red"; }
+    else if(s.earn.next && /^\d{4}-/.test(s.earn.next)){ esTxt="下次披露 "+s.earn.next; esCls="tag blue"; }
+    else if(es==="no-fixed"){ esTxt="无定期披露"; esCls="tag dash"; }
+    else if(es==="reported"){ esTxt="已披露 · 下次待公告"; esCls="tag"; }
+    else { esTxt="披露日待公告"; esCls="tag"; }
+    h+='<div class="stock-card" data-i="'+i+'">'+
+      '<div class="sc-top"><div><div class="sc-tk">'+s.t+'</div><div class="sc-name">'+s.n+'</div></div>'+
+      '<div class="sc-px"><div class="p num">'+s.px+'</div>'+
+      (s.mv===null?'<div class="d muted">一级市场</div>':'<div class="d '+sgn(s.mv)+'">'+pct(s.mv,1)+'</div>')+
+      (s.d20!=null?'<div class="tiny muted num">20日 '+pct(s.d20,1)+'</div>':'')+
+      '</div></div><div class="sc-logic">'+s.logic+'</div>'+
+      '<div class="sc-foot">'+labelHTML(getLabel(s.t))+
+      '<span class="'+esCls+'" style="font-size:9.5px">'+esTxt+'</span>'+
+      '<span class="cap">'+s.cap+'</span></div></div>';
+  });
+  h+='</div></div>';
+  return h;
+}
+
+function openStock(i){
+  const s=DATA.stocks[i], dw=$("#drawer");
+  let h='<div class="dw-head"><button class="dw-close" id="dw-close">✕</button>'+
+    '<div style="display:flex;align-items:flex-end;gap:10px">'+
+    '<div><div style="font-size:19px;font-weight:750;letter-spacing:.4px">'+s.t+'</div>'+
+    '<div class="tiny muted">'+s.n+' · '+s.sec+'</div></div>'+
+    '<div style="margin-left:auto;text-align:right"><div class="num" style="font-size:15px;font-weight:650">'+s.px+'</div>'+
+    (s.mv===null?'<div class="tiny muted">一级市场</div>':'<div class="tiny '+sgn(s.mv)+'" style="font-weight:600">'+pct(s.mv,1)+'</div>')+
+    '</div></div></div><div class="dw-body">';
+
+  h+='<div class="dw-sec" style="margin-top:-2px"><h4>研究标签<span class="ln"></span>'+
+     '<span class="tiny muted" style="text-transform:none;letter-spacing:0">手动设定，系统不预判</span></h4>'+
+     '<div class="lab-picker" id="lab-picker"></div></div>';
+
+  h+='<div class="dw-sec"><h4>业绩强制跟踪<span class="ln"></span>'+
+     (s.earn.status==="imminent"?'<span class="tag red">临近</span>':'')+'</h4>'+
+     '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">'+
+     '<span class="tag blue">下次披露 '+s.earn.next+'</span><span class="tag">'+s.earn.note+'</span></div>'+
+     (s.earn.srcNote?'<div class="tiny muted" style="margin-top:-2px;margin-bottom:6px">'+s.earn.srcNote+'</div>':'')+
+     (s.earn.lastReport?'<div class="tiny muted" style="margin-top:-2px;margin-bottom:6px">最近一次披露：'+s.earn.lastReport+'；下一日期公司尚未公告，公布后自动更新。</div>':'');
+  if(s.earn.hist&&s.earn.hist.length){
+    h+='<table class="mini-tbl"><thead><tr><th>财报日</th><th>关键数据</th><th class="num">股价反应</th></tr></thead><tbody>';
+    s.earn.hist.forEach(x=>{
+      h+='<tr><td class="num" style="white-space:nowrap">'+x.d+'</td><td>'+x.res+'</td>'+
+         '<td class="num '+(x.react.indexOf("-")>=0?"down":"up")+'" style="font-weight:600">'+x.react+'</td></tr>';
+    });
+    h+='</tbody></table>';
+  } else { h+='<div class="tiny muted">无定期披露，以运营数据（发射次数 / 用户数）替代</div>'; }
+  h+='</div>';
+
+  h+='<div class="dw-sec"><h4>核心逻辑<span class="ln"></span></h4><p>'+s.logic+'</p></div>';
+  h+='<div class="dw-sec"><h4>关键指标<span class="ln"></span></h4><div class="kpi-tbl">';
+  s.kpi.forEach(k=>{ h+='<div class="kpi-box"><div class="k">'+k[0]+'</div><div class="v num">'+k[1]+'</div></div>'; });
+  h+='</div></div>';
+
+  h+='<div class="dw-sec"><h4>券商研报与目标价<span class="ln"></span></h4><table class="mini-tbl"><thead><tr>'+
+     '<th>日期</th><th>机构</th><th>评级</th><th class="num">目标价</th></tr></thead><tbody>';
+  s.reports.forEach(r=>{
+    h+='<tr><td class="num" style="white-space:nowrap">'+r.d+'</td><td>'+r.house+'</td><td>'+r.rating+'</td>'+
+       '<td class="num" style="font-weight:600">'+r.tp+'</td></tr>';
+  });
+  h+='</tbody></table><div class="tiny muted" style="margin-top:4px">估值：'+s.val+'</div></div>';
+
+  h+='<div class="dw-sec"><h4>公司信息更新<span class="ln"></span></h4><div class="tl" style="margin-left:2px">';
+  s.updates.forEach(u=>{
+    h+='<div class="tl-item'+(u.key?" new":"")+'" style="padding-bottom:10px">'+
+       '<div class="tl-meta"><span>'+u.d+'</span><span class="src">'+u.src+'</span></div>'+
+       '<div class="tl-body" style="margin-top:2px">'+u.txt+'</div></div>';
+  });
+  h+='</div></div>';
+
+  h+='<div class="dw-sec"><h4>X / KOL 观点<span class="ln"></span></h4>';
+  s.kol.forEach(k=>{
+    h+='<div class="quote" style="margin-bottom:6px"><div class="q-meta">'+k.d+' · '+k.handle+'</div>'+
+       '<div class="zh" style="margin-top:0;color:var(--text-2);font-size:11.5px">'+k.view+'</div></div>';
+  });
+  h+='</div>';
+
+  h+='<div class="dw-sec"><h4>催化 / 风险 / 映射<span class="ln"></span></h4>'+
+     '<p><b style="color:var(--text)">催化：</b>'+s.cat+'</p>'+
+     '<p style="margin-top:4px"><b style="color:var(--text)">风险：</b>'+s.risk+'</p>'+
+     '<p style="margin-top:4px"><b style="color:var(--text)">A 股映射：</b>'+s.map+'</p></div>';
+  h+='<div class="tiny muted" style="border-top:1px solid var(--line);padding-top:10px">示例数据，不构成投资建议</div></div>';
+
+  dw.innerHTML=h; dw.classList.add("on"); $("#overlay").classList.add("on");
+  $("#dw-close").onclick=closeDrawer;
+  const pk=$("#lab-picker");
+  LABELS.forEach(l=>{
+    const b=document.createElement("button");
+    b.textContent=l.n; b.className=(getLabel(s.t)===l.k?"on":"");
+    b.onclick=function(){
+      const cur=getLabel(s.t); const next=(cur===l.k?"":l.k);
+      try{ localStorage.setItem("desk_label_"+s.t,next); }catch(e){}
+      route(); openStock(i);
+    };
+    pk.appendChild(b);
+  });
+  const clr=document.createElement("button");
+  clr.textContent="清除";
+  clr.onclick=function(){ try{localStorage.removeItem("desk_label_"+s.t)}catch(e){} route(); openStock(i); };
+  pk.appendChild(clr);
+}
+function closeDrawer(){ $("#drawer").classList.remove("on"); $("#overlay").classList.remove("on"); }
+
+/* ---------- 06 ---------- */
+let varTab="next";
+function subHead(no, title, desc){
+  return '<div class="sub-h"><span class="sn">'+no+'</span><b>'+title+'</b>'+(desc?'<span class="d">'+desc+'</span>':'')+'</div>';
+}
+
+function viewStrategy(){
+  const s=DATA.strategy;
+  let h=feedBar();
+
+  /* ===== 01 市场正在交易什么 ===== */
+  h+='<div class="sec">'+secHead("01","市场正在交易什么","方向 · 仓位 · 逻辑 · 催化 · 失效条件","<span class='upd'>仓位合计 86% · 现金 14%</span>");
+  s.trading.forEach(t=>{
+    const cls=t.dir==="short"?"short":((t.dir==="hedge"||t.dir==="cash")?"hedge":"long");
+    h+='<div class="trade '+cls+'" style="margin-bottom:7px"><div class="side"></div><div style="flex:1">'+
+      '<div style="display:flex;align-items:center;gap:8px"><h4>'+t.name+'</h4><span class="pos">'+t.pos+'</span></div>'+
+      '<div class="read" style="font-size:11px;margin-top:1px">'+t.leg+'</div>'+
+      '<div class="read" style="margin-top:4px">'+t.why+'</div>'+
+      '<div class="meta"><span>催化：<b>'+t.cat+'</b></span><span>失效：<b>'+t.inv+'</b></span></div></div></div>';
+  });
+  h+='</div>';
+
+  /* ===== 02 接下来需要盯的变量 ===== */
+  h+='<div class="sec">'+secHead("02","接下来需要盯的变量","下一交易日 · 未来 5 日 · 当月 · 未来三个月");
+  h+='<div class="subtabs" style="margin-bottom:10px">';
+  [["next",s.vars.next.label],["d5",s.vars.d5.label],["month",s.vars.month.label],["q",s.vars.q.label]].forEach(x=>{
+    h+='<div class="subtab'+(varTab===x[0]?" on":"")+'" data-v="'+x[0]+'">'+x[1]+'</div>';
+  });
+  h+='</div>';
+  const v=s.vars[varTab];
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:84px">时间</th><th style="width:22%">事件 / 数据</th>'+
+     '<th style="width:118px">影响标的</th><th>关注点（颗粒度）</th></tr></thead><tbody>';
+  v.rows.forEach(r=>{
+    h+='<tr><td class="strong" style="white-space:nowrap">'+r.t+'</td>'+
+      '<td><div style="display:flex;gap:6px;align-items:flex-start">'+impDot(r.imp)+'<span style="color:var(--text)">'+r.ev+'</span></div></td>'+
+      '<td><span class="tag">'+r.tk+'</span></td><td class="read">'+r.focus+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  /* ===== 03 市场潜在风险点 ===== */
+  h+='<div class="sec">'+secHead("03","市场潜在风险点","独立判断 · 附触发信号与应对");
+  h+='<div class="grid g2">';
+  s.risks.forEach(r=>{
+    const c=r.sev==="h"?"#d2373a":"#e0a33a";
+    h+='<div class="risk"><div class="sev" style="background:'+c+'"></div><div style="flex:1">'+
+      '<h4>'+r.title+'</h4><div class="read" style="font-size:11px">'+r.body+'</div>'+
+      '<dl class="kv"><dt>触发信号</dt><dd>'+r.trigger+'</dd><dt>应对</dt><dd>'+r.act+'</dd></dl></div></div>';
+  });
+  h+='</div></div>';
+
+  /* ===== 04 美股 → A 股映射 ===== */
+  h+='<div class="sec">'+secHead("04","美股 → A 股映射","主题 · 对标 · 映射逻辑 · 强度");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:126px">主题</th><th>美股标的</th>'+
+     '<th>港股 / A 股映射</th><th>映射逻辑</th><th style="width:60px">强度</th></tr></thead><tbody>';
+  s.map.forEach(r=>{
+    const cls=r.s==="强"?"tag red":(r.s.indexOf("弱")===0?"tag amber":"tag amber");
+    h+='<tr><td class="strong">'+r.theme+'</td><td><span class="tag blue">'+r.us+'</span></td>'+
+       '<td class="read" style="color:var(--text)">'+r.cn+'</td><td class="read">'+r.logic+'</td>'+
+       '<td><span class="'+cls+'">'+r.s+'</span></td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  /* ===== 05 投资策略建议：市场 → 行业 → 标的 → 风险关注 ===== */
+  h+='<div class="sec">'+secHead("05","投资策略建议","市场 → 行业 → 标的 → 风险关注",
+      "<span class='upd hot'>更新 "+s.market.updated+"</span><span class='upd'>红色 = 有边际修正</span>");
+
+  /* 5-1 市场 */
+  h+=subHead("5-1","市场选择","钱放哪个市场 —— 顺序错了，行业再对也赚不到");
+  h+='<div class="verdict"><span class="vt">'+s.market.verdict+'</span>'+
+     '<span class="vn">'+s.market.note+'</span></div>';
+  h+='<div class="grid g3" style="align-items:start">';
+  s.market.rows.forEach(m=>{
+    const cls = m.view.indexOf("超配")>=0 ? "tag red" : (m.view.indexOf("低配")>=0 ? "tag" : "tag blue");
+    h+='<div class="card" style="padding:0;overflow:hidden">'+
+       '<div style="padding:11px 14px;border-bottom:1px solid var(--line);background:var(--surface-2);display:flex;align-items:center;gap:8px">'+
+       '<b style="font-size:14px">'+m.m+'</b><span class="'+cls+'">'+m.view+'</span>'+
+       '<span style="margin-left:auto;font-size:13px;font-weight:700" class="num">'+m.w+'</span></div>'+
+       '<div style="padding:6px 14px 12px">'+
+       '<div class="mrow"><span class="mk">边际</span><span class="mv2"><b class="'+(m.dw.indexOf("-")===0?"down":"up")+'">'+m.dw+'</b> 仓位</span></div>'+
+       '<div class="mrow"><span class="mk">20 日</span><span class="mv2">'+m.perf+'</span></div>'+
+       '<div class="mrow"><span class="mk">估值</span><span class="mv2">'+m.val+'</span></div>'+
+       '<div class="mrow"><span class="mk">为什么</span><span class="mv2">'+m.why+'</span></div>'+
+       '<div class="mrow"><span class="mk">变化</span><span class="mv2">'+m.diff+'</span></div>'+
+       '<div class="mrow"><span class="mk">不买它</span><span class="mv2 muted">'+m.inp+'</span></div>'+
+       '</div></div>';
+  });
+  h+='</div>';
+
+  /* 5-2 行业 */
+  h+=subHead("5-2","行业选择","增配什么、减配什么 —— 与上期相比是否有边际修正");
+  h+='<div class="sel-sum"><span class="tag green">看好　'+s.sectorSel.good+'</span><span class="tag">不看好　'+s.sectorSel.bad+'</span></div>';
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+     '<th style="width:150px">行业</th><th style="width:112px">立场 / 权重</th><th class="num" style="width:70px">20 日</th>'+
+     '<th style="width:34%">理由</th><th>与之前想法的差异（边际修正）</th></tr></thead><tbody>';
+  s.sectorSel.rows.forEach(r=>{
+    const vc = r.view.indexOf("增配")===0 ? "tag red" : (r.view.indexOf("减配")===0 ? "tag green" : "tag");
+    h+='<tr'+(r.upd?' class="isupd"':'')+'>'+
+      '<td><div class="strong">'+r.s+'</div><div class="tiny muted">'+r.etf+'</div></td>'+
+      '<td><span class="'+vc+'">'+r.view+'</span><div class="tiny muted" style="margin-top:3px">'+r.w+
+        ' <b class="'+(r.dw.indexOf("-")===0?"down":"up")+'">'+r.dw+'</b></div></td>'+
+      '<td class="num"><span class="chg '+sgn(r.d20)+'">'+pct(r.d20,1)+'</span></td>'+
+      '<td class="read">'+r.why+'</td>'+
+      '<td class="read">'+r.diff+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">'+s.sectorSel.note+'</div>';
+
+  /* 5-3 标的 */
+  h+=subHead("5-3","标的选择","前两步定了，才落到个股 —— 可一键入库跟踪");
+  h+='<div class="grid g2">';
+  s.recs.forEach((r,i)=>{
+    const am={in:["in","建议入库"],add:["add","增配"],cut:["cut","减配"],watch:["watch","观察"],hedge:["hedge","对冲"]};
+    const a=am[r.act];
+    const added=getAddedPool().some(x=>x.t===r.tk);
+    h+='<div class="rec"><div class="rec-top"><span class="act '+a[0]+'">'+a[1]+'</span>'+
+       '<b style="font-size:13px">'+r.tk+'</b><span class="muted" style="font-size:11px">'+r.name+'</span></div>'+
+       '<div class="why">'+r.why+'</div><div class="from">';
+    r.from.forEach(f=>{ h+='<span class="tag">'+f+'</span>'; });
+    if(r.add){
+      h+='<button class="mini" data-add="'+i+'" style="margin-left:auto"'+(added?" disabled":"")+'>'+(added?"已入库":"加入研究池")+'</button>';
+    }
+    h+='</div></div>';
+  });
+  h+='</div>';
+
+  /* 5-4 风险关注 */
+  h+=subHead("5-4","风险关注","不是重复风险点，而是“盯什么读数、到什么位置、做什么动作”");
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+     '<th style="width:180px">关注项</th><th style="width:20%">当前读数</th><th style="width:20%">触发阈值</th><th>触发后动作</th></tr></thead><tbody>';
+  s.watch.rows.forEach(w=>{
+    const dot = w.lvl==="h" ? '<span class="imp h"></span>' : (w.lvl==="m" ? '<span class="imp m"></span>' : '<span class="imp l"></span>');
+    const pend = /待接入|待披露/.test(w.now);
+    h+='<tr><td><div style="display:flex;gap:6px;align-items:flex-start">'+dot+'<span class="strong">'+w.k+'</span></div></td>'+
+      '<td class="read '+(pend?"muted":"")+'">'+w.now+'</td>'+
+      '<td class="read"><span class="tag amber">'+w.thr+'</span></td>'+
+      '<td class="read">'+w.act+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">红点=高优先（触发即调仓）· 黄点=中（先观察再动）· 灰点=低。<b>“待接入”的读数在补上数据源前不做判断</b>，不用估计值代替。</div></div>';
+
+  /* ===== 06 我的思考 ===== */
+  h+='<div class="sec">'+secHead("06","我的思考","可编辑 · 自动保存到本机","<span class='upd'>仅本机</span>");
+  h+='<div class="card" style="padding:15px 17px"><textarea class="note-area" id="think" placeholder="写下判断、复盘与待验证的假设……"></textarea>'+
+     '<div class="note-foot"><span>自动保存 · 本地浏览器</span><span id="saved">已保存</span></div></div></div>';
+  return h;
+}
+
+/* ---------- 07/08 ---------- */
+function phCard(t,d){
+  return '<div class="ph-card"><div class="t">'+t+'</div><div class="d">'+d+'</div>'+
+    '<div class="skel"><i></i><i></i><i></i></div></div>';
+}
+function viewPortfolio(){
+  return feedBar()+'<div class="ph-hero"><h3>模拟盘 / 组合　<span class="tag blue">待细化</span></h3>'+
+    '<p>按你的口径确定后填入：是“策略模拟盘”（验证交易框架，含对冲腿与失效条件）还是“实盘镜像”（记录真实持仓、成本与调仓）。两者对字段与归因口径要求完全不同。</p></div>'+
+    '<div class="ph-grid">'+
+      phCard("组合净值曲线","与纳指 / 标普 500 / SOX 基准对比，含最大回撤与夏普，日频更新。")+
+      phCard("持仓明细","标的 · 方向 · 成本 · 现价 · 权重 · 盈亏 · 持有逻辑 · 失效条件。")+
+      phCard("交易记录","开平仓日期、价格、仓位变化与当时理由，可回溯决策质量。")+
+      phCard("收益归因","按主题（AI 电力 / 封装 / 端侧）与因子（动量 / 成长）拆分贡献。")+
+      phCard("风险敞口","净多头、行业集中度、单标的上限、久期与 beta。")+
+      phCard("复盘日历","周度复盘模板：判断对错、执行偏差，沉淀到赛道模块的认知更新。")+
+    '</div><div class="tiny muted" style="margin-top:14px">待确认：①初始资金与基准 ②单票上限 ③是否允许做空/期权 ④调仓频率。</div>';
+}
+function viewRisk(){
+  return feedBar()+'<div class="ph-hero"><h3>风险预警　<span class="tag amber">待细化</span></h3>'+
+    '<p>预警的关键不是指标多，而是“触发之后做什么”。每条规则包含阈值、当前值、触发状态、对应动作（减仓 / 对冲 / 只观察）。策略模块里的“风险点”是判断，这里落地成规则。</p></div>'+
+    '<div class="ph-grid">'+
+      phCard("宏观风险仪表","10Y 美债、VIX 期限结构、美元指数、HY OAS 四条阈值线。")+
+      phCard("持仓集中度","单票 &gt; 15%、单一主题 &gt; 30%、前五合计 &gt; 55% 时告警。")+
+      phCard("事件日历联动","FOMC、CPI、非农、主要标的财报，T-3 自动提醒。")+
+      phCard("个股止损 / 逻辑失效","价格止损线 + 基本面失效条件（backlog 下修、毛利率跌破阈值）。")+
+      phCard("流动性风险","小市值标的的日均成交额与持仓市值比 &gt; 20% 时提示退出难度。")+
+      phCard("相关性突变","持仓两两 60 日相关性上穿 0.8 时，提示“看似分散实则同向”。")+
+    '</div>';
+}
+
+/* ---------- router ---------- */
+const VIEWS={brief:viewBrief,tracks:viewTracks,events:viewEvents,movers:viewMovers,
+  stocks:viewStocks,strategy:viewStrategy,portfolio:viewPortfolio,risk:viewRisk};
+
+function renderNav(){
+  let h='<div class="nav-label">工作流</div>';
+  MODULES.forEach((m,i)=>{
+    h+='<div class="nav-item" data-id="'+m.id+'"><svg viewBox="0 0 24 24">'+m.icon+'</svg>'+
+       '<span>'+m.name+'</span>'+(m.soon?'<span class="soon">'+m.soon+'</span>':'<span class="idx">'+String(i+1).padStart(2,"0")+'</span>')+'</div>';
+  });
+  $("#nav").innerHTML=h;
+  document.querySelectorAll(".nav-item").forEach(el=>{ el.onclick=()=>{ location.hash=el.dataset.id; }; });
+}
+
+function bindNotes(){
+  const ta=$("#think");
+  if(ta){
+    const key="desk_think_v1";
+    ta.value=localStorage.getItem(key)||DATA.strategy.thinking;
+    let t;
+    ta.oninput=function(){
+      $("#saved").textContent="保存中…";
+      clearTimeout(t);
+      t=setTimeout(()=>{
+        try{
+          localStorage.setItem(key,ta.value);
+          $("#saved").textContent="已保存 "+new Date().toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"});
+        }catch(e){ $("#saved").textContent="保存失败"; }
+      },400);
+    };
+  }
+  document.querySelectorAll("[data-add]").forEach(btn=>{
+    btn.onclick=function(){
+      const i=+btn.dataset.add, r=DATA.strategy.recs[i];
+      const pool=getAddedPool();
+      if(!pool.some(x=>x.t===r.tk)){
+        pool.push({t:r.tk,n:r.name,d:DATA.meta.date});
+        try{ localStorage.setItem("desk_pool_added",JSON.stringify(pool)); }catch(e){}
+      }
+      btn.textContent="已入库"; btn.disabled=true;
+    };
+  });
+}
+
+function route(){
+  const id=(location.hash||"#brief").slice(1);
+  const mod=MODULES.find(m=>m.id===id)||MODULES[0];
+  document.querySelectorAll(".nav-item").forEach(el=>el.classList.toggle("active",el.dataset.id===mod.id));
+  $("#ttl").textContent=mod.name; $("#dsc").textContent=mod.desc;
+  const v=$("#view"); v.innerHTML=VIEWS[mod.id]();
+  v.style.animation="none"; void v.offsetWidth; v.style.animation="";
+  window.scrollTo({top:0,behavior:"instant"});
+
+  if(mod.id==="tracks"){
+    document.querySelectorAll("[data-t]").forEach(el=>{ el.onclick=()=>{ trackSel=el.dataset.t; route(); }; });
+    const ta=$("#track-note"), key="desk_track_"+trackSel;
+    const cur=DATA.tracks.find(x=>x.id===trackSel);
+    ta.value=localStorage.getItem(key)||cur.think||"";
+    let t;
+    ta.oninput=function(){
+      $("#track-saved").textContent="保存中…";
+      clearTimeout(t);
+      t=setTimeout(()=>{ try{ localStorage.setItem(key,ta.value); $("#track-saved").textContent="已保存"; }catch(e){} },400);
+    };
+  }
+
+  if(mod.id==="stocks"){
+    const secs=["全部"].concat(DATA.stocks.map(s=>s.sec).filter((v,i,a)=>a.indexOf(v)===i));
+    const f=$("#stock-filters");
+    f.innerHTML=secs.map((s,i)=>'<button class="fchip'+(i===0?' on':'')+'" data-s="'+s+'">'+s+'</button>').join("");
+    f.querySelectorAll(".fchip").forEach(b=>{
+      b.onclick=()=>{
+        f.querySelectorAll(".fchip").forEach(x=>x.classList.remove("on"));
+        b.classList.add("on");
+        const k=b.dataset.s;
+        document.querySelectorAll(".stock-card").forEach(c=>{
+          const s=DATA.stocks[+c.dataset.i];
+          c.style.display=(k==="全部"||s.sec.indexOf(k)===0)?"":"none";
+        });
+      };
+    });
+    document.querySelectorAll(".stock-card").forEach(c=>{ c.onclick=()=>openStock(+c.dataset.i); });
+  }
+
+  if(mod.id==="strategy"){
+    document.querySelectorAll("[data-v]").forEach(el=>{ el.onclick=()=>{ varTab=el.dataset.v; route(); }; });
+    bindNotes();
+  }
+}
+
+/* ---- 数据注入：先 Wind（主），再 Yahoo/Nasdaq（补缺 + 校验） ---- */
+if (typeof window !== "undefined" && window.WIND_LIVE) {
+  try { hydrate(window.WIND_LIVE); } catch(e) { console.warn("Wind 数据注入失败", e); FEED.connected = false; }
+}
+if (YF) {
+  try { hydrateExtra(YF); } catch(e) { console.warn("辅助数据注入失败", e); }
+}
+
+$("#side-date").textContent=DATA.meta.date;
+$("#side-week").textContent=DATA.meta.week;
+$("#hdr-date").textContent=DATA.meta.date;
+$("#feed-state").textContent=FEED.connected?"Wind 已连接":"Wind 未连接";
+$("#feed-pill").textContent=FEED.connected?("Wind · "+(FEED.lastSync||"已同步")):"Wind MCP 未连接 · 示例数据";
+$("#feed-pill").className=FEED.connected?"pill":"pill warn";
+renderNav(); route();
+window.addEventListener("hashchange",route);
+$("#overlay").onclick=closeDrawer;
+$("#btn-print").onclick=()=>window.print();
+
+/* 移动端：侧栏抽屉 */
+(function(){
+  const sb=document.querySelector(".sidebar"), mk=$("#mask"), bt=$("#btn-menu");
+  if(!sb||!mk||!bt) return;
+  const openNav=()=>{ sb.classList.add("open"); mk.classList.add("show"); };
+  const closeNav=()=>{ sb.classList.remove("open"); mk.classList.remove("show"); };
+  bt.onclick=()=>{ sb.classList.contains("open")?closeNav():openNav(); };
+  mk.onclick=closeNav;
+  $("#nav").addEventListener("click",e=>{
+    if(e.target.closest(".nav-item")&&window.innerWidth<=980) setTimeout(closeNav,80);
+  });
+  window.addEventListener("hashchange",closeNav);
+  window.addEventListener("resize",()=>{ if(window.innerWidth>980) closeNav(); });
+  document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeNav(); });
+})();
+
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeDrawer(); });
+</script>
+</body>
+</html>
