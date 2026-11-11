@@ -1,0 +1,7 @@
+# 统一用 LF：Windows 的 CRLF 会让 GitHub Actions 上的 shell 步骤报错
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
