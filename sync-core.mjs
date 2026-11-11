@@ -228,7 +228,7 @@ const crossDates = Object.values(cross).map((s) => s.date).sort();
 const payload = {
   meta: {
     syncedAt: new Date().toISOString(),
-    source: "Yahoo Finance (云端替代 Wind)",
+    source: "Yahoo Finance",
     stockDate: dates[dates.length - 1] || null,
     indexDate: idxDates[idxDates.length - 1] || null,
     crossDate: crossDates[crossDates.length - 1] || null,

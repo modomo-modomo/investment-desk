@@ -306,21 +306,30 @@ for (const sym of Object.values(CHECK)) {
 
 /* 交叉校验：Wind 与 Yahoo 收盘价差 */
 let crosscheck = null;
+/* 双端点校验：live-data.js 的收盘价来自 chart v8，live-extra.js 的现价来自 quote v7。
+ * 两者是 Yahoo 的两个独立接口，一致即说明抓取链路没出错。 */
 try {
   if (existsSync("live-data.js")) {
     const src = readFileSync("live-data.js", "utf8").replace(/^window\.WIND_LIVE\s*=\s*/, "").replace(/;\s*$/, "");
     const W = JSON.parse(src);
     const CODE = { TSLA: "TSLA.O", META: "META.O", IREN: "IREN.O", NBIS: "NBIS.O", CRWV: "CRWV.O", BE: "BE.N", AMD: "AMD.O", TSM: "TSM.N", TER: "TER.O", ONTO: "ONTO.N", NET: "NET.N", RBRK: "RBRK.N", OKTA: "OKTA.O", CHKP: "CHKP.O" };
     const rows = [];
+    /* 真正的双端点：chart v8 的"昨收" vs quote v7 的 regularMarketPreviousClose。
+     * 比昨收而不是现价——现价盘中一直在动，两端抓取时刻不同必然有差；
+     * 昨收是静态值，两端一致才说明两条链路都没出错。 */
+    /* CODE 的 key 是 Yahoo 裸代码（TSLA），value 是 Wind 口径代码（TSLA.O）；
+     * quote 接口只认裸代码，live-data 只认带后缀的 key。 */
+    const q7 = await quotes(Object.keys(CODE));
     for (const t of Object.keys(CODE)) {
-      const w = W.stocks?.[CODE[t]], y = quotesOut[t];
-      if (!w || !y) continue;
-      const diff = Math.abs(w.price - y.price) / y.price * 100;
-      rows.push({ t, wind: w.price, yahoo: y.price, diffPct: diff, ok: diff <= 0.05 });
+      const w = W.stocks?.[CODE[t]], y = q7[t];
+      const ref = y?.regularMarketPreviousClose;
+      if (!w || w.prev == null || ref == null) continue;
+      const diff = Math.abs(w.prev - ref) / ref * 100;
+      rows.push({ t, chart: w.prev, quote: ref, diffPct: diff, ok: diff <= 0.05 });
     }
     crosscheck = { rows, okCount: rows.filter((r) => r.ok).length, total: rows.length };
   }
-} catch (e) { console.warn("交叉校验失败:", e.message); }
+} catch (e) { console.warn("双端点校验失败:", e.message); }
 
 const out = {
   meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },

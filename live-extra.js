@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-11T13:40:21.753Z",
+  "syncedAt": "2026-11-11T14:51:51.708Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-11",
   "postDate": "2026-11-10"
@@ -8,209 +8,209 @@ window.YF_DATA = {
  "quotes": {
   "TSLA": {
    "symbol": "TSLA",
-   "price": 379.78,
-   "prevClose": 378.04998779296875,
-   "chg": 0.4576143478876471,
+   "price": 387.75,
+   "prevClose": 379.7799987792969,
+   "chg": 2.0985837185530043,
    "w52h": 498.83,
    "w52l": 297.38,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "META": {
    "symbol": "META",
-   "price": 641.39,
-   "prevClose": 641.3699951171875,
-   "chg": 0.003121370098768672,
+   "price": 639.59,
+   "prevClose": 641.3900146484375,
+   "chg": -0.2806385743244544,
    "w52h": 779.82,
    "w52l": 520.26,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "IREN": {
    "symbol": "IREN",
-   "price": 19.73,
-   "prevClose": 21.40999984741211,
-   "chg": -7.846802041798462,
+   "price": 20.63,
+   "prevClose": 19.729999542236328,
+   "chg": 4.561579520585535,
    "w52h": 70.707,
    "w52l": 17.155,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "NBIS": {
    "symbol": "NBIS",
-   "price": 134,
-   "prevClose": 141.4499969482422,
-   "chg": -5.266876711894319,
+   "price": 152.535,
+   "prevClose": 134,
+   "chg": 13.83209228515625,
    "w52h": 299.86,
    "w52l": 73.52,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "CRWV": {
    "symbol": "CRWV",
-   "price": 48.73,
-   "prevClose": 48.97999954223633,
-   "chg": -0.5104124180001723,
+   "price": 56.225,
+   "prevClose": 48.72999954223633,
+   "chg": 15.380666944986388,
    "w52h": 138.25,
    "w52l": 40.58,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "BE": {
    "symbol": "BE",
-   "price": 185.42,
-   "prevClose": 193.8800048828125,
-   "chg": -4.3635271821767745,
+   "price": 203.965,
+   "prevClose": 185.4199981689453,
+   "chg": 10.001617059691714,
    "w52h": 351.28,
    "w52l": 75.7,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "AMD": {
    "symbol": "AMD",
-   "price": 515.21,
-   "prevClose": 508.5799865722656,
-   "chg": 1.3036367091587397,
+   "price": 529.785,
+   "prevClose": 515.2100219726562,
+   "chg": 2.828933939613565,
    "w52h": 658.52,
    "w52l": 188.22,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "TSM": {
    "symbol": "TSM",
-   "price": 396.48,
-   "prevClose": 388.6199951171875,
-   "chg": 2.022545408856402,
+   "price": 409.969,
+   "prevClose": 396.4800109863281,
+   "chg": 3.402084859770249,
    "w52h": 487.47,
    "w52l": 266.82,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "TER": {
    "symbol": "TER",
-   "price": 245.4,
-   "prevClose": 246,
-   "chg": -0.24390492012830167,
+   "price": 258.4,
+   "prevClose": 245.39999389648438,
+   "chg": 5.297473644389616,
    "w52h": 487.91,
    "w52l": 151.52,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "ONTO": {
    "symbol": "ONTO",
-   "price": 197.51,
-   "prevClose": 194.0399932861328,
-   "chg": 1.7882917649797214,
+   "price": 206.035,
+   "prevClose": 197.50999450683594,
+   "chg": 4.3162419079396885,
    "w52h": 386.46,
    "w52l": 121.575,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "NET": {
    "symbol": "NET",
-   "price": 305.8,
-   "prevClose": 293.75,
-   "chg": 4.102123503989352,
+   "price": 314.31,
+   "prevClose": 305.79998779296875,
+   "chg": 2.7828679219524366,
    "w52h": 370.35,
    "w52l": 158.83,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "RBRK": {
    "symbol": "RBRK",
-   "price": 109.34,
-   "prevClose": 111.22000122070312,
-   "chg": -1.690347835082151,
+   "price": 111.05,
+   "prevClose": 109.33999633789062,
+   "chg": 1.563935221456192,
    "w52h": 139.92,
    "w52l": 42.25,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "OKTA": {
    "symbol": "OKTA",
-   "price": 178.36,
-   "prevClose": 177.57000732421875,
-   "chg": 0.4448911716776527,
+   "price": 185.9,
+   "prevClose": 178.36000061035156,
+   "chg": 4.227401469124703,
    "w52h": 235,
    "w52l": 62.66,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   },
   "CHKP": {
    "symbol": "CHKP",
-   "price": 144.57,
-   "prevClose": 143.9600067138672,
-   "chg": 0.423729217770874,
+   "price": 145.37,
+   "prevClose": 144.57000732421875,
+   "chg": 0.5533566801132261,
    "w52h": 205.81,
    "w52l": 112.23,
-   "date": "2026-11-10"
+   "date": "2026-11-11"
   }
  },
  "sectors": {
   "XLK": {
    "cn": "信息技术",
-   "chg": -1.1528564866639224,
-   "d20": -13.944362791627663
+   "chg": 2.536973496809214,
+   "d20": -9.05045825247075
   },
   "XLC": {
    "cn": "通信服务",
-   "chg": 0.3725796605857479,
-   "d20": -4.025647214292494
+   "chg": 0.4639940516778296,
+   "d20": -2.310050140447084
   },
   "XLY": {
    "cn": "可选消费",
-   "chg": 0.03305587539972343,
-   "d20": 7.734071194554315
+   "chg": -0.08261553159388813,
+   "d20": 8.475333585867428
   },
   "XLF": {
    "cn": "金融",
-   "chg": 0.5173292436236432,
-   "d20": 6.329808901897427
+   "chg": -0.10293596216951473,
+   "d20": 6.804840523335609
   },
   "XLV": {
    "cn": "医疗",
-   "chg": 0.29204218468132925,
-   "d20": 11.328539906778023
+   "chg": -0.6300309247368796,
+   "d20": 7.892616232259875
   },
   "XLI": {
    "cn": "工业",
-   "chg": -0.0947383875230079,
-   "d20": 0.035570972458098815
+   "chg": 0.6282211731371223,
+   "d20": 1.6463123267069113
   },
   "XLB": {
    "cn": "原材料",
-   "chg": -0.17000407049969635,
-   "d20": 6.295247740490106
+   "chg": 0.09461315648342516,
+   "d20": 6.502926265362863
   },
   "XLE": {
    "cn": "能源",
-   "chg": 0.43590646391657994,
-   "d20": -7.425592396399738
+   "chg": 0.9885897564983148,
+   "d20": -7.1048302315814045
   },
   "XLP": {
    "cn": "必需消费",
-   "chg": 0.1540316762994598,
-   "d20": 8.124475756668437
+   "chg": -0.2691366807347717,
+   "d20": 5.490362813801641
   },
   "XLU": {
    "cn": "公用事业",
-   "chg": -0.13702071714216668,
-   "d20": 4.442323042275365
+   "chg": -0.022863758604763085,
+   "d20": 4.793863714000857
   },
   "XLRE": {
    "cn": "房地产",
-   "chg": -0.13440313488817246,
-   "d20": 6.574228734454413
+   "chg": 0.03364600500754822,
+   "d20": 7.4837296134596665
   }
  },
  "btc": {
-  "price": 73632.9375,
-  "chg": -0.11825766266522209,
-  "d20": -9.443825578247033,
+  "price": 73667.7734375,
+  "chg": -0.07100334616515491,
+  "d20": -9.400983212595172,
   "date": "2026-11-11"
  },
  "eth": {
-  "price": 2047.969970703125,
-  "chg": -0.10784109300567835,
-  "d20": -14.174032679713822,
+  "price": 2055.360107421875,
+  "chg": 0.2526215710051405,
+  "d20": -13.864328122718717,
   "date": "2026-11-11"
  },
  "breadth": {
-  "rsp20": 3.5536810701382704,
-  "spy20": -3.6104968448838926,
-  "rel20": 7.164177915022163
+  "rsp20": 4.544772377195483,
+  "spy20": -1.7502561240168468,
+  "rel20": 6.29502850121233
  },
  "spxVol": {
-  "today": 5056350000,
-  "avg20": 5705699500,
-  "ratio": 0.886192832272362
+  "today": 324148835,
+  "avg20": 5715050000,
+  "ratio": 0.056718460030970856
  },
  "earnings": {
   "preDate": "2026-11-11",
@@ -241,12 +241,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 82.51,
-    "prevClose": 82.57,
-    "preChg": -1.9014169795325109,
+    "price": 81.845,
+    "prevClose": 82.45,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -0.0726627,
-    "marketState": "PRE"
+    "dayChg": -0.7337729,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "AYA",
@@ -274,11 +274,11 @@ window.YF_DATA = {
      "gross": 0
     },
     "price": 25.17,
-    "prevClose": 26.77,
-    "preChg": -3.623459096002979,
+    "prevClose": 25.17,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -5.97684,
-    "marketState": "PRE"
+    "dayChg": 0,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "RUM",
@@ -305,12 +305,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 5.11,
-    "prevClose": 5.08,
-    "preChg": 6.496062992125995,
+    "price": 5.464,
+    "prevClose": 5.11,
+    "preChg": null,
     "postChg": null,
-    "dayChg": 0.590555,
-    "marketState": "PRE"
+    "dayChg": 6.9275947,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "BGSI",
@@ -337,12 +337,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 88.5,
-    "prevClose": 90.23,
+    "price": 76.8064,
+    "prevClose": 87.82,
     "preChg": null,
     "postChg": null,
-    "dayChg": -1.91733,
-    "marketState": "PRE"
+    "dayChg": -12.5577545,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "NYAX",
@@ -369,12 +369,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 48.84,
-    "prevClose": 48.705,
-    "preChg": 8.756801149779282,
+    "price": 53.16,
+    "prevClose": 48.84,
+    "preChg": null,
     "postChg": null,
-    "dayChg": 0.277175,
-    "marketState": "PRE"
+    "dayChg": 8.845208,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "RSKD",
@@ -401,12 +401,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 8.48,
+    "price": 10.85,
     "prevClose": 8.48,
-    "preChg": 19.103773584905646,
+    "preChg": null,
     "postChg": null,
-    "dayChg": 0,
-    "marketState": "PRE"
+    "dayChg": 27.948126,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "ODD",
@@ -433,12 +433,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 19.505,
-    "prevClose": 21.7,
-    "preChg": -8.525345622119806,
+    "price": 21.0395,
+    "prevClose": 19.505,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -10.1152,
-    "marketState": "PRE"
+    "dayChg": 7.8672147,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "AEBI",
@@ -465,16 +465,16 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 11.17,
-    "prevClose": 11.41,
-    "preChg": -7.800175284837863,
+    "price": 10.87,
+    "prevClose": 11.17,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -2.10342,
-    "marketState": "PRE"
+    "dayChg": -2.6857672,
+    "marketState": "REGULAR"
    }
   ],
   "preTotal": 23,
-  "preHit": 6,
+  "preHit": 0,
   "preCached": true,
   "post": [
    {
@@ -507,12 +507,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 18.28,
-    "prevClose": 18.35,
-    "preChg": -2.8997275204359685,
+    "price": 17.83,
+    "prevClose": 18.28,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -0.38147,
-    "marketState": "PRE"
+    "dayChg": -2.461711,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "ALC",
@@ -544,12 +544,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 74.06,
-    "prevClose": 75.14,
-    "preChg": -5.376630290125107,
+    "price": 71.95,
+    "prevClose": 74.25,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -1.43732,
-    "marketState": "PRE"
+    "dayChg": -3.0947297,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "EC",
@@ -576,12 +576,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 15.26,
-    "prevClose": 15.61,
-    "preChg": -1.0249839846252384,
+    "price": 15.37,
+    "prevClose": 15.27,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -2.24215,
-    "marketState": "PRE"
+    "dayChg": 0.655949,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "CRWV",
@@ -613,12 +613,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 48.73,
-    "prevClose": 48.98,
-    "preChg": 14.542262147815443,
+    "price": 56.77,
+    "prevClose": 48.73,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -0.510412,
-    "marketState": "PRE"
+    "dayChg": 16.499079,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "VIV",
@@ -650,12 +650,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 11.66,
-    "prevClose": 11.61,
-    "preChg": 4.134366925064614,
+    "price": 12.34,
+    "prevClose": 11.66,
+    "preChg": null,
     "postChg": null,
-    "dayChg": 0.430665,
-    "marketState": "PRE"
+    "dayChg": 5.831907,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "MRCY",
@@ -687,12 +687,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 83.58,
-    "prevClose": 79.62,
-    "preChg": 8.113539311730712,
+    "price": 87.42,
+    "prevClose": 83.58,
+    "preChg": null,
     "postChg": null,
-    "dayChg": 4.97362,
-    "marketState": "PRE"
+    "dayChg": 4.594396,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "RGTI",
@@ -724,12 +724,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 12.15,
-    "prevClose": 12.98,
-    "preChg": -3.235747303543912,
+    "price": 11.83,
+    "prevClose": 12.15,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -6.39445,
-    "marketState": "PRE"
+    "dayChg": -2.6337423,
+    "marketState": "REGULAR"
    },
    {
     "symbol": "FLY",
@@ -761,16 +761,16 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 23.7,
-    "prevClose": 24.31,
-    "preChg": -1.522007404360337,
+    "price": 25.585,
+    "prevClose": 23.7,
+    "preChg": null,
     "postChg": null,
-    "dayChg": -2.50925,
-    "marketState": "PRE"
+    "dayChg": 7.953579,
+    "marketState": "REGULAR"
    }
   ],
   "postTotal": 84,
-  "postHit": 5,
+  "postHit": 0,
   "postCached": true
  },
  "nextEarn": {
@@ -808,7 +808,7 @@ window.YF_DATA = {
    "2026-11-05"
   ],
   "RBRK": [
-   "2026-12-03"
+   "2026-11-30"
   ],
   "OKTA": [
    "2026-12-01"
@@ -821,99 +821,99 @@ window.YF_DATA = {
   "rows": [
    {
     "t": "TSLA",
-    "wind": 379.78,
-    "yahoo": 379.78,
+    "chart": 379.78,
+    "quote": 379.78,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "META",
-    "wind": 641.39,
-    "yahoo": 641.39,
+    "chart": 641.39,
+    "quote": 641.39,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "IREN",
-    "wind": 19.73,
-    "yahoo": 19.73,
+    "chart": 19.73,
+    "quote": 19.73,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "NBIS",
-    "wind": 134,
-    "yahoo": 134,
+    "chart": 134,
+    "quote": 134,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "CRWV",
-    "wind": 48.73,
-    "yahoo": 48.73,
+    "chart": 48.73,
+    "quote": 48.73,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "BE",
-    "wind": 185.42,
-    "yahoo": 185.42,
-    "diffPct": 0,
+    "chart": 185.42,
+    "quote": 185.5,
+    "diffPct": 0.04312668463612534,
     "ok": true
    },
    {
     "t": "AMD",
-    "wind": 515.21,
-    "yahoo": 515.21,
+    "chart": 515.21,
+    "quote": 515.21,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "TSM",
-    "wind": 396.48,
-    "yahoo": 396.48,
+    "chart": 396.48,
+    "quote": 396.48,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "TER",
-    "wind": 245.4,
-    "yahoo": 245.4,
+    "chart": 245.4,
+    "quote": 245.4,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "ONTO",
-    "wind": 197.51,
-    "yahoo": 197.51,
+    "chart": 197.51,
+    "quote": 197.51,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "NET",
-    "wind": 305.8,
-    "yahoo": 305.8,
+    "chart": 305.8,
+    "quote": 305.8,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "RBRK",
-    "wind": 109.34,
-    "yahoo": 109.34,
+    "chart": 109.34,
+    "quote": 109.34,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "OKTA",
-    "wind": 178.36,
-    "yahoo": 178.36,
+    "chart": 178.36,
+    "quote": 178.36,
     "diffPct": 0,
     "ok": true
    },
    {
     "t": "CHKP",
-    "wind": 144.57,
-    "yahoo": 144.57,
+    "chart": 144.57,
+    "quote": 144.57,
     "diffPct": 0,
     "ok": true
    }

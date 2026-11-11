@@ -83,15 +83,17 @@ https://<你的用户名>.github.io/investment-desk/
 | 文件 | 内容 | 来源 |
 |---|---|---|
 | `live-data.js` | 14 只标的、13 个指数、7 项跨资产 | Yahoo Finance |
-| `live-extra.js` | 11 个板块 ETF、BTC/ETH、标普量能、等权 RSP、财报日历、双源校验 | Yahoo + Nasdaq |
-| `live-news.js` | 业绩要点与指引原文 | 东方财富 7×24 快讯 |
+| `live-extra.js` | 11 个板块 ETF、BTC/ETH、标普量能、等权 RSP、财报日历、双端点校验 | Yahoo + Nasdaq |
+| `live-news.js` | 业绩要点与指引原文 | 东方财富 7×24 快讯 → Yahoo 标题 |
 
-**关于 Wind**：原版 `sync.mjs` 依赖本机安装的 Wind CLI（`~/.agents/skills/wind-mcp-skill`），
-云端没有这个环境。因此云端用 `sync-core.mjs`（Yahoo 版）生成同样结构的 `live-data.js`，
-字段名与 Wind 版完全一致，页面无需改动。
+**全部数据源已统一到 Yahoo，不再依赖 Wind。**
 
-已做过一致性校验：对已收盘的市场（恒生、上证、日经、KOSPI），Yahoo 与 Wind 的数值
-**差异为 0.00%**；铜价按 1 磅 = 2204.6226 磅换算后与 LME 报价吻合。
+原版 `sync.mjs`（走本机 Wind CLI）已移除。现在 `sync-core.mjs` 直接生成 `live-data.js`，
+字段结构保持不变，页面无需改动。
+
+校验方式：`live-data.js` 的昨收价来自 chart v8，`live-extra.js` 的昨收来自 quote v7，
+两条链路相互独立，**14/14 一致**（容差 0.05%）。
+铜价由 COMEX 美分/磅按 1 磅 = 2204.6226 换算成美元/吨。
 
 ---
 
@@ -106,7 +108,7 @@ node daily.mjs          # 依次跑完上面三步
 
 本地跑完直接刷新 `index.html` 就能看到新数据，不需要部署。
 
-如需用 Wind 而不是 Yahoo 更新核心行情，装好 Wind 环境后跑 `node sync.mjs`（会覆盖 `live-data.js`）。
+三个脚本都是零第三方依赖，只用 Node 内置模块，不需要 `npm install`。
 
 ---
 
@@ -147,6 +149,7 @@ Actions 也不限时长。
 - **GitHub 定时任务会延迟**，通常 5–15 分钟，属正常现象，不是故障。
 - **公开仓库的定时任务在连续 60 天无提交活动后会被自动停用**。每天都有数据提交就不会触发；
   若长期停更，去 Actions 页面点一次 Run workflow 即可恢复。
-- **Wind 数据不再自动更新**。如需恢复，本地装 Wind 环境后跑 `node sync.mjs` 再 push。
-- 小市值公司的业绩正文东方财富未必覆盖，此时 `live-news.js` 里该条为 `ok:false`，
-  页面会显示「未检索到业绩报道」。
+- **Wind 已完全移除**，行情/指数/跨资产/财报全部走 Yahoo，业绩正文走东方财富。
+  如果哪天 Yahoo 接口变了，`sync-core.mjs` 与 `sync-extra.mjs` 需要跟着调整。
+- 小市值公司的业绩正文东方财富未必覆盖，此时退到 Yahoo 新闻标题（只有标题、没有正文），
+  少数极冷门标的可能连标题都没有，`live-news.js` 里该条为 `ok:false`。

@@ -395,7 +395,7 @@ ol.concl li b{color:var(--text);font-weight:650}
   </div>
   <nav class="nav" id="nav"></nav>
   <div class="side-foot">
-    <b>数据源</b>　<span id="feed-state" style="color:#c0392b">Wind 未连接</span><br>
+    <b>数据源</b>　<span id="feed-state" style="color:#c0392b">Yahoo 未连接</span><br>
     更新节奏 <b>每个交易日两次</b>：20:30 / 次日 07:00<br>
     <span style="color:#b6bfcc">行情/财报为实时抓取，资讯类待接源</span>
   </div>
@@ -412,7 +412,7 @@ ol.concl li b{color:var(--text);font-weight:650}
       <div class="desc" id="dsc"></div>
     </div>
     <div class="topbar-right">
-      <span class="pill warn" id="feed-pill">Wind MCP 未连接 · 示例数据</span>
+      <span class="pill warn" id="feed-pill">行情未连接 · 示例数据</span>
       <span class="pill"><b id="hdr-date">2026-11-11</b><span class="muted">周三 · 北京</span></span>
       <button class="btn-ghost" id="btn-print">导出 / 打印</button>
     </div>
@@ -432,17 +432,15 @@ ol.concl li b{color:var(--text);font-weight:650}
 <script src="live-news.js"></script>
 <script>
 /* ==========================================================================
-   WIND 数据适配层
-   当前 FEED.connected=false，页面用 DATA 中的占位值渲染。
-   接上 Wind MCP 后：connected 置 true，实现 fetch()，字段映射见下。
-     quote   -> w.wss 收盘价 / 涨跌幅 / 开盘价
-     cross   -> w.wsd 序列（当日、20 日）
-     earn    -> w.wset 业绩 + 盘前盘后行情
-     breadth -> w.wset 涨跌家数
-     senti   -> 自算（动量/强度/广度/期权/信用）
+   行情数据适配层
+   数据全部来自 Yahoo Finance，由 sync-core.mjs 生成 live-data.js，
+   页面加载时经 hydrate() 注入。字段映射：
+     stocks  -> chart v8 收盘序列（现价 / 昨收 / 20 日 / 市值 / 盘前盘后）
+     indices -> chart v8 指数点位与原收盘
+     cross   -> chart v8 商品与汇率（铜由美分/磅折美元/吨）
    ========================================================================== */
-const FEED = { connected:false, source:"Wind MCP", lastSync:null,
-  async fetch(kind, params){ throw new Error("Wind MCP 未连接"); } };
+const FEED = { connected:false, source:"Yahoo Finance", lastSync:null,
+  async fetch(kind, params){ throw new Error("行情未连接"); } };
 
 const DATA = {
   meta:{ date:"2026-11-11", week:"周三", stance:"Risk-off（估值消化）",
@@ -1031,7 +1029,7 @@ const DATA = {
     watch:{ updated:"11-11 07:00", rows:[
       {k:"10Y 美债收益率", now:"4.98%（20 日 -23bp）", thr:"站稳 5.30%", lvl:"h",
        act:"成长股再减 5%；TLT put spread 加仓，比直接清仓更省成本"},
-      {k:"HY OAS（高收益债利差）", now:"Wind 无日频序列，待接入", thr:"走阔 100bp 至 380bp", lvl:"h",
+      {k:"HY OAS（高收益债利差）", now:"免费源无日频序列，待接入", thr:"走阔 100bp 至 380bp", lvl:"h",
        act:"CRWV 减半，仓位切到有自有电力的 IREN；NBIS 直接退出"},
       {k:"财报季指引（11-12 NBIS / 11-19 NVDA）", now:"待披露", thr:"capex 或下季指引下修", lvl:"h",
        act:"设备链（TER/ONTO）先减，电力（BE/IREN）保留——订单滞后于 capex 一年"},
@@ -1062,7 +1060,7 @@ const DATA = {
   }
 };
 
-/* ========================= Wind 实时数据注入 ========================= */
+/* ========================= 行情数据注入（Yahoo Finance） ========================= */
 function fmtNum(v,d){ if(v===null||v===undefined) return "—";
   return Number(v).toLocaleString("en-US",{minimumFractionDigits:d||0,maximumFractionDigits:d||0}); }
 function fmtCap(v){ if(!v) return "—";
@@ -1158,7 +1156,7 @@ function hydrate(L){
       row("COPPER", {name:"LME 铜", note:"13,992 美元/吨，20 日仅 -5%，远强于半导体。AI 用电与电网需求是真的——被杀的只是估值"})
     ]},
     {group:"加密资产", rows:[
-      {n:"BTC", close:"—", d1:null, u1:"%", d20:null, u20:"%", note:"Wind EDB 无对应日频指标，待接入交易所行情源；不填估值"}
+      {n:"BTC", close:"—", d1:null, u1:"%", d20:null, u20:"%", note:"由 Yahoo 辅助层补入；不填估值"}
     ]},
     {group:"亚太股市", rows:[
       row2("N225.GI", "日经 225", "当日 +1.31% 但 20 日 -9.6%，与费半同步——日本的 AI 设备权重在这轮里受伤最重"),
@@ -1203,8 +1201,8 @@ function hydrate(L){
 }
 
 /* ==========================================================================
-   YAHOO / NASDAQ 辅助层（补 Wind 缺口 + 当日财报日历 + 双源校验）
-   - Wind 覆盖不到的：BTC/ETH、11 个板块 ETF、标普量能、等权 vs 市值权重
+   YAHOO / NASDAQ 辅助层（板块/量能/BTC + 当日财报日历 + 双端点校验）
+   - 补充项：BTC/ETH、11 个板块 ETF、标普量能、等权 vs 市值权重
    - 只有这一层能给：当日到底哪几家披露、盘前盘后价格、一致预期与实际 EPS
    ========================================================================== */
 const YF = (typeof window !== "undefined" && window.YF_DATA) ? window.YF_DATA : null;
@@ -1320,7 +1318,7 @@ function hydrateExtra(Y){
     total:E.postTotal||0, hit:E.postHit||0, cached:!!E.postCached,
     rows:(E.post||[]).map(r=>earnRow(r,"post")) };
 
-  /* 5b. 业绩内容（Wind 财经新闻 → 业绩要点 / 指引 / 出处） */
+  /* 5b. 业绩内容（东方财富 7×24 → 业绩要点 / 指引 / 出处） */
   const ND = (typeof window !== "undefined" && window.NEWS_DATA) ? window.NEWS_DATA : null;
   if(ND && ND.items){
     const merge=function(r){ const n=ND.items[r.t]; if(!n) return;
@@ -1391,7 +1389,7 @@ function hydrateExtra(Y){
     DATA.moversHall = h52.slice(-5).reverse();
   }
 
-  /* 7. 双源校验 */
+  /* 7. 双端点校验（v8 chart 收盘 vs v7 quote 现价） */
   if(Y.crosscheck){
     DATA.meta.check = Y.crosscheck.okCount+" / "+Y.crosscheck.total;
     DATA.meta.checkAt = FEED.lastSync;
@@ -1423,7 +1421,7 @@ const chg = (v,unit) => unit==="bp"
 
 function feedBar(){
   if(FEED.connected) return "";
-  return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。接入 Wind MCP 后由适配层覆盖。</span></div>';
+  return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。运行 <b>node sync-core.mjs</b> 后刷新即接入 Yahoo Finance 实时数据。</span></div>';
 }
 function secHead(num,title,sub,right){
   return '<div class="sec-head"><span class="sec-num">'+num+'</span><span class="sec-title">'+title+'</span>'+
@@ -1532,10 +1530,10 @@ function viewBrief(){
   h+='</div></div>';
 
   h+='<div class="srcbar">'+
-     '<span class="si"><i class="dot on"></i>Wind MCP · 行情/指数/跨资产 <b>已接入</b></span>'+
+     '<span class="si"><i class="dot on"></i>Yahoo Finance · 行情/指数/跨资产 <b>已接入</b></span>'+
      '<span class="si"><i class="dot on"></i>Yahoo/Nasdaq · 当日财报/板块/量能 <b>已接入</b></span>'+
-     '<span class="si"><i class="dot on"></i>双源校验 <b>'+(m.check||"—")+' 只标的价格一致（容差 0.05%）</b></span>'+
-     '<span class="si"><i class="dot '+(b.newsCover&&b.newsCover.ok?'on':'off')+'"></i>业绩内容 <b>'+(b.newsCover?b.newsCover.ok+'/'+b.newsCover.total+' 家取到要点':'待接入')+'</b>（东财 7×24 / Wind / Yahoo）</span>'+
+     '<span class="si"><i class="dot on"></i>双端点校验 <b>'+(m.check||"—")+' 只标的价格一致（容差 0.05%）</b></span>'+
+     '<span class="si"><i class="dot '+(b.newsCover&&b.newsCover.ok?'on':'off')+'"></i>业绩内容 <b>'+(b.newsCover?b.newsCover.ok+'/'+b.newsCover.total+' 家取到要点':'待接入')+'</b>（东财 7×24 / Yahoo 标题）</span>'+
      '<span class="si"><i class="dot off"></i>研报/KOL/川普语录 <b>待接源</b>（结构示例）</span>'+
      '</div>';
 
@@ -1570,7 +1568,7 @@ function viewBrief(){
       "<span class='upd hot'>更新 <b>07:00</b></span>");
   h+=earnTable(b.post,"post");
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
-     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Wind 财经新闻（当前账户积分不足，暂停）→ Yahoo 新闻标题</b> 三级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写。</div></div>';
+     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写。</div></div>';
 
   h+='<div class="sec">'+secHead("06","盘前 / 盘中 / 盘后股价异动","财报驱动 vs 非财报驱动 · 单时段 |涨跌| &gt; 4%","<span class='upd hot'>更新 <b>07:00</b></span>");
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:124px">标的</th>'+
@@ -2168,9 +2166,9 @@ function route(){
   }
 }
 
-/* ---- 数据注入：先 Wind（主），再 Yahoo/Nasdaq（补缺 + 校验） ---- */
+/* ---- 数据注入：先核心行情（Yahoo），再 Yahoo/Nasdaq 补缺 + 校验 ---- */
 if (typeof window !== "undefined" && window.WIND_LIVE) {
-  try { hydrate(window.WIND_LIVE); } catch(e) { console.warn("Wind 数据注入失败", e); FEED.connected = false; }
+  try { hydrate(window.WIND_LIVE); } catch(e) { console.warn("行情数据注入失败", e); FEED.connected = false; }
 }
 if (YF) {
   try { hydrateExtra(YF); } catch(e) { console.warn("辅助数据注入失败", e); }
@@ -2179,8 +2177,8 @@ if (YF) {
 $("#side-date").textContent=DATA.meta.date;
 $("#side-week").textContent=DATA.meta.week;
 $("#hdr-date").textContent=DATA.meta.date;
-$("#feed-state").textContent=FEED.connected?"Wind 已连接":"Wind 未连接";
-$("#feed-pill").textContent=FEED.connected?("Wind · "+(FEED.lastSync||"已同步")):"Wind MCP 未连接 · 示例数据";
+$("#feed-state").textContent=FEED.connected?"Yahoo 已连接":"Yahoo 未连接";
+$("#feed-pill").textContent=FEED.connected?("Yahoo · "+(FEED.lastSync||"已同步")):"行情未连接 · 示例数据";
 $("#feed-pill").className=FEED.connected?"pill":"pill warn";
 renderNav(); route();
 window.addEventListener("hashchange",route);

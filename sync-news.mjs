@@ -3,21 +3,15 @@
  * 业绩内容抓取：业绩要点 / 指引 / 出处
  *
  * 数据源（按优先级，任一命中即用）：
- *   1) 东方财富 7×24 快讯（免费、无需 key、含中文公司名与数字，本次主用）
- *   2) Wind financial_docs.get_financial_news（质量最好，需账户积分；加 --wind 启用）
- *   3) Yahoo Finance 新闻标题（仅标题兜底）
+ *   1) 东方财富 7×24 快讯（免费、无需 key、含中文公司名与数字，主用）
+ *   2) Yahoo Finance 新闻标题（仅标题兜底）
  *
  * 输出：live-news.js → window.NEWS_DATA
- * 用法：node sync-news.mjs [--only=CRWV,PBR] [--wind]
+ * 用法：node sync-news.mjs [--only=CRWV,PBR]
  */
 import { readFileSync, writeFileSync } from "node:fs";
-import { execFileSync } from "node:child_process";
-import { homedir } from "node:os";
-import { join } from "node:path";
 
-const SKILL = join(homedir(), ".agents", "skills", "wind-mcp-skill");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
-const USE_WIND = process.argv.includes("--wind");
 
 /* ================= 名单 ================= */
 const Y = JSON.parse(readFileSync("live-extra.js", "utf8").replace(/^window\.YF_DATA\s*=\s*/, "").replace(/;\s*$/, ""));
@@ -92,18 +86,6 @@ async function buildCorpus(oldest) {
   return all;
 }
 
-/* ================= 数据源 2：Wind ================= */
-function windNews(query, topK = 3) {
-  const params = JSON.stringify({ query, top_k: topK });
-  const out = execFileSync("node", ["scripts/cli.mjs", "call", "financial_docs", "get_financial_news", params], {
-    cwd: SKILL, encoding: "utf8", timeout: 180000, maxBuffer: 20 * 1024 * 1024,
-  });
-  const wrap = JSON.parse(out);
-  const inner = JSON.parse(wrap.content[0].text);
-  if (inner.error) throw new Error(inner.error.message || JSON.stringify(inner.error));
-  return inner.data?.items || [];
-}
-
 /* ================= 文本处理 ================= */
 const fixNum = (s) => s.replace(/(\d)\.\s+(\d)/g, "$1.$2").replace(/\s{2,}/g, " ");
 const norm = (s) => fixNum(s)
@@ -162,24 +144,6 @@ for (const t of list) {
     url = "https://kuaixun.eastmoney.com/";
   }
 
-  /* Wind 兜底（需积分），内容不足时再试 */
-  if (USE_WIND && (!kept.length || res.length < 2)) {
-    try {
-      const items = windNews(`${t.name} ${t.date.slice(0, 4)}年 季度 业绩 营收 每股收益 指引`, 3);
-      const near = items.filter((x) => x.date && Math.abs((new Date(x.date) - new Date(t.date)) / 86400000) <= 1.5);
-      if (near.length) {
-        const all = sentences(near.map((x) => x.content || "").join("。"));
-        const used = new Set();
-        const r2 = pick(all, RE_RES, used, 3), g2 = pick(all, RE_GUIDE, used, 3);
-        if (r2.length || g2.length) {
-          const main = near.slice().sort((a, b) => (b.content || "").length - (a.content || "").length)[0];
-          res = r2; guide = g2; src = "Wind 财经新闻"; url = main.url || "";
-          headline = norm(main.title || ""); date = main.date || "";
-        }
-      }
-    } catch (e) { console.warn(`  ! Wind ${t.symbol}: ${e.message.slice(0, 50)}`); }
-  }
-
   const ok = !!(res.length || guide.length);
   results[t.symbol] = {
     symbol: t.symbol, name: t.name, session: t.session, ok,
@@ -220,7 +184,7 @@ for (const t of list) {
 const okCount = Object.values(results).filter((x) => x.ok).length;
 const fullCount = Object.values(results).filter((x) => (x.res || []).length).length;
 writeFileSync("live-news.js", "window.NEWS_DATA = " + JSON.stringify({
-  meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Wind / Yahoo", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
+  meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Yahoo 标题", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
   items: results,
 }, null, 1) + ";\n", "utf8");
 console.log(`live-news.js｜${fullCount}/${list.length} 家有业绩数字，${okCount}/${list.length} 家有内容`);

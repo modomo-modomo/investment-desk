@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 /* 每交易日两次（20:30 / 次日 07:00）的编排入口：拉数据 → 生成 → 推送。
  *
- *   node daily.mjs --webhook "https://qyapi.weixin.qq.com/..." --site "https://..."
- *   node daily.mjs --dry        只预览不推送
- *   node daily.mjs --skip-wind  跳过 Wind（积分不足时用）
+ *   node daily.mjs --site "https://..."         抓数 + 发布提示
+ *   node daily.mjs --webhook "https://..."      抓数后推送企业微信
+ *   node daily.mjs --dry                        只预览不推送
  *
+ * 数据源全部为 Yahoo Finance / Nasdaq / 东方财富，不依赖本机 Wind。
  * 任一步失败都不中断后续步骤，最后汇总；任一步全挂则退出码非 0，便于定时任务报警。
  */
 
@@ -17,7 +18,6 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 const argv = process.argv.slice(2);
 const has = (k) => argv.includes("--" + k);
 
-const SKIP_WIND = has("--skip-wind");
 const extra = [];
 const w = argv.indexOf("--webhook");
 const s = argv.indexOf("--site");
@@ -26,8 +26,8 @@ if (s >= 0 && argv[s + 1]) extra.push("--site", argv[s + 1]);
 if (has("--dry")) extra.push("--dry");
 
 const steps = [];
-if (!SKIP_WIND) steps.push({ file: "sync.mjs", name: "Wind 主源", args: [] });
-steps.push({ file: "sync-extra.mjs", name: "Yahoo / Nasdaq / 财报", args: [] });
+steps.push({ file: "sync-core.mjs", name: "核心行情（Yahoo）", args: [] });
+steps.push({ file: "sync-extra.mjs", name: "辅助数据 / 财报日历", args: [] });
 steps.push({ file: "sync-news.mjs", name: "业绩内容", args: [] });
 steps.push({ file: "push-wecom.mjs", name: "企业微信推送", args: extra });
 
