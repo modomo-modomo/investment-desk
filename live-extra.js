@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-11T15:55:41.305Z",
+  "syncedAt": "2026-11-11T23:45:06.853Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-11",
   "postDate": "2026-11-10"
@@ -8,126 +8,126 @@ window.YF_DATA = {
  "quotes": {
   "TSLA": {
    "symbol": "TSLA",
-   "price": 394.77,
+   "price": 390.84,
    "prevClose": 379.7799987792969,
-   "chg": 3.947019401378804,
+   "chg": 2.912211699969247,
    "w52h": 498.83,
    "w52l": 297.38,
    "date": "2026-11-11"
   },
   "META": {
    "symbol": "META",
-   "price": 638.5,
+   "price": 628.77,
    "prevClose": 641.3900146484375,
-   "chg": -0.45058616168535126,
+   "chg": -1.9676008090186548,
    "w52h": 779.82,
    "w52l": 520.26,
    "date": "2026-11-11"
   },
   "IREN": {
    "symbol": "IREN",
-   "price": 21.4,
+   "price": 20.84,
    "prevClose": 19.729999542236328,
-   "chg": 8.46426819584536,
+   "chg": 5.625953553497887,
    "w52h": 70.707,
    "w52l": 17.155,
    "date": "2026-11-11"
   },
   "NBIS": {
    "symbol": "NBIS",
-   "price": 156.65,
+   "price": 154.69,
    "prevClose": 134,
-   "chg": 16.902980519764466,
+   "chg": 15.440300329407641,
    "w52h": 299.86,
    "w52l": 73.52,
    "date": "2026-11-11"
   },
   "CRWV": {
    "symbol": "CRWV",
-   "price": 60.2,
+   "price": 60.77,
    "prevClose": 48.72999954223633,
-   "chg": 23.537660878967937,
+   "chg": 24.707574448244696,
    "w52h": 138.25,
    "w52l": 40.58,
    "date": "2026-11-11"
   },
   "BE": {
    "symbol": "BE",
-   "price": 216.76,
+   "price": 209.47,
    "prevClose": 185.4199981689453,
-   "chg": 16.902166242788553,
+   "chg": 12.970555112315708,
    "w52h": 351.28,
    "w52l": 75.7,
    "date": "2026-11-11"
   },
   "AMD": {
    "symbol": "AMD",
-   "price": 553.3,
+   "price": 552.9,
    "prevClose": 515.2100219726562,
-   "chg": 7.393094892539587,
+   "chg": 7.315463759244678,
    "w52h": 658.52,
    "w52l": 188.22,
    "date": "2026-11-11"
   },
   "TSM": {
    "symbol": "TSM",
-   "price": 411.69,
+   "price": 413.35,
    "prevClose": 396.4800109863281,
-   "chg": 3.836256818405559,
+   "chg": 4.254942153381158,
    "w52h": 487.47,
    "w52l": 266.82,
    "date": "2026-11-11"
   },
   "TER": {
    "symbol": "TER",
-   "price": 265.63,
+   "price": 265.78,
    "prevClose": 245.39999389648438,
-   "chg": 8.24368846352197,
+   "chg": 8.30481067224853,
    "w52h": 487.91,
    "w52l": 151.52,
    "date": "2026-11-11"
   },
   "ONTO": {
    "symbol": "ONTO",
-   "price": 217.04,
+   "price": 215.06,
    "prevClose": 197.50999450683594,
-   "chg": 9.888106588257205,
+   "chg": 8.885627836494315,
    "w52h": 386.46,
    "w52l": 121.575,
    "date": "2026-11-11"
   },
   "NET": {
    "symbol": "NET",
-   "price": 319.845,
+   "price": 315,
    "prevClose": 305.79998779296875,
-   "chg": 4.592875731977819,
+   "chg": 3.0085064010073825,
    "w52h": 370.35,
    "w52l": 158.83,
    "date": "2026-11-11"
   },
   "RBRK": {
    "symbol": "RBRK",
-   "price": 111.415,
+   "price": 109.26,
    "prevClose": 109.33999633789062,
-   "chg": 1.8977543873555547,
+   "chg": -0.07316096976348607,
    "w52h": 139.92,
    "w52l": 42.25,
    "date": "2026-11-11"
   },
   "OKTA": {
    "symbol": "OKTA",
-   "price": 187.46,
+   "price": 182.25,
    "prevClose": 178.36000061035156,
-   "chg": 5.102044220887647,
+   "chg": 2.180981933357695,
    "w52h": 235,
    "w52l": 62.66,
    "date": "2026-11-11"
   },
   "CHKP": {
    "symbol": "CHKP",
-   "price": 146.285,
+   "price": 146.58,
    "prevClose": 144.57000732421875,
-   "chg": 1.1862739510308584,
+   "chg": 1.39032607387799,
    "w52h": 205.81,
    "w52l": 112.23,
    "date": "2026-11-11"
@@ -136,81 +136,81 @@ window.YF_DATA = {
  "sectors": {
   "XLK": {
    "cn": "信息技术",
-   "chg": 3.658748766676845,
-   "d20": -8.055451834211802
+   "chg": 3.226568486224446,
+   "d20": -8.438792566037556
   },
   "XLC": {
    "cn": "通信服务",
-   "chg": 0.4222292062364241,
-   "d20": -2.3506617615116854
+   "chg": 0.779506608424807,
+   "d20": -2.0032496181344173
   },
   "XLY": {
    "cn": "可选消费",
-   "chg": -0.3882703088426753,
-   "d20": 8.143499400049038
+   "chg": -0.049570579492363986,
+   "d20": 8.511208846430062
   },
   "XLF": {
    "cn": "金融",
-   "chg": -0.22302464586272386,
-   "d20": 6.676447833980337
+   "chg": 0.5832906969423624,
+   "d20": 7.538519031260016
   },
   "XLV": {
    "cn": "医疗",
-   "chg": -0.9900520582561301,
-   "d20": 7.501717227703741
+   "chg": 0.03705636574560245,
+   "d20": 8.616917484391017
   },
   "XLI": {
    "cn": "工业",
-   "chg": 0.9452979678128415,
-   "d20": 1.9665970989847237
+   "chg": 1.3275680376245491,
+   "d20": 2.3527347297233048
   },
   "XLB": {
    "cn": "原材料",
-   "chg": 0.01911318571621301,
-   "d20": 6.422592593389043
+   "chg": 0.32166885250870525,
+   "d20": 6.7445186477032015
   },
   "XLE": {
    "cn": "能源",
-   "chg": 1.4145653127567437,
-   "d20": -6.712993176412752
+   "chg": 1.8646517673742258,
+   "d20": -6.29897751669346
   },
   "XLP": {
    "cn": "必需消费",
-   "chg": -0.6810887899610818,
-   "d20": 5.054620296211287
+   "chg": 0.46138435084857043,
+   "d20": 6.263071743615467
   },
   "XLU": {
    "cn": "公用事业",
-   "chg": -0.056936952465980184,
-   "d20": 4.758148931921369
+   "chg": 0.20580872062658795,
+   "d20": 5.0335532422731255
   },
   "XLRE": {
    "cn": "房地产",
-   "chg": -0.2691851539997847,
-   "d20": 7.158344868294564
+   "chg": 0.022427817681780482,
+   "d20": 7.471675942905498
   }
  },
  "btc": {
-  "price": 73896.7734375,
-  "chg": 0.23963099455022174,
-  "d20": -9.119351586224411,
+  "price": 73813.078125,
+  "chg": 0.12609982328644076,
+  "d20": -9.222282795739634,
   "date": "2026-11-11"
  },
  "eth": {
-  "price": 2072.199951171875,
-  "chg": 1.074004878332846,
-  "d20": -13.15860689631323,
+  "price": 2050.6298828125,
+  "chg": 0.02189926789282204,
+  "d20": -14.062561548281327,
   "date": "2026-11-11"
  },
  "breadth": {
-  "rsp20": 4.476877995155237,
-  "spy20": -1.494933114317365,
-  "rel20": 5.971811109472602
+  "rsp20": 4.979017276123732,
+  "spy20": -1.272086582368992,
+  "rel20": 6.251103858492724
  },
  "spxVol": {
-  "today": 731075436,
+  "today": 2739027000,
   "avg20": 5715050000,
-  "ratio": 0.12792109185396452
+  "ratio": 0.47926562322289396
  },
  "earnings": {
   "preDate": "2026-11-11",
@@ -241,12 +241,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 81.16,
+    "price": 81.13,
     "prevClose": 82.51,
     "preChg": null,
-    "postChg": null,
-    "dayChg": -1.6361635,
-    "marketState": "REGULAR"
+    "postChg": 0,
+    "dayChg": -1.67253,
+    "marketState": "POST"
    },
    {
     "symbol": "AYA",
@@ -273,12 +273,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 25.2561,
+    "price": 24.49,
     "prevClose": 25.17,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 0.34215534,
-    "marketState": "REGULAR"
+    "postChg": 2.0824826459779677,
+    "dayChg": -2.70163,
+    "marketState": "POST"
    },
    {
     "symbol": "RUM",
@@ -298,19 +298,19 @@ window.YF_DATA = {
     "src": null,
     "cross": null,
     "fund": {
-     "period": "2026-06-30",
-     "rev": 40366740,
+     "period": "2026-09-30",
+     "rev": 96577750,
      "revPrev": null,
-     "net": -79144710,
+     "net": -89854450,
      "netPrev": null,
      "gross": 0
     },
-    "price": 5.885,
+    "price": 5.96,
     "prevClose": 5.11,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 15.166342,
-    "marketState": "REGULAR"
+    "postChg": -0.7483221476510038,
+    "dayChg": 16.634048,
+    "marketState": "POST"
    },
    {
     "symbol": "BGSI",
@@ -337,12 +337,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 76.9785,
+    "price": 77.18,
     "prevClose": 88.5,
     "preChg": null,
-    "postChg": null,
-    "dayChg": -13.018643,
-    "marketState": "REGULAR"
+    "postChg": -0.28504793988081145,
+    "dayChg": -12.791,
+    "marketState": "POST"
    },
    {
     "symbol": "NYAX",
@@ -351,30 +351,30 @@ window.YF_DATA = {
     "tier": "中小市值",
     "threshold": 5,
     "quarter": "Sep/2026",
-    "est": 0.15,
+    "est": 0.28,
     "estRaw": "$0.15",
     "nEst": "3",
     "last": 0.09,
     "lastRaw": "$0.09",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
+    "actual": 0.3673,
+    "reported": true,
+    "surprise": 31.178571428571423,
+    "src": "Yahoo earningsHistory",
     "cross": null,
     "fund": {
-     "period": "2026-06-30",
-     "rev": 122590000,
+     "period": "2026-09-30",
+     "rev": 128037000,
      "revPrev": null,
-     "net": -10117000,
+     "net": -1076000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 52.115,
+    "price": 53,
     "prevClose": 48.84,
     "preChg": null,
     "postChg": null,
-    "dayChg": 6.705572,
-    "marketState": "REGULAR"
+    "dayChg": 8.517608,
+    "marketState": "POST"
    },
    {
     "symbol": "RSKD",
@@ -383,15 +383,15 @@ window.YF_DATA = {
     "tier": "中小市值",
     "threshold": 5,
     "quarter": "Sep/2026",
-    "est": -0.04,
+    "est": 0.0325,
     "estRaw": "($0.04)",
     "nEst": "2",
     "last": -0.04,
     "lastRaw": "($0.04)",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
+    "actual": 0.07,
+    "reported": true,
+    "surprise": 115.3846153846154,
+    "src": "Yahoo earningsHistory",
     "cross": null,
     "fund": {
      "period": "2026-09-30",
@@ -401,12 +401,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 10.63,
+    "price": 10.37,
     "prevClose": 8.48,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 25.353783,
-    "marketState": "REGULAR"
+    "postChg": -2.121504339440683,
+    "dayChg": 22.2877,
+    "marketState": "POST"
    },
    {
     "symbol": "ODD",
@@ -415,15 +415,15 @@ window.YF_DATA = {
     "tier": "中小市值",
     "threshold": 5,
     "quarter": "Sep/2026",
-    "est": 0.14,
+    "est": 0.30006,
     "estRaw": "$0.14",
     "nEst": "2",
     "last": 0.28,
     "lastRaw": "$0.28",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
+    "actual": 0.37,
+    "reported": true,
+    "surprise": 23.30867159901353,
+    "src": "Yahoo earningsHistory",
     "cross": null,
     "fund": {
      "period": "2026-09-30",
@@ -433,12 +433,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 20.48,
+    "price": 19.9,
     "prevClose": 19.505,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 4.9987206,
-    "marketState": "REGULAR"
+    "postChg": 0,
+    "dayChg": 2.0251243,
+    "marketState": "POST"
    },
    {
     "symbol": "AEBI",
@@ -447,30 +447,30 @@ window.YF_DATA = {
     "tier": "中小市值",
     "threshold": 5,
     "quarter": "Sep/2026",
-    "est": 0.22,
+    "est": 0.225,
     "estRaw": "$0.22",
     "nEst": "3",
     "last": 0.02,
     "lastRaw": "$0.02",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
+    "actual": 0.1653,
+    "reported": true,
+    "surprise": -26.533333333333335,
+    "src": "Yahoo earningsHistory",
     "cross": null,
     "fund": {
-     "period": "2026-03-31",
-     "rev": 455545000,
+     "period": "2026-09-30",
+     "rev": 493107000,
      "revPrev": null,
-     "net": 695000,
+     "net": 10814000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 10.97,
+    "price": 10.695,
     "prevClose": 11.17,
     "preChg": null,
     "postChg": null,
-    "dayChg": -1.7905086,
-    "marketState": "REGULAR"
+    "dayChg": -4.2524652,
+    "marketState": "POST"
    }
   ],
   "preTotal": 23,
@@ -507,12 +507,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 18.07,
+    "price": 17.82,
     "prevClose": 18.28,
     "preChg": null,
-    "postChg": null,
-    "dayChg": -1.1488019,
-    "marketState": "REGULAR"
+    "postChg": 0.33670033670032407,
+    "dayChg": -2.51642,
+    "marketState": "POST"
    },
    {
     "symbol": "ALC",
@@ -544,12 +544,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 71.1,
+    "price": 72.46,
     "prevClose": 74.06,
     "preChg": null,
-    "postChg": null,
-    "dayChg": -3.997568,
-    "marketState": "REGULAR"
+    "postChg": -0.08280430582389142,
+    "dayChg": -2.16041,
+    "marketState": "POST"
    },
    {
     "symbol": "EC",
@@ -560,7 +560,7 @@ window.YF_DATA = {
     "quarter": "Sep/2026",
     "est": 0.63,
     "estRaw": "$0.63",
-    "nEst": "N/A",
+    "nEst": "1",
     "last": null,
     "lastRaw": null,
     "actual": 0.31,
@@ -576,12 +576,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 15.34,
+    "price": 15.3,
     "prevClose": 15.26,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 0.52424586,
-    "marketState": "REGULAR"
+    "postChg": 0.588235294117645,
+    "dayChg": 0.262123,
+    "marketState": "POST"
    },
    {
     "symbol": "CRWV",
@@ -613,12 +613,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 60.1999,
+    "price": 60.77,
     "prevClose": 48.73,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 23.53766,
-    "marketState": "REGULAR"
+    "postChg": -5.380944545005761,
+    "dayChg": 24.707575,
+    "marketState": "POST"
    },
    {
     "symbol": "VIV",
@@ -650,12 +650,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 12.23,
+    "price": 12.28,
     "prevClose": 11.66,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 4.890602,
-    "marketState": "REGULAR"
+    "postChg": 0,
+    "dayChg": 5.31732,
+    "marketState": "POST"
    },
    {
     "symbol": "MRCY",
@@ -687,12 +687,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 87.995,
+    "price": 88.33,
     "prevClose": 83.58,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 5.2823653,
-    "marketState": "REGULAR"
+    "postChg": -0.4132231404958664,
+    "dayChg": 5.683178,
+    "marketState": "POST"
    },
    {
     "symbol": "RGTI",
@@ -724,12 +724,12 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 11.545,
+    "price": 11.11,
     "prevClose": 12.15,
     "preChg": null,
-    "postChg": null,
-    "dayChg": -4.97942,
-    "marketState": "REGULAR"
+    "postChg": -0.36003600360035026,
+    "dayChg": -8.559671,
+    "marketState": "POST"
    },
    {
     "symbol": "FLY",
@@ -761,16 +761,16 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 25.945,
+    "price": 26.61,
     "prevClose": 23.7,
     "preChg": null,
-    "postChg": null,
-    "dayChg": 9.472569,
-    "marketState": "REGULAR"
+    "postChg": -1.916572717023668,
+    "dayChg": 12.278481,
+    "marketState": "POST"
    }
   ],
   "postTotal": 84,
-  "postHit": 0,
+  "postHit": 1,
   "postCached": true
  },
  "nextEarn": {
