@@ -29,7 +29,13 @@ const steps = [];
 steps.push({ file: "sync-core.mjs", name: "核心行情（Yahoo）", args: [] });
 steps.push({ file: "sync-extra.mjs", name: "辅助数据 / 财报日历", args: [] });
 steps.push({ file: "sync-news.mjs", name: "业绩内容", args: [] });
-steps.push({ file: "push-wecom.mjs", name: "企业微信推送", args: extra });
+const hookIdx = argv.indexOf("--webhook");
+const hook = hookIdx >= 0 ? argv[hookIdx + 1] : null;
+if (hook && !hook.startsWith("--")) {
+  steps.push({ file: "push-wecom.mjs", name: "企业微信推送", args: extra });
+} else {
+  console.log("（未提供 --webhook，跳过企业微信推送）");
+}
 
 const stamp = () => new Date(Date.now() + 8 * 3600e3).toISOString().replace("T", " ").slice(0, 19);
 console.log(`\n===== 投资工作台 · 定时更新 ${stamp()} (UTC+8) =====`);
