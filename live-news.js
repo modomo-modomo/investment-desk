@@ -1,6 +1,6 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-11T14:53:30.273Z",
+  "syncedAt": "2026-11-11T15:56:31.404Z",
   "source": "东方财富 7×24 / Yahoo 标题",
   "corpus": 2500,
   "total": 16,
@@ -64,18 +64,18 @@ window.NEWS_DATA = {
    "date": "2026-11-11",
    "url": "https://kuaixun.eastmoney.com/",
    "res": [
-    "公司三季度营收大增近170%，全年营收指引上调，积压订单达到1325亿美元",
-    "【新云企业CoreWeave三季度营收大增近1.7倍并上调全年指引 明年算力基本售罄】在AI（人工智能）基础设施投资前景受到市场质疑之际，美国AI云厂商CoreWeave交出了一份超出预期的财报，并上调全年业绩指引",
-    "【CoreWeave称将于2028年实现盈利 过去一个月内股价暴跌超四成】据路透社报道，AI云公司CoreWeave上调了2026年全年收入指引，并预计将在2028年上半年实现盈利"
+    "据路透社报道，AI云公司CoreWeave上调了2026年全年收入指引，并预计将在2028年上半年实现盈利",
+    "CoreWeave高管称，预计调整后净亏损将在2027年显著减少，并在2028年上半年及全年实现调整后净盈利",
+    "【周三你需要知道的隔夜全球要闻】1、CoreWeave第三财季营收36.6亿美元，市场预估35.6亿美元"
    ],
    "guide": [
-    "【花旗上调Coreweave目标价】花旗将Coreweave目标价从128美元上调至149美元",
-    "CoreWeave高管称，预计调整后净亏损将在2027年显著减少，并在2028年上半年及全年实现调整后净盈利",
-    "CoreWeave高管称，今年公司70%的交易已收到预付款，部分客户甚至提前支付了高达合同总额100%的款项"
+    "CoreWeave高管称，今年公司70%的交易已收到预付款，部分客户甚至提前支付了高达合同总额100%的款项",
+    "预计全财年营收为130亿至133亿美元，此前预期为120亿至130亿美元",
+    "CoreWeave高管在电话会上表示，截至第三财季末，公司全业务的加权平均债务成本为7.9%，同比下降250个基点"
    ],
    "src": "东方财富 7×24",
-   "matched": 18,
-   "kept": 16,
+   "matched": 21,
+   "kept": 12,
    "note": ""
   },
   "VIV": {
@@ -113,9 +113,9 @@ window.NEWS_DATA = {
    "name": "Rigetti Computing, Inc. ",
    "session": "post",
    "ok": true,
-   "headline": "Rigetti shares rebound 4% as Nasdaq rally offsets quarterly earnings miss",
+   "headline": "D-Wave stock rises, Rigetti shares fall as quantum company earnings divide investors",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rigetti-shares-rebound-4-nasdaq-140900218.html",
+   "url": "https://finance.yahoo.com/markets/stocks/article/d-wave-stock-rises-rigetti-shares-fall-as-quantum-company-earnings-divide-investors-154324359.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -173,9 +173,9 @@ window.NEWS_DATA = {
    "name": "RUM Group Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "RUM Group Q3 Loss Widens, Revenue Rises; Shares Up Pre-Bell",
+   "headline": "Rumble Rises 6% After Third-Quarter Revenue Beat; Trump Media Jumps 9%, Meta Stays Flat",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rum-group-q3-loss-widens-125539306.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rumble-rises-6-third-quarter-145549183.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -203,9 +203,9 @@ window.NEWS_DATA = {
    "name": "Nayax Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "Nayax Reports 23% Revenue Growth to $128 Million in Q3 and Raises 2026 Outlook Following IPS Acquisition",
+   "headline": "Update: Nayax Shares Rise After Q3 Results",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/nayax-reports-23-revenue-growth-134346529.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/nayax-shares-rise-q3-results-145147183.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -233,9 +233,9 @@ window.NEWS_DATA = {
    "name": "ODDITY Tech Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "Oddity Tech Q3 Adjusted Earnings, Revenue Fall; 2026 Revenue Outlook Revised",
+   "headline": "What ODDITY Tech (ODD) Said on Its Q3 Earnings Call",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/oddity-tech-q3-adjusted-earnings-122846196.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/oddity-tech-odd-said-q3-151515082.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",

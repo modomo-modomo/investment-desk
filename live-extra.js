@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-11T14:51:51.708Z",
+  "syncedAt": "2026-11-11T15:55:41.305Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-11",
   "postDate": "2026-11-10"
@@ -8,126 +8,126 @@ window.YF_DATA = {
  "quotes": {
   "TSLA": {
    "symbol": "TSLA",
-   "price": 387.75,
+   "price": 394.77,
    "prevClose": 379.7799987792969,
-   "chg": 2.0985837185530043,
+   "chg": 3.947019401378804,
    "w52h": 498.83,
    "w52l": 297.38,
    "date": "2026-11-11"
   },
   "META": {
    "symbol": "META",
-   "price": 639.59,
+   "price": 638.5,
    "prevClose": 641.3900146484375,
-   "chg": -0.2806385743244544,
+   "chg": -0.45058616168535126,
    "w52h": 779.82,
    "w52l": 520.26,
    "date": "2026-11-11"
   },
   "IREN": {
    "symbol": "IREN",
-   "price": 20.63,
+   "price": 21.4,
    "prevClose": 19.729999542236328,
-   "chg": 4.561579520585535,
+   "chg": 8.46426819584536,
    "w52h": 70.707,
    "w52l": 17.155,
    "date": "2026-11-11"
   },
   "NBIS": {
    "symbol": "NBIS",
-   "price": 152.535,
+   "price": 156.65,
    "prevClose": 134,
-   "chg": 13.83209228515625,
+   "chg": 16.902980519764466,
    "w52h": 299.86,
    "w52l": 73.52,
    "date": "2026-11-11"
   },
   "CRWV": {
    "symbol": "CRWV",
-   "price": 56.225,
+   "price": 60.2,
    "prevClose": 48.72999954223633,
-   "chg": 15.380666944986388,
+   "chg": 23.537660878967937,
    "w52h": 138.25,
    "w52l": 40.58,
    "date": "2026-11-11"
   },
   "BE": {
    "symbol": "BE",
-   "price": 203.965,
+   "price": 216.76,
    "prevClose": 185.4199981689453,
-   "chg": 10.001617059691714,
+   "chg": 16.902166242788553,
    "w52h": 351.28,
    "w52l": 75.7,
    "date": "2026-11-11"
   },
   "AMD": {
    "symbol": "AMD",
-   "price": 529.785,
+   "price": 553.3,
    "prevClose": 515.2100219726562,
-   "chg": 2.828933939613565,
+   "chg": 7.393094892539587,
    "w52h": 658.52,
    "w52l": 188.22,
    "date": "2026-11-11"
   },
   "TSM": {
    "symbol": "TSM",
-   "price": 409.969,
+   "price": 411.69,
    "prevClose": 396.4800109863281,
-   "chg": 3.402084859770249,
+   "chg": 3.836256818405559,
    "w52h": 487.47,
    "w52l": 266.82,
    "date": "2026-11-11"
   },
   "TER": {
    "symbol": "TER",
-   "price": 258.4,
+   "price": 265.63,
    "prevClose": 245.39999389648438,
-   "chg": 5.297473644389616,
+   "chg": 8.24368846352197,
    "w52h": 487.91,
    "w52l": 151.52,
    "date": "2026-11-11"
   },
   "ONTO": {
    "symbol": "ONTO",
-   "price": 206.035,
+   "price": 217.04,
    "prevClose": 197.50999450683594,
-   "chg": 4.3162419079396885,
+   "chg": 9.888106588257205,
    "w52h": 386.46,
    "w52l": 121.575,
    "date": "2026-11-11"
   },
   "NET": {
    "symbol": "NET",
-   "price": 314.31,
+   "price": 319.845,
    "prevClose": 305.79998779296875,
-   "chg": 2.7828679219524366,
+   "chg": 4.592875731977819,
    "w52h": 370.35,
    "w52l": 158.83,
    "date": "2026-11-11"
   },
   "RBRK": {
    "symbol": "RBRK",
-   "price": 111.05,
+   "price": 111.415,
    "prevClose": 109.33999633789062,
-   "chg": 1.563935221456192,
+   "chg": 1.8977543873555547,
    "w52h": 139.92,
    "w52l": 42.25,
    "date": "2026-11-11"
   },
   "OKTA": {
    "symbol": "OKTA",
-   "price": 185.9,
+   "price": 187.46,
    "prevClose": 178.36000061035156,
-   "chg": 4.227401469124703,
+   "chg": 5.102044220887647,
    "w52h": 235,
    "w52l": 62.66,
    "date": "2026-11-11"
   },
   "CHKP": {
    "symbol": "CHKP",
-   "price": 145.37,
+   "price": 146.285,
    "prevClose": 144.57000732421875,
-   "chg": 0.5533566801132261,
+   "chg": 1.1862739510308584,
    "w52h": 205.81,
    "w52l": 112.23,
    "date": "2026-11-11"
@@ -136,81 +136,81 @@ window.YF_DATA = {
  "sectors": {
   "XLK": {
    "cn": "信息技术",
-   "chg": 2.536973496809214,
-   "d20": -9.05045825247075
+   "chg": 3.658748766676845,
+   "d20": -8.055451834211802
   },
   "XLC": {
    "cn": "通信服务",
-   "chg": 0.4639940516778296,
-   "d20": -2.310050140447084
+   "chg": 0.4222292062364241,
+   "d20": -2.3506617615116854
   },
   "XLY": {
    "cn": "可选消费",
-   "chg": -0.08261553159388813,
-   "d20": 8.475333585867428
+   "chg": -0.3882703088426753,
+   "d20": 8.143499400049038
   },
   "XLF": {
    "cn": "金融",
-   "chg": -0.10293596216951473,
-   "d20": 6.804840523335609
+   "chg": -0.22302464586272386,
+   "d20": 6.676447833980337
   },
   "XLV": {
    "cn": "医疗",
-   "chg": -0.6300309247368796,
-   "d20": 7.892616232259875
+   "chg": -0.9900520582561301,
+   "d20": 7.501717227703741
   },
   "XLI": {
    "cn": "工业",
-   "chg": 0.6282211731371223,
-   "d20": 1.6463123267069113
+   "chg": 0.9452979678128415,
+   "d20": 1.9665970989847237
   },
   "XLB": {
    "cn": "原材料",
-   "chg": 0.09461315648342516,
-   "d20": 6.502926265362863
+   "chg": 0.01911318571621301,
+   "d20": 6.422592593389043
   },
   "XLE": {
    "cn": "能源",
-   "chg": 0.9885897564983148,
-   "d20": -7.1048302315814045
+   "chg": 1.4145653127567437,
+   "d20": -6.712993176412752
   },
   "XLP": {
    "cn": "必需消费",
-   "chg": -0.2691366807347717,
-   "d20": 5.490362813801641
+   "chg": -0.6810887899610818,
+   "d20": 5.054620296211287
   },
   "XLU": {
    "cn": "公用事业",
-   "chg": -0.022863758604763085,
-   "d20": 4.793863714000857
+   "chg": -0.056936952465980184,
+   "d20": 4.758148931921369
   },
   "XLRE": {
    "cn": "房地产",
-   "chg": 0.03364600500754822,
-   "d20": 7.4837296134596665
+   "chg": -0.2691851539997847,
+   "d20": 7.158344868294564
   }
  },
  "btc": {
-  "price": 73667.7734375,
-  "chg": -0.07100334616515491,
-  "d20": -9.400983212595172,
+  "price": 73896.7734375,
+  "chg": 0.23963099455022174,
+  "d20": -9.119351586224411,
   "date": "2026-11-11"
  },
  "eth": {
-  "price": 2055.360107421875,
-  "chg": 0.2526215710051405,
-  "d20": -13.864328122718717,
+  "price": 2072.199951171875,
+  "chg": 1.074004878332846,
+  "d20": -13.15860689631323,
   "date": "2026-11-11"
  },
  "breadth": {
-  "rsp20": 4.544772377195483,
-  "spy20": -1.7502561240168468,
-  "rel20": 6.29502850121233
+  "rsp20": 4.476877995155237,
+  "spy20": -1.494933114317365,
+  "rel20": 5.971811109472602
  },
  "spxVol": {
-  "today": 324148835,
+  "today": 731075436,
   "avg20": 5715050000,
-  "ratio": 0.056718460030970856
+  "ratio": 0.12792109185396452
  },
  "earnings": {
   "preDate": "2026-11-11",
@@ -241,11 +241,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 81.845,
-    "prevClose": 82.45,
+    "price": 81.16,
+    "prevClose": 82.51,
     "preChg": null,
     "postChg": null,
-    "dayChg": -0.7337729,
+    "dayChg": -1.6361635,
     "marketState": "REGULAR"
    },
    {
@@ -273,11 +273,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 25.17,
+    "price": 25.2561,
     "prevClose": 25.17,
     "preChg": null,
     "postChg": null,
-    "dayChg": 0,
+    "dayChg": 0.34215534,
     "marketState": "REGULAR"
    },
    {
@@ -305,11 +305,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 5.464,
+    "price": 5.885,
     "prevClose": 5.11,
     "preChg": null,
     "postChg": null,
-    "dayChg": 6.9275947,
+    "dayChg": 15.166342,
     "marketState": "REGULAR"
    },
    {
@@ -333,15 +333,15 @@ window.YF_DATA = {
      "period": "2026-09-30",
      "rev": 1012719000,
      "revPrev": null,
-     "net": 0,
+     "net": 81000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 76.8064,
-    "prevClose": 87.82,
+    "price": 76.9785,
+    "prevClose": 88.5,
     "preChg": null,
     "postChg": null,
-    "dayChg": -12.5577545,
+    "dayChg": -13.018643,
     "marketState": "REGULAR"
    },
    {
@@ -369,11 +369,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 53.16,
+    "price": 52.115,
     "prevClose": 48.84,
     "preChg": null,
     "postChg": null,
-    "dayChg": 8.845208,
+    "dayChg": 6.705572,
     "marketState": "REGULAR"
    },
    {
@@ -401,11 +401,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 10.85,
+    "price": 10.63,
     "prevClose": 8.48,
     "preChg": null,
     "postChg": null,
-    "dayChg": 27.948126,
+    "dayChg": 25.353783,
     "marketState": "REGULAR"
    },
    {
@@ -433,11 +433,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 21.0395,
+    "price": 20.48,
     "prevClose": 19.505,
     "preChg": null,
     "postChg": null,
-    "dayChg": 7.8672147,
+    "dayChg": 4.9987206,
     "marketState": "REGULAR"
    },
    {
@@ -465,11 +465,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 10.87,
+    "price": 10.97,
     "prevClose": 11.17,
     "preChg": null,
     "postChg": null,
-    "dayChg": -2.6857672,
+    "dayChg": -1.7905086,
     "marketState": "REGULAR"
    }
   ],
@@ -480,7 +480,7 @@ window.YF_DATA = {
    {
     "symbol": "PBR",
     "name": "Petroleo Brasileiro S.A.- Petrobras",
-    "mcap": 118254125000,
+    "mcap": 117803016000,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -507,17 +507,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 17.83,
+    "price": 18.07,
     "prevClose": 18.28,
     "preChg": null,
     "postChg": null,
-    "dayChg": -2.461711,
+    "dayChg": -1.1488019,
     "marketState": "REGULAR"
    },
    {
     "symbol": "ALC",
     "name": "Alcon Inc.",
-    "mcap": 37547459000,
+    "mcap": 37007782000,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -544,23 +544,23 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 71.95,
-    "prevClose": 74.25,
+    "price": 71.1,
+    "prevClose": 74.06,
     "preChg": null,
     "postChg": null,
-    "dayChg": -3.0947297,
+    "dayChg": -3.997568,
     "marketState": "REGULAR"
    },
    {
     "symbol": "EC",
     "name": "Ecopetrol S.A.",
-    "mcap": 32091580400,
+    "mcap": 31372038100,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
     "est": 0.63,
     "estRaw": "$0.63",
-    "nEst": "1",
+    "nEst": "N/A",
     "last": null,
     "lastRaw": null,
     "actual": 0.31,
@@ -576,17 +576,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 15.37,
-    "prevClose": 15.27,
+    "price": 15.34,
+    "prevClose": 15.26,
     "preChg": null,
     "postChg": null,
-    "dayChg": 0.655949,
+    "dayChg": 0.52424586,
     "marketState": "REGULAR"
    },
    {
     "symbol": "CRWV",
     "name": "CoreWeave, Inc.",
-    "mcap": 27014262800,
+    "mcap": 26876379100,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -613,17 +613,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 56.77,
+    "price": 60.1999,
     "prevClose": 48.73,
     "preChg": null,
     "postChg": null,
-    "dayChg": 16.499079,
+    "dayChg": 23.53766,
     "marketState": "REGULAR"
    },
    {
     "symbol": "VIV",
     "name": "Telefonica Brasil S.A.",
-    "mcap": 18550495200,
+    "mcap": 18630385700,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -650,17 +650,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 12.34,
+    "price": 12.23,
     "prevClose": 11.66,
     "preChg": null,
     "postChg": null,
-    "dayChg": 5.831907,
+    "dayChg": 4.890602,
     "marketState": "REGULAR"
    },
    {
     "symbol": "MRCY",
     "name": "Mercury Systems Inc",
-    "mcap": 4845958700,
+    "mcap": 5086978600,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -687,17 +687,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 87.42,
+    "price": 87.995,
     "prevClose": 83.58,
     "preChg": null,
     "postChg": null,
-    "dayChg": 4.594396,
+    "dayChg": 5.2823653,
     "marketState": "REGULAR"
    },
    {
     "symbol": "RGTI",
     "name": "Rigetti Computing, Inc. ",
-    "mcap": 4332318200,
+    "mcap": 4055290370,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -724,17 +724,17 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 11.83,
+    "price": 11.545,
     "prevClose": 12.15,
     "preChg": null,
     "postChg": null,
-    "dayChg": -2.6337423,
+    "dayChg": -4.97942,
     "marketState": "REGULAR"
    },
    {
     "symbol": "FLY",
     "name": "Firefly Aerospace Inc.",
-    "mcap": 4069606910,
+    "mcap": 3967490050,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
@@ -761,11 +761,11 @@ window.YF_DATA = {
      "netPrev": null,
      "gross": 0
     },
-    "price": 25.585,
+    "price": 25.945,
     "prevClose": 23.7,
     "preChg": null,
     "postChg": null,
-    "dayChg": 7.953579,
+    "dayChg": 9.472569,
     "marketState": "REGULAR"
    }
   ],
@@ -857,8 +857,8 @@ window.YF_DATA = {
    {
     "t": "BE",
     "chart": 185.42,
-    "quote": 185.5,
-    "diffPct": 0.04312668463612534,
+    "quote": 185.42,
+    "diffPct": 0,
     "ok": true
    },
    {
