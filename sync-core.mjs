@@ -119,6 +119,33 @@ async function quotes(symbols) {
 
 const pct = (a, b) => (b ? ((a - b) / Math.abs(b)) * 100 : null);
 
+/* 美东日期（YYYYMMDD）：收盘结算类判断必须按交易所在时区，不能按 UTC */
+const etDay = (ms) =>
+  new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(ms)).replace(/-/g, "");
+
+/* quote 回填：Yahoo 偶发在收盘后未及时结算最后一根日K（close=null），
+   chart 的"最新收盘"会滞后一个交易日；quote v7 的 regularMarketPrice /
+   regularMarketPreviousClose 是权威值。当 quote 的行情时间（美东日）
+   晚于最后一根K线的日期时，用 quote 覆盖最新收盘与前收。 */
+function backfill(rows, q) {
+  const last = rows[rows.length - 1];
+  const prev = rows[rows.length - 2] || last;
+  const norm = (d) => String(d).replace(/-/g, "");
+  if (!q || q.regularMarketPrice == null || !q.regularMarketTime) {
+    return { date: last.date, price: last.close, prev: prev.close, fixed: false };
+  }
+  const qd = etDay(q.regularMarketTime * 1000);
+  if (qd > norm(last.date)) {
+    return {
+      date: qd,
+      price: q.regularMarketPrice,
+      prev: q.regularMarketPreviousClose ?? prev.close,
+      fixed: true,
+    };
+  }
+  return { date: last.date, price: last.close, prev: prev.close, fixed: false };
+}
+
 /* 分批抓取，避免被限流 */
 async function batched(items, size, fn) {
   const out = [];
@@ -144,20 +171,21 @@ const stockCharts = await batched(STOCKS, 5, async (s) => {
 const stockQuotes = await quotes(STOCKS.map((s) => s[1]));
 
 const stocks = {};
+let backfilled = 0;
 for (const c of stockCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
-  const last = rows[rows.length - 1];
-  const prev = rows[rows.length - 2] || last;
   const base20 = rows[rows.length - 22] || rows[0];
   const q = stockQuotes[c.sym] || {};
+  const bx = backfill(rows, q);
+  if (bx.fixed) backfilled++;
   stocks[c.code] = {
     name: c.name,
-    date: last.date.replace(/-/g, ""),
-    price: +last.close.toFixed(2),
-    prev: +prev.close.toFixed(2),
-    chg: +(pct(last.close, prev.close) ?? 0).toFixed(2),
-    d20: +(pct(last.close, base20.close) ?? 0).toFixed(2),
+    date: bx.date.replace(/-/g, ""),
+    price: +bx.price.toFixed(2),
+    prev: +bx.prev.toFixed(2),
+    chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
+    d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
     mcap: q.marketCap ?? null,
     pre: q.preMarketChangePercent != null ? +Number(q.preMarketChangePercent).toFixed(2) : null,
     post: q.postMarketChangePercent != null ? +Number(q.postMarketChangePercent).toFixed(2) : null,
@@ -170,22 +198,23 @@ const idxCharts = await batched(INDICES, 5, async (s) => {
   const c = await chart(s[1]);
   return { code: s[0], sym: s[1], name: s[2], rows: c.rows };
 });
+const idxQuotes = await quotes(INDICES.map((s) => s[1]));
 
 const indices = {};
 for (const c of idxCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
-  const last = rows[rows.length - 1];
-  const prev = rows[rows.length - 2] || last;
   const base20 = rows[rows.length - 22] || rows[0];
+  const bx = backfill(rows, idxQuotes[c.sym] || {});
+  if (bx.fixed) backfilled++;
   /* 指数用 amount 表示成交额，Yahoo chart 只有 volume，这里留 null 由 live-extra 补 */
   indices[c.code] = {
     name: c.name,
-    date: last.date.replace(/-/g, ""),
-    level: +last.close.toFixed(2),
-    prev: +prev.close.toFixed(2),
-    chg: +(pct(last.close, prev.close) ?? 0).toFixed(2),
-    d20: +(pct(last.close, base20.close) ?? 0).toFixed(2),
+    date: bx.date.replace(/-/g, ""),
+    level: +bx.price.toFixed(2),
+    prev: +bx.prev.toFixed(2),
+    chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
+    d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
     amount: null,
   };
 }
@@ -245,6 +274,7 @@ console.log("  标的 " + Object.keys(stocks).length + "/" + STOCKS.length +
   " · 指数 " + Object.keys(indices).length + "/" + INDICES.length +
   " · 跨资产 " + Object.keys(cross).length + "/" + CROSS.length);
 console.log("  股票日期 " + payload.meta.stockDate + " · 指数日期 " + payload.meta.indexDate);
+if (backfilled) console.log("  quote 回填 " + backfilled + " 条（收盘后日K结算延迟，已用 quote v7 覆盖）");
 if (Object.keys(stocks).length < STOCKS.length) {
   const miss = STOCKS.filter((s) => !stocks[s[0]]).map((s) => s[1]);
   console.warn("  缺失标的: " + miss.join(", "));
