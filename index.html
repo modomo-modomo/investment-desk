@@ -1516,7 +1516,7 @@ function feedBar(){
     +'<b>数据已更新</b>　北京时间 <b>'+(FEED.lastSyncBJ||"—")+'</b>　·　美东时间 <b>'+(FEED.lastSyncET||"—")+'</b>'
     +'　·　美股收盘日 <b>'+asOfFmt(m.dataAsOf)+'</b>'
     +'　·　下一场更新 <b>'+(m.nextPT||"—")+'</b>'
-    +'<span class="tiny" style="display:block;color:#5c8f74;margin-top:2px">更新节奏：每个交易日 20:30（美股盘前业绩）／次日 07:00（美股收盘与盘后业绩回填）· 数据源 Yahoo Finance</span>'
+    +'<span class="tiny" style="display:block;color:#5c8f74;margin-top:2px">更新节奏：每个交易日 <b>20:30</b> 与次日 <b>07:00</b> 各抓一次。<b>一次同步会刷新全站所有模块</b>，两场所见数值只差在抓取时点的行情与业绩新鲜度，不存在“20:30 只更盘前、07:00 只更盘后”的分区。· 数据源 Yahoo Finance</span>'
     +'</span></div>';
 }
 function secHead(num,title,sub,right){
@@ -1622,7 +1622,7 @@ function viewBrief(){
      '<div class="gauge"><span style="width:'+s.fng.v+'%;background:linear-gradient(90deg,#0d8a5f,#8fbf3f,#e8a33d,#d2373a)"></span></div>'+
      '<div class="gscale"><span>'+s.fng.scale[0]+'</span><span>更新 '+s.fng.at+'</span><span>'+s.fng.scale[4]+'</span></div><div class="comp">';
   s.comps.forEach(c=>{ h+='<div class="comp-row"><span>'+c[0]+'</span><span class="bar"><i style="width:'+c[1]+'%"></i></span><span class="n num">'+c[1]+'</span></div>'; });
-  h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次读数：20:30（盘前）与次日 07:00（盘后 + 回填）</div></div>';
+  h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次同步：20:30 与次日 07:00，每次全站同批刷新</div></div>';
   h+='</div></div>';
 
   h+='<div class="srcbar">'+
@@ -1667,16 +1667,16 @@ function viewBrief(){
   };
 
   h+='<div class="sec">'+secHead("04","盘前",
-      "① 当日盘前业绩 / 异动 · ② 非财报驱动异动",
-      "<span class='upd hot'>更新 <b>20:30</b></span><span class='upd'>"+b.pre.next+"</span>");
+      "按披露场次分（非更新批次）· ① 当日盘前业绩 / 异动 · ② 非财报驱动异动",
+      "<span class='upd'>计划 20:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩 / 异动（Nasdaq 日历 · 大/中市值 3% · 中小市值 5%）</span></div>';
   h+=earnTable(b.pre,"pre");
   h+=mvTbl(DATA.moversPre||[],"当日盘前无非财报驱动的显著异动（或尚在盘前时段，20:30 更新回填）","盘前");
 
   /* ---- 05 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("05","盘后",
-      "① 前一交易日盘后业绩 / 异动 · ② 非财报驱动异动",
-      "<span class='upd hot'>更新 <b>07:00</b></span>");
+      "按披露场次分（非更新批次）· ① 前一交易日盘后业绩 / 异动 · ② 非财报驱动异动",
+      "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩 / 异动（盘后 > 3% · 附潜在原因分析）</span></div>';
   h+=earnTable(b.post,"post");
   h+=mvTbl(DATA.moversPost||[],"当日盘后无非财报驱动的显著异动","盘后");
