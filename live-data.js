@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-12T06:11:10.099Z",
+  "syncedAt": "2026-11-12T13:46:09.798Z",
   "source": "Yahoo Finance",
   "stockDate": "20261111",
   "indexDate": "20261112",
@@ -16,8 +16,8 @@ window.WIND_LIVE = {
    "d20": 4.16,
    "ytd": -10.78,
    "mcap": 1544895987712,
-   "pre": null,
-   "post": -0.94
+   "pre": -1.23,
+   "post": null
   },
   "META.O": {
    "name": "脸书(META PLATFORMS)",
@@ -28,8 +28,8 @@ window.WIND_LIVE = {
    "d20": -17.54,
    "ytd": -3.33,
    "mcap": 1607659945984,
-   "pre": null,
-   "post": -0.62
+   "pre": -0.88,
+   "post": null
   },
   "IREN.O": {
    "name": "IREN",
@@ -40,8 +40,8 @@ window.WIND_LIVE = {
    "d20": -40.11,
    "ytd": -51.19,
    "mcap": 8843608064,
-   "pre": null,
-   "post": -4.27
+   "pre": -6.53,
+   "post": null
   },
   "NBIS.O": {
    "name": "NEBIUS",
@@ -52,8 +52,8 @@ window.WIND_LIVE = {
    "d20": -25.22,
    "ytd": 71.97,
    "mcap": 42053287936,
-   "pre": null,
-   "post": -4.02
+   "pre": -14.78,
+   "post": null
   },
   "CRWV.O": {
    "name": "COREWEAVE",
@@ -64,8 +64,8 @@ window.WIND_LIVE = {
    "d20": -21.9,
    "ytd": -23.39,
    "mcap": 33516877824,
-   "pre": null,
-   "post": -6.37
+   "pre": -9.9,
+   "post": null
   },
   "BE.N": {
    "name": "BLOOM ENERGY",
@@ -75,9 +75,9 @@ window.WIND_LIVE = {
    "chg": 12.97,
    "d20": -20.49,
    "ytd": 112.25,
-   "mcap": 61906182144,
-   "pre": null,
-   "post": -2.45
+   "mcap": 61931208704,
+   "pre": -4.71,
+   "post": null
   },
   "AMD.O": {
    "name": "超威半导体(AMD)",
@@ -88,8 +88,8 @@ window.WIND_LIVE = {
    "d20": -8.69,
    "ytd": 147.42,
    "mcap": 906804330496,
-   "pre": null,
-   "post": 4.32
+   "pre": 2.05,
+   "post": null
   },
   "TSM.N": {
    "name": "台积电(TAIWAN SEMICONDUCTOR MANUFACTURING)",
@@ -100,8 +100,8 @@ window.WIND_LIVE = {
    "d20": -7.14,
    "ytd": 29.33,
    "mcap": 2143828574208,
-   "pre": null,
-   "post": -1.95
+   "pre": -3.04,
+   "post": null
   },
   "TER.O": {
    "name": "泰瑞达(TERADYNE)",
@@ -112,8 +112,8 @@ window.WIND_LIVE = {
    "d20": -30.11,
    "ytd": 28.05,
    "mcap": 41494835200,
-   "pre": null,
-   "post": -3.11
+   "pre": -3.87,
+   "post": null
   },
   "ONTO.N": {
    "name": "ONTO INNOVATION",
@@ -124,8 +124,8 @@ window.WIND_LIVE = {
    "d20": -18.4,
    "ytd": 29.66,
    "mcap": 10556075008,
-   "pre": null,
-   "post": -4.07
+   "pre": -5.09,
+   "post": null
   },
   "NET.N": {
    "name": "CLOUDFLARE",
@@ -136,8 +136,8 @@ window.WIND_LIVE = {
    "d20": -9.4,
    "ytd": 60.7,
    "mcap": 112893558784,
-   "pre": null,
-   "post": -0.82
+   "pre": -2.67,
+   "post": null
   },
   "RBRK.N": {
    "name": "RUBRIK",
@@ -148,8 +148,8 @@ window.WIND_LIVE = {
    "d20": -7.77,
    "ytd": 44.77,
    "mcap": 22488827904,
-   "pre": null,
-   "post": -0.92
+   "pre": -1.83,
+   "post": null
   },
   "OKTA.O": {
    "name": "OKTA",
@@ -160,8 +160,8 @@ window.WIND_LIVE = {
    "d20": -19.55,
    "ytd": 117.9,
    "mcap": 31861114880,
-   "pre": null,
-   "post": -0.8
+   "pre": -2.33,
+   "post": null
   },
   "CHKP.O": {
    "name": "CHECK POINT SOFTWARE TECHNOLOGIES",
@@ -173,125 +173,125 @@ window.WIND_LIVE = {
    "ytd": -19.03,
    "mcap": 14965910528,
    "pre": null,
-   "post": 1.65
+   "post": null
   }
  },
  "indices": {
   "SPX.GI": {
    "name": "标普500",
    "date": "20261111",
-   "level": 7619.38,
-   "prev": 7520.93,
-   "chg": 1.31,
-   "d20": -2.38,
+   "level": 7520.93,
+   "prev": 7619.38,
+   "chg": -1.29,
+   "d20": -3.65,
    "amount": null
   },
   "NDX.GI": {
    "name": "纳斯达克100",
    "date": "20261111",
-   "level": 28374.25,
-   "prev": 27740.79,
-   "chg": 2.28,
-   "d20": -7.18,
+   "level": 27740.79,
+   "prev": 28374.25,
+   "chg": -2.23,
+   "d20": -9.25,
    "amount": null
   },
   "IXIC.GI": {
    "name": "纳斯达克指数",
    "date": "20261111",
-   "level": 25466.19,
-   "prev": 25065.87,
-   "chg": 1.6,
-   "d20": -6.39,
+   "level": 25065.88,
+   "prev": 25466.19,
+   "chg": -1.57,
+   "d20": -7.86,
    "amount": null
   },
   "DJI.GI": {
    "name": "道琼斯工业平均",
    "date": "20261111",
-   "level": 52486.49,
-   "prev": 52231.89,
-   "chg": 0.49,
-   "d20": 1.58,
+   "level": 52231.9,
+   "prev": 52486.49,
+   "chg": -0.49,
+   "d20": 1.09,
    "amount": null
   },
   "SOX.GI": {
    "name": "费城半导体指数",
    "date": "20261111",
-   "level": 10564.11,
-   "prev": 9998.33,
-   "chg": 5.66,
-   "d20": -13.47,
+   "level": 9998.33,
+   "prev": 10564.11,
+   "chg": -5.36,
+   "d20": -18.11,
    "amount": null
   },
   "VIX.GI": {
    "name": "CBOE波动率",
-   "date": "20261111",
+   "date": "20261112",
    "level": 17.49,
-   "prev": 19.46,
-   "chg": -10.12,
-   "d20": 14.54,
+   "prev": 18.97,
+   "chg": -7.8,
+   "d20": 3.68,
    "amount": null
   },
   "HSI.HI": {
    "name": "恒生指数",
    "date": "20261112",
-   "level": 24557,
-   "prev": 24041.73,
-   "chg": 2.14,
-   "d20": 0.87,
+   "level": 24008.55,
+   "prev": 24315.92,
+   "chg": -1.26,
+   "d20": -1.38,
    "amount": null
   },
   "000001.SH": {
    "name": "上证指数",
    "date": "20261112",
-   "level": 3663.72,
-   "prev": 3656.63,
-   "chg": 0.19,
-   "d20": -2.75,
+   "level": 3655.83,
+   "prev": 3680.64,
+   "chg": -0.67,
+   "d20": -2.96,
    "amount": null
   },
   "N225.GI": {
    "name": "日经225",
    "date": "20261112",
-   "level": 61248.59,
-   "prev": 60674.43,
-   "chg": 0.95,
-   "d20": -9.63,
+   "level": 60819.36,
+   "prev": 61248.59,
+   "chg": -0.7,
+   "d20": -10.27,
    "amount": null
   },
   "KS11.GI": {
    "name": "韩国综合指数",
    "date": "20261112",
-   "level": 5375.36,
-   "prev": 5319.05,
-   "chg": 1.06,
-   "d20": -10.54,
+   "level": 5342.73,
+   "prev": 5375.36,
+   "chg": -0.61,
+   "d20": -11.09,
    "amount": null
   },
   "GDAXI.GI": {
    "name": "德国DAX",
-   "date": "20261111",
-   "level": 26347.4,
-   "prev": 26662.77,
-   "chg": -1.18,
-   "d20": 4.31,
+   "date": "20261112",
+   "level": 26662.77,
+   "prev": 26713.41,
+   "chg": -0.19,
+   "d20": 5.39,
    "amount": null
   },
   "FTSE.GI": {
    "name": "英国富时100",
-   "date": "20261111",
+   "date": "20261112",
    "level": 10835.47,
-   "prev": 10751.6,
-   "chg": 0.78,
-   "d20": 1.74,
+   "prev": 10835.5,
+   "chg": 0,
+   "d20": 1.03,
    "amount": null
   },
   "SX5E.DF": {
    "name": "欧元区STOXX50(欧元)",
-   "date": "20261111",
+   "date": "20261112",
    "level": 6393.39,
-   "prev": 6327.87,
-   "chg": 1.04,
-   "d20": 3.67,
+   "prev": 6383.44,
+   "chg": 0.16,
+   "d20": 3.28,
    "amount": null
   }
  },
@@ -299,12 +299,12 @@ window.WIND_LIVE = {
   "UST10Y": {
    "name": "美国:国债收益率:10年",
    "unit": "%",
-   "date": "20261111",
+   "date": "20261112",
    "value": 4.998,
-   "d1": 0.3,
-   "d20": -4.2,
-   "dbp1": 1.5,
-   "dbp20": -21.9
+   "d1": -1.03,
+   "d20": -3.7,
+   "dbp1": -5.2,
+   "dbp20": -19.2
   },
   "DXY": {
    "name": "美元指数",
@@ -321,7 +321,7 @@ window.WIND_LIVE = {
    "unit": "美元/金衡盎司",
    "date": "20261112",
    "value": 4000.5,
-   "d1": 0.42,
+   "d1": 2.28,
    "d20": -2.61,
    "dbp1": null,
    "dbp20": null
@@ -331,7 +331,7 @@ window.WIND_LIVE = {
    "unit": "美元/金衡盎司",
    "date": "20261112",
    "value": 52.002,
-   "d1": 1.17,
+   "d1": 2.85,
    "d20": -6.39,
    "dbp1": null,
    "dbp20": null
@@ -341,7 +341,7 @@ window.WIND_LIVE = {
    "unit": "美元/吨",
    "date": "20261112",
    "value": 13867.08,
-   "d1": 1.21,
+   "d1": 1.55,
    "d20": -4.86,
    "dbp1": null,
    "dbp20": null
@@ -351,7 +351,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261112",
    "value": 86.53,
-   "d1": 0.87,
+   "d1": -0.97,
    "d20": -9,
    "dbp1": null,
    "dbp20": null
@@ -361,7 +361,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261112",
    "value": 92.76,
-   "d1": 1.01,
+   "d1": -1.3,
    "d20": -12.54,
    "dbp1": null,
    "dbp20": null

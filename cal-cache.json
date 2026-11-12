@@ -117,7 +117,7 @@
   ]
  },
  "2026-11-12|time-pre-market": {
-  "at": "2026-11-12T05:16:07.752Z",
+  "at": "2026-11-12T13:46:15.550Z",
   "symbols": [
    "BN",
    "NBIS",
@@ -162,6 +162,7 @@
    "CMDB",
    "ALLT",
    "CRMD",
+   "DDL",
    "VGZ",
    "CMCL",
    "CDRO",
@@ -184,6 +185,7 @@
    "LUCD",
    "WFCF",
    "BWEN",
+   "PODC",
    "SPCB",
    "SGA",
    "LASE",
@@ -191,6 +193,7 @@
    "HYPD",
    "FRMM",
    "IPWR",
+   "LVO",
    "NSPR",
    "PTHS",
    "EYPT",
