@@ -81,6 +81,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .feedbar .ic{width:16px;height:16px;flex:0 0 auto;display:grid;place-items:center;border-radius:50%;
   background:#d2373a;color:#fff;font-size:10px;font-weight:700}
 .feedbar b{color:#8f2424}
+.feedbar.ok{background:#f4faf6;border-color:#cfe7d8;color:#1f5c3d}
+.feedbar.ok .ic{background:#0d8a5f}
+.feedbar.ok b{color:#134d32}
 
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .sec{margin-bottom:22px}
@@ -396,6 +399,7 @@ ol.concl li b{color:var(--text);font-weight:650}
   <nav class="nav" id="nav"></nav>
   <div class="side-foot">
     <b>数据源</b>　<span id="feed-state" style="color:#c0392b">Yahoo 未连接</span><br>
+    <span id="side-sync" style="color:#8fa3b3"></span><br>
     更新节奏 <b>每个交易日两次</b>：20:30 / 次日 07:00<br>
     <span style="color:#b6bfcc">行情/财报为实时抓取，资讯类待接源</span>
   </div>
@@ -1085,12 +1089,37 @@ function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
 const CODE_OF = {TSLA:"TSLA.O",META:"META.O",IREN:"IREN.O",NBIS:"NBIS.O",CRWV:"CRWV.O",BE:"BE.N",
   AMD:"AMD.O",TSM:"TSM.N",TER:"TER.O",ONTO:"ONTO.N",NET:"NET.N",RBRK:"RBRK.N",OKTA:"OKTA.O",CHKP:"CHKP.O"};
 
+/* ---- 数据更新时间：双时区时间戳 + 下一场更新（北京时间动态推算） ---- */
+function syncStamps(iso){
+  const d=new Date(iso);
+  const etParts=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(d).map(x=>[x.type,x.value]));
+  return {
+    bj:d.toLocaleString("zh-CN",{timeZone:"Asia/Shanghai",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false,hourCycle:"h23"}),
+    et:etParts.month+"-"+etParts.day+" "+etParts.hour+":"+etParts.minute
+  };
+}
+function nextSession(){
+  const bjDate=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai"}).format(new Date());
+  const wd=new Date(bjDate+"T12:00:00").getDay();
+  const f=(o)=>+new Intl.DateTimeFormat("en",{timeZone:"Asia/Shanghai",hourCycle:"h23",hour12:false,...o}).format(new Date());
+  const cur=f({hour:"numeric"})*60+f({minute:"numeric"});
+  if(wd===0||wd===6) return "周一 07:00";
+  if(cur<7*60) return "今日 07:00";
+  if(cur<20*60+30) return "今日 20:30";
+  return wd===5?"周一 07:00":"明日 07:00";
+}
+const asOfFmt=(s)=>s&&s.length===8?s.slice(4,6)+"-"+s.slice(6,8):(s||"—");
+
 function hydrate(L){
   FEED.connected = true;
   const d = new Date(L.meta.syncedAt);
   FEED.lastSync = d.toLocaleString("zh-CN",{month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+  const st = syncStamps(L.meta.syncedAt);
+  FEED.lastSyncBJ = st.bj;
+  FEED.lastSyncET = st.et;
   DATA.meta.dataAsOf = L.meta.stockDate;
-  DATA.meta.updatedPT = FEED.lastSync;
+  DATA.meta.updatedPT = st.bj;
+  DATA.meta.nextPT = nextSession();
 
   /* 1. 标的行情 */
   DATA.stocks.forEach(function(s){
@@ -1431,8 +1460,14 @@ const chg = (v,unit) => unit==="bp"
   : '<span class="chg '+sgn(v)+'">'+pct(v)+'</span>';
 
 function feedBar(){
-  if(FEED.connected) return "";
-  return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。运行 <b>node sync-core.mjs</b> 后刷新即接入 Yahoo Finance 实时数据。</span></div>';
+  if(!FEED.connected) return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。运行 <b>node sync-core.mjs</b> 后刷新即接入 Yahoo Finance 实时数据。</span></div>';
+  const m=DATA.meta;
+  return '<div class="feedbar ok"><span class="ic">✓</span><span>'
+    +'<b>数据已更新</b>　北京时间 <b>'+(FEED.lastSyncBJ||"—")+'</b>　·　美东时间 <b>'+(FEED.lastSyncET||"—")+'</b>'
+    +'　·　美股收盘日 <b>'+asOfFmt(m.dataAsOf)+'</b>'
+    +'　·　下一场更新 <b>'+(m.nextPT||"—")+'</b>'
+    +'<span class="tiny" style="display:block;color:#5c8f74;margin-top:2px">更新节奏：每个交易日 20:30（美股盘前业绩）／次日 07:00（美股收盘与盘后业绩回填）· 数据源 Yahoo Finance</span>'
+    +'</span></div>';
 }
 function secHead(num,title,sub,right){
   return '<div class="sec-head"><span class="sec-num">'+num+'</span><span class="sec-title">'+title+'</span>'+
@@ -2186,7 +2221,8 @@ if (YF) {
 $("#side-date").textContent=DATA.meta.date;
 $("#side-week").textContent=DATA.meta.week;
 $("#hdr-date").textContent=DATA.meta.date;
-$("#feed-state").textContent=FEED.connected?"Yahoo 已连接":"Yahoo 未连接";
+$("#feed-state").textContent=FEED.connected?("Yahoo 已连接 · "+(FEED.lastSync||"已同步")):"Yahoo 未连接";
+$("#side-sync").textContent=FEED.connected?("最近更新 "+(DATA.meta.updatedPT||"—")+"（北京）· 下一场 "+(DATA.meta.nextPT||"—")):"尚未同步";
 $("#feed-pill").textContent=FEED.connected?("Yahoo · "+(FEED.lastSync||"已同步")):"行情未连接 · 示例数据";
 $("#feed-pill").className=FEED.connected?"pill":"pill warn";
 renderNav(); route();
