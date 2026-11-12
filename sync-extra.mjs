@@ -350,6 +350,101 @@ try {
   }
 } catch (e) { console.warn("双端点校验失败:", e.message); }
 
+/* ---------------- 赛道代表标的池：股价 / 涨幅 / 20日 / YTD ---------------- */
+const TRACKS = [
+  { id: "phy",   syms: [["TSLA","TSLA"],["NVDA","NVDA"],["三花智控","002050.SZ"],["拓普集团","601689.SS"],["绿的谐波","688017.SS"],["优必选","9880.HK"]] },
+  { id: "edge",  syms: [["QCOM","QCOM"],["AAPL","AAPL"],["联发科","2454.TW"],["恒玄科技","688608.SS"],["乐鑫科技","688018.SS"],["瑞芯微","603893.SS"]] },
+  { id: "app",   syms: [["MSFT","MSFT"],["CRM","CRM"],["NOW","NOW"],["PLTR","PLTR"],["RBRK","RBRK"],["OKTA","OKTA"],["NET","NET"],["ADBE","ADBE"]] },
+  { id: "sec",   syms: [["CRWD","CRWD"],["PANW","PANW"],["ZS","ZS"],["S","S"],["RBRK","RBRK"],["OKTA","OKTA"],["CHKP","CHKP"],["奇安信","688561.SS"],["深信服","300454.SZ"]] },
+  { id: "fin",   syms: [["V","V"],["MA","MA"],["PYPL","PYPL"],["XYZ","XYZ"],["COIN","COIN"],["HOOD","HOOD"],["SOFI","SOFI"],["NU","NU"],["INTU","INTU"],["ADYEY","ADYEY"],["PAGS","PAGS"]] },
+  { id: "infra", syms: [["NVDA","NVDA"],["AVGO","AVGO"],["CRWV","CRWV"],["IREN","IREN"],["NBIS","NBIS"],["BE","BE"],["VRT","VRT"],["ANET","ANET"],["GEV","GEV"]] },
+  { id: "pkg",   syms: [["TSM","TSM"],["AMKR","AMKR"],["ASX","ASX"],["ONTO","ONTO"],["TER","TER"],["长电科技","600584.SS"],["通富微电","002156.SZ"]] },
+  { id: "cpu",   syms: [["ARM","ARM"],["AMD","AMD"],["INTC","INTC"],["QCOM","QCOM"],["NVDA","NVDA"],["MRVL","MRVL"]] },
+];
+const uniqSyms = [...new Set(TRACKS.flatMap((t) => t.syms.map((s) => s[1])))];
+const trkQuotes = await quotes(uniqSyms);
+const trkCharts = {};
+for (let i = 0; i < uniqSyms.length; i += 4) {
+  const part = uniqSyms.slice(i, i + 4);
+  await Promise.all(part.map(async (sym) => {
+    try { trkCharts[sym] = (await chart(sym, "1y")).rows; }
+    catch (e) { console.warn("赛道标的 chart 失败 " + sym + ": " + e.message); }
+  }));
+  if (i + 4 < uniqSyms.length) await new Promise((r) => setTimeout(r, 260));
+}
+const YTD0 = new Date().getFullYear() + "-01-01";
+const ccyOf = (sym) => /\.(SS|SZ)$/.test(sym) ? "¥" : (/\.HK$/.test(sym) ? "HK$" : (/\.TW$/.test(sym) ? "NT$" : "$"));
+const trackRow = (name, sym) => {
+  const q = trkQuotes[sym] || {}, rows = trkCharts[sym] || [];
+  const ccy = ccyOf(sym);
+  if (q.regularMarketPrice == null && !rows.length) return { name, sym, price: null, chg: null, d20: null, ytd: null, ccy };
+  const price = q.regularMarketPrice ?? rows[rows.length - 1].close;
+  const chg = q.regularMarketChangePercent != null ? +q.regularMarketChangePercent.toFixed(2)
+    : (rows.length > 1 ? +((price / rows[rows.length - 2].close - 1) * 100).toFixed(2) : null);
+  const d20 = rows.length >= 22 ? +((price / rows[rows.length - 22].close - 1) * 100).toFixed(2) : null;
+  const y0 = rows.find((r) => r.date >= YTD0);
+  const ytd = y0 ? +((price / y0.close - 1) * 100).toFixed(2) : null;
+  return { name, sym, price: price != null ? +price.toFixed(price >= 1000 ? 0 : (price >= 100 ? 1 : 2)) : null, chg, d20, ytd, ccy, mcap: q.marketCap ?? null };
+};
+const trackData = {};
+for (const t of TRACKS) trackData[t.id] = t.syms.map(([n, s]) => trackRow(n, s));
+
+/* -------- 创新高检测 + 滚动日志（52周新高 / 历史新高 / 三大市场指数） -------- */
+const etToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+const POOL = [
+  ["TSLA","特斯拉","电动车/机器人"],["META","脸书","社交媒体"],["IREN","IREN","AI基础设施"],["NBIS","NEBIUS","AI基础设施"],
+  ["CRWV","COREWEAVE","AI基础设施"],["BE","BLOOM ENERGY","电力设备"],["AMD","超威半导体","半导体"],["TSM","台积电","半导体"],
+  ["TER","泰瑞达","半导体设备"],["ONTO","ONTO INNOVATION","半导体设备"],["NET","CLOUDFLARE","网络/网安"],["RBRK","RUBRIK","网安"],
+  ["OKTA","OKTA","网安"],["CHKP","CHECK POINT","网安"],
+];
+const SYM2WIND = { TSLA:"TSLA.O", META:"META.O", IREN:"IREN.O", NBIS:"NBIS.O", CRWV:"CRWV.O", BE:"BE.N", AMD:"AMD.O", TSM:"TSM.N", TER:"TER.O", ONTO:"ONTO.N", NET:"NET.N", RBRK:"RBRK.N", OKTA:"OKTA.O", CHKP:"CHKP.O" };
+const MKT_IDX = [["^GSPC","标普500","US"],["^HSI","恒生指数","HK"],["000001.SS","上证指数","CN"]];
+const highsToday = [];
+const poolQuotes = await quotes(POOL.map((p) => p[0]));
+for (const [sym, name, sec] of POOL) {
+  try {
+    const q = poolQuotes[sym];
+    if (!q || q.regularMarketPrice == null || q.fiftyTwoWeekHigh == null) continue;
+    const cur = q.regularMarketPrice;
+    if (cur >= q.fiftyTwoWeekHigh * 0.999) {
+      highsToday.push({ d: etToday, sym, name, type: "52w", market: "US", sec, px: +cur.toFixed(2) });
+    }
+    const mx = await chart(sym, "max");
+    if (mx.rows.length > 1) {
+      const prevMax = Math.max(...mx.rows.slice(0, -1).map((r) => r.close));
+      if (cur >= prevMax * 0.999) highsToday.push({ d: etToday, sym, name, type: "ath", market: "US", sec, px: +cur.toFixed(2) });
+    }
+  } catch (e) { console.warn("新高检测失败 " + sym + ": " + e.message); }
+}
+for (const [sym, name, mkt] of MKT_IDX) {
+  try {
+    const rows = (await chart(sym, "1y")).rows;
+    if (rows.length < 2) continue;
+    const cur = rows[rows.length - 1].close;
+    const prevMax = Math.max(...rows.slice(0, -1).map((r) => r.close));
+    if (cur > prevMax) highsToday.push({ d: etToday, sym, name, type: "mkt", market: mkt, sec: "指数", px: +cur.toFixed(2) });
+  } catch (e) { console.warn("市场新高检测失败 " + sym + ": " + e.message); }
+}
+let highsLog = [];
+try { highsLog = JSON.parse(readFileSync("highs-log.json", "utf8")); } catch {}
+const seenH = new Set(highsLog.map((x) => x.d + "|" + x.sym + "|" + x.type));
+for (const h of highsToday) {
+  const k = h.d + "|" + h.sym + "|" + h.type;
+  if (!seenH.has(k)) { highsLog.push(h); seenH.add(k); }
+}
+const highsCutoff = new Date(Date.parse(etToday) - 180 * 86400000).toISOString().slice(0, 10);
+highsLog = highsLog.filter((x) => x.d >= highsCutoff).sort((a, b) => b.d.localeCompare(a.d) || a.sym.localeCompare(b.sym));
+writeFileSync("highs-log.json", JSON.stringify(highsLog, null, 1));
+const analyzeHighs = (days) => {
+  const from = new Date(Date.parse(etToday) - days * 86400000).toISOString().slice(0, 10);
+  const rows = highsLog.filter((x) => x.d >= from);
+  const byMkt = {}, bySec = {};
+  rows.forEach((x) => { byMkt[x.market] = (byMkt[x.market] || 0) + 1; bySec[x.sec] = (bySec[x.sec] || 0) + 1; });
+  return { total: rows.length, byMkt, bySec, days };
+};
+const highs = { date: etToday, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
+console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条");
+
 const out = {
   meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
   quotes: quotesOut, sectors, btc, eth, breadth, spxVol,
@@ -358,6 +453,8 @@ const out = {
               post: post.rows, postTotal: post.total, postHit: post.hit, postCached: post.fromCache },
   nextEarn,
   crosscheck,
+  tracks: trackData,
+  highs,
 };
 writeFileSync("cal-cache.json", JSON.stringify(CALCACHE, null, 1), "utf8");
 writeFileSync("live-extra.js", "window.YF_DATA = " + JSON.stringify(out, null, 1) + ";\n", "utf8");

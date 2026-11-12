@@ -183,8 +183,43 @@ for (const t of list) {
 
 const okCount = Object.values(results).filter((x) => x.ok).length;
 const fullCount = Object.values(results).filter((x) => (x.res || []).length).length;
+
+/* ---- 川普语录：东财 7×24 过滤（转载 X / 财经媒体）+ trump-log.json 滚动积累 ---- */
+const TRUMP_RE = /川普|特朗普|Trump/i;
+const TRUMP_RULES = [
+  [/关税|加征/, "关税威胁是其常用施压工具，历史落地率不足一半——按“预期扰动”处理，关注受影响行业收入敞口，不提前建仓。"],
+  [/芯片|半导体/, "半导体关税/出口表态直接冲击设备与代工对华收入占比，落地前对板块是情绪扰动而非基本面变化。"],
+  [/美联储|联储|降息|加息|鲍威尔/, "对联储独立性的施压与当前利率路径正面对撞，会放大波动，但不改变数据决定的政策方向。"],
+  [/俄乌|乌克兰|俄罗斯|普京/, "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。"],
+  [/中国|中方/, "对华措辞影响出口链与港股风险偏好，关键看后续是否有具体政策动作。"],
+  [/AI|人工智能|算力/, "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。"],
+  [/石油|原油|OPEC/, "能源价格表态短期扰动油价，供需才是定价主轴。"],
+];
+let trumpLog = [];
+try { trumpLog = JSON.parse(readFileSync("trump-log.json", "utf8")); } catch {}
+const seenT = new Set(trumpLog.map((x) => x.t));
+const trumpHits = corpus.filter((x) => TRUMP_RE.test((x.title || "") + (x.summary || "")));
+const trumpItems = trumpHits.slice(0, 12).map((x) => {
+  const txt = (x.summary || x.title || "").trim().replace(/\s+/g, " ").slice(0, 140);
+  const t = (x.showTime || "").slice(5, 16);
+  const rule = TRUMP_RULES.find(([re]) => re.test(txt));
+  return {
+    t, o: txt,
+    src: "东方财富 7×24（转载 X / 财经媒体）",
+    r: rule ? rule[1] : "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    isNew: !seenT.has(t),
+  };
+});
+for (const it of trumpItems) if (it.isNew) trumpLog.unshift({ t: it.t, o: it.o, src: it.src, r: it.r });
+/* 滚动保留约 31 天（t 格式 "MM-DD HH:mm"，跨年仅在 12 月末有一处边界，可接受） */
+const cutoffMD = new Date(Date.now() - 31 * 86400000).toISOString().slice(5, 10);
+trumpLog = trumpLog.filter((x) => x.t.slice(0, 5) >= cutoffMD).slice(0, 40);
+writeFileSync("trump-log.json", JSON.stringify(trumpLog, null, 1), "utf8");
+console.log("川普语录：语料命中 " + trumpHits.length + " 条，本轮新增 " + trumpItems.filter((x) => x.isNew).length + " 条，日志 " + trumpLog.length + " 条");
+
 writeFileSync("live-news.js", "window.NEWS_DATA = " + JSON.stringify({
   meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Yahoo 标题", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
   items: results,
+  trump: { items: trumpItems, logCount: trumpLog.length },
 }, null, 1) + ";\n", "utf8");
 console.log(`live-news.js｜${fullCount}/${list.length} 家有业绩数字，${okCount}/${list.length} 家有内容`);

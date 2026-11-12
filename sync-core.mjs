@@ -188,9 +188,10 @@ await yahooAuth();
 console.log(CRUMB ? "  已取得 crumb" : "  警告：未取得 crumb，市值/盘前盘后可能缺失");
 
 /* ---------- 标的 ---------- */
+const YTD_START = new Date().getFullYear() + "-01-01";
 console.log("抓取标的行情（" + STOCKS.length + " 只）…");
 const stockCharts = await batched(STOCKS, 5, async (s) => {
-  const c = await chart(s[1]);
+  const c = await chart(s[1], "1y");
   return { code: s[0], sym: s[1], name: s[2], rows: c.rows };
 });
 const stockQuotes = await quotes(STOCKS.map((s) => s[1]));
@@ -204,6 +205,7 @@ for (const c of stockCharts) {
   const q = stockQuotes[c.sym] || {};
   const bx = backfill(rows, q);
   if (bx.fixed) backfilled++;
+  const ytd0 = rows.find((r) => r.date >= YTD_START);
   stocks[c.code] = {
     name: c.name,
     date: bx.date.replace(/-/g, ""),
@@ -211,6 +213,7 @@ for (const c of stockCharts) {
     prev: +bx.prev.toFixed(2),
     chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
     d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
+    ytd: ytd0 ? +(pct(bx.price, ytd0.close) ?? 0).toFixed(2) : null,
     mcap: q.marketCap ?? null,
     pre: q.preMarketChangePercent != null ? +Number(q.preMarketChangePercent).toFixed(2) : null,
     post: q.postMarketChangePercent != null ? +Number(q.postMarketChangePercent).toFixed(2) : null,

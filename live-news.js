@@ -1,38 +1,21 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-12T02:00:45.322Z",
+  "syncedAt": "2026-11-12T06:13:03.513Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 2800,
+  "corpus": 2200,
   "total": 16,
-  "ok": 15,
-  "full": 1
+  "ok": 12,
+  "full": 0
  },
  "items": {
-  "PBR": {
-   "symbol": "PBR",
-   "name": "Petroleo Brasileiro S.A.- Petrobras",
+  "FNV": {
+   "symbol": "FNV",
+   "name": "Franco-Nevada Corporation",
    "session": "post",
    "ok": true,
-   "headline": "巴西国家石油公司第三季度调整后EBITDA为858.2亿雷亚尔 预计955.9亿雷亚尔",
-   "date": "2026-11-11",
-   "url": "https://kuaixun.eastmoney.com/",
-   "res": [],
-   "guide": [
-    "巴西国家石油公司（Petrobras）第三季度调整后EBITDA为858.2亿雷亚尔，预计为955.9亿雷亚尔"
-   ],
-   "src": "东方财富 7×24",
-   "matched": 2,
-   "kept": 1,
-   "note": ""
-  },
-  "ALC": {
-   "symbol": "ALC",
-   "name": "Alcon Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Alcon Inc. (ALC) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/alcon-inc-alc-q3-2026-220223361.html",
+   "headline": "Franco Nevada (TSX:FNV) Stock May Trade At A Premium Despite Strong Q3 Results",
+   "date": "2026-11-12",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/franco-nevada-tsx-fnv-stock-043143845.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -40,14 +23,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "EC": {
-   "symbol": "EC",
-   "name": "Ecopetrol S.A.",
+  "VYLR": {
+   "symbol": "VYLR",
+   "name": "Vylor Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Ecopetrol Revises Timing for the Release of Third Quarter 2026 Financial Results and Earnings Conference Call",
-   "date": "2026-11-09",
-   "url": "https://finance.yahoo.com/energy/articles/ecopetrol-revises-timing-release-third-161600503.html",
+   "headline": "Vylor Q3 Revenue Declines; 2026 Guidance Maintained",
+   "date": "2026-11-11",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vylor-q3-revenue-declines-2026-220132451.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -55,37 +38,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "CRWV": {
-   "symbol": "CRWV",
-   "name": "CoreWeave, Inc.",
+  "TTEK": {
+   "symbol": "TTEK",
+   "name": "Tetra Tech, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "CoreWeave上调年度营收展望 缓解业务放缓担忧",
+   "headline": "Tetra: Fiscal Q4 Earnings Snapshot",
    "date": "2026-11-11",
-   "url": "https://kuaixun.eastmoney.com/",
-   "res": [
-    "公司三季度营收大增近170%，全年营收指引上调，积压订单达到1325亿美元",
-    "【新云企业CoreWeave三季度营收大增近1.7倍并上调全年指引 明年算力基本售罄】在AI（人工智能）基础设施投资前景受到市场质疑之际，美国AI云厂商CoreWeave交出了一份超出预期的财报，并上调全年业绩指引",
-    "【CoreWeave称将于2028年实现盈利 过去一个月内股价暴跌超四成】据路透社报道，AI云公司CoreWeave上调了2026年全年收入指引，并预计将在2028年上半年实现盈利"
-   ],
-   "guide": [
-    "【花旗上调Coreweave目标价】花旗将Coreweave目标价从128美元上调至149美元",
-    "CoreWeave高管称，预计调整后净亏损将在2027年显著减少，并在2028年上半年及全年实现调整后净盈利",
-    "CoreWeave高管称，今年公司70%的交易已收到预付款，部分客户甚至提前支付了高达合同总额100%的款项"
-   ],
-   "src": "东方财富 7×24",
-   "matched": 26,
-   "kept": 16,
-   "note": ""
-  },
-  "VIV": {
-   "symbol": "VIV",
-   "name": "Telefonica Brasil S.A.",
-   "session": "post",
-   "ok": true,
-   "headline": "Telefonica Brasil Q3 Earnings Call Highlights",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/telefonica-brasil-q3-earnings-call-181514355.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tetra-fiscal-q4-earnings-snapshot-212458521.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -93,14 +53,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "MRCY": {
-   "symbol": "MRCY",
-   "name": "Mercury Systems Inc",
+  "CAE": {
+   "symbol": "CAE",
+   "name": "CAE Inc",
    "session": "post",
    "ok": true,
-   "headline": "Mercury Systems earnings analysis: questions answered and next catalysts",
+   "headline": "CAE: Fiscal Q2 Earnings Snapshot",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/mercury-systems-earnings-analysis-questions-180212932.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cae-fiscal-q2-earnings-snapshot-214159656.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -108,14 +68,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "RGTI": {
-   "symbol": "RGTI",
-   "name": "Rigetti Computing, Inc. ",
+  "CTVA": {
+   "symbol": "CTVA",
+   "name": "Corteva, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Rigetti Computing (RGTI) Stock Faces Valuation Strain After Q3 Results",
+   "headline": "Corteva Q3 Adjusted Earnings, Revenue Fall; Shares Drop After Hours",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rigetti-computing-rgti-stock-faces-231517881.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/corteva-q3-adjusted-earnings-revenue-220815773.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -123,14 +83,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "FLY": {
-   "symbol": "FLY",
-   "name": "Firefly Aerospace Inc.",
+  "OR": {
+   "symbol": "OR",
+   "name": "OR Royalties Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Before a Planned Catch of Both Rocket Stages, Space Companies Lay Out Fresh Results",
+   "headline": "OR Royalties Reports Higher Adjusted Earnings and Revenue for Third Quarter",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/news/planned-catch-both-rocket-stages-182500077.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/royalties-reports-higher-adjusted-earnings-212722101.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -138,24 +98,69 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "GIB": {
-   "symbol": "GIB",
-   "name": "CGI Inc.",
+  "ENS": {
+   "symbol": "ENS",
+   "name": "EnerSys",
+   "session": "post",
+   "ok": true,
+   "headline": "Update: EnerSys Fiscal Q2 Adjusted Earnings Rise, Net Sales Decline; Q3 Guidance Set",
+   "date": "2026-11-11",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/enersys-fiscal-q2-adjusted-earnings-220408106.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "ECO": {
+   "symbol": "ECO",
+   "name": "Okeanis Eco Tankers Corp.",
+   "session": "post",
+   "ok": true,
+   "headline": "Okeanis Eco Tankers Q3 Earnings, Revenue Rise; Quarterly Dividend Raised",
+   "date": "2026-11-11",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/okeanis-eco-tankers-q3-earnings-213307544.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "BN": {
+   "symbol": "BN",
+   "name": "Brookfield Corporation",
    "session": "pre",
    "ok": true,
-   "headline": "CGI Inc (GIB) (Q4 2026) Earnings Call Highlights: Record $32. ...",
+   "headline": "Brookfield Gears Up to Report Q3 Earnings: What's in the Cards?",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/cgi-inc-gib-q4-2026-210551216.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/brookfield-gears-report-q3-earnings-160700939.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 1,
-   "kept": 1,
+   "matched": 0,
+   "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "AYA": {
-   "symbol": "AYA",
-   "name": "Aya Gold & Silver Inc.",
+  "NBIS": {
+   "symbol": "NBIS",
+   "name": "Nebius Group N.V.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Stock Market Today, Nov. 11: CoreWeave Surges 25% on Beat-and-Raise Quarter",
+   "date": "2026-11-11",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-11-221411680.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "ASND": {
+   "symbol": "ASND",
+   "name": "Ascendis Pharma A/S",
    "session": "pre",
    "ok": false,
    "headline": "",
@@ -168,29 +173,44 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
   },
-  "RUM": {
-   "symbol": "RUM",
-   "name": "RUM Group Inc.",
+  "HBM": {
+   "symbol": "HBM",
+   "name": "Hudbay Minerals Inc.",
    "session": "pre",
-   "ok": true,
-   "headline": "Rumble Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/technology/ai/articles/rumble-inc-q3-2026-earnings-222212734.html",
+   "ok": false,
+   "headline": "存储市场罕见错位！产能排到2029 消费级却涨不动了",
+   "date": "2026-11-12",
+   "url": "https://kuaixun.eastmoney.com/",
    "res": [],
    "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 1,
-   "kept": 1,
-   "note": "仅取到新闻标题，正文待补"
+   "src": "东方财富 7×24",
+   "matched": 3,
+   "kept": 3,
+   "note": "有相关快讯 3 条，但均非本次披露同期（已过滤）"
   },
-  "BGSI": {
-   "symbol": "BGSI",
-   "name": "Boyd Group Services Inc.",
+  "TWST": {
+   "symbol": "TWST",
+   "name": "Twist Bioscience Corporation",
+   "session": "pre",
+   "ok": false,
+   "headline": "",
+   "date": "",
+   "url": "",
+   "res": [],
+   "guide": [],
+   "src": "",
+   "matched": 0,
+   "kept": 0,
+   "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
+  },
+  "FPS": {
+   "symbol": "FPS",
+   "name": "Forgent Power Solutions, Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "Boyd Group Services Inc (BGSI) (Q3 2026) Earnings Call Highlights: Revenue Tops $1 Billion as ...",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/boyd-group-services-inc-bgsi-210448855.html",
+   "headline": "Forgent Power Solutions (FPS) Fell on AI Sentiment Despite a Record Quarterly Bookings",
+   "date": "2026-11-10",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/forgent-power-solutions-fps-fell-181435654.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -198,14 +218,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "NYAX": {
-   "symbol": "NYAX",
-   "name": "Nayax Ltd.",
+  "NIQ": {
+   "symbol": "NIQ",
+   "name": "NIQ Global Intelligence plc",
    "session": "pre",
    "ok": true,
-   "headline": "Nayax Ltd (NYAX) (Q3 2026) Earnings Call Highlights: Record Margins, 23% Revenue Growth and the ...",
+   "headline": "Amprius Technologies Set to Report Q3 Earnings: What's in the Cards?",
    "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/nayax-ltd-nyax-q3-2026-230606682.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/amprius-technologies-set-report-q3-051900675.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -213,50 +233,109 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "RSKD": {
-   "symbol": "RSKD",
-   "name": "Riskified Ltd.",
+  "MBGL": {
+   "symbol": "MBGL",
+   "name": "Mobility Global Inc.",
    "session": "pre",
-   "ok": true,
-   "headline": "Riskified Ltd (RSKD) Q3 2026 Earnings Call Highlights: Revenue Tops $100 Million for the First ...",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/riskified-ltd-rskd-q3-2026-230606900.html",
+   "ok": false,
+   "headline": "",
+   "date": "",
+   "url": "",
    "res": [],
    "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
+   "src": "",
    "matched": 0,
    "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ODD": {
-   "symbol": "ODD",
-   "name": "ODDITY Tech Ltd.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Oddity Tech Ltd. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/oddity-tech-ltd-q3-2026-220025195.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "AEBI": {
-   "symbol": "AEBI",
-   "name": "Aebi Schmidt Holding AG",
-   "session": "pre",
-   "ok": true,
-   "headline": "Aebi Schmidt Holding AG (AEBI) (Q3 2026) Earnings Call Highlights: Record $1. ...",
-   "date": "2026-11-11",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/aebi-schmidt-holding-ag-aebi-230546729.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
+   "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
   }
+ },
+ "trump": {
+  "items": [
+   {
+    "t": "11-12 13:36",
+    "o": "【万斯正考虑与伊朗安全高官面对面会谈】据报道，美国副总统万斯正考虑与伊朗最高国家安全委员会秘书雷扎伊举行面对面会谈，以推动结束伊朗战事。美国总统特朗普对此持开放态度。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 08:56",
+    "o": "【特朗普和内塔尼亚胡被曝发生“地狱般争吵” 以总理办公室否认】据以色列Ynet新闻网等媒体11日援引消息人士的话爆料，以色列总理内塔尼亚胡和美国总统特朗普上周末就伊朗问题通了电话，这番通话异常艰难且充满火药味，一名消息人士甚至称之为“一场地狱般的争吵”。不过，以总理办公室否认了以",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 08:54",
+    "o": "【万斯拟与伊朗强硬派面对面谈判？据悉特朗普持开放态度并已授权】据不具名美国及中东官员透露，美国副总统JD万斯正考虑与伊朗最高国家安全委员会高级官员举行直接会谈，美国副总统万斯对此持开放态度。万斯现已成为美国对伊谈判的首席代表，美方希望尽快借此结束这场被视作拖累共和党的战争。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 08:03",
+    "o": "【俄外长：美特使将前往莫斯科向普京通报三方会谈相关情况】当地时间11日，俄罗斯外长拉夫罗夫称，俄罗斯总统普京将于12日在莫斯科会见美国总统特使威特科夫和特朗普总统的女婿库什纳。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 07:18",
+    "o": "【白宫警告民主党调查特朗普政府或涉嫌犯罪】记者11日获悉，白宫近日警告民主党人，其计划对总统特朗普政府展开的国会调查可能涉嫌犯罪。民主党人则回应称，国会依法享有监督权。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 06:57",
+    "o": "周四你需要知道的隔夜全球要闻：AI产业链交易热潮回归，纳斯达克100指数收涨超2%；承销商拟上调Anthropic估值至1.5万亿美元；特朗普据对万斯重启与伊朗谈判持开放态度。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 04:49",
+    "o": "【泽连斯基称已抵达都柏林 将与美方代表会晤】乌克兰总统泽连斯基11日在社交媒体发文说，他已抵达爱尔兰首都都柏林，将出席第九届欧洲政治共同体领导人会议，并计划同美国总统特使威特科夫和总统特朗普的女婿库什纳会晤。泽连斯基表示，他计划在两天内与约20位领导人举行双边或多边会谈。他说，乌",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 04:24",
+    "o": "【白宫警告民主党其国会调查计划或涉嫌犯罪】据多家美国媒体11日报道，白宫近日警告民主党人，其计划对总统特朗普政府展开的国会调查可能涉嫌犯罪。民主党人则回应称，国会依法享有监督权。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-12 03:27",
+    "o": "特朗普对副总统万斯重启与伊朗的谈判持开放态度。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "t": "11-11 23:01",
+    "o": "【俄总统助理：普京将于12日会见美谈判代表】当地时间11月11日，总台记者获悉，俄罗斯总统助理乌沙科夫表示，俄总统普京将于12日上午会见威特科夫和库什纳。美国总统特朗普的女婿、美国谈判代表库什纳11日在阿联酋首都阿布扎比表示，他和美国总统特使威特科夫计划12日前往莫斯科，继续推动",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": false
+   },
+   {
+    "t": "11-11 19:18",
+    "o": "【美代表库什纳称将于12日访问莫斯科并与俄总统普京会谈】美国总统特朗普的女婿库什纳当地时间11月11日在出席美俄乌阿布扎比三方会谈后说，他明天将前往莫斯科会见俄罗斯总统普京。第二天的阿布扎比会谈艰难但具有实质性。与会者讨论了所有主要议题，并进行了“良好的意见交流”。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": false
+   },
+   {
+    "t": "11-11 17:34",
+    "o": "【泽连斯基：虽说可能不礼貌 但我的工作不是哄特朗普开心】当地时间11月10日，出访丹麦的乌克兰总统泽连斯基表示，他的工作并非为了取悦美国总统特朗普，其职责是推动美欧参与旨在结束俄乌冲突的谈判。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": false
+   }
+  ],
+  "logCount": 12
  }
 };
