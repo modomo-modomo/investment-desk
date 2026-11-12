@@ -1,0 +1,54 @@
+name: 投资工作台 · 发布页面
+
+# 只要代码或数据有推送，就重新发布一版静态站点
+# 定时抓数仍由 daily.yml 负责，这里只做“把仓库里的文件搬到 Pages”
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "live-data.js"
+      - "live-extra.js"
+      - "live-news.js"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 组装发布目录
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          for f in live-data.js live-extra.js live-news.js; do
+            [ -f "$f" ] && cp "$f" _site/
+          done
+          echo "--- 产物 ---"
+          ls -la _site
+          echo "index.html $(wc -c < _site/index.html) 字节"
+
+      - name: 上传页面产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: 发布到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
