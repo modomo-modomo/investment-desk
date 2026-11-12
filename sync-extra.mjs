@@ -51,8 +51,8 @@ async function yahooAuth() {
 }
 
 /* ---------------- 行情 ---------------- */
-async function chart(symbol, range = "3mo") {
-  const j = await jget(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=${range}&interval=1d&includePrePost=true`);
+async function chart(symbol, range = "3mo", interval = "1d") {
+  const j = await jget(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=${range}&interval=${interval}&includePrePost=true`);
   const r = j?.chart?.result?.[0];
   if (!r) throw new Error(`chart 无结果 ${symbol}`);
   const q = r.indicators.quote[0];
@@ -60,6 +60,7 @@ async function chart(symbol, range = "3mo") {
     date: new Date(t * 1000).toISOString().slice(0, 10),
     close: q.close?.[i] ?? null,
     volume: q.volume?.[i] ?? null,
+    ts: t,
   })).filter((x) => x.close != null);
   return { meta: r.meta, rows };
 }
@@ -153,19 +154,37 @@ for (const [sym, cn] of Object.entries(SECTORS)) {
   } catch {}
 }
 
+/* 加密 24×7：日线最后一根可能"进行中"或 close=null（Yahoo 结算延迟），
+   不能当收盘。口径统一为"昨日 UTC 收盘"：
+   - 价格：1h 线里今日 UTC 0 点前最后一根已收线的收盘（即昨日 23:00–24:00 UTC 的收）
+   - 20 日基准 / 前收：日线序列中已完成的K线 */
+const utcToday = new Date().toISOString().slice(0, 10);
+const prevUTC = new Date(Date.parse(utcToday + "T00:00:00Z") - 86400000).toISOString().slice(0, 10);
+
+async function cryptoClose(sym) {
+  const daily = await chart(sym, "3mo");
+  const done = daily.rows.filter((r) => r.date < utcToday);
+  const base = done.length >= 21 ? done[done.length - 21] : done[0];
+  const prevDay = done[done.length - 1];
+  let price = prevDay.close;
+  try {
+    const h = await chart(sym, "5d", "60m");
+    const cutoff = Date.parse(utcToday + "T00:00:00Z") / 1000 - 1;
+    let lastH = null;
+    for (const r of h.rows) if (r.ts <= cutoff) lastH = r;
+    if (lastH) price = lastH.close;
+  } catch (e) { console.warn(sym + " 小时线取值失败，回退日线:", e.message); }
+  return {
+    price,
+    chg: prevDay ? (price / prevDay.close - 1) * 100 : null,
+    d20: base ? (price / base.close - 1) * 100 : null,
+    date: prevUTC,
+  };
+}
+
 let btc = null, eth = null;
-try {
-  const c = await chart("BTC-USD", "3mo");
-  const last = c.rows[c.rows.length - 1], prev = c.rows[c.rows.length - 2];
-  const base = c.rows.length >= 21 ? c.rows[c.rows.length - 21] : null;
-  btc = { price: last.close, chg: prev ? (last.close / prev.close - 1) * 100 : null, d20: base ? (last.close / base.close - 1) * 100 : null, date: last.date };
-} catch (e) { console.warn("BTC 失败:", e.message); }
-try {
-  const c = await chart("ETH-USD", "3mo");
-  const last = c.rows[c.rows.length - 1], prev = c.rows[c.rows.length - 2];
-  const base = c.rows.length >= 21 ? c.rows[c.rows.length - 21] : null;
-  eth = { price: last.close, chg: prev ? (last.close / prev.close - 1) * 100 : null, d20: base ? (last.close / base.close - 1) * 100 : null, date: last.date };
-} catch (e) { console.warn("ETH 失败:", e.message); }
+try { btc = await cryptoClose("BTC-USD"); } catch (e) { console.warn("BTC 失败:", e.message); }
+try { eth = await cryptoClose("ETH-USD"); } catch (e) { console.warn("ETH 失败:", e.message); }
 
 /* 等权 vs 市值加权：个股分化的可计算代理（RSP / SPY） */
 let breadth = null;
