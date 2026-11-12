@@ -445,6 +445,113 @@ const analyzeHighs = (days) => {
 const highs = { date: etToday, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
 console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条");
 
+/* ---------------- 盘前 / 盘后异动监控池 ----------------
+   与「每日资讯」的 14 只研究标的**解耦**：异动是市场行为，扫描面必须覆盖大中市值
+   活跃股，否则像 NVDA 这种不在研究池里的大票会整体漏掉（2026-11-12 盘后 NVDA -8.6% 就是这样漏的）。
+   只取 quote（不拉 K 线），成本很低，可以放宽到 50+ 只。 */
+const MOVER_POOL = [
+  /* 半导体 / 硬件 */
+  { s: "NVDA", cn: "英伟达", en: "NVIDIA", sec: "半导体" },
+  { s: "AVGO", cn: "博通", en: "BROADCOM", sec: "半导体" },
+  { s: "AMD", cn: "超威半导体", en: "AMD", sec: "半导体" },
+  { s: "TSM", cn: "台积电", en: "TAIWAN SEMICONDUCTOR", sec: "半导体" },
+  { s: "MU", cn: "美光", en: "MICRON", sec: "半导体" },
+  { s: "MRVL", cn: "迈威尔", en: "MARVELL", sec: "半导体" },
+  { s: "ARM", cn: "安谋", en: "Arm Holdings", sec: "半导体" },
+  { s: "ASML", cn: "阿斯麦", en: "ASML", sec: "半导体" },
+  { s: "LRCX", cn: "泛林", en: "LAM RESEARCH", sec: "半导体" },
+  { s: "AMAT", cn: "应用材料", en: "APPLIED MATERIALS", sec: "半导体" },
+  { s: "KLAC", cn: "科磊", en: "KLA", sec: "半导体" },
+  { s: "QCOM", cn: "高通", en: "QUALCOMM", sec: "半导体" },
+  { s: "INTC", cn: "英特尔", en: "INTEL", sec: "半导体" },
+  { s: "ONTO", cn: "", en: "ONTO INNOVATION", sec: "半导体" },
+  { s: "TER", cn: "泰瑞达", en: "TERADYNE", sec: "半导体" },
+  { s: "SMCI", cn: "超微电脑", en: "SUPER MICRO", sec: "硬件" },
+  { s: "DELL", cn: "戴尔", en: "DELL", sec: "硬件" },
+  { s: "ANET", cn: "", en: "ARISTA", sec: "硬件" },
+  /* 软件 / 云 / 安全 */
+  { s: "MSFT", cn: "微软", en: "MICROSOFT", sec: "软件" },
+  { s: "ORCL", cn: "甲骨文", en: "ORACLE", sec: "软件" },
+  { s: "PLTR", cn: "", en: "Palantir", sec: "软件" },
+  { s: "SNOW", cn: "", en: "Snowflake", sec: "软件" },
+  { s: "DDOG", cn: "", en: "Datadog", sec: "软件" },
+  { s: "MDB", cn: "", en: "MongoDB", sec: "软件" },
+  { s: "CRM", cn: "", en: "Salesforce", sec: "软件" },
+  { s: "NOW", cn: "", en: "ServiceNow", sec: "软件" },
+  { s: "NET", cn: "", en: "CLOUDFLARE", sec: "网安" },
+  { s: "RBRK", cn: "", en: "RUBRIK", sec: "网安" },
+  { s: "OKTA", cn: "", en: "OKTA", sec: "网安" },
+  { s: "CHKP", cn: "", en: "CHECK POINT", sec: "网安" },
+  { s: "CRWD", cn: "", en: "CrowdStrike", sec: "网安" },
+  { s: "PANW", cn: "", en: "Palo Alto", sec: "网安" },
+  /* 平台 / 互联网 */
+  { s: "AAPL", cn: "苹果", en: "APPLE", sec: "平台" },
+  { s: "GOOGL", cn: "谷歌", en: "ALPHABET", sec: "平台" },
+  { s: "AMZN", cn: "亚马逊", en: "AMAZON", sec: "平台" },
+  { s: "META", cn: "脸书", en: "META", sec: "平台" },
+  { s: "NFLX", cn: "奈飞", en: "NETFLIX", sec: "平台" },
+  { s: "SHOP", cn: "", en: "Shopify", sec: "平台" },
+  { s: "UBER", cn: "优步", en: "UBER", sec: "平台" },
+  { s: "APP", cn: "", en: "AppLovin", sec: "平台" },
+  /* AI 基础设施 / 电力 */
+  { s: "VRT", cn: "", en: "Vertiv", sec: "AI基建" },
+  { s: "CEG", cn: "", en: "Constellation Energy", sec: "AI电力" },
+  { s: "GEV", cn: "", en: "GE Vernova", sec: "AI电力" },
+  { s: "OKLO", cn: "", en: "Oklo", sec: "AI电力" },
+  { s: "SMR", cn: "", en: "NuScale", sec: "AI电力" },
+  { s: "BE", cn: "", en: "BLOOM ENERGY", sec: "AI电力" },
+  { s: "NBIS", cn: "", en: "NEBIUS", sec: "AI基建" },
+  { s: "IREN", cn: "", en: "IREN", sec: "AI基建" },
+  { s: "CRWV", cn: "", en: "CoreWeave", sec: "AI基建" },
+  { s: "APLD", cn: "", en: "Applied Digital", sec: "AI基建" },
+  /* 加密相关 */
+  { s: "COIN", cn: "", en: "Coinbase", sec: "加密" },
+  { s: "MSTR", cn: "", en: "Strategy", sec: "加密" },
+  { s: "HOOD", cn: "", en: "Robinhood", sec: "加密" },
+  /* 新势力 / 车 */
+  { s: "TSLA", cn: "特斯拉", en: "TESLA", sec: "汽车" },
+  { s: "RIVN", cn: "", en: "Rivian", sec: "汽车" },
+  { s: "LCID", cn: "", en: "Lucid", sec: "汽车" },
+  { s: "NIO", cn: "蔚来", en: "NIO", sec: "汽车" },
+  { s: "XPEV", cn: "小鹏", en: "XPENG", sec: "汽车" },
+  { s: "LI", cn: "理想", en: "LI AUTO", sec: "汽车" },
+];
+
+const moverSyms = MOVER_POOL.map((x) => x.s);
+const mvQuote = {};
+for (let i = 0; i < moverSyms.length; i += 20) {
+  Object.assign(mvQuote, await quotes(moverSyms.slice(i, i + 20)));
+  await new Promise((r) => setTimeout(r, 150));
+}
+const numOf2 = (v) => (v == null ? null : +Number(v).toFixed(2));
+const etDayOf = (ms) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(ms));
+const moverRows = MOVER_POOL.map((m) => {
+  const q = mvQuote[m.s];
+  if (!q) return null;
+  return {
+    sym: m.s, cn: m.cn, en: m.en, sec: m.sec,
+    name: m.cn ? m.cn + "(" + m.en + ")" : m.en,
+    px: numOf2(q.regularMarketPrice),
+    chg: numOf2(q.regularMarketChangePercent),
+    pre: numOf2(q.preMarketChangePercent),
+    post: numOf2(q.postMarketChangePercent),
+    prePx: numOf2(q.preMarketPrice),
+    postPx: numOf2(q.postMarketPrice),
+    state: q.marketState || "",
+    date: q.regularMarketTime ? etDayOf(q.regularMarketTime * 1000).replace(/-/g, "") : etToday.replace(/-/g, ""),
+  };
+}).filter(Boolean);
+
+const MV_EMIT = Number(process.env.MV_EMIT || 2.5); /* 抓取侧先放宽，页面按 4% 展示 */
+const movers = {
+  date: etToday.replace(/-/g, ""),
+  ts: new Date().toISOString(),
+  pool: moverRows.length,
+  pre: moverRows.filter((x) => x.pre != null && Math.abs(x.pre) >= MV_EMIT).sort((a, b) => Math.abs(b.pre) - Math.abs(a.pre)),
+  post: moverRows.filter((x) => x.post != null && Math.abs(x.post) >= MV_EMIT).sort((a, b) => Math.abs(b.post) - Math.abs(a.post)),
+};
+console.log("异动池：" + moverRows.length + " 只 · 盘前≥" + MV_EMIT + "% " + movers.pre.length + " 条 · 盘后≥" + MV_EMIT + "% " + movers.post.length + " 条");
+
 const out = {
   meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
   quotes: quotesOut, sectors, btc, eth, breadth, spxVol,
@@ -455,6 +562,7 @@ const out = {
   crosscheck,
   tracks: trackData,
   highs,
+  movers,
 };
 writeFileSync("cal-cache.json", JSON.stringify(CALCACHE, null, 1), "utf8");
 writeFileSync("live-extra.js", "window.YF_DATA = " + JSON.stringify(out, null, 1) + ";\n", "utf8");

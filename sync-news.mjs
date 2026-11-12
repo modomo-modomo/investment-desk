@@ -217,9 +217,95 @@ trumpLog = trumpLog.filter((x) => x.t.slice(0, 5) >= cutoffMD).slice(0, 40);
 writeFileSync("trump-log.json", JSON.stringify(trumpLog, null, 1), "utf8");
 console.log("川普语录：语料命中 " + trumpHits.length + " 条，本轮新增 " + trumpItems.filter((x) => x.isNew).length + " 条，日志 " + trumpLog.length + " 条");
 
+/* ---- 盘前 / 盘后大幅异动的事件归因 ----
+   池子来自 live-extra.js 的 movers（大中市值活跃股，与业绩标的池解耦）。
+   命中「融资 / 增发 / 评级 / 订单 / 指引 / 回购 / 减持」这类因果词优先，其次取最新一条。 */
+const MV_MIN = 4;
+const mvSeen = new Set();
+const mvTargets = [];
+for (const ses of ["post", "pre"]) {
+  for (const m of (Y.movers && Y.movers[ses]) || []) {
+    if (mvSeen.has(m.sym)) continue;
+    if (Math.abs(m[ses] || 0) < MV_MIN) continue;
+    mvSeen.add(m.sym);
+    mvTargets.push({ ...m, ses: ses, dom: m[ses], up: (m[ses] || 0) > 0 });
+  }
+}
+
+/* 本场次时间窗口（北京时间）。原因必须发生在这次异动的窗口内，
+   否则很容易把“前一天的旧闻”当成本次下跌的理由。
+   - 盘后：美东 D 日 16:00 起 → 北京 D+1 04:00 ~ 14:00
+   - 盘前：美东 D 日 04:00 起 → 北京 D 16:00 ~ 22:30
+   （11 月为 EST，UTC-5，窗口已放宽 1 小时容忍） */
+function winOf(m) {
+  const D = String(m.date || "").replace(/-/g, "");
+  if (D.length !== 8) return null;
+  const base = new Date(D.slice(0, 4) + "-" + D.slice(4, 6) + "-" + D.slice(6, 8) + "T00:00:00+08:00").getTime();
+  const at = (days, h, mi) => base + days * 864e5 + h * 3600e3 + (mi || 0) * 60e3;
+  return m.ses === "post" ? [at(1, 4, 0), at(1, 14, 0)] : [at(0, 16, 0), at(0, 22, 30)];
+}
+
+/* 强因果事件词：出现即说明是“有具体事情”，而不是盘面综述 */
+const STRONG = /融资|贷款|增发|配售|可转债|发债|定增|回购|减持|增持|评级|目标价|上调|下调|指引|订单|合同|中标|收购|并购|诉讼|调查|罚款|召回|出口管制|禁令|裁员|离职|辞职|CEO|CFO|投产|扩产|获批|业绩预告|下调预期/i;
+/* 盘面综述 / ETF 点评：这类是二手报道，不能当归因 */
+const SECONDARY = /ETF|标的指数|成分股|基金|收涨|收跌|吸金|美股三大指数/i;
+const UP_RE = /涨|走强|飙升|拉升|走高|反弹|上涨|涨幅|新高/;
+const DOWN_RE = /跌|下挫|下滑|走低|重挫|大跌|暴跌|承压|回落|跳水|跌幅|新低/i;
+const parsed = (x) => new Date(String(x.showTime || "").replace(/-/g, "/")).getTime();
+
+const mvNews = {};
+for (const m of mvTargets) {
+  const als = [m.cn, m.en].filter((x) => x && String(x).length >= 3).map(String);
+  if (!als.length) als.push(m.sym);
+  const hits = corpus.filter((x) => als.some((a) => (x.summary || x.title || "").includes(a)));
+  const win = winOf(m);
+  const inWin = win ? hits.filter((x) => { const t = parsed(x); return !isNaN(t) && t >= win[0] && t <= win[1]; }) : [];
+
+  if (!inWin.length) {
+    const latest = hits.filter((x) => !isNaN(parsed(x))).sort((a, b) => parsed(b) - parsed(a))[0];
+    mvNews[m.sym] = {
+      ok: false,
+      note: latest
+        ? "本场次窗口内未见对应快讯；最近相关：" + norm(latest.title || "").slice(0, 60) + "（" + String(latest.showTime).slice(5, 16) + "）"
+        : "本场次窗口内未见对应快讯，需人工核对公告/研报",
+    };
+    continue;
+  }
+
+  /* 打分：强事件 +3；盘面综述 −3；方向一致 +2、相反 −2；离收盘越近越好 */
+  let best = null, bestScore = -99;
+  for (const x of inWin) {
+    const txt = (x.title || "") + " " + (x.summary || "");
+    let sc = 0;
+    if (STRONG.test(txt)) sc += 3;
+    if (SECONDARY.test(txt)) sc -= 3;
+    const same = m.up ? UP_RE.test(txt) : DOWN_RE.test(txt);
+    const opp = m.up ? DOWN_RE.test(txt) : UP_RE.test(txt);
+    if (same) sc += 2;
+    if (opp && !same) sc -= 2;
+    if (win && parsed(x) - win[0] <= 6 * 3600e3) sc += 1; /* 收盘/开盘后 6h 内最贴近本次异动 */
+    if (sc > bestScore || (sc === bestScore && parsed(x) > parsed(best || x))) { best = x; bestScore = sc; }
+  }
+  const txt = (best.title || "") + " " + (best.summary || "");
+  mvNews[m.sym] = {
+    ok: true,
+    title: norm(best.title || "").slice(0, 90),
+    summary: norm(best.summary || "").slice(0, 170),
+    t: String(best.showTime || "").slice(5, 16),
+    src: "东方财富 7×24",
+    cause: STRONG.test(txt),
+    score: bestScore,
+    cand: inWin.length,
+  };
+}
+const mvOk = Object.values(mvNews).filter((x) => x.ok).length;
+const mvCause = Object.values(mvNews).filter((x) => x.cause).length;
+console.log("异动归因：" + mvTargets.length + " 只待归因，窗口内匹配 " + mvOk + " 只，其中命中具体事件 " + mvCause + " 只");
+
 writeFileSync("live-news.js", "window.NEWS_DATA = " + JSON.stringify({
   meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Yahoo 标题", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
   items: results,
   trump: { items: trumpItems, logCount: trumpLog.length },
+  moversNews: mvNews,
 }, null, 1) + ";\n", "utf8");
 console.log(`live-news.js｜${fullCount}/${list.length} 家有业绩数字，${okCount}/${list.length} 家有内容`);
