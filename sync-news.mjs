@@ -227,6 +227,7 @@ for (const ses of ["post", "pre"]) {
   for (const m of (Y.movers && Y.movers[ses]) || []) {
     if (mvSeen.has(m.sym)) continue;
     if (Math.abs(m[ses] || 0) < MV_MIN) continue;
+    if (m.earn) continue; /* 财报驱动的归 ① 业绩表，这里只处理非财报驱动 */
     mvSeen.add(m.sym);
     mvTargets.push({ ...m, ses: ses, dom: m[ses], up: (m[ses] || 0) > 0 });
   }
@@ -252,28 +253,77 @@ const SECONDARY = /ETF|标的指数|成分股|基金|收涨|收跌|吸金|美股
 const UP_RE = /涨|走强|飙升|拉升|走高|反弹|上涨|涨幅|新高/;
 const DOWN_RE = /跌|下挫|下滑|走低|重挫|大跌|暴跌|承压|回落|跳水|跌幅|新低/i;
 const parsed = (x) => new Date(String(x.showTime || "").replace(/-/g, "/")).getTime();
+/* Yahoo 新闻兜底：东财快讯对中小盘覆盖有限，这些标的用英文媒体标题补（标注来源语言） */
+async function yahooMoverNews(sym, win) {
+  if (!win) return null;
+  try {
+    const r = await fetch(`https://query1.finance.yahoo.com/v1/finance/search?q=${encodeURIComponent(sym)}&newsCount=15&quotesCount=0`, { headers: { "User-Agent": UA } });
+    const j = await r.json();
+    const inw = (j.news || []).filter((x) => {
+      const t = (x.providerPublishTime || 0) * 1000;
+      return t >= win[0] && t <= win[1];
+    });
+    if (!inw.length) return null;
+    inw.sort((a, b) => (b.providerPublishTime || 0) - (a.providerPublishTime || 0));
+    const n = inw[0];
+    const bj = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date((n.providerPublishTime || 0) * 1000)).reduce((a, x) => (a[x.type] = x.value, a), {});
+    return {
+      title: n.title,
+      t: bj.month + "-" + bj.day + " " + bj.hour + ":" + bj.minute,
+      src: (n.publisher || "Yahoo Finance") + "（英文）",
+      url: n.link,
+    };
+  } catch { return null; }
+}
 
 const mvNews = {};
+/* 标题里必须真的出现该公司，否则不算“因此事而动” */
+const titleHit = (t, m) => {
+  const s = String(t || "").toLowerCase();
+  if (m.sym && m.sym.length >= 3 && s.includes(String(m.sym).toLowerCase())) return true;
+  if (m.cn && s.includes(String(m.cn).toLowerCase())) return true;
+  if (m.en && String(m.en).length >= 5) {
+    const w = String(m.en).toLowerCase().split(/[ ,]+/)[0];
+    if (w.length >= 5 && s.includes(w)) return true;
+  }
+  return false;
+};
 for (const m of mvTargets) {
-  const als = [m.cn, m.en].filter((x) => x && String(x).length >= 3).map(String);
-  if (!als.length) als.push(m.sym);
-  const hits = corpus.filter((x) => als.some((a) => (x.summary || x.title || "").includes(a)));
+  /* 别名门槛：中文名 ≥2 字（“英伟达”只有 3 个字符，不能按英文 5 字符算）、英文名 ≥5 字符；
+     代码始终作为别名之一（≥3 字符，大写更不易误伤） */
+  const als = [];
+  if (m.cn && String(m.cn).length >= 2) als.push(String(m.cn));
+  if (m.en && String(m.en).length >= 5) als.push(String(m.en));
+  if (m.sym && String(m.sym).length >= 3) als.push(String(m.sym));
+  /* 公司必须是“标题主语”，或出现在摘要开头 —— 仅在正文后半段被提及的不算
+     （反例：「杭州园林签署 GPU 采购合同」里提到英伟达，不能当成 NVDA 下跌的原因） */
+  const hitOk = (x) => {
+    const t = String(x.title || ""), s = String(x.summary || "");
+    return als.some((a) => t.includes(a)) || als.some((a) => s.slice(0, 60).includes(a));
+  };
+  const hits = als.length ? corpus.filter(hitOk) : [];
   const win = winOf(m);
   const inWin = win ? hits.filter((x) => { const t = parsed(x); return !isNaN(t) && t >= win[0] && t <= win[1]; }) : [];
 
   if (!inWin.length) {
+    const yn = await yahooMoverNews(m.sym, win);
+    if (yn && titleHit(yn.title, m)) {
+      mvNews[m.sym] = { ok: true, title: yn.title, summary: "", t: yn.t, src: yn.src, cause: false, en: true };
+      continue;
+    }
     const latest = hits.filter((x) => !isNaN(parsed(x))).sort((a, b) => parsed(b) - parsed(a))[0];
     mvNews[m.sym] = {
       ok: false,
       note: latest
-        ? "本场次窗口内未见对应快讯；最近相关：" + norm(latest.title || "").slice(0, 60) + "（" + String(latest.showTime).slice(5, 16) + "）"
-        : "本场次窗口内未见对应快讯，需人工核对公告/研报",
+        ? "原因未知（本场次窗口内未检索到对应消息；最近相关：" + norm(latest.title || "").slice(0, 48) + "，" + String(latest.showTime).slice(5, 16) + "）"
+        : "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）",
     };
     continue;
   }
 
   /* 打分：强事件 +3；盘面综述 −3；方向一致 +2、相反 −2；离收盘越近越好 */
-  let best = null, bestScore = -99;
+  let best = null, bestScore = -99, bestMismatch = false;
   for (const x of inWin) {
     const txt = (x.title || "") + " " + (x.summary || "");
     let sc = 0;
@@ -284,7 +334,9 @@ for (const m of mvTargets) {
     if (same) sc += 2;
     if (opp && !same) sc -= 2;
     if (win && parsed(x) - win[0] <= 6 * 3600e3) sc += 1; /* 收盘/开盘后 6h 内最贴近本次异动 */
-    if (sc > bestScore || (sc === bestScore && parsed(x) > parsed(best || x))) { best = x; bestScore = sc; }
+    if (sc > bestScore || (sc === bestScore && parsed(x) > parsed(best || x))) {
+      best = x; bestScore = sc; bestMismatch = opp && !same;
+    }
   }
   const txt = (best.title || "") + " " + (best.summary || "");
   mvNews[m.sym] = {
@@ -293,7 +345,8 @@ for (const m of mvTargets) {
     summary: norm(best.summary || "").slice(0, 170),
     t: String(best.showTime || "").slice(5, 16),
     src: "东方财富 7×24",
-    cause: STRONG.test(txt),
+    cause: STRONG.test(txt) && !bestMismatch,
+    mismatch: bestMismatch,
     score: bestScore,
     cand: inWin.length,
   };

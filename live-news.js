@@ -1,6 +1,6 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-12T07:21:27.405Z",
+  "syncedAt": "2026-11-12T07:40:12.341Z",
   "source": "东方财富 7×24 / Yahoo 标题",
   "corpus": 2300,
   "total": 16,
@@ -339,6 +339,10 @@ window.NEWS_DATA = {
   "logCount": 12
  },
  "moversNews": {
+  "APPN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
   "NVDA": {
    "ok": true,
    "title": "英伟达盘后跌超8%！谁能接黄仁勋的班？",
@@ -346,8 +350,13 @@ window.NEWS_DATA = {
    "t": "11-12 12:53",
    "src": "东方财富 7×24",
    "cause": true,
+   "mismatch": false,
    "score": 5,
-   "cand": 17
+   "cand": 15
+  },
+  "SHAZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "CRWV": {
    "ok": true,
@@ -356,34 +365,105 @@ window.NEWS_DATA = {
    "t": "11-12 07:37",
    "src": "东方财富 7×24",
    "cause": true,
+   "mismatch": false,
    "score": 4,
-   "cand": 5
+   "cand": 3
+  },
+  "SLBT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GLXY": {
+   "ok": true,
+   "title": "Morgan Stanley cuts Galaxy stock target after Democrat wins Texas",
+   "summary": "",
+   "t": "11-12 07:21",
+   "src": "TheStreet（英文）",
+   "cause": false,
+   "en": true
+  },
+  "ENHA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "SMCI": {
    "ok": false,
-   "note": "本场次窗口内未见对应快讯；最近相关：超微电脑宣布H15服务器系列开始出货 搭载AMD第六代EPYC 9006系列处理器（11-11 22:07）"
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：超微电脑宣布H15服务器系列开始出货 搭载AMD第六代EPYC 9006系列处理器，11-11 22:07）"
+  },
+  "VERX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NRGV": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NOG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BUUU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "AMD": {
    "ok": false,
-   "note": "本场次窗口内未见对应快讯；最近相关：李飞飞对话苏姿丰：机器人将成为“算力新引擎”（11-12 14:47）"
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：超微电脑宣布H15服务器系列开始出货 搭载AMD第六代EPYC 9006系列处理器，11-11 22:07）"
+  },
+  "BEAM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "IREN": {
    "ok": false,
-   "note": "本场次窗口内未见对应快讯；最近相关：今夜直线拉升！一则利好全线引爆 AI交易卷土重来！（11-11 19:50）"
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AAOI": {
+   "ok": true,
+   "title": "Applied Optoelectronics (AAOI) Stock Could Still Be Undervalued On Its Huge Five Year Run",
+   "summary": "",
+   "t": "11-12 10:17",
+   "src": "Simply Wall St.（英文）",
+   "cause": false,
+   "en": true
+  },
+  "VICR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VINP": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "ONTO": {
-   "ok": false,
-   "note": "本场次窗口内未见对应快讯，需人工核对公告/研报"
+   "ok": true,
+   "title": "Onto Innovation (ONTO) Stock Fair Value Falls After Analysts Cut Targets On Lower Multiples",
+   "summary": "",
+   "t": "11-12 08:17",
+   "src": "Simply Wall St.（英文）",
+   "cause": false,
+   "en": true
   },
   "NBIS": {
    "ok": true,
-   "title": "AI交易热情重燃 纳斯达克100指数收涨超2%并在盘中收复中期选举以来全部跌幅",
-   "summary": "截至收盘，纳斯达克100指数收涨2.28%，纳斯达克综合指数收涨1.6%，道琼斯指数收涨0.48%，标普500指数收涨1.31%。AI产业链交易热潮回归，CoreWeave涨超24%，NEBIUS涨超15%，甲骨文涨超8%。",
-   "t": "11-12 05:00",
-   "src": "东方财富 7×24",
+   "title": "Nebius Group (NBIS) Gets Gartner Backing Through A $13 Million AI Platform Win",
+   "summary": "",
+   "t": "11-12 13:18",
+   "src": "Simply Wall St.（英文）",
    "cause": false,
-   "score": 0,
-   "cand": 1
+   "en": true
+  },
+  "NVMI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CIFR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   }
  }
 };

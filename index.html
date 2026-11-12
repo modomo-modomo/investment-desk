@@ -1473,10 +1473,8 @@ function hydrateExtra(Y){
     DATA.moversH52 = h52.filter(x=>x.dist>=-3);
     DATA.moversHall = h52.slice(-5).reverse();
 
-    /* 盘前 / 盘后非财报驱动异动：
-       数据源是 live-extra.js 的 movers —— 独立的「大中市值活跃股」监控池（50+ 只），
-       不再只看研究标的，避免 NVDA 这类不在池里的大票整体漏掉。
-       归因来自 live-news.js 的 moversNews（按场次时间窗口匹配快讯）。 */
+    /* 盘前 / 盘后异动：**全市场扫描**（live-extra.movers，约 3000+ 只 ≥5 亿美元市值）
+       分两类：财报/指引驱动（earn=true，进 ① 业绩表）与非财报驱动（进 ② ，需归因）。 */
     const MV_MIN = 4;
     const mvNewsOf = (k) => {
       const N = (typeof window !== "undefined" && window.NEWS_DATA) ? window.NEWS_DATA : null;
@@ -1485,25 +1483,30 @@ function hydrateExtra(Y){
     const shape = (x, ses) => {
       const n = mvNewsOf(x.sym);
       return {
-        t: x.sym, n: x.name, sec: x.sec,
+        t: x.sym, n: x.name, sec: x.sec, earn: !!x.earn,
         mv: x[ses],
         px: ses === "pre" ? x.prePx : x.postPx,
         base: x.px,
-        news: (n && n.ok) ? { title: n.title, sum: n.summary, t: n.t, src: n.src, cause: !!n.cause } : null,
+        news: (n && n.ok) ? { title: n.title, sum: n.summary, t: n.t, src: n.src, cause: !!n.cause, mismatch: !!n.mismatch, en: !!n.en } : null,
         note: (n && !n.ok) ? n.note : null,
       };
     };
     if (Y.movers) {
-      const preEarn = (Y.earnings.pre || []).map(r => r.symbol);
-      const postEarn = (Y.earnings.post || []).map(r => r.symbol);
-      DATA.moversPre = (Y.movers.pre || [])
-        .filter(x => Math.abs(x.pre || 0) >= MV_MIN && !preEarn.includes(x.sym))
-        .map(x => shape(x, "pre")).sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
-      DATA.moversPost = (Y.movers.post || [])
-        .filter(x => Math.abs(x.post || 0) >= MV_MIN && !postEarn.includes(x.sym))
-        .map(x => shape(x, "post")).sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
+      const pick = (ses) => (Y.movers[ses] || [])
+        .filter(x => Math.abs(x[ses] || 0) >= MV_MIN)
+        .map(x => shape(x, ses))
+        .sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
+      const allPre = pick("pre"), allPost = pick("post");
+      /* ② 只留非财报驱动；财报驱动的交给 ① 表（详表 + 追加简表） */
+      DATA.moversPre = allPre.filter(x => !x.earn);
+      DATA.moversPost = allPost.filter(x => !x.earn);
+      DATA.earnMvPre = allPre.filter(x => x.earn);
+      DATA.earnMvPost = allPost.filter(x => x.earn);
       DATA.moversPool = Y.movers.pool || 0;
+      DATA.moversUniverse = Y.movers.universe || 0;
       DATA.moversDate = Y.movers.date || "";
+      DATA.earnPreTotal = Y.movers.preTotal || 0;
+      DATA.earnPostTotal = Y.movers.postTotal || 0;
     } else {
       /* 旧版 live-extra（无 movers 字段）兜底：退回只看研究标的 */
       const w = (typeof window !== "undefined" && window.WIND_LIVE) ? window.WIND_LIVE : null;
@@ -1514,9 +1517,9 @@ function hydrateExtra(Y){
         Object.keys(CODE_OF).forEach(k => {
           const q = w.stocks[CODE_OF[k]]; if (!q) return;
           if (q.pre != null && Math.abs(q.pre) >= MV_MIN && !preList.includes(k))
-            DATA.moversPre.push({ t: k, n: nameOf(k), mv: q.pre, news: null, note: null });
+            DATA.moversPre.push({ t: k, n: nameOf(k), mv: q.pre, news: null, note: null, earn: false });
           if (q.post != null && Math.abs(q.post) >= MV_MIN && !postList.includes(k))
-            DATA.moversPost.push({ t: k, n: nameOf(k), mv: q.post, news: null, note: null });
+            DATA.moversPost.push({ t: k, n: nameOf(k), mv: q.post, news: null, note: null, earn: false });
         });
         DATA.moversPre.sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
         DATA.moversPost.sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
@@ -1737,8 +1740,8 @@ function viewBrief(){
 
   /* ---- 04 盘前：①业绩/异动 ②非财报异动 ---- */
   const mvTbl=(rows,empty,ses)=>{
-    const pool=DATA.moversPool?(" · 监控池 "+DATA.moversPool+" 只大中市值活跃股"):"";
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（口径：|'+ses+'涨跌| ≥ 4%，已剔除当日披露财报的标的'+pool+'）</span></div>';
+    const cov=DATA.moversPool?(" · 全市场扫描 "+(DATA.moversUniverse||DATA.moversPool)+" 只，取到报价 "+(DATA.moversPool)+" 只"):"";
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · |'+ses+'涨跌| ≥ 4%'+cov+'）</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
        '<th style="width:158px">标的</th><th class="num" style="width:76px">涨跌</th>'+
        '<th class="num" style="width:88px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
@@ -1751,9 +1754,10 @@ function viewBrief(){
           +(r.news.cause?'<span style="display:inline-block;padding:0 5px;border-radius:4px;background:#fbeaea;color:#b4322f;font-size:9px;font-weight:700;margin-right:5px">事件</span>':'')
           +'<b>'+esc(r.news.title)+'</b></div>'
           +(r.news.sum?'<div class="tiny muted" style="margin-top:3px;line-height:1.65">'+esc(r.news.sum)+'</div>':'')
+          +((r.news.mismatch)?'<div class="tiny" style="margin-top:3px;color:#a8760f">⚠ 该消息方向与股价相反，仅作参考，不构成本次异动的解释</div>':'')
           +'<div class="tiny muted" style="margin-top:3px">'+esc(r.news.src||"")+(r.news.t?" · "+esc(r.news.t):"")+'</div>';
       }else{
-        reason='<span class="tiny muted">'+esc(r.note||"本场次窗口内未见对应快讯，需人工核对公告/研报")+'</span>';
+        reason='<span class="tiny muted">'+esc(r.note||"原因未知（本场次窗口内未检索到对应消息，需人工核对公告与研报）")+'</span>';
       }
       h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+(r.sec?" · "+esc(r.sec):"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
@@ -1763,12 +1767,34 @@ function viewBrief(){
     return h+'</tbody></table></div>';
   };
 
+  /* ①b：全市场扫描里“确属财报驱动、但不在上面 8 家详表”的异动
+     （Nasdaq 日历按市值只详列 8 家，其余披露公司如果盘前/盘后大幅波动，在这里补齐） */
+  const normSym=(s)=>String(s||"").replace(/\./g,"-");
+  const preSymSet=new Set(((b.pre&&b.pre.rows)||[]).map(r=>normSym(r.symbol)));
+  const postSymSet=new Set(((b.post&&b.post.rows)||[]).map(r=>normSym(r.symbol)));
+  const earnMvTbl=(rows,ses)=>{
+    if(!rows.length) return '';
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 阈值 |'+ses+'涨跌| ≥ 4%）</span></div>';
+    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+       '<th style="width:158px">标的</th><th class="num" style="width:76px">涨跌</th>'+
+       '<th class="num" style="width:88px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
+       '<th>说明</th></tr></thead><tbody>';
+    rows.forEach(r=>{
+      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+(r.sec?" · "+esc(r.sec):"")+'</div></td>'+
+        '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
+        '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
+        '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进详表（日历按市值取前 8 家），业绩明细待补。</span></td></tr>';
+    });
+    return h+'</tbody></table></div>';
+  };
+
   h+='<div class="sec">'+secHead("04","盘前",
       "按披露场次分（非更新批次）· ① 当日盘前业绩 / 异动 · ② 非财报驱动异动",
       "<span class='upd'>计划 20:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩 / 异动（Nasdaq 日历 · 大/中市值 3% · 中小市值 5%）</span></div>';
   h+=earnTable(b.pre,"pre");
-  h+=mvTbl(DATA.moversPre||[],"当日盘前无非财报驱动的显著异动（或尚在盘前时段，20:30 更新回填）","盘前");
+  h+=earnMvTbl((DATA.earnMvPre||[]).filter(x=>!preSymSet.has(x.t)),"盘前");
+  h+=mvTbl(DATA.moversPre||[],"当日盘前全市场无非财报驱动的显著异动（或尚在盘前时段，20:30 场回填）","盘前");
 
   /* ---- 05 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("05","盘后",
@@ -1776,9 +1802,10 @@ function viewBrief(){
       "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩 / 异动（盘后 > 3% · 附潜在原因分析）</span></div>';
   h+=earnTable(b.post,"post");
-  h+=mvTbl(DATA.moversPost||[],"当日盘后无非财报驱动的显著异动","盘后");
+  h+=earnMvTbl((DATA.earnMvPost||[]).filter(x=>!postSymSet.has(x.t)),"盘后");
+  h+=mvTbl(DATA.moversPost||[],"当日盘后全市场无非财报驱动的显著异动","盘后");
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
-     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写；⑥<b>盘前/盘后异动</b>来自独立的 <b>大中市值活跃股监控池</b>（与上面 8 家业绩标的无关，当前 '+((DATA.moversPool)||"—")+' 只，只取实时 quote），归因按<b>本场次时间窗口</b>匹配东财 7×24 快讯——窗口外的旧闻不采用，未匹配到事件的如实标“未见对应快讯”，<b>不做推测性归因</b>。</div></div>';
+     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥5 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（覆盖美股市值与成交额 98%+，nano-cap 不扫）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 的原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>“原因未知”</b>，<b>不做推测性归因</b>。</div></div>';
 
   h+='<div class="sec">'+secHead("06","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
       "<span class='upd'>"+b.research.length+" 篇累计</span><span class='upd hot'>红色 = 本轮新增</span>");

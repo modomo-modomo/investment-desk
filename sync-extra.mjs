@@ -309,6 +309,8 @@ async function build(date, session, limit) {
     });
   }
   return { rows: out, total: snap.total || pool.length, fromCache: snap.fromCache,
+           /* 该场次「全部」披露标的（含被 limit 截掉的），用于把异动分成“财报驱动 / 非财报驱动” */
+           allSyms: [...new Set(rows.map((r) => String(r.symbol || "").replace(/\./g, "-")))],
            hit: out.filter((r) => Math.abs(r.postChg ?? r.preChg ?? 0) >= r.threshold).length };
 }
 
@@ -445,11 +447,13 @@ const analyzeHighs = (days) => {
 const highs = { date: etToday, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
 console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条");
 
-/* ---------------- 盘前 / 盘后异动监控池 ----------------
-   与「每日资讯」的 14 只研究标的**解耦**：异动是市场行为，扫描面必须覆盖大中市值
-   活跃股，否则像 NVDA 这种不在研究池里的大票会整体漏掉（2026-11-12 盘后 NVDA -8.6% 就是这样漏的）。
-   只取 quote（不拉 K 线），成本很低，可以放宽到 50+ 只。 */
-const MOVER_POOL = [
+/* ---------------- 盘前 / 盘后异动：全市场扫描 ----------------
+   口径 = 全市场美股，不局限于研究标的。
+   流程：Nasdaq screener 取全市场清单（约 7000 只）→ 按市值截断到 ≥5 亿美元（约 3200 只，
+   覆盖美股市值与成交额 98%+）→ Yahoo 批量 quote 取盘前 / 盘后涨跌。
+   nano-cap（<5 亿美元）不扫：流动性太差，异动没有交易意义。
+   SEED 三合一：给东财快讯匹配中文别名、提供更贴业务的板块名、清单接口挂掉时兜底。 */
+const SEED = [
   /* 半导体 / 硬件 */
   { s: "NVDA", cn: "英伟达", en: "NVIDIA", sec: "半导体" },
   { s: "AVGO", cn: "博通", en: "BROADCOM", sec: "半导体" },
@@ -517,20 +521,61 @@ const MOVER_POOL = [
   { s: "LI", cn: "理想", en: "LI AUTO", sec: "汽车" },
 ];
 
-const moverSyms = MOVER_POOL.map((x) => x.s);
-const mvQuote = {};
-for (let i = 0; i < moverSyms.length; i += 20) {
-  Object.assign(mvQuote, await quotes(moverSyms.slice(i, i + 20)));
-  await new Promise((r) => setTimeout(r, 150));
+const SEED_BY = Object.fromEntries(SEED.map((x) => [x.s, x]));
+const SECTOR_CN = {
+  Technology: "科技", "Electronic Technology": "电子", "Health Care": "医疗", "Health Technology": "医疗科技",
+  Finance: "金融", "Consumer Discretionary": "可选消费", "Consumer Staples": "必需消费",
+  "Consumer Non-Durables": "必需消费", "Consumer Durables": "耐用消费", "Retail Trade": "零售",
+  Energy: "能源", "Non-Energy Minerals": "矿产", Industries: "工业", Industrials: "工业",
+  "Producer Manufacturing": "制造", "Process Industries": "流程工业", "Capital Goods": "资本品",
+  Materials: "原材料", "Basic Materials": "原材料", "Real Estate": "房地产", Utilities: "公用事业",
+  Telecommunications: "通信服务", "Commercial Services": "商业服务", "Distribution Services": "分销",
+};
+const cleanName = (s) => String(s || "")
+  .replace(/\b(Inc|Incorporated|Corp|Corporation|Ltd|Limited|plc|Co|Company|Holdings?|Group|Class [A-Z]|Common Stock|Ordinary Shares|American Depositary Shares|Sponsored ADR|ADR|N\.V\.|S\.A\.|AG|SE|LP|LLC)\b\.?/gi, "")
+  .replace(/\s{2,}/g, " ")
+  .replace(/^[\s,]+|[\s,]+$/g, "")
+  .trim();
+
+let universe = [];
+try {
+  const s = await jget("https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=25&offset=0&download=true", {
+    Origin: "https://www.nasdaq.com", Referer: "https://www.nasdaq.com/",
+  });
+  universe = (s?.data?.rows || [])
+    .map((x) => ({
+      sym: String(x.symbol || "").replace(/\./g, "-"),
+      name: String(x.name || ""),
+      sector: String(x.sector || "Technology"),
+      mcap: capNum(x.marketCap),
+    }))
+    .filter((x) => x.sym && x.mcap >= 5e8);
+} catch (e) { console.warn("全市场清单获取失败:", e.message); }
+if (universe.length < 200) {
+  console.warn("全市场清单异常（" + universe.length + " 只），回退 SEED 兜底池");
+  universe = SEED.map((x) => ({ sym: x.s, name: x.en, sector: x.sec, mcap: 0 }));
 }
+console.log("全市场清单：" + universe.length + " 只（市值 ≥5 亿美元），开始批量取盘前/盘后…");
+
+const mvQuote = {};
+for (let i = 0; i < universe.length; i += 30) {
+  Object.assign(mvQuote, await quotes(universe.slice(i, i + 30).map((x) => x.sym)));
+  await new Promise((r) => setTimeout(r, 110));
+}
+
 const numOf2 = (v) => (v == null ? null : +Number(v).toFixed(2));
 const etDayOf = (ms) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(ms));
-const moverRows = MOVER_POOL.map((m) => {
-  const q = mvQuote[m.s];
+const moverRows = universe.map((m) => {
+  const q = mvQuote[m.sym];
   if (!q) return null;
+  const seed = SEED_BY[m.sym];
+  const cn = seed ? seed.cn : "";
+  const en = cleanName(seed ? seed.en : m.name) || m.sym;
   return {
-    sym: m.s, cn: m.cn, en: m.en, sec: m.sec,
-    name: m.cn ? m.cn + "(" + m.en + ")" : m.en,
+    sym: m.sym, cn: cn, en: en,
+    name: cn ? cn + "(" + en + ")" : en,
+    sec: (seed && seed.sec) ? seed.sec : (SECTOR_CN[m.sector] || m.sector || ""),
+    mcap: m.mcap,
     px: numOf2(q.regularMarketPrice),
     chg: numOf2(q.regularMarketChangePercent),
     pre: numOf2(q.preMarketChangePercent),
@@ -542,15 +587,27 @@ const moverRows = MOVER_POOL.map((m) => {
   };
 }).filter(Boolean);
 
-const MV_EMIT = Number(process.env.MV_EMIT || 2.5); /* 抓取侧先放宽，页面按 4% 展示 */
+/* 财报驱动的归 ①，其余归 ② —— 这里先按当日该场次“全部披露标的”打标 */
+const preEarnSet = new Set(pre.allSyms || []);
+const postEarnSet = new Set(post.allSyms || []);
+const markEarn = (x, set) => ({ ...x, earn: set.has(x.sym) });
+const MV_EMIT = Number(process.env.MV_EMIT || 3); /* 抓取侧放宽到 3%，页面按 4% 展示 */
 const movers = {
   date: etToday.replace(/-/g, ""),
   ts: new Date().toISOString(),
   pool: moverRows.length,
-  pre: moverRows.filter((x) => x.pre != null && Math.abs(x.pre) >= MV_EMIT).sort((a, b) => Math.abs(b.pre) - Math.abs(a.pre)),
-  post: moverRows.filter((x) => x.post != null && Math.abs(x.post) >= MV_EMIT).sort((a, b) => Math.abs(b.post) - Math.abs(a.post)),
+  universe: universe.length,
+  preTotal: preEarnSet.size,
+  postTotal: postEarnSet.size,
+  pre: moverRows.filter((x) => x.pre != null && Math.abs(x.pre) >= MV_EMIT)
+    .map((x) => markEarn(x, preEarnSet)).sort((a, b) => Math.abs(b.pre) - Math.abs(a.pre)),
+  post: moverRows.filter((x) => x.post != null && Math.abs(x.post) >= MV_EMIT)
+    .map((x) => markEarn(x, postEarnSet)).sort((a, b) => Math.abs(b.post) - Math.abs(a.post)),
 };
-console.log("异动池：" + moverRows.length + " 只 · 盘前≥" + MV_EMIT + "% " + movers.pre.length + " 条 · 盘后≥" + MV_EMIT + "% " + movers.post.length + " 条");
+console.log("全市场异动：" + moverRows.length + " 只取到报价 · 盘前 ≥" + MV_EMIT + "% " + movers.pre.length +
+  " 条（财报 " + movers.pre.filter((x) => x.earn).length + " / 非财报 " + movers.pre.filter((x) => !x.earn).length + "）" +
+  " · 盘后 ≥" + MV_EMIT + "% " + movers.post.length +
+  " 条（财报 " + movers.post.filter((x) => x.earn).length + " / 非财报 " + movers.post.filter((x) => !x.earn).length + "）");
 
 const out = {
   meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
