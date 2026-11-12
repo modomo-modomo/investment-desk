@@ -44,6 +44,15 @@ jobs:
           ls -la _site
           echo "index.html $(wc -c < _site/index.html) 字节"
 
+      - name: 给数据文件加版本号（绕开 Pages CDN 的 10 分钟缓存）
+        run: |
+          V=$(date +%s)
+          for f in live-data.js live-extra.js live-news.js; do
+            sed -i "s|$f\"|$f?v=$V\"|g" _site/index.html
+          done
+          echo "--- 版本号已写入 ---"
+          grep -o 'live-[a-z]*\.js?v=[0-9]*' _site/index.html
+
       - name: 上传页面产物
         uses: actions/upload-pages-artifact@v3
         with:

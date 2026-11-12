@@ -84,6 +84,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .feedbar.ok{background:#f4faf6;border-color:#cfe7d8;color:#1f5c3d}
 .feedbar.ok .ic{background:#0d8a5f}
 .feedbar.ok b{color:#134d32}
+.feedbar.warn{background:#fffbf0;border-color:#f0dfb8;color:#8a5a12}
+.feedbar.warn .ic{background:#c98a15}
+.feedbar.warn b{color:#6d4508}
+.feedbar a{color:inherit;text-decoration:underline;font-weight:600}
 
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .sec{margin-bottom:22px}
@@ -431,6 +435,8 @@ ol.concl li b{color:var(--text);font-weight:650}
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer"></aside>
 
+<!-- GitHub Pages 的 CDN 缓存 live-data.js 等文件约 10 分钟（Cache-Control: max-age=600）。
+     发布时由 workflow 在 _site/index.html 里给下面三个文件名追加 ?v=<时间戳>，避免手机上读到旧数据。 -->
 <script src="live-data.js"></script>
 <script src="live-extra.js"></script>
 <script src="live-news.js"></script>
@@ -1110,6 +1116,36 @@ function nextSession(){
 }
 const asOfFmt=(s)=>s&&s.length===8?s.slice(4,6)+"-"+s.slice(6,8):(s||"—");
 
+/* ---- 上一场是否漏跑：数据比“本应到位的时刻”还旧，就在首页顶部示警 ----
+   交易日两场：北京 07:00 与 20:30。GRACE 用来容忍 GitHub 定时任务的实际延迟。 */
+function staleGuard(iso){
+  if(!iso) return null;
+  const now=Date.now();
+  const p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",
+    year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"})
+    .formatToParts(new Date(now)).map(x=>[x.type,x.value]));
+  const ymd=p.year+"-"+p.month+"-"+p.day;
+  const dow=new Date(ymd+"T00:00:00Z").getUTCDay();        /* 0=周日 */
+  const cur=(+p.hour)*60+(+p.minute);
+  const mk=(off,h,m)=>{
+    const day=new Date(new Date(ymd+"T00:00:00Z").getTime()+off*864e5).toISOString().slice(0,10);
+    return new Date(day+"T"+String(h).padStart(2,"0")+":"+String(m).padStart(2,"0")+":00+08:00");
+  };
+  const isWD=dow>=1&&dow<=5;
+  let last,label;
+  if(isWD&&cur>=20*60+30){ last=mk(0,20,30);  label="今日 20:30"; }
+  else if(isWD&&cur>=7*60){ last=mk(0,7,0);   label="今日 07:00"; }
+  else if(dow===1){         last=mk(-3,20,30); label="上周五 20:30"; }
+  else if(isWD){            last=mk(-1,20,30); label="昨日 20:30"; }
+  else if(dow===6){         last=mk(-1,20,30); label="周五 20:30"; }
+  else{                     last=mk(-2,20,30); label="周五 20:30"; }
+  const synced=new Date(iso).getTime();
+  const lagH=(last.getTime()-synced)/36e5;   /* >0 表示数据比上一场还旧 */
+  const ageH=(now-synced)/36e5;
+  const GRACE=1.5;                           /* 容忍定时任务延迟 1.5 小时 */
+  return { stale:lagH>GRACE, lagH:lagH, ageH:ageH, lastLabel:label };
+}
+
 function hydrate(L){
   FEED.connected = true;
   const d = new Date(L.meta.syncedAt);
@@ -1117,6 +1153,7 @@ function hydrate(L){
   const st = syncStamps(L.meta.syncedAt);
   FEED.lastSyncBJ = st.bj;
   FEED.lastSyncET = st.et;
+  DATA.meta.syncedISO = L.meta.syncedAt;
   DATA.meta.dataAsOf = L.meta.stockDate;
   DATA.meta.updatedPT = st.bj;
   DATA.meta.nextPT = nextSession();
@@ -1512,11 +1549,23 @@ const chg = (v,unit) => unit==="bp"
 function feedBar(){
   if(!FEED.connected) return '<div class="feedbar"><span class="ic">!</span><span><b>数据源未连接</b>　当前行情、业绩、指数数值均为<b>占位示例</b>，仅用于验证版式与工作流，<b>不可用于交易决策</b>。运行 <b>node sync-core.mjs</b> 后刷新即接入 Yahoo Finance 实时数据。</span></div>';
   const m=DATA.meta;
-  return '<div class="feedbar ok"><span class="ic">✓</span><span>'
-    +'<b>数据已更新</b>　北京时间 <b>'+(FEED.lastSyncBJ||"—")+'</b>　·　美东时间 <b>'+(FEED.lastSyncET||"—")+'</b>'
-    +'　·　美股收盘日 <b>'+asOfFmt(m.dataAsOf)+'</b>'
-    +'　·　下一场更新 <b>'+(m.nextPT||"—")+'</b>'
-    +'<span class="tiny" style="display:block;color:#5c8f74;margin-top:2px">更新节奏：每个交易日 <b>20:30</b> 与次日 <b>07:00</b> 各抓一次。<b>一次同步会刷新全站所有模块</b>，两场所见数值只差在抓取时点的行情与业绩新鲜度，不存在“20:30 只更盘前、07:00 只更盘后”的分区。· 数据源 Yahoo Finance</span>'
+  const sg=staleGuard(m.syncedISO);
+  const warn=!!(sg&&sg.stale);
+  const ACT="https://github.com/modomo-modomo/investment-desk/actions/workflows/daily.yml";
+  const line1 = warn
+    ? '<b>数据可能未更新</b>　上次成功同步 北京时间 <b>'+(FEED.lastSyncBJ||"—")+'</b>（美东 <b>'+(FEED.lastSyncET||"—")+'</b>）'
+      +'，距本场「<b>'+sg.lastLabel+'</b>」已过 <b>'+sg.ageH.toFixed(1)+'</b> 小时'
+      +'　·　美股收盘日 <b>'+asOfFmt(m.dataAsOf)+'</b>　·　下一场 <b>'+(m.nextPT||"—")+'</b>'
+    : '<b>数据已更新</b>　北京时间 <b>'+(FEED.lastSyncBJ||"—")+'</b>　·　美东时间 <b>'+(FEED.lastSyncET||"—")+'</b>'
+      +'　·　美股收盘日 <b>'+asOfFmt(m.dataAsOf)+'</b>'
+      +'　·　下一场更新 <b>'+(m.nextPT||"—")+'</b>';
+  const line2 = warn
+    ? '定时抓取可能延迟或失败，页面显示的仍是上一场的数值。<a href="'+ACT+'" target="_blank" rel="noopener">到 Actions 手动触发一次</a>。'
+      +'更新节奏：每个交易日 20:30 与次日 07:00 各抓一次，一次同步刷新全站。'
+    : '更新节奏：每个交易日 <b>20:30</b> 与次日 <b>07:00</b> 各抓一次。<b>一次同步会刷新全站所有模块</b>，两场所见数值只差在抓取时点的行情与业绩新鲜度，不存在“20:30 只更盘前、07:00 只更盘后”的分区。· 数据源 Yahoo Finance';
+  return '<div class="feedbar '+(warn?"warn":"ok")+'"><span class="ic">'+(warn?"!":"✓")+'</span><span>'
+    + line1
+    +'<span class="tiny" style="display:block;margin-top:2px;'+(warn?"color:#8a5a12":"color:#5c8f74")+'">'+line2+'</span>'
     +'</span></div>';
 }
 function secHead(num,title,sub,right){
@@ -2425,7 +2474,13 @@ $("#side-date").textContent=DATA.meta.date;
 $("#side-week").textContent=DATA.meta.week;
 $("#hdr-date").textContent=DATA.meta.date;
 $("#feed-state").textContent=FEED.connected?("Yahoo 已连接 · "+(FEED.lastSync||"已同步")):"Yahoo 未连接";
-$("#side-sync").textContent=FEED.connected?("最近更新 "+(DATA.meta.updatedPT||"—")+"（北京）· 下一场 "+(DATA.meta.nextPT||"—")):"尚未同步";
+$("#side-sync").textContent=(function(){
+  if(!FEED.connected) return "尚未同步";
+  const g=staleGuard(DATA.meta.syncedISO);
+  return "最近更新 "+(DATA.meta.updatedPT||"—")+"（北京）"
+    +(g&&g.stale?"　⚠ 本场可能未跑":"")
+    +" · 下一场 "+(DATA.meta.nextPT||"—");
+})();
 $("#feed-pill").textContent=FEED.connected?("Yahoo · "+(FEED.lastSync||"已同步")):"行情未连接 · 示例数据";
 $("#feed-pill").className=FEED.connected?"pill":"pill warn";
 renderNav(); route();
