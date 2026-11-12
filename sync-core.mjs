@@ -146,6 +146,31 @@ function backfill(rows, q) {
   return { date: last.date, price: last.close, prev: prev.close, fixed: false };
 }
 
+/* 结算口径（期货/外汇/亚太欧洲指数）：这些品种 24h 或盘后仍在报价，
+   chart 的最后一根日K可能是"进行中 session 的实时价"，绝不能当收盘。
+   统一取"最近已结算收盘"：
+   - REGULAR/PRE/POST（交易中）→ price = regularMarketPreviousClose（上一结算价）
+   - POSTPOST（收盘态）        → price = regularMarketPrice（即最新收盘）
+   - prev：若 price 与剔除进行中K线后的末根一致（chart 已含最新结算）取倒数第二根，
+     否则取末根（chart 结算滞后一根的情形，如期货）。
+   - 进行中K线判定：UTC 日期晚于行情时间的美东日期 → 剔除。 */
+function settle(rows, q) {
+  const norm = (d) => String(d).replace(/-/g, "");
+  const last = rows[rows.length - 1];
+  const prev = rows[rows.length - 2] || last;
+  if (!q || q.regularMarketPrice == null || !q.regularMarketTime) {
+    return { date: last.date, price: last.close, prev: prev.close, fixed: false };
+  }
+  const et = etDay(q.regularMarketTime * 1000);
+  const rows2 = rows.filter((r) => norm(r.date) <= et);
+  const l2 = rows2[rows2.length - 1] || last;
+  const p2 = rows2[rows2.length - 2] || l2;
+  const live = q.marketState === "REGULAR" || q.marketState === "PRE" || q.marketState === "POST";
+  const price = live && q.regularMarketPreviousClose != null ? q.regularMarketPreviousClose : q.regularMarketPrice;
+  const sameAsL2 = Math.abs(price - l2.close) / Math.abs(l2.close) < 0.001;
+  return { date: et, price: price, prev: sameAsL2 ? p2.close : l2.close, fixed: true };
+}
+
 /* 分批抓取，避免被限流 */
 async function batched(items, size, fn) {
   const out = [];
@@ -205,7 +230,7 @@ for (const c of idxCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
   const base20 = rows[rows.length - 22] || rows[0];
-  const bx = backfill(rows, idxQuotes[c.sym] || {});
+  const bx = settle(rows, idxQuotes[c.sym] || {});
   if (bx.fixed) backfilled++;
   /* 指数用 amount 表示成交额，Yahoo chart 只有 volume，这里留 null 由 live-extra 补 */
   indices[c.code] = {
@@ -225,22 +250,24 @@ const crossCharts = await batched(CROSS, 4, async (s) => {
   const c = await chart(s[1], "3mo");
   return { row: s, rows: c.rows };
 });
+const crossQuotes = await quotes(CROSS.map((s) => s[1]));
 
 const cross = {};
 for (const c of crossCharts) {
   if (!c || !c.rows.length) continue;
-  const [key, , name, unit, mul, isBp] = c.row;
+  const [key, sym, name, unit, mul, isBp] = c.row;
   const rows = c.rows;
-  const last = rows[rows.length - 1];
-  const prev = rows[rows.length - 2] || last;
   const base20 = rows[rows.length - 22] || rows[0];
-  const v = last.close * mul;
-  const p1 = prev.close * mul;
+  /* 期货/外汇 24h 报价，chart 末根可能是盘中价——统一取"最近已结算收盘" */
+  const bx = settle(rows, crossQuotes[sym] || {});
+  if (bx.fixed) backfilled++;
+  const v = bx.price * mul;
+  const p1 = bx.prev * mul;
   const p20 = base20.close * mul;
   cross[key] = {
     name,
     unit,
-    date: last.date.replace(/-/g, ""),
+    date: bx.date.replace(/-/g, ""),
     value: +v.toFixed(v >= 1000 ? 2 : 4),
     d1: +(pct(v, p1) ?? 0).toFixed(2),
     d20: +(pct(v, p20) ?? 0).toFixed(2),
