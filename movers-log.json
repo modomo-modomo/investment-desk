@@ -1,0 +1,361 @@
+[
+ {
+  "date": "2026-11-13",
+  "session": "pre",
+  "ts": "2026-11-13T11:46:22.295Z",
+  "state": "PRE",
+  "rows": [
+   {
+    "sym": "CADL",
+    "name": "Candel Therapeutics",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": -35.75,
+    "px": 8.39,
+    "earn": false
+   },
+   {
+    "sym": "MOD",
+    "name": "Modine Manufacturing",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": 29.62,
+    "px": 106.1,
+    "earn": false
+   },
+   {
+    "sym": "LFTO",
+    "name": "Liftoff Mobile",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 21.81,
+    "px": 18.71,
+    "earn": false
+   },
+   {
+    "sym": "NMAX",
+    "name": "Newsmax",
+    "sec": "工业",
+    "track": "其它",
+    "mv": 17.83,
+    "px": 7.29,
+    "earn": false
+   },
+   {
+    "sym": "SLS",
+    "name": "SELLAS Life Sciences",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 17.66,
+    "px": 8.03,
+    "earn": false
+   },
+   {
+    "sym": "CBRS",
+    "name": "Cerebras Systems",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 16.98,
+    "px": 97.75,
+    "earn": false
+   },
+   {
+    "sym": "VIR",
+    "name": "Vir Biotechnology",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": -13.45,
+    "px": 12.12,
+    "earn": false
+   },
+   {
+    "sym": "SBC",
+    "name": "SBC Medical",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 12.36,
+    "px": 5.34,
+    "earn": true
+   },
+   {
+    "sym": "HAWK",
+    "name": "HawkEye 360",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 9.88,
+    "px": 14.67,
+    "earn": false
+   },
+   {
+    "sym": "FLO",
+    "name": "Flowers Foods",
+    "sec": "必需消费",
+    "track": "其它",
+    "mv": -9.32,
+    "px": 6.01,
+    "earn": false
+   },
+   {
+    "sym": "YSS",
+    "name": "York Space Systems",
+    "sec": "工业",
+    "track": "其它",
+    "mv": -8.36,
+    "px": 6.6,
+    "earn": false
+   },
+   {
+    "sym": "KEP",
+    "name": "Korea Electric Power",
+    "sec": "公用事业",
+    "track": "其它",
+    "mv": -7.06,
+    "px": 11.13,
+    "earn": false
+   },
+   {
+    "sym": "PHR",
+    "name": "Phreesia",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": 6.83,
+    "px": 12.62,
+    "earn": false
+   },
+   {
+    "sym": "ZVRA",
+    "name": "Zevra Therapeutics",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": -6.81,
+    "px": 11.16,
+    "earn": false
+   },
+   {
+    "sym": "WSE",
+    "name": "Wise",
+    "sec": "工业",
+    "track": "其它",
+    "mv": 6.5,
+    "px": 10.93,
+    "earn": false
+   },
+   {
+    "sym": "OPRT",
+    "name": "Oportun Financial",
+    "sec": "金融",
+    "track": "其它",
+    "mv": 6.38,
+    "px": 11.76,
+    "earn": false
+   },
+   {
+    "sym": "USAS",
+    "name": "Americas Gold and Silver Common Shares no par value",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": -6.23,
+    "px": 2.79,
+    "earn": true
+   },
+   {
+    "sym": "ENHA",
+    "name": "Enhanced",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": -5.83,
+    "px": 7.2,
+    "earn": false
+   },
+   {
+    "sym": "STNE",
+    "name": "StoneCo Common Shares",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -5.31,
+    "px": 7.72,
+    "earn": false
+   },
+   {
+    "sym": "OTF",
+    "name": "Blue Owl Technology Finance",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 5.15,
+    "px": 9.46,
+    "earn": false
+   },
+   {
+    "sym": "EMAT",
+    "name": "Evolution Metals & Technologies",
+    "sec": "Miscellaneous",
+    "track": "其它",
+    "mv": 5.04,
+    "px": 0.99,
+    "earn": false
+   },
+   {
+    "sym": "GENB",
+    "name": "Generate Biomedicines",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 4.53,
+    "px": 12.57,
+    "earn": false
+   },
+   {
+    "sym": "NU",
+    "name": "Nu",
+    "sec": "金融",
+    "track": "金融科技",
+    "mv": 4.28,
+    "px": 11.83,
+    "earn": false
+   },
+   {
+    "sym": "CRSR",
+    "name": "Corsair Gaming",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -4.23,
+    "px": 12.28,
+    "earn": false
+   },
+   {
+    "sym": "SVRA",
+    "name": "Savara",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 4.03,
+    "px": 4.72,
+    "earn": false
+   },
+   {
+    "sym": "VISN",
+    "name": "Vistance Networks",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 4,
+    "px": 4,
+    "earn": false
+   },
+   {
+    "sym": "TMC",
+    "name": "TMC the metals",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": 3.91,
+    "px": 2.3,
+    "earn": false
+   },
+   {
+    "sym": "NVT",
+    "name": "nVent Electric",
+    "sec": "工业",
+    "track": "AI基础设施/数据中心",
+    "mv": 3.9,
+    "px": 115.5,
+    "earn": false
+   },
+   {
+    "sym": "NVAX",
+    "name": "Novavax",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 3.77,
+    "px": 8.76,
+    "earn": false
+   },
+   {
+    "sym": "ALM",
+    "name": "Almonty Industries Common Shares",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": 3.67,
+    "px": 7.63,
+    "earn": false
+   },
+   {
+    "sym": "ALVO",
+    "name": "Alvotech",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": -3.43,
+    "px": 4.67,
+    "earn": false
+   },
+   {
+    "sym": "LASR",
+    "name": "nLIGHT",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.37,
+    "px": 43.06,
+    "earn": false
+   },
+   {
+    "sym": "ABSI",
+    "name": "Absci",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 3.34,
+    "px": 9.13,
+    "earn": false
+   },
+   {
+    "sym": "ALHC",
+    "name": "Alignment Healthcare",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 3.33,
+    "px": 7.5,
+    "earn": false
+   },
+   {
+    "sym": "ASST",
+    "name": "Strive",
+    "sec": "金融",
+    "track": "其它",
+    "mv": -3.15,
+    "px": 22.25,
+    "earn": false
+   },
+   {
+    "sym": "AGBK",
+    "name": "AGI Common Shares",
+    "sec": "金融",
+    "track": "其它",
+    "mv": 3.09,
+    "px": 6.32,
+    "earn": false
+   },
+   {
+    "sym": "DLO",
+    "name": "DLocal Common Shares",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": -3.07,
+    "px": 13.7,
+    "earn": false
+   },
+   {
+    "sym": "NRGV",
+    "name": "Energy Vault",
+    "sec": "Miscellaneous",
+    "track": "其它",
+    "mv": 3.05,
+    "px": 3.61,
+    "earn": false
+   },
+   {
+    "sym": "CSCO",
+    "name": "Cisco Systems (DE)",
+    "sec": "通信服务",
+    "track": "其它",
+    "mv": -3.01,
+    "px": 102.01,
+    "earn": false
+   }
+  ]
+ }
+]

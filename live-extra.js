@@ -1,9 +1,9 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-12T23:40:28.038Z",
+  "syncedAt": "2026-11-13T11:46:22.458Z",
   "source": "Yahoo Finance / Nasdaq",
-  "preDate": "2026-11-12",
-  "postDate": "2026-11-11"
+  "preDate": "2026-11-13",
+  "postDate": "2026-11-12"
  },
  "quotes": {
   "TSLA": {
@@ -191,16 +191,16 @@ window.YF_DATA = {
   }
  },
  "btc": {
-  "price": 73927.6328125,
-  "chg": -0.04980220654934309,
-  "d20": -9.081399726093252,
-  "date": "2026-11-11"
+  "price": 71369.8984375,
+  "chg": 0.03774679968024941,
+  "d20": -11.969640845922758,
+  "date": "2026-11-12"
  },
  "eth": {
-  "price": 2054.02001953125,
-  "chg": -0.09028759383383766,
-  "d20": -13.920488291643263,
-  "date": "2026-11-11"
+  "price": 2017.4100341796875,
+  "chg": 0.028773984347663095,
+  "d20": -15.379842933786891,
+  "date": "2026-11-12"
  },
  "breadth": {
   "rsp20": 2.6604656840479635,
@@ -208,186 +208,58 @@ window.YF_DATA = {
   "rel20": 4.561239641705717
  },
  "spxVol": {
-  "today": 3182097000,
+  "today": 4693040000,
   "avg20": 5641931000,
-  "ratio": 0.5640084928369383
+  "ratio": 0.8318144975541175
  },
  "earnings": {
-  "preDate": "2026-11-12",
-  "postDate": "2026-11-11",
+  "preDate": "2026-11-13",
+  "postDate": "2026-11-12",
   "pre": [
    {
-    "symbol": "BN",
-    "name": "Brookfield Corporation",
-    "mcap": 103007502000,
+    "symbol": "SMFG",
+    "name": "Sumitomo Mitsui Financial Group Inc",
+    "mcap": 155207942000,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
-    "est": 0.72,
-    "estRaw": "$0.72",
-    "nEst": "3",
-    "last": 0.63,
-    "lastRaw": "$0.63",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
-    "cross": null,
-    "fund": {
-     "period": "2026-03-31",
-     "rev": 1583000000,
-     "revPrev": null,
-     "net": 0,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 41.64,
-    "prevClose": 42.06,
-    "preChg": null,
-    "postChg": -0.09606147934677622,
-    "dayChg": -0.998578,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "NBIS",
-    "name": "Nebius Group N.V.",
-    "mcap": 42053284000,
-    "tier": "大市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": -1.238,
-    "estRaw": "($0.61)",
-    "nEst": "4",
-    "last": -0.39,
-    "lastRaw": "($0.39)",
-    "actual": -0.13,
+    "est": 0.24476,
+    "estRaw": "$0.24",
+    "nEst": "1",
+    "last": 0.59,
+    "lastRaw": "$0.59",
+    "actual": 0.2483,
     "reported": true,
-    "surprise": 89.49919224555735,
+    "surprise": 1.4463147573132815,
     "src": "Yahoo earningsHistory",
     "cross": null,
     "fund": {
      "period": "2026-09-30",
-     "rev": 980800000,
+     "rev": 1337556000000,
      "revPrev": null,
-     "net": -37500000,
+     "net": 501783000000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 128.64,
-    "prevClose": 154.69,
-    "preChg": null,
-    "postChg": 1.3526119402985204,
-    "dayChg": -16.840134,
-    "marketState": "POST"
+    "price": 24.37,
+    "prevClose": 24.75,
+    "preChg": 1.0101010101010166,
+    "postChg": null,
+    "dayChg": -1.53535,
+    "marketState": "PRE"
    },
    {
-    "symbol": "ASND",
-    "name": "Ascendis Pharma A/S",
-    "mcap": 17082428400,
+    "symbol": "MFG",
+    "name": "Mizuho Financial Group, Inc.",
+    "mcap": 123620983000,
     "tier": "大市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 1.13,
-    "estRaw": "$1.13",
-    "nEst": "8",
-    "last": -1.17,
-    "lastRaw": "($1.17)",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
-    "cross": null,
-    "fund": {
-     "period": "2026-03-31",
-     "rev": 246601000,
-     "revPrev": null,
-     "net": 629339000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 267.07,
-    "prevClose": 259.28,
-    "preChg": null,
-    "postChg": 0.34822331224024783,
-    "dayChg": 3.0044773,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "HBM",
-    "name": "Hudbay Minerals Inc.",
-    "mcap": 9737582600,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 0.35,
-    "estRaw": "$0.35",
-    "nEst": "5",
-    "last": 0.03,
-    "lastRaw": "$0.03",
-    "actual": null,
-    "reported": false,
-    "surprise": null,
-    "src": null,
-    "cross": null,
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 765900000,
-     "revPrev": null,
-     "net": 149500000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 21.62,
-    "prevClose": 21.94,
-    "preChg": null,
-    "postChg": -0.5550416281221104,
-    "dayChg": -1.45852,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "TWST",
-    "name": "Twist Bioscience Corporation",
-    "mcap": 8127860700,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": -0.203,
-    "estRaw": "($0.43)",
-    "nEst": "2",
-    "last": -0.45,
-    "lastRaw": "($0.45)",
-    "actual": -0.3186,
-    "reported": true,
-    "surprise": -56.94581280788176,
-    "src": "Yahoo earningsHistory",
-    "cross": null,
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 126644000,
-     "revPrev": null,
-     "net": -20623000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 114.22,
-    "prevClose": 122.59,
-    "preChg": null,
-    "postChg": 0.682892663281387,
-    "dayChg": -6.827633,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "NIQ",
-    "name": "NIQ Global Intelligence plc",
-    "mcap": 6211770400,
-    "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
     "est": 0.21,
     "estRaw": "$0.21",
-    "nEst": "4",
-    "last": 0.03,
-    "lastRaw": "$0.03",
+    "nEst": "1",
+    "last": 0.2,
+    "lastRaw": "$0.20",
     "actual": null,
     "reported": false,
     "surprise": null,
@@ -395,63 +267,88 @@ window.YF_DATA = {
     "cross": null,
     "fund": {
      "period": "2026-06-30",
-     "rev": 1124200000,
+     "rev": 1026700000000,
      "revPrev": null,
-     "net": -30500000,
+     "net": 422909000000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 19.22,
-    "prevClose": 21.06,
-    "preChg": null,
-    "postChg": 0,
-    "dayChg": -8.73694,
-    "marketState": "POST"
+    "price": 10.12,
+    "prevClose": 10.16,
+    "preChg": 1.1811023622047223,
+    "postChg": null,
+    "dayChg": -0.3937,
+    "marketState": "PRE"
    },
    {
-    "symbol": "FIGR",
-    "name": "Figure Technology Solutions, Inc.",
-    "mcap": 5427700700,
+    "symbol": "XXI",
+    "name": "Twenty One Capital, Inc.",
+    "mcap": 2991820290,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
-    "est": 0.31,
-    "estRaw": "$0.31",
+    "est": null,
+    "estRaw": null,
     "nEst": "2",
-    "last": 0.34,
-    "lastRaw": "$0.34",
+    "last": -0.16,
+    "lastRaw": "($0.16)",
     "actual": null,
     "reported": false,
     "surprise": null,
     "src": null,
     "cross": null,
-    "fund": {
-     "period": "2026-06-30",
-     "rev": 225588000,
-     "revPrev": null,
-     "net": 87446000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 25.67,
-    "prevClose": 24.19,
-    "preChg": null,
-    "postChg": 1.7795091546552344,
-    "dayChg": 6.1182284,
-    "marketState": "POST"
+    "fund": null,
+    "price": 5,
+    "prevClose": 5.26,
+    "preChg": -6.958174904942959,
+    "postChg": null,
+    "dayChg": -4.94297,
+    "marketState": "PRE"
    },
    {
-    "symbol": "ARX",
-    "name": "Accelerant Holdings",
-    "mcap": 4315536400,
-    "tier": "中市值",
-    "threshold": 3,
+    "symbol": "USAS",
+    "name": "Americas Gold and Silver Corporation",
+    "mcap": 1015441860,
+    "tier": "中小市值",
+    "threshold": 5,
     "quarter": "Sep/2026",
-    "est": 0.2,
-    "estRaw": "$0.20",
-    "nEst": "5",
-    "last": 0.38,
-    "lastRaw": "$0.38",
+    "est": 0.03,
+    "estRaw": "$0.03",
+    "nEst": "2",
+    "last": -0.02,
+    "lastRaw": "($0.02)",
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
+    "cross": null,
+    "fund": {
+     "period": "2026-03-31",
+     "rev": 93109720,
+     "revPrev": null,
+     "net": 0,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 2.79,
+    "prevClose": 2.96,
+    "preChg": -11.456081081081082,
+    "postChg": null,
+    "dayChg": -5.74325,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "RMIX",
+    "name": "Suncrete, Inc.",
+    "mcap": 651076800,
+    "tier": "中小市值",
+    "threshold": 5,
+    "quarter": "Sep/2026",
+    "est": 0.09,
+    "estRaw": "$0.09",
+    "nEst": "2",
+    "last": null,
+    "lastRaw": "N/A",
     "actual": null,
     "reported": false,
     "surprise": null,
@@ -459,314 +356,405 @@ window.YF_DATA = {
     "cross": null,
     "fund": {
      "period": "2026-06-30",
-     "rev": 356900000,
+     "rev": 97231000,
      "revPrev": null,
-     "net": 78700000,
+     "net": 0,
      "netPrev": null,
      "gross": 0
     },
-    "price": 19.89,
-    "prevClose": 19.87,
+    "price": 8.12,
+    "prevClose": 8.39,
     "preChg": null,
-    "postChg": 0,
-    "dayChg": 0.100647,
-    "marketState": "POST"
+    "postChg": null,
+    "dayChg": -3.21812,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "SGML",
+    "name": "Sigma Lithium Corporation",
+    "mcap": 601466750,
+    "tier": "中小市值",
+    "threshold": 5,
+    "quarter": "Sep/2026",
+    "est": 0.02,
+    "estRaw": "$0.02",
+    "nEst": "2",
+    "last": -0.1,
+    "lastRaw": "($0.10)",
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
+    "cross": null,
+    "fund": {
+     "period": "2026-03-31",
+     "rev": 58269370,
+     "revPrev": null,
+     "net": 0,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 5.01,
+    "prevClose": 5.16,
+    "preChg": -0.387596899224818,
+    "postChg": null,
+    "dayChg": -2.90697,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "SBC",
+    "name": "SBC Medical Group Holdings Incorporated",
+    "mcap": 544060350,
+    "tier": "中小市值",
+    "threshold": 5,
+    "quarter": "Sep/2026",
+    "est": 0.11,
+    "estRaw": "$0.11",
+    "nEst": "2",
+    "last": 0.12,
+    "lastRaw": "$0.12",
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
+    "cross": null,
+    "fund": {
+     "period": "2026-03-31",
+     "rev": 43060560,
+     "revPrev": null,
+     "net": 11308070,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 5.34,
+    "prevClose": 5.24,
+    "preChg": 14.50381679389312,
+    "postChg": null,
+    "dayChg": 1.9084,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "DGXX",
+    "name": "Digi Power X Inc.",
+    "mcap": 219016848,
+    "tier": "中小市值",
+    "threshold": 5,
+    "quarter": "Sep/2026",
+    "est": null,
+    "estRaw": null,
+    "nEst": "2",
+    "last": -0.03,
+    "lastRaw": "($0.03)",
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
+    "cross": null,
+    "fund": {
+     "period": "2026-03-31",
+     "rev": 9345980,
+     "revPrev": null,
+     "net": -6402370,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 2.21,
+    "prevClose": 2.28,
+    "preChg": 0.43859649122808264,
+    "postChg": null,
+    "dayChg": -3.07017,
+    "marketState": "PRE"
    }
   ],
-  "preTotal": 93,
-  "preHit": 0,
-  "preCached": true,
+  "preTotal": 24,
+  "preHit": 3,
+  "preCached": false,
   "post": [
    {
-    "symbol": "FNV",
-    "name": "Franco-Nevada Corporation",
-    "mcap": 47952470000,
+    "symbol": "CSCO",
+    "name": "Cisco Systems, Inc.",
+    "mcap": 397255049000,
+    "tier": "大市值",
+    "threshold": 3,
+    "quarter": "Oct/2026",
+    "est": 1.32523,
+    "estRaw": "$1.15",
+    "nEst": "8",
+    "last": null,
+    "lastRaw": null,
+    "actual": 1.4,
+    "reported": true,
+    "surprise": 5.642039495031051,
+    "src": "Yahoo earningsHistory",
+    "cross": {
+     "yahoo": 1.4,
+     "nasdaq": 0.81,
+     "diffPct": 42.14285714285714,
+     "conflict": true
+    },
+    "fund": {
+     "period": "2026-10-31",
+     "rev": 18517000000,
+     "revPrev": null,
+     "net": 4552000000,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 102.01,
+    "prevClose": 100.76,
+    "preChg": -1.8459706232632045,
+    "postChg": null,
+    "dayChg": 1.24057,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "AMAT",
+    "name": "Applied Materials, Inc.",
+    "mcap": 313534480000,
+    "tier": "大市值",
+    "threshold": 3,
+    "quarter": "Oct/2026",
+    "est": 4.0544,
+    "estRaw": "$4.06",
+    "nEst": "10",
+    "last": null,
+    "lastRaw": null,
+    "actual": 4.16,
+    "reported": true,
+    "surprise": 2.6045777426992873,
+    "src": "Yahoo earningsHistory",
+    "cross": {
+     "yahoo": 4.16,
+     "nasdaq": 2.17,
+     "diffPct": 47.83653846153847,
+     "conflict": true
+    },
+    "fund": {
+     "period": "2026-10-31",
+     "rev": 10409000000,
+     "revPrev": null,
+     "net": 2718000000,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 380.95,
+    "prevClose": 395.08,
+    "preChg": -3.3107218791130877,
+    "postChg": null,
+    "dayChg": -3.57648,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "NU",
+    "name": "Nu Holdings Ltd.",
+    "mcap": 59821900000,
     "tier": "大市值",
     "threshold": 3,
     "quarter": "Sep/2026",
-    "est": 1.73486,
-    "estRaw": "$1.77",
-    "nEst": "3",
+    "est": 0.22278,
+    "estRaw": "$0.22",
+    "nEst": "4",
+    "last": null,
+    "lastRaw": null,
+    "actual": 0.2235,
+    "reported": true,
+    "surprise": 0.32318879612173373,
+    "src": "Yahoo earningsHistory",
+    "cross": {
+     "yahoo": 0.2235,
+     "nasdaq": 0.17,
+     "diffPct": 23.937360178970913,
+     "conflict": true
+    },
+    "fund": {
+     "period": "2026-09-30",
+     "rev": 5820364000,
+     "revPrev": null,
+     "net": 1090836000,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 11.83,
+    "prevClose": 12.32,
+    "preChg": -0.16233766233766378,
+    "postChg": null,
+    "dayChg": -3.97727,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "CBRS",
+    "name": "Cerebras Systems Inc.",
+    "mcap": 24012974100,
+    "tier": "大市值",
+    "threshold": 3,
+    "quarter": "Sep/2026",
+    "est": -0.13,
+    "estRaw": "($0.13)",
+    "nEst": "2",
+    "last": null,
+    "lastRaw": null,
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
+    "cross": null,
+    "fund": {
+     "period": "2026-06-30",
+     "rev": 209869000,
+     "revPrev": null,
+     "net": -450528000,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 97.75,
+    "prevClose": 101.08,
+    "preChg": 13.128215275029675,
+    "postChg": null,
+    "dayChg": -3.29442,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "STN",
+    "name": "Stantec Inc",
+    "mcap": 8486180900,
+    "tier": "中市值",
+    "threshold": 3,
+    "quarter": "Sep/2026",
+    "est": 1.78055,
+    "estRaw": "$1.26",
+    "nEst": "4",
     "last": null,
     "lastRaw": null,
     "actual": 1.89,
     "reported": true,
-    "surprise": 8.942508329202346,
+    "surprise": 6.146977057650716,
     "src": "Yahoo earningsHistory",
     "cross": {
      "yahoo": 1.89,
-     "nasdaq": 1.89,
-     "diffPct": 0,
-     "conflict": false
+     "nasdaq": 1.11,
+     "diffPct": 41.269841269841265,
+     "conflict": true
     },
     "fund": {
      "period": "2026-09-30",
-     "rev": 549300000,
+     "rev": 1864900000,
      "revPrev": null,
-     "net": 395500000,
+     "net": 179600000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 247.72,
-    "prevClose": 248.76,
+    "price": 75.13,
+    "prevClose": 75.5,
     "preChg": null,
-    "postChg": -0.06651057645729042,
-    "dayChg": -0.418071,
-    "marketState": "POST"
+    "postChg": null,
+    "dayChg": -0.49007,
+    "marketState": "PRE"
    },
    {
-    "symbol": "TTEK",
-    "name": "Tetra Tech, Inc.",
-    "mcap": 9629831200,
+    "symbol": "ELPC",
+    "name": "Companhia Paranaense de Energia (COPEL)",
+    "mcap": 8172900900,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
-    "est": 0.47,
-    "estRaw": "$0.47",
+    "est": 0.13,
+    "estRaw": "$0.13",
+    "nEst": "1",
+    "last": null,
+    "lastRaw": null,
+    "actual": 0.11,
+    "reported": true,
+    "surprise": -15.384615384615389,
+    "src": "Nasdaq 日历",
+    "cross": null,
+    "fund": {
+     "period": "2026-06-30",
+     "rev": 6918061000,
+     "revPrev": null,
+     "net": 1047459000,
+     "netPrev": null,
+     "gross": 0
+    },
+    "price": 10.66,
+    "prevClose": 10.96,
+    "preChg": null,
+    "postChg": null,
+    "dayChg": -2.73723,
+    "marketState": "PRE"
+   },
+   {
+    "symbol": "ANDG",
+    "name": "Andersen Group Inc.",
+    "mcap": 7502618600,
+    "tier": "中市值",
+    "threshold": 3,
+    "quarter": "Sep/2026",
+    "est": 0.9,
+    "estRaw": "$0.90",
     "nEst": "2",
     "last": null,
     "lastRaw": null,
-    "actual": 0.49,
-    "reported": true,
-    "surprise": 4.255319148936175,
-    "src": "Nasdaq 日历",
+    "actual": null,
+    "reported": false,
+    "surprise": null,
+    "src": null,
     "cross": null,
     "fund": {
      "period": "2026-09-30",
-     "rev": 1152900000,
-     "revPrev": null,
-     "net": 131723000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 39.43,
-    "prevClose": 37.61,
-    "preChg": null,
-    "postChg": 0.43114379913771206,
-    "dayChg": 4.8391376,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "CAE",
-    "name": "CAE Inc",
-    "mcap": 8797545500,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 0.26442,
-    "estRaw": "$0.19",
-    "nEst": "4",
-    "last": null,
-    "lastRaw": null,
-    "actual": 0.33,
-    "reported": true,
-    "surprise": 24.801452235080564,
-    "src": "Yahoo earningsHistory",
-    "cross": {
-     "yahoo": 0.33,
-     "nasdaq": 0.24,
-     "diffPct": 27.272727272727277,
-     "conflict": true
-    },
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 1204700000,
-     "revPrev": null,
-     "net": 58600000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 28.15,
-    "prevClose": 27.39,
-    "preChg": null,
-    "postChg": 0,
-    "dayChg": 2.7747364,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "CTVA",
-    "name": "Corteva, Inc.",
-    "mcap": 8099759600,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 0.09571,
-    "estRaw": "$0.09",
-    "nEst": "4",
-    "last": null,
-    "lastRaw": null,
-    "actual": 0.06,
-    "reported": true,
-    "surprise": -37.31062584891861,
-    "src": "Yahoo earningsHistory",
-    "cross": {
-     "yahoo": 0.06,
-     "nasdaq": -0.04,
-     "diffPct": 166.66666666666669,
-     "conflict": true
-    },
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 1591000000,
+     "rev": 337318000,
      "revPrev": null,
      "net": 0,
      "netPrev": null,
      "gross": 0
     },
-    "price": 9.19,
-    "prevClose": 12.14,
+    "price": 65.42,
+    "prevClose": 65.84,
     "preChg": null,
-    "postChg": 0.7616974972796564,
-    "dayChg": -24.2998,
-    "marketState": "POST"
+    "postChg": null,
+    "dayChg": -0.637907,
+    "marketState": "PRE"
    },
    {
-    "symbol": "OR",
-    "name": "OR Royalties Inc.",
-    "mcap": 6683215900,
+    "symbol": "ARWR",
+    "name": "Arrowhead Pharmaceuticals, Inc.",
+    "mcap": 6972320300,
     "tier": "中市值",
     "threshold": 3,
     "quarter": "Sep/2026",
-    "est": 0.27,
-    "estRaw": "$0.27",
-    "nEst": "3",
+    "est": -1.50326,
+    "estRaw": "($1.59)",
+    "nEst": "9",
     "last": null,
     "lastRaw": null,
-    "actual": 0.29,
+    "actual": -1.5213,
     "reported": true,
-    "surprise": 7.407407407407393,
-    "src": "Nasdaq 日历",
-    "cross": null,
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 90205000,
-     "revPrev": null,
-     "net": 0,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 34.83,
-    "prevClose": 35.6,
-    "preChg": null,
-    "postChg": -0.10104220499569383,
-    "dayChg": -2.16291,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "ENS",
-    "name": "EnerSys",
-    "mcap": 5325030400,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 3.18,
-    "estRaw": "$3.19",
-    "nEst": "3",
-    "last": null,
-    "lastRaw": null,
-    "actual": 3.22,
-    "reported": true,
-    "surprise": 1.2578616352201268,
+    "surprise": -1.200058539440952,
     "src": "Yahoo earningsHistory",
     "cross": {
-     "yahoo": 3.22,
-     "nasdaq": 3.22,
-     "diffPct": 0,
-     "conflict": false
+     "yahoo": -1.5213,
+     "nasdaq": -0.18,
+     "diffPct": 88.16801419838298,
+     "conflict": true
     },
     "fund": {
      "period": "2026-09-30",
-     "rev": 949900000,
+     "rev": 37794000,
      "revPrev": null,
-     "net": 89600000,
+     "net": -428001000,
      "netPrev": null,
      "gross": 0
     },
-    "price": 147.8,
-    "prevClose": 147.65,
+    "price": 47.15,
+    "prevClose": 49.36,
     "preChg": null,
-    "postChg": 1.3230040595399117,
-    "dayChg": 0.101598,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "ECO",
-    "name": "Okeanis Eco Tankers Corp.",
-    "mcap": 3348079100,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 3.69,
-    "estRaw": "$3.69",
-    "nEst": "1",
-    "last": null,
-    "lastRaw": null,
-    "actual": 7.67,
-    "reported": true,
-    "surprise": 107.85907859078591,
-    "src": "Yahoo earningsHistory",
-    "cross": {
-     "yahoo": 7.67,
-     "nasdaq": 7.67,
-     "diffPct": 0,
-     "conflict": false
-    },
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 338303640,
-     "revPrev": null,
-     "net": 299584430,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 87.67,
-    "prevClose": 85.75,
-    "preChg": null,
-    "postChg": -0.7528230865746499,
-    "dayChg": 2.23906,
-    "marketState": "POST"
-   },
-   {
-    "symbol": "TNK",
-    "name": "Teekay Tankers Ltd.",
-    "mcap": 3081917700,
-    "tier": "中市值",
-    "threshold": 3,
-    "quarter": "Sep/2026",
-    "est": 4.49454,
-    "estRaw": "$3.45",
-    "nEst": "1",
-    "last": null,
-    "lastRaw": null,
-    "actual": 5.04,
-    "reported": true,
-    "surprise": 12.13605841754663,
-    "src": "Yahoo earningsHistory",
-    "cross": {
-     "yahoo": 5.04,
-     "nasdaq": 5.04,
-     "diffPct": 0,
-     "conflict": false
-    },
-    "fund": {
-     "period": "2026-09-30",
-     "rev": 239374000,
-     "revPrev": null,
-     "net": 195221000,
-     "netPrev": null,
-     "gross": 0
-    },
-    "price": 88.5,
-    "prevClose": 88.96,
-    "preChg": null,
-    "postChg": 0,
-    "dayChg": -0.517085,
-    "marketState": "POST"
+    "postChg": null,
+    "dayChg": -4.47731,
+    "marketState": "PRE"
    }
   ],
-  "postTotal": 34,
-  "postHit": 0,
-  "postCached": true
+  "postTotal": 121,
+  "postHit": 2,
+  "postCached": false
  },
  "nextEarn": {
   "TSLA": [
@@ -779,7 +767,7 @@ window.YF_DATA = {
    "2027-02-04"
   ],
   "NBIS": [
-   "2026-11-12"
+   "2027-02-11"
   ],
   "CRWV": [
    "2026-11-10"
@@ -817,8 +805,8 @@ window.YF_DATA = {
    {
     "t": "TSLA",
     "chart": 390.84,
-    "quote": 390.8163,
-    "diffPct": 0.0060642301766744445,
+    "quote": 390.816,
+    "diffPct": 0.006140997297961422,
     "ok": true
    },
    {
@@ -917,130 +905,6 @@ window.YF_DATA = {
   "total": 14
  },
  "tracks": {
-  "phy": [
-   {
-    "name": "TSLA",
-    "sym": "TSLA",
-    "price": 397.4,
-    "chg": 1.7,
-    "d20": 8.25,
-    "ytd": -9.27,
-    "ccy": "$",
-    "mcap": 1571023749120
-   },
-   {
-    "name": "NVDA",
-    "sym": "NVDA",
-    "price": 166.2,
-    "chg": -4.34,
-    "d20": -24.9,
-    "ytd": -12,
-    "ccy": "$",
-    "mcap": 4012989743104
-   },
-   {
-    "name": "三花智控",
-    "sym": "002050.SZ",
-    "price": 34.61,
-    "chg": -4.79,
-    "d20": 10.61,
-    "ytd": -38.5,
-    "ccy": "¥",
-    "mcap": 145639358464
-   },
-   {
-    "name": "拓普集团",
-    "sym": "601689.SS",
-    "price": 50.55,
-    "chg": -1.37,
-    "d20": 27.68,
-    "ytd": -34.36,
-    "ccy": "¥",
-    "mcap": 87847583744
-   },
-   {
-    "name": "绿的谐波",
-    "sym": "688017.SS",
-    "price": 283.9,
-    "chg": -6.29,
-    "d20": 15.45,
-    "ytd": 48.61,
-    "ccy": "¥",
-    "mcap": 52052922368
-   },
-   {
-    "name": "优必选",
-    "sym": "9880.HK",
-    "price": 74.5,
-    "chg": -2.74,
-    "d20": 10.53,
-    "ytd": -43.13,
-    "ccy": "HK$",
-    "mcap": 38055645184
-   }
-  ],
-  "edge": [
-   {
-    "name": "QCOM",
-    "sym": "QCOM",
-    "price": 177.1,
-    "chg": 0.32,
-    "d20": 2.62,
-    "ytd": 2.4,
-    "ccy": "$",
-    "mcap": 189539794944
-   },
-   {
-    "name": "AAPL",
-    "sym": "AAPL",
-    "price": 354.9,
-    "chg": -0.14,
-    "d20": 3.48,
-    "ytd": 30.95,
-    "ccy": "$",
-    "mcap": 5157180932096
-   },
-   {
-    "name": "联发科",
-    "sym": "2454.TW",
-    "price": 3850,
-    "chg": -3.51,
-    "d20": -14.92,
-    "ytd": 161.9,
-    "ccy": "NT$",
-    "mcap": 6148949803008
-   },
-   {
-    "name": "恒玄科技",
-    "sym": "688608.SS",
-    "price": 127.2,
-    "chg": -5.14,
-    "d20": 27.51,
-    "ytd": -25.53,
-    "ccy": "¥",
-    "mcap": 30131904512
-   },
-   {
-    "name": "乐鑫科技",
-    "sym": "688018.SS",
-    "price": 161.3,
-    "chg": -8,
-    "d20": 31.72,
-    "ytd": 26.65,
-    "ccy": "¥",
-    "mcap": 37806190592
-   },
-   {
-    "name": "瑞芯微",
-    "sym": "603893.SS",
-    "price": 220.7,
-    "chg": -6.08,
-    "d20": 12.9,
-    "ytd": 18.59,
-    "ccy": "¥",
-    "mcap": 93452124160
-   }
-  ],
   "app": [
    {
     "name": "MSFT",
@@ -1123,6 +987,356 @@ window.YF_DATA = {
     "mcap": 92839763968
    }
   ],
+  "infra": [
+   {
+    "name": "NVDA",
+    "sym": "NVDA",
+    "price": 166.2,
+    "chg": -4.34,
+    "d20": -24.9,
+    "ytd": -12,
+    "ccy": "$",
+    "mcap": 4012989743104
+   },
+   {
+    "name": "AVGO",
+    "sym": "AVGO",
+    "price": 364.4,
+    "chg": 5.54,
+    "d20": 5.23,
+    "ytd": 4.82,
+    "ccy": "$",
+    "mcap": 1739319803904
+   },
+   {
+    "name": "CRWV",
+    "sym": "CRWV",
+    "price": 56.6,
+    "chg": -6.86,
+    "d20": -13.96,
+    "ytd": -28.64,
+    "ccy": "$",
+    "mcap": 31216969728
+   },
+   {
+    "name": "IREN",
+    "sym": "IREN",
+    "price": 19.48,
+    "chg": -6.53,
+    "d20": -36.26,
+    "ytd": -54.38,
+    "ccy": "$",
+    "mcap": 8266481664
+   },
+   {
+    "name": "NBIS",
+    "sym": "NBIS",
+    "price": 128.6,
+    "chg": -16.84,
+    "d20": -30.84,
+    "ytd": 43.01,
+    "ccy": "$",
+    "mcap": 34971455488
+   },
+   {
+    "name": "BE",
+    "sym": "BE",
+    "price": 201.9,
+    "chg": -3.6,
+    "d20": -15.63,
+    "ytd": 104.61,
+    "ccy": "$",
+    "mcap": 59701956608
+   },
+   {
+    "name": "VRT",
+    "sym": "VRT",
+    "price": 209.6,
+    "chg": 1.52,
+    "d20": -5.92,
+    "ytd": 19.38,
+    "ccy": "$",
+    "mcap": 80724066304
+   },
+   {
+    "name": "ANET",
+    "sym": "ANET",
+    "price": 206.6,
+    "chg": 5.06,
+    "d20": 5.74,
+    "ytd": 54.66,
+    "ccy": "$",
+    "mcap": 261056839680
+   },
+   {
+    "name": "GEV",
+    "sym": "GEV",
+    "price": 818.5,
+    "chg": 1.27,
+    "d20": -13.09,
+    "ytd": 20.45,
+    "ccy": "$",
+    "mcap": 216635539456
+   }
+  ],
+  "pkg": [
+   {
+    "name": "TSM",
+    "sym": "TSM",
+    "price": 405.5,
+    "chg": -1.9,
+    "d20": -5.7,
+    "ytd": 26.87,
+    "ccy": "$",
+    "mcap": 2103062822912
+   },
+   {
+    "name": "AMKR",
+    "sym": "AMKR",
+    "price": 37.12,
+    "chg": -2.57,
+    "d20": -17.18,
+    "ytd": -13.51,
+    "ccy": "$",
+    "mcap": 9198713856
+   },
+   {
+    "name": "ASX",
+    "sym": "ASX",
+    "price": 36.29,
+    "chg": -4.05,
+    "d20": -18.14,
+    "ytd": 115.24,
+    "ccy": "$",
+    "mcap": 80112852992
+   },
+   {
+    "name": "ONTO",
+    "sym": "ONTO",
+    "price": 209.7,
+    "chg": -2.51,
+    "d20": -13.15,
+    "ytd": 26.41,
+    "ccy": "$",
+    "mcap": 10291511296
+   },
+   {
+    "name": "TER",
+    "sym": "TER",
+    "price": 263.8,
+    "chg": -0.76,
+    "d20": -26.62,
+    "ytd": 27.07,
+    "ccy": "$",
+    "mcap": 41177903104
+   },
+   {
+    "name": "长电科技",
+    "sym": "600584.SS",
+    "price": 52.7,
+    "chg": -3.21,
+    "d20": -8.35,
+    "ytd": 37.38,
+    "ccy": "¥",
+    "mcap": 94302150656
+   },
+   {
+    "name": "通富微电",
+    "sym": "002156.SZ",
+    "price": 46.5,
+    "chg": -3.85,
+    "d20": -6.53,
+    "ytd": 17.6,
+    "ccy": "¥",
+    "mcap": 74111598592
+   }
+  ],
+  "cpu": [
+   {
+    "name": "ARM",
+    "sym": "ARM",
+    "price": 199.8,
+    "chg": -1.76,
+    "d20": -16.06,
+    "ytd": 74.13,
+    "ccy": "$",
+    "mcap": 213764603904
+   },
+   {
+    "name": "AMD",
+    "sym": "AMD",
+    "price": 585.3,
+    "chg": 5.86,
+    "d20": 2.54,
+    "ytd": 161.91,
+    "ccy": "$",
+    "mcap": 959943081984
+   },
+   {
+    "name": "INTC",
+    "sym": "INTC",
+    "price": 61.2,
+    "chg": -2.03,
+    "d20": -37.63,
+    "ytd": 55.41,
+    "ccy": "$",
+    "mcap": 325278007296
+   },
+   {
+    "name": "QCOM",
+    "sym": "QCOM",
+    "price": 177.1,
+    "chg": 0.32,
+    "d20": 2.62,
+    "ytd": 2.4,
+    "ccy": "$",
+    "mcap": 189539794944
+   },
+   {
+    "name": "NVDA",
+    "sym": "NVDA",
+    "price": 166.2,
+    "chg": -4.34,
+    "d20": -24.9,
+    "ytd": -12,
+    "ccy": "$",
+    "mcap": 4012989743104
+   },
+   {
+    "name": "MRVL",
+    "sym": "MRVL",
+    "price": 164.4,
+    "chg": -2.58,
+    "d20": -32.95,
+    "ytd": 83.97,
+    "ccy": "$",
+    "mcap": 147966492672
+   }
+  ],
+  "phy": [
+   {
+    "name": "TSLA",
+    "sym": "TSLA",
+    "price": 397.4,
+    "chg": 1.7,
+    "d20": 8.25,
+    "ytd": -9.27,
+    "ccy": "$",
+    "mcap": 1571023749120
+   },
+   {
+    "name": "NVDA",
+    "sym": "NVDA",
+    "price": 166.2,
+    "chg": -4.34,
+    "d20": -24.9,
+    "ytd": -12,
+    "ccy": "$",
+    "mcap": 4012989743104
+   },
+   {
+    "name": "三花智控",
+    "sym": "002050.SZ",
+    "price": 34.87,
+    "chg": 0.75,
+    "d20": 14.22,
+    "ytd": -38.04,
+    "ccy": "¥",
+    "mcap": 146733432832
+   },
+   {
+    "name": "拓普集团",
+    "sym": "601689.SS",
+    "price": 50.28,
+    "chg": -0.53,
+    "d20": 32.56,
+    "ytd": -34.71,
+    "ccy": "¥",
+    "mcap": 87378370560
+   },
+   {
+    "name": "绿的谐波",
+    "sym": "688017.SS",
+    "price": 281.8,
+    "chg": -0.75,
+    "d20": 20.43,
+    "ytd": 47.49,
+    "ccy": "¥",
+    "mcap": 51662426112
+   },
+   {
+    "name": "优必选",
+    "sym": "9880.HK",
+    "price": 72.35,
+    "chg": -2.89,
+    "d20": 7.66,
+    "ytd": -44.77,
+    "ccy": "HK$",
+    "mcap": 36957396992
+   }
+  ],
+  "edge": [
+   {
+    "name": "QCOM",
+    "sym": "QCOM",
+    "price": 177.1,
+    "chg": 0.32,
+    "d20": 2.62,
+    "ytd": 2.4,
+    "ccy": "$",
+    "mcap": 189539794944
+   },
+   {
+    "name": "AAPL",
+    "sym": "AAPL",
+    "price": 354.9,
+    "chg": -0.14,
+    "d20": 3.48,
+    "ytd": 30.95,
+    "ccy": "$",
+    "mcap": 5157180932096
+   },
+   {
+    "name": "联发科",
+    "sym": "2454.TW",
+    "price": 4120,
+    "chg": 7.01,
+    "d20": -7.93,
+    "ytd": 180.27,
+    "ccy": "NT$",
+    "mcap": 6580175110144
+   },
+   {
+    "name": "恒玄科技",
+    "sym": "688608.SS",
+    "price": 125.1,
+    "chg": -1.66,
+    "d20": 30.98,
+    "ytd": -26.76,
+    "ccy": "¥",
+    "mcap": 29632075776
+   },
+   {
+    "name": "乐鑫科技",
+    "sym": "688018.SS",
+    "price": 161,
+    "chg": -0.19,
+    "d20": 33,
+    "ytd": 26.42,
+    "ccy": "¥",
+    "mcap": 37735874560
+   },
+   {
+    "name": "瑞芯微",
+    "sym": "603893.SS",
+    "price": 217.8,
+    "chg": -1.32,
+    "d20": 14.63,
+    "ytd": 17.02,
+    "ccy": "¥",
+    "mcap": 92215812096
+   }
+  ],
   "sec": [
    {
     "name": "CRWD",
@@ -1197,22 +1411,22 @@ window.YF_DATA = {
    {
     "name": "奇安信",
     "sym": "688561.SS",
-    "price": 24.66,
-    "chg": -3.29,
-    "d20": -16.01,
-    "ytd": -32.79,
+    "price": 24.19,
+    "chg": -1.91,
+    "d20": -15.33,
+    "ytd": -34.07,
     "ccy": "¥",
-    "mcap": 16824352768
+    "mcap": 16503694336
    },
    {
     "name": "深信服",
     "sym": "300454.SZ",
-    "price": 119.1,
-    "chg": -0.75,
-    "d20": -12.13,
-    "ytd": -0.85,
+    "price": 114.3,
+    "chg": -4.01,
+    "d20": -12.76,
+    "ytd": -4.83,
     "ccy": "¥",
-    "mcap": 51381420032
+    "mcap": 49318567936
    }
   ],
   "fin": [
@@ -1310,7 +1524,7 @@ window.YF_DATA = {
     "name": "ADYEY",
     "sym": "ADYEY",
     "price": 9.45,
-    "chg": -2.78,
+    "chg": -2.58,
     "d20": -7.71,
     "ytd": -42.17,
     "ccy": "$",
@@ -1327,230 +1541,116 @@ window.YF_DATA = {
     "mcap": 2155552000
    }
   ],
-  "infra": [
+  "bio": [
    {
-    "name": "NVDA",
-    "sym": "NVDA",
-    "price": 166.2,
-    "chg": -4.34,
-    "d20": -24.9,
-    "ytd": -12,
+    "name": "LLY",
+    "sym": "LLY",
+    "price": 1427,
+    "chg": -0.7,
+    "d20": 18.08,
+    "ytd": 32.11,
     "ccy": "$",
-    "mcap": 4012989743104
+    "mcap": 1271342563328
    },
    {
-    "name": "AVGO",
-    "sym": "AVGO",
-    "price": 364.4,
-    "chg": 5.54,
-    "d20": 5.23,
-    "ytd": 4.82,
+    "name": "PFE",
+    "sym": "PFE",
+    "price": 28.83,
+    "chg": -2.11,
+    "d20": -1.3,
+    "ytd": 14.5,
     "ccy": "$",
-    "mcap": 1739319803904
+    "mcap": 164326785024
    },
    {
-    "name": "CRWV",
-    "sym": "CRWV",
-    "price": 56.6,
-    "chg": -6.86,
-    "d20": -13.96,
-    "ytd": -28.64,
+    "name": "MRK",
+    "sym": "MRK",
+    "price": 146.9,
+    "chg": -0.16,
+    "d20": -0.28,
+    "ytd": 38.05,
     "ccy": "$",
-    "mcap": 31216969728
+    "mcap": 362267836416
    },
    {
-    "name": "IREN",
-    "sym": "IREN",
-    "price": 19.48,
-    "chg": -6.53,
-    "d20": -36.26,
-    "ytd": -54.38,
+    "name": "JNJ",
+    "sym": "JNJ",
+    "price": 283.5,
+    "chg": 1.11,
+    "d20": 11.66,
+    "ytd": 36.73,
     "ccy": "$",
-    "mcap": 8266481664
+    "mcap": 682520608768
    },
    {
-    "name": "NBIS",
-    "sym": "NBIS",
-    "price": 128.6,
-    "chg": -16.84,
-    "d20": -30.84,
-    "ytd": 43.01,
+    "name": "UNH",
+    "sym": "UNH",
+    "price": 405.1,
+    "chg": 0.54,
+    "d20": 2.4,
+    "ytd": 20.43,
     "ccy": "$",
-    "mcap": 32661463040
+    "mcap": 363005640704
    },
    {
-    "name": "BE",
-    "sym": "BE",
-    "price": 201.9,
-    "chg": -3.6,
-    "d20": -15.63,
-    "ytd": 104.61,
+    "name": "ABBV",
+    "sym": "ABBV",
+    "price": 294.4,
+    "chg": -0.18,
+    "d20": 3.87,
+    "ytd": 28.41,
     "ccy": "$",
-    "mcap": 59701956608
+    "mcap": 520474624000
    },
    {
-    "name": "VRT",
-    "sym": "VRT",
-    "price": 209.6,
-    "chg": 1.52,
-    "d20": -5.92,
-    "ytd": 19.38,
+    "name": "TMO",
+    "sym": "TMO",
+    "price": 699.4,
+    "chg": -2.55,
+    "d20": 3.9,
+    "ytd": 18.05,
     "ccy": "$",
-    "mcap": 80724066304
+    "mcap": 259153625088
    },
    {
-    "name": "ANET",
-    "sym": "ANET",
-    "price": 206.6,
-    "chg": 5.06,
-    "d20": 5.74,
-    "ytd": 54.66,
+    "name": "AMGN",
+    "sym": "AMGN",
+    "price": 467.1,
+    "chg": -0.22,
+    "d20": 9.61,
+    "ytd": 42.55,
     "ccy": "$",
-    "mcap": 261056839680
+    "mcap": 252638117888
    },
    {
-    "name": "GEV",
-    "sym": "GEV",
-    "price": 818.5,
-    "chg": 1.27,
-    "d20": -13.09,
-    "ytd": 20.45,
+    "name": "ISRG",
+    "sym": "ISRG",
+    "price": 439.9,
+    "chg": -2.14,
+    "d20": 4.68,
+    "ytd": -21.72,
     "ccy": "$",
-    "mcap": 216635539456
-   }
-  ],
-  "pkg": [
-   {
-    "name": "TSM",
-    "sym": "TSM",
-    "price": 405.5,
-    "chg": -1.9,
-    "d20": -5.7,
-    "ytd": 26.87,
-    "ccy": "$",
-    "mcap": 2103062822912
+    "mcap": 152485101568
    },
    {
-    "name": "AMKR",
-    "sym": "AMKR",
-    "price": 37.12,
-    "chg": -2.57,
-    "d20": -17.18,
-    "ytd": -13.51,
+    "name": "VRTX",
+    "sym": "VRTX",
+    "price": 542.6,
+    "chg": -0.81,
+    "d20": 8.85,
+    "ytd": 20.01,
     "ccy": "$",
-    "mcap": 9198713856
+    "mcap": 137574612992
    },
    {
-    "name": "ASX",
-    "sym": "ASX",
-    "price": 36.29,
-    "chg": -4.05,
-    "d20": -18.14,
-    "ytd": 115.24,
+    "name": "REGN",
+    "sym": "REGN",
+    "price": 951.2,
+    "chg": -0.86,
+    "d20": 22.2,
+    "ytd": 22.53,
     "ccy": "$",
-    "mcap": 80112852992
-   },
-   {
-    "name": "ONTO",
-    "sym": "ONTO",
-    "price": 209.7,
-    "chg": -2.51,
-    "d20": -13.15,
-    "ytd": 26.41,
-    "ccy": "$",
-    "mcap": 10291511296
-   },
-   {
-    "name": "TER",
-    "sym": "TER",
-    "price": 263.8,
-    "chg": -0.76,
-    "d20": -26.62,
-    "ytd": 27.07,
-    "ccy": "$",
-    "mcap": 41177903104
-   },
-   {
-    "name": "长电科技",
-    "sym": "600584.SS",
-    "price": 54.45,
-    "chg": 0.09,
-    "d20": -7.16,
-    "ytd": 41.94,
-    "ccy": "¥",
-    "mcap": 97433624576
-   },
-   {
-    "name": "通富微电",
-    "sym": "002156.SZ",
-    "price": 48.36,
-    "chg": 5.36,
-    "d20": -6.51,
-    "ytd": 22.31,
-    "ccy": "¥",
-    "mcap": 77076062208
-   }
-  ],
-  "cpu": [
-   {
-    "name": "ARM",
-    "sym": "ARM",
-    "price": 199.8,
-    "chg": -1.76,
-    "d20": -16.06,
-    "ytd": 74.13,
-    "ccy": "$",
-    "mcap": 213764603904
-   },
-   {
-    "name": "AMD",
-    "sym": "AMD",
-    "price": 585.3,
-    "chg": 5.86,
-    "d20": 2.54,
-    "ytd": 161.91,
-    "ccy": "$",
-    "mcap": 959943081984
-   },
-   {
-    "name": "INTC",
-    "sym": "INTC",
-    "price": 61.2,
-    "chg": -2.03,
-    "d20": -37.63,
-    "ytd": 55.41,
-    "ccy": "$",
-    "mcap": 325278007296
-   },
-   {
-    "name": "QCOM",
-    "sym": "QCOM",
-    "price": 177.1,
-    "chg": 0.32,
-    "d20": 2.62,
-    "ytd": 2.4,
-    "ccy": "$",
-    "mcap": 189539794944
-   },
-   {
-    "name": "NVDA",
-    "sym": "NVDA",
-    "price": 166.2,
-    "chg": -4.34,
-    "d20": -24.9,
-    "ytd": -12,
-    "ccy": "$",
-    "mcap": 4012989743104
-   },
-   {
-    "name": "MRVL",
-    "sym": "MRVL",
-    "price": 164.4,
-    "chg": -2.58,
-    "d20": -32.95,
-    "ytd": 83.97,
-    "ccy": "$",
-    "mcap": 147966492672
+    "mcap": 98398568448
    }
   ]
  },
@@ -1564,7 +1664,35 @@ window.YF_DATA = {
     "type": "ath",
     "market": "US",
     "sec": "半导体",
-    "px": 585.3
+    "px": 585.3,
+    "track": "CPU",
+    "chg": 5.86
+   },
+   {
+    "d": "2026-11-12",
+    "sym": "TECH",
+    "name": "Bio-Techne",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 72.84,
+    "chg": 0.05,
+    "hi": 72.88,
+    "mcap": 11442488555
+   },
+   {
+    "d": "2026-11-12",
+    "sym": "OGN",
+    "name": "Organon",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 13.9,
+    "chg": 0.07,
+    "hi": 13.9,
+    "mcap": 3649126910
    }
   ],
   "log": [
@@ -1575,71 +1703,1398 @@ window.YF_DATA = {
     "type": "ath",
     "market": "US",
     "sec": "半导体",
-    "px": 552.9
+    "track": "CPU",
+    "px": 585.3,
+    "chg": 5.86
+   },
+   {
+    "d": "2026-11-12",
+    "sym": "CPAC",
+    "name": "Cementos Pacasmayo",
+    "type": "52w",
+    "market": "US",
+    "sec": "工业",
+    "track": "其它",
+    "px": 12.93,
+    "chg": 0.31
+   },
+   {
+    "d": "2026-11-12",
+    "sym": "OGN",
+    "name": "Organon",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 13.9,
+    "chg": 0.07
+   },
+   {
+    "d": "2026-11-12",
+    "sym": "TECH",
+    "name": "Bio-Techne",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 72.84,
+    "chg": 0.05
    }
   ],
   "weekly": {
-   "total": 1,
+   "total": 4,
    "byMkt": {
-    "US": 1
+    "US": 4
    },
    "bySec": {
-    "半导体": 1
+    "半导体": 1,
+    "工业": 1,
+    "医疗": 2
+   },
+   "byTrack": {
+    "CPU": 1,
+    "其它": 1,
+    "生物医药": 2
    },
    "days": 7
   },
   "monthly": {
-   "total": 1,
+   "total": 4,
    "byMkt": {
-    "US": 1
+    "US": 4
    },
    "bySec": {
-    "半导体": 1
+    "半导体": 1,
+    "工业": 1,
+    "医疗": 2
+   },
+   "byTrack": {
+    "CPU": 1,
+    "其它": 1,
+    "生物医药": 2
    },
    "days": 30
   }
  },
+ "gpuRent": {
+  "meta": {
+   "source": "Ornn OCPI ($/GPU·h, 成交价日结算)",
+   "note": "历史曲线为依据公开图表重建的近似形态（仅供趋势参考）；最新一日为真实结算值。序列由 Agent 每日更新维护。",
+   "reconstruction": true,
+   "updatedAt": "2026-11-13"
+  },
+  "latest": {
+   "date": "2026-11-12",
+   "h100": 3.25,
+   "h200": 7.75,
+   "b200": 9.84,
+   "chg30d": {
+    "h100": 8,
+    "h200": 49,
+    "b200": 32
+   }
+  },
+  "series": {
+   "h100": [
+    [
+     "2026-08-01",
+     2.77
+    ],
+    [
+     "2026-08-02",
+     2.72
+    ],
+    [
+     "2026-08-03",
+     2.81
+    ],
+    [
+     "2026-08-04",
+     2.7
+    ],
+    [
+     "2026-08-05",
+     2.7
+    ],
+    [
+     "2026-08-06",
+     2.77
+    ],
+    [
+     "2026-08-07",
+     2.81
+    ],
+    [
+     "2026-08-08",
+     2.8
+    ],
+    [
+     "2026-08-09",
+     2.84
+    ],
+    [
+     "2026-08-10",
+     2.73
+    ],
+    [
+     "2026-08-11",
+     2.83
+    ],
+    [
+     "2026-08-12",
+     2.85
+    ],
+    [
+     "2026-08-13",
+     2.84
+    ],
+    [
+     "2026-08-14",
+     2.81
+    ],
+    [
+     "2026-08-15",
+     2.75
+    ],
+    [
+     "2026-08-16",
+     2.77
+    ],
+    [
+     "2026-08-17",
+     2.85
+    ],
+    [
+     "2026-08-18",
+     2.79
+    ],
+    [
+     "2026-08-19",
+     2.87
+    ],
+    [
+     "2026-08-20",
+     2.9
+    ],
+    [
+     "2026-08-21",
+     2.95
+    ],
+    [
+     "2026-08-22",
+     2.91
+    ],
+    [
+     "2026-08-23",
+     2.85
+    ],
+    [
+     "2026-08-24",
+     2.87
+    ],
+    [
+     "2026-08-25",
+     2.98
+    ],
+    [
+     "2026-08-26",
+     2.91
+    ],
+    [
+     "2026-08-27",
+     2.9
+    ],
+    [
+     "2026-08-28",
+     2.91
+    ],
+    [
+     "2026-08-29",
+     2.95
+    ],
+    [
+     "2026-08-30",
+     2.98
+    ],
+    [
+     "2026-08-31",
+     2.92
+    ],
+    [
+     "2026-09-01",
+     2.99
+    ],
+    [
+     "2026-09-02",
+     3.06
+    ],
+    [
+     "2026-09-03",
+     3.04
+    ],
+    [
+     "2026-09-04",
+     3.02
+    ],
+    [
+     "2026-09-05",
+     3.02
+    ],
+    [
+     "2026-09-06",
+     2.99
+    ],
+    [
+     "2026-09-07",
+     2.97
+    ],
+    [
+     "2026-09-08",
+     3.05
+    ],
+    [
+     "2026-09-09",
+     3.02
+    ],
+    [
+     "2026-09-10",
+     3.03
+    ],
+    [
+     "2026-09-11",
+     3
+    ],
+    [
+     "2026-09-12",
+     2.94
+    ],
+    [
+     "2026-09-13",
+     3.04
+    ],
+    [
+     "2026-09-14",
+     3.05
+    ],
+    [
+     "2026-09-15",
+     3
+    ],
+    [
+     "2026-09-16",
+     3.03
+    ],
+    [
+     "2026-09-17",
+     3.01
+    ],
+    [
+     "2026-09-18",
+     2.99
+    ],
+    [
+     "2026-09-19",
+     3.03
+    ],
+    [
+     "2026-09-20",
+     3.06
+    ],
+    [
+     "2026-09-21",
+     3
+    ],
+    [
+     "2026-09-22",
+     2.98
+    ],
+    [
+     "2026-09-23",
+     2.97
+    ],
+    [
+     "2026-09-24",
+     2.97
+    ],
+    [
+     "2026-09-25",
+     2.95
+    ],
+    [
+     "2026-09-26",
+     2.97
+    ],
+    [
+     "2026-09-27",
+     3.01
+    ],
+    [
+     "2026-09-28",
+     3.04
+    ],
+    [
+     "2026-09-29",
+     2.99
+    ],
+    [
+     "2026-09-30",
+     3.03
+    ],
+    [
+     "2026-10-01",
+     2.94
+    ],
+    [
+     "2026-10-02",
+     3.06
+    ],
+    [
+     "2026-10-03",
+     3.01
+    ],
+    [
+     "2026-10-04",
+     2.99
+    ],
+    [
+     "2026-10-05",
+     3.08
+    ],
+    [
+     "2026-10-06",
+     3.11
+    ],
+    [
+     "2026-10-07",
+     3.1
+    ],
+    [
+     "2026-10-08",
+     3.05
+    ],
+    [
+     "2026-10-09",
+     2.99
+    ],
+    [
+     "2026-10-10",
+     3.03
+    ],
+    [
+     "2026-10-11",
+     3.06
+    ],
+    [
+     "2026-10-12",
+     3.09
+    ],
+    [
+     "2026-10-13",
+     3.06
+    ],
+    [
+     "2026-10-14",
+     3.1
+    ],
+    [
+     "2026-10-15",
+     3.12
+    ],
+    [
+     "2026-10-16",
+     3.05
+    ],
+    [
+     "2026-10-17",
+     3.07
+    ],
+    [
+     "2026-10-18",
+     3.1
+    ],
+    [
+     "2026-10-19",
+     3.12
+    ],
+    [
+     "2026-10-20",
+     3.17
+    ],
+    [
+     "2026-10-21",
+     3.29
+    ],
+    [
+     "2026-10-22",
+     3.17
+    ],
+    [
+     "2026-10-23",
+     3.2
+    ],
+    [
+     "2026-10-24",
+     3.18
+    ],
+    [
+     "2026-10-25",
+     3.37
+    ],
+    [
+     "2026-10-26",
+     3.25
+    ],
+    [
+     "2026-10-27",
+     3.38
+    ],
+    [
+     "2026-10-28",
+     3.39
+    ],
+    [
+     "2026-10-29",
+     3.44
+    ],
+    [
+     "2026-10-30",
+     3.43
+    ],
+    [
+     "2026-10-31",
+     3.47
+    ],
+    [
+     "2026-11-01",
+     3.37
+    ],
+    [
+     "2026-11-02",
+     3.4
+    ],
+    [
+     "2026-11-03",
+     3.38
+    ],
+    [
+     "2026-11-04",
+     3.39
+    ],
+    [
+     "2026-11-05",
+     3.34
+    ],
+    [
+     "2026-11-06",
+     3.35
+    ],
+    [
+     "2026-11-07",
+     3.34
+    ],
+    [
+     "2026-11-08",
+     3.26
+    ],
+    [
+     "2026-11-09",
+     3.32
+    ],
+    [
+     "2026-11-10",
+     3.28
+    ],
+    [
+     "2026-11-11",
+     3.25
+    ],
+    [
+     "2026-11-12",
+     3.25
+    ]
+   ],
+   "h200": [
+    [
+     "2026-08-01",
+     5.13
+    ],
+    [
+     "2026-08-02",
+     5.24
+    ],
+    [
+     "2026-08-03",
+     5.15
+    ],
+    [
+     "2026-08-04",
+     5.18
+    ],
+    [
+     "2026-08-05",
+     5.19
+    ],
+    [
+     "2026-08-06",
+     5.2
+    ],
+    [
+     "2026-08-07",
+     5.17
+    ],
+    [
+     "2026-08-08",
+     5.23
+    ],
+    [
+     "2026-08-09",
+     5.23
+    ],
+    [
+     "2026-08-10",
+     5.31
+    ],
+    [
+     "2026-08-11",
+     5.3
+    ],
+    [
+     "2026-08-12",
+     5.26
+    ],
+    [
+     "2026-08-13",
+     5.3
+    ],
+    [
+     "2026-08-14",
+     5.32
+    ],
+    [
+     "2026-08-15",
+     5.32
+    ],
+    [
+     "2026-08-16",
+     5.28
+    ],
+    [
+     "2026-08-17",
+     5.22
+    ],
+    [
+     "2026-08-18",
+     5.18
+    ],
+    [
+     "2026-08-19",
+     5.1
+    ],
+    [
+     "2026-08-20",
+     5.09
+    ],
+    [
+     "2026-08-21",
+     5.01
+    ],
+    [
+     "2026-08-22",
+     4.95
+    ],
+    [
+     "2026-08-23",
+     4.96
+    ],
+    [
+     "2026-08-24",
+     4.9
+    ],
+    [
+     "2026-08-25",
+     4.84
+    ],
+    [
+     "2026-08-26",
+     4.75
+    ],
+    [
+     "2026-08-27",
+     4.75
+    ],
+    [
+     "2026-08-28",
+     4.68
+    ],
+    [
+     "2026-08-29",
+     4.66
+    ],
+    [
+     "2026-08-30",
+     4.62
+    ],
+    [
+     "2026-08-31",
+     4.54
+    ],
+    [
+     "2026-09-01",
+     4.34
+    ],
+    [
+     "2026-09-02",
+     4.58
+    ],
+    [
+     "2026-09-03",
+     4.47
+    ],
+    [
+     "2026-09-04",
+     4.73
+    ],
+    [
+     "2026-09-05",
+     4.65
+    ],
+    [
+     "2026-09-06",
+     5.02
+    ],
+    [
+     "2026-09-07",
+     4.93
+    ],
+    [
+     "2026-09-08",
+     5.13
+    ],
+    [
+     "2026-09-09",
+     5.11
+    ],
+    [
+     "2026-09-10",
+     5.16
+    ],
+    [
+     "2026-09-11",
+     5.03
+    ],
+    [
+     "2026-09-12",
+     5.44
+    ],
+    [
+     "2026-09-13",
+     5.29
+    ],
+    [
+     "2026-09-14",
+     5.59
+    ],
+    [
+     "2026-09-15",
+     5.37
+    ],
+    [
+     "2026-09-16",
+     5.43
+    ],
+    [
+     "2026-09-17",
+     5.53
+    ],
+    [
+     "2026-09-18",
+     5.56
+    ],
+    [
+     "2026-09-19",
+     5.61
+    ],
+    [
+     "2026-09-20",
+     5.8
+    ],
+    [
+     "2026-09-21",
+     5.68
+    ],
+    [
+     "2026-09-22",
+     5.88
+    ],
+    [
+     "2026-09-23",
+     5.77
+    ],
+    [
+     "2026-09-24",
+     6.08
+    ],
+    [
+     "2026-09-25",
+     5.92
+    ],
+    [
+     "2026-09-26",
+     5.94
+    ],
+    [
+     "2026-09-27",
+     6.09
+    ],
+    [
+     "2026-09-28",
+     6.05
+    ],
+    [
+     "2026-09-29",
+     6.18
+    ],
+    [
+     "2026-09-30",
+     6.3
+    ],
+    [
+     "2026-10-01",
+     6.28
+    ],
+    [
+     "2026-10-02",
+     6.27
+    ],
+    [
+     "2026-10-03",
+     6.32
+    ],
+    [
+     "2026-10-04",
+     6.41
+    ],
+    [
+     "2026-10-05",
+     6.37
+    ],
+    [
+     "2026-10-06",
+     6.43
+    ],
+    [
+     "2026-10-07",
+     6.44
+    ],
+    [
+     "2026-10-08",
+     6.35
+    ],
+    [
+     "2026-10-09",
+     6.39
+    ],
+    [
+     "2026-10-10",
+     6.48
+    ],
+    [
+     "2026-10-11",
+     6.52
+    ],
+    [
+     "2026-10-12",
+     6.49
+    ],
+    [
+     "2026-10-13",
+     6.55
+    ],
+    [
+     "2026-10-14",
+     6.53
+    ],
+    [
+     "2026-10-15",
+     6.5
+    ],
+    [
+     "2026-10-16",
+     6.69
+    ],
+    [
+     "2026-10-17",
+     6.62
+    ],
+    [
+     "2026-10-18",
+     6.52
+    ],
+    [
+     "2026-10-19",
+     6.72
+    ],
+    [
+     "2026-10-20",
+     6.76
+    ],
+    [
+     "2026-10-21",
+     6.69
+    ],
+    [
+     "2026-10-22",
+     6.8
+    ],
+    [
+     "2026-10-23",
+     6.82
+    ],
+    [
+     "2026-10-24",
+     6.91
+    ],
+    [
+     "2026-10-25",
+     6.84
+    ],
+    [
+     "2026-10-26",
+     7.15
+    ],
+    [
+     "2026-10-27",
+     7.02
+    ],
+    [
+     "2026-10-28",
+     7.18
+    ],
+    [
+     "2026-10-29",
+     7.21
+    ],
+    [
+     "2026-10-30",
+     7.14
+    ],
+    [
+     "2026-10-31",
+     7.14
+    ],
+    [
+     "2026-11-01",
+     7.31
+    ],
+    [
+     "2026-11-02",
+     7.39
+    ],
+    [
+     "2026-11-03",
+     7.33
+    ],
+    [
+     "2026-11-04",
+     7.5
+    ],
+    [
+     "2026-11-05",
+     7.41
+    ],
+    [
+     "2026-11-06",
+     7.54
+    ],
+    [
+     "2026-11-07",
+     7.56
+    ],
+    [
+     "2026-11-08",
+     7.49
+    ],
+    [
+     "2026-11-09",
+     7.64
+    ],
+    [
+     "2026-11-10",
+     7.59
+    ],
+    [
+     "2026-11-11",
+     7.8
+    ],
+    [
+     "2026-11-12",
+     7.75
+    ]
+   ],
+   "b200": [
+    [
+     "2026-08-01",
+     6.35
+    ],
+    [
+     "2026-08-02",
+     6.48
+    ],
+    [
+     "2026-08-03",
+     6.45
+    ],
+    [
+     "2026-08-04",
+     6.51
+    ],
+    [
+     "2026-08-05",
+     6.58
+    ],
+    [
+     "2026-08-06",
+     6.6
+    ],
+    [
+     "2026-08-07",
+     6.69
+    ],
+    [
+     "2026-08-08",
+     6.57
+    ],
+    [
+     "2026-08-09",
+     6.59
+    ],
+    [
+     "2026-08-10",
+     6.75
+    ],
+    [
+     "2026-08-11",
+     6.77
+    ],
+    [
+     "2026-08-12",
+     6.81
+    ],
+    [
+     "2026-08-13",
+     6.92
+    ],
+    [
+     "2026-08-14",
+     6.76
+    ],
+    [
+     "2026-08-15",
+     6.81
+    ],
+    [
+     "2026-08-16",
+     6.88
+    ],
+    [
+     "2026-08-17",
+     6.92
+    ],
+    [
+     "2026-08-18",
+     7.06
+    ],
+    [
+     "2026-08-19",
+     6.92
+    ],
+    [
+     "2026-08-20",
+     6.99
+    ],
+    [
+     "2026-08-21",
+     7.05
+    ],
+    [
+     "2026-08-22",
+     7.12
+    ],
+    [
+     "2026-08-23",
+     7.05
+    ],
+    [
+     "2026-08-24",
+     7.21
+    ],
+    [
+     "2026-08-25",
+     7.17
+    ],
+    [
+     "2026-08-26",
+     7.15
+    ],
+    [
+     "2026-08-27",
+     7.2
+    ],
+    [
+     "2026-08-28",
+     7.29
+    ],
+    [
+     "2026-08-29",
+     7.34
+    ],
+    [
+     "2026-08-30",
+     7.16
+    ],
+    [
+     "2026-08-31",
+     7.34
+    ],
+    [
+     "2026-09-01",
+     7.27
+    ],
+    [
+     "2026-09-02",
+     7.49
+    ],
+    [
+     "2026-09-03",
+     7.46
+    ],
+    [
+     "2026-09-04",
+     7.38
+    ],
+    [
+     "2026-09-05",
+     7.48
+    ],
+    [
+     "2026-09-06",
+     7.66
+    ],
+    [
+     "2026-09-07",
+     7.51
+    ],
+    [
+     "2026-09-08",
+     7.59
+    ],
+    [
+     "2026-09-09",
+     7.6
+    ],
+    [
+     "2026-09-10",
+     7.83
+    ],
+    [
+     "2026-09-11",
+     7.75
+    ],
+    [
+     "2026-09-12",
+     7.96
+    ],
+    [
+     "2026-09-13",
+     7.77
+    ],
+    [
+     "2026-09-14",
+     7.83
+    ],
+    [
+     "2026-09-15",
+     8.04
+    ],
+    [
+     "2026-09-16",
+     8
+    ],
+    [
+     "2026-09-17",
+     8.07
+    ],
+    [
+     "2026-09-18",
+     8.02
+    ],
+    [
+     "2026-09-19",
+     8
+    ],
+    [
+     "2026-09-20",
+     8.02
+    ],
+    [
+     "2026-09-21",
+     8
+    ],
+    [
+     "2026-09-22",
+     8
+    ],
+    [
+     "2026-09-23",
+     8.07
+    ],
+    [
+     "2026-09-24",
+     8.11
+    ],
+    [
+     "2026-09-25",
+     8.09
+    ],
+    [
+     "2026-09-26",
+     8.13
+    ],
+    [
+     "2026-09-27",
+     8.12
+    ],
+    [
+     "2026-09-28",
+     8.02
+    ],
+    [
+     "2026-09-29",
+     8.08
+    ],
+    [
+     "2026-09-30",
+     8.16
+    ],
+    [
+     "2026-10-01",
+     8.05
+    ],
+    [
+     "2026-10-02",
+     8.06
+    ],
+    [
+     "2026-10-03",
+     8.14
+    ],
+    [
+     "2026-10-04",
+     8.23
+    ],
+    [
+     "2026-10-05",
+     8.17
+    ],
+    [
+     "2026-10-06",
+     8.49
+    ],
+    [
+     "2026-10-07",
+     8.3
+    ],
+    [
+     "2026-10-08",
+     8.42
+    ],
+    [
+     "2026-10-09",
+     8.64
+    ],
+    [
+     "2026-10-10",
+     8.54
+    ],
+    [
+     "2026-10-11",
+     8.74
+    ],
+    [
+     "2026-10-12",
+     8.55
+    ],
+    [
+     "2026-10-13",
+     8.72
+    ],
+    [
+     "2026-10-14",
+     8.62
+    ],
+    [
+     "2026-10-15",
+     8.92
+    ],
+    [
+     "2026-10-16",
+     8.71
+    ],
+    [
+     "2026-10-17",
+     8.96
+    ],
+    [
+     "2026-10-18",
+     9.09
+    ],
+    [
+     "2026-10-19",
+     9.05
+    ],
+    [
+     "2026-10-20",
+     9.07
+    ],
+    [
+     "2026-10-21",
+     9.19
+    ],
+    [
+     "2026-10-22",
+     9.23
+    ],
+    [
+     "2026-10-23",
+     9.31
+    ],
+    [
+     "2026-10-24",
+     9.44
+    ],
+    [
+     "2026-10-25",
+     9.23
+    ],
+    [
+     "2026-10-26",
+     9.51
+    ],
+    [
+     "2026-10-27",
+     9.32
+    ],
+    [
+     "2026-10-28",
+     9.53
+    ],
+    [
+     "2026-10-29",
+     9.38
+    ],
+    [
+     "2026-10-30",
+     9.65
+    ],
+    [
+     "2026-10-31",
+     9.52
+    ],
+    [
+     "2026-11-01",
+     9.67
+    ],
+    [
+     "2026-11-02",
+     9.67
+    ],
+    [
+     "2026-11-03",
+     9.72
+    ],
+    [
+     "2026-11-04",
+     9.68
+    ],
+    [
+     "2026-11-05",
+     9.67
+    ],
+    [
+     "2026-11-06",
+     9.73
+    ],
+    [
+     "2026-11-07",
+     9.77
+    ],
+    [
+     "2026-11-08",
+     9.85
+    ],
+    [
+     "2026-11-09",
+     9.85
+    ],
+    [
+     "2026-11-10",
+     9.76
+    ],
+    [
+     "2026-11-11",
+     9.87
+    ],
+    [
+     "2026-11-12",
+     9.84
+    ]
+   ]
+  }
+ },
  "movers": {
-  "date": "20261112",
-  "ts": "2026-11-12T23:40:28.037Z",
-  "pool": 3254,
-  "universe": 3257,
-  "preTotal": 64,
-  "postTotal": 33,
-  "pre": [],
-  "post": [
+  "date": "20261113",
+  "closeDate": "2026-11-12",
+  "ts": "2026-11-13T11:46:22.295Z",
+  "pool": 2825,
+  "universe": 2827,
+  "preTotal": 24,
+  "postTotal": 121,
+  "state": "PRE",
+  "pre": [
    {
     "sym": "CADL",
     "cn": "",
     "en": "Candel Therapeutics",
     "name": "Candel Therapeutics",
     "sec": "医疗",
-    "mcap": 705501169,
+    "mcap": 641990760,
     "px": 8.39,
     "chg": -9,
-    "pre": null,
-    "post": -38.62,
-    "prePx": null,
-    "postPx": 5.15,
-    "state": "POST",
+    "pre": -35.75,
+    "post": null,
+    "prePx": 5.39,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -35.75,
     "earn": false
    },
    {
-    "sym": "CBRS",
+    "sym": "MOD",
     "cn": "",
-    "en": "Cerebras Systems",
-    "name": "Cerebras Systems",
-    "sec": "科技",
-    "mcap": 24012973264,
-    "px": 97.75,
-    "chg": -3.29,
-    "pre": null,
-    "post": 17.73,
-    "prePx": null,
-    "postPx": 115.08,
-    "state": "POST",
+    "en": "Modine Manufacturing",
+    "name": "Modine Manufacturing",
+    "sec": "可选消费",
+    "mcap": 5649512692,
+    "px": 106.1,
+    "chg": -0.53,
+    "pre": 29.62,
+    "post": null,
+    "prePx": 137.71,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 29.62,
     "earn": false
    },
    {
@@ -1648,15 +3103,16 @@ window.YF_DATA = {
     "en": "Liftoff Mobile",
     "name": "Liftoff Mobile",
     "sec": "科技",
-    "mcap": 3141099826,
+    "mcap": 3168192870,
     "px": 18.71,
     "chg": 0.86,
-    "pre": null,
-    "post": 15.98,
-    "prePx": null,
-    "postPx": 21.7,
-    "state": "POST",
+    "pre": 21.81,
+    "post": null,
+    "prePx": 22.79,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 21.81,
     "earn": false
    },
    {
@@ -1665,83 +3121,16 @@ window.YF_DATA = {
     "en": "Newsmax",
     "name": "Newsmax",
     "sec": "工业",
-    "mcap": 1000349196,
+    "mcap": 942872709,
     "px": 7.29,
     "chg": -5.81,
-    "pre": null,
-    "post": 12.21,
-    "prePx": null,
-    "postPx": 8.18,
-    "state": "POST",
+    "pre": 17.83,
+    "post": null,
+    "prePx": 8.59,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "VIR",
-    "cn": "",
-    "en": "Vir Biotechnology",
-    "name": "Vir Biotechnology",
-    "sec": "医疗",
-    "mcap": 2248785249,
-    "px": 12.12,
-    "chg": -7.69,
-    "pre": null,
-    "post": -9.65,
-    "prePx": null,
-    "postPx": 10.95,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "FLO",
-    "cn": "",
-    "en": "Flowers Foods",
-    "name": "Flowers Foods",
-    "sec": "必需消费",
-    "mcap": 1324298575,
-    "px": 6.01,
-    "chg": -3.84,
-    "pre": null,
-    "post": -7.99,
-    "prePx": null,
-    "postPx": 5.53,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "MTD",
-    "cn": "",
-    "en": "Mettler-Toledo International",
-    "name": "Mettler-Toledo International",
-    "sec": "工业",
-    "mcap": 34777378622,
-    "px": 1730.93,
-    "chg": -1.03,
-    "pre": null,
-    "post": -7.81,
-    "prePx": null,
-    "postPx": 1595.76,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "CBIO",
-    "cn": "",
-    "en": "Crescent Biopharma",
-    "name": "Crescent Biopharma",
-    "sec": "医疗",
-    "mcap": 548058835,
-    "px": 14.37,
-    "chg": -2.61,
-    "pre": null,
-    "post": 7.31,
-    "prePx": null,
-    "postPx": 15.42,
-    "state": "POST",
-    "date": "20261112",
+    "mv": 17.83,
     "earn": false
    },
    {
@@ -1750,134 +3139,106 @@ window.YF_DATA = {
     "en": "SELLAS Life Sciences",
     "name": "SELLAS Life Sciences",
     "sec": "医疗",
-    "mcap": 1700382870,
+    "mcap": 1621624043,
     "px": 8.03,
     "chg": -4.63,
-    "pre": null,
-    "post": 7.31,
-    "prePx": null,
-    "postPx": 8.62,
-    "state": "POST",
+    "pre": 17.66,
+    "post": null,
+    "prePx": 9.45,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 17.66,
     "earn": false
    },
    {
-    "sym": "FBYD",
+    "sym": "CBRS",
     "cn": "",
-    "en": "Falcon's Beyond Global",
-    "name": "Falcon's Beyond Global",
-    "sec": "可选消费",
-    "mcap": 767571040,
-    "px": 5.59,
-    "chg": -11.69,
-    "pre": null,
-    "post": 7.16,
-    "prePx": null,
-    "postPx": 5.99,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "ANDG",
-    "cn": "",
-    "en": "Andersen",
-    "name": "Andersen",
-    "sec": "可选消费",
-    "mcap": 7502618774,
-    "px": 65.42,
-    "chg": -0.64,
-    "pre": null,
-    "post": -6.76,
-    "prePx": null,
-    "postPx": 61,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "ADRX",
-    "cn": "",
-    "en": "ADARx Pharmaceuticals",
-    "name": "ADARx Pharmaceuticals",
-    "sec": "医疗",
-    "mcap": 1420457623,
-    "px": 14.91,
-    "chg": 12.11,
-    "pre": null,
-    "post": 6.71,
-    "prePx": null,
-    "postPx": 15.91,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "RGTIW",
-    "cn": "",
-    "en": "Rigetti Computing Warrants",
-    "name": "Rigetti Computing Warrants",
+    "en": "Cerebras Systems",
+    "name": "Cerebras Systems",
     "sec": "科技",
-    "mcap": 805540092,
-    "px": 1.94,
-    "chg": -17.45,
-    "pre": null,
-    "post": -6.7,
-    "prePx": null,
-    "postPx": 1.81,
-    "state": "POST",
+    "mcap": 23221885008,
+    "px": 97.75,
+    "chg": -3.29,
+    "pre": 16.98,
+    "post": null,
+    "prePx": 114.35,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 16.98,
     "earn": false
    },
    {
-    "sym": "RCEL",
+    "sym": "VIR",
     "cn": "",
-    "en": "Avita Medical",
-    "name": "Avita Medical",
+    "en": "Vir Biotechnology",
+    "name": "Vir Biotechnology",
     "sec": "医疗",
-    "mcap": 543569789,
-    "px": 16.2,
-    "chg": -6.36,
-    "pre": null,
-    "post": 6.33,
-    "prePx": null,
-    "postPx": 17.23,
-    "state": "POST",
+    "mcap": 2075801769,
+    "px": 12.12,
+    "chg": -7.69,
+    "pre": -13.45,
+    "post": null,
+    "prePx": 10.49,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -13.45,
     "earn": false
    },
    {
-    "sym": "CRVS",
+    "sym": "SBC",
     "cn": "",
-    "en": "Corvus Pharmaceuticals",
-    "name": "Corvus Pharmaceuticals",
+    "en": "SBC Medical",
+    "name": "SBC Medical",
     "sec": "医疗",
-    "mcap": 967530355,
-    "px": 10.62,
-    "chg": -7.41,
-    "pre": null,
-    "post": 6.03,
-    "prePx": null,
-    "postPx": 11.26,
-    "state": "POST",
+    "mcap": 549202676,
+    "px": 5.34,
+    "chg": 1.91,
+    "pre": 12.36,
+    "post": null,
+    "prePx": 6,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 12.36,
+    "earn": true
+   },
+   {
+    "sym": "HAWK",
+    "cn": "",
+    "en": "HawkEye 360",
+    "name": "HawkEye 360",
+    "sec": "科技",
+    "mcap": 1437154648,
+    "px": 14.67,
+    "chg": -3.87,
+    "pre": 9.88,
+    "post": null,
+    "prePx": 16.12,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 9.88,
     "earn": false
    },
    {
-    "sym": "EMAT",
+    "sym": "FLO",
     "cn": "",
-    "en": "Evolution Metals & Technologies",
-    "name": "Evolution Metals & Technologies",
-    "sec": "Miscellaneous",
-    "mcap": 777508291,
-    "px": 0.99,
-    "chg": -19.18,
-    "pre": null,
-    "post": 6.01,
-    "prePx": null,
-    "postPx": 1.05,
-    "state": "POST",
+    "en": "Flowers Foods",
+    "name": "Flowers Foods",
+    "sec": "必需消费",
+    "mcap": 1274465082,
+    "px": 6.01,
+    "chg": -3.84,
+    "pre": -9.32,
+    "post": null,
+    "prePx": 5.45,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -9.32,
     "earn": false
    },
    {
@@ -1886,49 +3247,70 @@ window.YF_DATA = {
     "en": "York Space Systems",
     "name": "York Space Systems",
     "sec": "工业",
-    "mcap": 994469060,
+    "mcap": 905186617,
     "px": 6.6,
     "chg": -8.84,
-    "pre": null,
-    "post": -6.01,
-    "prePx": null,
-    "postPx": 6.2,
-    "state": "POST",
+    "pre": -8.36,
+    "post": null,
+    "prePx": 6.04,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -8.36,
     "earn": false
    },
    {
-    "sym": "BLMN",
+    "sym": "KEP",
     "cn": "",
-    "en": "Bloomin' Brands",
-    "name": "Bloomin' Brands",
+    "en": "Korea Electric Power",
+    "name": "Korea Electric Power",
+    "sec": "公用事业",
+    "mcap": 14283700713,
+    "px": 11.13,
+    "chg": -2.28,
+    "pre": -7.06,
+    "post": null,
+    "prePx": 10.34,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -7.06,
+    "earn": false
+   },
+   {
+    "sym": "PHR",
+    "cn": "",
+    "en": "Phreesia",
+    "name": "Phreesia",
     "sec": "可选消费",
-    "mcap": 877247001,
-    "px": 10.12,
-    "chg": -1.08,
-    "pre": null,
-    "post": 5.93,
-    "prePx": null,
-    "postPx": 10.72,
-    "state": "POST",
+    "mcap": 782714604,
+    "px": 12.62,
+    "chg": -1.48,
+    "pre": 6.83,
+    "post": null,
+    "prePx": 13.48,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 6.83,
     "earn": false
    },
    {
-    "sym": "ENVX",
+    "sym": "ZVRA",
     "cn": "",
-    "en": "Enovix",
-    "name": "Enovix",
-    "sec": "Miscellaneous",
-    "mcap": 555204794,
-    "px": 1.8,
-    "chg": -28.66,
-    "pre": null,
-    "post": 5.82,
-    "prePx": null,
-    "postPx": 1.91,
-    "state": "POST",
+    "en": "Zevra Therapeutics",
+    "name": "Zevra Therapeutics",
+    "sec": "医疗",
+    "mcap": 664071570,
+    "px": 11.16,
+    "chg": -5.82,
+    "pre": -6.81,
+    "post": null,
+    "prePx": 10.4,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -6.81,
     "earn": false
    },
    {
@@ -1937,168 +3319,142 @@ window.YF_DATA = {
     "en": "Wise",
     "name": "Wise",
     "sec": "工业",
-    "mcap": 13695276909,
+    "mcap": 13425056199,
     "px": 10.93,
     "chg": -1.97,
-    "pre": null,
-    "post": 5.67,
-    "prePx": null,
-    "postPx": 11.55,
-    "state": "POST",
+    "pre": 6.5,
+    "post": null,
+    "prePx": 11.64,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 6.5,
     "earn": false
    },
    {
-    "sym": "HAWK",
+    "sym": "OPRT",
     "cn": "",
-    "en": "HawkEye 360",
-    "name": "HawkEye 360",
-    "sec": "科技",
-    "mcap": 1494954324,
-    "px": 14.67,
-    "chg": -3.87,
-    "pre": null,
-    "post": 5.66,
-    "prePx": null,
-    "postPx": 15.5,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "SOPH",
-    "cn": "",
-    "en": "SOPHiA GENETICS SA",
-    "name": "SOPHiA GENETICS SA",
-    "sec": "科技",
-    "mcap": 635479214,
-    "px": 7.86,
-    "chg": 5.29,
-    "pre": null,
-    "post": 5.51,
-    "prePx": null,
-    "postPx": 8.29,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "BCS",
-    "cn": "",
-    "en": "Barclays",
-    "name": "Barclays",
+    "en": "Oportun Financial",
+    "name": "Oportun Financial",
     "sec": "金融",
-    "mcap": 77790214502,
-    "px": 22.84,
-    "chg": -1.34,
-    "pre": null,
-    "post": 5.3,
-    "prePx": null,
-    "postPx": 24.05,
-    "state": "POST",
+    "mcap": 541898671,
+    "px": 11.76,
+    "chg": -0.34,
+    "pre": 6.38,
+    "post": null,
+    "prePx": 12.51,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 6.38,
     "earn": false
    },
    {
-    "sym": "APO",
+    "sym": "USAS",
     "cn": "",
-    "en": "Apollo Global Management (New)",
-    "name": "Apollo Global Management (New)",
-    "sec": "金融",
-    "mcap": 72617303506,
-    "px": 121.35,
-    "chg": -1.3,
-    "pre": null,
-    "post": 5.22,
-    "prePx": null,
-    "postPx": 127.69,
-    "state": "POST",
+    "en": "Americas Gold and Silver Common Shares no par value",
+    "name": "Americas Gold and Silver Common Shares no par value",
+    "sec": "原材料",
+    "mcap": 945150531,
+    "px": 2.79,
+    "chg": -5.74,
+    "pre": -6.23,
+    "post": null,
+    "prePx": 2.62,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -6.23,
+    "earn": true
+   },
+   {
+    "sym": "ENHA",
+    "cn": "",
+    "en": "Enhanced",
+    "name": "Enhanced",
+    "sec": "可选消费",
+    "mcap": 2848710960,
+    "px": 7.2,
+    "chg": -10.56,
+    "pre": -5.83,
+    "post": null,
+    "prePx": 6.78,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -5.83,
     "earn": false
    },
    {
-    "sym": "BSX",
+    "sym": "STNE",
     "cn": "",
-    "en": "Boston Scientific",
-    "name": "Boston Scientific",
-    "sec": "医疗",
-    "mcap": 65436468607,
-    "px": 44.2,
-    "chg": -2.06,
-    "pre": null,
-    "post": -4.72,
-    "prePx": null,
-    "postPx": 42.11,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "ELVR",
-    "cn": "",
-    "en": "Elevra Lithium American Depository Shares",
-    "name": "Elevra Lithium American Depository Shares",
-    "sec": "工业",
-    "mcap": 540334644,
-    "px": 25.19,
-    "chg": -9.55,
-    "pre": null,
-    "post": 4.72,
-    "prePx": null,
-    "postPx": 26.38,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "SAIL",
-    "cn": "",
-    "en": "SailPoint",
-    "name": "SailPoint",
+    "en": "StoneCo Common Shares",
+    "name": "StoneCo Common Shares",
     "sec": "科技",
-    "mcap": 11869252850,
-    "px": 20.58,
-    "chg": -1.01,
-    "pre": null,
-    "post": -4.71,
-    "prePx": null,
-    "postPx": 19.61,
-    "state": "POST",
+    "mcap": 1904637229,
+    "px": 7.72,
+    "chg": -1.66,
+    "pre": -5.31,
+    "post": null,
+    "prePx": 7.31,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -5.31,
     "earn": false
    },
    {
-    "sym": "NKTR",
+    "sym": "OTF",
     "cn": "",
-    "en": "Nektar Therapeutics",
-    "name": "Nektar Therapeutics",
+    "en": "Blue Owl Technology Finance",
+    "name": "Blue Owl Technology Finance",
+    "sec": "科技",
+    "mcap": 4283973422,
+    "px": 9.46,
+    "chg": -1.36,
+    "pre": 5.15,
+    "post": null,
+    "prePx": 9.95,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 5.15,
+    "earn": false
+   },
+   {
+    "sym": "EMAT",
+    "cn": "",
+    "en": "Evolution Metals & Technologies",
+    "name": "Evolution Metals & Technologies",
+    "sec": "Miscellaneous",
+    "mcap": 628417110,
+    "px": 0.99,
+    "chg": -19.18,
+    "pre": 5.04,
+    "post": null,
+    "prePx": 1.04,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 5.04,
+    "earn": false
+   },
+   {
+    "sym": "GENB",
+    "cn": "",
+    "en": "Generate Biomedicines",
+    "name": "Generate Biomedicines",
     "sec": "医疗",
-    "mcap": 1312456689,
-    "px": 37.25,
-    "chg": -3.1,
-    "pre": null,
-    "post": -4.7,
-    "prePx": null,
-    "postPx": 35.5,
-    "state": "POST",
+    "mcap": 1613390121,
+    "px": 12.57,
+    "chg": -6.82,
+    "pre": 4.53,
+    "post": null,
+    "prePx": 13.14,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "DPC",
-    "cn": "",
-    "en": "DPC",
-    "name": "DPC",
-    "sec": "通信服务",
-    "mcap": 4729035921,
-    "px": 34.33,
-    "chg": 8.36,
-    "pre": null,
-    "post": -4.54,
-    "prePx": null,
-    "postPx": 32.77,
-    "state": "POST",
-    "date": "20261112",
+    "mv": 4.53,
     "earn": false
    },
    {
@@ -2107,117 +3463,34 @@ window.YF_DATA = {
     "en": "Nu",
     "name": "Nu",
     "sec": "金融",
-    "mcap": 59967569355,
+    "mcap": 57272670489,
     "px": 11.83,
     "chg": -3.98,
-    "pre": null,
-    "post": 4.4,
-    "prePx": null,
-    "postPx": 12.35,
-    "state": "POST",
+    "pre": 4.28,
+    "post": null,
+    "prePx": 12.3,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 4.28,
     "earn": false
    },
    {
-    "sym": "IMMX",
+    "sym": "CRSR",
     "cn": "",
-    "en": "Immix Biopharma",
-    "name": "Immix Biopharma",
-    "sec": "医疗",
-    "mcap": 717939556,
-    "px": 8.07,
-    "chg": -6.81,
-    "pre": null,
-    "post": 4.17,
-    "prePx": null,
-    "postPx": 8.41,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "NRGV",
-    "cn": "",
-    "en": "Energy Vault",
-    "name": "Energy Vault",
-    "sec": "Miscellaneous",
-    "mcap": 702809938,
-    "px": 3.61,
-    "chg": -6.72,
-    "pre": null,
-    "post": 3.88,
-    "prePx": null,
-    "postPx": 3.75,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "STN",
-    "cn": "",
-    "en": "Stantec",
-    "name": "Stantec",
-    "sec": "可选消费",
-    "mcap": 8489549568,
-    "px": 75.13,
-    "chg": -0.49,
-    "pre": null,
-    "post": 3.82,
-    "prePx": null,
-    "postPx": 78,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "XMTR",
-    "cn": "",
-    "en": "Xometry",
-    "name": "Xometry",
-    "sec": "可选消费",
-    "mcap": 7058914838,
-    "px": 120.78,
-    "chg": -1.38,
-    "pre": null,
-    "post": 3.77,
-    "prePx": null,
-    "postPx": 125.33,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "ZBIO",
-    "cn": "",
-    "en": "Zenas BioPharma",
-    "name": "Zenas BioPharma",
-    "sec": "医疗",
-    "mcap": 1946370659,
-    "px": 27.64,
-    "chg": -3.69,
-    "pre": null,
-    "post": -3.76,
-    "prePx": null,
-    "postPx": 26.6,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "AXTI",
-    "cn": "",
-    "en": "AXT",
-    "name": "AXT",
+    "en": "Corsair Gaming",
+    "name": "Corsair Gaming",
     "sec": "科技",
-    "mcap": 3079973768,
-    "px": 43.54,
-    "chg": -7.3,
-    "pre": null,
-    "post": 3.42,
-    "prePx": null,
-    "postPx": 45.03,
-    "state": "POST",
+    "mcap": 1341614007,
+    "px": 12.28,
+    "chg": -3.53,
+    "pre": -4.23,
+    "post": null,
+    "prePx": 11.76,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": -4.23,
     "earn": false
    },
    {
@@ -2226,100 +3499,34 @@ window.YF_DATA = {
     "en": "Savara",
     "name": "Savara",
     "sec": "医疗",
-    "mcap": 1100911320,
+    "mcap": 1041342972,
     "px": 4.72,
     "chg": -5.41,
-    "pre": null,
-    "post": 3.39,
-    "prePx": null,
-    "postPx": 4.88,
-    "state": "POST",
+    "pre": 4.03,
+    "post": null,
+    "prePx": 4.91,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 4.03,
     "earn": false
    },
    {
-    "sym": "ABSI",
+    "sym": "VISN",
     "cn": "",
-    "en": "Absci",
-    "name": "Absci",
-    "sec": "医疗",
-    "mcap": 1736733781,
-    "px": 9.13,
-    "chg": -9.73,
-    "pre": null,
-    "post": 3.34,
-    "prePx": null,
-    "postPx": 9.44,
-    "state": "POST",
+    "en": "Vistance Networks",
+    "name": "Vistance Networks",
+    "sec": "科技",
+    "mcap": 814338168,
+    "px": 4,
+    "chg": -1.48,
+    "pre": 4,
+    "post": null,
+    "prePx": 4.16,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "GMEX",
-    "cn": "",
-    "en": "GMEX ROBOTICS",
-    "name": "GMEX ROBOTICS",
-    "sec": "可选消费",
-    "mcap": 675023776,
-    "px": 0.42,
-    "chg": -11.61,
-    "pre": null,
-    "post": 3.33,
-    "prePx": null,
-    "postPx": 0.44,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "GSM",
-    "cn": "",
-    "en": "Ferroglobe",
-    "name": "Ferroglobe",
-    "sec": "原材料",
-    "mcap": 536289684,
-    "px": 3.05,
-    "chg": 6.27,
-    "pre": null,
-    "post": 3.28,
-    "prePx": null,
-    "postPx": 3.15,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "DLY",
-    "cn": "",
-    "en": "DoubleLine Yield Opportunities Fund Common Shares of Beneficial Interest",
-    "name": "DoubleLine Yield Opportunities Fund Common Shares of Beneficial Interest",
-    "sec": "金融",
-    "mcap": 637199403,
-    "px": 13.09,
-    "chg": -1.36,
-    "pre": null,
-    "post": 3.21,
-    "prePx": null,
-    "postPx": 13.51,
-    "state": "POST",
-    "date": "20261112",
-    "earn": false
-   },
-   {
-    "sym": "STTK",
-    "cn": "",
-    "en": "Shattuck Labs",
-    "name": "Shattuck Labs",
-    "sec": "医疗",
-    "mcap": 514304888,
-    "px": 4.81,
-    "chg": -4.75,
-    "pre": null,
-    "post": -3.12,
-    "prePx": null,
-    "postPx": 4.66,
-    "state": "POST",
-    "date": "20261112",
+    "mv": 4,
     "earn": false
    },
    {
@@ -2328,50 +3535,243 @@ window.YF_DATA = {
     "en": "TMC the metals",
     "name": "TMC the metals",
     "sec": "原材料",
-    "mcap": 1082987608,
+    "mcap": 1014611609,
     "px": 2.3,
     "chg": -6.31,
-    "pre": null,
-    "post": 3.04,
-    "prePx": null,
-    "postPx": 2.37,
-    "state": "POST",
+    "pre": 3.91,
+    "post": null,
+    "prePx": 2.39,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 3.91,
     "earn": false
    },
    {
-    "sym": "SGMT",
+    "sym": "NVT",
     "cn": "",
-    "en": "Sagimet Biosciences Series A",
-    "name": "Sagimet Biosciences Series A",
+    "en": "nVent Electric",
+    "name": "nVent Electric",
+    "sec": "工业",
+    "mcap": 18685583678,
+    "px": 115.5,
+    "chg": -1.05,
+    "pre": 3.9,
+    "post": null,
+    "prePx": 120,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.9,
+    "earn": false
+   },
+   {
+    "sym": "NVAX",
+    "cn": "",
+    "en": "Novavax",
+    "name": "Novavax",
     "sec": "医疗",
-    "mcap": 804780891,
-    "px": 10.93,
-    "chg": -4.21,
-    "pre": null,
-    "post": -3.02,
-    "prePx": null,
-    "postPx": 10.6,
-    "state": "POST",
+    "mcap": 1445478919,
+    "px": 8.76,
+    "chg": -12.22,
+    "pre": 3.77,
+    "post": null,
+    "prePx": 9.09,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 3.77,
     "earn": false
    },
    {
-    "sym": "GPGI",
+    "sym": "ALM",
     "cn": "",
-    "en": "GPGI",
-    "name": "GPGI",
-    "sec": "金融",
-    "mcap": 4452893061,
-    "px": 14.02,
-    "chg": -8.72,
-    "pre": null,
-    "post": -3,
-    "prePx": null,
-    "postPx": 13.6,
-    "state": "POST",
+    "en": "Almonty Industries Common Shares",
+    "name": "Almonty Industries Common Shares",
+    "sec": "原材料",
+    "mcap": 2201108123,
+    "px": 7.63,
+    "chg": -6.5,
+    "pre": 3.67,
+    "post": null,
+    "prePx": 7.91,
+    "postPx": null,
+    "state": "PRE",
     "date": "20261112",
+    "mv": 3.67,
     "earn": false
+   },
+   {
+    "sym": "ALVO",
+    "cn": "",
+    "en": "Alvotech",
+    "name": "Alvotech",
+    "sec": "医疗",
+    "mcap": 1823315012,
+    "px": 4.67,
+    "chg": -5.08,
+    "pre": -3.43,
+    "post": null,
+    "prePx": 4.51,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -3.43,
+    "earn": false
+   },
+   {
+    "sym": "LASR",
+    "cn": "",
+    "en": "nLIGHT",
+    "name": "nLIGHT",
+    "sec": "科技",
+    "mcap": 2507560475,
+    "px": 43.06,
+    "chg": -3.19,
+    "pre": 3.37,
+    "post": null,
+    "prePx": 44.51,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.37,
+    "earn": false
+   },
+   {
+    "sym": "ABSI",
+    "cn": "",
+    "en": "Absci",
+    "name": "Absci",
+    "sec": "医疗",
+    "mcap": 1567693981,
+    "px": 9.13,
+    "chg": -9.73,
+    "pre": 3.34,
+    "post": null,
+    "prePx": 9.44,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.34,
+    "earn": false
+   },
+   {
+    "sym": "ALHC",
+    "cn": "",
+    "en": "Alignment Healthcare",
+    "name": "Alignment Healthcare",
+    "sec": "医疗",
+    "mcap": 1569512955,
+    "px": 7.5,
+    "chg": -2.47,
+    "pre": 3.33,
+    "post": null,
+    "prePx": 7.75,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.33,
+    "earn": false
+   },
+   {
+    "sym": "ASST",
+    "cn": "",
+    "en": "Strive",
+    "name": "Strive",
+    "sec": "金融",
+    "mcap": 2833117175,
+    "px": 22.25,
+    "chg": -4.09,
+    "pre": -3.15,
+    "post": null,
+    "prePx": 21.55,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -3.15,
+    "earn": false
+   },
+   {
+    "sym": "AGBK",
+    "cn": "",
+    "en": "AGI Common Shares",
+    "name": "AGI Common Shares",
+    "sec": "金融",
+    "mcap": 1011252980,
+    "px": 6.32,
+    "chg": 17.25,
+    "pre": 3.09,
+    "post": null,
+    "prePx": 6.51,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.09,
+    "earn": false
+   },
+   {
+    "sym": "DLO",
+    "cn": "",
+    "en": "DLocal Common Shares",
+    "name": "DLocal Common Shares",
+    "sec": "可选消费",
+    "mcap": 4040567797,
+    "px": 13.7,
+    "chg": -1.86,
+    "pre": -3.07,
+    "post": null,
+    "prePx": 13.28,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -3.07,
+    "earn": false
+   },
+   {
+    "sym": "NRGV",
+    "cn": "",
+    "en": "Energy Vault",
+    "name": "Energy Vault",
+    "sec": "Miscellaneous",
+    "mcap": 652804056,
+    "px": 3.61,
+    "chg": -6.72,
+    "pre": 3.05,
+    "post": null,
+    "prePx": 3.72,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": 3.05,
+    "earn": false
+   },
+   {
+    "sym": "CSCO",
+    "cn": "",
+    "en": "Cisco Systems (DE)",
+    "name": "Cisco Systems (DE)",
+    "sec": "通信服务",
+    "mcap": 402183286915,
+    "px": 102.01,
+    "chg": 1.24,
+    "pre": -3.01,
+    "post": null,
+    "prePx": 98.94,
+    "postPx": null,
+    "state": "PRE",
+    "date": "20261112",
+    "mv": -3.01,
+    "earn": false
+   }
+  ],
+  "post": [],
+  "postDate": "2026-11-12",
+  "preDate": "2026-11-13",
+  "history": [
+   {
+    "date": "2026-11-13",
+    "session": "pre",
+    "n": 39
    }
   ]
  }

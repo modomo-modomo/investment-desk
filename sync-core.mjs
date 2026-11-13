@@ -154,7 +154,7 @@ function backfill(rows, q) {
    - prev：若 price 与剔除进行中K线后的末根一致（chart 已含最新结算）取倒数第二根，
      否则取末根（chart 结算滞后一根的情形，如期货）。
    - 进行中K线判定：UTC 日期晚于行情时间的美东日期 → 剔除。 */
-function settle(rows, q) {
+function settle(rows, q, cashIndex = false) {
   const norm = (d) => String(d).replace(/-/g, "");
   const last = rows[rows.length - 1];
   const prev = rows[rows.length - 2] || last;
@@ -165,7 +165,23 @@ function settle(rows, q) {
   const rows2 = rows.filter((r) => norm(r.date) <= et);
   const l2 = rows2[rows2.length - 1] || last;
   const p2 = rows2[rows2.length - 2] || l2;
-  const live = q.marketState === "REGULAR" || q.marketState === "PRE" || q.marketState === "POST";
+  /* 现金指数（标普/纳指/道指/费半…）常规时段收盘后 regularMarketPrice 即为官方收盘价，
+     即使 marketState 仍为 POST（16:00–20:00 ET 盘后）也不能回退到 previousClose，
+     否则会把上一交易日收盘当成"最新收盘"，涨跌符号随之反向。
+     北京 07:00 场次（美东 18:00）恰好落在 POST 段，必踩此坑。
+     期货/外汇 24h 报价仍需避开进行中的 session，保持原逻辑。 */
+  const live = !cashIndex &&
+    (q.marketState === "REGULAR" || q.marketState === "PRE" || q.marketState === "POST");
+  if (cashIndex) {
+    /* 现金指数：price 取 regularMarketPrice（收盘后即官方收盘）；前收取"不晚于美东当日的
+       末根日K"。注意不能用 quote.regularMarketPreviousClose——亚太指数在次日上午查询时，
+       Yahoo 给的前收仍是"上一交易日的前收"，会整体错一根（HSI/上证/日经都会中招）。
+       仅当 price 与末根K线完全相等（chart 已含最新结算）时才退到倒数第二根；
+       原先是 0.1% 容差，遇到当日微涨（STOXX50 +0.09%）会误判同一根、涨跌幅被放大。 */
+    const price = q.regularMarketPrice;
+    const same = Math.abs(price - l2.close) <= Math.abs(l2.close) * 1e-6;
+    return { date: et, price, prev: same ? p2.close : l2.close, fixed: true };
+  }
   const price = live && q.regularMarketPreviousClose != null ? q.regularMarketPreviousClose : q.regularMarketPrice;
   const sameAsL2 = Math.abs(price - l2.close) / Math.abs(l2.close) < 0.001;
   return { date: et, price: price, prev: sameAsL2 ? p2.close : l2.close, fixed: true };
@@ -233,7 +249,7 @@ for (const c of idxCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
   const base20 = rows[rows.length - 22] || rows[0];
-  const bx = settle(rows, idxQuotes[c.sym] || {});
+  const bx = settle(rows, idxQuotes[c.sym] || {}, true);
   if (bx.fixed) backfilled++;
   /* 指数用 amount 表示成交额，Yahoo chart 只有 volume，这里留 null 由 live-extra 补 */
   indices[c.code] = {

@@ -6,6 +6,41 @@
   "type": "ath",
   "market": "US",
   "sec": "半导体",
-  "px": 552.9
+  "track": "CPU",
+  "px": 585.3,
+  "chg": 5.86
+ },
+ {
+  "d": "2026-11-12",
+  "sym": "CPAC",
+  "name": "Cementos Pacasmayo",
+  "type": "52w",
+  "market": "US",
+  "sec": "工业",
+  "track": "其它",
+  "px": 12.93,
+  "chg": 0.31
+ },
+ {
+  "d": "2026-11-12",
+  "sym": "OGN",
+  "name": "Organon",
+  "type": "52w",
+  "market": "US",
+  "sec": "医疗",
+  "track": "生物医药",
+  "px": 13.9,
+  "chg": 0.07
+ },
+ {
+  "d": "2026-11-12",
+  "sym": "TECH",
+  "name": "Bio-Techne",
+  "type": "52w",
+  "market": "US",
+  "sec": "医疗",
+  "track": "生物医药",
+  "px": 72.84,
+  "chg": 0.05
  }
 ]

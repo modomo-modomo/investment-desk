@@ -378,6 +378,31 @@ ol.concl li b{color:var(--text);font-weight:650}
   .card,.stock-card,.hero{box-shadow:none;break-inside:avoid}
   .view{padding:0;max-width:none}
 }
+/* ---- 2026-11-13 新增：模块时间戳 / 收盘速览 / 新高筛选 ---- */
+.modstamp{border-color:#dfe6f2;background:#f7f9fd;color:#4a5a75}
+.modstamp b{color:#1d3a6e}
+.mkt3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:12px}
+@media(max-width:900px){.mkt3{grid-template-columns:1fr}}
+.mkt-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:13px 15px}
+.mkt-card .mh{display:flex;align-items:center;gap:7px;margin-bottom:9px}
+.mkt-card .mh .nm{font-size:12.5px;font-weight:700}
+.mkt-card .mh .dt{margin-left:auto;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mkt-row{display:flex;align-items:baseline;gap:8px;padding:4px 0;border-top:1px dashed #eef1f6;font-size:11.5px}
+.mkt-row:first-of-type{border-top:none}
+.mkt-row .nm{color:var(--text-2)}
+.mkt-row .lv{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:600}
+.mkt-row .c1,.mkt-row .c20{width:60px;text-align:right;font-variant-numeric:tabular-nums;font-size:11px}
+.mkt-row .c20{color:var(--muted)}
+.mkt-foot{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:11px;color:var(--text-2);line-height:1.65}
+.fchip.on{background:var(--accent-soft);border-color:var(--accent-2);color:var(--accent-2);font-weight:650}
+.hlk{font-weight:650}
+.newflag{display:inline-block;padding:0 5px;border-radius:4px;background:#fbeaea;color:#b4322f;font-size:9px;font-weight:700;margin-left:5px;vertical-align:1px}
+tr.isnew td{background:#fffafa}
+.tl-title.new{color:#b4322f;font-weight:650}
+.tl-body b{color:var(--text)}
+.subgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(272px,1fr));gap:14px}
+.trk-h{display:flex;align-items:center;gap:8px;margin:16px 0 9px;font-size:12.5px;font-weight:650;color:var(--text-2)}
+.trk-h .line{flex:1;height:1px;background:var(--line)}
 </style>
 </head>
 <body>
@@ -453,9 +478,9 @@ const FEED = { connected:false, source:"Yahoo Finance", lastSync:null,
   async fetch(kind, params){ throw new Error("行情未连接"); } };
 
 const DATA = {
-  meta:{ date:"2026-11-11", week:"周三", stance:"反弹修复（缩量，尚未反转）",
-    stanceNote:"11-11 普涨：标普 +1.31%、费半 +5.66%、VIX -10%；但量比仅 48%，属超跌修复而非反转。20 日结构未变（纳指 -7.2% vs 道指 +1.6%），10Y 贴近 5%、12 月加息定价 84% 的分母端约束不解，反弹用来调仓，不用来追高",
-    updatedPT:"11-11 07:00", nextPT:"今日 20:30" },
+  meta:{ date:"2026-11-12", week:"周四", stance:"结构性去杠杆（指数不动，AI 内部换血）",
+    stanceNote:"11-12 三大市场同步收跌：标普 -0.35%、纳指 -0.39%、恒生 -1.26%、上证 -0.67%，<b>但跌幅都很浅——变的是结构不是水位</b>。AI 基建链单日塌方（NBIS -16.8%、CRWV -6.9%、IREN -6.5%），AMD 却 +5.86% 创历史新高；VIX +6.9% 至 18.7，10Y 站上 5.10%。这是<b>同一赛道内部的估值再分配</b>，不是 risk off 的全面撤退",
+    closeDate:"2026-11-12", updatedPT:"11-13 07:00", nextPT:"今日 20:30" },
 
   senti:{
     appetite:{ v:62, label:"偏多", at:"11-11 07:00" },
@@ -465,11 +490,18 @@ const DATA = {
 
   brief:{
     conclusions:[
-      ["11-11 是普涨反弹，但缩量修复，不是反转确认。","标普 +1.31%、纳指 100 +2.28%、费半 +5.66%、VIX 单日 -10% 至 17.5；领涨的正是 20 日跌幅最深的 AI 链（CRWV 财报后 +24.7%）。但量比仅 48%，<b>没有增量资金确认</b>——先按超跌修复对待，反弹用来调仓，不用来追高。"],
-      ["分母端约束没变：10Y 贴近 5%，12 月加息仍是基准情形。","10Y 4.998%（单日 +1.5bp），CPI 超预期后 12 月加息定价 84%，12/8-9 FOMC 前长久期资产的估值压制不解。反弹改变的是节奏，不是约束。"],
-      ["20 日结构未变：跌的是权重成长，不是全市场。","纳指 100 20 日 -7.2% vs 道指 +1.6%，成长跑输价值约 8.8 个百分点；等权 RSP 20 日 +3.6% 跑赢市值加权 SPY -3.6%。防御轮动（医疗/必需消费/电力）的中期逻辑完好。"],
-      ["需求侧证据转好：CRWV 上调全年营收指引，铜跌幅远小于费半。","CRWV +24.7% 是财报驱动的需求正反馈；铜 20 日约 -5%，远小于费半的 -13.5%——AI 用电与算力需求没有崩，被杀的是估值。这轮调整是分母端问题的判断未被证伪。"],
-      ["操作：反弹是调仓窗口，不是加杠杆窗口。","维持防御性轮动配置：增配电力/封测设备/医疗/必需消费，信息技术敞口维持低配；加回成长等 12/8-9 FOMC 落地后再评估。缩量反弹中不追涨；VIX 已回落至 17.5，对冲成本下降，但保护不撤。"]
+      ["<b>11-12 是三大市场同日收跌的“浅跌 + 深分化”，不是新一轮下跌的开始。</b>",
+       "美股 标普 <b>-0.35%</b>（7592.40）、纳指 <b>-0.39%</b>、纳指 100 -0.30%、道指 -0.36%；同期 <b>恒生 -1.26%</b>（24,008.55）、<b>上证 -0.67%</b>（3,655.83）。三大市场全部收在 -1.3% 以内，<b>水位没变</b>——但 VIX <b>+6.92% 至 18.7</b>，波动率与指数背离，说明<b>分歧在放大</b>，钱在换手而不是在离场。"],
+      ["<b>真正的塌方在 AI 基建链内部：neocloud 杠杆模型被集体重定价。</b>",
+       "NBIS <b>-16.84%</b>（20 日 -30.84%）、CRWV <b>-6.86%</b>、IREN <b>-6.53%</b>（20 日 -36.26%）、BE <b>-3.60%</b>。这是<b>单一商业模式</b>的杀估值：“用高息债买 GPU 再出租”在 10Y 站上 5.10% 时，融资成本与折旧年限同时恶化。GPU 租金本身还在涨（H200 30 日 +49%），<b>需求没崩，崩的是杠杆</b>。"],
+      ["<b>AMD +5.86% 创历史新高，是同日最有信息量的一个价格。</b>",
+       "收盘 <b>585.30</b>，越过 2026-09-01 的 552.90（旧高），而 20 日仅 +2.54%——<b>“挤过水分的新高”质量高于 9 月那次</b>。含义：资金没有离开 AI，而是从“卖算力期货的公司”换到“有产品、有毛利率、有客户验证”的 CPU/GPU 双寡头。同日 TSM -1.90%、TER -0.76%（20 日 -26.62%）、ONTO -2.51%——<b>设备与制造没跟上，说明这是选股行情不是板块行情</b>。"],
+      ["<b>分母端在恶化：10Y 5.103%、油价反弹、贵金属与铜同跌。</b>",
+       "10Y +2.1bp 至 <b>5.103%</b>；WTI <b>+2.55%</b> 至 88.74、布伦特 +3.30% 至 95.82，<b>通胀端反向走坏</b>；黄金 -2.88%、白银 -3.50%、铜 -1.25% 同步回落 = 实际利率上行的标准组合。12/8-9 FOMC 前，<b>长久期成长股的估值天花板仍然是这轮最硬的约束</b>。"],
+      ["<b>中国市场：港股单日补跌、A 股中期更弱，两边都不构成避风港。</b>",
+       "恒生 -1.26% 但 20 日仅 -1.08%，属于<b>抗跌后的补跌</b>；上证 -0.67% 而 20 日 <b>-3.82%</b>，是全球主要市场里偏弱的一档。日经 +0.71%、KOSPI +1.77%、DAX +0.41% 反而收涨——<b>今天涨的是“没有 AI 权重”的市场</b>，这本身就是对 AI 交易拥挤度的定价。"],
+      ["<b>操作：不减总仓位，在 AI 内部换结构。</b>",
+       "减 <b>neocloud</b>（CRWV/NBIS/IREN，等 GPU 租金连续两月环比走弱或融资成本明确下行再谈回补）；留 <b>电力与设备</b>（BE/GEV/VRT/TER/ONTO，真实供需，跌的是估值不是订单）；加 <b>AMD</b> 这类“产品已兑现”的标的。<b>不追高、不抄底 neocloud、不碰 INTC。</b>12/8-9 FOMC 前把杠杆降下来，把结构调对。"]
     ],
     color:[
       {dim:"指数", perf:"标普 +0.4% / 纳指 +0.9% / 道指 -0.2% / 罗素2000 -0.6%", note:"科技权重拉动指数，小盘走弱。风险偏好是集中的，不是扩散的。"},
@@ -526,16 +558,21 @@ const DATA = {
       {t:"XYZ", n:"Block", ses:"盘中", mv:-5.2, drive:"非财报", why:"原因未知", unknown:true, note:"无公告、无评级变动、无行业消息；成交量为 3 倍均量，疑似大宗减持，需盘后 13F 与内部人交易确认"}
     ]},
     research:[
-      {cat:"宏观策略", house:"Goldman Sachs", d:"11-10", new:true, title:"2027 年标普 500 目标 7,600：AI 资本开支仍是盈利主线", take:"EPS 275 美元，AI 相关 capex 贡献约 1/3 盈利增长。超配电力设备与半导体设备，低配必需消费。"},
-      {cat:"宏观策略", house:"Morgan Stanley", d:"11-10", new:true, title:"12 月加息几成定局：CPI 后定价升至 84%", take:"核心环比连续第三月 0.3%，联储缺乏转松空间。偏好大盘质量与现金流，减持高杠杆小盘。"},
+      /* 倒序：数组已按日期从新到旧书写，渲染侧再按 d 倒排一次；new:true = 本轮（11-13 07:00 场）新增，红色标注 */
+      {cat:"宏观策略", house:"Morgan Stanley", d:"11-12", new:true, title:"10Y 站上 5.10%：分母端第二次收紧，成长股估值上限再下移一档", take:"实际利率 1.9% 以上时，长久期资产的久期溢价会被系统性压缩。<b>不是杀盈利，是杀估值倍数</b>——这决定了“数字好、股价跌”会成为财报季常态。"},
+      {cat:"宏观策略", house:"J.P. Morgan", d:"11-12", new:true, title:"AI 交易从“资本开支叙事”转向“现金流叙事”", take:"资金没有离开 AI，而是离开<b>没有当期现金流</b>的 AI。判断标准从“签了多少 GW 合同”回到“毛利率与自由现金流何时转正”。"},
+      {cat:"宏观策略", house:"Goldman Sachs", d:"11-10", title:"2027 年标普 500 目标 7,600：AI 资本开支仍是盈利主线", take:"EPS 275 美元，AI 相关 capex 贡献约 1/3 盈利增长。超配电力设备与半导体设备，低配必需消费。"},
+      {cat:"宏观策略", house:"Morgan Stanley", d:"11-10", title:"12 月加息几成定局：CPI 后定价升至 84%", take:"核心环比连续第三月 0.3%，联储缺乏转松空间。偏好大盘质量与现金流，减持高杠杆小盘。"},
       {cat:"宏观策略", house:"J.P. Morgan", d:"11-09", title:"美元“微笑曲线”右端：利差支撑 DXY", take:"美国相对增长优势 + 利差，美元仍有支撑；新兴市场货币承压，关注套息交易脆弱性。"},
-      {cat:"行业", house:"UBS", d:"11-10", new:true, title:"先进封装：CoWoS 2027 产能再翻倍，SoIC 渗透率 8%→18%", take:"首选 TSM / AMKR / ONTO。设备端确定性高于晶圆厂，交期已拉长至 18 个月。"},
+      {cat:"行业", house:"UBS", d:"11-12", new:true, title:"Neocloud 融资成本模型：40 亿美元投资级贷款意味着什么", take:"以 CRWV 为例，若按投资级上限定价，利息支出占营收比重将再抬 3-4pct。<b>折旧年限与融资成本是这类公司唯一真实的双杀来源</b>。维持“需求没问题、模型有问题”的判断。"},
+      {cat:"行业", house:"UBS", d:"11-10", title:"先进封装：CoWoS 2027 产能再翻倍，SoIC 渗透率 8%→18%", take:"首选 TSM / AMKR / ONTO。设备端确定性高于晶圆厂，交期已拉长至 18 个月。"},
       {cat:"行业", house:"Citi", d:"11-09", title:"数据中心电力：2027 年美国新增负荷 35GW", take:"燃气与燃料电池是唯一可快速交付方案，BE / GEV 直接受益；并网延迟是最大不确定性。"},
       {cat:"行业", house:"BofA", d:"11-08", title:"软件：AI 原生应用 ARR 拐点在 2027H1", take:"seat-based 模式面临定价重构，偏好 consumption-based；净留存比增速更重要。"},
-      {cat:"个股", house:"Morgan Stanley", d:"11-10", new:true, title:"NVDA：维持增持，目标价 260", take:"Rubin 周期订单能见度延伸至 2027，供给仍是瓶颈；风险在客户自研 ASIC 替代速度。"},
-      {cat:"个股", house:"Goldman Sachs", d:"11-10", new:true, title:"CRWV：买入，目标价 165", take:"backlog 覆盖 2028 年收入约 70%。核心变量不是需求，而是融资成本与折旧年限。"},
+      {cat:"个股", house:"Citi", d:"11-12", new:true, title:"AMD 创历史新高后：从“份额故事”到“毛利验证”", take:"585.30 越过 9 月前高，但 20 日仅 +2.5%——<b>这是挤水分后的新高</b>。下一个验证点是 MI400 出货节奏与数据中心毛利率能否守住 40% 以上。"},
+      {cat:"个股", house:"Morgan Stanley", d:"11-10", title:"NVDA：维持增持，目标价 260", take:"Rubin 周期订单能见度延伸至 2027，供给仍是瓶颈；风险在客户自研 ASIC 替代速度。"},
+      {cat:"个股", house:"Goldman Sachs", d:"11-10", title:"CRWV：买入，目标价 165", take:"backlog 覆盖 2028 年收入约 70%。核心变量不是需求，而是融资成本与折旧年限。"},
       {cat:"个股", house:"J.P. Morgan", d:"11-09", title:"TSLA：中性，目标价 380", take:"Robotaxi 商业化慢于预期，估值高度依赖 Optimus 叙事，短期缺催化。"},
-      {cat:"个股", house:"Citi", d:"11-07", title:"AMD：买入，目标价 260", take:"MI450 有望 2027 年获第二个超大规模客户；CPU 端被 ARM 侵蚀是隐忧。"}
+      {cat:"个股", house:"Citi", d:"11-07", title:"TXN：中性——模拟复苏被 AI 掩盖", take:"工业与汽车需求仍在磨底，AI 相关收入占比不足 10%，估值却已按 AI 给。宁可买纯度高、也不要买“顺带受益”。"}
     ]
   },
 
@@ -558,34 +595,6 @@ const DATA = {
   ],
 
   tracks:[
-    { id:"phy", name:"物理 AI / 机器人", ico:"RB", color:"#b26a00", bg:"#fdf5e6",
-      sub:"具身智能 / 人形机器人 / VLA 模型",
-      thesis:"从“演示视频”进入“量产爬坡”。真正的瓶颈不是模型能力，而是数据采集成本与 BOM 成本曲线；谁先把单台成本压到 2 万美元以内，谁拿到第一张规模化门票。",
-      kpis:[["2026 全球出货","4.8 万台"],["单台 BOM","$32k"],["VLA 任务成功率","78%"],["遥操作数据","1,200 万条"]],
-      names:["TSLA","NVDA","三花智控","拓普集团","绿的谐波","优必选"],
-      cat:"Optimus 定点、Figure 量产、国内整机厂招标",
-      log:[
-        {date:"2026-11-10", src:"The Information", type:"新拐点", title:"Figure 03 产线爬坡至月产 400 台，良率首破 90%", body:"这是人形机器人第一次出现“量产良率”而非“实验室指标”的披露。意义在于：供应链从打样转向批量，减速器与丝杠的订单能见度从 1 个季度延长到 3 个季度。", new:true},
-        {date:"2026-11-04", src:"特斯拉 Q3 电话会", type:"新业态", title:"Optimus 采用“先自用、再外售”路径，Fremont 内部先上 5,000 台", body:"先在自己工厂里用，用真实产线数据训练，再把成熟工位方案对外卖。这把“机器人”从硬件生意变成“工位解决方案”，毛利结构完全不同。", new:true},
-        {date:"2026-10-26", src:"CNBC", type:"新物种", title:"国内两家整机厂同时发布 20 自由度灵巧手，价格下探至 $1,800", body:"灵巧手占 BOM 约 18%，价格腰斩直接推动整机成本曲线下移。关注触觉传感器环节的国产替代。"},
-        {date:"2026-10-15", src:"X @Scobleizer", type:"认知修正", title:"遥操作数据不是过渡方案，而是长期壁垒", body:"此前认为遥操作只是数据采集的权宜之计；现在看，谁拥有最多真实作业数据，谁的 VLA 泛化能力最强。估值锚从硬件转向数据资产。"}
-      ],
-      think:"短期不追整机，买“确定的零部件 + 确定的订单”。三花、拓普的定点一旦落地，是 2-3 年的现金流；整机厂的估值已经透支到 2030 年。风险点：如果 Optimus 2027 年出货低于 3 万台，整个板块的叙事会破。"
-    },
-    { id:"edge", name:"端侧 AI", ico:"ED", color:"#0d8a5f", bg:"#e9f7f1",
-      sub:"AI 手机 / AI PC / 边缘 NPU",
-      thesis:"从“能跑模型”到“必须跑模型”。隐私与延迟把推理推向端侧，但真正的拐点是操作系统级的入口重构——谁掌握入口，谁决定 NPU 规格与换机节奏。",
-      kpis:[["AI 手机渗透率","34%"],["AI PC 渗透率","28%"],["端侧模型","7B 常态化"],["NPU 算力","80 TOPS"]],
-      names:["QCOM","AAPL","联发科","恒玄科技","乐鑫科技","瑞芯微"],
-      cat:"高通骁龙峰会、苹果 iOS 26 端侧模型、AI PC 换机数据",
-      log:[
-        {date:"2026-11-09", src:"高通骁龙峰会", type:"新拐点", title:"新一代 NPU 算力翻倍至 160 TOPS，首次支持本地 20B 模型", body:"算力越过临界点：20B 本地化意味着“云端调用”不再是必需，推理成本从每次都付费变成一次性硬件成本。对云厂商是分流，对终端是换机理由。", new:true},
-        {date:"2026-11-02", src:"Counterpoint", type:"数据更新", title:"10 月 AI 手机出货占比 34%，但“常用 AI 功能”使用率仅 11%", body:"渗透率与使用率的剪刀差是最大风险：硬件卖了，功能没被用起来。这意味着换机潮可能是“一次性”而非“持续性”。", new:true},
-        {date:"2026-10-22", src:"苹果开发者文档", type:"新业态", title:"iOS 26 开放端侧模型给第三方 App，按调用计费", body:"端侧模型开始有“分发渠道”。对应用层是新的变现位，对 NPU 是持续的性能需求。"},
-        {date:"2026-10-12", src:"SemiAnalysis", type:"认知修正", title:"端侧 AI 的瓶颈是内存带宽，不是算力", body:"此前盯着 TOPS，实际卡在 LPDDR 带宽。这解释了为什么存储涨价对端侧 AI 是利好而非成本压力。"}
-      ],
-      think:"端侧是“慢变量”，别用云端的节奏去套。真正能兑现的是存储（带宽需求）和代工（先进制程），整机品牌受益于换机但弹性有限。观察指标：AI 功能月活渗透率能否从 11% 走到 30%。"
-    },
     { id:"app", name:"AI 应用", ico:"AI", color:"#6d4aa8", bg:"#f3eefb",
       sub:"Software / Agent / 垂直应用",
       thesis:"叙事进入“ARR 验证期”：市场只给可量化的收入兑现溢价。Agent 化正在改变计费方式与毛利结构——seat 数不再是前瞻指标，任务量/结果计费才是。",
@@ -598,35 +607,14 @@ const DATA = {
         {date:"2026-10-29", src:"BofA 研报", type:"新物种", title:"“Agent 编排层”成为独立品类，估值给到 20x P/S", body:"编排层卡在模型与应用之间，是新的收费位。但要小心：这也是大模型厂商最想吞掉的一层。"},
         {date:"2026-10-18", src:"The Information", type:"认知修正", title:"AI 应用的价格战已经开始，按结果计费补贴抢客户", body:"此前判断“AI 应用有定价权”，现在看同质化严重。护城河回到数据与流程嵌入深度。"}
       ],
-      think:"只买“数据在它手里”的公司。RBRK 的数据在客户备份里，粘性天然；OKTA 的身份层可被云厂商原生替代。这个区分比 ARR 增速更重要。"
-    },
-    { id:"sec", name:"网安", ico:"SEC", color:"#0f766e", bg:"#e6f5f3",
-      sub:"身份安全 / 数据安全 / 机器身份 / 模型供应链",
-      thesis:"安全预算的刚性来自“不出事”，但估值弹性来自“出什么事”。AI 把攻击面从人扩展到 Agent 与模型供应链：机器身份数量已超过人类身份，而绝大多数企业还没有治理工具。这一层的钱不是新增预算，是从传统边界防护里挪过来的。",
-      kpis:[["全球安全支出","+12.4% yoy"],["平台整合率（≥3 品类）","41%"],["机器身份 : 人类身份","45 : 1"],["平均泄露成本","$488 万"]],
-      names:["CRWD","PANW","ZS","S","RBRK","OKTA","CHKP","奇安信","深信服"],
-      cat:"PANW / CRWD 财报、平台并购、Agent 身份标准（SPIFFE/OAuth 扩展）、重大泄露事件",
-      log:[
-        {date:"2026-11-11", src:"Gartner 安全峰会", type:"新拐点", title:"“机器身份治理”被单列为独立品类，2027 年预算池预计 62 亿美元", body:"过去机器身份散落在 IGA 与 PAM 里，现在被拆成独立预算项。意义在于：这是一块增量蛋糕，而不是存量替换——谁先做出 Agent 证书签发与轮转的产品，谁吃到第一波。", new:true},
-        {date:"2026-11-04", src:"The Information", type:"新业态", title:"头部云厂商把“模型供应链安全”打包进云合约，独立厂商被挤出这一层", body:"模型权重、微调数据、推理网关的完整性校验正被云厂商收进基础设施层。独立安全厂商的空间在“跨云、跨模型”的第三方视角——只做单云的企业会先被吃掉。", new:true},
-        {date:"2026-10-27", src:"公司公告", type:"数据更新", title:"数据安全类 ARR 增速 30%+，身份类 cRPO 增速掉到 12%", body:"同一赛道内部已经分成两条曲线：数据在哪，安全就在哪（备份、数据湖、SaaS 数据面），这类粘性最高；而身份认证层正被云厂商原生能力替代，续约率还行但新增单在流失。", new:false},
-        {date:"2026-10-16", src:"Black Hat Europe", type:"认知修正", title:"“AI 会大幅提升攻击效率”被过度定价，真正的增量在防御侧的自动化", body:"此前把 AI 安全当成“攻击升级 → 安全支出暴涨”的线性故事。实际企业采购的逻辑是“人力不够 → 买自动化”，所以受益的是 SOAR/自动化运营，而不是又一层检测盒子。", new:false}
+      think:"只买“数据在它手里”的公司。RBRK 的数据在客户备份里，粘性天然；OKTA 的身份层可被云厂商原生替代。这个区分比 ARR 增速更重要。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"美股 > 港股 > A股",
+         title:"盘后 AI 应用无独立行情，资金继续“挑品类”，持有数据在手的那几个",
+         body:"11-12 交易日 AI 应用板块整体无独立行情，市场注意力全在 AI 基建与半导体。盘后唯一变量是 NVDA 传闻带来的风险偏好收缩——对高估值应用层是压制。判断：这是“分化中段”而非“拐点”，数据面（RBRK 类）与身份面（OKTA 类）的增速差没有收敛，策略不变。<b>不建议因为 NVDA 盘后消息而恐慌性减仓应用层</b>——它的定价因子是企业 IT 预算，不是 GPU 传闻。",
+         pick:"持有 RBRK、NET；OKTA 继续减仓；新增资金等 PLTR 回撤到 20 日线下方再谈",
+         kill:"若 12 月 Oracle/Salesforce 财报的 consumption 占比停滞在 18% 以下，Agent 计费故事降级，届时整条赛道杀估值"},
       ],
-      think:"这条赛道要按“数据在哪”分层买，而不是按“安全”两个字的 beta 买。数据面（RBRK、CRWD）粘性来自数据位置，AI 只是加速需求；身份面（OKTA）结构性受挤压，云厂商原生能力越来越够用；网络边界（PANW、CHKP）是现金流生意，估值给不高但下行有保护。仓位安排：RBRK 持有、CHKP 观察、OKTA 减持。证伪条件：若 2027 年企业安全预算增速跌破 8%，平台整合逻辑就变成“缩量博弈”，整条赛道杀估值。"
-    },
-    { id:"fin", name:"金融科技", ico:"FIN", color:"#7c3aed", bg:"#f3eefb",
-      sub:"支付网络 / 稳定币与加密 / 消费信贷 / 财富管理",
-      thesis:"利率路径决定这条赛道的估值方向：加息环境下，BNPL 与消费信贷的信用成本上行，资金流向有牌照与低成本负债的平台；支付网络（V/MA）是现金流生意，对利率不敏感、对消费量敏感；稳定币与代理支付是唯一不受利率压制的增量叙事——监管落地比技术落地更能决定谁受益。",
-      kpis:[["12 月加息定价","84%"],["BTC 20 日","动态"],["核心 CPI 环比","0.3% ×3 月"],["BNPL 逾期率","待核实"]],
-      names:["V","MA","PYPL","XYZ","COIN","HOOD","SOFI","NU","INTU","ADYEY","PAGS"],
-      cat:"美联储路径（12/8-9 FOMC）、稳定币立法进展、消费信贷逾期率、COIN 交易量与托管规模",
-      log:[
-        {date:"2026-11-10", src:"BLS / CME FedWatch（已核实）", type:"新拐点", title:"12 月加息定价升至 84%，消费信贷与 BNPL 的信用成本假设要整体上修", body:"10 月 CPI 核心环比连续第三月 0.3%，数据后 2Y 单日 +16bp 至 4.71%。对利率最敏感的是消费信贷与 BNPL（SOFI、XYZ 的 Afterpay）：资金成本上行 + 逾期滞后暴露，双杀窗口未到最坏处。支付网络 V/MA 反而相对受益——利差扩大对其结算业务中性，消费韧性才是主变量。", new:true},
-        {date:"2026-11-11", src:"Yahoo 行情（已核实）", type:"数据更新", title:"BTC 与 ETH 20 日跌幅扩大，加密相关收入曲线整体下修", body:"COIN 的交易与托管收入、HOOD 的加密营收与币价强相关，20 日跌幅直接映射到下季度指引风险。加密资产进入“宏观定价”阶段：不是产品问题，是流动性问题——降息预期消失、风险资产去杠杆，加密最先反映。", new:true},
-        {date:"2026-10-23", src:"OCC 最终规则（nr-2026-92，已核实）", type:"新拐点", title:"GENIUS Act 实施规则定稿，2027 年 1 月 18 日生效——稳定币发行牌照框架落地", body:"OCC 于 10/23 在联邦公报发布最终规则，确立许可支付稳定币发行人（PPSI）的储备、赎回与风险管理标准；BSA/AML/制裁条款由财政部另行立规。关键含义：稳定币从灰色地带进入持牌发行时代，有银行牌照与合规能力的平台（COIN、V/MA 的稳定币结算合作）拿到入场券，灰色发行方被清退。生效日 2027-01-18，OCC 尚未开放申请窗口——申请开放是下一个催化剂节点。", new:true},
-        {date:"2026-09-24", src:"美联储理事会拟议规则（已核实）", type:"边界划定", title:"拟议规则明确禁止稳定币付息——稳定币被限定为“支付工具”而非“生息资产”", body:"美联储 9 月发布的 GENIUS Act 实施提案包含对 PPSI 的“禁止支付收益或利息”条款，同时明确稳定币不由美国主权背书、不受存款保险覆盖。这条边界划定了竞争格局：想靠稳定币余额吃利差的模式被禁，受益的是把稳定币嵌入真实支付流的公司（Visa/万事达的结算网络、Block 的商户收单），而不是“稳定币银行”。", new:false}
-      ],
-      think:"这条赛道按“利率敏感度”分三档：第一档 V/MA，现金流生意、加息中性，且稳定币持牌化对其结算网络是增量；第二档 SOFI/NU/HOOD，弹性大但方向完全取决于利率路径，加息定价没见顶前不加；第三档 COIN/XYZ，纯加密 beta，等 BTC 企稳再谈。证伪条件：若 12 月真加 50bp 且 2027 点阵图上移，第二档的信用成本假设全部重算，届时减仓。"
     },
     { id:"infra", name:"AI 基础设施 & 数据中心", ico:"DC", color:"#d2373a", bg:"#fdeeee",
       sub:"GPU Cloud / 电力 / 冷却 / 网络",
@@ -640,7 +628,14 @@ const DATA = {
         {date:"2026-11-06", src:"SemiAnalysis", type:"数据更新", title:"H200 现货租赁价格环比 -8%，为 2025 年以来首次下跌", body:"租赁价格下跌不等于需求转弱，可能是供给集中释放。但这是要盯的领先指标——若连续两月下跌，Neocloud 的定价权叙事要修正。"},
         {date:"2026-10-25", src:"PJM 容量拍卖", type:"风险", title:"PJM 容量拍卖价格再创新高，数据中心负荷被要求自备电源", body:"电网开始把成本转嫁给数据中心。短期利好自备电源（BE/GEV），中期是运营成本的结构性上升。"}
       ],
-      think:"最确定的是“电”，最不确定的是“谁最终付钱”。CRWV 本质是“用高息债买 GPU 再出租”，利率敏感度极高。所以仓位放在 BE/IREN/VRT，而不是重仓 CRWV——尽管它弹性最大。"
+      think:"最确定的是“电”，最不确定的是“谁最终付钱”。CRWV 本质是“用高息债买 GPU 再出租”，利率敏感度极高。所以仓位放在 BE/IREN/VRT，而不是重仓 CRWV——尽管它弹性最大。",
+      views:[
+        {date:"2026-11-13", new:true, action:"减配→跟踪", mkt:"美股 > A股 > 港股",
+         title:"NBIS -16.8% + CRWV 40 亿美元贷款 + IREN 20 日 -36%——Neocloud 杠杆模型的一次压力测试",
+         body:"11-12 收盘：NBIS <b>-16.8%</b>（20 日 -30.8%）、CRWV <b>-6.9%</b>、IREN <b>-6.5%</b>（20 日 -36.3%）、BE -3.6%，AI 基建链是全场最弱。同期 CRWV 寻求 <b>40 亿美元投资级贷款</b>（杠杆再抬一档）。判断：<b>这不是需求拐点</b>——GPU 租金（H200 30D +49%、B200 +32%）仍在涨，电力仍稀缺；这是<b>杠杆模型被重定价</b>：10Y 站上 5.10% 后，融资成本与折旧年限同时恶化，跌的是“用高息债买 GPU 再出租”的商业模式溢价。<b>动作：把 CRWV/NBIS 的仓位降到可接受回撤以内，保留 BE/GEV/VRT（电与设备是真实供需）</b>。IREN 20 日 -36% 已经把转型溢价跌没了，等租金数据确认再谈回补。",
+         pick:"保留 BE、GEV、VRT；IREN 设观察位（GPU 租金连续两月上行 + 公司重申合同即回补）；CRWV/NBIS 减配不加",
+         kill:"若 GPU 租金（H200/B200）连续两个月环比下跌，Neocloud 定价权叙事证伪，届时整条赛道减配，只留电力"},
+      ],
     },
     { id:"pkg", name:"先进封测", ico:"PK", color:"#1d3a6e", bg:"#eef3fb",
       sub:"CoWoS / SoIC / 面板级封装",
@@ -654,7 +649,14 @@ const DATA = {
         {date:"2026-10-28", src:"ONTO 财报", type:"数据更新", title:"订单出货比 1.6，交期拉长至 18 个月", body:"设备端议价力上行，客户开始预付款排产。这是周期中段最舒服的位置。"},
         {date:"2026-10-16", src:"台积电法说会", type:"新业态", title:"面板级封装（PLP）2027 进入量产验证，瞄准 AI 加速器", body:"从 12 寸圆片到面板，单位面积成本可降 30%。设备厂是最大受益者，但验证周期长，别提前太久埋伏。"}
       ],
-      think:"这是我仓位最重的赛道，因为“确定性/估值”比值最好。TER + ONTO 覆盖测试与量测两端，且都是卖铲子——不押注谁赢。风险是 2027 capex 若低于预期，设备股先杀估值。"
+      think:"这是我仓位最重的赛道，因为“确定性/估值”比值最好。TER + ONTO 覆盖测试与量测两端，且都是卖铲子——不押注谁赢。风险是 2027 capex 若低于预期，设备股先杀估值。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"美股 > A股 > 港股",
+         title:"满产 + 交期 18 个月未变，本轮回调是估值不是基本面",
+         body:"11-12 台积电 -1.9%（20日 -5.7%）、TER -0.76%（20日 -26.6%）、ONTO -2.5%。设备端 20 日跌幅远大于晶圆端，说明市场在提前定价 2027 capex 下修——但现有证据（台积电月报 +31% yoy、ONTO 订单出货比 1.6、交期 18 个月）都不支持拐点。<b>判断：周期中段的波动，不是拐点。持有不动</b>，TER/ONTO 若再跌 10% 是加仓位不是减仓位。",
+         pick:"持有 TSM、ONTO、TER；AMKR 弹性不足只做底仓；A股长电/通富等国产化订单落地再加",
+         kill:"台积电 2027 capex 指引若低于 2026（法说会口径），设备股先杀估值，届时减 TER/ONTO"},
+      ],
     },
     { id:"cpu", name:"CPU", ico:"CPU", color:"#2f5da8", bg:"#eef3fb",
       sub:"ARM 服务器 / 定制 ASIC / x86 松动",
@@ -668,8 +670,120 @@ const DATA = {
         {date:"2026-10-20", src:"Mercury Research", type:"数据更新", title:"Q3 ARM 服务器份额 22%，x86 出货量同比 -3%", body:"份额迁移在加速，但绝对量还在增长，所以 Intel 报表不会立刻难看——这也是市场低估迁移速度的原因。"},
         {date:"2026-10-14", src:"CNBC", type:"认知修正", title:"AI PC 的“换机潮”被证伪，企业采购周期仍是 5 年", body:"此前预期 AI PC 会带来 3 年换机周期，实际企业端没有加速。端侧 AI 的节奏要按“慢变量”重估。"}
       ],
-      think:"“慢但确定”的一条线。ARM 的版税模式改变是真实的盈利上修，值得长期持有；INTC 是价值陷阱的概率大于反转；AMD 处在两头受挤的位置，估值需要下修。"
-    }
+      think:"“慢但确定”的一条线。ARM 的版税模式改变是真实的盈利上修，值得长期持有；INTC 是价值陷阱的概率大于反转；AMD 处在两头受挤的位置，估值需要下修。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"美股 > A股 > 港股",
+         title:"AMD 收盘创历史新高 585.30（+5.86%）vs INTC 磨底——同一条赛道上两条曲线",
+         body:"11-12 AMD 收盘 585.3 创历史新高（超过 2026-09-01 的 552.9），是全场唯一逆势创新高的大票。但注意 AMD 的上涨在盘后也被 NVDA 传闻拖累（盘后 -0.94%）。判断：CPU/数据中心 CPU 份额逻辑没有变化，但 AMD 现在 20 日只有 +2.5%，说明这次新高是“挤水分后创新高”，质量比 9 月那次高。<b>INTC 维持回避</b>。",
+         pick:"持有 AMD、ARM；INTC 回避；QCOM 受手机大盘拖累观察",
+         kill:"若 MI400 出货节奏低于公司指引或数据中心增速跌破 40%，AMD 的第二曲线叙事降级"},
+      ],
+    },
+    { id:"phy", name:"物理 AI / 机器人", ico:"RB", color:"#b26a00", bg:"#fdf5e6",
+      sub:"具身智能 / 人形机器人 / VLA 模型",
+      thesis:"从“演示视频”进入“量产爬坡”。真正的瓶颈不是模型能力，而是数据采集成本与 BOM 成本曲线；谁先把单台成本压到 2 万美元以内，谁拿到第一张规模化门票。",
+      kpis:[["2026 全球出货","4.8 万台"],["单台 BOM","$32k"],["VLA 任务成功率","78%"],["遥操作数据","1,200 万条"]],
+      names:["TSLA","NVDA","三花智控","拓普集团","绿的谐波","优必选"],
+      cat:"Optimus 定点、Figure 量产、国内整机厂招标",
+      log:[
+        {date:"2026-11-10", src:"The Information", type:"新拐点", title:"Figure 03 产线爬坡至月产 400 台，良率首破 90%", body:"这是人形机器人第一次出现“量产良率”而非“实验室指标”的披露。意义在于：供应链从打样转向批量，减速器与丝杠的订单能见度从 1 个季度延长到 3 个季度。", new:true},
+        {date:"2026-11-04", src:"特斯拉 Q3 电话会", type:"新业态", title:"Optimus 采用“先自用、再外售”路径，Fremont 内部先上 5,000 台", body:"先在自己工厂里用，用真实产线数据训练，再把成熟工位方案对外卖。这把“机器人”从硬件生意变成“工位解决方案”，毛利结构完全不同。", new:true},
+        {date:"2026-10-26", src:"CNBC", type:"新物种", title:"国内两家整机厂同时发布 20 自由度灵巧手，价格下探至 $1,800", body:"灵巧手占 BOM 约 18%，价格腰斩直接推动整机成本曲线下移。关注触觉传感器环节的国产替代。"},
+        {date:"2026-10-15", src:"X @Scobleizer", type:"认知修正", title:"遥操作数据不是过渡方案，而是长期壁垒", body:"此前认为遥操作只是数据采集的权宜之计；现在看，谁拥有最多真实作业数据，谁的 VLA 泛化能力最强。估值锚从硬件转向数据资产。"}
+      ],
+      think:"短期不追整机，买“确定的零部件 + 确定的订单”。三花、拓普的定点一旦落地，是 2-3 年的现金流；整机厂的估值已经透支到 2030 年。风险点：如果 Optimus 2027 年出货低于 3 万台，整个板块的叙事会破。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"A股 > 美股 > 港股",
+         title:"无人新催化，但 TSLA 20日 +8.3% 走独立行情",
+         body:"11-12 TSLA +1.69%（20日 +8.25%），与纳指 100（20日 -5.6%）明显背离，说明市场在给 Robotaxi/Optimus 的“非 AI 基建”叙事单独定价。A股链条（三花、拓普、绿的）无独立行情。判断：<b>没有拐点信号，持有不追</b>；真正的验证点是 Optimus 量产良率与国内整机厂招标。",
+         pick:"持有 TSLA；A股三花/拓普等定点公告落地再加；绿的谐波做贝塔底仓",
+         kill:"Optimus 若 2027 年出货低于 3 万台，板块叙事破，届时减 TSLA 与 A 股链"},
+      ],
+    },
+    { id:"edge", name:"端侧 AI", ico:"ED", color:"#0d8a5f", bg:"#e9f7f1",
+      sub:"AI 手机 / AI PC / 边缘 NPU",
+      thesis:"从“能跑模型”到“必须跑模型”。隐私与延迟把推理推向端侧，但真正的拐点是操作系统级的入口重构——谁掌握入口，谁决定 NPU 规格与换机节奏。",
+      kpis:[["AI 手机渗透率","34%"],["AI PC 渗透率","28%"],["端侧模型","7B 常态化"],["NPU 算力","80 TOPS"]],
+      names:["QCOM","AAPL","联发科","恒玄科技","乐鑫科技","瑞芯微"],
+      cat:"高通骁龙峰会、苹果 iOS 26 端侧模型、AI PC 换机数据",
+      log:[
+        {date:"2026-11-09", src:"高通骁龙峰会", type:"新拐点", title:"新一代 NPU 算力翻倍至 160 TOPS，首次支持本地 20B 模型", body:"算力越过临界点：20B 本地化意味着“云端调用”不再是必需，推理成本从每次都付费变成一次性硬件成本。对云厂商是分流，对终端是换机理由。", new:true},
+        {date:"2026-11-02", src:"Counterpoint", type:"数据更新", title:"10 月 AI 手机出货占比 34%，但“常用 AI 功能”使用率仅 11%", body:"渗透率与使用率的剪刀差是最大风险：硬件卖了，功能没被用起来。这意味着换机潮可能是“一次性”而非“持续性”。", new:true},
+        {date:"2026-10-22", src:"苹果开发者文档", type:"新业态", title:"iOS 26 开放端侧模型给第三方 App，按调用计费", body:"端侧模型开始有“分发渠道”。对应用层是新的变现位，对 NPU 是持续的性能需求。"},
+        {date:"2026-10-12", src:"SemiAnalysis", type:"认知修正", title:"端侧 AI 的瓶颈是内存带宽，不是算力", body:"此前盯着 TOPS，实际卡在 LPDDR 带宽。这解释了为什么存储涨价对端侧 AI 是利好而非成本压力。"}
+      ],
+      think:"端侧是“慢变量”，别用云端的节奏去套。真正能兑现的是存储（带宽需求）和代工（先进制程），整机品牌受益于换机但弹性有限。观察指标：AI 功能月活渗透率能否从 11% 走到 30%。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"美股 > A股 > 港股",
+         title:"端侧是慢变量，本轮回调与 AI 基建无关",
+         body:"11-12 AAPL +2.04%（收盘 355.63），端侧逻辑没有变化。20B 本地模型的 NPU 临界点已过，真正的验证指标仍是“AI 功能月活渗透率”。判断：<b>持有不动，这不是本轮波动的主战场</b>。",
+         pick:"持有 AAPL；A股恒玄/乐鑫/瑞芯微等放量证据出现再加",
+         kill:"若 AI 手机“常用功能使用率”连续两季停在 15% 以下，换机潮叙事降级"},
+      ],
+    },
+    { id:"sec", name:"网安", ico:"SEC", color:"#0f766e", bg:"#e6f5f3",
+      sub:"身份安全 / 数据安全 / 机器身份 / 模型供应链",
+      thesis:"安全预算的刚性来自“不出事”，但估值弹性来自“出什么事”。AI 把攻击面从人扩展到 Agent 与模型供应链：机器身份数量已超过人类身份，而绝大多数企业还没有治理工具。这一层的钱不是新增预算，是从传统边界防护里挪过来的。",
+      kpis:[["全球安全支出","+12.4% yoy"],["平台整合率（≥3 品类）","41%"],["机器身份 : 人类身份","45 : 1"],["平均泄露成本","$488 万"]],
+      names:["CRWD","PANW","ZS","S","RBRK","OKTA","CHKP","奇安信","深信服"],
+      cat:"PANW / CRWD 财报、平台并购、Agent 身份标准（SPIFFE/OAuth 扩展）、重大泄露事件",
+      log:[
+        {date:"2026-11-11", src:"Gartner 安全峰会", type:"新拐点", title:"“机器身份治理”被单列为独立品类，2027 年预算池预计 62 亿美元", body:"过去机器身份散落在 IGA 与 PAM 里，现在被拆成独立预算项。意义在于：这是一块增量蛋糕，而不是存量替换——谁先做出 Agent 证书签发与轮转的产品，谁吃到第一波。", new:true},
+        {date:"2026-11-04", src:"The Information", type:"新业态", title:"头部云厂商把“模型供应链安全”打包进云合约，独立厂商被挤出这一层", body:"模型权重、微调数据、推理网关的完整性校验正被云厂商收进基础设施层。独立安全厂商的空间在“跨云、跨模型”的第三方视角——只做单云的企业会先被吃掉。", new:true},
+        {date:"2026-10-27", src:"公司公告", type:"数据更新", title:"数据安全类 ARR 增速 30%+，身份类 cRPO 增速掉到 12%", body:"同一赛道内部已经分成两条曲线：数据在哪，安全就在哪（备份、数据湖、SaaS 数据面），这类粘性最高；而身份认证层正被云厂商原生能力替代，续约率还行但新增单在流失。", new:false},
+        {date:"2026-10-16", src:"Black Hat Europe", type:"认知修正", title:"“AI 会大幅提升攻击效率”被过度定价，真正的增量在防御侧的自动化", body:"此前把 AI 安全当成“攻击升级 → 安全支出暴涨”的线性故事。实际企业采购的逻辑是“人力不够 → 买自动化”，所以受益的是 SOAR/自动化运营，而不是又一层检测盒子。", new:false}
+      ],
+      think:"这条赛道要按“数据在哪”分层买，而不是按“安全”两个字的 beta 买。数据面（RBRK、CRWD）粘性来自数据位置，AI 只是加速需求；身份面（OKTA）结构性受挤压，云厂商原生能力越来越够用；网络边界（PANW、CHKP）是现金流生意，估值给不高但下行有保护。仓位安排：RBRK 持有、CHKP 观察、OKTA 减持。证伪条件：若 2027 年企业安全预算增速跌破 8%，平台整合逻辑就变成“缩量博弈”，整条赛道杀估值。",
+      views:[
+        {date:"2026-11-13", new:true, action:"持有", mkt:"美股 > A股 > 港股",
+         title:"机器身份治理被单列预算池，数据面继续跑赢身份面",
+         body:"11-12 CHKP +0.62%（20日 +10%，全场最稳）、OKTA +0.16%（20日 -13.9%）、RBRK +1.03%。分化延续：数据在哪安全就在哪。<b>判断与上期一致：按“数据在哪”分层持有，不做赛道的 beta</b>。",
+         pick:"持有 RBRK、CHKP；CRWD 底仓；OKTA 减持不回补",
+         kill:"企业安全预算增速跌破 8% 则平台整合逻辑变缩量博弈，整条赛道杀估值"},
+      ],
+    },
+    { id:"fin", name:"金融科技", ico:"FIN", color:"#7c3aed", bg:"#f3eefb",
+      sub:"支付网络 / 稳定币与加密 / 消费信贷 / 财富管理",
+      thesis:"利率路径决定这条赛道的估值方向：加息环境下，BNPL 与消费信贷的信用成本上行，资金流向有牌照与低成本负债的平台；支付网络（V/MA）是现金流生意，对利率不敏感、对消费量敏感；稳定币与代理支付是唯一不受利率压制的增量叙事——监管落地比技术落地更能决定谁受益。",
+      kpis:[["12 月加息定价","84%"],["BTC 20 日","动态"],["核心 CPI 环比","0.3% ×3 月"],["BNPL 逾期率","待核实"]],
+      names:["V","MA","PYPL","XYZ","COIN","HOOD","SOFI","NU","INTU","ADYEY","PAGS"],
+      cat:"美联储路径（12/8-9 FOMC）、稳定币立法进展、消费信贷逾期率、COIN 交易量与托管规模",
+      log:[
+        {date:"2026-11-10", src:"BLS / CME FedWatch（已核实）", type:"新拐点", title:"12 月加息定价升至 84%，消费信贷与 BNPL 的信用成本假设要整体上修", body:"10 月 CPI 核心环比连续第三月 0.3%，数据后 2Y 单日 +16bp 至 4.71%。对利率最敏感的是消费信贷与 BNPL（SOFI、XYZ 的 Afterpay）：资金成本上行 + 逾期滞后暴露，双杀窗口未到最坏处。支付网络 V/MA 反而相对受益——利差扩大对其结算业务中性，消费韧性才是主变量。", new:true},
+        {date:"2026-11-11", src:"Yahoo 行情（已核实）", type:"数据更新", title:"BTC 与 ETH 20 日跌幅扩大，加密相关收入曲线整体下修", body:"COIN 的交易与托管收入、HOOD 的加密营收与币价强相关，20 日跌幅直接映射到下季度指引风险。加密资产进入“宏观定价”阶段：不是产品问题，是流动性问题——降息预期消失、风险资产去杠杆，加密最先反映。", new:true},
+        {date:"2026-10-23", src:"OCC 最终规则（nr-2026-92，已核实）", type:"新拐点", title:"GENIUS Act 实施规则定稿，2027 年 1 月 18 日生效——稳定币发行牌照框架落地", body:"OCC 于 10/23 在联邦公报发布最终规则，确立许可支付稳定币发行人（PPSI）的储备、赎回与风险管理标准；BSA/AML/制裁条款由财政部另行立规。关键含义：稳定币从灰色地带进入持牌发行时代，有银行牌照与合规能力的平台（COIN、V/MA 的稳定币结算合作）拿到入场券，灰色发行方被清退。生效日 2027-01-18，OCC 尚未开放申请窗口——申请开放是下一个催化剂节点。", new:true},
+        {date:"2026-09-24", src:"美联储理事会拟议规则（已核实）", type:"边界划定", title:"拟议规则明确禁止稳定币付息——稳定币被限定为“支付工具”而非“生息资产”", body:"美联储 9 月发布的 GENIUS Act 实施提案包含对 PPSI 的“禁止支付收益或利息”条款，同时明确稳定币不由美国主权背书、不受存款保险覆盖。这条边界划定了竞争格局：想靠稳定币余额吃利差的模式被禁，受益的是把稳定币嵌入真实支付流的公司（Visa/万事达的结算网络、Block 的商户收单），而不是“稳定币银行”。", new:false}
+      ],
+      think:"这条赛道按“利率敏感度”分三档：第一档 V/MA，现金流生意、加息中性，且稳定币持牌化对其结算网络是增量；第二档 SOFI/NU/HOOD，弹性大但方向完全取决于利率路径，加息定价没见顶前不加；第三档 COIN/XYZ，纯加密 beta，等 BTC 企稳再谈。证伪条件：若 12 月真加 50bp 且 2027 点阵图上移，第二档的信用成本假设全部重算，届时减仓。",
+      views:[
+        {date:"2026-11-13", new:true, action:"跟踪", mkt:"美股 > 港股 > A股",
+         title:"12 月加息定价 84% 未再上行，加密链继续承压",
+         body:"11-12 COIN 随加密反弹但 20 日仍 -12%（BTC 口径），HOOD +4% 收盘 84.58。支付网络 V/MA 无独立行情。判断：<b>利率定价没有新信息，维持“跟踪不加仓”</b>；稳定币的下一个节点是 OCC 申请窗口开放（2027-01-18 生效前）。",
+         pick:"持有 V、MA；COIN/HOOD 等 BTC 20 日转正再谈；SOFI 不加（信用成本上行未到头）",
+         kill:"12 月 FOMC 真加 50bp 且点阵图上移 → 消费信贷/BNPL 信用成本全面重算，减 SOFI/XYZ"},
+      ],
+    },
+    { id:"bio", name:"生物医药", ico:"BIO", color:"#0e7490", bg:"#e8f6f8",
+      sub:"GLP-1 / ADC / 细胞治疗 / 手术机器人",
+      thesis:"这是全市场唯一一条“不依赖 AI 叙事”的大赛道：现金流来自刚性的慢病用药与渗透率爬坡，与宏观利率的相关性远低于科技。当下它是组合里天然的“去 AI 化”分散工具——代价是弹性小，赚的是确定性的复利。",
+      kpis:[["GLP-1 全球市场规模","$1,900 亿"],["口服 GLP-1","2027 上市"],["ADC 管线 III 期","28 项"],["手术机器人渗透率","23%"]],
+      names:["LLY","PFE","MRK","JNJ","UNH","ABBV","TMO","AMGN","ISRG","VRTX","REGN"],
+      cat:"口服 GLP-1 数据读出、FDA 审评节点、医保谈判、M&A 窗口",
+      log:[
+        {date:"2026-11-08", src:"公司 III 期数据", type:"新拐点", title:"口服 GLP-1 头对头数据达标，2027 上半年上市路径明确", body:"口服剂型把 GLP-1 从“注射依从性问题”变成“慢性病处方药”，可及市场从肥胖核心人群扩展到糖尿病前期。这是这条赛道 2027 年最大的单一变量。", new:true},
+        {date:"2026-10-30", src:"行业统计", type:"数据更新", title:"ADC 管线 III 期数量 28 项，M&A 成交均价回落", body:"大药企转向“买管线”而非“买公司”，单品授权（license-out）成为国内创新药出海主路径。", new:true},
+        {date:"2026-10-18", src:"JPM 医疗大会", type:"认知修正", title:"手术机器人的壁垒是耗材不是设备", body:"此前按设备销售给 ISRG 估值，实际装机后的耗材与现金流才是护城河。"}
+      ],
+      think:"按“现金流的确定性”配置：LLY（GLP-1 垄断 + 口服期权）是核心仓，ABBV/JNJ 是接力节奏，ISRG 是长逻辑；PFE 便宜但缺催化，只做底仓。这条赛道的作用是<b>对冲组合的 AI beta</b>——当 AI 叙事被证伪时，医药是资金的去处。",
+      views:[
+        {date:"2026-11-13", new:true, action:"增持", mkt:"美股 > A股 > 港股",
+         title:"AI 基建去泡沫时，医药是资金的去处——首次建仓建议",
+         body:"11-12 收盘盘后，市场对 AI 基建杠杆模式开始重新定价（NBIS 20日 -31%、CRWV 盘后再融资）。在这种环境下，<b>生物医药是组合里唯一的低相关资产</b>：LLY 口服 GLP-1 的 2027 上市路径明确，是未来 12 个月最确定的单一催化剂。判断：给组合加 5-8 个点的医药敞口，作为 AI beta 的对冲，而不是赚弹性的仓位。",
+         pick:"增持 LLY（核心）；建底仓 ABBV、JNJ、ISRG；PFE 只做价值底仓不加",
+         kill:"口服 GLP-1 III 期若安全性数据翻车（肝毒性/停药反弹），整条 GLP-1 叙事降级，届时撤新增仓位"},
+      ],
+    },
+
   ],
 
   events:{
@@ -1178,19 +1292,28 @@ function hydrate(L){
   const soxGap = (sox.d20!=null && spx.d20!=null) ? (sox.d20-spx.d20) : null;
 
   DATA.meta.spxChg = spx.chg;
+  const up = (v)=> v!=null && v>0;
   DATA.brief.color = [
     {dim:"指数",
      perf:"标普 " + fmtNum(spx.level,2) + "（" + pstr(spx.chg) + "）／纳指 " + fmtNum(ixic.level,2) + "（" + pstr(ixic.chg) + "）／道指 " + fmtNum(dji.level,2) + "（" + pstr(dji.chg) + "）；20 日 " + pstr(spx.d20) + " / " + pstr(ixic.d20) + " / " + pstr(dji.d20),
-     note:"当日普涨反弹、费半领涨，但量比不足一半，反弹质量待确认；20 日的分化才是主线：道指仍为正，纳指 -7%。一天反弹不改趋势。"},
+     note: up(spx.chg)
+       ? "三大指数同向收涨，但要看是谁在涨：<b>广度与量能</b>决定这是修复还是反转，单日方向本身不构成结论。"
+       : "三大指数同日小幅收跌，<b>跌幅都在 0.5% 以内</b>——水位没变；真正变化的是内部结构（半导体与高贝塔显著弱于道指）。<b>浅跌 + 深分化</b>，不是新一轮下跌的开始。"},
     {dim:"风格",
-     perf:"纳指 100 20 日 " + pstr(ndx.d20) + "　vs　道指 20 日 " + pstr(dji.d20) + "　→ 成长跑输价值 " + (growthGap==null?"—":Math.abs(growthGap).toFixed(1)+" 个百分点"),
-     note:"单日领涨的是 20 日跌幅最深的成长，属教科书式超跌修复；成长 20 日仍大幅跑输价值——风格切换未被反弹逆转。"},
+     perf:"纳指 100 20 日 " + pstr(ndx.d20) + "　vs　道指 20 日 " + pstr(dji.d20) + "　→ 成长" + ((growthGap||0)<0?"跑输":"跑赢") + "价值 " + (growthGap==null?"—":Math.abs(growthGap).toFixed(1)+" 个百分点"),
+     note: (growthGap||0)<0
+       ? "成长 20 日仍大幅跑输价值，<b>风格切换没有被单日行情逆转</b>；道指 20 日仍为正，说明资金在往“现金流确定”的方向挪，不是在全面撤退。"
+       : "成长重新占优，防御与价值落后——风险偏好在修复，但要确认是<b>增量资金</b>还是存量博弈，看量能与广度。"},
     {dim:"半导体",
      perf:"费城半导体 " + fmtNum(sox.level,2) + "（" + pstr(sox.chg) + "），20 日 " + pstr(sox.d20) + "；相对标普 " + (soxGap==null?"—":pstr(soxGap,1)),
-     note:"当日大涨主要由 CRWV 财报（+24.7%）带动，设备链跟随反弹；20 日 -13% 的调整幅度未变——先按超跌修复对待，需求确认要等 CRWV 上调的指引逐季兑现，不追高。"},
+     note: (sox.d20!=null && sox.d20<-5)
+       ? "费半 20 日 <b>" + pstr(sox.d20) + "</b>，是全场最弱的一档——但<b>弱的是估值，不是订单</b>：CoWoS 仍满产、设备交期仍 18 个月、GPU 租金仍在涨。同一天 AMD 创历史新高、TSM/TER/ONTO 收跌，说明这是<b>选股行情而非板块行情</b>。"
+       : "费半相对标普 " + (soxGap==null?"—":pstr(soxGap,1)) + "，半导体重新领跑；需要确认是<b>全线扩散</b>还是只由少数权重带动。"},
     {dim:"波动",
      perf:"VIX " + fmtNum(vix.level,2) + "（" + pstr(vix.chg) + "），20 日 " + pstr(vix.d20),
-     note:"单日 -10% 至 17.5，恐慌解除，但 20 日仍抬升——缩量反弹中 VIX 大幅回落更像“卖压真空”，不等于风险出清。保护成本已降，对冲仓位保留。"},
+     note: up(vix.chg)
+       ? "指数小跌而 <b>VIX 逆势上行</b>——<b>指数不动、波动率抬升</b>，是分歧放大与对冲需求上升的信号，通常出现在“结构切换”而不是“单边下跌”里。对冲成本在变贵，保护要提前买，不要等。"
+       : "VIX 回落、指数上行，恐慌在解除；但若<b>缩量</b>，更像“卖压真空”而不是风险出清，对冲仓位不急着全撤。"},
     {dim:"量能",
      perf:"标普成交额 " + (spx.amount ? fmtNum(spx.amount/1e8,0) + " 亿美元" : "待接入") +
            "；道指 " + (dji.amount ? fmtNum(dji.amount/1e8,0) + " 亿美元" : "待接入") + "（仅当日绝对值，20 日均量待接入）",
@@ -1220,18 +1343,21 @@ function hydrate(L){
     return {n: opts.name || c.name.replace(/^.*[:：]/, ""), close: close, d1: d1, u1: u1, d20: d20, u20: u20, note: opts.note || ""};
   };
 
+  const t10 = (X.UST10Y && X.UST10Y.value) || 0;
   const rows = [
     {group:"利率与汇率", rows:[
-      row("UST10Y", {name:"10Y 美债收益率", note:"贴近 5%——全篇最重要的数字。分母端压制未解除，12 月加息定价 84%，12/8-9 FOMC 前难有缓解"}),
-      row("DXY", {name:"美元指数", note:"20 日基本持平。汇率不是这轮调整的驱动，利率才是"}),
+      row("UST10Y", {name:"10Y 美债收益率", note: t10>=5
+        ? "<b>"+t10.toFixed(3)+"%</b>，站在 5% 之上——这是全篇最重要的数字。<b>分母端压制未解除</b>，长久期成长股的估值上限被系统性下移；12/8-9 FOMC 前不会有缓解。"
+        : "<b>"+t10.toFixed(3)+"%</b>，在 5% 下方震荡；<b>离 5% 越近，成长股的估值弹性越小</b>。"}),
+      row("DXY", {name:"美元指数", note:"汇率不是这轮美股调整的驱动，<b>利率才是</b>；美元走强会额外压制新兴市场与大宗。"}),
       null
     ]},
     {group:"大宗商品", rows:[
-      row("WTI", {name:"WTI 原油", note:"20 日明显走弱，通胀端压力缓和；但绝对价格仍在高位"}),
+      row("WTI", {name:"WTI 原油", note:"油价与通胀预期同向：<b>油价反弹会直接顶住降息预期</b>，是分母端的反向变量，不能只看 10Y。"}),
       row("BRENT", {name:"布伦特原油", block20:true, note:"20 日序列与 WTI 明显不一致，疑为换月或数据断点，已屏蔽，待核"}),
-      row("GOLD", {name:"黄金", note:"实际利率近 5% 而金价回撤有限——央行购金与去美元化需求仍是底仓逻辑"}),
-      row("SILVER", {name:"白银", note:"20 日回吐明显；工业属性主导，跟随铜"}),
-      row("COPPER", {name:"LME 铜", note:"20 日跌幅远小于费半。AI 用电与电网需求是真的——被杀的只是估值，这是最重要的区分"})
+      row("GOLD", {name:"黄金", note:"实际利率在 5% 附近而金价仅温和回撤——<b>央行购金与去美元化</b>仍是底仓逻辑；金价大跌才是流动性冲击的信号。"}),
+      row("SILVER", {name:"白银", note:"工业属性强于黄金，<b>跟随铜而不是跟随金</b>；银强于金 = 风险偏好回升。"}),
+      row("COPPER", {name:"LME 铜", note:"铜的 20 日跌幅远小于费半——<b>AI 用电与电网需求是真的，被杀的是估值</b>。这是全篇最重要的区分。"})
     ]},
     {group:"加密资产", rows:[
       {n:"BTC", close:"—", d1:null, u1:"%", d20:null, u20:"%", note:"由 Yahoo 辅助层补入；不填估值"}
@@ -1330,6 +1456,20 @@ function earnRead(r){
 
 function hydrateExtra(Y){
   const b = DATA.brief;
+
+  /* 本次同步时间 = 核心层与辅助层里较晚的那个：
+     两个脚本不是同一秒跑的，模块时间戳若只取核心层，会出现“辅助数据比时间戳新 11 小时”的错觉。 */
+  if(Y && Y.meta && Y.meta.syncedAt){
+    const yt = new Date(Y.meta.syncedAt);
+    const ct = DATA.meta.syncedISO ? new Date(DATA.meta.syncedISO) : null;
+    if(!ct || yt > ct){
+      const st2 = syncStamps(Y.meta.syncedAt);
+      FEED.lastSync = yt.toLocaleString("zh-CN",{month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"});
+      FEED.lastSyncBJ = st2.bj; FEED.lastSyncET = st2.et;
+      DATA.meta.syncedISO = Y.meta.syncedAt;
+      DATA.meta.updatedPT = st2.bj;
+    }
+  }
 
   /* 1. 量能：标普当日 vs 20 日均量 */
   if(Y.spxVol && Y.spxVol.avg20){
@@ -1483,9 +1623,9 @@ function hydrateExtra(Y){
     const shape = (x, ses) => {
       const n = mvNewsOf(x.sym);
       return {
-        t: x.sym, n: x.name, sec: x.sec, earn: !!x.earn,
-        mv: x[ses],
-        px: ses === "pre" ? x.prePx : x.postPx,
+        t: x.sym, n: x.name, sec: x.sec, track: x.track || "", earn: !!x.earn,
+        mv: (x[ses] != null ? x[ses] : x.mv),
+        px: (ses === "pre" ? x.prePx : x.postPx) != null ? (ses === "pre" ? x.prePx : x.postPx) : x.px,
         base: x.px,
         news: (n && n.ok) ? { title: n.title, sum: n.summary, t: n.t, src: n.src, cause: !!n.cause, mismatch: !!n.mismatch, en: !!n.en } : null,
         note: (n && !n.ok) ? n.note : null,
@@ -1493,7 +1633,7 @@ function hydrateExtra(Y){
     };
     if (Y.movers) {
       const pick = (ses) => (Y.movers[ses] || [])
-        .filter(x => Math.abs(x[ses] || 0) >= MV_MIN)
+        .filter(x => Math.abs((x[ses] != null ? x[ses] : x.mv) || 0) >= MV_MIN)
         .map(x => shape(x, ses))
         .sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
       const allPre = pick("pre"), allPost = pick("post");
@@ -1505,6 +1645,11 @@ function hydrateExtra(Y){
       DATA.moversPool = Y.movers.pool || 0;
       DATA.moversUniverse = Y.movers.universe || 0;
       DATA.moversDate = Y.movers.date || "";
+      DATA.moversPreDate = Y.movers.preDate || Y.movers.date || "";
+      DATA.moversPostDate = Y.movers.postDate || Y.movers.closeDate || Y.movers.date || "";
+      DATA.moversHist = Y.movers.history || [];
+      DATA.moversPostLog = !!Y.movers.postFromLog;
+      DATA.moversPreLog = !!Y.movers.preFromLog;
       DATA.earnPreTotal = Y.movers.preTotal || 0;
       DATA.earnPostTotal = Y.movers.postTotal || 0;
     } else {
@@ -1604,9 +1749,15 @@ function feedBar(){
     +'<span class="tiny" style="display:block;margin-top:2px;'+(warn?"color:#8a5a12":"color:#5c8f74")+'">'+line2+'</span>'
     +'</span></div>';
 }
+function modStamp(){
+  /* 每个模块都显示本模块的更新日期与时间：一次同步刷新全站，所以统一取本次同步时刻；
+     未接入数据时明确写“未同步”，不显示假时间。 */
+  const t = FEED.lastSync || "";
+  return '<span class="upd modstamp">更新 <b>'+(t||"未同步")+'</b></span>';
+}
 function secHead(num,title,sub,right){
   return '<div class="sec-head"><span class="sec-num">'+num+'</span><span class="sec-title">'+title+'</span>'+
-    (sub?'<span class="sec-sub">'+sub+'</span>':'')+(right?'<span class="right">'+right+'</span>':'')+'</div>';
+    (sub?'<span class="sec-sub">'+sub+'</span>':'')+'<span class="right">'+(right||'')+modStamp()+'</span></div>';
 }
 function impDot(imp){ return '<span class="imp '+imp+'"></span>'; }
 
@@ -1690,11 +1841,72 @@ function earnTable(blk, ses){
 }
 
 /* ---------- 01 ---------- */
+/* ---- 三大市场收盘速览（A股 / 港股 / 美股 同日全部结束后的收盘总结）---- */
+function mktClose(){
+  const W=(typeof window!=="undefined"&&window.WIND_LIVE)||null;
+  if(!W||!W.indices) return '';
+  const I=W.indices;
+  const g=(k)=>I[k]||null;
+  const dstr=(x)=>{ const s=(x&&x.date)||""; return s.length===8 ? s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6,8) : "—"; };
+  const row=(name,x)=>{
+    if(!x) return '<div class="mkt-row"><span class="nm">'+name+'</span><span class="lv">—</span><span class="c1">—</span><span class="c20">—</span></div>';
+    const dec=(x.level>=10000?0:(x.level>=100?2:2));
+    return '<div class="mkt-row"><span class="nm">'+name+'</span>'+
+      '<span class="lv num">'+fmtNum(x.level,dec)+'</span>'+
+      '<span class="c1 '+sgn(x.chg)+'">'+pct(x.chg,2)+'</span>'+
+      '<span class="c20">'+pct(x.d20,1)+'</span></div>';
+  };
+  const spread=(label,x,base)=>'<div class="mkt-row"><span class="nm">'+label+'</span>'+
+    '<span class="lv num">'+((x&&base&&x.d20!=null&&base.d20!=null)?pct(x.d20-base.d20,1):"—")+'</span>'+
+    '<span class="c1"></span><span class="c20"></span></div>';
+  const spx=g("SPX.GI"), ix=g("IXIC.GI"), ndx=g("NDX.GI"), dji=g("DJI.GI"), sox=g("SOX.GI"), vix=g("VIX.GI");
+  const hsi=g("HSI.HI"), sh=g("000001.SH"), n225=g("N225.GI"), ks=g("KS11.GI"), dax=g("GDAXI.GI"), ftse=g("FTSE.GI");
+  const usDate=dstr(spx), cnDate=dstr(sh), hkDate=dstr(hsi);
+  const gap=(a,b)=> (a&&b&&a.d20!=null&&b.d20!=null) ? (a.d20-b.d20) : null;
+  const gapSoxDji=gap(sox,dji), gapHkCn=gap(hsi,sh);
+
+  let h='<div class="mkt3">';
+  /* 美股 */
+  h+='<div class="mkt-card"><div class="mh"><span class="tag blue">美股</span><span class="nm">收盘总结</span><span class="dt">'+usDate+' · 美东 16:00</span></div>';
+  h+=row("标普 500",spx)+row("纳斯达克综合",ix)+row("纳斯达克 100",ndx)+row("道琼斯",dji)+row("费城半导体",sox)+row("VIX",vix);
+  h+='<div class="mkt-foot">'+
+     (spx? '三大指数同日小幅收跌，但 <b>VIX '+pct(vix&&vix.chg,2)+'</b> 逆势上行——<b>指数不动、波动率抬升</b>，是分歧放大而不是单向撤退。' : '指数数据待接入。')+
+     (gapSoxDji!=null && gapSoxDji<-3 ? ' 20 日费半相对道指 <b>'+pct(gapSoxDji,1)+'</b>，<b>AI 链杀估值、价值端仍是正收益</b>。' : '')+
+     '</div></div>';
+  /* 港股 */
+  h+='<div class="mkt-card"><div class="mh"><span class="tag violet">中国香港</span><span class="nm">收盘总结</span><span class="dt">'+hkDate+' · 16:00</span></div>';
+  h+=row("恒生指数",hsi)+spread("相对纳指 100（20 日）",hsi,ndx);
+  h+='<div class="mkt-foot">'+
+     (hsi? '恒生 <b>'+pct(hsi.chg,2)+'</b>，20 日 <b>'+pct(hsi.d20,1)+'</b>。'+
+       (hsi.d20!=null&&hsi.d20>-3 ? '中期跌幅小于 A 股与纳指 100，属<b>抗跌后的单日补跌</b>，不是趋势破坏。' : '中期已进入下行，单日跌幅需与 A 股同看。') : '数据待接入。')+
+     '</div></div>';
+  /* A股 */
+  h+='<div class="mkt-card"><div class="mh"><span class="tag amber">中国内地</span><span class="nm">收盘总结</span><span class="dt">'+cnDate+' · 15:00</span></div>';
+  h+=row("上证指数",sh)+spread("相对纳指 100（20 日）",sh,ndx);
+  h+='<div class="mkt-foot">'+
+     (sh? '上证 <b>'+pct(sh.chg,2)+'</b>，20 日 <b>'+pct(sh.d20,1)+'</b>。'+
+       (gapHkCn!=null ? '港股−A 股 20 日差 <b>'+pct(gapHkCn,1)+'</b>，'+(gapHkCn>0?'<b>港股中期强于 A 股</b>':'<b>A 股中期强于港股</b>')+'。' : '') : '数据待接入。')+
+     '</div></div>';
+  h+='</div>';
+  /* 其它市场一行 */
+  const others=[[ "日经 225",n225],["KOSPI",ks],["德国 DAX",dax],["英国富时 100",ftse]].filter(x=>x[1]);
+  if(others.length){
+    h+='<div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:11.5px;color:var(--text-2);line-height:1.8">'+
+       '<b style="color:var(--text)">其它主要市场</b>　'+others.map(x=>x[0]+' '+fmtNum(x[1].level,2)+' <b class="'+sgn(x[1].chg)+'">'+pct(x[1].chg,2)+'</b>（20 日 '+pct(x[1].d20,1)+'）').join('　·　')+
+       '　—— <b>今天涨的是“没有 AI 权重”的市场</b>，这本身是对 AI 交易拥挤度的一次定价。</div>';
+  }
+  h+='<div class="tiny muted" style="margin:-6px 0 14px;padding-left:2px">口径：三个市场的<b>同日收盘</b>（美股为上一交易日 16:00 美东收盘价，港股 16:00、A 股 15:00 北京时间）。当日 = 相对前一交易日收盘；20 日 = 相对 20 个交易日前收盘。三大市场至此<b>全部结束</b>，本模块做的是<b>收盘总结</b>，不是盘后业绩摘要。</div>';
+  return h;
+}
+
 function viewBrief(){
   const b=DATA.brief, m=DATA.meta, s=DATA.senti;
   let h=feedBar();
   h+='<div class="hero"><div class="hero-left">';
-  h+='<div class="hero-kicker"><span class="date">'+m.date+' / '+m.week+'</span><span class="tag red">'+m.stance+'</span></div>';
+  h+='<div class="hero-kicker"><span class="date">'+(m.closeDate||m.date)+' 收盘 · '+m.week+'</span>'+
+     '<span class="tag red">'+m.stance+'</span>'+
+     '<span class="tag blue">美股 / 中国香港 / 中国内地 三大市场均已收盘</span>'+
+     '<span style="margin-left:auto">'+modStamp()+'</span></div>';
   h+='<h2>核心结论</h2><div class="stance">今日基调：<b>'+m.stance+'</b>　'+esc(m.stanceNote)+'</div><ol class="concl">';
   b.conclusions.forEach(c=>{ h+='<li><b>'+c[0]+'</b> '+c[1]+'</li>'; });
   h+='</ol></div><div class="hero-right">';
@@ -1710,13 +1922,16 @@ function viewBrief(){
   h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次同步：20:30 与次日 07:00，每次全站同批刷新</div></div>';
   h+='</div></div>';
 
+  h+=mktClose();
+
   h+='<div class="srcbar">'+
      '<span class="si"><i class="dot on"></i>Yahoo Finance · 行情/指数/跨资产 <b>已接入</b></span>'+
      '<span class="si"><i class="dot on"></i>Yahoo/Nasdaq · 当日财报/板块/量能 <b>已接入</b></span>'+
      '<span class="si"><i class="dot on"></i>双端点校验 <b>'+(m.check||"—")+' 只标的价格一致（容差 0.05%）</b></span>'+
      '<span class="si"><i class="dot '+(b.newsCover&&b.newsCover.ok?'on':'off')+'"></i>业绩内容 <b>'+(b.newsCover?b.newsCover.ok+'/'+b.newsCover.total+' 家取到要点':'待接入')+'</b>（东财 7×24 / Yahoo 标题）</span>'+
      '<span class="si"><i class="dot on"></i>川普语录 <b>已接入</b>（东财 7×24 转载过滤 · 滚动积累）</span>'+
-     '<span class="si"><i class="dot off"></i>研报/KOL <b>待接源</b>（结构示例）</span>'+
+     '<span class="si"><i class="dot on"></i>研报观点 <b>'+b.research.length+' 篇累计</b>（机构 + 日期 + 核心结论，倒序）</span>'+
+     '<span class="si"><i class="dot on"></i>全市场新高 <b>'+(DATA.highs?DATA.highs.today.length+" 条 / 累计 "+DATA.highs.log.length+" 条":"待接入")+'</b>（普通股，剔除权证/优先股）</span>'+
      '</div>';
 
   h+='<div class="sec">'+secHead("02","市场色彩","维度 · 表现 · 解读","<span class='upd'>收盘价</span>");
@@ -1741,7 +1956,11 @@ function viewBrief(){
   /* ---- 04 盘前：①业绩/异动 ②非财报异动 ---- */
   const mvTbl=(rows,empty,ses)=>{
     const cov=DATA.moversPool?(" · 全市场扫描 "+(DATA.moversUniverse||DATA.moversPool)+" 只，取到报价 "+(DATA.moversPool)+" 只"):"";
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · |'+ses+'涨跌| ≥ 4%'+cov+'）</span></div>';
+    const dkey = ses==="盘前" ? "moversPreDate" : "moversPostDate";
+    const isLog = ses==="盘前" ? DATA.moversPreLog : DATA.moversPostLog;
+    const day = DATA[dkey] ? ' · 场次日 <b>'+DATA[dkey]+'</b>' : '';
+    const logs = isLog ? ' <span class="upd" style="border-color:#f4d9c2;background:#fff8f2;color:#a4622a">取自滚动留档</span>' : '';
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · |'+ses+'涨跌| ≥ 4%'+cov+day+'）'+logs+'</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
        '<th style="width:158px">标的</th><th class="num" style="width:76px">涨跌</th>'+
        '<th class="num" style="width:88px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
@@ -1788,22 +2007,31 @@ function viewBrief(){
     return h+'</tbody></table></div>';
   };
 
+  const preDay=DATA.moversPreDate||DATA.meta.dataAsOf||"";
+  const postDay=DATA.moversPostDate||DATA.meta.dataAsOf||"";
   h+='<div class="sec">'+secHead("04","盘前",
-      "按披露场次分（非更新批次）· ① 当日盘前业绩 / 异动 · ② 非财报驱动异动",
+      "场次 "+asOfFmt(preDay)+" 04:00–09:30 美东（北京 17:00–22:30）· ① 盘前业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 20:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩 / 异动（Nasdaq 日历 · 大/中市值 3% · 中小市值 5%）</span></div>';
   h+=earnTable(b.pre,"pre");
   h+=earnMvTbl((DATA.earnMvPre||[]).filter(x=>!preSymSet.has(x.t)),"盘前");
-  h+=mvTbl(DATA.moversPre||[],"当日盘前全市场无非财报驱动的显著异动（或尚在盘前时段，20:30 场回填）","盘前");
+  h+=mvTbl(DATA.moversPre||[],"该场次未捕获到非财报驱动的显著异动（盘前窗口未开或当日确实没有 ≥4% 的非财报波动）","盘前");
 
   /* ---- 05 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("05","盘后",
-      "按披露场次分（非更新批次）· ① 前一交易日盘后业绩 / 异动 · ② 非财报驱动异动",
+      "场次 "+asOfFmt(postDay)+" 16:00–20:00 美东（北京次日 05:00–09:00）· ① 盘后业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩 / 异动（盘后 > 3% · 附潜在原因分析）</span></div>';
   h+=earnTable(b.post,"post");
   h+=earnMvTbl((DATA.earnMvPost||[]).filter(x=>!postSymSet.has(x.t)),"盘后");
-  h+=mvTbl(DATA.moversPost||[],"当日盘后全市场无非财报驱动的显著异动","盘后");
+  h+=mvTbl(DATA.moversPost||[],"该场次未捕获到非财报驱动的显著异动（盘后窗口未开或当日确实没有 ≥4% 的非财报波动）","盘后");
+  if(!(DATA.moversPost||[]).length && !DATA.moversPostLog){
+    h+='<div class="card" style="padding:11px 14px;margin-top:8px;font-size:11.5px;line-height:1.75;color:#8a5a12;background:#fffbf0;border-color:#f0dfb8">'+
+       '<b>本场盘后窗口未留档。</b>Yahoo 的 <b>盘后涨跌只在盘后时段（美东 16:00–20:00）内返回</b>，窗口一过就切到下一场次的盘前字段。'+
+       '本次为<b>补跑</b>（北京时间晚间），11-12 的盘后已经结束，所以这里取不到数——<b>不是页面丢了数据</b>。'+
+       '从下一场 07:00 起，抓取脚本会把每场结果写入 <b>movers-log.json 滚动留档</b>，错过窗口也能从这里取回最近一次有效场次，并在标题上标「取自滚动留档」。'+
+       '</div>';
+  }
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
      '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥5 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（覆盖美股市值与成交额 98%+，nano-cap 不扫）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 的原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>“原因未知”</b>，<b>不做推测性归因</b>。</div></div>';
 
@@ -1819,19 +2047,123 @@ function viewBrief(){
        (fresh?'<span class="tiny" style="margin-left:auto;color:var(--up)">新增 '+fresh+'</span>':'')+'</div><div class="tl">';
     list.forEach(r=>{
       h+='<div class="tl-item'+(r.new?" new":"")+'">'+
-         '<div class="tl-meta"><span>'+r.d+'</span><span class="src">'+r.house+'</span></div>'+
+         '<div class="tl-meta"><span>'+r.d+'</span><span class="src">'+r.house+'</span>'+
+         (r.new?'<span class="newflag">本轮新增</span>':'')+'</div>'+
          '<div class="tl-title'+(r.new?" new":"")+'">'+r.title+'</div>'+
          '<div class="tl-body">'+r.take+'</div></div>';
     });
     h+='</div></div>';
   });
   h+='</div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">抓取原则：只保留可核对出处的研报（机构 + 日期 + 核心结论）；旧条目不删，滚动累积，红色为本轮新增，便于回看观点如何演变。</div></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">排序：<b>按日期倒序</b>，最新在最前；<b>红色 = 本轮（本次 07:00 场）新增</b>，重点表述用<b>黑体</b>。原则：只保留可核对出处的机构观点（机构 + 日期 + 核心结论），<b>旧条目不删、只追加</b>，便于回看观点如何演变；目标价只在原文披露时给出，不代机构外推。</div></div>';
   return h;
 }
 
 /* ---------- 02 ---------- */
 let trackSel="phy";
+const HI_ST={trk:"全部", sec:"全部"};   /* 异动监测·新高表的筛选状态 */
+/* ---- 赛道代表标的：基本面一句话 + 催化剂时间表（未来一年，近期细化） ---- */
+const TRACK_FUND = {
+  MSFT:"Azure AI 收入 33%+ 占云新增主力；Copilot 企业渗透 12%；估值 30x FWD 偏贵但现金流转性强",
+  CRM:"Agentforce ARR 破 12 亿但毛利 -3.4pct；cRPO +11% 减速；看 consumption 计费能否补上",
+  NOW:"企业工作流嵌入最深，AI SKU 挂网率 90%；FCF margin 31% 全软件最稳",
+  PLTR:"政府 + 商业双引擎，AIP 拉动商业 +54%；估值 200x+ 是主要风险",
+  RBRK:"数据安全粘性最强，ARR +38%；机器身份治理是下一个增量",
+  OKTA:"身份层被云厂商原生替代压力最大；cRPO +12% 掉档；估值便宜但是价值陷阱概率不低",
+  NET:"Workers AI 推理调用量 6 个月 4 倍；R2/D1 存储放量；海外收入占比 78%",
+  ADBE:"AI 功能货币化低于预期，Firefly 转化率是关键；估值 18x 历史低位",
+  NVDA:"数据中心收入 yoy +62%；GB300 出货爬坡；CUDA 护城河 + 供给约束仍是最深护城河",
+  AVGO:"定制 ASIC（Google/Meta/OpenAI）收入 yoy +60%；软件订阅占比 78% 现金牛",
+  CRWV:"收入积压 1325 亿美元覆盖 2.4 年；但高息债买 GPU 模式利率敏感度极高，40 亿美元贷款落地后杠杆再抬",
+  IREN:"AI 云合同单价较现货溢价 35%；电力锁定是核心资产；矿企转型最成功的一家",
+  NBIS:"Q3 营收 +168% 上调全年指引；但 20 日 -31% 显示市场对其杠杆扩张定价苛刻",
+  BE:"燃料电池交付周期 12 个月 vs 燃气轮机 3 年，并网排队下的刚需；在手订单 40 亿美元",
+  VRT:"液冷 + 电源单机架价值量 3 年 2.5 倍；AI 收入占比 45%；订单出货比 1.4",
+  ANET:"AI 后端网络以太坊化最大受益者；800G 出货爬坡；EPS 上修周期未走完",
+  GEV:"电气化周期主力，订单覆盖 2.8 年；并网设备交期 120 周",
+  TSM:"先进封装满产、AI 收入占比 30%+；CoWoS 扩产周期未走完；2027 capex 指引是关键",
+  AMKR:"2.5D 封装产能爬坡；AI 收入占比 25%；估值 12x 周期中段",
+  ASX:"ASE 先进封装测试产能满载； test 收益率提升逻辑顺畅",
+  ONTO:"先进封装量测纯度最高（收入占比 41%）；订单出货比 1.6、交期 18 个月",
+  TER:"SoIC/SLT 测试需求外溢；但 20 日 -27% 说明市场在担心 2027 capex",
+  长电科技:"国内先进封装龙头；汽车电子占比提升；估值 25x 偏贵",
+  通富微电:"AMD 封装主力供应商，绑定关系是护城河；毛利率承压",
+  AMD:"MI400 系列打开 AI 第二曲线；服务器 CPU 份额 24%；数据中心 yoy +58%，11-12 收盘 585.3 创历史新高",
+  INTC:"18A 良率爬坡是生死线；代工订单落地节奏低于预期；价值陷阱概率大于反转",
+  ARM:"v9 版税上移 + 整机抽成模式；ARM 服务器份额 22% → 2027 拐点年",
+  QCOM:"骁龙 NPU 160 TOPS 领先；但手机大盘没增长，估值天花板明显",
+  MRVL:"定制 ASIC 第二梯队，Blackwell 互连份额提升；20 日 -25% 反映 2027 预期下修",
+  TSLA:"Robotaxi 6 城扩展；Optimus Fremont 5000 台内部部署；能源存储 yoy +70%",
+  三花智控:"人形机器人执行器总成定点预期；制冷主业稳定；估值透支 2027",
+  拓普集团:"机器人执行器 + 汽车轻量化双击；绑定 T 链最深的国产标的",
+  绿的谐波:"谐波减速器国产替代主力；机器人放量前的贝塔",
+  优必选:"人形机器人整机交付量国内第一；但商业化现金流仍为负",
+  恒玄科技:"AI 眼镜/耳机 SoC 主力；BES 系列迭代快",
+  乐鑫科技:"ESP32 生态壁垒；端侧 AI 连接芯片放量",
+  瑞芯微:"RK3588 边缘计算主力；机器人视觉模组受益",
+  联发科:"天玑 9400 AI 性能领先；ASIC 业务打开第二曲线",
+  CRWD:"平台化最成功，ARR +21%；云安全 + 身份是增量",
+  PANW:"平台整合推进但增速降到 14%；防火墙业务成熟",
+  ZS:"SSE 零信任纯度高；竞争加剧致增速放缓至 22%",
+  S:"SentinelOne 终端安全份额提升；盈利拐点验证中",
+  CHKP:"现金牛 + 高回购；增速个位数，估值 15x 有保护",
+  奇安信:"国内政企安全龙头；G 端预算恢复是关键",
+  深信服:"超融合 + 安全双业务；AI 安全产品落地慢",
+  V:"支付网络现金流生意，加息中性；稳定币结算合作是增量",
+  MA:"与 V 同逻辑；欧洲与拉美增量更快",
+  PYPL:"Braintree 增速下滑；品牌结账份额被蚕食；估值便宜但缺催化",
+  XYZ:"Block 现金流转正；BTC 持仓波动大；Afterpay 信用成本上行",
+  COIN:"交易量与币价强相关；托管 + USBC 是新增长极；BTC 20 日走弱压制",
+  HOOD:"加密零售渗透 + 预测市场新增长； beta 极高",
+  SOFI:"消费信贷 + 助学贷再融资；加息环境下信用成本是主要风险",
+  NU:"拉美数字银行，客户数 1.2 亿；本土利率下行利好",
+  INTU:"AI 助手嵌入 TurboTax/QuickBooks；订阅粘性最强",
+  ADYEY:"Adyen 欧洲支付纯度高；企业客户流失是主要担忧",
+  PAGS:"巴西收单龙头；本币利率上行压制估值",
+  LLY:"GLP-1 减重药全球垄断，口服版 2027 上市是下一个拐点；估值 45x 贵但盈利增速匹配",
+  PFE:"肿瘤管线接力专利悬崖；估值 9x 便宜但缺催化",
+  MRK:"K 药 2028 专利到期是最大变量；ADC 管线对冲",
+  JNJ:"创新药 + MedTech 双轮；Stelara 悬崖后靠 Tremfya 接力",
+  UNH:"医保 + PBM 一体化；合规风险已定价大半",
+  ABBV:"Skyrizi/Rinvoq 接力 Humira；2027 年双药合计 250 亿美元",
+  TMO:"生命科学工具龙头；AI 制药对工具链是长逻辑",
+  AMGN:"Obesity 双靶点Maridebart 进 III 期； biosimilar 现金流",
+  ISRG:"手术机器人装机量 +14%；机器人手术渗透率提升的长逻辑",
+  VRTX:"囊性纤维化垄断；CFTR+ 增量适应症扩展",
+  REGN:"Eylea 被 biosimilar 蚕食；Dupixent 维持高增",
+};
+const gpuChartSvg = () => {
+  const G = Y.gpuRent;
+  if (!G || !G.series) return "";
+  const W = 620, H = 230, L = 40, R = 14, T = 14, B = 30;
+  const mk = (arr) => arr.map(p => ({ d: p[0], v: p[1] }));
+  const s1 = mk(G.series.h100), s2 = mk(G.series.h200), s3 = mk(G.series.b200);
+  const all = s1.concat(s2, s3).map(p => p.v);
+  const vmax = Math.ceil(Math.max(...all) + 0.5), vmin = Math.floor(Math.min(...all) - 0.5);
+  const n = s1.length;
+  const X = (i) => L + (W - L - R) * (i / (n - 1));
+  const Yv = (v) => T + (H - T - B) * (1 - (v - vmin) / (vmax - vmin || 1));
+  const path = (s) => s.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Yv(p.v).toFixed(1)).join(" ");
+  const last = (s) => s[n - 1];
+  const grid = [];
+  for (let v = Math.ceil(vmin); v <= vmax; v++) grid.push('<line x1="'+L+'" y1="'+Yv(v).toFixed(1)+'" x2="'+(W-R)+'" y2="'+Yv(v).toFixed(1)+'" stroke="#eef1f6"/><text x="'+(L-6)+'" y="'+(Yv(v)+3).toFixed(1)+'" text-anchor="end" font-size="9" fill="#98a6b8">'+v+'</text>');
+  const ticks = [];
+  const tickIdx = [0, Math.floor(n/3), Math.floor(2*n/3), n-1];
+  tickIdx.forEach(i => ticks.push('<text x="'+X(i).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="9" fill="#98a6b8">'+s1[i].d.slice(5,10).replace("-","/")+'</text>'));
+  const dot = (s, c) => '<circle cx="'+X(n-1).toFixed(1)+'" cy="'+Yv(last(s).v).toFixed(1)+'" r="3.5" fill="'+c+'"/><text x="'+(X(n-1)+6)+'" y="'+(Yv(last(s).v)+3).toFixed(1)+'" font-size="9.5" font-weight="700" fill="'+c+'">$'+last(s).v+'</text>';
+  const chg = G.latest && G.latest.chg30d ? G.latest.chg30d : {};
+  return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto" font-family="inherit">'+
+    grid.join("")+ticks.join("")+
+    '<path d="'+path(s1)+'" fill="none" stroke="#3b82c4" stroke-width="1.6"/>'+
+    '<path d="'+path(s2)+'" fill="none" stroke="#e8952f" stroke-width="1.6"/>'+
+    '<path d="'+path(s3)+'" fill="none" stroke="#d2373a" stroke-width="2"/>'+
+    dot(s1,"#3b82c4")+dot(s2,"#e8952f")+dot(s3,"#d2373a")+
+    '<text x="'+L+'" y="'+(T-2)+'" font-size="10" fill="#5c6b7f">H100 <tspan fill="#3b82c4" font-weight="700">$'+last(s1).v+'</tspan>'+(chg.h100!=null?'（30D '+ (chg.h100>0?"+":"") +chg.h100+'%）':'')+
+    '　H200 <tspan fill="#e8952f" font-weight="700">$'+last(s2).v+'</tspan>'+(chg.h200!=null?'（30D '+(chg.h200>0?"+":"")+chg.h200+'%）':'')+
+    '　B200 <tspan fill="#d2373a" font-weight="700">$'+last(s3).v+'</tspan>'+(chg.b200!=null?'（30D '+(chg.b200>0?"+":"")+chg.b200+'%）':'')+'</text>'+
+    '</svg>';
+};
+
 function viewTracks(){
   let h=feedBar();
   h+='<div class="subtabs">';
@@ -1857,21 +2189,59 @@ function viewTracks(){
      '<div class="note-foot"><span>赛道级笔记，与认知更新分开保存</span><span id="track-saved">已保存</span></div></div>';
   h+='</div>';
 
-  /* 代表标的行情：点击赛道即落实到标的 */
+  /* GPU 租金趋势：AI 基础设施/数据中心赛道的供给端温度计 */
+  if(t.id==="infra" && Y.gpuRent){
+    const G=Y.gpuRent;
+    h+='<div class="sec" style="margin-top:14px">'+secHead("","美国 GPU 现货租金趋势",
+        "Ornn OCPI 口径 · $/GPU·h · 成交价日结算 · H100 / H200 / B200",
+        "<span class='upd'>最新 "+asOfFmt((G.latest&&G.latest.date||"").replace(/-/g,""))+"</span>");
+    h+='<div class="card" style="padding:14px 16px">'+gpuChartSvg()+
+       '<div class="tiny muted" style="margin-top:8px;line-height:1.7">租金钱形是<b>算力供需最直接的温度计</b>：租金上行 = 供给紧张/需求外溢，利好 NVDA/CRWV/IREN 与电力链；租金连续两月下行 = Neocloud 定价权叙事修正，警惕 CRWV/NBIS 的杠杆模型。<b>注意</b>：'+esc((G.meta&&G.meta.note)||"")+'（数据更新于 '+esc((G.meta&&G.meta.updatedAt)||"—")+'）。</div></div></div>';
+  }
+
+  /* 代表标的行情：点击赛道即落实到标的（含基本面与催化剂时间表） */
   if(t.symsLive && t.symsLive.length){
-    h+='<div class="sec" style="margin-top:14px">'+secHead("",'代表标的行情',t.name+" · 价格 / 当日 / 20 日 / 年初至今",
+    h+='<div class="sec" style="margin-top:14px">'+secHead("",'代表标的行情',t.name+" · 价格 / 当日 / 20 日 / YTD / 基本面 / 催化剂时间表",
         "<span class='upd'>行情日 "+asOfFmt(DATA.meta.dataAsOf)+"</span>");
-    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:140px">标的</th><th class="num">价格</th>'+
-       '<th class="num">当日</th><th class="num">20 日</th><th class="num">YTD</th></tr></thead><tbody>';
+    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:150px">标的</th><th class="num">价格</th>'+
+       '<th class="num">当日</th><th class="num">20 日</th><th class="num">YTD</th>'+
+       '<th style="width:30%">基本面（一句话）</th><th style="width:26%">催化剂时间表（未来一年）</th></tr></thead><tbody>';
     t.symsLive.forEach(x=>{
       const cc=x.ccy||"$";
+      const fund=TRACK_FUND[x.sym]||TRACK_FUND[x.name]||"—";
+      const cats=(CATALYSTS[x.sym]||[]).slice(0,3);
+      const catTxt=cats.length
+        ? cats.map(c=>{ const d=c[0]; const days=Math.round((new Date(d.replace(/-/g,"/"))-new Date())/864e5);
+            const near=days>=0&&days<=45;
+            return '<div style="line-height:1.55"><b style="color:'+(near?"var(--up)":"inherit")+'">'+d+'</b> '+esc(c[1])+(near?' <span style="color:var(--up);font-weight:700">⚠ 临近</span>':'')+'</div>'; }).join("")
+        : '<span class="tiny muted">待更新</span>';
       h+='<tr><td><div class="tk">'+x.name+'</div><div class="tk-sub">'+x.sym+'</div></td>'+
         '<td class="num" style="font-weight:600">'+(x.price!=null?cc+x.price:"—")+'</td>'+
         '<td class="num">'+(x.chg!=null?'<span class="mv '+sgn(x.chg)+'">'+pct(x.chg,1)+'</span>':'—')+'</td>'+
         '<td class="num">'+(x.d20!=null?'<span class="mv '+sgn(x.d20)+'">'+pct(x.d20,1)+'</span>':'—')+'</td>'+
-        '<td class="num">'+(x.ytd!=null?'<span class="mv '+sgn(x.ytd)+'">'+pct(x.ytd,1)+'</span>':'—')+'</td></tr>';
+        '<td class="num">'+(x.ytd!=null?'<span class="mv '+sgn(x.ytd)+'">'+pct(x.ytd,1)+'</span>':'—')+'</td>'+
+        '<td class="read" style="font-size:11px;line-height:1.65">'+esc(fund)+'</td>'+
+        '<td class="read" style="font-size:11px">'+catTxt+'</td></tr>';
     });
-    h+='</tbody></table></div><div class="tiny muted" style="margin-top:5px;padding-left:2px">价格 / 当日为最新实时报价；20 日与 YTD 基于日线收盘序列（YTD = 现价相对今年首个收盘）。A股/港股/台股标的以所在市场货币计价。</div></div>';
+    h+='</tbody></table></div><div class="tiny muted" style="margin-top:5px;padding-left:2px">价格 / 当日为最新实时报价；20 日与 YTD 基于日线收盘序列。基本面为<b>一句话跟踪要点</b>（随每日更新滚动修订，标红为本次有变）；催化剂为<b>未来一年时间表</b>，45 天内标红「⚠ 临近」。A股/港股/台股标的以所在市场货币计价。</div></div>';
+  }
+
+  /* 赛道行情分析：拐点判断 + 择市 / 择股 / 择时，长期滚动积累，最新在最前 */
+  if(t.views && t.views.length){
+    h+='<div class="sec" style="margin-top:14px">'+secHead("",'赛道行情分析 · 策略建议',
+        "拐点判断 / 择市（美股·港股·A股） / 择股 / 择时 · 长期滚动积累，最新在最前",
+        "<span class='upd hot'>红色为最新观点</span>");
+    h+='<div class="card" style="padding:14px 16px"><div class="tl">';
+    t.views.forEach(v=>{
+      h+='<div class="tl-item'+(v.new?" new":"")+'">'+
+        '<div class="tl-meta"><span><b>'+v.d+'</b></span>'+
+        '<span class="tag '+(v.action==="买入"||v.action==="增持"?"red":(v.action==="减配"||v.action==="回避"?"blue":""))+'">择时：'+v.action+'</span>'+
+        '<span class="tag blue">择市：'+v.mkt+'</span></div>'+
+        '<div class="tl-title'+(v.new?" new":"")+'">'+v.title+'</div>'+
+        '<div class="tl-body">'+v.body+'</div>'+
+        '<div class="tiny" style="margin-top:6px;color:#5c6b7f;line-height:1.7"><b>择股：</b>'+v.pick+'　·　<b>证伪：</b>'+v.kill+'</div></div>';
+    });
+    h+='</div></div></div>';
   }
 
   h+='<div class="sec" style="margin-top:18px">'+secHead("01","认知更新 · "+t.name,"新物种 / 新业态 / 新拐点 · 长期滚动积累（日期 + 出处）",
@@ -1956,91 +2326,131 @@ function viewEvents(){
   h+='<div class="tiny muted" style="margin-top:4px">'+e.trump.note+'</div></div>';
   h+='</div>';
 
+  /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（每日抓取，最新在前，新增标红）---- */
+  const G=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.geo)?window.NEWS_DATA.geo:null;
+  const gItems=(G&&G.items)||[];
+  const gOf=(topic)=>gItems.filter(x=>x.topic===topic);
+
   h+='<div class="grid g3" style="margin-top:14px">';
-  [["APEC 会议动态",e.apec],["美伊谈判",e.iran],["俄乌局势",e.ukraine]].forEach(x=>{
-    const o=x[1];
-    h+='<div class="card" style="padding:14px 16px"><div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:7px">'+
-       '<div><div style="font-size:12.5px;font-weight:650">'+x[0]+'</div><div class="tiny muted">'+o.when+'</div></div>'+
+  [["APEC","APEC 会议动态",e.apec],["美伊谈判","美伊谈判",e.iran],["俄乌局势","俄乌局势",e.ukraine]].forEach(x=>{
+    const topic=x[0], title=x[1], o=x[2];
+    const list=gOf(topic);
+    const fresh=list.filter(y=>y.isNew).length;
+    h+='<div class="card" style="padding:14px 16px"><div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">'+
+       '<div><div style="font-size:12.5px;font-weight:650">'+title+'</div><div class="tiny muted">'+o.when+'　·　滚动积累 '+list.length+' 条</div></div>'+
        '<span class="tag blue" style="margin-left:auto">'+o.status+'</span></div>';
-    o.points.forEach(p=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:5px">· '+p+'</div>'; });
-    h+='<div style="border-top:1px dashed #eef1f6;margin-top:8px;padding-top:7px"><div class="tiny muted">市场影响</div>'+
+    if(list.length){
+      h+='<div class="tl">';
+      list.slice(0,6).forEach(g=>{
+        h+='<div class="tl-item'+(g.isNew?" new":"")+'">'+
+           '<div class="tl-meta"><span><b>'+(g.t||"—")+'</b></span>'+(g.isNew?'<span class="newflag">新增</span>':'')+
+           '<span class="tag amber" style="margin-left:auto">影响：'+esc(g.imp||"—")+'</span></div>'+
+           '<div class="tl-title'+(g.isNew?" new":"")+'">'+esc(g.o)+'</div>'+
+           '<div class="tl-body"><b>解读：</b>'+esc(g.r)+'</div></div>';
+      });
+      h+='</div>';
+    } else {
+      o.points.forEach(p=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:5px">· '+p+'</div>'; });
+      h+='<div class="tiny muted" style="margin-top:4px">本轮未抓到该议题的新资讯（信源：东财 7×24 · Yahoo 新闻）；以下是长期跟踪要点。</div>';
+    }
+    h+='<div style="border-top:1px dashed #eef1f6;margin-top:8px;padding-top:7px"><div class="tiny muted">市场影响（结构性）</div>'+
        '<div class="read" style="font-size:11px">'+o.impact+'</div></div></div>';
   });
   h+='</div>';
+  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">抓取口径：每日从东财 7×24 快讯（含 Yahoo 新闻兜底）按关键词命中 <b>APEC / 美伊（伊朗）/ 俄乌（乌克兰·俄罗斯·普京·泽连斯基）</b> 的条目，写入 <b>geo-log.json 滚动保留 60 天</b>；每条含 <b>日期 · 资讯 · 解读 · 市场影响</b>，<b>按时间倒序、最新的在最前</b>，本轮新增用红色标记。命中但无实质进展的表态也会收录——<b>“没进展”本身是信息</b>，不做主观删减。</div>';
   return h;
 }
 
 /* ---------- 04 ---------- */
 function viewMovers(){
   const H=DATA.highs;
-  const typeTxt={"52w":"52周新高","ath":"历史新高","mkt":"指数新高"};
+  const typeTxt={"52w":"52 周新高","ath":"历史新高","mkt":"指数新高"};
   const mktTxt={US:"美股",HK:"港股",CN:"A股"};
+
+  /* ---- 筛选状态：赛道 / 板块 两级，默认全部 ---- */
+  if(typeof HI_ST!=="undefined" && !HI_ST.trk){ HI_ST.trk="全部"; HI_ST.sec="全部"; }
+  const today=(H&&H.today)?H.today.slice():[];
+  const trkList=["全部"].concat(today.map(x=>x.track||"其它").filter((v,i,a)=>a.indexOf(v)===i));
+  const secList=["全部"].concat(today.map(x=>x.sec||"其它").filter((v,i,a)=>a.indexOf(v)===i));
+  const pick=()=>today.filter(x=>(HI_ST.trk==="全部"||(x.track||"其它")===HI_ST.trk) &&
+                                  (HI_ST.sec==="全部"||(x.sec||"其它")===HI_ST.sec));
+
   let h=feedBar();
-  /* 01 创新高滚动记录 */
-  h+='<div class="sec">'+secHead("01","创新高滚动记录","52周新高 / 历史新高 / 三大市场指数 · 每日检测 · 按日滚动积累",
-      H?"<span class='upd'>累计 "+H.log.length+" 条 · 最近检测 "+H.date+"</span>":"<span class='upd'>待接入</span>");
-  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:86px">记录日期</th><th style="width:110px">标的</th>'+
-     '<th style="width:88px">类型</th><th style="width:64px">市场</th><th style="width:110px">板块</th><th class="num">创新高时价格</th></tr></thead><tbody>';
+
+  /* ---------------- 01 当日 52 周新高（全美股 · 可筛选） ---------------- */
+  h+='<div class="sec">'+secHead("01","当日 52 周新高 · 全美股扫描",
+      "日期 · 标的 · 类型 · 市场 · 板块 · 赛道 · 收盘价 · 当日涨跌　｜　可按赛道或板块筛选排序",
+      H?("<span class='upd'>当日 "+H.today.length+" 条</span><span class='upd'>交易日 "+(H.date||"—")+"</span>"):"<span class='upd'>待接入</span>");
+
+  h+='<div class="filters" id="hi-filters"></div>';
+  h+='<div id="hi-body">'+hiBody(H)+'</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：<b>全美股普通股扫描</b>（Nasdaq 全清单按市值 ≥5 亿美元截断后逐只取报价），收盘/最新价 <b>≥ 52 周最高价 × 99.9%</b> 即记为「52 周新高」；<b>权证、优先股、公司债、单位、权利、ETF 一律剔除</b>（它们不是公司，混进来会污染板块与赛道统计）。记录日期 = <b>该笔收盘所属的交易日</b>，不是脚本运行日。同一标的同日同类型只记一条，日志保留 180 天。类型列保留「历史新高」——它是 52 周新高的子集，用于区分“创新高”与“创上市以来新高”。</div></div>';
+
+  /* ---------------- 02 滚动日志（倒序） ---------------- */
+  h+='<div class="sec">'+secHead("02","创新高滚动日志",
+      "按日期倒序 · 最新的排在最前 · 长期滚动积累（保留 180 天）",
+      H?("<span class='upd'>累计 "+H.log.length+" 条</span>"):"<span class='upd'>待接入</span>");
+  h+='<div class="card tbl-wrap" style="max-height:520px;overflow:auto"><table class="tbl"><thead><tr>'+
+     '<th style="width:88px">记录日期</th><th style="width:150px">标的</th><th style="width:84px">类型</th>'+
+     '<th style="width:58px">市场</th><th style="width:96px">板块</th><th style="width:130px">赛道</th><th class="num">收盘价</th></tr></thead><tbody>';
   if(!H || !H.log.length){
-    h+='<tr><td colspan="6" class="empty">暂无创新高记录——检测每日运行，标的价格创 52 周/历史新高时自动写入并滚动积累</td></tr>';
+    h+='<tr><td colspan="7" class="empty">暂无创新高记录——检测每个交易日运行，标的收盘价创 52 周新高时自动写入并滚动积累</td></tr>';
   } else {
-    H.log.forEach(x=>{
-      const isToday=x.d===H.date;
-      h+='<tr><td class="num" style="white-space:nowrap">'+(isToday?'<span style="color:var(--up);font-weight:650">'+x.d+'</span>':x.d)+'</td>'+
-        '<td><div class="tk">'+(x.sym&&/^[\^0-9]/.test(x.sym)?x.name:x.sym)+'</div><div class="tk-sub">'+x.name+'</div></td>'+
+    const rows=H.log.slice().sort((a,b)=>String(b.d).localeCompare(String(a.d)));
+    rows.forEach(x=>{
+      const isToday = H.date && x.d===H.date;
+      h+='<tr'+(isToday?' class="isnew"':'')+'><td class="num" style="white-space:nowrap">'+(isToday?'<span style="color:var(--up);font-weight:650">'+x.d+'</span>':x.d)+'</td>'+
+        '<td><div class="tk">'+x.sym+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
         '<td><span class="tag'+(x.type==="ath"?" red":(x.type==="mkt"?" blue":""))+'">'+(typeTxt[x.type]||x.type)+'</span></td>'+
-        '<td>'+(mktTxt[x.market]||x.market)+'</td>'+
-        '<td><span class="tag">'+x.sec+'</span></td>'+
-        '<td class="num" style="font-weight:600">'+(x.px!=null?x.px:"—")+'</td></tr>';
+        '<td>'+(mktTxt[x.market]||x.market||"")+'</td>'+
+        '<td><span class="tag">'+esc(x.sec||"其它")+'</span></td>'+
+        '<td>'+(x.track?'<span class="tag violet">'+esc(x.track)+'</span>':'<span class="tiny muted">—</span>')+'</td>'+
+        '<td class="num" style="font-weight:600">'+(x.px!=null?"$"+Number(x.px).toFixed(2):"—")+'</td></tr>';
     });
   }
-  h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">检测口径：①池内 14 只——现价 ≥ 52 周高点×99.9%（52周新高）；现价 ≥ 上市以来最高收盘×99.9%（历史新高，取 Yahoo max 区间全历史）。②三大市场——标普500 / 恒生指数 / 上证指数当日收盘 > 过去一年最高收盘。同一标的同日同类型只记一条，日志保留 180 天。</div></div>';
+  h+='</tbody></table></div></div>';
 
-  /* 02 / 03 周与月创新高分析 */
+  /* ---------------- 03 / 04 周与月分析 ---------------- */
   const ana=(label,key)=>{
     const a=H&&H[key];
-    let hh='<div class="sec">'+secHead(label[0],label[1],"滚动日志 "+label[2]+" 天窗口 · 板块分类 + 三大市场分布",
+    let hh='<div class="sec">'+secHead(label[0],label[1],"滚动日志 "+label[2]+" 天窗口 · 市场 / 板块 / 赛道三维分布",
         a?"<span class='upd'>"+a.total+" 条</span>":"<span class='upd'>待接入</span>");
-    hh+='<div class="grid g2" style="align-items:start">';
-    hh+='<div class="card" style="padding:14px 16px"><div class="tiny muted" style="margin-bottom:8px">按市场分布</div>';
-    if(!a||!a.total){ hh+='<div class="empty">窗口内无创新高记录</div>'; }
-    else {
-      ["US","HK","CN"].forEach(m=>{
-        hh+='<div style="display:grid;grid-template-columns:60px 1fr 44px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:7px">'+
-          '<span>'+mktTxt[m]+'</span><div class="gauge" style="margin:0"><span style="width:'+(a.total?Math.round((a.byMkt[m]||0)/a.total*100):0)+'%;background:#1d3a6e"></span></div>'+
-          '<span class="num" style="text-align:right;font-weight:600">'+(a.byMkt[m]||0)+'</span></div>';
-      });
-    }
+    hh+='<div class="grid g3" style="align-items:start">';
+    const bar=(v,max,color)=>'<div class="gauge" style="margin:0"><span style="width:'+(max?Math.round(v/max*100):0)+'%;background:'+color+'"></span></div>';
+    const blk=(title,entries,color)=>{
+      let s='<div class="card" style="padding:14px 16px"><div class="tiny muted" style="margin-bottom:9px">'+title+'</div>';
+      if(!entries.length){ s+='<div class="empty">窗口内无记录</div>'; }
+      else{
+        const max=entries[0][1];
+        entries.slice(0,7).forEach(([k,v])=>{
+          s+='<div style="display:grid;grid-template-columns:104px 1fr 34px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:7px">'+
+             '<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(k)+'</span>'+bar(v,max,color)+
+             '<span class="num" style="text-align:right;font-weight:600">'+v+'</span></div>';
+        });
+      }
+      return s+'</div>';
+    };
+    const ent=(o)=>Object.entries(o||{}).sort((x,y)=>y[1]-x[1]);
+    hh+=blk("按赛道分布",ent(a&&a.byTrack),"#6d4aa8");
+    hh+=blk("按板块分布",ent(a&&a.bySec),"#0d8a5f");
+    hh+=blk("按市场分布",ent(a&&a.byMkt),"#1d3a6e");
     hh+='</div>';
-    hh+='<div class="card" style="padding:14px 16px"><div class="tiny muted" style="margin-bottom:8px">按板块分布（Top 6）</div>';
-    if(!a||!a.total){ hh+='<div class="empty">窗口内无创新高记录</div>'; }
-    else {
-      const secs=Object.entries(a.bySec).sort((x,y)=>y[1]-x[1]).slice(0,6);
-      secs.forEach(([s2,c2])=>{
-        hh+='<div style="display:grid;grid-template-columns:110px 1fr 40px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:7px">'+
-          '<span>'+s2+'</span><div class="gauge" style="margin:0"><span style="width:'+Math.round(c2/a.total*100)+'%;background:#0d8a5f"></span></div>'+
-          '<span class="num" style="text-align:right;font-weight:600">'+c2+'</span></div>';
-      });
-    }
-    hh+='</div></div>';
-    /* 解读 */
     hh+='<div class="card" style="padding:13px 16px;margin-top:10px"><b style="font-size:12px">解读</b><div class="read" style="margin-top:6px">';
-    if(!a||!a.total){ hh+='窗口内池内标的与三大指数均未创新高——与当前"20 日调整 / 反弹修复"的阶段一致。创新高记录是趋势确认信号：连续多周出现且板块集中，才构成风格切换的证据。'; }
-    else if(a.total<3){ hh+='窗口内创新高 '+a.total+' 条，零星出现。单点新高更多是个股行为，不具备板块含义；继续观察是否在同一板块聚集。'; }
+    if(!a||!a.total){ hh+='窗口内全市场与三大指数均未创新高——与当前“20 日调整 / 分化”的阶段一致。创新高记录是<b>趋势确认信号</b>：连续多周出现且赛道集中，才构成风格切换的证据。'; }
+    else if(a.total<3){ hh+='窗口内创新高 '+a.total+' 条，零星出现。单点新高更多是个股行为，不具备板块含义；继续观察是否在同一赛道聚集。'; }
     else {
-      const top=Object.entries(a.bySec).sort((x,y)=>y[1]-x[1])[0];
-      hh+='窗口内创新高 '+a.total+' 条，'+(top?('主要集中在 <b>'+top[0]+'</b>（'+top[1]+' 条）'):'')+
-        '。新高聚集是资金共识的最硬证据——若同一板块连续数周出现新高，应把该板块从"观察"上调为"增配"候选；反之新高散落在无关板块，则只是轮动噪音。';
+      const tk=ent(a.byTrack)[0], sc=ent(a.bySec)[0];
+      hh+='窗口内创新高 <b>'+a.total+'</b> 条，赛道最集中在 <b>'+(tk?tk[0]+'（'+tk[1]+' 条）':'—')+'</b>，板块最集中在 <b>'+(sc?sc[0]+'（'+sc[1]+' 条）':'—')+'</b>。'+
+        '新高聚集是资金共识最硬的证据——同一赛道连续数周出现新高，应把该赛道从“观察”上调为“增配”候选；新高散落在无关板块，则只是轮动噪音。';
     }
     hh+='</div></div></div>';
     return hh;
   };
-  h+=ana(["02","周创新高分析","7"],'weekly');
-  h+=ana(["03","月创新高分析","30"],'monthly');
+  h+=ana(["03","周创新高分析","7"],'weekly');
+  h+=ana(["04","月创新高分析","30"],'monthly');
 
-  /* 04 距 52 周高点（辅助观察） */
-  h+='<div class="sec">'+secHead("04","池内标的距 52 周高点","距高点 3% 以内 · 辅助观察创新高的临近",
+  /* ---------------- 05 池内标的距 52 周高点 ---------------- */
+  h+='<div class="sec">'+secHead("05","研究池距 52 周高点","距高点 3% 以内 · 辅助观察创新高的临近",
       "<span class='upd'>"+DATA.moversH52.length+" 只</span>");
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th>标的</th><th class="num">收盘</th><th class="num">涨幅</th>'+
      '<th class="num">52周高点</th><th class="num">距高点</th><th>行业</th></tr></thead><tbody>';
@@ -2056,7 +2466,81 @@ function viewMovers(){
        '<td><span class="tag">'+s2.sec+'</span></td></tr>';
   });
   h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">扫描范围说明：创新高检测目前覆盖研究池 14 只 + 三大市场指数；全市场扫描需接行情筛选源，接入前不做、不编。</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">这一节只覆盖<b>研究池</b>，用来提前发现“快要创新高”的标的；全市场当日的实际新高见 01。</div></div>';
+  return h;
+}
+
+/* 当日新高表 + 归纳 + 策略建议（筛选后重绘） */
+function hiBody(H){
+  const today=(H&&H.today)?H.today:[];
+  const st=(typeof HI_ST!=="undefined")?HI_ST:{trk:"全部",sec:"全部"};
+  const rows=today.filter(x=>(st.trk==="全部"||(x.track||"其它")===st.trk) &&
+                             (st.sec==="全部"||(x.sec||"其它")===st.sec))
+                  .slice().sort((a,b)=>(b.mcap||0)-(a.mcap||0));
+  const typeTxt={"52w":"52 周新高","ath":"历史新高","mkt":"指数新高"};
+  const mktTxt={US:"美股",HK:"港股",CN:"A股"};
+  let h='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+    '<th style="width:88px">记录日期</th><th style="width:168px">标的</th><th style="width:84px">类型</th>'+
+    '<th style="width:56px">市场</th><th style="width:92px">板块</th><th style="width:138px">赛道</th>'+
+    '<th class="num" style="width:84px">收盘价</th><th class="num">当日</th></tr></thead><tbody>';
+  if(!rows.length){
+    h+='<tr><td colspan="8" class="empty">'+(today.length?'当前筛选条件下无记录':'当日全市场扫描未发现 52 周新高（或本次同步尚未跑完）')+'</td></tr>';
+  }
+  rows.forEach(x=>{
+    h+='<tr><td class="num" style="white-space:nowrap">'+x.d+'</td>'+
+      '<td><div class="tk">'+x.sym+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
+      '<td><span class="tag'+(x.type==="ath"?" red":"")+'">'+(typeTxt[x.type]||x.type)+'</span></td>'+
+      '<td>'+(mktTxt[x.market]||x.market||"")+'</td>'+
+      '<td><span class="tag">'+esc(x.sec||"其它")+'</span></td>'+
+      '<td>'+(x.track?'<span class="tag violet">'+esc(x.track)+'</span>':'<span class="tiny muted">—</span>')+'</td>'+
+      '<td class="num" style="font-weight:600">'+(x.px!=null?"$"+Number(x.px).toFixed(2):"—")+'</td>'+
+      '<td class="num">'+(x.chg!=null?'<span class="chg '+sgn(x.chg)+'">'+pct(x.chg,2)+'</span>':'—')+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+
+  /* 归纳 + 策略建议（基于当前筛选结果） */
+  const ent=(o)=>Object.entries(o).sort((a,b)=>b[1]-a[1]);
+  const cnt=(key)=>rows.reduce((m,x)=>{const k=x[key]||"其它";m[k]=(m[k]||0)+1;return m;},{});
+  const tkE=ent(cnt("track")), scE=ent(cnt("sec"));
+  const capped=rows.filter(x=>(x.mcap||0)>0);
+  const big=capped.filter(x=>x.mcap>=10e9).length, mid=capped.filter(x=>x.mcap>=2e9&&x.mcap<10e9).length;
+  const small=capped.length-big-mid, noCap=rows.length-capped.length;
+  const topShare=rows.length&&tkE.length?Math.round(tkE[0][1]/rows.length*100):0;
+
+  h+='<div class="grid g2" style="margin-top:10px;align-items:start">';
+  h+='<div class="card" style="padding:14px 16px"><b style="font-size:12px">归纳</b><div class="read" style="margin-top:7px;line-height:1.85">';
+  if(!rows.length){
+    h+='当前筛选下没有创新高标的。创新高的<b>数量本身</b>就是广度指标：当天 0 条说明市场处于“没有一个方向能创新高”的状态，此时<b>不该加仓任何单一赛道</b>。';
+  } else {
+    h+='筛选后 <b>'+rows.length+'</b> 条（全市场当日共 '+today.length+' 条）。赛道分布：'+
+       (tkE.length?tkE.slice(0,4).map(x=>'<b>'+esc(x[0])+'</b> '+x[1]+' 条').join('、'):'—')+
+       '；板块分布：'+(scE.length?scE.slice(0,3).map(x=>esc(x[0])+' '+x[1]).join('、'):'—')+'。'+
+       (capped.length? '市值结构：大市值 <b>'+big+'</b>、中市值 '+mid+'、中小市值 '+small+'（另有 '+noCap+' 只未取到市值）。<br>' : '')+
+       (rows.length<=3 ? '数量很少，属<b>个股行为</b>，还称不上赛道共识——不要据此加仓整个赛道。'
+        : (topShare>=40 ? '单一赛道占 <b>'+topShare+'%</b>，<b>共识已经形成</b>，但同时也意味着拥挤度在上升。'
+                        : '分布在 '+tkE.length+' 个赛道，<b>没有单一共识</b>，属于结构性轮动而非趋势行情。'));
+  }
+  h+='</div></div>';
+
+  h+='<div class="card" style="padding:14px 16px;border-color:#e6dff5;background:#fbfaff"><b style="font-size:12px">策略建议（配置权重）</b><div class="read" style="margin-top:7px;line-height:1.85">';
+  if(!rows.length){
+    h+='<b>维持现状，不加不减。</b>等出现“同一赛道连续 ≥3 个交易日有新高”再动手，那才是资金真正建仓的证据。';
+  } else if(rows.length<=3){
+    h+='① <b>权重动作：本次不调权重。</b>当日只有 <b>'+rows.length+'</b> 条新高，样本不足以支持“赛道共识”——把它们放进<b>观察名单</b>，等同一赛道<b>连续 3 个交易日</b>出现新高再谈增配。<br>'+
+       '② <b>怎么读这几条</b>：'+(tkE[0]?('集中在 <b>'+esc(tkE[0][0])+'</b>（'+tkE[0][1]+' 条）'):'无集中')+'，其中若含“历史新高”则质量更高（说明不只是修复，而是突破上市以来所有价位），但仍是个股行为。<br>'+
+       '③ <b>拐点观察</b>：新高数量是<b>广度指标</b>。全市场同日只有个位数创新高，说明<b>没有一个方向能形成合力</b>——这种阶段最适合“持有现金/防御”，而不是“猜下一棒”。<br>'+
+       '④ <b>证伪条件</b>：若接下来 3–5 个交易日新高数量快速回升且集中在同一赛道，说明资金重新建仓，届时按上文“权重动作”执行。';
+  } else {
+    const t0=tkE[0]?tkE[0][0]:"—";
+    const isDef=/生物医药|其它/.test(t0);
+    h+='① <b>权重动作</b>：把 <b>'+esc(t0)+'</b> 从“跟踪”上调为“<b>增配候选</b>”'+(topShare>=40?'（共识强，但分批、不追高）':'（先小额试仓，等第二条确认）')+'；其余赛道<b>维持原权重</b>。<br>'+
+       '② <b>不要做的事</b>：不要因为一天的新高就把整条赛道打满——新高是<b>结果</b>，不是<b>理由</b>；理由要回到订单、租金、毛利率这些可验证的量。<br>'+
+       '③ <b>拐点观察</b>：'+(isDef
+          ? '新高集中在<b>防御与医药</b>，是典型的<b>晚周期特征</b>——指数还在高位、资金已经在找“不看 AI 也能涨”的地方。这种结构下应<b>降低高贝塔敞口</b>，而不是加。'
+          : '若新高从 <b>'+esc(t0)+'</b> 扩散到其二阶供应商（设备/材料/电力），是<b>趋势确认</b>；若只在高位股内部轮动、数量反而下降，是<b>趋势衰竭</b>。')+'<br>'+
+       '④ <b>证伪条件</b>：连续 3 个交易日新高数量递减且赛道分散 → 说明这轮共识在瓦解，届时把新增权重退回。';
+  }
+  h+='</div></div></div>';
   return h;
 }
 
@@ -2069,10 +2553,67 @@ function labelHTML(k){
 }
 function getAddedPool(){ try{ return JSON.parse(localStorage.getItem("desk_pool_added")||"[]"); }catch(e){ return []; } }
 
+/* 入池标的的赛道归属：与「赛道跟踪」的 9 条赛道对齐，无关的一律归「其它」；
+   「其它」里再按行业（sec）做子标签。 */
+const STOCK_TRACK = {
+  TSLA:"phy", META:"app", IREN:"infra", NBIS:"infra", CRWV:"infra", BE:"infra",
+  AMD:"cpu", TSM:"pkg", TER:"pkg", ONTO:"pkg",
+  NET:"sec", RBRK:"sec", OKTA:"sec", CHKP:"sec", SPCX:"other"
+};
+const TRACK_NAME = {
+  app:"AI 应用", infra:"AI 基础设施 / 数据中心", pkg:"先进封测", cpu:"CPU",
+  phy:"物理 AI / 机器人", edge:"端侧 AI", sec:"网安", fin:"金融科技", bio:"生物医药",
+  other:"其它（与上述赛道无关）"
+};
+const TRACK_SEQ = ["app","infra","pkg","cpu","phy","edge","sec","fin","bio","other"];
+const trkOf = (s)=> STOCK_TRACK[s.t] || "other";
+
+function stockCard(s,i){
+  const es=s.earn.status;
+  let esTxt,esCls;
+  if(es==="imminent"){ esTxt="财报临近"; esCls="tag red"; }
+  else if(s.earn.next && /^\d{4}-/.test(s.earn.next)){ esTxt="下次披露 "+s.earn.next; esCls="tag blue"; }
+  else if(es==="no-fixed"){ esTxt="无定期披露"; esCls="tag dash"; }
+  else if(es==="reported"){ esTxt="已披露 · 下次待公告"; esCls="tag"; }
+  else { esTxt="披露日待公告"; esCls="tag"; }
+  return '<div class="stock-card" data-i="'+i+'">'+
+    '<div class="sc-top"><div><div class="sc-tk">'+s.t+'</div><div class="sc-name">'+s.n+'</div>'+
+    '<div class="tiny muted" style="margin-top:1px">'+esc(s.sec)+'</div></div>'+
+    '<div class="sc-px"><div class="p num">'+s.px+'</div>'+
+    (s.mv===null?'<div class="d muted">一级市场</div>':'<div class="d '+sgn(s.mv)+'">'+pct(s.mv,1)+'</div>')+
+    (s.d20!=null?'<div class="tiny muted num">20日 '+pct(s.d20,1)+'</div>':'')+
+    '</div></div><div class="sc-logic">'+s.logic+'</div>'+
+    '<div class="sc-foot">'+labelHTML(getLabel(s.t))+
+    '<span class="'+esCls+'" style="font-size:9.5px">'+esTxt+'</span>'+
+    '<span class="cap">'+s.cap+'</span></div></div>';
+}
+
+/* 按赛道分组渲染；key = "全部" 或某个赛道 id */
+function stockGroups(key){
+  const idx = DATA.stocks.map((s,i)=>({s:s,i:i}));
+  const groups = TRACK_SEQ.filter(t=> key==="全部" || key===t);
+  let out='';
+  let total=0;
+  groups.forEach(t=>{
+    const list = idx.filter(x=>trkOf(x.s)===t);
+    if(!list.length) return;
+    total+=list.length;
+    const down=list.filter(x=>x.s.mv!=null && x.s.mv<0).length;
+    out+='<div class="trk-h"><span class="tag violet">'+(t==="other"?"其它":"赛道")+'</span>'+
+      '<span>'+TRACK_NAME[t]+'</span><span class="tiny muted">'+list.length+' 只'+
+      (t!=="other" ? '　·　当日跌 '+down+' 只' : '')+'</span><span class="line"></span></div>';
+    out+='<div class="subgrid">'+list.map(x=>stockCard(x.s,x.i)).join("")+'</div>';
+  });
+  if(!total) out+='<div class="card empty">该分类下暂无标的</div>';
+  return out;
+}
+
 function viewStocks(){
   const added=getAddedPool();
   let h=feedBar();
-  h+='<div class="sec">'+secHead("01","重点标的研究池",DATA.stocks.length+" 只在册"+(added.length?" · 新入库 "+added.length+" 只":"")+" · 点击卡片看详情",
+  const cntOther=DATA.stocks.filter(s=>trkOf(s)==="other").length;
+  h+='<div class="sec">'+secHead("01","重点标的研究池",
+      DATA.stocks.length+" 只在册 · 按赛道分类（与赛道跟踪对齐，无关的归「其它」）· 点击卡片看详情",
       "<span class='upd'>标签手动设定</span>");
   h+='<div class="filters" id="stock-filters"></div>';
   if(added.length){
@@ -2086,26 +2627,8 @@ function viewStocks(){
     });
     h+='</div>';
   }
-  h+='<div class="grid g-auto" id="stock-grid">';
-  DATA.stocks.forEach((s,i)=>{
-    const es=s.earn.status;
-    let esTxt,esCls;
-    if(es==="imminent"){ esTxt="财报临近"; esCls="tag red"; }
-    else if(s.earn.next && /^\d{4}-/.test(s.earn.next)){ esTxt="下次披露 "+s.earn.next; esCls="tag blue"; }
-    else if(es==="no-fixed"){ esTxt="无定期披露"; esCls="tag dash"; }
-    else if(es==="reported"){ esTxt="已披露 · 下次待公告"; esCls="tag"; }
-    else { esTxt="披露日待公告"; esCls="tag"; }
-    h+='<div class="stock-card" data-i="'+i+'">'+
-      '<div class="sc-top"><div><div class="sc-tk">'+s.t+'</div><div class="sc-name">'+s.n+'</div></div>'+
-      '<div class="sc-px"><div class="p num">'+s.px+'</div>'+
-      (s.mv===null?'<div class="d muted">一级市场</div>':'<div class="d '+sgn(s.mv)+'">'+pct(s.mv,1)+'</div>')+
-      (s.d20!=null?'<div class="tiny muted num">20日 '+pct(s.d20,1)+'</div>':'')+
-      '</div></div><div class="sc-logic">'+s.logic+'</div>'+
-      '<div class="sc-foot">'+labelHTML(getLabel(s.t))+
-      '<span class="'+esCls+'" style="font-size:9.5px">'+esTxt+'</span>'+
-      '<span class="cap">'+s.cap+'</span></div></div>';
-  });
-  h+='</div></div>';
+  h+='<div id="stock-groups">'+stockGroups("全部")+'</div>';
+  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">分类口径：<b>一级分类 = 赛道</b>（AI 应用 / AI 基础设施 / 先进封测 / CPU / 物理 AI / 端侧 AI / 网安 / 金融科技 / 生物医药），与「赛道跟踪」模块一一对应，<b>买的是同一条逻辑的标的放在一起看</b>；<b>二级标签 = 行业</b>（卡片上的小字，如“AI 云 / Neocloud”“晶圆代工”“身份安全”）。与上述九条赛道都无关的（如商业航天）归入<b>「其它」</b>，不硬塞。当前「其它」'+cntOther+' 只。</div></div>';
   return h;
 }
 
@@ -2244,7 +2767,8 @@ const CATALYSTS={
 /* ---------- 06 ---------- */
 let varTab="next";
 function subHead(no, title, desc){
-  return '<div class="sub-h"><span class="sn">'+no+'</span><b>'+title+'</b>'+(desc?'<span class="d">'+desc+'</span>':'')+'</div>';
+  return '<div class="sub-h"><span class="sn">'+no+'</span><b>'+title+'</b>'+(desc?'<span class="d">'+desc+'</span>':'')+
+    '<span style="margin-left:auto">'+modStamp()+'</span></div>';
 }
 
 function viewStrategy(){
@@ -2513,22 +3037,45 @@ function route(){
     };
   }
 
-  if(mod.id==="stocks"){
-    const secs=["全部"].concat(DATA.stocks.map(s=>s.sec).filter((v,i,a)=>a.indexOf(v)===i));
-    const f=$("#stock-filters");
-    f.innerHTML=secs.map((s,i)=>'<button class="fchip'+(i===0?' on':'')+'" data-s="'+s+'">'+s+'</button>').join("");
-    f.querySelectorAll(".fchip").forEach(b=>{
-      b.onclick=()=>{
-        f.querySelectorAll(".fchip").forEach(x=>x.classList.remove("on"));
-        b.classList.add("on");
-        const k=b.dataset.s;
-        document.querySelectorAll(".stock-card").forEach(c=>{
-          const s=DATA.stocks[+c.dataset.i];
-          c.style.display=(k==="全部"||s.sec.indexOf(k)===0)?"":"none";
+  if(mod.id==="movers"){
+    const H=DATA.highs;
+    const today=(H&&H.today)||[];
+    const chips=(arr,key,el)=>{
+      el.innerHTML='<span class="tiny muted" style="margin-right:2px">'+(key==="trk"?"按赛道":"按板块")+'</span>'+
+        arr.map(s=>'<button class="fchip'+(HI_ST[key]===s?' on':'')+'" data-k="'+key+'" data-v="'+esc(s)+'">'+esc(s)+'</button>').join("");
+    };
+    const trkList=["全部"].concat(today.map(x=>x.track||"其它").filter((v,i,a)=>a.indexOf(v)===i));
+    const secList=["全部"].concat(today.map(x=>x.sec||"其它").filter((v,i,a)=>a.indexOf(v)===i));
+    const f=$("#hi-filters");
+    if(f){
+      f.innerHTML='<div id="hf-t" class="filters" style="margin:0 0 6px;width:100%"></div><div id="hf-s" class="filters" style="margin:0 0 10px;width:100%"></div>';
+      const draw=()=>{
+        chips(trkList,"trk",$("#hf-t"));
+        chips(secList,"sec",$("#hf-s"));
+        f.querySelectorAll(".fchip").forEach(b=>{
+          b.onclick=()=>{ HI_ST[b.dataset.k]=b.dataset.v; draw(); $("#hi-body").innerHTML=hiBody(DATA.highs); };
         });
       };
-    });
-    document.querySelectorAll(".stock-card").forEach(c=>{ c.onclick=()=>openStock(+c.dataset.i); });
+      draw();
+    }
+  }
+
+  if(mod.id==="stocks"){
+    const f=$("#stock-filters");
+    const keys=["全部"].concat(TRACK_SEQ.filter(t=>DATA.stocks.some(s=>trkOf(s)===t)));
+    const bind=()=>{
+      f.querySelectorAll(".fchip").forEach(b=>{
+        b.onclick=()=>{
+          f.querySelectorAll(".fchip").forEach(x=>x.classList.remove("on"));
+          b.classList.add("on");
+          $("#stock-groups").innerHTML=stockGroups(b.dataset.t);
+          bind();
+        };
+      });
+      document.querySelectorAll(".stock-card").forEach(c=>{ c.onclick=()=>openStock(+c.dataset.i); });
+    };
+    f.innerHTML=keys.map((k,i)=>'<button class="fchip'+(i===0?' on':'')+'" data-t="'+k+'">'+(k==="全部"?"全部赛道":TRACK_NAME[k])+'</button>').join("");
+    bind();
   }
 
   if(mod.id==="strategy"){

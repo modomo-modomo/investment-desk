@@ -355,10 +355,47 @@ const mvOk = Object.values(mvNews).filter((x) => x.ok).length;
 const mvCause = Object.values(mvNews).filter((x) => x.cause).length;
 console.log("异动归因：" + mvTargets.length + " 只待归因，窗口内匹配 " + mvOk + " 只，其中命中具体事件 " + mvCause + " 只");
 
+/* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（geo-log.json 滚动积累，最新在前） ---- */
+const GEO_RULES = [
+  { re: /APEC|亚太经合/i, topic: "APEC", imp: "贸易与供应链" },
+  { re: /美伊|伊朗/i, topic: "美伊谈判", imp: "原油与地缘风险溢价" },
+  { re: /俄乌|乌克兰|俄罗斯|普京|泽连/i, topic: "俄乌局势", imp: "能源/军工/欧洲风险偏好" },
+];
+const GEO_READ = [
+  [/停火|停战|和平|协议|谈判|会谈|磋商/, "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。"],
+  [/制裁|禁运|关税|出口管制|没收|冻结/, "制裁升级利空受影响供应链、利好替代环节；落地前是情绪波动，不提前建仓。"],
+  [/空袭|袭击|导弹|无人机|军事|军队|交火/, "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。"],
+  [/峰会|会见|声明|公报|宣言/, "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。"],
+];
+let geoLog = [];
+try { geoLog = JSON.parse(readFileSync("geo-log.json", "utf8")); } catch {}
+const seenG = new Set(geoLog.map((x) => x.t + "|" + x.topic));
+const geoAll = [];
+for (const x of corpus) {
+  const txt = (x.title || "") + (x.summary || "");
+  const rule = GEO_RULES.find((r) => r.re.test(txt));
+  if (!rule) continue;
+  const t = String(x.showTime || "").slice(0, 16);
+  const key = t + "|" + rule.topic;
+  if (seenG.has(key)) continue;
+  const body = String(x.summary || x.title || "").trim().replace(/\s+/g, " ").slice(0, 150);
+  const rd2 = GEO_READ.find(([re]) => re.test(body));
+  geoAll.push({ t, topic: rule.topic, o: body, r: rd2 ? rd2[1] : "地缘表态，暂无具体动作，观察后续是否落地。", imp: rule.imp, isNew: true });
+  seenG.add(key);
+}
+geoAll.sort((a, b) => b.t.localeCompare(a.t));
+const geoItems = geoAll.slice(0, 12);
+for (const it of geoItems) if (it.isNew) geoLog.unshift({ t: it.t, topic: it.topic, o: it.o, r: it.r, imp: it.imp });
+const geoCutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(5, 10);
+geoLog = geoLog.filter((x) => String(x.t).slice(0, 5) >= geoCutoff).slice(0, 60);
+writeFileSync("geo-log.json", JSON.stringify(geoLog, null, 1), "utf8");
+console.log("地缘跟踪：本轮新增 " + geoItems.length + " 条（APEC/美伊/俄乌），日志 " + geoLog.length + " 条");
+
 writeFileSync("live-news.js", "window.NEWS_DATA = " + JSON.stringify({
   meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Yahoo 标题", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
   items: results,
   trump: { items: trumpItems, logCount: trumpLog.length },
   moversNews: mvNews,
+  geo: { items: geoItems, logCount: geoLog.length },
 }, null, 1) + ";\n", "utf8");
 console.log(`live-news.js｜${fullCount}/${list.length} 家有业绩数字，${okCount}/${list.length} 家有内容`);

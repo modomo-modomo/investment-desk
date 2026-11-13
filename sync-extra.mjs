@@ -352,16 +352,19 @@ try {
   }
 } catch (e) { console.warn("双端点校验失败:", e.message); }
 
-/* ---------------- 赛道代表标的池：股价 / 涨幅 / 20日 / YTD ---------------- */
+/* ---------------- 赛道代表标的池：股价 / 涨幅 / 20日 / YTD ----------------
+   排序按用户口径：AI应用 → AI基础设施/数据中心 → 先进封测 → CPU → 物理AI/机器人
+   → 端侧AI → 网安 → 金融科技 → 生物医药 */
 const TRACKS = [
-  { id: "phy",   syms: [["TSLA","TSLA"],["NVDA","NVDA"],["三花智控","002050.SZ"],["拓普集团","601689.SS"],["绿的谐波","688017.SS"],["优必选","9880.HK"]] },
-  { id: "edge",  syms: [["QCOM","QCOM"],["AAPL","AAPL"],["联发科","2454.TW"],["恒玄科技","688608.SS"],["乐鑫科技","688018.SS"],["瑞芯微","603893.SS"]] },
   { id: "app",   syms: [["MSFT","MSFT"],["CRM","CRM"],["NOW","NOW"],["PLTR","PLTR"],["RBRK","RBRK"],["OKTA","OKTA"],["NET","NET"],["ADBE","ADBE"]] },
-  { id: "sec",   syms: [["CRWD","CRWD"],["PANW","PANW"],["ZS","ZS"],["S","S"],["RBRK","RBRK"],["OKTA","OKTA"],["CHKP","CHKP"],["奇安信","688561.SS"],["深信服","300454.SZ"]] },
-  { id: "fin",   syms: [["V","V"],["MA","MA"],["PYPL","PYPL"],["XYZ","XYZ"],["COIN","COIN"],["HOOD","HOOD"],["SOFI","SOFI"],["NU","NU"],["INTU","INTU"],["ADYEY","ADYEY"],["PAGS","PAGS"]] },
   { id: "infra", syms: [["NVDA","NVDA"],["AVGO","AVGO"],["CRWV","CRWV"],["IREN","IREN"],["NBIS","NBIS"],["BE","BE"],["VRT","VRT"],["ANET","ANET"],["GEV","GEV"]] },
   { id: "pkg",   syms: [["TSM","TSM"],["AMKR","AMKR"],["ASX","ASX"],["ONTO","ONTO"],["TER","TER"],["长电科技","600584.SS"],["通富微电","002156.SZ"]] },
   { id: "cpu",   syms: [["ARM","ARM"],["AMD","AMD"],["INTC","INTC"],["QCOM","QCOM"],["NVDA","NVDA"],["MRVL","MRVL"]] },
+  { id: "phy",   syms: [["TSLA","TSLA"],["NVDA","NVDA"],["三花智控","002050.SZ"],["拓普集团","601689.SS"],["绿的谐波","688017.SS"],["优必选","9880.HK"]] },
+  { id: "edge",  syms: [["QCOM","QCOM"],["AAPL","AAPL"],["联发科","2454.TW"],["恒玄科技","688608.SS"],["乐鑫科技","688018.SS"],["瑞芯微","603893.SS"]] },
+  { id: "sec",   syms: [["CRWD","CRWD"],["PANW","PANW"],["ZS","ZS"],["S","S"],["RBRK","RBRK"],["OKTA","OKTA"],["CHKP","CHKP"],["奇安信","688561.SS"],["深信服","300454.SZ"]] },
+  { id: "fin",   syms: [["V","V"],["MA","MA"],["PYPL","PYPL"],["XYZ","XYZ"],["COIN","COIN"],["HOOD","HOOD"],["SOFI","SOFI"],["NU","NU"],["INTU","INTU"],["ADYEY","ADYEY"],["PAGS","PAGS"]] },
+  { id: "bio",   syms: [["LLY","LLY"],["PFE","PFE"],["MRK","MRK"],["JNJ","JNJ"],["UNH","UNH"],["ABBV","ABBV"],["TMO","TMO"],["AMGN","AMGN"],["ISRG","ISRG"],["VRTX","VRTX"],["REGN","REGN"]] },
 ];
 const uniqSyms = [...new Set(TRACKS.flatMap((t) => t.syms.map((s) => s[1])))];
 const trkQuotes = await quotes(uniqSyms);
@@ -391,8 +394,26 @@ const trackRow = (name, sym) => {
 const trackData = {};
 for (const t of TRACKS) trackData[t.id] = t.syms.map(([n, s]) => trackRow(n, s));
 
+/* ---------------- GPU 租金（Ornn OCPI 口径，$/GPU·h，成交价日结算） ----------------
+   没有公开免费接口，序列由 Agent 每日更新维护在 gpu-rent.json；
+   这里只读取并透传，页面在 AI 基础设施赛道内画趋势图。 */
+let gpuRent = null;
+try {
+  gpuRent = JSON.parse(readFileSync("gpu-rent.json", "utf8"));
+  console.log("GPU 租金：最新 " + (gpuRent.latest?.date || "—") + " · 序列 " + ((gpuRent.series?.h100 || []).length) + " 点");
+} catch (e) { console.warn("gpu-rent.json 读取失败:", e.message); }
+
 /* -------- 创新高检测 + 滚动日志（52周新高 / 历史新高 / 三大市场指数） -------- */
 const etToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
+/* 新高记录必须记在「交易日」上，不是「运行日」上：
+   11-13 07:00 那次跑的是 11-12 的收盘，记成 11-13 会让日志整体错位一天。 */
+let usCloseDate = etToday;
+try {
+  const g = (await chart("^GSPC", "5d")).rows;
+  const last = g[g.length - 1];
+  if (last && last.date) usCloseDate = last.date;
+} catch (e) { console.warn("交易日探测失败，回退运行日:", e.message); }
+console.log("美股最近已结算交易日：" + usCloseDate + "（运行日 ET " + etToday + "）");
 const POOL = [
   ["TSLA","特斯拉","电动车/机器人"],["META","脸书","社交媒体"],["IREN","IREN","AI基础设施"],["NBIS","NEBIUS","AI基础设施"],
   ["CRWV","COREWEAVE","AI基础设施"],["BE","BLOOM ENERGY","电力设备"],["AMD","超威半导体","半导体"],["TSM","台积电","半导体"],
@@ -403,18 +424,34 @@ const SYM2WIND = { TSLA:"TSLA.O", META:"META.O", IREN:"IREN.O", NBIS:"NBIS.O", C
 const MKT_IDX = [["^GSPC","标普500","US"],["^HSI","恒生指数","HK"],["000001.SS","上证指数","CN"]];
 const highsToday = [];
 const poolQuotes = await quotes(POOL.map((p) => p[0]));
+/* 新高判定的价格必须用「已结算收盘」：
+   2026-11-13 早晨跑时 quote 返回的是 11-11 前收 552.9，而 11-12 真实收盘 585.3，
+   导致记录价格错位。这里以日 K 最后一根有值收盘为准。 */
+const settledClose = async (sym, fb) => {
+  try {
+    const rows = (await chart(sym, "6mo")).rows.filter((r) => r.close != null);
+    const last = rows[rows.length - 1];
+    if (last && fb != null && Math.abs(fb - last.close) / last.close > 0.01) return last.close;
+    return last ? last.close : fb;
+  } catch { return fb; }
+};
 for (const [sym, name, sec] of POOL) {
   try {
     const q = poolQuotes[sym];
     if (!q || q.regularMarketPrice == null || q.fiftyTwoWeekHigh == null) continue;
-    const cur = q.regularMarketPrice;
+    const cur = await settledClose(sym, q.regularMarketPrice);
+    /* 52 周：收盘站上 52 周高点（容差 0.1%）；持平历史最高不算创新高 */
+    const chgOf = q.regularMarketChangePercent != null ? +Number(q.regularMarketChangePercent).toFixed(2) : null;
+    const capOf = q.marketCap || 0;
     if (cur >= q.fiftyTwoWeekHigh * 0.999) {
-      highsToday.push({ d: etToday, sym, name, type: "52w", market: "US", sec, px: +cur.toFixed(2) });
+      highsToday.push({ d: usCloseDate, sym, name, type: "52w", market: "US", sec, px: +cur.toFixed(2), chg: chgOf, mcap: capOf });
     }
     const mx = await chart(sym, "max");
     if (mx.rows.length > 1) {
-      const prevMax = Math.max(...mx.rows.slice(0, -1).map((r) => r.close));
-      if (cur >= prevMax * 0.999) highsToday.push({ d: etToday, sym, name, type: "ath", market: "US", sec, px: +cur.toFixed(2) });
+      const done = mx.rows.filter((r) => r.close != null);
+      const prevMax = Math.max(...done.slice(0, -1).map((r) => r.close));
+      /* 严格大于：持平（如 2026-11-11 的 552.9 == 2026-09-01 的 552.9）不算历史新高 */
+      if (cur > prevMax) highsToday.push({ d: usCloseDate, sym, name, type: "ath", market: "US", sec, px: +cur.toFixed(2), chg: chgOf, mcap: capOf });
     }
   } catch (e) { console.warn("新高检测失败 " + sym + ": " + e.message); }
 }
@@ -424,7 +461,7 @@ for (const [sym, name, mkt] of MKT_IDX) {
     if (rows.length < 2) continue;
     const cur = rows[rows.length - 1].close;
     const prevMax = Math.max(...rows.slice(0, -1).map((r) => r.close));
-    if (cur > prevMax) highsToday.push({ d: etToday, sym, name, type: "mkt", market: mkt, sec: "指数", px: +cur.toFixed(2) });
+    if (cur > prevMax) highsToday.push({ d: usCloseDate, sym, name, type: "mkt", market: mkt, sec: "指数", px: +cur.toFixed(2) });
   } catch (e) { console.warn("市场新高检测失败 " + sym + ": " + e.message); }
 }
 let highsLog = [];
@@ -444,7 +481,7 @@ const analyzeHighs = (days) => {
   rows.forEach((x) => { byMkt[x.market] = (byMkt[x.market] || 0) + 1; bySec[x.sec] = (bySec[x.sec] || 0) + 1; });
   return { total: rows.length, byMkt, bySec, days };
 };
-const highs = { date: etToday, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
+const highs = { date: usCloseDate, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
 console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条");
 
 /* ---------------- 盘前 / 盘后异动：全市场扫描 ----------------
@@ -531,10 +568,15 @@ const SECTOR_CN = {
   Materials: "原材料", "Basic Materials": "原材料", "Real Estate": "房地产", Utilities: "公用事业",
   Telecommunications: "通信服务", "Commercial Services": "商业服务", "Distribution Services": "分销",
 };
+/* 非普通股剔除：权证/优先股/债券/单位/权利/ETF 不是“公司”，
+   把它们的 52 周新高混进榜里会污染板块与赛道统计（2026-11-13 曾出现 CORZZ/RUMBW/OXLCZ 等）。 */
+const JUNK_RE = /warrant|preferred|notes? due|\bdepositary\b|\bunits?\b|\brights?\b|\betf\b|\betn\b|\bfund\b|%|\btranche\b|acquisition corp|blank check/i;
+const isJunk = (sym, name) => JUNK_RE.test(String(name || "")) || /^[A-Z]{4,6}[WRU]$/.test(String(sym || ""));
 const cleanName = (s) => String(s || "")
   .replace(/\b(Inc|Incorporated|Corp|Corporation|Ltd|Limited|plc|Co|Company|Holdings?|Group|Class [A-Z]|Common Stock|Ordinary Shares|American Depositary Shares|Sponsored ADR|ADR|N\.V\.|S\.A\.|AG|SE|LP|LLC)\b\.?/gi, "")
   .replace(/\s{2,}/g, " ")
-  .replace(/^[\s,]+|[\s,]+$/g, "")
+  .replace(/[\s,&\-–]+$/g, "")
+  .replace(/^[\s,]+/g, "")
   .trim();
 
 let universe = [];
@@ -549,7 +591,7 @@ try {
       sector: String(x.sector || "Technology"),
       mcap: capNum(x.marketCap),
     }))
-    .filter((x) => x.sym && x.mcap >= 5e8);
+    .filter((x) => x.sym && x.mcap >= 5e8 && !isJunk(x.sym, x.name));
 } catch (e) { console.warn("全市场清单获取失败:", e.message); }
 if (universe.length < 200) {
   console.warn("全市场清单异常（" + universe.length + " 只），回退 SEED 兜底池");
@@ -592,22 +634,156 @@ const preEarnSet = new Set(pre.allSyms || []);
 const postEarnSet = new Set(post.allSyms || []);
 const markEarn = (x, set) => ({ ...x, earn: set.has(x.sym) });
 const MV_EMIT = Number(process.env.MV_EMIT || 3); /* 抓取侧放宽到 3%，页面按 4% 展示 */
+/* 赛道归类函数 trackOfClass 定义在本段之后（TDZ），这里先留空，留档写盘前再补 */
+const TRACK_CLASS = {
+  "AI应用": ["MSFT","CRM","NOW","PLTR","RBRK","OKTA","NET","ADBE","SNOW","DDOG","MDB","APP","SHOP","UBER","PINS","SPOT","ROKU","DUOL","FRSH","TWLO","GEN","SAP","ORCL","DOCU","ZM","CSD"],
+  "AI基础设施/数据中心": ["NVDA","AVGO","CRWV","IREN","NBIS","BE","VRT","ANET","GEV","CEG","OKLO","SMR","APLD","DELL","SMCI","MU","MRVL","WDC","STX","ETN","PWR","DLR","EQIX","ALAB","CLS","NVT","TSM","AMAT","LRCX","KLAC","ASML","AMKR","ASX","ONTO","TER","COHR","AAOI","FN","CIEN","APH","GLW","TDY","MCHP","ADI","NXPI","SWKS","QRVO","MPWR","ON","TLN","VST","NRG","XEL","SRE","PEG","ED","AEE","EXC","EIX","WEC","CNP","D","DUK","SO","NEE","AES","FLNC","PLUG"],
+  "先进封测": ["AMKR","ASX","ONTO","TER","BESI","UCTT","IEX"],
+  "CPU": ["AMD","INTC","ARM","QCOM"],
+  "物理AI/机器人": ["TSLA","HNST","RR","ROK","SERV"],
+  "端侧AI": ["AAPL"],
+  "网安": ["CRWD","PANW","ZS","S","OKTA","CHKP","QLYS","TENB","RPD","CYBR","FORTY"],
+  "金融科技": ["V","MA","PYPL","XYZ","COIN","HOOD","SOFI","NU","INTU","ADYEY","PAGS","MELI","AFRM","UPST","LC","GPN","FIS","FI"],
+  "生物医药": ["PFE","MRK","JNJ","LLY","UNH","ABBV","TMO","AMGN","ISRG","VRTX","REGN","GILD","BIIB","ZTS","NVO","NVS","AZN","BMY","CI","HUM","BSX","SYK","MDT","EW","DXCM","ALNY","MRNA","BNTX","SRPT","RARE","TEVA"],
+};
+const SEED_TRACK = { TSM: "先进封测", AMKR: "先进封测", ASX: "先进封测", ONTO: "先进封测", TER: "先进封测",
+  AMD: "CPU", INTC: "CPU", ARM: "CPU", QCOM: "CPU",
+  NVDA: "AI基础设施/数据中心", AVGO: "AI基础设施/数据中心", CRWV: "AI基础设施/数据中心", IREN: "AI基础设施/数据中心",
+  NBIS: "AI基础设施/数据中心", BE: "AI基础设施/数据中心", VRT: "AI基础设施/数据中心", ANET: "AI基础设施/数据中心", GEV: "AI基础设施/数据中心",
+  MSFT: "AI应用", CRM: "AI应用", NOW: "AI应用", PLTR: "AI应用", RBRK: "AI应用", OKTA: "AI应用", NET: "AI应用", ADBE: "AI应用",
+  CRWD: "网安", PANW: "网安", ZS: "网安", S: "网安", CHKP: "网安",
+  V: "金融科技", MA: "金融科技", PYPL: "金融科技", XYZ: "金融科技", COIN: "金融科技", HOOD: "金融科技", SOFI: "金融科技", NU: "金融科技", INTU: "金融科技", ADYEY: "金融科技", PAGS: "金融科技",
+  TSLA: "物理AI/机器人", AAPL: "端侧AI" };
+const TRACKS_ORDER = ["AI应用","AI基础设施/数据中心","先进封测","CPU","物理AI/机器人","端侧AI","网安","金融科技","生物医药"];
+const trackOfClass = (sym, sector) => {
+  if (SEED_TRACK[sym]) return SEED_TRACK[sym];
+  for (const tk of TRACKS_ORDER) if ((TRACK_CLASS[tk] || []).includes(sym)) return tk;
+  if (/bio|health|pharma/i.test(sector || "")) return "生物医药";
+  return "其它";
+};
+
+const slim = (x) => ({ sym: x.sym, name: x.name, sec: x.sec, track: x.track || "",
+  mv: x.mv != null ? x.mv : (x.post != null ? x.post : x.pre), px: x.px, earn: !!x.earn });
+
 const movers = {
   date: etToday.replace(/-/g, ""),
+  closeDate: usCloseDate,
   ts: new Date().toISOString(),
   pool: moverRows.length,
   universe: universe.length,
   preTotal: preEarnSet.size,
   postTotal: postEarnSet.size,
+  state: (moverRows[0] && moverRows[0].state) || "",
   pre: moverRows.filter((x) => x.pre != null && Math.abs(x.pre) >= MV_EMIT)
-    .map((x) => markEarn(x, preEarnSet)).sort((a, b) => Math.abs(b.pre) - Math.abs(a.pre)),
+    .map((x) => markEarn({ ...x, mv: x.pre }, preEarnSet)).sort((a, b) => Math.abs(b.pre) - Math.abs(a.pre)),
   post: moverRows.filter((x) => x.post != null && Math.abs(x.post) >= MV_EMIT)
-    .map((x) => markEarn(x, postEarnSet)).sort((a, b) => Math.abs(b.post) - Math.abs(a.post)),
+    .map((x) => markEarn({ ...x, mv: x.post }, postEarnSet)).sort((a, b) => Math.abs(b.post) - Math.abs(a.post)),
 };
+
+/* ---------- 盘前/盘后异动滚动留档 ----------
+   问题：Yahoo 只在「当前场次」给 preMarket/postMarket 涨跌，窗口一过就没了。
+   20:30 那次抓的是当日盘前、07:00 那次抓的是前一日盘后，任何一次补跑都可能错过一整个场次。
+   做法：每个场次抓到时非空就写一条 movers-log.json，页面从这个档案里取「最近一次有效场次」。 */
+let mvLog = [];
+try { mvLog = JSON.parse(readFileSync("movers-log.json", "utf8")); } catch {}
+const mvState = movers.state;
+const sessionNow = /PRE/i.test(mvState) ? "pre" : (/POST/i.test(mvState) ? "post" : "");
+const upsert = (session, rows, dateTag) => {
+  if (!rows.length) return;
+  const rec = { date: dateTag, session, ts: movers.ts, state: mvState, rows: rows.map(slim) };
+  const i = mvLog.findIndex((x) => x.date === rec.date && x.session === session);
+  if (i >= 0) mvLog[i] = rec; else mvLog.push(rec);
+};
+if (sessionNow === "pre") upsert("pre", movers.pre, etToday);
+if (sessionNow === "post") upsert("post", movers.post, usCloseDate);
+mvLog = mvLog.filter((x) => x.date >= new Date(Date.parse(usCloseDate) - 45 * 86400000).toISOString().slice(0, 10))
+  .sort((a, b) => b.date.localeCompare(a.date) || String(a.session).localeCompare(String(b.session)));
+writeFileSync("movers-log.json", JSON.stringify(mvLog, null, 1));
+
+const lastOf = (s) => mvLog.find((x) => x.session === s) || null;
+const lastPost = lastOf("post"), lastPre = lastOf("pre");
+/* 当前场次为空时，用档案里最近一次有效记录顶上，并标明是哪一场 */
+if (!movers.post.length && lastPost) {
+  movers.post = lastPost.rows.map((r) => ({ ...r, earn: postEarnSet.has(r.sym) }));
+  movers.postDate = lastPost.date; movers.postFromLog = true;
+} else movers.postDate = usCloseDate;
+if (!movers.pre.length && lastPre) {
+  movers.pre = lastPre.rows.map((r) => ({ ...r, earn: preEarnSet.has(r.sym) }));
+  movers.preDate = lastPre.date; movers.preFromLog = true;
+} else movers.preDate = etToday;
+movers.history = mvLog.slice(0, 10).map((x) => ({ date: x.date, session: x.session, n: x.rows.length }));
+/* 赛道归类补写（此时 trackOfClass 已定义） */
+mvLog.forEach((r) => r.rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, ""); }));
+writeFileSync("movers-log.json", JSON.stringify(mvLog, null, 1));
 console.log("全市场异动：" + moverRows.length + " 只取到报价 · 盘前 ≥" + MV_EMIT + "% " + movers.pre.length +
   " 条（财报 " + movers.pre.filter((x) => x.earn).length + " / 非财报 " + movers.pre.filter((x) => !x.earn).length + "）" +
   " · 盘后 ≥" + MV_EMIT + "% " + movers.post.length +
   " 条（财报 " + movers.post.filter((x) => x.earn).length + " / 非财报 " + movers.post.filter((x) => !x.earn).length + "）");
+
+/* ---------------- 全市场 52 周新高扫描 + 赛道归类 ----------------
+   与异动共用同一份批量报价。判定口径：收盘价站上 52 周高点（容差 0.1%）。
+   价格用 previousClose × (1+chg) 反推，避免 POSTPOST 时 quote 滞后返回前收
+   （2026-11-13 早晨 AMD 被记成 552.9 即此原因，真实收盘 585.3）。 */
+const seedSec = (sym) => (SEED_BY[sym] ? SEED_BY[sym].sec : "");
+const uniBySym = Object.fromEntries(universe.map((u) => [u.sym, u]));
+const usHighs = [];
+let junkSkipped = 0;
+for (const [sym, q] of Object.entries(mvQuote)) {
+  if (q.regularMarketPrice == null || q.fiftyTwoWeekHigh == null) continue;
+  const u = uniBySym[sym] || {};
+  const nm = moverRows.find((x) => x.sym === sym)?.name || cleanName(u.name) || sym;
+  if (isJunk(sym, nm) || isJunk(sym, u.name)) { junkSkipped++; continue; }
+  /* 价格：用前收 × (1+当日涨跌%) 反推，规避 quote 滞后；
+     判定也用这个「已结算收盘」价，而不是 quote 的 regularMarketPrice */
+  const px = q.regularMarketPreviousClose != null && q.regularMarketChangePercent != null
+    ? +(q.regularMarketPreviousClose * (1 + q.regularMarketChangePercent / 100)).toFixed(2)
+    : +Number(q.regularMarketPrice).toFixed(2);
+  if (!(px >= q.fiftyTwoWeekHigh * 0.999)) continue;
+  usHighs.push({
+    d: usCloseDate, sym, name: nm,
+    type: "52w", market: "US",
+    sec: (seedSec(sym) || SECTOR_CN[u.sector] || u.sector || "其它"),
+    track: trackOfClass(sym, u.sector),
+    px, chg: numOf2(q.regularMarketChangePercent),
+    hi: +Number(q.fiftyTwoWeekHigh).toFixed(2),
+    mcap: u.mcap || 0,
+  });
+}
+usHighs.sort((a, b) => (b.mcap || 0) - (a.mcap || 0));
+console.log("全市场 52 周新高：" + usHighs.length + " 只（剔除权证/优先股/债券等 " + junkSkipped + " 只）");
+
+/* 并入滚动日志（与 SEED 池检测的 52w/ATH 去重合并） */
+try {
+  let hl = JSON.parse(readFileSync("highs-log.json", "utf8"));
+  const seen = new Set(hl.map((x) => x.d + "|" + x.sym + "|" + x.type));
+  for (const h of usHighs) {
+    const k = h.d + "|" + h.sym + "|" + h.type;
+    if (!seen.has(k)) { hl.push(h); seen.add(k); }
+  }
+  const cut2 = new Date(Date.parse(etToday) - 180 * 86400000).toISOString().slice(0, 10);
+  hl = hl.filter((x) => x.d >= cut2).sort((a, b) => b.d.localeCompare(a.d) || a.sym.localeCompare(b.sym));
+  writeFileSync("highs-log.json", JSON.stringify(hl, null, 1));
+  const todayKeys = new Set([...highsToday, ...usHighs].map((h) => h.sym + "|" + h.type));
+  highs.today = [...highsToday, ...usHighs].filter((h, i, arr) => arr.findIndex((y) => y.sym + "|" + y.type === h.sym + "|" + h.type) === i);
+  /* 赛道归类统一补齐（POOL 检测发生在本段之前，那里还没有 trackOfClass） */
+  const backfill = (rows) => rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, x.sec || ""); });
+  backfill(highs.today); backfill(hl);
+  highs.log = hl.slice(0, 400);
+  const withTrack = (rows) => {
+    const byMkt = {}, bySec = {}, byTrack = {};
+    rows.forEach((x) => {
+      byMkt[x.market] = (byMkt[x.market] || 0) + 1;
+      bySec[x.sec || "其它"] = (bySec[x.sec || "其它"] || 0) + 1;
+      const tk = x.track || SEED_TRACK[x.sym] || "其它";
+      byTrack[tk] = (byTrack[tk] || 0) + 1;
+    });
+    return byMkt, { byMkt, bySec, byTrack };
+  };
+  const wk = withTrack(hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 7 * 86400000).toISOString().slice(0, 10)));
+  const mo = withTrack(hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 30 * 86400000).toISOString().slice(0, 10)));
+  highs.weekly = { total: hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 7 * 86400000).toISOString().slice(0, 10)).length, ...wk, days: 7 };
+  highs.monthly = { total: hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 30 * 86400000).toISOString().slice(0, 10)).length, ...mo, days: 30 };
+} catch (e) { console.warn("全市场新高日志合并失败:", e.message); }
 
 const out = {
   meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
@@ -619,6 +795,7 @@ const out = {
   crosscheck,
   tracks: trackData,
   highs,
+  gpuRent,
   movers,
 };
 writeFileSync("cal-cache.json", JSON.stringify(CALCACHE, null, 1), "utf8");
