@@ -42,15 +42,33 @@ const INDICES = [
   ["NDX.GI", "^NDX", "纳斯达克100"],
   ["IXIC.GI", "^IXIC", "纳斯达克指数"],
   ["DJI.GI", "^DJI", "道琼斯工业平均"],
+  ["RUT.GI", "^RUT", "罗素2000"],
   ["SOX.GI", "^SOX", "费城半导体指数"],
   ["VIX.GI", "^VIX", "CBOE波动率"],
-  ["HSI.HI", "^HSI", "恒生指数"],
-  ["000001.SH", "000001.SS", "上证指数"],
   ["N225.GI", "^N225", "日经225"],
   ["KS11.GI", "^KS11", "韩国综合指数"],
   ["GDAXI.GI", "^GDAXI", "德国DAX"],
   ["FTSE.GI", "^FTSE", "英国富时100"],
   ["SX5E.DF", "^STOXX50E", "欧元区STOXX50(欧元)"],
+];
+/* 港股 / A 股指数统一走东财日 K：
+   Yahoo 对 000688.SS / 399006.SZ / 932000.SS / HSTECH.HK 这类只返回 1 根日线（算不出当日与 20 日），
+   恒生医疗保健 / 恒生港股通 / 恒生港股通高股息率 / 北证50 干脆没有代码。 */
+const EM_IDX = [
+  ["HSI.HI", "100", "HSI", "恒生指数"],
+  ["HSTECH.HI", "124", "HSTECH", "恒生科技指数"],
+  ["HSHCI.HI", "124", "HSHCI", "恒生医疗保健"],
+  ["HSHKI.HI", "124", "HSHKI", "恒生港股通"],
+  ["HSSCHKY.HI", "124", "HSSCHKY", "恒生港股通高股息率"],
+  ["000001.SH", "1", "000001", "上证指数"],
+  ["000688.SH", "1", "000688", "科创50"],
+  ["000698.SH", "1", "000698", "科创100"],
+  ["399006.SZ", "0", "399006", "创业板指"],
+  ["000300.SH", "1", "000300", "沪深300"],
+  ["000905.SH", "1", "000905", "中证500"],
+  ["000852.SH", "1", "000852", "中证1000"],
+  ["932000.SH", "2", "932000", "中证2000"],
+  ["BSE50.BJ", "0", "899050", "北证50"],
 ];
 
 /* [key, yahoo, 名称, 单位, 换算系数, 是否以 bp 记变动] */
@@ -263,8 +281,40 @@ for (const c of idxCharts) {
   };
 }
 
-/* ---------- 跨资产 ---------- */
-console.log("抓取跨资产（" + CROSS.length + " 项）…");
+/* 东财日 K 兜底：Yahoo 缺恒生医疗保健 / 恒生港股通 / 恒生港股通高股息率 / 北证50 */
+async function emKline(mkt, code) {
+  const u = "https://push2his.eastmoney.com/api/qt/stock/kline/get?secid=" + mkt + "." + code +
+    "&klt=101&fqt=1&end=20500101&lmt=40&fields1=f1,f2,f3,f4,f5,f6&fields2=f51,f53,f59";
+  let lastErr = null;
+  for (let i = 0; i < 3; i++) { /* 东财偶发连接重置，重试 3 次（每次退避 800ms） */
+    try {
+      const r = await fetch(u, { headers: { "User-Agent": UA, Referer: "https://quote.eastmoney.com/" } });
+      const j = await r.json();
+      const kl = (j.data && j.data.klines) || [];
+      return kl.map((s) => { const p = s.split(","); return { date: p[0], close: +p[1], chg: +p[2] }; });
+    } catch (e) { lastErr = e; await new Promise((r) => setTimeout(r, 800 * (i + 1))); }
+  }
+  throw lastErr;
+}
+for (const [code, mkt, emc, name] of EM_IDX) {
+  try {
+    const rows = await emKline(mkt, emc);
+    if (rows.length < 2) { console.warn("东财指数无数据 " + name); continue; }
+    const last = rows[rows.length - 1];
+    const base20 = rows[rows.length - 22] || rows[0];
+    indices[code] = {
+      name,
+      date: last.date.replace(/-/g, ""),
+      level: +last.close.toFixed(2),
+      prev: +(rows[rows.length - 2].close).toFixed(2),
+      chg: +last.chg.toFixed(2),
+      d20: +(((last.close / base20.close) - 1) * 100).toFixed(2),
+      amount: null,
+    };
+  } catch (e) { console.warn("东财指数抓取失败 " + name + ": " + e.message); }
+}
+
+/* ---------- 跨资产 ---------- */console.log("抓取跨资产（" + CROSS.length + " 项）…");
 const crossCharts = await batched(CROSS, 4, async (s) => {
   const c = await chart(s[1], "3mo");
   return { row: s, rows: c.rows };

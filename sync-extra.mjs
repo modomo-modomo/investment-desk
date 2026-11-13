@@ -20,6 +20,9 @@ const etDate = (off = 0) =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(Date.now() + off * 86400e3));
 const TODAY = process.env.RPT_PRE || etDate(0);   // 今日（盘前披露）
 const YEST  = process.env.RPT_POST || etDate(-1); // 昨日（盘后披露）
+/* 当前美东小时（0-23）：判断「今天这根日线到底收没收盘」，避免把盘中半根 bar 当作收盘价 */
+const ET_HOUR = +new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", hour12: false }).format(new Date());
+const ET_TODAY = etDate(0);
 
 /* 带退避重试：云端出口 IP 属数据中心段，Yahoo 偶发 429/5xx */
 async function jget(url, headers = {}, tries = 3) {
@@ -917,8 +920,155 @@ try {
   highs.monthly = { ...mo, window: 30 };
 } catch (e) { console.warn("全市场新高日志合并失败:", e.message); }
 
-const out = {
-  meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
+/* ---------------- 业绩超预期股票存档（按自然季度长期滚动） ----------------
+   纳入标准：财报公布后「对应场次收盘」涨幅——大市值 >3% / 中型 >5% / 小型 >8%
+   · 盘前公布：公布当日收盘涨幅（相对前一交易日收盘）
+   · 盘后公布：次日收盘涨幅（相对公布日收盘）
+   涨幅统一用日线收盘自己算（不依赖 quote 的当日涨跌，避免 07:00/20:30 场次错位）；
+   次日还没收盘的先记 pending，下一轮补齐。 */
+const BEAT_CUT = (mcap) => (mcap >= 10e9 ? 3 : mcap >= 2e9 ? 5 : 8);
+const BEAT_SIZE = (mcap) => (mcap >= 10e9 ? "大市值" : mcap >= 2e9 ? "中型" : "小型");
+const quarterOf = (d) => (d && d.length >= 7 ? d.slice(0, 4) + "Q" + (Math.floor((+d.slice(5, 7) - 1) / 3) + 1) : "—");
+
+/* 公司简介 / 行业：Nasdaq company-profile，取到后写进存档，后续不再请求 */
+async function companyProfile(sym) {
+  try {
+    const r = await fetch("https://api.nasdaq.com/api/company/" + encodeURIComponent(sym) + "/company-profile",
+      { headers: { "User-Agent": UA, Accept: "application/json" } });
+    const j = await r.json();
+    const d = j && j.data;
+    if (!d) return null;
+    const g = (k) => (d[k] && d[k].value) || "";
+    const desc = String(g("CompanyDescription") || "").replace(/\s+/g, " ").trim();
+    return { industry: g("Industry") || g("Sector") || "", desc: desc.slice(0, 220) };
+  } catch { return null; }
+}
+
+let beatLog = [];
+try { beatLog = JSON.parse(readFileSync("earn-beat-log.json", "utf8")); } catch {}
+if (!Array.isArray(beatLog)) beatLog = [];
+beatLog.forEach((x) => { x.isNew = false; });
+const beatByKey = new Map(beatLog.map((x) => [x.sym + "|" + x.d, x]));
+
+async function reactionChg(sym, announceD, sess) {
+  try {
+    const rows = (await chart(sym, "1mo")).rows;
+    if (!rows.length) return null;
+    const i = rows.findIndex((r) => r.date === announceD);
+    if (i < 0) return null;
+    /* 当日这根 bar 在美东 16:00 之前是「未收盘的半根」，不能当收盘价用 */
+    const closed = (dt) => !(dt === ET_TODAY && ET_HOUR < 16);
+    if (sess === "pre") {
+      /* 盘前公布：公布日收盘 vs 前一交易日收盘 */
+      if (i === 0) return null;
+      if (!closed(rows[i].date)) return null;
+      return { chg: +((rows[i].close / rows[i - 1].close - 1) * 100).toFixed(2), px: rows[i].close, at: rows[i].date };
+    }
+    /* 盘后公布：次日收盘 vs 公布日收盘 */
+    if (i + 1 >= rows.length) return null; /* 次日还没收盘 */
+    if (!closed(rows[i + 1].date)) return null;
+    return { chg: +((rows[i + 1].close / rows[i].close - 1) * 100).toFixed(2), px: rows[i + 1].close, at: rows[i + 1].date };
+  } catch { return null; }
+}
+
+/* 候选池：当日/前一交易日「全部」已披露公司（市值 ≥5 亿美元，按市值取前 40），
+   不走展示用的前 8 家 —— 否则中型/小型永远进不了档，规模门槛就形同虚设。 */
+async function beatCandidates(date, sess) {
+  let rows = [];
+  try { rows = (await cal(date, sess === "pre" ? "time-pre-market" : "time-after-hours")).rows; } catch { return []; }
+  const seen = new Set();
+  return rows
+    .filter((r) => r.symbol && capNum(r.marketCap) >= 5e8)
+    .sort((a, b) => capNum(b.marketCap) - capNum(a.marketCap))
+    .filter((r) => (seen.has(r.symbol) ? false : (seen.add(r.symbol), true)))
+    .slice(0, 40)
+    .map((r) => { const mcap = capNum(r.marketCap); return { sess, annD: date, r, mcap, cut: BEAT_CUT(mcap), size: BEAT_SIZE(mcap) }; });
+}
+
+const beatCand = [...(await beatCandidates(TODAY, "pre")), ...(await beatCandidates(YEST, "post"))];
+
+/* 第一遍：能算出「公布后收盘涨幅」的先算；算不出来（该场次还没收盘）的收一批报价做粗筛 */
+const rcMap = new Map(), needHint = [];
+for (const c of beatCand) {
+  const key = c.r.symbol + "|" + c.annD;
+  const old = beatByKey.get(key);
+  if (old && old.chg != null) continue;              /* 已定稿，不再重复请求 */
+  /* 老记录补算必须用它自己登记的场次：盘前公布的人不会出现在次日 post 名单里 */
+  const rc = await reactionChg(c.r.symbol, c.annD, old ? old.sess : c.sess);
+  if (rc) rcMap.set(key, rc); else needHint.push(c);
+}
+const hintMap = new Map();
+if (needHint.length) {
+  const qm = await quotes([...new Set(needHint.map((c) => c.r.symbol))]);
+  for (const c of needHint) {
+    const q = qm[c.r.symbol] || {};
+    const prev = q.regularMarketPreviousClose, reg = q.regularMarketPrice;
+    const pre = q.preMarketPrice && prev ? (q.preMarketPrice / prev - 1) * 100 : null;
+    const post = q.postMarketPrice && reg ? (q.postMarketPrice / reg - 1) * 100 : null;
+    const day = q.regularMarketChangePercent ?? null;
+    /* 盘前公布 → 看当日盘中涨跌；盘后公布 → 看次日盘前（基准同为公布日收盘），再退回盘后价 */
+    hintMap.set(c.r.symbol + "|" + c.annD, c.sess === "pre" ? (day ?? pre) : (post ?? pre));
+  }
+}
+
+let beatAdded = 0;
+for (const c of beatCand) {
+  const key = c.r.symbol + "|" + c.annD;
+  const old = beatByKey.get(key);
+  if (old && old.chg != null) continue;
+  const rc = rcMap.get(key) || null;
+  const hint = rc ? rc.chg : hintMap.get(key);
+  const qualifies = rc ? rc.chg > c.cut : (hint != null && hint > c.cut);
+  if (!qualifies && !old) continue;                  /* 没到门槛的新候选不留档 */
+  let rec = old;
+  if (!rec) {
+    const ya = await yahooActual(c.r.symbol);
+    const prof = await companyProfile(c.r.symbol);
+    const ra = ya && ya.actual != null ? +ya.actual : numOf(c.r.eps);
+    const re = ya && ya.estimate != null ? +ya.estimate : numOf(c.r.epsForecast);
+    rec = {
+      d: c.annD, sess: c.sess, sym: c.r.symbol, name: cleanName(c.r.name) || c.r.symbol,
+      size: c.size, cut: c.cut,
+      chg: rc ? rc.chg : null, at: rc ? rc.at : null, px: rc ? +rc.px.toFixed(2) : null,
+      mcap: Math.round(c.mcap),
+      epsAct: ra != null ? +ra.toFixed(3) : null,
+      epsEst: re != null ? +re.toFixed(3) : null,
+      surp: ra != null && re ? +(((ra - re) / Math.abs(re)) * 100).toFixed(1) : null,
+      rev: ya && ya.fund && ya.fund.rev ? Math.round(ya.fund.rev) : null,
+      net: ya && ya.fund && ya.fund.net ? Math.round(ya.fund.net) : null,
+      sec: (prof && prof.industry) || "—",
+      desc: (prof && prof.desc) || "",
+      q: quarterOf(c.annD),
+      addedAt: new Date().toISOString(),
+      isNew: true,
+    };
+    beatLog.push(rec); beatByKey.set(key, rec); beatAdded++;
+  } else if (rc) {
+    /* 补算后不达门槛的（pending 阶段只是粗筛）直接撤档 */
+    if (rc.chg <= rec.cut) { beatLog = beatLog.filter((y) => y !== rec); beatByKey.delete(key); continue; }
+    rec.chg = rc.chg; rec.at = rc.at; rec.px = +rc.px.toFixed(2); rec.isNew = true;
+  }
+}
+
+/* 兜底补齐：pending 记录可能在后续场次里不再出现在候选名单（盘前的不会进次日 post 名单），
+   每轮单独扫一遍近 10 天的 pending，够门槛就定稿、不够就撤档。 */
+const pendingOld = beatLog.filter((x) => x.chg == null);
+for (const rec of pendingOld) {
+  if (Date.parse(TODAY) - Date.parse(rec.d) > 10 * 864e5) continue;
+  const rc = await reactionChg(rec.sym, rec.d, rec.sess);
+  if (!rc) continue;
+  if (rc.chg <= rec.cut) { beatLog = beatLog.filter((y) => y !== rec); beatByKey.delete(rec.sym + "|" + rec.d); continue; }
+  rec.chg = rc.chg; rec.at = rc.at; rec.px = +rc.px.toFixed(2);
+}
+/* 只保留最近 4 个季度、最多 400 条 */
+const qs = [...new Set(beatLog.map((x) => x.q))].sort().reverse().slice(0, 4);
+beatLog = beatLog.filter((x) => qs.includes(x.q)).slice(-400);
+writeFileSync("earn-beat-log.json", JSON.stringify(beatLog, null, 1));
+const beatQuarters = qs.map((q) => ({ q, rows: beatLog.filter((x) => x.q === q).sort((a, b) => b.d.localeCompare(a.d)) }));
+console.log("业绩超预期存档：" + beatLog.length + " 条（本轮新增 " + beatAdded + "）· 季度 " + qs.join("/") +
+  " · 待确认次日收盘 " + beatLog.filter((x) => x.chg == null).length + " 条");
+
+const out = {  meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
   quotes: quotesOut, sectors, btc, eth, breadth, spxVol,
   earnings: { preDate: TODAY, postDate: YEST,
               pre: pre.rows, preTotal: pre.total, preHit: pre.hit, preCached: pre.fromCache,
@@ -927,6 +1077,8 @@ const out = {
   crosscheck,
   tracks: trackData,
   highs,
+  earnBeat: { updatedAt: new Date().toISOString(), quarters: beatQuarters, total: beatLog.length,
+              pending: beatLog.filter((x) => x.chg == null).length },
   gpuRent,
   movers,
 };

@@ -4,3 +4,5 @@ qr-mobile.png
 live-data.yahoo.js
 ._check.js
 .DS_Store
+sync-*.log
+_*.mjs

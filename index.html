@@ -1674,6 +1674,7 @@ function hydrateExtra(Y){
 
   /* 8. 创新高滚动日志 + 赛道代表标的池 */
   DATA.highs = Y.highs || null;
+  DATA.earnBeat = Y.earnBeat || null;
   if(Y.tracks && DATA.tracks) DATA.tracks.forEach(t=>{ if(Y.tracks[t.id]) t.symsLive=Y.tracks[t.id]; });
 
   /* 9. 市场正在交易什么：客观观测（全部由可复核数据推导，每次更新重算） */
@@ -1859,33 +1860,53 @@ function mktClose(){
   const spread=(label,x,base)=>'<div class="mkt-row"><span class="nm">'+label+'</span>'+
     '<span class="lv num">'+((x&&base&&x.d20!=null&&base.d20!=null)?pct(x.d20-base.d20,1):"—")+'</span>'+
     '<span class="c1"></span><span class="c20"></span></div>';
-  const spx=g("SPX.GI"), ix=g("IXIC.GI"), ndx=g("NDX.GI"), dji=g("DJI.GI"), sox=g("SOX.GI"), vix=g("VIX.GI");
-  const hsi=g("HSI.HI"), sh=g("000001.SH"), n225=g("N225.GI"), ks=g("KS11.GI"), dax=g("GDAXI.GI"), ftse=g("FTSE.GI");
+  const spx=g("SPX.GI"), ix=g("IXIC.GI"), ndx=g("NDX.GI"), dji=g("DJI.GI"), rut=g("RUT.GI"), sox=g("SOX.GI"), vix=g("VIX.GI");
+  const hsi=g("HSI.HI"), hstech=g("HSTECH.HI"), hshci=g("HSHCI.HI"), hshki=g("HSHKI.HI"), hshdy=g("HSSCHKY.HI");
+  const sh=g("000001.SH"), kc50=g("000688.SH"), kc100=g("000698.SH"), cyb=g("399006.SZ");
+  const hs300=g("000300.SH"), zz500=g("000905.SH"), zz1000=g("000852.SH"), zz2000=g("932000.SH"), bz50=g("BSE50.BJ");
+  const n225=g("N225.GI"), ks=g("KS11.GI"), dax=g("GDAXI.GI"), ftse=g("FTSE.GI");
   const usDate=dstr(spx), cnDate=dstr(sh), hkDate=dstr(hsi);
   const gap=(a,b)=> (a&&b&&a.d20!=null&&b.d20!=null) ? (a.d20-b.d20) : null;
   const gapSoxDji=gap(sox,dji), gapHkCn=gap(hsi,sh);
+  /* 港五档里当日最强的一档（用于「最抗跌/最强」的表述，避免写死高股息率） */
+  const hshkBest=[["tech","恒生科技",hstech],["hci","恒生医疗保健",hshci],["hk","恒生港股通",hshki],["dy","恒生港股通高股息率",hshdy]]
+    .filter(x=>x[2]&&x[2].chg!=null)
+    .sort((a,b)=>b[2].chg-a[2].chg)
+    .map(x=>({k:x[0],nm:x[1],chg:x[2].chg}))[0] || null;
 
   let h='<div class="mkt3">';
   /* 美股 */
   h+='<div class="mkt-card"><div class="mh"><span class="tag blue">美股</span><span class="nm">收盘总结</span><span class="dt">'+usDate+' · 美东 16:00</span></div>';
-  h+=row("标普 500",spx)+row("纳斯达克综合",ix)+row("纳斯达克 100",ndx)+row("道琼斯",dji)+row("费城半导体",sox)+row("VIX",vix);
+  h+=row("标普 500",spx)+row("纳斯达克综合",ix)+row("纳斯达克 100",ndx)+row("道琼斯",dji)+row("罗素 2000",rut)+row("费城半导体",sox)+row("VIX",vix);
   h+='<div class="mkt-foot">'+
-     (spx? '三大指数同日小幅收跌，但 <b>VIX '+pct(vix&&vix.chg,2)+'</b> 逆势上行——<b>指数不动、波动率抬升</b>，是分歧放大而不是单向撤退。' : '指数数据待接入。')+
+     (spx? ('标普 <b>'+pct(spx.chg,2)+'</b>、纳指 <b>'+pct(ix&&ix.chg,2)+'</b>、道指 <b>'+pct(dji&&dji.chg,2)+'</b>，'+
+       (vix? 'VIX <b>'+pct(vix.chg,2)+'</b> 至 '+fmtNum(vix.level,2)+'——'+(vix.chg>0?'指数与波动率<b>反向</b>，说明分歧在放大，是换手不是撤退。':'波动率同步回落，避险需求在下降，跌更像获利了结。'):'') )
+      : '指数数据待接入。')+
+     (rut&&spx? ' 20 日维度：<b>罗素 2000 '+pct(rut.d20,1)+'</b> vs <b>标普 '+pct(spx.d20,1)+'</b>——'+(rut.d20<spx.d20?'<b>小盘跑输，风险偏好没有向广度扩散</b>。':'小盘占优，广度在改善。') : '')+
      (gapSoxDji!=null && gapSoxDji<-3 ? ' 20 日费半相对道指 <b>'+pct(gapSoxDji,1)+'</b>，<b>AI 链杀估值、价值端仍是正收益</b>。' : '')+
      '</div></div>';
   /* 港股 */
   h+='<div class="mkt-card"><div class="mh"><span class="tag violet">中国香港</span><span class="nm">收盘总结</span><span class="dt">'+hkDate+' · 16:00</span></div>';
-  h+=row("恒生指数",hsi)+spread("相对纳指 100（20 日）",hsi,ndx);
+  h+=row("恒生指数",hsi)+row("恒生科技",hstech)+row("恒生医疗保健",hshci)+row("恒生港股通",hshki)+row("恒生港股通高股息率",hshdy);
+  h+=spread("恒生指数 相对纳指 100（20 日）",hsi,ndx);
   h+='<div class="mkt-foot">'+
-     (hsi? '恒生 <b>'+pct(hsi.chg,2)+'</b>，20 日 <b>'+pct(hsi.d20,1)+'</b>。'+
-       (hsi.d20!=null&&hsi.d20>-3 ? '中期跌幅小于 A 股与纳指 100，属<b>抗跌后的单日补跌</b>，不是趋势破坏。' : '中期已进入下行，单日跌幅需与 A 股同看。') : '数据待接入。')+
+     (hsi? '恒生 <b>'+pct(hsi.chg,2)+'</b>，20 日 <b>'+pct(hsi.d20,1)+'</b>。' : '数据待接入。')+
+     (hstech&&hsi? ' 结构：<b>恒生科技 '+pct(hstech.chg,2)+'</b> vs 恒生 '+pct(hsi.chg,2)+'，'+(hstech.chg<hsi.chg?'<b>成长端跌得更重</b>':'成长端更强')+'。' : '')+
+     (hshkBest? ' 其余四档里 <b>'+hshkBest.nm+' '+pct(hshkBest.chg,2)+'</b> 最'+(hshkBest.chg<0?'抗跌':'强')+'，'+
+        (hshkBest.k==="dy"?'<b>防御姿态而非风险偏好回升</b>。':'<b>资金在往这个方向躲</b>。') : '')+
+     (hshci? ' 医疗保健 <b>'+pct(hshci.chg,2)+'</b>'+
+        (hsi? '，'+(hshci.chg<hsi.chg?'<b>跌幅大于恒指，创新药在杀估值</b>':'<b>跌幅小于恒指，防御属性在起作用</b>') : '')+'。' : '')+
      '</div></div>';
   /* A股 */
   h+='<div class="mkt-card"><div class="mh"><span class="tag amber">中国内地</span><span class="nm">收盘总结</span><span class="dt">'+cnDate+' · 15:00</span></div>';
-  h+=row("上证指数",sh)+spread("相对纳指 100（20 日）",sh,ndx);
+  h+=row("上证指数",sh)+row("沪深 300",hs300)+row("中证 500",zz500)+row("中证 1000",zz1000)+row("中证 2000",zz2000);
+  h+=row("创业板指",cyb)+row("科创 50",kc50)+row("科创 100",kc100)+row("北证 50",bz50);
   h+='<div class="mkt-foot">'+
      (sh? '上证 <b>'+pct(sh.chg,2)+'</b>，20 日 <b>'+pct(sh.d20,1)+'</b>。'+
        (gapHkCn!=null ? '港股−A 股 20 日差 <b>'+pct(gapHkCn,1)+'</b>，'+(gapHkCn>0?'<b>港股中期强于 A 股</b>':'<b>A 股中期强于港股</b>')+'。' : '') : '数据待接入。')+
+     (hs300&&zz2000? ' 大小盘：<b>沪深 300 '+pct(hs300.chg,2)+'</b> vs <b>中证 2000 '+pct(zz2000.chg,2)+'</b>，'+(zz2000.chg<hs300.chg?'<b>小盘跌得更重，资金退回权重</b>。':'小盘更强，投机资金还在。') : '')+
+     (kc50&&cyb&&sh? ' 成长端 <b>科创 50 '+pct(kc50.chg,2)+'</b>、<b>创业板 '+pct(cyb.chg,2)+'</b> vs 上证 '+pct(sh.chg,2)+'——'+
+        ((kc50.chg<sh.chg||cyb.chg<sh.chg)?'<b>跌幅大于主板，高贝塔先跌</b>。':'<b>成长端反而更强，资金在往弹性方向走</b>。') : '')+
      '</div></div>';
   h+='</div>';
   /* 其它市场一行 */
@@ -1895,7 +1916,9 @@ function mktClose(){
        '<b style="color:var(--text)">其它主要市场</b>　'+others.map(x=>x[0]+' '+fmtNum(x[1].level,2)+' <b class="'+sgn(x[1].chg)+'">'+pct(x[1].chg,2)+'</b>（20 日 '+pct(x[1].d20,1)+'）').join('　·　')+
        '　—— <b>今天涨的是“没有 AI 权重”的市场</b>，这本身是对 AI 交易拥挤度的一次定价。</div>';
   }
-  h+='<div class="tiny muted" style="margin:-6px 0 14px;padding-left:2px">口径：三个市场的<b>同日收盘</b>（美股为上一交易日 16:00 美东收盘价，港股 16:00、A 股 15:00 北京时间）。当日 = 相对前一交易日收盘；20 日 = 相对 20 个交易日前收盘。三大市场至此<b>全部结束</b>，本模块做的是<b>收盘总结</b>，不是盘后业绩摘要。</div>';
+  h+='<div class="tiny muted" style="margin:-6px 0 14px;padding-left:2px">口径：三个市场的<b>同日收盘</b>（美股为上一交易日 16:00 美东收盘价，港股 16:00、A 股 15:00 北京时间）。当日 = 相对前一交易日收盘；20 日 = 相对 20 个交易日前收盘。三大市场至此<b>全部结束</b>，本模块做的是<b>收盘总结</b>，不是盘后业绩摘要。'+
+     ((usDate&&cnDate&&usDate!==cnDate)?'　<b>注意</b>：A 股/港股已收 '+cnDate+'，美股最新收盘为 '+usDate+'，两者<b>不是同一交易日</b>（美股当日场次尚未收盘），跨市场对比时别混。':'')+
+     '</div>';
   return h;
 }
 
@@ -2080,12 +2103,128 @@ function viewBrief(){
   });
   h+='</div>';
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">排序：<b>按日期倒序</b>，最新在最前；<b>红色 = 本轮（本次 07:00 场）新增</b>，重点表述用<b>黑体</b>。原则：只保留可核对出处的机构观点（机构 + 日期 + 核心结论），<b>旧条目不删、只追加</b>，便于回看观点如何演变；目标价只在原文披露时给出，不代机构外推。</div></div>';
+
+  /* ---- 08 本季度业绩超预期股票存档 ---- */
+  h+=ebSection();
+  return h;
+}
+
+/* ---------- 业绩超预期存档（每日资讯 08） ----------
+   数据来自 live-extra.earnBeat：按自然季度归档，每条含公布日/场次/公布后涨幅/市值/EPS 超预期/行业/简介。
+   页面只负责渲染 + 排序 + 季度切换。 */
+/* Nasdaq 的 Industry 字段是英文，落盘时保留原值（便于核对），渲染时转中文 */
+const SEC_ZH = {
+  "Semiconductors":"半导体","Semiconductor Equipment & Materials":"半导体设备","EDP Services":"软件与数据服务",
+  "Computer Manufacturing":"计算机硬件","Computer Software: Prepackaged Software":"基础软件","Computer Software: Programming, Data Processing":"数据与算力服务",
+  "Industrial Machinery/Components":"工业机械","Electrical Products":"电气设备","Building Products":"建材","Engineering & Construction":"工程建筑",
+  "Biotechnology: Biological Products (No Diagnostic Substances)":"生物制品","Biotechnology: Pharmaceutical Preparations":"创新药","Medical/Dental Instruments":"医疗器械","Medical Specialities":"医疗服务",
+  "Broadcasting":"传媒/广播","Cable & Other Payroll":"有线电视","Telecommunications Equipment":"通信设备","Telecommunications":"电信运营",
+  "Major Banks":"大型银行","Commercial Banks":"商业银行","Finance: Consumer Services":"消费金融","Investment Managers":"资产管理","Property-Casualty Insurers":"财产险",
+  "Oil & Gas Production":"油气开采","Oilfield Services/Equipment":"油服设备","Electric Utilities: Central":"电力公用","Natural Gas Distribution":"燃气公用",
+  "Retail: Specialty":"专业零售","Retail: Food Chains":"食品零售","Restaurants":"餐饮","Apparel":"服装","Package Goods/Cosmetics":"日化",
+  "Aerospace":"航空航天","Military/Government/Technical":"国防军工","Auto Manufacturing":"汽车整车","Metal Fabrications":"金属加工","Mining & Quarrying of Nonmetallic Minerals (No Fuels)":"非金属矿",
+  "Real Estate":"房地产","Transportation":"交通运输","Air Freight/Delivery Services":"航空货运","Advertising":"广告营销","Services-Misc. Amusement & Recreation":"休闲娱乐",
+};
+const secZh = (s) => SEC_ZH[s] || s || "—";
+function ebSection(){
+  return '<div class="sec">'+secHead("08","本季度业绩超预期股票存档",
+      "纳入标准：财报公布后收盘涨幅 大市值 &gt;3% / 中型 &gt;5% / 小型 &gt;8%（盘前公布取当日收盘，盘后公布取次日收盘）· 按自然季度归档",
+      "<span class='upd'>"+(((DATA.earnBeat&&DATA.earnBeat.total)||0))+" 条累计</span>"+
+      (((DATA.earnBeat&&DATA.earnBeat.pending)||0)?("<span class='upd'>待确认 "+DATA.earnBeat.pending+" 条</span>"):""))+
+    '<div id="eb-wrap">'+ebInner()+'</div></div>';
+}
+function ebInner(){
+  const E=DATA.earnBeat;
+  const QS=(E&&E.quarters)||[];
+  if(!QS.length || !QS.some(q=>q.rows&&q.rows.length)){
+    return '<div class="card" style="padding:12px 14px"><span class="tiny muted">存档自本次更新起开始积累：财报公布后达到门槛（大市值 &gt;3% / 中型 &gt;5% / 小型 &gt;8%）的股票会自动建档，按自然季度归档；下一轮 07:00 之后这里会出现第一批记录。</span></div>';
+  }
+  if(!EB_ST.q || !QS.some(q=>q.q===EB_ST.q)) EB_ST.q=QS[0].q;
+  const cur=QS.find(q=>q.q===EB_ST.q)||QS[0];
+  const rows=cur.rows.slice();
+  const sk=EB_ST.sort;
+  const asc=(a,b)=>{
+    const k=sk.key;
+    if(k==="mcap") return (a.mcap||0)-(b.mcap||0);
+    if(k==="chg") return (a.chg==null?-1e9:a.chg)-(b.chg==null?-1e9:b.chg);
+    const sa=String(k==="sec"?secZh(a.sec):(a[k]||"")), sb=String(k==="sec"?secZh(b.sec):(b[k]||""));
+    return sa>sb?1:sa<sb?-1:0;
+  };
+  rows.sort((a,b)=>asc(a,b)*-sk.dir);
+  const arrow=(k)=> sk.key===k ? (sk.dir>0?" ▾":" ▴") : "";
+  const th=(k,label,w)=>'<th class="num'+(w?' style="width:'+w+';cursor:pointer"':' style="cursor:pointer"')+'" data-ebs="'+k+'" title="点击排序">'+label+arrow(k)+'</th>';
+
+  /* 归纳 / 分析解读 */
+  const n=rows.length, fresh=rows.filter(x=>x.isNew).length;
+  const bigN=rows.filter(x=>x.size==="大市值").length, midN=rows.filter(x=>x.size==="中型").length, smN=rows.filter(x=>x.size==="小型").length;
+  const withChg=rows.filter(x=>x.chg!=null);
+  const avg=withChg.length?withChg.reduce((s,x)=>s+x.chg,0)/withChg.length:null;
+  const best=withChg.slice().sort((a,b)=>b.chg-a.chg)[0];
+  const secE=Object.entries(rows.reduce((m,x)=>{const k=secZh(x.sec);m[k]=(m[k]||0)+1;return m;},{})).sort((a,b)=>b[1]-a[1]);
+  const topShare=secE.length&&n?Math.round(secE[0][1]/n*100):0;
+  const beatN=rows.filter(x=>x.surp!=null&&x.surp>0).length;
+
+  let h='<div class="filters" style="margin:0 0 10px">';
+  QS.forEach(q=>{ h+='<button class="fchip'+(q.q===EB_ST.q?' on':'')+'" data-ebq="'+q.q+'">'+q.q+' · '+((q.rows||[]).length)+' 条</button>'; });
+  h+='</div>';
+
+  const pendN=n-withChg.length;
+  h+='<div class="card" style="padding:14px 16px;margin-bottom:10px"><b style="font-size:12px">当季归纳 · 分析解读</b><div class="read" style="margin-top:7px;line-height:1.85">';
+  h+=cur.q+' 已存档 <b>'+n+'</b> 只'+((pendN===n&&n)?'<b>候选</b>（业绩已披露，涨幅等收盘定稿）':'业绩超预期后股价达标的公司');
+  if(fresh) h+='（<span style="color:var(--up);font-weight:650">本轮新增 '+fresh+' 只，表中标红</span>）';
+  h+='：大市值 <b>'+bigN+'</b>、中型 '+midN+'、小型 '+smN+'；';
+  if(avg!=null){
+    h+='平均公布后涨幅 <b class="'+sgn(avg)+'">'+pct(avg,1)+'</b>'+
+       (best?('，最强 <b>'+best.sym+' '+pct(best.chg,1)+'</b>'):'')+'。'+
+       (pendN?(' 另有 <b>'+pendN+' 只</b>等对应场次收盘定稿，定稿后不达门槛的会撤档。'):'');
+  }else{
+    h+='<b>这一批都还没收盘</b>——涨跌幅要等对应场次（盘前看当日收盘、盘后看次日收盘）走完才定稿，表里先记「待收盘」，定稿后不达门槛的自动撤档。';
+  }
+  h+=(beatN?' 其中 <b>'+beatN+' 只</b> EPS 明确超一致预期':'（EPS 未超一致预期，属于<b>指引驱动</b>）')+'。<br>'+
+     '行业分布：'+(secE.length?secE.slice(0,4).map(x=>'<b>'+esc(x[0])+'</b> '+x[1]+' 只').join('、'):'—')+'。'+
+     (n<=2?' <b>样本还很少</b>，先当观察名单用，别据此判断行业景气。'
+       : (topShare>=40? ' <b>集中在 '+esc(secE[0][0])+'（'+topShare+'%）</b>，说明这批超预期有<b>共同的产业线索</b>，值得沿产业链往上游/下游找补涨。'
+         : ' 分散在多个行业，更像<b>普涨式超预期</b>（预期本身偏低），<b>持续性要看下一季指引</b>，不能当成单一赛道信号。'))+
+     '<br><b>怎么用这份存档</b>：①对比「公布后涨幅」与「EPS 超预期幅度」——涨幅远超超预期幅度 = 指引/叙事在加分，容易回落；两者接近 = 定价理性，可跟；'+
+     '②同一行业连续多季出现达标公司，才是<b>行业级景气</b>的证据；③市值越大、达标门槛越低（3%），所以大市值上榜不代表弹性大，<b>看的是确定性不是爆发力</b>。'+
+     '</div></div>';
+
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+     '<th style="width:160px">标的</th>'+th("d","公布日","96px")+'<th style="width:64px">场次</th>'+
+     th("chg","公布后涨幅","100px")+th("mcap","市值","96px")+
+     '<th style="width:26%">业绩 / 指引超预期</th>'+th("sec","行业","120px")+
+     '<th style="width:30%">公司简介</th></tr></thead><tbody>';
+  if(!n){
+    h+='<tr><td colspan="8" class="empty">该季度暂无达标记录</td></tr>';
+  }
+  rows.forEach(x=>{
+    const isNew=!!x.isNew;
+    const c=x.chg;
+    const surpTxt = (x.surp!=null)
+      ? (x.surp>0
+        ? '<b class="up">EPS 超预期 '+pct(x.surp,1)+'</b>'
+        : '<b class="down">EPS 低于预期 '+pct(x.surp,1)+'</b>（指引/叙事驱动）')
+      : '<span class="muted">EPS 超预期幅度待补</span>';
+    const numTxt = (x.epsAct!=null&&x.epsEst!=null) ? '<span class="tiny muted">实际 '+x.epsAct+' / 预期 '+x.epsEst+'</span>' : '';
+    h+='<tr'+(isNew?' class="isnew"':'')+'>'+
+      '<td><div class="tk">'+x.sym+(isNew?' <span class="newflag">新</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
+      '<td class="num" style="white-space:nowrap">'+x.d+'</td>'+
+      '<td><span class="tag'+(x.sess==="pre"?" blue":" violet")+'">'+(x.sess==="pre"?"盘前":"盘后")+'</span></td>'+
+      '<td class="num" style="font-weight:650">'+(c!=null?'<span class="chg '+sgn(c)+'">'+pct(c,1)+'</span>':'<span class="tiny muted">'+(x.sess==="pre"?"待当日收盘":"待次日收盘")+'</span>')+'</td>'+
+      '<td class="num">'+fmtCap(x.mcap)+'<div class="tiny muted">'+x.size+'</div></td>'+
+      '<td class="read" style="font-size:11px;line-height:1.6">'+surpTxt+(numTxt?('<br>'+numTxt):'')+'</td>'+
+      '<td><span class="tag">'+esc(secZh(x.sec))+'</span></td>'+
+      '<td class="read" style="font-size:11px;line-height:1.6">'+esc(x.desc||"—")+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：<b>公布后涨幅</b>——盘前公布取公布当日收盘涨幅（相对前一交易日收盘），盘后公布取<b>次日</b>收盘涨幅（相对公布日收盘），统一用日线收盘自算，不取盘中/盘后瞬时价；<b>市值</b>为公布后收盘时点市值；<b>场次</b>区分盘前/盘后；对应场次还没收盘的记「待当日收盘 / 待次日收盘」，下一轮自动补齐（补算后不达门槛的<b>撤档</b>）。覆盖当日全部披露公司中市值 ≥5 亿美元的前 40 家，按自然季度滚动保留最近 4 个季度。</div>';
   return h;
 }
 
 /* ---------- 02 ---------- */
 let trackSel="phy";
 const HI_ST={type:"全部", trk:"全部", sec:"全部", sort:{key:"chg", dir:1}};   /* 异动监测·新高表：类型/赛道/板块筛选 + 列排序（dir=1 降序 / -1 升序） */
+const EB_ST={q:null, sort:{key:"d", dir:1}};                                   /* 业绩超预期存档：季度 + 列排序（dir=1 降序/倒序） */
 /* ---- 赛道代表标的：基本面一句话 + 催化剂时间表（未来一年，近期细化） ---- */
 const TRACK_FUND = {
   MSFT:"Azure AI 收入 33%+ 占云新增主力；Copilot 企业渗透 12%；估值 30x FWD 偏贵但现金流转性强",
@@ -2157,7 +2296,7 @@ const TRACK_FUND = {
   REGN:"Eylea 被 biosimilar 蚕食；Dupixent 维持高增",
 };
 const gpuChartSvg = () => {
-  const G = Y.gpuRent;
+  const G = YF && YF.gpuRent;
   if (!G || !G.series) return "";
   const W = 620, H = 230, L = 40, R = 14, T = 14, B = 30;
   const mk = (arr) => arr.map(p => ({ d: p[0], v: p[1] }));
@@ -2214,8 +2353,8 @@ function viewTracks(){
   h+='</div>';
 
   /* GPU 租金趋势：AI 基础设施/数据中心赛道的供给端温度计 */
-  if(t.id==="infra" && Y.gpuRent){
-    const G=Y.gpuRent;
+  if(t.id==="infra" && YF && YF.gpuRent){
+    const G=YF.gpuRent;
     h+='<div class="sec" style="margin-top:14px">'+secHead("","美国 GPU 现货租金趋势",
         "Ornn OCPI 口径 · $/GPU·h · 成交价日结算 · H100 / H200 / B200",
         "<span class='upd'>最新 "+asOfFmt((G.latest&&G.latest.date||"").replace(/-/g,""))+"</span>");
@@ -3168,6 +3307,23 @@ function route(){
   const v=$("#view"); v.innerHTML=VIEWS[mod.id]();
   v.style.animation="none"; void v.offsetWidth; v.style.animation="";
   window.scrollTo({top:0,behavior:"instant"});
+
+  if(mod.id==="brief"){
+    /* 业绩超预期存档：季度切换 + 表头排序 */
+    const bindEb=()=>{
+      document.querySelectorAll("[data-ebq]").forEach(b=>{
+        b.onclick=()=>{ EB_ST.q=b.dataset.ebq; $("#eb-wrap").innerHTML=ebInner(); bindEb(); };
+      });
+      document.querySelectorAll("[data-ebs]").forEach(th=>{
+        th.onclick=()=>{
+          const k=th.dataset.ebs;
+          if(EB_ST.sort.key===k) EB_ST.sort.dir*=-1; else EB_ST.sort={key:k,dir:1};
+          $("#eb-wrap").innerHTML=ebInner(); bindEb();
+        };
+      });
+    };
+    bindEb();
+  }
 
   if(mod.id==="tracks"){
     document.querySelectorAll("[data-t]").forEach(el=>{ el.onclick=()=>{ trackSel=el.dataset.t; route(); }; });

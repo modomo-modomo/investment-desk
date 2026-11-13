@@ -2,25 +2,25 @@
  {
   "date": "2026-11-13",
   "session": "pre",
-  "ts": "2026-11-13T13:42:51.426Z",
+  "ts": "2026-11-13T14:15:23.727Z",
   "state": "PRE",
   "rows": [
+   {
+    "sym": "OWLT",
+    "name": "Owlet",
+    "sec": "工业",
+    "track": "其它",
+    "mv": -49.31,
+    "px": 4.62,
+    "earn": true
+   },
    {
     "sym": "NPCE",
     "name": "Neuropace",
     "sec": "医疗",
     "track": "其它",
-    "mv": -39.82,
+    "mv": -46.2,
     "px": 12.02,
-    "earn": false
-   },
-   {
-    "sym": "MOD",
-    "name": "Modine Manufacturing",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": 34.6,
-    "px": 106.1,
     "earn": false
    },
    {
@@ -28,25 +28,25 @@
     "name": "Candel Therapeutics",
     "sec": "医疗",
     "track": "其它",
-    "mv": -34.56,
+    "mv": -38.5,
     "px": 8.39,
     "earn": false
    },
    {
-    "sym": "OWLT",
-    "name": "Owlet",
-    "sec": "工业",
+    "sym": "MOD",
+    "name": "Modine Manufacturing",
+    "sec": "可选消费",
     "track": "其它",
-    "mv": -24.49,
-    "px": 4.62,
-    "earn": true
+    "mv": 31.78,
+    "px": 106.1,
+    "earn": false
    },
    {
     "sym": "LFTO",
     "name": "Liftoff Mobile",
     "sec": "科技",
     "track": "其它",
-    "mv": 22.03,
+    "mv": 24.76,
     "px": 18.71,
     "earn": false
    },
@@ -55,7 +55,7 @@
     "name": "Newsmax",
     "sec": "工业",
     "track": "其它",
-    "mv": 20.03,
+    "mv": 21.81,
     "px": 7.29,
     "earn": false
    },
@@ -64,7 +64,7 @@
     "name": "Shimmick",
     "sec": "工业",
     "track": "其它",
-    "mv": 19.66,
+    "mv": 21.37,
     "px": 2.34,
     "earn": false
    },
@@ -73,8 +73,26 @@
     "name": "KinderCare Learning Companies",
     "sec": "可选消费",
     "track": "其它",
-    "mv": -19.43,
+    "mv": -18.01,
     "px": 2.11,
+    "earn": false
+   },
+   {
+    "sym": "CDXS",
+    "name": "Codexis",
+    "sec": "工业",
+    "track": "其它",
+    "mv": 17.94,
+    "px": 0.96,
+    "earn": false
+   },
+   {
+    "sym": "GCTS",
+    "name": "GCT Semiconductor",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -17.65,
+    "px": 1.54,
     "earn": false
    },
    {
@@ -87,29 +105,11 @@
     "earn": false
    },
    {
-    "sym": "DEFT",
-    "name": "Defi Technologies",
-    "sec": "金融",
-    "track": "其它",
-    "mv": 15.38,
-    "px": 0.3,
-    "earn": false
-   },
-   {
-    "sym": "GCTS",
-    "name": "GCT Semiconductor",
-    "sec": "科技",
-    "track": "其它",
-    "mv": -15.02,
-    "px": 1.54,
-    "earn": false
-   },
-   {
     "sym": "DGXX",
     "name": "Digi Power X Subordinate Voting Shares",
     "sec": "金融",
     "track": "其它",
-    "mv": 14.98,
+    "mv": 16.29,
     "px": 2.21,
     "earn": true
    },
@@ -118,17 +118,26 @@
     "name": "Vir Biotechnology",
     "sec": "医疗",
     "track": "其它",
-    "mv": -14.6,
+    "mv": -15.68,
     "px": 12.12,
     "earn": false
    },
    {
-    "sym": "HAWK",
-    "name": "HawkEye 360",
-    "sec": "科技",
+    "sym": "DEFT",
+    "name": "Defi Technologies",
+    "sec": "金融",
     "track": "其它",
-    "mv": 12.47,
-    "px": 14.67,
+    "mv": 15.61,
+    "px": 0.3,
+    "earn": false
+   },
+   {
+    "sym": "ARAI",
+    "name": "Arrive AI",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": 14.56,
+    "px": 2.06,
     "earn": false
    },
    {
@@ -136,8 +145,26 @@
     "name": "NeoVolta",
     "sec": "Miscellaneous",
     "track": "其它",
-    "mv": 12.25,
+    "mv": 13.04,
     "px": 2.85,
+    "earn": false
+   },
+   {
+    "sym": "CBRS",
+    "name": "Cerebras Systems",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 12.7,
+    "px": 97.75,
+    "earn": false
+   },
+   {
+    "sym": "HAWK",
+    "name": "HawkEye 360",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 12.41,
+    "px": 14.67,
     "earn": false
    },
    {
@@ -145,26 +172,17 @@
     "name": "SBC Medical",
     "sec": "医疗",
     "track": "其它",
-    "mv": 12.2,
+    "mv": 11.89,
     "px": 5.34,
     "earn": true
    },
    {
-    "sym": "CBRS",
-    "name": "Cerebras Systems",
-    "sec": "科技",
+    "sym": "FLO",
+    "name": "Flowers Foods",
+    "sec": "必需消费",
     "track": "其它",
-    "mv": 11.75,
-    "px": 97.75,
-    "earn": false
-   },
-   {
-    "sym": "CDXS",
-    "name": "Codexis",
-    "sec": "工业",
-    "track": "其它",
-    "mv": 11.69,
-    "px": 0.96,
+    "mv": -11.81,
+    "px": 6.01,
     "earn": false
    },
    {
@@ -172,8 +190,26 @@
     "name": "Tandem Diabetes Care",
     "sec": "医疗",
     "track": "其它",
-    "mv": 11.36,
+    "mv": 11.25,
     "px": 17.51,
+    "earn": false
+   },
+   {
+    "sym": "YSS",
+    "name": "York Space Systems",
+    "sec": "工业",
+    "track": "其它",
+    "mv": -11.15,
+    "px": 6.6,
+    "earn": false
+   },
+   {
+    "sym": "RZLT",
+    "name": "Rezolute (NV)",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 11.11,
+    "px": 3.87,
     "earn": false
    },
    {
@@ -181,8 +217,17 @@
     "name": "SES AI",
     "sec": "Miscellaneous",
     "track": "其它",
-    "mv": 11.19,
+    "mv": 11.07,
     "px": 0.58,
+    "earn": false
+   },
+   {
+    "sym": "WW",
+    "name": "WW International",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": -10.76,
+    "px": 12.27,
     "earn": false
    },
    {
@@ -204,15 +249,6 @@
     "earn": false
    },
    {
-    "sym": "YSS",
-    "name": "York Space Systems",
-    "sec": "工业",
-    "track": "其它",
-    "mv": -10.08,
-    "px": 6.6,
-    "earn": false
-   },
-   {
     "sym": "MSB",
     "name": "Mesabi Trust",
     "sec": "工业",
@@ -222,21 +258,21 @@
     "earn": false
    },
    {
-    "sym": "TII",
-    "name": "Titan Mining Common Shares",
-    "sec": "科技",
-    "track": "其它",
-    "mv": 9.72,
-    "px": 1.89,
-    "earn": false
-   },
-   {
     "sym": "SPCE",
     "name": "Virgin Galactic",
     "sec": "可选消费",
     "track": "其它",
-    "mv": -8.75,
+    "mv": -9.5,
     "px": 2.67,
+    "earn": false
+   },
+   {
+    "sym": "TMC",
+    "name": "TMC the metals",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": 9.04,
+    "px": 2.3,
     "earn": false
    },
    {
@@ -258,6 +294,15 @@
     "earn": false
    },
    {
+    "sym": "ZSQR",
+    "name": "Z Squared",
+    "sec": "金融",
+    "track": "其它",
+    "mv": 8.5,
+    "px": 2.47,
+    "earn": false
+   },
+   {
     "sym": "ANDG",
     "name": "Andersen",
     "sec": "可选消费",
@@ -267,21 +312,21 @@
     "earn": false
    },
    {
-    "sym": "GYRE",
-    "name": "Gyre Therapeutics",
-    "sec": "医疗",
+    "sym": "OPTX",
+    "name": "Syntec Optics",
+    "sec": "科技",
     "track": "其它",
-    "mv": 8.14,
-    "px": 4.3,
+    "mv": 8.09,
+    "px": 6.8,
     "earn": false
    },
    {
-    "sym": "FLO",
-    "name": "Flowers Foods",
-    "sec": "必需消费",
+    "sym": "PRQR",
+    "name": "ProQR Therapeutics N.V.",
+    "sec": "医疗",
     "track": "其它",
-    "mv": -7.99,
-    "px": 6.01,
+    "mv": 8.09,
+    "px": 1.36,
     "earn": false
    },
    {
@@ -289,8 +334,17 @@
     "name": "SELLAS Life Sciences",
     "sec": "医疗",
     "track": "其它",
-    "mv": 7.72,
+    "mv": 7.85,
     "px": 8.03,
+    "earn": false
+   },
+   {
+    "sym": "SID",
+    "name": "Companhia Siderurgica Nacional S.A.",
+    "sec": "工业",
+    "track": "其它",
+    "mv": -7.58,
+    "px": 0.77,
     "earn": false
    },
    {
@@ -303,12 +357,12 @@
     "earn": false
    },
    {
-    "sym": "CYPH",
-    "name": "Cypherpunk Technologies",
-    "sec": "医疗",
+    "sym": "TII",
+    "name": "Titan Mining Common Shares",
+    "sec": "科技",
     "track": "其它",
-    "mv": 7.36,
-    "px": 1.95,
+    "mv": 7.52,
+    "px": 1.89,
     "earn": false
    },
    {
@@ -316,7 +370,7 @@
     "name": "Wise",
     "sec": "工业",
     "track": "其它",
-    "mv": 7.23,
+    "mv": 7.41,
     "px": 10.93,
     "earn": false
    },
@@ -330,12 +384,12 @@
     "earn": false
    },
    {
-    "sym": "OPTX",
-    "name": "Syntec Optics",
-    "sec": "科技",
+    "sym": "REPL",
+    "name": "Replimune",
+    "sec": "医疗",
     "track": "其它",
-    "mv": 7.19,
-    "px": 6.8,
+    "mv": -7.19,
+    "px": 21.98,
     "earn": false
    },
    {
@@ -348,21 +402,30 @@
     "earn": false
    },
    {
-    "sym": "RZLT",
-    "name": "Rezolute (NV)",
-    "sec": "医疗",
-    "track": "其它",
-    "mv": 6.98,
-    "px": 3.87,
-    "earn": false
-   },
-   {
     "sym": "KEP",
     "name": "Korea Electric Power",
     "sec": "公用事业",
     "track": "其它",
-    "mv": -6.97,
+    "mv": -7.01,
     "px": 11.13,
+    "earn": false
+   },
+   {
+    "sym": "GYRE",
+    "name": "Gyre Therapeutics",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 6.98,
+    "px": 4.3,
+    "earn": false
+   },
+   {
+    "sym": "CYPH",
+    "name": "Cypherpunk Technologies",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 6.94,
+    "px": 1.95,
     "earn": false
    },
    {
@@ -375,12 +438,39 @@
     "earn": true
    },
    {
+    "sym": "BGIN",
+    "name": "Bgin Blockchain",
+    "sec": "金融",
+    "track": "其它",
+    "mv": -6.88,
+    "px": 2.76,
+    "earn": false
+   },
+   {
     "sym": "PHR",
     "name": "Phreesia",
     "sec": "可选消费",
     "track": "其它",
     "mv": 6.83,
     "px": 12.62,
+    "earn": false
+   },
+   {
+    "sym": "PRAX",
+    "name": "Praxis Precision Medicines",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 6.77,
+    "px": 324.76,
+    "earn": false
+   },
+   {
+    "sym": "RYDE",
+    "name": "Ryde",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": -6.71,
+    "px": 0.95,
     "earn": false
    },
    {
@@ -402,21 +492,12 @@
     "earn": false
    },
    {
-    "sym": "BGIN",
-    "name": "Bgin Blockchain",
-    "sec": "金融",
+    "sym": "SOC",
+    "name": "Sable Offshore",
+    "sec": "能源",
     "track": "其它",
-    "mv": -6.52,
-    "px": 2.76,
-    "earn": false
-   },
-   {
-    "sym": "TMC",
-    "name": "TMC the metals",
-    "sec": "原材料",
-    "track": "其它",
-    "mv": 6.52,
-    "px": 2.3,
+    "mv": 6.39,
+    "px": 0.62,
     "earn": false
    },
    {
@@ -447,21 +528,12 @@
     "earn": false
    },
    {
-    "sym": "SOC",
-    "name": "Sable Offshore",
-    "sec": "能源",
+    "sym": "BAK",
+    "name": "Braskem SA",
+    "sec": "工业",
     "track": "其它",
-    "mv": 6.31,
-    "px": 0.62,
-    "earn": false
-   },
-   {
-    "sym": "ARAI",
-    "name": "Arrive AI",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": 6.26,
-    "px": 2.06,
+    "mv": 6.19,
+    "px": 1.13,
     "earn": false
    },
    {
@@ -474,12 +546,12 @@
     "earn": false
    },
    {
-    "sym": "SSMR",
-    "name": "Sunshine Silver Mining & Refining",
-    "sec": "原材料",
+    "sym": "EOSE",
+    "name": "Eos Energy Enterprises",
+    "sec": "Miscellaneous",
     "track": "其它",
-    "mv": -6.1,
-    "px": 13.51,
+    "mv": 6.08,
+    "px": 1.81,
     "earn": false
    },
    {
@@ -492,12 +564,12 @@
     "earn": false
    },
    {
-    "sym": "ZVRA",
-    "name": "Zevra Therapeutics",
-    "sec": "医疗",
+    "sym": "VISN",
+    "name": "Vistance Networks",
+    "sec": "科技",
     "track": "其它",
-    "mv": -5.91,
-    "px": 11.16,
+    "mv": 6,
+    "px": 4,
     "earn": false
    },
    {
@@ -505,8 +577,35 @@
     "name": "Vuzix",
     "sec": "科技",
     "track": "其它",
-    "mv": -5.9,
+    "mv": -5.97,
     "px": 1.84,
+    "earn": false
+   },
+   {
+    "sym": "STNE",
+    "name": "StoneCo Common Shares",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -5.96,
+    "px": 7.72,
+    "earn": false
+   },
+   {
+    "sym": "OFRM",
+    "name": "Once Upon a Farm PBC",
+    "sec": "必需消费",
+    "track": "其它",
+    "mv": -5.89,
+    "px": 10.18,
+    "earn": false
+   },
+   {
+    "sym": "NUAI",
+    "name": "New Era Energy & Digital",
+    "sec": "能源",
+    "track": "其它",
+    "mv": 5.88,
+    "px": 2.72,
     "earn": false
    },
    {
@@ -519,15 +618,6 @@
     "earn": false
    },
    {
-    "sym": "RYDE",
-    "name": "Ryde",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": -5.86,
-    "px": 0.95,
-    "earn": false
-   },
-   {
     "sym": "ENHA",
     "name": "Enhanced",
     "sec": "可选消费",
@@ -537,12 +627,12 @@
     "earn": false
    },
    {
-    "sym": "STNE",
-    "name": "StoneCo Common Shares",
-    "sec": "科技",
+    "sym": "ZVRA",
+    "name": "Zevra Therapeutics",
+    "sec": "医疗",
     "track": "其它",
-    "mv": -5.83,
-    "px": 7.72,
+    "mv": -5.57,
+    "px": 11.16,
     "earn": false
    },
    {
@@ -550,17 +640,8 @@
     "name": "Nu",
     "sec": "金融",
     "track": "金融科技",
-    "mv": 5.73,
+    "mv": 5.55,
     "px": 11.83,
-    "earn": false
-   },
-   {
-    "sym": "OFRM",
-    "name": "Once Upon a Farm PBC",
-    "sec": "必需消费",
-    "track": "其它",
-    "mv": -5.5,
-    "px": 10.18,
     "earn": false
    },
    {
@@ -573,15 +654,6 @@
     "earn": false
    },
    {
-    "sym": "XMTR",
-    "name": "Xometry",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": 5.36,
-    "px": 120.78,
-    "earn": false
-   },
-   {
     "sym": "ALEC",
     "name": "Alector",
     "sec": "医疗",
@@ -591,39 +663,30 @@
     "earn": false
    },
    {
-    "sym": "VISN",
-    "name": "Vistance Networks",
+    "sym": "ALOY",
+    "name": "REalloys",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": -5.22,
+    "px": 6.32,
+    "earn": false
+   },
+   {
+    "sym": "STN",
+    "name": "Stantec",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": 4.85,
+    "px": 75.13,
+    "earn": false
+   },
+   {
+    "sym": "XLAB",
+    "name": "Exascale Labs",
     "sec": "科技",
     "track": "其它",
-    "mv": 5,
-    "px": 4,
-    "earn": false
-   },
-   {
-    "sym": "NGEN",
-    "name": "NervGen Pharma",
-    "sec": "医疗",
-    "track": "其它",
-    "mv": 4.91,
-    "px": 1.63,
-    "earn": false
-   },
-   {
-    "sym": "AAON",
-    "name": "AAON",
-    "sec": "工业",
-    "track": "其它",
-    "mv": 4.87,
-    "px": 78.8,
-    "earn": false
-   },
-   {
-    "sym": "AMRO",
-    "name": "Amaero",
-    "sec": "工业",
-    "track": "其它",
-    "mv": -4.84,
-    "px": 6.4,
+    "mv": 4.85,
+    "px": 2.27,
     "earn": false
    },
    {
@@ -645,12 +708,21 @@
     "earn": false
    },
    {
-    "sym": "CATX",
-    "name": "Perspective Therapeutics",
-    "sec": "医疗",
+    "sym": "STRL",
+    "name": "Sterling Infrastructure",
+    "sec": "工业",
     "track": "其它",
-    "mv": 4.78,
-    "px": 0.84,
+    "mv": 4.84,
+    "px": 301.6,
+    "earn": false
+   },
+   {
+    "sym": "ABAT",
+    "name": "American Battery Technology",
+    "sec": "工业",
+    "track": "其它",
+    "mv": -4.82,
+    "px": 1.24,
     "earn": false
    },
    {
@@ -660,6 +732,24 @@
     "track": "其它",
     "mv": -4.77,
     "px": 0.65,
+    "earn": false
+   },
+   {
+    "sym": "CDLR",
+    "name": "Cadeler",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": -4.74,
+    "px": 6.93,
+    "earn": false
+   },
+   {
+    "sym": "RBLX",
+    "name": "Roblox",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -4.73,
+    "px": 51.42,
     "earn": false
    },
    {
@@ -690,30 +780,12 @@
     "earn": false
    },
    {
-    "sym": "HPP",
-    "name": "Hudson Pacific Properties",
-    "sec": "金融",
-    "track": "其它",
-    "mv": 4.43,
-    "px": 8.8,
-    "earn": false
-   },
-   {
     "sym": "BCAX",
     "name": "Bicara Therapeutics",
     "sec": "医疗",
     "track": "其它",
     "mv": -4.35,
     "px": 10.11,
-    "earn": false
-   },
-   {
-    "sym": "CRML",
-    "name": "Critical Metals",
-    "sec": "原材料",
-    "track": "其它",
-    "mv": 4.33,
-    "px": 5.31,
     "earn": false
    },
    {
@@ -726,12 +798,30 @@
     "earn": false
    },
    {
-    "sym": "BRUN",
-    "name": "Boost Run",
-    "sec": "科技",
+    "sym": "AAON",
+    "name": "AAON",
+    "sec": "工业",
+    "track": "其它",
+    "mv": 4.29,
+    "px": 78.8,
+    "earn": false
+   },
+   {
+    "sym": "AMRO",
+    "name": "Amaero",
+    "sec": "工业",
     "track": "其它",
     "mv": 4.22,
-    "px": 5.92,
+    "px": 6.4,
+    "earn": false
+   },
+   {
+    "sym": "SSMR",
+    "name": "Sunshine Silver Mining & Refining",
+    "sec": "原材料",
+    "track": "其它",
+    "mv": -4.22,
+    "px": 13.51,
     "earn": false
    },
    {
@@ -739,35 +829,26 @@
     "name": "Editas Medicine",
     "sec": "医疗",
     "track": "其它",
-    "mv": 4.2,
+    "mv": 4.21,
     "px": 2.14,
     "earn": false
    },
    {
-    "sym": "GEMI",
-    "name": "Gemini Space Station",
-    "sec": "金融",
+    "sym": "BGS",
+    "name": "B&G Foods",
+    "sec": "必需消费",
     "track": "其它",
-    "mv": 4.2,
-    "px": 2.62,
+    "mv": -4.04,
+    "px": 3.35,
     "earn": false
    },
    {
-    "sym": "SID",
-    "name": "Companhia Siderurgica Nacional S.A.",
-    "sec": "工业",
-    "track": "其它",
-    "mv": -3.97,
-    "px": 0.77,
-    "earn": false
-   },
-   {
-    "sym": "XLAB",
-    "name": "Exascale Labs",
+    "sym": "IA",
+    "name": "Innovative Solutions and Support",
     "sec": "科技",
     "track": "其它",
-    "mv": 3.96,
-    "px": 2.27,
+    "mv": 4,
+    "px": 21.51,
     "earn": false
    },
    {
@@ -789,15 +870,6 @@
     "earn": false
    },
    {
-    "sym": "PURR",
-    "name": "Hyperliquid Strategies",
-    "sec": "金融",
-    "track": "其它",
-    "mv": 3.92,
-    "px": 8.8,
-    "earn": false
-   },
-   {
     "sym": "KLXE",
     "name": "KLX Energy Services",
     "sec": "能源",
@@ -807,12 +879,21 @@
     "earn": false
    },
    {
-    "sym": "EOSE",
-    "name": "Eos Energy Enterprises",
-    "sec": "Miscellaneous",
+    "sym": "AGRO",
+    "name": "Adecoagro S.A. Common Shares",
+    "sec": "必需消费",
     "track": "其它",
-    "mv": 3.87,
-    "px": 1.81,
+    "mv": -3.89,
+    "px": 8.47,
+    "earn": false
+   },
+   {
+    "sym": "MF",
+    "name": "MindForge",
+    "sec": "科技",
+    "track": "其它",
+    "mv": -3.87,
+    "px": 18.9,
     "earn": false
    },
    {
@@ -825,21 +906,30 @@
     "earn": false
    },
    {
-    "sym": "PRME",
-    "name": "Prime Medicine",
-    "sec": "医疗",
+    "sym": "MUX",
+    "name": "McEwen",
+    "sec": "原材料",
     "track": "其它",
-    "mv": 3.86,
-    "px": 3.89,
+    "mv": 3.85,
+    "px": 11.95,
     "earn": false
    },
    {
-    "sym": "RR",
-    "name": "Richtech Robotics",
-    "sec": "工业",
-    "track": "物理AI/机器人",
-    "mv": 3.81,
-    "px": 0.82,
+    "sym": "BRUN",
+    "name": "Boost Run",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.8,
+    "px": 5.92,
+    "earn": false
+   },
+   {
+    "sym": "ABSI",
+    "name": "Absci",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 3.78,
+    "px": 9.13,
     "earn": false
    },
    {
@@ -852,6 +942,15 @@
     "earn": false
    },
    {
+    "sym": "GRRR",
+    "name": "Gorilla Technology",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.75,
+    "px": 7.2,
+    "earn": false
+   },
+   {
     "sym": "CGON",
     "name": "CG Oncology",
     "sec": "医疗",
@@ -861,30 +960,21 @@
     "earn": false
    },
    {
-    "sym": "ABSI",
-    "name": "Absci",
-    "sec": "医疗",
-    "track": "其它",
-    "mv": 3.7,
-    "px": 9.13,
-    "earn": false
-   },
-   {
-    "sym": "BRAI",
-    "name": "Braiin",
-    "sec": "科技",
-    "track": "其它",
-    "mv": -3.7,
-    "px": 1.89,
-    "earn": false
-   },
-   {
     "sym": "CRMD",
     "name": "CorMedix",
     "sec": "医疗",
     "track": "其它",
-    "mv": 3.69,
+    "mv": 3.7,
     "px": 4.84,
+    "earn": false
+   },
+   {
+    "sym": "XRX",
+    "name": "Xerox",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.7,
+    "px": 0.99,
     "earn": false
    },
    {
@@ -897,12 +987,12 @@
     "earn": false
    },
    {
-    "sym": "DFH",
-    "name": "Dream Finders Homes",
-    "sec": "可选消费",
+    "sym": "FENC",
+    "name": "Fennec Pharmaceuticals",
+    "sec": "医疗",
     "track": "其它",
-    "mv": -3.64,
-    "px": 11.01,
+    "mv": 3.67,
+    "px": 10.9,
     "earn": false
    },
    {
@@ -915,30 +1005,21 @@
     "earn": false
    },
    {
-    "sym": "FSLY",
-    "name": "Fastly",
+    "sym": "RR",
+    "name": "Richtech Robotics",
+    "sec": "工业",
+    "track": "物理AI/机器人",
+    "mv": 3.63,
+    "px": 0.82,
+    "earn": false
+   },
+   {
+    "sym": "BAND",
+    "name": "Bandwidth",
     "sec": "科技",
     "track": "其它",
     "mv": 3.61,
-    "px": 17.19,
-    "earn": false
-   },
-   {
-    "sym": "OTLK",
-    "name": "Outlook Therapeutics",
-    "sec": "医疗",
-    "track": "其它",
-    "mv": 3.61,
-    "px": 0.44,
-    "earn": false
-   },
-   {
-    "sym": "WGS",
-    "name": "GeneDx",
-    "sec": "医疗",
-    "track": "其它",
-    "mv": -3.61,
-    "px": 51.87,
+    "px": 46.29,
     "earn": false
    },
    {
@@ -951,48 +1032,30 @@
     "earn": false
    },
    {
-    "sym": "PANL",
-    "name": "Pangaea Logistics Solutions Common Shares",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": 3.59,
-    "px": 9.46,
+    "sym": "CRWD",
+    "name": "CrowdStrike",
+    "sec": "网安",
+    "track": "网安",
+    "mv": 3.54,
+    "px": 229.87,
     "earn": false
    },
    {
-    "sym": "BBAR",
-    "name": "Banco BBVA Argentina S.A. ADS",
-    "sec": "金融",
-    "track": "其它",
-    "mv": 3.57,
-    "px": 10.35,
+    "sym": "PANW",
+    "name": "Palo Alto",
+    "sec": "网安",
+    "track": "网安",
+    "mv": 3.48,
+    "px": 322.66,
     "earn": false
    },
    {
-    "sym": "SKYX",
-    "name": "SKYX Platforms",
-    "sec": "可选消费",
+    "sym": "AIRJ",
+    "name": "AirJoule Technologies",
+    "sec": "工业",
     "track": "其它",
-    "mv": -3.57,
-    "px": 0.69,
-    "earn": false
-   },
-   {
-    "sym": "GOW",
-    "name": "GOWell Energy Technology",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": -3.47,
-    "px": 2.59,
-    "earn": false
-   },
-   {
-    "sym": "CSCO",
-    "name": "Cisco Systems (DE)",
-    "sec": "通信服务",
-    "track": "其它",
-    "mv": -3.46,
-    "px": 102.01,
+    "mv": 3.46,
+    "px": 2.31,
     "earn": false
    },
    {
@@ -1002,24 +1065,6 @@
     "track": "其它",
     "mv": 3.44,
     "px": 4.36,
-    "earn": false
-   },
-   {
-    "sym": "DLO",
-    "name": "DLocal Common Shares",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": -3.43,
-    "px": 13.7,
-    "earn": false
-   },
-   {
-    "sym": "VNCE",
-    "name": "Vince",
-    "sec": "可选消费",
-    "track": "其它",
-    "mv": 3.41,
-    "px": 12.91,
     "earn": false
    },
    {
@@ -1050,12 +1095,48 @@
     "earn": false
    },
    {
-    "sym": "ALOY",
-    "name": "REalloys",
-    "sec": "原材料",
+    "sym": "GENB",
+    "name": "Generate Biomedicines",
+    "sec": "医疗",
     "track": "其它",
-    "mv": -3.33,
-    "px": 6.32,
+    "mv": 3.34,
+    "px": 12.57,
+    "earn": false
+   },
+   {
+    "sym": "PRME",
+    "name": "Prime Medicine",
+    "sec": "医疗",
+    "track": "其它",
+    "mv": 3.34,
+    "px": 3.89,
+    "earn": false
+   },
+   {
+    "sym": "FSLY",
+    "name": "Fastly",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.32,
+    "px": 17.19,
+    "earn": false
+   },
+   {
+    "sym": "SKM",
+    "name": "SK Telecom",
+    "sec": "通信服务",
+    "track": "其它",
+    "mv": 3.31,
+    "px": 34.12,
+    "earn": false
+   },
+   {
+    "sym": "VRA",
+    "name": "Vera Bradley",
+    "sec": "可选消费",
+    "track": "其它",
+    "mv": 3.31,
+    "px": 7.56,
     "earn": false
    },
    {
@@ -1068,21 +1149,21 @@
     "earn": false
    },
    {
-    "sym": "CRWD",
-    "name": "CrowdStrike",
-    "sec": "网安",
-    "track": "网安",
-    "mv": 3.28,
-    "px": 229.87,
-    "earn": false
-   },
-   {
     "sym": "IESC",
     "name": "IES",
     "sec": "工业",
     "track": "其它",
     "mv": 3.28,
     "px": 174.17,
+    "earn": false
+   },
+   {
+    "sym": "S",
+    "name": "SentinelOne",
+    "sec": "科技",
+    "track": "网安",
+    "mv": 3.28,
+    "px": 22.29,
     "earn": false
    },
    {
@@ -1095,12 +1176,30 @@
     "earn": false
    },
    {
+    "sym": "ECX",
+    "name": "ECARX",
+    "sec": "科技",
+    "track": "其它",
+    "mv": 3.26,
+    "px": 0.82,
+    "earn": false
+   },
+   {
     "sym": "NNBR",
     "name": "NN",
     "sec": "工业",
     "track": "其它",
     "mv": 3.26,
     "px": 3.07,
+    "earn": false
+   },
+   {
+    "sym": "USDE",
+    "name": "StablecoinX",
+    "sec": "金融",
+    "track": "其它",
+    "mv": 3.26,
+    "px": 6.13,
     "earn": false
    },
    {
@@ -1113,94 +1212,67 @@
     "earn": false
    },
    {
-    "sym": "INDI",
-    "name": "indie Semiconductor",
+    "sym": "VICR",
+    "name": "Vicor",
     "sec": "科技",
     "track": "其它",
-    "mv": 3.19,
-    "px": 2.18,
+    "mv": 3.22,
+    "px": 164.69,
     "earn": false
    },
    {
-    "sym": "SKM",
-    "name": "SK Telecom",
-    "sec": "通信服务",
+    "sym": "ASPI",
+    "name": "ASP Isotopes",
+    "sec": "工业",
     "track": "其它",
-    "mv": 3.18,
-    "px": 34.12,
+    "mv": 3.21,
+    "px": 1.87,
     "earn": false
    },
    {
-    "sym": "PS",
-    "name": "Pershing Square",
-    "sec": "金融",
-    "track": "其它",
-    "mv": 3.17,
-    "px": 44.01,
-    "earn": false
-   },
-   {
-    "sym": "ECX",
-    "name": "ECARX",
-    "sec": "科技",
-    "track": "其它",
-    "mv": 3.14,
-    "px": 0.82,
-    "earn": false
-   },
-   {
-    "sym": "PANW",
-    "name": "Palo Alto",
-    "sec": "网安",
-    "track": "网安",
-    "mv": 3.12,
-    "px": 322.66,
-    "earn": false
-   },
-   {
-    "sym": "QXO",
-    "name": "QXO",
+    "sym": "BLMN",
+    "name": "Bloomin' Brands",
     "sec": "可选消费",
     "track": "其它",
-    "mv": 3.12,
-    "px": 12.81,
+    "mv": 3.21,
+    "px": 10.12,
     "earn": false
    },
    {
-    "sym": "USAR",
-    "name": "USA Rare Earth",
+    "sym": "ALM",
+    "name": "Almonty Industries Common Shares",
     "sec": "原材料",
     "track": "其它",
-    "mv": 3.1,
-    "px": 8.07,
+    "mv": 3.12,
+    "px": 7.63,
     "earn": false
    },
    {
-    "sym": "USDE",
-    "name": "StablecoinX",
-    "sec": "金融",
+    "sym": "CVLT",
+    "name": "Commvault Systems",
+    "sec": "科技",
     "track": "其它",
-    "mv": 3.1,
-    "px": 6.13,
+    "mv": -3.11,
+    "px": 166.16,
     "earn": false
    },
    {
-    "sym": "ADTN",
-    "name": "ADTRAN",
-    "sec": "公用事业",
+    "sym": "BURL",
+    "name": "Burlington Stores",
+    "sec": "可选消费",
     "track": "其它",
-    "mv": 3.09,
-    "px": 4.86,
+    "mv": -3.05,
+    "px": 251.87,
     "earn": false
    },
    {
-    "sym": "BTBT",
-    "name": "Bit Digital",
-    "sec": "金融",
+    "sym": "USAS",
+    "name": "Americas Gold and Silver Common Shares no par value",
+    "sec": "原材料",
     "track": "其它",
-    "mv": 3.08,
-    "px": 0.77,
-    "earn": false
+    "mv": -3.04,
+    "px": 2.79,
+    "earn": true
    },
    {
     "sym": "SLNH",
@@ -1221,30 +1293,21 @@
     "earn": false
    },
    {
-    "sym": "ALM",
-    "name": "Almonty Industries Common Shares",
+    "sym": "CRML",
+    "name": "Critical Metals",
     "sec": "原材料",
     "track": "其它",
     "mv": 3.01,
-    "px": 7.63,
+    "px": 5.31,
     "earn": false
    },
    {
-    "sym": "EMAT",
-    "name": "Evolution Metals & Technologies",
-    "sec": "Miscellaneous",
-    "track": "其它",
-    "mv": 3.01,
-    "px": 0.99,
-    "earn": false
-   },
-   {
-    "sym": "BAK",
-    "name": "Braskem SA",
-    "sec": "工业",
+    "sym": "KMPR",
+    "name": "Kemper",
+    "sec": "金融",
     "track": "其它",
     "mv": 3,
-    "px": 1.13,
+    "px": 34.3,
     "earn": false
    }
   ]
