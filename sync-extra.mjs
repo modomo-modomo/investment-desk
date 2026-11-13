@@ -59,6 +59,7 @@ async function chart(symbol, range = "3mo", interval = "1d") {
   const rows = r.timestamp.map((t, i) => ({
     date: new Date(t * 1000).toISOString().slice(0, 10),
     close: q.close?.[i] ?? null,
+    high: q.high?.[i] ?? null,
     volume: q.volume?.[i] ?? null,
     ts: t,
   })).filter((x) => x.close != null);
@@ -424,71 +425,135 @@ const SYM2WIND = { TSLA:"TSLA.O", META:"META.O", IREN:"IREN.O", NBIS:"NBIS.O", C
 const MKT_IDX = [["^GSPC","标普500","US"],["^HSI","恒生指数","HK"],["000001.SS","上证指数","CN"]];
 const highsToday = [];
 const poolQuotes = await quotes(POOL.map((p) => p[0]));
-/* 新高判定的价格必须用「已结算收盘」：
-   2026-11-13 早晨跑时 quote 返回的是 11-11 前收 552.9，而 11-12 真实收盘 585.3，
-   导致记录价格错位。这里以日 K 最后一根有值收盘为准。 */
-const settledClose = async (sym, fb) => {
-  try {
-    const rows = (await chart(sym, "6mo")).rows.filter((r) => r.close != null);
-    const last = rows[rows.length - 1];
-    if (last && fb != null && Math.abs(fb - last.close) / last.close > 0.01) return last.close;
-    return last ? last.close : fb;
-  } catch { return fb; }
+
+/* ---------- 创新高判定（统一口径，2026-11-13 修正） ----------
+   旧口径的两个错误：
+   ① 用「历史最高收盘价」当基准 → AMD 11-12 收盘 585.30 越过旧收盘高点 552.90 被记成“历史新高”，
+      但它的历史最高盘中价是 658.52（2026-09-01），根本没破 —— 用户指出的就是这个。
+   ② quote 接口的 fiftyTwoWeekHigh 与 chart meta 不一致，做阈值会漏/误判。
+   新口径：一律用日线「最高价」做基准，且要求严格大于（持平不算）：
+     · 52 周新高 = 当日最高价 > 过去 52 周（不含当日）最高价
+     · 历史新高 = 当日最高价 > 上市以来（不含当日）最高价
+   同时在同一份日线里顺手算出 当日 / 20 日 / YTD，避免再发一轮请求。 */
+const highMeta = (rows) => {
+  if (!rows || rows.length < 2) return null;
+  const cur = rows[rows.length - 1];
+  const prior = rows.slice(0, -1);
+  const hv = (r) => (r.high != null ? r.high : r.close);
+  const cut52 = new Date(Date.parse(cur.date) - 365 * 86400000).toISOString().slice(0, 10);
+  const in52 = prior.filter((r) => r.date >= cut52);
+  const hi52 = in52.length ? Math.max(...in52.map(hv)) : null;
+  const hiAll = prior.length ? Math.max(...prior.map(hv)) : null;
+  const hiMax = cur.high != null ? cur.high : cur.close;
+  const c = cur.close;
+  let d20 = null, ytd = null;
+  if (rows.length > 21 && rows[rows.length - 22].close != null)
+    d20 = +((c / rows[rows.length - 22].close - 1) * 100).toFixed(2);
+  const py = prior.filter((r) => r.date.slice(0, 4) !== cur.date.slice(0, 4));
+  if (py.length && py[py.length - 1].close != null)
+    ytd = +((c / py[py.length - 1].close - 1) * 100).toFixed(2);
+  return {
+    date: cur.date, close: c, hiMax,
+    hi52: hi52 != null ? +hi52.toFixed(2) : null,
+    hiAll: hiAll != null ? +hiAll.toFixed(2) : null,
+    w52: hi52 != null && hiMax > hi52,
+    ath: hiAll != null && hiMax > hiAll,
+    d20, ytd,
+  };
 };
+const chgOf = (q) => (q && q.regularMarketChangePercent != null ? +Number(q.regularMarketChangePercent).toFixed(2) : null);
+
 for (const [sym, name, sec] of POOL) {
   try {
     const q = poolQuotes[sym];
-    if (!q || q.regularMarketPrice == null || q.fiftyTwoWeekHigh == null) continue;
-    const cur = await settledClose(sym, q.regularMarketPrice);
-    /* 52 周：收盘站上 52 周高点（容差 0.1%）；持平历史最高不算创新高 */
-    const chgOf = q.regularMarketChangePercent != null ? +Number(q.regularMarketChangePercent).toFixed(2) : null;
-    const capOf = q.marketCap || 0;
-    if (cur >= q.fiftyTwoWeekHigh * 0.999) {
-      highsToday.push({ d: usCloseDate, sym, name, type: "52w", market: "US", sec, px: +cur.toFixed(2), chg: chgOf, mcap: capOf });
-    }
-    const mx = await chart(sym, "max");
-    if (mx.rows.length > 1) {
-      const done = mx.rows.filter((r) => r.close != null);
-      const prevMax = Math.max(...done.slice(0, -1).map((r) => r.close));
-      /* 严格大于：持平（如 2026-11-11 的 552.9 == 2026-09-01 的 552.9）不算历史新高 */
-      if (cur > prevMax) highsToday.push({ d: usCloseDate, sym, name, type: "ath", market: "US", sec, px: +cur.toFixed(2), chg: chgOf, mcap: capOf });
-    }
+    if (!q || q.regularMarketPrice == null) continue;
+    const m = highMeta((await chart(sym, "10y")).rows);
+    if (!m || (!m.w52 && !m.ath)) continue;
+    const base = { d: usCloseDate, sym, name, market: "US", sec,
+      px: +m.close.toFixed(2), chg: chgOf(q), mcap: q.marketCap || 0, d20: m.d20, ytd: m.ytd,
+      hi52: m.hi52, hiDay: +m.hiMax.toFixed(2) };
+    if (m.w52) highsToday.push({ ...base, type: "52w" });
+    if (m.ath) highsToday.push({ ...base, type: "ath" });
   } catch (e) { console.warn("新高检测失败 " + sym + ": " + e.message); }
 }
 for (const [sym, name, mkt] of MKT_IDX) {
   try {
     const rows = (await chart(sym, "1y")).rows;
     if (rows.length < 2) continue;
-    const cur = rows[rows.length - 1].close;
-    const prevMax = Math.max(...rows.slice(0, -1).map((r) => r.close));
-    if (cur > prevMax) highsToday.push({ d: usCloseDate, sym, name, type: "mkt", market: mkt, sec: "指数", px: +cur.toFixed(2) });
+    const cur = rows[rows.length - 1];
+    const prevMax = Math.max(...rows.slice(0, -1).map((r) => (r.high != null ? r.high : r.close)));
+    if ((cur.high != null ? cur.high : cur.close) > prevMax)
+      highsToday.push({ d: usCloseDate, sym, name, type: "mkt", market: mkt, sec: "指数", px: +cur.close.toFixed(2) });
   } catch (e) { console.warn("市场新高检测失败 " + sym + ": " + e.message); }
 }
+
 let highsLog = [];
 try { highsLog = JSON.parse(readFileSync("highs-log.json", "utf8")); } catch {}
-const seenH = new Set(highsLog.map((x) => x.d + "|" + x.sym + "|" + x.type));
-for (const h of highsToday) {
-  const k = h.d + "|" + h.sym + "|" + h.type;
-  if (!seenH.has(k)) { highsLog.push(h); seenH.add(k); }
-}
+/* 同一标的同一天只留一条：本轮扫描结果优先（重跑同一天时以最新一次为准）。
+   旧版按「日期|标的|类型」去重，同一只票类型一旦在两轮扫描间翻转就会留下两条重复记录。 */
+const mergeHi = (base, add) => {
+  const m = new Map();
+  for (const x of add.concat(base)) {
+    if (!x || !x.sym) continue;
+    const k = x.d + "|" + x.sym;
+    if (!m.has(k)) m.set(k, x);
+  }
+  return [...m.values()];
+};
+highsLog = mergeHi(highsLog, highsToday);
 const highsCutoff = new Date(Date.parse(etToday) - 180 * 86400000).toISOString().slice(0, 10);
 highsLog = highsLog.filter((x) => x.d >= highsCutoff).sort((a, b) => b.d.localeCompare(a.d) || a.sym.localeCompare(b.sym));
 writeFileSync("highs-log.json", JSON.stringify(highsLog, null, 1));
 const analyzeHighs = (days) => {
   const from = new Date(Date.parse(etToday) - days * 86400000).toISOString().slice(0, 10);
   const rows = highsLog.filter((x) => x.d >= from);
-  const byMkt = {}, bySec = {};
-  rows.forEach((x) => { byMkt[x.market] = (byMkt[x.market] || 0) + 1; bySec[x.sec] = (bySec[x.sec] || 0) + 1; });
-  return { total: rows.length, byMkt, bySec, days };
+  const byMkt = {}, bySec = {}, byTrack = {}, byType = {};
+  rows.forEach((x) => {
+    byMkt[x.market] = (byMkt[x.market] || 0) + 1;
+    bySec[x.sec] = (bySec[x.sec] || 0) + 1;
+    const tk = x.track || "其它";
+    byTrack[tk] = (byTrack[tk] || 0) + 1;
+    byType[x.type] = (byType[x.type] || 0) + 1;
+  });
+  const daySet = new Set(rows.map((x) => x.d));
+  return { total: rows.length, byMkt, bySec, byTrack, byType, days: daySet.size };
 };
-const highs = { date: usCloseDate, today: highsToday, log: highsLog.slice(0, 100), weekly: analyzeHighs(7), monthly: analyzeHighs(30) };
-console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条");
+/* 按交易日的聚合（供页面画"新高数量走势"）：整段 180 天都保留，体积极小 */
+const aggHighsDaily = (arr) => {
+  const m = new Map();
+  for (const x of arr) {
+    const a = m.get(x.d) || { d: x.d, n: 0, w: 0, a: 0, sec: {}, trk: {} };
+    a.n++;
+    if (x.type === "ath") a.a++; else if (x.type === "52w") a.w++;
+    const sk = x.sec || "其它";
+    a.sec[sk] = (a.sec[sk] || 0) + 1;
+    if (x.track && x.track !== "其它") a.trk[x.track] = (a.trk[x.track] || 0) + 1;
+    m.set(x.d, a);
+  }
+  return [...m.values()].sort((x, y) => y.d.localeCompare(x.d)).map((a) => {
+    const top = (o) => { const e = Object.entries(o).sort((p, q) => q[1] - p[1]); return e.length ? { k: e[0][0], v: e[0][1] } : null; };
+    return { d: a.d, n: a.n, w: a.w, a: a.a, sec: top(a.sec), trk: top(a.trk) };
+  });
+};
+/* 逐条日志只下发最近 20 个交易日（约 1000 条）；更早的按日聚合保留在 highsDaily */
+const recentLog = (arr, days) => {
+  const keep = new Set([...new Set(arr.map((x) => x.d))].sort((a, b) => b.localeCompare(a)).slice(0, days));
+  return arr.filter((x) => keep.has(x.d));
+};
+const highsDaily = aggHighsDaily(highsLog);
+const highs = {
+  date: usCloseDate, today: highsToday,
+  log: recentLog(highsLog, 20),
+  daily: highsDaily, logDays: highsDaily.length, logTotal: highsLog.length,
+  weekly: analyzeHighs(7), monthly: analyzeHighs(30),
+};
+console.log("创新高检测：当日 " + highsToday.length + " 条 · 累计日志 " + highsLog.length + " 条 / " + highsDaily.length + " 个交易日");
 
 /* ---------------- 盘前 / 盘后异动：全市场扫描 ----------------
    口径 = 全市场美股，不局限于研究标的。
-   流程：Nasdaq screener 取全市场清单（约 7000 只）→ 按市值截断到 ≥5 亿美元（约 3200 只，
+   流程：Nasdaq screener 取全市场清单（约 7000 只）→ 按市值截断到 ≥1 亿美元（约 4000 只，
    覆盖美股市值与成交额 98%+）→ Yahoo 批量 quote 取盘前 / 盘后涨跌。
-   nano-cap（<5 亿美元）不扫：流动性太差，异动没有交易意义。
+   nano-cap（<1 亿美元）不扫：仙股/壳股成交稀薄易被操纵，会污染新高榜与异动榜。
    SEED 三合一：给东财快讯匹配中文别名、提供更贴业务的板块名、清单接口挂掉时兜底。 */
 const SEED = [
   /* 半导体 / 硬件 */
@@ -591,13 +656,15 @@ try {
       sector: String(x.sector || "Technology"),
       mcap: capNum(x.marketCap),
     }))
-    .filter((x) => x.sym && x.mcap >= 5e8 && !isJunk(x.sym, x.name));
+    /* 新高扫描与异动共用这份清单。下限 1 亿美元：覆盖到“全部普通股里有流动性的部分”，
+       再往下的仙股/壳股成交稀薄、易被操纵，会把新高榜污染成噪音。 */
+    .filter((x) => x.sym && x.mcap >= 1e8 && !isJunk(x.sym, x.name));
 } catch (e) { console.warn("全市场清单获取失败:", e.message); }
 if (universe.length < 200) {
   console.warn("全市场清单异常（" + universe.length + " 只），回退 SEED 兜底池");
   universe = SEED.map((x) => ({ sym: x.s, name: x.en, sector: x.sec, mcap: 0 }));
 }
-console.log("全市场清单：" + universe.length + " 只（市值 ≥5 亿美元），开始批量取盘前/盘后…");
+console.log("全市场清单：" + universe.length + " 只（市值 ≥1 亿美元的普通股），开始批量取报价…");
 
 const mvQuote = {};
 for (let i = 0; i < universe.length; i += 30) {
@@ -725,64 +792,105 @@ console.log("全市场异动：" + moverRows.length + " 只取到报价 · 盘�
    价格用 previousClose × (1+chg) 反推，避免 POSTPOST 时 quote 滞后返回前收
    （2026-11-13 早晨 AMD 被记成 552.9 即此原因，真实收盘 585.3）。 */
 const seedSec = (sym) => (SEED_BY[sym] ? SEED_BY[sym].sec : "");
+/* 公司名兜底：小盘银行/保险在 Nasdaq 的行业字段里常缺失或被标错（ASBH 被标成科技），按名称纠一次 */
+const NAME_SEC = [
+  [/\b(bancorp|bancshares|bank|savings|financial|insurance|insurer|reinsur)\b/i, "金融"],
+  [/\b(therapeutics|pharmaceuticals|pharma|biotech|biosciences|biopharma)\b/i, "医疗"],
+  [/\b(energy|petroleum|oil|gas|resources|drilling)\b/i, "能源"],
+];
+const secOf = (sym, name, uSector) =>
+  seedSec(sym) || (NAME_SEC.find(([re]) => re.test(String(name || ""))) || [])[1] || SECTOR_CN[uSector] || uSector || "其它";
 const uniBySym = Object.fromEntries(universe.map((u) => [u.sym, u]));
+/* 第一步：宽筛。收盘价进入 52 周高点 ±3% 带内的才值得发历史请求 */
 const usHighs = [];
 let junkSkipped = 0;
+const candidates = [];
 for (const [sym, q] of Object.entries(mvQuote)) {
   if (q.regularMarketPrice == null || q.fiftyTwoWeekHigh == null) continue;
   const u = uniBySym[sym] || {};
   const nm = moverRows.find((x) => x.sym === sym)?.name || cleanName(u.name) || sym;
   if (isJunk(sym, nm) || isJunk(sym, u.name)) { junkSkipped++; continue; }
-  /* 价格：用前收 × (1+当日涨跌%) 反推，规避 quote 滞后；
-     判定也用这个「已结算收盘」价，而不是 quote 的 regularMarketPrice */
+  /* 已结算收盘：前收 × (1+当日%)，规避 quote 在盘后返回前收 */
   const px = q.regularMarketPreviousClose != null && q.regularMarketChangePercent != null
     ? +(q.regularMarketPreviousClose * (1 + q.regularMarketChangePercent / 100)).toFixed(2)
     : +Number(q.regularMarketPrice).toFixed(2);
-  if (!(px >= q.fiftyTwoWeekHigh * 0.999)) continue;
-  usHighs.push({
-    d: usCloseDate, sym, name: nm,
-    type: "52w", market: "US",
-    sec: (seedSec(sym) || SECTOR_CN[u.sector] || u.sector || "其它"),
-    track: trackOfClass(sym, u.sector),
-    px, chg: numOf2(q.regularMarketChangePercent),
-    hi: +Number(q.fiftyTwoWeekHigh).toFixed(2),
-    mcap: u.mcap || 0,
-  });
+  if (!(px >= q.fiftyTwoWeekHigh * 0.97)) continue;
+  candidates.push({ sym, q, nm, u, px });
+}
+console.log("新高候选（收盘价进入 52 周高点 3% 带内）：" + candidates.length + " 只，逐只取日线复核…");
+
+/* 第二步：逐只取 10 年日线，按统一口径判定；命中的再回查全历史月线确认“历史新高” */
+for (const { sym, q, nm, u, px } of candidates) {
+  try {
+    const rows = (await chart(sym, "10y")).rows;
+    if (!rows.length || rows[rows.length - 1].date !== usCloseDate) continue; /* 日线未覆盖该交易日，放弃 */
+    const m = highMeta(rows);
+    if (!m || (!m.w52 && !m.ath)) continue;
+    let type = m.w52 ? "52w" : null;
+    if (m.ath) {
+      /* 10 年窗口装不下全部历史时（如 2000 年泡沫高点），用全历史月线确认。
+         坑：Yahoo range=max&interval=1mo 的尾部会把「当前月」再返回一根（日期=最新交易日、
+         高点/收盘与当日相同，甚至重排到上个月），拿它当“前高”会把当天价格当成历史高点，
+         严格大于必然判否 —— KO/FWONA/LH/NWE/IBN 就是这样在两次运行间来回翻。
+         所以只取「10 年以前」的月线做前高：近 10 年已由日线 hiAll 覆盖，无需月线参与。 */
+      try {
+        const mx = await (async () => {
+          try { return (await chart(sym, "max")).rows; }
+          catch { return (await chart(sym, "max")).rows; } /* 抖动重试一次，否则失败会直接放行 ATH */
+        })();
+        const cut10 = new Date(Date.parse(usCloseDate) - 365 * 10 * 86400000).toISOString().slice(0, 10);
+        const old = mx.filter((r) => r.date < cut10);
+        const oldHi = old.length ? Math.max(...old.map((r) => (r.high != null ? r.high : r.close))) : null;
+        if (oldHi != null && !(m.hiMax > oldHi)) m.ath = false;
+      } catch { /* 两次都失败时保守处理：仍按 10 年窗口结论 */ }
+      if (m.ath) type = "ath";
+    }
+    if (!type) continue;
+    usHighs.push({
+      d: usCloseDate, sym, name: nm, type, market: "US",
+      sec: secOf(sym, nm, u.sector),
+      track: trackOfClass(sym, u.sector),
+      px: +m.close.toFixed(2), chg: chgOf(q), d20: m.d20, ytd: m.ytd,
+      hi52: m.hi52, hiDay: +m.hiMax.toFixed(2),
+      mcap: q.marketCap || u.mcap || 0,
+    });
+  } catch (e) { console.warn("新高复核失败 " + sym + ": " + e.message); }
 }
 usHighs.sort((a, b) => (b.mcap || 0) - (a.mcap || 0));
-console.log("全市场 52 周新高：" + usHighs.length + " 只（剔除权证/优先股/债券等 " + junkSkipped + " 只）");
+console.log("全市场创新高：" + usHighs.length + " 只（52w " + usHighs.filter(x=>x.type==="52w").length +
+  " / ath " + usHighs.filter(x=>x.type==="ath").length + "；宽筛剔除权证/优先股等 " + junkSkipped + " 只）");
 
 /* 并入滚动日志（与 SEED 池检测的 52w/ATH 去重合并） */
 try {
   let hl = JSON.parse(readFileSync("highs-log.json", "utf8"));
-  const seen = new Set(hl.map((x) => x.d + "|" + x.sym + "|" + x.type));
-  for (const h of usHighs) {
-    const k = h.d + "|" + h.sym + "|" + h.type;
-    if (!seen.has(k)) { hl.push(h); seen.add(k); }
-  }
+  hl = mergeHi(hl, usHighs);
   const cut2 = new Date(Date.parse(etToday) - 180 * 86400000).toISOString().slice(0, 10);
   hl = hl.filter((x) => x.d >= cut2).sort((a, b) => b.d.localeCompare(a.d) || a.sym.localeCompare(b.sym));
   writeFileSync("highs-log.json", JSON.stringify(hl, null, 1));
-  const todayKeys = new Set([...highsToday, ...usHighs].map((h) => h.sym + "|" + h.type));
-  highs.today = [...highsToday, ...usHighs].filter((h, i, arr) => arr.findIndex((y) => y.sym + "|" + y.type === h.sym + "|" + h.type) === i);
+  /* 全市场扫描结果优先于池内检测（含 track/mcap，字段更全） */
+  highs.today = mergeHi(highsToday, usHighs);
   /* 赛道归类统一补齐（POOL 检测发生在本段之前，那里还没有 trackOfClass） */
   const backfill = (rows) => rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, x.sec || ""); });
   backfill(highs.today); backfill(hl);
-  highs.log = hl.slice(0, 400);
+  highs.log = recentLog(hl, 20);
+  highs.daily = aggHighsDaily(hl);
+  highs.logDays = highs.daily.length;
+  highs.logTotal = hl.length;
   const withTrack = (rows) => {
-    const byMkt = {}, bySec = {}, byTrack = {};
+    const byMkt = {}, bySec = {}, byTrack = {}, byType = {};
     rows.forEach((x) => {
       byMkt[x.market] = (byMkt[x.market] || 0) + 1;
       bySec[x.sec || "其它"] = (bySec[x.sec || "其它"] || 0) + 1;
       const tk = x.track || SEED_TRACK[x.sym] || "其它";
       byTrack[tk] = (byTrack[tk] || 0) + 1;
+      byType[x.type] = (byType[x.type] || 0) + 1;
     });
-    return byMkt, { byMkt, bySec, byTrack };
+    return { byMkt, bySec, byTrack, byType, total: rows.length, days: new Set(rows.map((x) => x.d)).size };
   };
   const wk = withTrack(hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 7 * 86400000).toISOString().slice(0, 10)));
   const mo = withTrack(hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 30 * 86400000).toISOString().slice(0, 10)));
-  highs.weekly = { total: hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 7 * 86400000).toISOString().slice(0, 10)).length, ...wk, days: 7 };
-  highs.monthly = { total: hl.filter((x) => x.d >= new Date(Date.parse(etToday) - 30 * 86400000).toISOString().slice(0, 10)).length, ...mo, days: 30 };
+  highs.weekly = { ...wk, window: 7 };
+  highs.monthly = { ...mo, window: 30 };
 } catch (e) { console.warn("全市场新高日志合并失败:", e.message); }
 
 const out = {
