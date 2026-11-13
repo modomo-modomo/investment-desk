@@ -24,6 +24,134 @@ const YEST  = process.env.RPT_POST || etDate(-1); // 昨日（盘后披露）
 const ET_HOUR = +new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", hour12: false }).format(new Date());
 const ET_TODAY = etDate(0);
 
+/* ---------------- 公司中文资料（行业 + 一句话简介） ----------------
+   Nasdaq company-profile 是英文 → 谷歌翻译转中文，落盘 company-zh.json 永久缓存；
+   每轮最多新取 120 家，避免拖慢整体同步；取不到的回落英文原文。 */
+const SEC_ZH = {
+  "Semiconductors":"半导体","Semiconductor Equipment & Materials":"半导体设备","EDP Services":"软件与数据服务",
+  "Computer Manufacturing":"计算机硬件","Computer Software: Prepackaged Software":"基础软件","Computer Software: Programming, Data Processing":"数据与算力服务",
+  "Industrial Machinery/Components":"工业机械","Electrical Products":"电气设备","Building Products":"建材","Engineering & Construction":"工程建筑",
+  "Biotechnology: Biological Products (No Diagnostic Substances)":"生物制品","Biotechnology: Pharmaceutical Preparations":"创新药","Medical/Dental Instruments":"医疗器械","Medical Specialities":"医疗服务",
+  "Broadcasting":"传媒/广播","Telecommunications Equipment":"通信设备","Telecommunications":"电信运营",
+  "Major Banks":"大型银行","Commercial Banks":"商业银行","Finance: Consumer Services":"消费金融","Investment Managers":"资产管理","Property-Casualty Insurers":"财产险",
+  "Oil & Gas Production":"油气开采","Oilfield Services/Equipment":"油服设备","Electric Utilities: Central":"电力公用","Natural Gas Distribution":"燃气公用",
+  "Retail: Specialty":"专业零售","Retail: Food Chains":"食品零售","Restaurants":"餐饮","Apparel":"服装","Package Goods/Cosmetics":"日化",
+  "Aerospace":"航空航天","Military/Government/Technical":"国防军工","Auto Manufacturing":"汽车整车","Metal Fabrications":"金属加工",
+  "Real Estate":"房地产","Transportation":"交通运输","Air Freight/Delivery Services":"航空货运","Advertising":"广告营销",
+};
+let ZH = {};
+try { ZH = JSON.parse(readFileSync("company-zh.json", "utf8")); } catch {}
+if (!ZH || typeof ZH !== "object" || Array.isArray(ZH)) ZH = {};
+const zhSave = () => writeFileSync("company-zh.json", JSON.stringify(ZH, null, 1));
+
+async function translateEn(text) {
+  try {
+    const q = encodeURIComponent(String(text).slice(0, 600));
+    const r = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=" + q,
+      { headers: { "User-Agent": UA, Referer: "https://translate.google.com/" } });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const t = j && j[0] && j[0].map((x) => x[0]).join("");
+    return t ? t.trim() : null;
+  } catch { return null; }
+}
+
+async function companyZh(sym) { return ZH[sym] || null; }
+
+/* 抓单家公司资料：主源 Yahoo assetProfile（industry + longBusinessSummary），备源 Nasdaq company-profile */
+async function fetchZh(sym) {
+  let ind = "", raw = "";
+  try {
+    const u = `https://query1.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(sym)}?modules=assetProfile&crumb=${encodeURIComponent(CRUMB)}`;
+    const j = await jget(u, { cookie: COOKIE });
+    const p = j?.quoteSummary?.result?.[0]?.assetProfile || {};
+    ind = p.industry || p.sector || "";
+    raw = String(p.longBusinessSummary || "").replace(/\s+/g, " ").trim().slice(0, 300);
+  } catch {}
+  if (!ind && !raw) {
+    try {
+      const r = await fetch("https://api.nasdaq.com/api/company/" + encodeURIComponent(sym) + "/company-profile",
+        { headers: { "User-Agent": UA, Accept: "application/json" } });
+      const d = (await r.json())?.data;
+      const g = (k) => (d && d[k] && d[k].value) || "";
+      ind = g("Industry") || g("Sector") || "";
+      raw = String(g("CompanyDescription") || "").replace(/\s+/g, " ").trim().slice(0, 300);
+    } catch {}
+  }
+  if (ind) ind = SEC_ZH[ind] || (await translateEn(ind)) || ind;
+  let desc = raw ? (await translateEn(raw)) || raw : "";
+  desc = desc.replace(/\s{2,}/g, " ").slice(0, 110);
+  if (!ind && !desc) return null;          /* 两个源都拿不到，不写缓存，下轮再试 */
+  return { ind: ind || "—", desc: desc || "—", en: raw.slice(0, 160), at: new Date().toISOString() };
+}
+
+/* 预热：趁 cookie 新鲜（未做全市场扫描、未触发 Yahoo 限速）把需要的公司资料抓完。
+   覆盖：既有存档 + 最近三场异动留档 + 今/昨两日财报日历披露公司。每轮最多 120 家新取。 */
+async function warmZh() {
+  const syms = new Set();
+  try { JSON.parse(readFileSync("earn-beat-log.json", "utf8")).forEach((x) => syms.add(x.sym)); } catch {}
+  try { JSON.parse(readFileSync("movers-log.json", "utf8")).slice(0, 3).forEach((r) => (r.rows || []).forEach((x) => syms.add(x.sym))); } catch {}
+  for (const [d, ses] of [[TODAY, "time-pre-market"], [YEST, "time-after-hours"]]) {
+    try { (await cal(d, ses)).rows.forEach((r) => syms.add(r.symbol)); } catch {}
+  }
+  const hasCJK = (t) => /[\u4e00-\u9fff]/.test(t || "");
+  /* 简介仍是英文的（首轮翻译失败被缓存）也要重试，直到成功翻成中文 */
+  const need = [...syms].filter((s) => s && (!ZH[s] || (!hasCJK(ZH[s].desc) && ZH[s].desc !== "—")));
+  let n = 0;
+  for (const s of need) {
+    if (n >= 120) { console.log("  中文资料：本轮配额用完，剩 " + (need.length - n) + " 家下轮补"); break; }
+    const rec = await fetchZh(s);
+    if (rec) { ZH[s] = rec; n++; }
+  }
+  zhSave();
+  console.log("中文资料缓存：" + Object.keys(ZH).length + " 家（本轮新取 " + n + "）");
+}
+
+/* ---------------- 业绩指引（东财 7×24 快讯轻量版，随存档落盘供复盘） ----------------
+   与 sync-news 同源同口径：公司名/代码命中 + 披露日 ±1.5 天窗口，只挑含数字的指引句。 */
+const RE_GUIDE = /指引|预计|预期|资本支出|资本开支|capex|订单|积压|backlog|电话会|管理层|展望|上调|下调|全年|毛利率/i;
+async function emPage(sortEnd) {
+  const u = `https://np-weblist.eastmoney.com/comm/web/getFastNewsList?client=web&biz=web_724&fastColumn=102&sortEnd=${sortEnd || ""}&pageSize=100&req_trace=${Date.now()}`;
+  const j = await jget(u, { Referer: "https://kuaixun.eastmoney.com/" });
+  return j?.data?.fastNewsList || [];
+}
+async function buildKx(days = 3, maxPages = 12) {
+  const all = [];
+  let end = "";
+  const oldest = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10) + " 00:00:00";
+  for (let p = 0; p < maxPages; p++) {
+    let rows;
+    try { rows = await emPage(end); } catch { break; }
+    if (!rows.length) break;
+    all.push(...rows);
+    const last = rows[rows.length - 1].showTime || "";
+    if (last && last < oldest) break;
+    end = rows[rows.length - 1].realSort || "";
+    if (!end) break;
+  }
+  return all;
+}
+async function earnGuide(kx, sym, name, annD) {
+  const als = new Set([sym]);
+  const n = String(name || "").replace(/\(.*$/, "").trim();
+  if (n && n.length >= 3) als.add(n);
+  const hits = kx.filter((x) => [...als].some((a) => (x.summary || x.title || "").includes(a)));
+  const kept = hits.filter((x) => {
+    const t = (x.showTime || "").replace(/-/g, "/");
+    const d = Date.parse(t);
+    return Number.isFinite(d) && Math.abs(d - Date.parse(annD)) <= 1.5 * 864e5;
+  });
+  if (!kept.length) return null;
+  const sents = kept.map((x) => x.summary || x.title || "").join("。").replace(/\s+/g, " ")
+    .split(/。|；|;/).map((s) => s.trim()).filter((s) => s.length >= 8 && s.length <= 200);
+  const guide = [];
+  for (const s of sents) {
+    if (guide.length >= 2) break;
+    if (RE_GUIDE.test(s) && /\d/.test(s) && !guide.includes(s)) guide.push(s);
+  }
+  return guide.length ? guide : null;
+}
+
 /* 带退避重试：云端出口 IP 属数据中心段，Yahoo 偶发 429/5xx */
 async function jget(url, headers = {}, tries = 3) {
   let lastErr;
@@ -298,6 +426,8 @@ async function build(date, session, limit) {
     const reg = m.regularMarketPrice ?? null;
     const preChg = m.preMarketPrice && prevClose ? (m.preMarketPrice / prevClose - 1) * 100 : null;
     const postChg = m.postMarketPrice && reg ? (m.postMarketPrice / reg - 1) * 100 : null;
+    /* 中文行业 + 一句话简介（company-zh.json 永久缓存，展示用） */
+    const zpro = await companyZh(r.symbol);
 
     out.push({
       symbol: r.symbol, name: r.name, mcap, tier: tr, threshold: threshold(tr),
@@ -310,6 +440,7 @@ async function build(date, session, limit) {
       preChg, postChg,
       dayChg: m.regularMarketChangePercent ?? null,
       marketState: m.marketState || null,
+      ind: zpro ? zpro.ind : "", zh: zpro ? zpro.desc : "",
     });
   }
   return { rows: out, total: snap.total || pool.length, fromCache: snap.fromCache,
@@ -319,6 +450,7 @@ async function build(date, session, limit) {
 }
 
 await yahooAuth();
+await warmZh();
 const pre = await build(TODAY, "time-pre-market", 8);
 const post = await build(YEST, "time-after-hours", 8);
 
@@ -332,9 +464,11 @@ for (const sym of Object.values(CHECK)) {
 /* 交叉校验：Wind 与 Yahoo 收盘价差 */
 let crosscheck = null;
 /* 双端点校验：live-data.js 的收盘价来自 chart v8，live-extra.js 的现价来自 quote v7。
- * 两者是 Yahoo 的两个独立接口，一致即说明抓取链路没出错。 */
+ * 两者是 Yahoo 的两个独立接口，一致即说明抓取链路没出错。
+ * 只在「市场已收盘」的窗口跑（美东 ≥16:00 或 <9:00，对应 07:00/20:30 两场定时）；
+ * 盘中昨收基准没换挡，跑出来全是假阳性，直接跳过。 */
 try {
-  if (existsSync("live-data.js")) {
+  if (existsSync("live-data.js") && (ET_HOUR >= 16 || ET_HOUR < 9)) {
     const src = readFileSync("live-data.js", "utf8").replace(/^window\.WIND_LIVE\s*=\s*/, "").replace(/;\s*$/, "");
     const W = JSON.parse(src);
     const CODE = { TSLA: "TSLA.O", META: "META.O", IREN: "IREN.O", NBIS: "NBIS.O", CRWV: "CRWV.O", BE: "BE.N", AMD: "AMD.O", TSM: "TSM.N", TER: "TER.O", ONTO: "ONTO.N", NET: "NET.N", RBRK: "RBRK.N", OKTA: "OKTA.O", CHKP: "CHKP.O" };
@@ -732,7 +866,7 @@ const trackOfClass = (sym, sector) => {
   return "其它";
 };
 
-const slim = (x) => ({ sym: x.sym, name: x.name, sec: x.sec, track: x.track || "",
+const slim = (x) => ({ sym: x.sym, name: x.name, sec: x.sec, ind: x.ind || "", zh: x.zh || "", track: x.track || "",
   mv: x.mv != null ? x.mv : (x.post != null ? x.post : x.pre), px: x.px, earn: !!x.earn });
 
 const movers = {
@@ -782,6 +916,14 @@ if (!movers.pre.length && lastPre) {
   movers.preDate = lastPre.date; movers.preFromLog = true;
 } else movers.preDate = (sessionNow === "pre") ? etToday : usCloseDate;
 movers.history = mvLog.slice(0, 10).map((x) => ({ date: x.date, session: x.session, n: x.rows.length }));
+/* 异动行补中文行业 + 一句话简介（company-zh.json 缓存；当前场次与留档回灌行都要补） */
+for (const arr of [movers.pre, movers.post].concat(mvLog.map((x) => x.rows))) {
+  for (const x of arr) {
+    if (x.zh) continue;
+    const z = ZH[x.sym];
+    if (z) { x.ind = z.ind; x.zh = z.desc; }
+  }
+}
 /* 赛道归类补写（此时 trackOfClass 已定义） */
 mvLog.forEach((r) => r.rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, ""); }));
 writeFileSync("movers-log.json", JSON.stringify(mvLog, null, 1));
@@ -930,20 +1072,6 @@ const BEAT_CUT = (mcap) => (mcap >= 10e9 ? 3 : mcap >= 2e9 ? 5 : 8);
 const BEAT_SIZE = (mcap) => (mcap >= 10e9 ? "大市值" : mcap >= 2e9 ? "中型" : "小型");
 const quarterOf = (d) => (d && d.length >= 7 ? d.slice(0, 4) + "Q" + (Math.floor((+d.slice(5, 7) - 1) / 3) + 1) : "—");
 
-/* 公司简介 / 行业：Nasdaq company-profile，取到后写进存档，后续不再请求 */
-async function companyProfile(sym) {
-  try {
-    const r = await fetch("https://api.nasdaq.com/api/company/" + encodeURIComponent(sym) + "/company-profile",
-      { headers: { "User-Agent": UA, Accept: "application/json" } });
-    const j = await r.json();
-    const d = j && j.data;
-    if (!d) return null;
-    const g = (k) => (d[k] && d[k].value) || "";
-    const desc = String(g("CompanyDescription") || "").replace(/\s+/g, " ").trim();
-    return { industry: g("Industry") || g("Sector") || "", desc: desc.slice(0, 220) };
-  } catch { return null; }
-}
-
 let beatLog = [];
 try { beatLog = JSON.parse(readFileSync("earn-beat-log.json", "utf8")); } catch {}
 if (!Array.isArray(beatLog)) beatLog = [];
@@ -972,7 +1100,9 @@ async function reactionChg(sym, announceD, sess) {
 }
 
 /* 候选池：当日/前一交易日「全部」已披露公司（市值 ≥5 亿美元，按市值取前 40），
-   不走展示用的前 8 家 —— 否则中型/小型永远进不了档，规模门槛就形同虚设。 */
+   不走展示用的前 8 家 —— 否则中型/小型永远进不了档，规模门槛就形同虚设。
+   归档准则只有一条：业绩公布后「对应场次收盘」涨幅达到阈值（大 3% / 中 5% / 小 8%）。
+   盘前公布的（当日收盘达标）与盘后公布的（次日收盘达标）一视同仁。 */
 async function beatCandidates(date, sess) {
   let rows = [];
   try { rows = (await cal(date, sess === "pre" ? "time-pre-market" : "time-after-hours")).rows; } catch { return []; }
@@ -1010,6 +1140,25 @@ if (needHint.length) {
     hintMap.set(c.r.symbol + "|" + c.annD, c.sess === "pre" ? (day ?? pre) : (post ?? pre));
   }
 }
+/* 建档时点的报价（= 公布前的最近收盘价），用于把市值换算到「公布后收盘」时点 */
+const beatQ = await quotes([...new Set(beatCand.map((c) => c.r.symbol))].concat(beatLog.map((x) => x.sym)));
+/* 东财快讯语料：给存档记录补「公司指引」，跟着存档落盘，方便复盘 */
+const KX = await buildKx().catch(() => []);
+
+/* 旧记录迁移：补中文行业/简介、指引、建档时点价（算公布后收盘市值用） */
+for (const rec of beatLog) {
+  if (!rec.zhDone) {
+    const z = await companyZh(rec.sym);
+    if (z) { rec.sec = z.ind; rec.desc = z.desc; }
+    rec.zhDone = true;
+  }
+  if (rec.capPx == null) {
+    const q = beatQ[rec.sym];
+    if (q && q.regularMarketPrice) rec.capPx = +Number(q.regularMarketPrice).toFixed(2);
+  }
+  if (rec.px != null && rec.mcapAt == null && rec.capPx) rec.mcapAt = Math.round(rec.mcap * rec.px / rec.capPx);
+  if (!rec.guide) { const g = await earnGuide(KX, rec.sym, rec.name, rec.d); if (g) rec.guide = g; }
+}
 
 let beatAdded = 0;
 for (const c of beatCand) {
@@ -1023,23 +1172,28 @@ for (const c of beatCand) {
   let rec = old;
   if (!rec) {
     const ya = await yahooActual(c.r.symbol);
-    const prof = await companyProfile(c.r.symbol);
+    const zpro = await companyZh(c.r.symbol);
     const ra = ya && ya.actual != null ? +ya.actual : numOf(c.r.eps);
     const re = ya && ya.estimate != null ? +ya.estimate : numOf(c.r.epsForecast);
+    const capPxQ = beatQ[c.r.symbol];
+    const capPx = capPxQ && capPxQ.regularMarketPrice ? +Number(capPxQ.regularMarketPrice).toFixed(2) : null;
     rec = {
       d: c.annD, sess: c.sess, sym: c.r.symbol, name: cleanName(c.r.name) || c.r.symbol,
       size: c.size, cut: c.cut,
       chg: rc ? rc.chg : null, at: rc ? rc.at : null, px: rc ? +rc.px.toFixed(2) : null,
       mcap: Math.round(c.mcap),
+      capPx, mcapAt: (rc && capPx) ? Math.round(c.mcap * rc.px / capPx) : null,
       epsAct: ra != null ? +ra.toFixed(3) : null,
       epsEst: re != null ? +re.toFixed(3) : null,
       surp: ra != null && re ? +(((ra - re) / Math.abs(re)) * 100).toFixed(1) : null,
       rev: ya && ya.fund && ya.fund.rev ? Math.round(ya.fund.rev) : null,
       net: ya && ya.fund && ya.fund.net ? Math.round(ya.fund.net) : null,
-      sec: (prof && prof.industry) || "—",
-      desc: (prof && prof.desc) || "",
+      sec: (zpro && zpro.ind) || "—",
+      desc: (zpro && zpro.desc) || "",
+      guide: await earnGuide(KX, c.r.symbol, cleanName(c.r.name) || c.r.symbol, c.annD),
       q: quarterOf(c.annD),
       addedAt: new Date().toISOString(),
+      zhDone: true,
       isNew: true,
     };
     beatLog.push(rec); beatByKey.set(key, rec); beatAdded++;
@@ -1047,6 +1201,8 @@ for (const c of beatCand) {
     /* 补算后不达门槛的（pending 阶段只是粗筛）直接撤档 */
     if (rc.chg <= rec.cut) { beatLog = beatLog.filter((y) => y !== rec); beatByKey.delete(key); continue; }
     rec.chg = rc.chg; rec.at = rc.at; rec.px = +rc.px.toFixed(2); rec.isNew = true;
+    if (rec.capPx) rec.mcapAt = Math.round(rec.mcap * rec.px / rec.capPx);
+    if (!rec.guide) { const g = await earnGuide(KX, rec.sym, rec.name, rec.d); if (g) rec.guide = g; }
   }
 }
 
@@ -1059,14 +1215,17 @@ for (const rec of pendingOld) {
   if (!rc) continue;
   if (rc.chg <= rec.cut) { beatLog = beatLog.filter((y) => y !== rec); beatByKey.delete(rec.sym + "|" + rec.d); continue; }
   rec.chg = rc.chg; rec.at = rc.at; rec.px = +rc.px.toFixed(2);
+  if (rec.capPx) rec.mcapAt = Math.round(rec.mcap * rec.px / rec.capPx);
+  if (!rec.guide) { const g = await earnGuide(KX, rec.sym, rec.name, rec.d); if (g) rec.guide = g; }
 }
 /* 只保留最近 4 个季度、最多 400 条 */
 const qs = [...new Set(beatLog.map((x) => x.q))].sort().reverse().slice(0, 4);
 beatLog = beatLog.filter((x) => qs.includes(x.q)).slice(-400);
+zhSave();
 writeFileSync("earn-beat-log.json", JSON.stringify(beatLog, null, 1));
 const beatQuarters = qs.map((q) => ({ q, rows: beatLog.filter((x) => x.q === q).sort((a, b) => b.d.localeCompare(a.d)) }));
 console.log("业绩超预期存档：" + beatLog.length + " 条（本轮新增 " + beatAdded + "）· 季度 " + qs.join("/") +
-  " · 待确认次日收盘 " + beatLog.filter((x) => x.chg == null).length + " 条");
+  " · 待收盘确认 " + beatLog.filter((x) => x.chg == null).length + " 条 · 指引已补 " + beatLog.filter((x) => x.guide && x.guide.length).length + " 条");
 
 const out = {  meta: { syncedAt: new Date().toISOString(), source: "Yahoo Finance / Nasdaq", preDate: TODAY, postDate: YEST },
   quotes: quotesOut, sectors, btc, eth, breadth, spxVol,

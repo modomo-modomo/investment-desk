@@ -15,11 +15,17 @@
   "surp": 187,
   "rev": 230873000,
   "net": -161218000,
-  "sec": "Semiconductors",
-  "desc": "Cerebras Systems (NASDAQ: CBRS) is building the world's fastest AI infrastructure. Its wafer-scale computing technology delivers high-speed AI inference, enabling developers and enterprises to build more responsive AI ap",
+  "sec": "半导体",
+  "desc": "Cerebras Systems（纳斯达克股票代码：CBRS）正在构建世界上最快的人工智能基础设施。其晶圆级计算技术提供高速AI推理，使能",
   "q": "2026Q4",
   "addedAt": "2026-11-13T14:17:56.642Z",
-  "isNew": true
+  "isNew": false,
+  "zhDone": true,
+  "capPx": 107.85,
+  "guide": [
+   "【发布利好！英伟达竞争对手盘后暴涨超18%】11月12日美股收盘后，AI芯片厂商Cerebras(CBRS.US)公布2026年第三季度财报，在AI推理需求拉动下，公司季度营收刷新历史纪录，同时上调全年业绩指引，四季度业绩展望大幅超出市场预期，盘后股价大涨超18%",
+   "【业绩超预期 美股AI芯片龙头盘后大涨超19%】美股盘后，晶圆级AI芯片龙头企业Cerebras Systems发布超预期的最新财报，Cerebras Systems股价盘后大涨超19%"
+  ]
  },
  {
   "d": "2026-11-12",
@@ -37,11 +43,13 @@
   "surp": 103.9,
   "rev": 237521000,
   "net": 86711000,
-  "sec": "EDP Services",
-  "desc": "Liftoff (NASDAQ: LFTO) is a leading growth and monetization engine built for the mobile app economy. Its AI-powered platform, Cortex, unifies marketing, creative, and monetization to deliver measurable performance at sca",
+  "sec": "软件与数据服务",
+  "desc": "Liftoff（纳斯达克股票代码：LFTO）是专为移动应用经济打造的领先增长和货币化引擎。其人工智能驱动的平台 Cortex 统一了营销、创意和货币化，在整个应用程序生命周期中大规模提供可衡量的性能。 Liftoff 使",
   "q": "2026Q4",
   "addedAt": "2026-11-13T14:17:58.345Z",
-  "isNew": true
+  "isNew": false,
+  "zhDone": true,
+  "capPx": 23.37
  },
  {
   "d": "2026-11-12",
@@ -59,11 +67,13 @@
   "surp": null,
   "rev": null,
   "net": null,
-  "sec": "Industrial Machinery/Components",
-  "desc": "Accelevation is a leading designer, manufacturer, and installer of customized structural, electrical, and mechanical systems for mission-critical infrastructure. Its vertically integrated model combines U.S.-based manufa",
+  "sec": "工业机械",
+  "desc": "Acceletion 是一家领先的设计商、制造商和安装商，为关键任务基础设施提供定制结构、电气和机械系统。其垂直整​​合模式结合了美国制造和全国范围的现场服务能力，使客户能够更快地从",
   "q": "2026Q4",
   "addedAt": "2026-11-13T14:18:02.137Z",
-  "isNew": true
+  "isNew": false,
+  "zhDone": true,
+  "capPx": 12.58
  },
  {
   "d": "2026-11-12",
@@ -81,11 +91,13 @@
   "surp": -57.4,
   "rev": 59336000,
   "net": -163000,
-  "sec": "EDP Services",
-  "desc": "HawkEye 360, headquartered in Herndon, Virginia, is a signals intelligence company delivering mission-critical intelligence data and analytics to strengthen national and global security. By detecting, characterizing, and",
+  "sec": "软件与数据服务",
+  "desc": "HawkEye 360​​ 总部位于弗吉尼亚州赫恩登，是一家信号情报公司，提供关键任务情报数据和分析以加强国家和全球安全。通过检测、表征和地理定位 RF 信号，HawkEye 360​​ 为国防、情报和商业提供装备",
   "q": "2026Q4",
   "addedAt": "2026-11-13T14:18:03.970Z",
-  "isNew": true
+  "isNew": false,
+  "zhDone": true,
+  "capPx": 17.14
  },
  {
   "d": "2026-11-12",
@@ -103,10 +115,38 @@
   "surp": 1300,
   "rev": 69032750,
   "net": 15229630,
-  "sec": "Broadcasting",
-  "desc": "Newsmax Inc. is listed on the NYSE (NMAX) and operates, through Newsmax Broadcasting LLC, one of the nation's leading news outlets, the Newsmax channel. The fourth highest-rated network is carried on all major pay TV pro",
+  "sec": "传媒/广播",
+  "desc": "Newsmax Inc. 在纽约证券交易所 (NMAX) 上市，并通过美国领先的新闻媒体之一 Newsmax Broadcasting LLC 运营 Newsmax 频道。第四高收视率的网络由所有主要付费电视提供商运营。",
   "q": "2026Q4",
   "addedAt": "2026-11-13T14:18:06.822Z",
-  "isNew": true
+  "isNew": false,
+  "zhDone": true,
+  "capPx": 9.7
+ },
+ {
+  "d": "2026-11-13",
+  "sess": "pre",
+  "sym": "SBC",
+  "name": "SBC Medical",
+  "size": "小型",
+  "cut": 8,
+  "chg": null,
+  "at": null,
+  "px": null,
+  "mcap": 538917950,
+  "capPx": 6.88,
+  "mcapAt": null,
+  "epsAct": 0.1,
+  "epsEst": 0.117,
+  "surp": -14.9,
+  "rev": 43060560,
+  "net": 11308070,
+  "sec": "医疗/护理服务",
+  "desc": "SBC Medical 是一家医疗服务组织，为广泛的医疗保健领域提供管理支持，包括高级美容保健、皮肤科、骨科、生育治疗、妇科、牙科、脱发治疗 (AGA) 和眼科。该公司管理一个部门",
+  "guide": null,
+  "q": "2026Q4",
+  "addedAt": "2026-11-13T15:18:58.945Z",
+  "zhDone": true,
+  "isNew": false
  }
 ]

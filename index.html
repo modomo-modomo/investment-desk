@@ -118,7 +118,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .muted{color:var(--muted)}.small{font-size:11.5px}.tiny{font-size:10.5px}
 .pending{font-size:10.5px;color:#98a2b3;border:1px dashed #d5dbe6;border-radius:5px;padding:1px 6px;display:inline-block;background:#fcfdfe}
 
-.tbl-wrap{overflow-x:auto;border-radius:var(--radius)}
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius);-webkit-overflow-scrolling:touch}
 table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 table.tbl th{text-align:left;font-weight:600;font-size:10.5px;letter-spacing:.5px;color:var(--muted);
   text-transform:uppercase;padding:9px 12px;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap}
@@ -365,8 +365,17 @@ ol.concl li b{color:var(--text);font-weight:650}
   .g2,.g3{grid-template-columns:1fr}
   .cal{grid-template-columns:1fr}
   .cal-day{border-right:none}
-  table.tbl{min-width:640px}
+  table.tbl{min-width:640px;font-size:12px}
+  table.tbl th{padding:6px 8px}
+  table.tbl td{padding:7px 8px}
+  .card{border-radius:10px}
+  .filters .fchip{padding:4px 9px}
   .foot{padding:12px 14px 22px}
+}
+@media (max-width:480px){
+  table.tbl{min-width:560px}
+  .tk-sub{white-space:normal}
+  .mkt-row{font-size:11px}
 }
 @media (max-width:420px){
   .topbar .desc{display:none}
@@ -1423,6 +1432,7 @@ function earnRow(r, ses){
     q:(r.quarter||"").replace("/"," "), est:r.est, nEst:r.nEst, last:r.last,
     actual:r.actual, surprise:r.surprise, reported:!!r.reported, src:r.src||"",
     mv:mv, pre:r.preChg, post:r.postChg, day:r.dayChg, hit:hit,
+    ind:r.ind||"", zh:r.zh||"",
     pooled:POOL_SYMS.indexOf(r.symbol)>=0, ses:ses };
 }
 
@@ -1783,10 +1793,11 @@ function earnTable(blk, ses){
 
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
      '<th style="width:132px">公司</th>'+
-     '<th style="width:27%">业绩要点（实际 vs 预期）</th>'+
-     '<th style="width:24%">指引 / 关键表述</th>'+
-     '<th class="num" style="width:64px">'+(isPre?"盘前":"盘后")+'</th>'+
-     '<th style="width:100px">'+(isPre?"开盘跳空 → 收盘":"次日盘前接力")+'</th>'+
+     '<th style="width:80px">行业</th>'+
+     '<th style="width:22%">业绩要点（实际 vs 预期）</th>'+
+     '<th style="width:20%">指引 / 关键表述</th>'+
+     '<th class="num" style="width:60px">'+(isPre?"盘前":"盘后")+'</th>'+
+     '<th style="width:92px">'+(isPre?"开盘跳空 → 收盘":"次日盘前接力")+'</th>'+
      '<th>解读</th></tr></thead><tbody>';
 
   rows.forEach(r=>{
@@ -1827,6 +1838,7 @@ function earnTable(blk, ses){
       '<td><div class="tk">'+r.t+(r.pooled?' <span class="tag blue" style="font-size:9px">池内</span>':'')+'</div>'+
       '<div class="tk-sub">'+r.n+' · '+r.tier+' '+r.mcap+'</div>'+
       '<div class="tiny muted">'+r.q+'</div></td>'+
+      '<td><span class="tag">'+esc(r.ind||"—")+'</span></td>'+
       '<td>'+cellRes+'</td>'+
       '<td class="read" style="font-size:11px">'+cellGuide+'</td>'+
       '<td class="num">'+(r.mv==null?'<span class="pending">无报价</span>':'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>')+'</td>'+
@@ -1835,7 +1847,8 @@ function earnTable(blk, ses){
           : (r.pre!=null ? '<div class="mv '+sgn(r.pre)+'">'+pct(r.pre,1)+'</div><div class="tiny muted">今日盘前</div>'
                          : '<span class="pending">待报价</span>'))+
       '</td>'+
-      '<td class="read" style="font-size:11px">'+earnRead(r)+'</td></tr>';
+      '<td class="read" style="font-size:11px">'+earnRead(r)+'</td>'+
+      '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
   });
   h+='</tbody></table></div>';
   return h;
@@ -2009,10 +2022,11 @@ function viewBrief(){
     const logs = isLog ? ' <span class="upd" style="border-color:#f4d9c2;background:#fff8f2;color:#a4622a">取自滚动留档</span>' : '';
     let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · |'+ses+'涨跌| ≥ 4%'+cov+day+'）'+logs+'</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-       '<th style="width:158px">标的</th><th class="num" style="width:76px">涨跌</th>'+
-       '<th class="num" style="width:88px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
+       '<th style="width:150px">标的</th><th class="num" style="width:70px">涨跌</th>'+
+       '<th class="num" style="width:80px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
+       '<th style="width:84px">行业</th><th style="width:24%">公司简介</th>'+
        '<th>归因（本场次时间窗口内的事件 / 出处）</th></tr></thead><tbody>';
-    if(!rows.length) h+='<tr><td colspan="4" class="empty">'+empty+'</td></tr>';
+    if(!rows.length) h+='<tr><td colspan="6" class="empty">'+empty+'</td></tr>';
     rows.forEach(r=>{
       let reason;
       if(r.news){
@@ -2025,9 +2039,11 @@ function viewBrief(){
       }else{
         reason='<span class="tiny muted">'+esc(r.note||"原因未知（本场次窗口内未检索到对应消息，需人工核对公告与研报）")+'</span>';
       }
-      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+(r.sec?" · "+esc(r.sec):"")+'</div></td>'+
+      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
         '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
+        '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
+        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
         '<td class="read">'+reason+'</td></tr>';
     });
     return h+'</tbody></table></div>';
@@ -2042,13 +2058,16 @@ function viewBrief(){
     if(!rows.length) return '';
     let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 阈值 |'+ses+'涨跌| ≥ 4%）</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-       '<th style="width:158px">标的</th><th class="num" style="width:76px">涨跌</th>'+
-       '<th class="num" style="width:88px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
+       '<th style="width:150px">标的</th><th class="num" style="width:70px">涨跌</th>'+
+       '<th class="num" style="width:80px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
+       '<th style="width:84px">行业</th><th style="width:24%">公司简介</th>'+
        '<th>说明</th></tr></thead><tbody>';
     rows.forEach(r=>{
-      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+(r.sec?" · "+esc(r.sec):"")+'</div></td>'+
+      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
         '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
+        '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
+        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
         '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进详表（日历按市值取前 8 家），业绩明细待补。</span></td></tr>';
     });
     return h+'</tbody></table></div>';
@@ -2146,6 +2165,7 @@ function ebInner(){
   const asc=(a,b)=>{
     const k=sk.key;
     if(k==="mcap") return (a.mcap||0)-(b.mcap||0);
+    if(k==="mcapAt") return (a.mcapAt||0)-(b.mcapAt||0);
     if(k==="chg") return (a.chg==null?-1e9:a.chg)-(b.chg==null?-1e9:b.chg);
     const sa=String(k==="sec"?secZh(a.sec):(a[k]||"")), sb=String(k==="sec"?secZh(b.sec):(b[k]||""));
     return sa>sb?1:sa<sb?-1:0;
@@ -2169,10 +2189,13 @@ function ebInner(){
   h+='</div>';
 
   const pendN=n-withChg.length;
-  h+='<div class="card" style="padding:14px 16px;margin-bottom:10px"><b style="font-size:12px">当季归纳 · 分析解读</b><div class="read" style="margin-top:7px;line-height:1.85">';
+  const preN=rows.filter(x=>x.sess==="pre").length, postN=n-preN;
+  h+='<div class="card" style="padding:14px 16px;margin-bottom:10px"><b style="font-size:12px">当季业绩超预期归纳 · 分析解读</b><div class="read" style="margin-top:7px;line-height:1.85">';
   h+=cur.q+' 已存档 <b>'+n+'</b> 只'+((pendN===n&&n)?'<b>候选</b>（业绩已披露，涨幅等收盘定稿）':'业绩超预期后股价达标的公司');
   if(fresh) h+='（<span style="color:var(--up);font-weight:650">本轮新增 '+fresh+' 只，表中标红</span>）';
-  h+='：大市值 <b>'+bigN+'</b>、中型 '+midN+'、小型 '+smN+'；';
+  h+='：大市值 <b>'+bigN+'</b>、中型 '+midN+'、小型 '+smN+'；'+
+     '<b>盘前公布 '+preN+' 只</b>（当日收盘达标）、<b>盘后公布 '+postN+' 只</b>（次日收盘达标）；'+
+     '归档准则只有一条：<b>业绩公布后对应场次收盘涨幅达到阈值</b>（大 3% / 中 5% / 小 8%），盘前盘后同一把尺。';
   if(avg!=null){
     h+='平均公布后涨幅 <b class="'+sgn(avg)+'">'+pct(avg,1)+'</b>'+
        (best?('，最强 <b>'+best.sym+' '+pct(best.chg,1)+'</b>'):'')+'。'+
@@ -2191,11 +2214,11 @@ function ebInner(){
 
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
      '<th style="width:160px">标的</th>'+th("d","公布日","96px")+'<th style="width:64px">场次</th>'+
-     th("chg","公布后涨幅","100px")+th("mcap","市值","96px")+
-     '<th style="width:26%">业绩 / 指引超预期</th>'+th("sec","行业","120px")+
-     '<th style="width:30%">公司简介</th></tr></thead><tbody>';
+     th("chg","公布后涨幅","100px")+th("mcap","公布日市值","100px")+th("mcapAt","公布后收盘市值","110px")+
+     '<th style="width:24%">业绩 / 指引超预期</th>'+th("sec","行业","110px")+
+     '<th style="width:26%">公司简介</th></tr></thead><tbody>';
   if(!n){
-    h+='<tr><td colspan="8" class="empty">该季度暂无达标记录</td></tr>';
+    h+='<tr><td colspan="9" class="empty">该季度暂无达标记录</td></tr>';
   }
   rows.forEach(x=>{
     const isNew=!!x.isNew;
@@ -2212,12 +2235,14 @@ function ebInner(){
       '<td><span class="tag'+(x.sess==="pre"?" blue":" violet")+'">'+(x.sess==="pre"?"盘前":"盘后")+'</span></td>'+
       '<td class="num" style="font-weight:650">'+(c!=null?'<span class="chg '+sgn(c)+'">'+pct(c,1)+'</span>':'<span class="tiny muted">'+(x.sess==="pre"?"待当日收盘":"待次日收盘")+'</span>')+'</td>'+
       '<td class="num">'+fmtCap(x.mcap)+'<div class="tiny muted">'+x.size+'</div></td>'+
-      '<td class="read" style="font-size:11px;line-height:1.6">'+surpTxt+(numTxt?('<br>'+numTxt):'')+'</td>'+
+      '<td class="num">'+(x.mcapAt!=null?fmtCap(x.mcapAt):'<span class="tiny muted">待收盘</span>')+'</td>'+
+      '<td class="read" style="font-size:11px;line-height:1.6">'+surpTxt+(numTxt?('<br>'+numTxt):'')+
+        (x.guide&&x.guide.length?(''+x.guide.slice(0,2).map(g=>'<div class="tiny" style="margin-top:3px;color:#4a5a75;line-height:1.55">指引 · '+esc(String(g).slice(0,90))+'</div>').join('')):'<div class="tiny muted" style="margin-top:3px">指引待补（东财快讯未覆盖该公司本场披露）</div>')+'</td>'+
       '<td><span class="tag">'+esc(secZh(x.sec))+'</span></td>'+
       '<td class="read" style="font-size:11px;line-height:1.6">'+esc(x.desc||"—")+'</td></tr>';
   });
   h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：<b>公布后涨幅</b>——盘前公布取公布当日收盘涨幅（相对前一交易日收盘），盘后公布取<b>次日</b>收盘涨幅（相对公布日收盘），统一用日线收盘自算，不取盘中/盘后瞬时价；<b>市值</b>为公布后收盘时点市值；<b>场次</b>区分盘前/盘后；对应场次还没收盘的记「待当日收盘 / 待次日收盘」，下一轮自动补齐（补算后不达门槛的<b>撤档</b>）。覆盖当日全部披露公司中市值 ≥5 亿美元的前 40 家，按自然季度滚动保留最近 4 个季度。</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：<b>公布后涨幅</b>——盘前公布取公布当日收盘涨幅（相对前一交易日收盘），盘后公布取<b>次日</b>收盘涨幅（相对公布日收盘），统一用日线收盘自算，不取盘中/盘后瞬时价；<b>公布日市值</b>为披露当日（收盘口径）市值，<b>公布后收盘市值</b>按公布后对应场次收盘价折算（= 公布日市值 × 收盘价 ÷ 建档时点价）；<b>指引</b>取东方财富 7×24 快讯中该公司披露同期（±1.5 天）的指引表述，随存档落盘供复盘，未覆盖的标「指引待补」；<b>场次</b>区分盘前/盘后；对应场次还没收盘的记「待当日收盘 / 待次日收盘」，下一轮自动补齐（补算后不达门槛的<b>撤档</b>）。覆盖当日全部披露公司中市值 ≥5 亿美元的前 40 家，按自然季度滚动保留最近 4 个季度。</div>';
   return h;
 }
 
@@ -2298,7 +2323,7 @@ const TRACK_FUND = {
 const gpuChartSvg = () => {
   const G = YF && YF.gpuRent;
   if (!G || !G.series) return "";
-  const W = 620, H = 230, L = 40, R = 14, T = 14, B = 30;
+  const W = 640, H = 220, L = 40, R = 60, T = 14, B = 30;
   const mk = (arr) => arr.map(p => ({ d: p[0], v: p[1] }));
   const s1 = mk(G.series.h100), s2 = mk(G.series.h200), s3 = mk(G.series.b200);
   const all = s1.concat(s2, s3).map(p => p.v);
@@ -2315,7 +2340,7 @@ const gpuChartSvg = () => {
   tickIdx.forEach(i => ticks.push('<text x="'+X(i).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="9" fill="#98a6b8">'+s1[i].d.slice(5,10).replace("-","/")+'</text>'));
   const dot = (s, c) => '<circle cx="'+X(n-1).toFixed(1)+'" cy="'+Yv(last(s).v).toFixed(1)+'" r="3.5" fill="'+c+'"/><text x="'+(X(n-1)+6)+'" y="'+(Yv(last(s).v)+3).toFixed(1)+'" font-size="9.5" font-weight="700" fill="'+c+'">$'+last(s).v+'</text>';
   const chg = G.latest && G.latest.chg30d ? G.latest.chg30d : {};
-  return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto" font-family="inherit">'+
+  return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;max-width:620px;height:auto;display:block;margin:0 auto" font-family="inherit">'+
     grid.join("")+ticks.join("")+
     '<path d="'+path(s1)+'" fill="none" stroke="#3b82c4" stroke-width="1.6"/>'+
     '<path d="'+path(s2)+'" fill="none" stroke="#e8952f" stroke-width="1.6"/>'+

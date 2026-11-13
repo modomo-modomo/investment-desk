@@ -56,7 +56,8 @@ jobs:
           # 滚动日志必须一起提交，否则“长期积累”每次都会从零开始：
           # highs-log（52 周新高）/ geo-log（APEC·美伊·俄乌）/ trump-log（川普语录）/ movers-log（盘前盘后异动留档）
           for f in live-data.js live-extra.js live-news.js cal-cache.json \
-                   highs-log.json geo-log.json trump-log.json movers-log.json gpu-rent.json; do
+                   highs-log.json geo-log.json trump-log.json movers-log.json gpu-rent.json \
+                   earn-beat-log.json company-zh.json brief-log.json; do
             [ -f "$f" ] && git add "$f" || true
           done
           if git diff --staged --quiet; then
