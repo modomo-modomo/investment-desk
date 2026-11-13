@@ -872,6 +872,30 @@ try {
   /* 赛道归类统一补齐（POOL 检测发生在本段之前，那里还没有 trackOfClass） */
   const backfill = (rows) => rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, x.sec || ""); });
   backfill(highs.today); backfill(hl);
+  /* 新高跟踪：sym → 首次创新高日/价。用于「自首次新高以来」的累计涨跌幅，
+     衡量新高之后是延续还是回落；同日重跑不重复计数（lastD 相同则 n 不变） */
+  let hiTrack = {};
+  try { hiTrack = JSON.parse(readFileSync("highs-track.json", "utf8")); } catch {}
+  for (const x of highs.today) {
+    if (x.type === "mkt") continue; /* 指数新高不进个股跟踪表 */
+    const t = hiTrack[x.sym];
+    if (!t) {
+      hiTrack[x.sym] = { sym: x.sym, name: x.name, sec: x.sec, track: x.track,
+        firstD: x.d, firstPx: x.px, lastD: x.d, lastPx: x.px, n: 1, everAth: x.type === "ath" };
+    } else {
+      if (t.lastD !== x.d) { t.n = (t.n || 1) + 1; t.lastD = x.d; }
+      t.lastPx = x.px;
+      t.everAth = !!t.everAth || x.type === "ath";
+      if (x.sec) t.sec = x.sec;
+      if (x.track) t.track = x.track;
+      if (x.name) t.name = x.name;
+    }
+  }
+  writeFileSync("highs-track.json", JSON.stringify(hiTrack, null, 1));
+  highs.follow = Object.values(hiTrack)
+    .map((t) => ({ ...t, chg: t.firstPx ? +((t.lastPx / t.firstPx - 1) * 100).toFixed(2) : null }))
+    .sort((a, b) => String(b.lastD || "").localeCompare(String(a.lastD || "")))
+    .slice(0, 300);
   highs.log = recentLog(hl, 20);
   highs.daily = aggHighsDaily(hl);
   highs.logDays = highs.daily.length;

@@ -391,11 +391,28 @@ geoLog = geoLog.filter((x) => String(x.t).slice(0, 5) >= geoCutoff).slice(0, 60)
 writeFileSync("geo-log.json", JSON.stringify(geoLog, null, 1), "utf8");
 console.log("地缘跟踪：本轮新增 " + geoItems.length + " 条（APEC/美伊/俄乌），日志 " + geoLog.length + " 条");
 
+/* 核心结论存档：brief-log.json（每日更新会话写入：daily/weekly/month-draft/month-final），透传给页面复盘 */
+let briefLog = [];
+try { briefLog = JSON.parse(readFileSync("brief-log.json", "utf8")); } catch {}
+if (!Array.isArray(briefLog)) briefLog = [];
+{
+  const m = new Map(); /* 同日同 kind 只留最新一条（重复写入时以后写的为准） */
+  for (const e of briefLog) if (e && e.d) m.set(e.d + "|" + (e.kind || "daily"), e);
+  briefLog = [...m.values()];
+}
+const briefCutoff = new Date(Date.now() - 200 * 86400000).toISOString().slice(0, 10);
+briefLog = briefLog.filter((x) => x.d >= briefCutoff)
+  .sort((a, b) => b.d.localeCompare(a.d) || String(b.t || "").localeCompare(String(a.t || "")));
+writeFileSync("brief-log.json", JSON.stringify(briefLog, null, 1), "utf8");
+console.log("核心结论存档：" + briefLog.length + " 条（当日 " + briefLog.filter((x) => (x.kind || "daily") === "daily").length +
+  " · 周月 " + briefLog.filter((x) => x.kind && x.kind !== "daily").length + "）");
+
 writeFileSync("live-news.js", "window.NEWS_DATA = " + JSON.stringify({
   meta: { syncedAt: new Date().toISOString(), source: "东方财富 7×24 / Yahoo 标题", corpus: corpus.length, total: list.length, ok: okCount, full: fullCount },
   items: results,
   trump: { items: trumpItems, logCount: trumpLog.length },
   moversNews: mvNews,
   geo: { items: geoItems, logCount: geoLog.length },
+  briefLog,
 }, null, 1) + ";\n", "utf8");
 console.log(`live-news.js｜${fullCount}/${list.length} 家有业绩数字，${okCount}/${list.length} 家有内容`);

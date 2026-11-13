@@ -1922,6 +1922,30 @@ function viewBrief(){
   h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次同步：20:30 与次日 07:00，每次全站同批刷新</div></div>';
   h+='</div></div>';
 
+  /* ---- 02 核心结论存档：每日 + 周 + 月，供复盘 ---- */
+  const BL=(typeof window!=="undefined"&&window.NEWS_DATA&&Array.isArray(window.NEWS_DATA.briefLog))?window.NEWS_DATA.briefLog:[];
+  const KIND={daily:["当日",""],weekly:["本周","blue"],"month-draft":["月初稿",""],"month-final":["月终稿","red"]};
+  h+='<div class="sec">'+secHead("02","核心结论存档 · 复盘用",
+      "每个交易日的核心结论 + 每周/每月总结的留档 · 点开看全文 · 滚动保留 200 天",
+      "<span class='upd'>"+BL.length+" 条</span>");
+  h+='<div class="tiny muted" style="margin:0 0 10px;padding-left:2px;line-height:1.8">设计：<b>当日核心结论每天收盘后存一条</b>；<b>周六 07:00</b>（处理周五收盘）在当日之外加存一条<b>本周核心结论</b>；<b>每月 25 日</b>加存<b>本月核心结论初稿</b>；<b>月末最后交易日</b>加存<b>本月核心结论终稿</b>。存档的就是上面 hero 卡里的内容（基调 + 结论列表），原样留存、不改写，方便日后对照当时的数据与判断复盘。</div>';
+  if(!BL.length){
+    h+='<div class="card" style="padding:12px 14px"><span class="tiny muted">暂无存档——07:00 更新会话会把当日核心结论写入 brief-log.json，逐日积累。</span></div>';
+  } else {
+    BL.forEach(e=>{
+      const kd=KIND[e.kind||"daily"]||KIND.daily;
+      h+='<details class="card" style="padding:10px 14px;margin-bottom:8px">'+
+         '<summary style="cursor:pointer;display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none">'+
+         '<b>'+(e.d||"—")+'</b><span class="tag'+(kd[1]?" "+kd[1]:"")+'" style="font-size:10px">'+kd[0]+'</span>'+
+         (e.stance?'<span class="tiny" style="color:var(--text-2)">基调：'+e.stance+'</span>':'')+
+         '<span class="tiny muted" style="margin-left:auto">'+((e.conclusions||[]).length)+' 条结论</span></summary>'+
+         '<div style="margin-top:9px;border-top:1px solid var(--line);padding-top:9px">'+
+         (e.stanceNote?'<div class="stance">'+e.stanceNote+'</div>':'')+
+         '<ol class="concl">'+(e.conclusions||[]).map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol></div></details>';
+    });
+  }
+  h+='</div>';
+
   h+=mktClose();
 
   h+='<div class="srcbar">'+
@@ -1934,12 +1958,12 @@ function viewBrief(){
      '<span class="si"><i class="dot on"></i>全市场新高 <b>'+(DATA.highs?DATA.highs.today.length+" 条 / 累计 "+DATA.highs.log.length+" 条":"待接入")+'</b>（普通股，剔除权证/优先股）</span>'+
      '</div>';
 
-  h+='<div class="sec">'+secHead("02","市场色彩","维度 · 表现 · 解读","<span class='upd'>收盘价</span>");
+  h+='<div class="sec">'+secHead("03","市场色彩","维度 · 表现 · 解读","<span class='upd'>收盘价</span>");
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:92px">维度</th><th style="width:38%">表现</th><th>解读</th></tr></thead><tbody>';
   b.color.forEach(r=>{ h+='<tr><td class="strong">'+r.dim+'</td><td class="read">'+r.perf+'</td><td class="read">'+r.note+'</td></tr>'; });
   h+='</tbody></table></div></div>';
 
-  h+='<div class="sec">'+secHead("03","全球跨资产","最近已结算收盘（美东 "+asOfFmt(DATA.meta.dataAsOf)+"）· 当日 · 20 日 · 备注（解读变化）","<span class='upd'>收盘 / 结算价</span>");
+  h+='<div class="sec">'+secHead("04","全球跨资产","最近已结算收盘（美东 "+asOfFmt(DATA.meta.dataAsOf)+"）· 当日 · 20 日 · 备注（解读变化）","<span class='upd'>收盘 / 结算价</span>");
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:150px">资产</th>'+
      '<th class="num" style="width:96px">收盘</th><th class="num" style="width:86px">当日</th>'+
      '<th class="num" style="width:86px">20 日</th><th>备注（解读变化）</th></tr></thead><tbody>';
@@ -2009,7 +2033,7 @@ function viewBrief(){
 
   const preDay=DATA.moversPreDate||DATA.meta.dataAsOf||"";
   const postDay=DATA.moversPostDate||DATA.meta.dataAsOf||"";
-  h+='<div class="sec">'+secHead("04","盘前",
+  h+='<div class="sec">'+secHead("05","盘前",
       "场次 "+asOfFmt(preDay)+" 04:00–09:30 美东（北京 17:00–22:30）· ① 盘前业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 20:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩 / 异动（Nasdaq 日历 · 大/中市值 3% · 中小市值 5%）</span></div>';
@@ -2017,8 +2041,8 @@ function viewBrief(){
   h+=earnMvTbl((DATA.earnMvPre||[]).filter(x=>!preSymSet.has(x.t)),"盘前");
   h+=mvTbl(DATA.moversPre||[],"该场次未捕获到非财报驱动的显著异动（盘前窗口未开或当日确实没有 ≥4% 的非财报波动）","盘前");
 
-  /* ---- 05 盘后：①业绩/异动 ②非财报异动 ---- */
-  h+='<div class="sec">'+secHead("05","盘后",
+  /* ---- 06 盘后：①业绩/异动 ②非财报异动 ---- */
+  h+='<div class="sec">'+secHead("06","盘后",
       "场次 "+asOfFmt(postDay)+" 16:00–20:00 美东（北京次日 05:00–09:00）· ① 盘后业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩 / 异动（盘后 > 3% · 附潜在原因分析）</span></div>';
@@ -2035,7 +2059,7 @@ function viewBrief(){
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
      '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥1 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（市值 ≥1 亿美元的普通股；再往下的仙股剔除）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 的原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>“原因未知”</b>，<b>不做推测性归因</b>。</div></div>';
 
-  h+='<div class="sec">'+secHead("06","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
+  h+='<div class="sec">'+secHead("07","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
       "<span class='upd'>"+b.research.length+" 篇累计</span><span class='upd hot'>红色 = 本轮新增</span>");
   h+='<div class="grid g3" style="align-items:start">';
   ["宏观策略","行业","个股"].forEach(g=>{
@@ -2377,8 +2401,15 @@ function viewMovers(){
 
   let h=feedBar();
 
-  /* ---------------- 01 当日 52 周新高（全美股 · 可筛选） ---------------- */
-  h+='<div class="sec">'+secHead("01","当日创新高 · 全美股扫描",
+  /* ---------------- 01 结论先行：归纳与策略 ---------------- */
+  h+='<div class="sec">'+secHead("01","结论先行 · 归纳与策略",
+      "先看结论：当日创新高的结构解读 + 跟踪/配置建议 · 明细表与滚动积累在下面",
+      H?("<span class='upd'>当日 "+H.today.length+" 条</span><span class='upd'>交易日 "+(H.date||"—")+"</span>"):"<span class='upd'>待接入</span>");
+  h+=hiConcl(H);
+  h+='</div>';
+
+  /* ---------------- 02 当日创新高明细（全美股 · 可筛选） ---------------- */
+  h+='<div class="sec">'+secHead("02","当日创新高 · 全美股扫描",
       "52 周新高 / 历史新高分开标 · 字段：日期 · 标的 · 类型 · 市场 · 板块 · 赛道 · 股价 · 当日 · 20 日 · YTD　｜　可按类型 / 赛道 / 板块筛选，点表头排序",
       H?("<span class='upd'>当日 "+H.today.length+" 条</span><span class='upd'>交易日 "+(H.date||"—")+"</span>"):"<span class='upd'>待接入</span>");
 
@@ -2389,8 +2420,8 @@ function viewMovers(){
      '· <b>历史新高</b> = 当日最高价 &gt; 上市以来（不含当日）最高价（10 年日线初判 + 全历史月线二次确认）。<br>'+
      'AMD 11-12 收盘 585.30 只越过旧收盘高点 552.90，盘中高点 594.00 未破 658.52（2026-09-01），<b>两种新高都不算</b>——这正是旧口径的错误来源。<b>权证、优先股、公司债、单位、权利、ETF 一律剔除</b>；记录日期 = 该笔收盘所属的<b>交易日</b>，不是脚本运行日；同一标的同一天只记一条（历史新高优先），滚动保留 180 天。</div></div>';
 
-  /* ---------------- 02 滚动日志（倒序） ---------------- */
-  h+='<div class="sec">'+secHead("02","创新高滚动日志",
+  /* ---------------- 03 滚动日志（倒序）+ 新高跟踪 ---------------- */
+  h+='<div class="sec">'+secHead("03","创新高滚动日志",
       "按日期倒序 · 最新的排在最前 · 长期滚动积累（保留 180 天，逐条明细留最近 20 个交易日）",
       H?("<span class='upd'>累计 "+(H.logTotal||H.log.length)+" 条</span><span class='upd'>"+(H.logDays||0)+" 个交易日</span>"):"<span class='upd'>待接入</span>");
   /* 新高数量走势（按交易日聚合，最多画 20 根） */
@@ -2431,9 +2462,36 @@ function viewMovers(){
         '<td class="num">'+(x.ytd!=null?'<span class="chg '+sgn(x.ytd)+'">'+pct(x.ytd,1)+'</span>':'—')+'</td></tr>';
     });
   }
+  h+='</tbody></table></div>';
+
+  /* 新高跟踪：以当前价对比「首次创新高当日」的股价，衡量新高之后的持续度 */
+  const follow=(H&&H.follow)?H.follow.slice():[];
+  h+='<div class="card tbl-wrap" style="margin-top:10px"><table class="tbl"><thead><tr>'+
+     '<th style="width:150px">标的</th><th style="width:92px">板块</th><th style="width:124px">赛道</th>'+
+     '<th style="width:100px">首次新高日</th><th class="num">首日价</th><th class="num">现价</th>'+
+     '<th class="num">累计涨跌幅</th><th class="num">新高次数</th><th style="width:100px">最近新高日</th></tr></thead><tbody>';
+  if(!follow.length){
+    h+='<tr><td colspan="9" class="empty">跟踪表自本轮起积累：每只标的首次进入新高榜当天的股价会被记下，之后每天用最新收盘价对比，看新高之后是延续还是回落</td></tr>';
+  } else {
+    const frows=follow.slice().sort((a,b)=>(b.chg==null?-1e9:b.chg)-(a.chg==null?-1e9:a.chg) || (b.n||0)-(a.n||0));
+    const win=frows.filter(x=>x.chg>0).length, lose=frows.filter(x=>x.chg<0).length;
+    frows.forEach(x=>{
+      const c=x.chg;
+      h+='<tr><td><div class="tk">'+x.sym+(x.everAth?' <span class="tag red" style="font-size:9px">ATH</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
+        '<td><span class="tag">'+esc(x.sec||"其它")+'</span></td>'+
+        '<td>'+(x.track?'<span class="tag violet">'+esc(x.track)+'</span>':'<span class="tiny muted">—</span>')+'</td>'+
+        '<td class="num" style="white-space:nowrap">'+(x.firstD||"—")+'</td>'+
+        '<td class="num">'+(x.firstPx!=null?"$"+Number(x.firstPx).toFixed(2):"—")+'</td>'+
+        '<td class="num">'+(x.lastPx!=null?"$"+Number(x.lastPx).toFixed(2):"—")+'</td>'+
+        '<td class="num" style="font-weight:650">'+(c!=null?'<span class="chg '+sgn(c)+'">'+pct(c,1)+'</span>':'—')+'</td>'+
+        '<td class="num">'+(x.n||1)+'</td>'+
+        '<td class="num" style="white-space:nowrap">'+(x.lastD||"—")+'</td></tr>';
+    });
+    h+='<tr><td colspan="9" class="tiny muted" style="padding:8px 10px">共 '+frows.length+' 只 · 累计上涨 '+win+' 只 / 下跌 '+lose+' 只 · 「累计涨跌幅」= 最新收盘价 ÷ 该标的首次进入新高榜当日收盘价 − 1（每只标的一行，长期滚动更新；新高次数 ≥2 说明动能有延续，只有 1 次的还在观察期）</td></tr>';
+  }
   h+='</tbody></table></div></div>';
 
-  /* ---------------- 03 / 04 周与月分析 ---------------- */
+  /* ---------------- 04 / 05 周与月分析 ---------------- */
   const ana=(label,key)=>{
     const a=H&&H[key];
     let hh='<div class="sec">'+secHead(label[0],label[1],"滚动日志 "+label[2]+" 天窗口 · 市场 / 板块 / 赛道三维分布",
@@ -2469,11 +2527,11 @@ function viewMovers(){
     hh+='</div></div></div>';
     return hh;
   };
-  h+=ana(["03","周创新高分析","7"],'weekly');
-  h+=ana(["04","月创新高分析","30"],'monthly');
+  h+=ana(["04","周创新高分析","7"],'weekly');
+  h+=ana(["05","月创新高分析","30"],'monthly');
 
-  /* ---------------- 05 池内标的距 52 周高点 ---------------- */
-  h+='<div class="sec">'+secHead("05","研究池距 52 周高点","距高点 3% 以内 · 辅助观察创新高的临近",
+  /* ---------------- 06 池内标的距 52 周高点 ---------------- */
+  h+='<div class="sec">'+secHead("06","研究池距 52 周高点","距高点 3% 以内 · 辅助观察创新高的临近",
       "<span class='upd'>"+DATA.moversH52.length+" 只</span>");
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th>标的</th><th class="num">收盘</th><th class="num">涨幅</th>'+
      '<th class="num">52周高点</th><th class="num">距高点</th><th>行业</th></tr></thead><tbody>';
@@ -2489,28 +2547,13 @@ function viewMovers(){
        '<td><span class="tag">'+s2.sec+'</span></td></tr>';
   });
   h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">这一节只覆盖<b>研究池</b>，用来提前发现“快要创新高”的标的；全市场当日的实际新高见 01。</div></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px">这一节只覆盖<b>研究池</b>，用来提前发现“快要创新高”的标的；全市场当日的实际新高见 02。</div></div>';
   return h;
 }
 
-/* 当日新高表（筛选 + 排序）+ 归纳 + 策略建议 */
-function hiBody(H){
-  const today=(H&&H.today)?H.today:[];
-  const st=HI_ST;
-  let rows=today.filter(x=>
-    (st.type==="全部" || (st.type==="52w" ? (x.type==="52w"||x.type==="ath") : x.type===st.type)) &&
-    (st.trk==="全部" || (x.track||"其它")===st.trk) &&
-    (st.sec==="全部" || (x.sec||"其它")===st.sec));
-  const sk=st.sort;
-  rows=rows.slice().sort((a,b)=>{
-    const va=(sk.key==="mcap"?(a.mcap||0):(a[sk.key]==null?-1e9:a[sk.key]));
-    const vb=(sk.key==="mcap"?(b.mcap||0):(b[sk.key]==null?-1e9:b[sk.key]));
-    return (vb-va)*sk.dir || (b.mcap||0)-(a.mcap||0);
-  });
-  const typeTxt={"52w":"52 周新高","ath":"历史新高","mkt":"指数新高"};
-  const mktTxt={US:"美股",HK:"港股",CN:"A股"};
-  const arrow=(k)=> st.sort.key===k ? (st.sort.dir>0?" ▾":" ▴") : "";
-  /* 统计与归纳共用的前置计算 */
+/* 结论先行：统计卡 + 归纳 + 策略建议（按当日全市场计算，不受下面明细表的筛选影响） */
+function hiConcl(H){
+  const rows=(H&&H.today)?H.today:[];
   const ent=(o)=>Object.entries(o).sort((a,b)=>b[1]-a[1]);
   const cnt=(key)=>rows.reduce((m,x)=>{const k=x[key]||"其它";m[k]=(m[k]||0)+1;return m;},{});
   const tkE=ent(cnt("track")), scE=ent(cnt("sec"));
@@ -2518,9 +2561,6 @@ function hiBody(H){
   const big=capped.filter(x=>x.mcap>=10e9).length, mid=capped.filter(x=>x.mcap>=2e9&&x.mcap<10e9).length;
   const small=capped.length-big-mid, noCap=rows.length-capped.length;
   const athN=rows.filter(x=>x.type==="ath").length;
-  const thSort=(k,label,w)=>'<th class="num'+(w?' style="width:'+w+'"':'')+'" data-sort="'+k+'" style="cursor:pointer" title="点击排序">'+label+arrow(k)+'</th>';
-
-  /* 顶部统计条（参考用户提供的样式）：总数 / 历史新高 / 占比 / 赛道集中度 */
   const uni=(DATA.moversUniverse||0);
   const realTk=tkE.filter(x=>x[0]!=="其它");
   const concTxt = realTk.length && realTk[0][1]>=3
@@ -2537,43 +2577,17 @@ function hiBody(H){
     statCell('集中度', concTxt[0], concTxt[1])+
     '</div>';
 
-  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-    '<th style="width:88px">日期</th><th style="width:170px">标的</th><th style="width:84px">类型</th>'+
-    '<th style="width:52px">市场</th><th style="width:92px">板块</th><th style="width:130px">赛道</th>'+
-    thSort("px","股价","80px")+thSort("chg","当日","76px")+thSort("d20","20 日","76px")+thSort("ytd","YTD","76px")+
-    '</tr></thead><tbody>';
-  if(!rows.length){
-    h+='<tr><td colspan="10" class="empty">'+(today.length?'当前筛选条件下无记录':'当日全市场扫描未发现创新高（严格口径下这本身就是有效信号）')+'</td></tr>';
-  }
-  rows.forEach(x=>{
-    const isAth=x.type==="ath";
-    h+='<tr><td class="num" style="white-space:nowrap">'+x.d+'</td>'+
-      '<td><div class="tk">'+x.sym+(isAth?' <span class="tag red" style="font-size:9px">ATH</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
-      '<td><span class="tag'+(isAth?" red":"")+'">'+(typeTxt[x.type]||x.type)+'</span></td>'+
-      '<td>'+(mktTxt[x.market]||x.market||"")+'</td>'+
-      '<td><span class="tag">'+esc(x.sec||"其它")+'</span></td>'+
-      '<td>'+(x.track?'<span class="tag violet">'+esc(x.track)+'</span>':'<span class="tiny muted">—</span>')+'</td>'+
-      '<td class="num" style="font-weight:600">'+(x.px!=null?"$"+Number(x.px).toFixed(2):"—")+'</td>'+
-      '<td class="num">'+(x.chg!=null?'<span class="chg '+sgn(x.chg)+'">'+pct(x.chg,2)+'</span>':'—')+'</td>'+
-      '<td class="num">'+(x.d20!=null?'<span class="chg '+sgn(x.d20)+'">'+pct(x.d20,1)+'</span>':'—')+'</td>'+
-      '<td class="num">'+(x.ytd!=null?'<span class="chg '+sgn(x.ytd)+'">'+pct(x.ytd,1)+'</span>':'—')+'</td></tr>';
-  });
-  h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px">股价/当日/20日/YTD 均为<b>已结算收盘口径</b>（20 日 = 相对 20 个交易日前收盘，YTD = 相对上年最后收盘）；点击「股价 / 当日 / 20 日 / YTD」表头可切换升序降序。挂 ATH 标的是「当日最高价越过上市以来全部最高价」，比普通 52 周新高强一档。</div>';
-
-  /* ---- 归纳 + 策略建议（基于当前筛选结果） ---- */
   const avg20 = rows.length ? rows.filter(x=>x.d20!=null).reduce((s,x)=>s+x.d20,0)/Math.max(1,rows.filter(x=>x.d20!=null).length) : null;
   const avgYtd = rows.length ? rows.filter(x=>x.ytd!=null).reduce((s,x)=>s+x.ytd,0)/Math.max(1,rows.filter(x=>x.ytd!=null).length) : null;
-  const topShare=rows.length&&tkE.length?Math.round(tkE[0][1]/rows.length*100):0;
 
   h+='<div class="grid g2" style="margin-top:10px;align-items:start">';
   h+='<div class="card" style="padding:14px 16px"><b style="font-size:12px">归纳</b><div class="read" style="margin-top:7px;line-height:1.85">';
   if(!rows.length){
-    h+='当前筛选下没有创新高标的。全市场<b>零创新高</b>是明确的广度信号：没有任何方向能走出“高于过去一年所有价格”的走势，说明市场处于<b>无趋势 / 去泡沫</b>阶段——<b>此时不该加仓任何单一赛道</b>，也别把“跌得多”当成“便宜”。';
+    h+='当日全市场<b>零创新高</b>，这是明确的广度信号：没有任何方向能走出“高于过去一年所有价格”的走势，说明市场处于<b>无趋势 / 去泡沫</b>阶段——<b>此时不该加仓任何单一赛道</b>，也别把“跌得多”当成“便宜”。';
   } else {
     const d20s=rows.filter(x=>x.d20!=null).slice().sort((a,b)=>b.d20-a.d20);
     const ytds=rows.filter(x=>x.ytd!=null).slice().sort((a,b)=>b.ytd-a.ytd);
-    h+='筛选后 <b>'+rows.length+'</b> 条（全市场当日共 '+today.length+' 条，其中历史新高 <b>'+athN+'</b> 条）。赛道分布：'+
+    h+='当日全市场共 <b>'+rows.length+'</b> 条（扫描 '+uni+' 只普通股），其中历史新高 <b>'+athN+'</b> 条。赛道分布：'+
        (tkE.length?tkE.slice(0,4).map(x=>'<b>'+esc(x[0])+'</b> '+x[1]+' 条').join('、'):'—')+
        '；板块分布：'+(scE.length?scE.slice(0,3).map(x=>esc(x[0])+' '+x[1]).join('、'):'—')+'。'+
        (capped.length?'市值结构：大市值 <b>'+big+'</b>、中市值 '+mid+'、中小市值 '+small+(noCap?'（另有 '+noCap+' 只未取到市值）':'')+'。':'')+
@@ -2603,7 +2617,7 @@ function hiBody(H){
     const tkCons = realTk.length && Math.round(realTk[0][1]/rows.length*100)>=40;
     const scCons = !tkCons && scE.length && Math.round(scE[0][1]/rows.length*100)>=25;
     const focus = tkCons ? esc(realTk[0][0]) : (scCons ? esc(scE[0][0]) : null);
-    /* 防御/类债占比：按实际板块分布算，不写死结论 */
+    /* 防御/利率敏感占比：按实际板块分布算，不写死结论 */
     const DEF_SEC=/^(医疗|必需消费|公用事业|金融|房地产)$/;
     const defRows=rows.filter(x=>DEF_SEC.test(x.sec||""));
     const defN=defRows.length;
@@ -2627,6 +2641,51 @@ function hiBody(H){
        '⑤ <b>证伪条件</b>：连续 3 个交易日新高数量递减且赛道分散 → 共识在瓦解，把新增权重退回；创新高标的若集体<b>放量滞涨</b>，提前一轮减。';
   }
   h+='</div></div></div>';
+  return h;
+}
+
+/* 当日新高明细表（筛选 + 排序），跟在「结论先行」后面 */
+function hiBody(H){
+  const today=(H&&H.today)?H.today:[];
+  const st=HI_ST;
+  let rows=today.filter(x=>
+    (st.type==="全部" || (st.type==="52w" ? (x.type==="52w"||x.type==="ath") : x.type===st.type)) &&
+    (st.trk==="全部" || (x.track||"其它")===st.trk) &&
+    (st.sec==="全部" || (x.sec||"其它")===st.sec));
+  const sk=st.sort;
+  rows=rows.slice().sort((a,b)=>{
+    const va=(sk.key==="mcap"?(a.mcap||0):(a[sk.key]==null?-1e9:a[sk.key]));
+    const vb=(sk.key==="mcap"?(b.mcap||0):(b[sk.key]==null?-1e9:b[sk.key]));
+    return (vb-va)*sk.dir || (b.mcap||0)-(a.mcap||0);
+  });
+  const typeTxt={"52w":"52 周新高","ath":"历史新高","mkt":"指数新高"};
+  const mktTxt={US:"美股",HK:"港股",CN:"A股"};
+  const arrow=(k)=> st.sort.key===k ? (st.sort.dir>0?" ▾":" ▴") : "";
+  const thSort=(k,label,w)=>'<th class="num'+(w?' style="width:'+w+'"':'')+'" data-sort="'+k+'" style="cursor:pointer" title="点击排序">'+label+arrow(k)+'</th>';
+
+  let h='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+    '<th style="width:88px">日期</th><th style="width:170px">标的</th><th style="width:84px">类型</th>'+
+    '<th style="width:52px">市场</th><th style="width:92px">板块</th><th style="width:130px">赛道</th>'+
+    thSort("px","股价","80px")+thSort("chg","当日","76px")+thSort("d20","20 日","76px")+thSort("ytd","YTD","76px")+
+    '</tr></thead><tbody>';
+  if(!rows.length){
+    h+='<tr><td colspan="10" class="empty">'+(today.length?'当前筛选条件下无记录':'当日全市场扫描未发现创新高（严格口径下这本身就是有效信号）')+'</td></tr>';
+  }
+  rows.forEach(x=>{
+    const isAth=x.type==="ath";
+    h+='<tr><td class="num" style="white-space:nowrap">'+x.d+'</td>'+
+      '<td><div class="tk">'+x.sym+(isAth?' <span class="tag red" style="font-size:9px">ATH</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
+      '<td><span class="tag'+(isAth?" red":'')+'">'+(typeTxt[x.type]||x.type)+'</span></td>'+
+      '<td>'+(mktTxt[x.market]||x.market||"")+'</td>'+
+      '<td><span class="tag">'+esc(x.sec||"其它")+'</span></td>'+
+      '<td>'+(x.track?'<span class="tag violet">'+esc(x.track)+'</span>':'<span class="tiny muted">—</span>')+'</td>'+
+      '<td class="num" style="font-weight:600">'+(x.px!=null?"$"+Number(x.px).toFixed(2):"—")+'</td>'+
+      '<td class="num">'+(x.chg!=null?'<span class="chg '+sgn(x.chg)+'">'+pct(x.chg,2)+'</span>':'—')+'</td>'+
+      '<td class="num">'+(x.d20!=null?'<span class="chg '+sgn(x.d20)+'">'+pct(x.d20,1)+'</span>':'—')+'</td>'+
+      '<td class="num">'+(x.ytd!=null?'<span class="chg '+sgn(x.ytd)+'">'+pct(x.ytd,1)+'</span>':'—')+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px">股价/当日/20日/YTD 均为<b>已结算收盘口径</b>（20 日 = 相对 20 个交易日前收盘，YTD = 相对上年最后收盘）；点击「股价 / 当日 / 20 日 / YTD」表头可切换升序降序。挂 ATH 标的是「当日最高价越过上市以来全部最高价」，比普通 52 周新高强一档。</div>';
   return h;
 }
 
