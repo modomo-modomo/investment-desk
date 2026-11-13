@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-13T12:30:57.427Z",
+  "syncedAt": "2026-11-13T13:42:09.853Z",
   "source": "Yahoo Finance",
   "stockDate": "20261112",
   "indexDate": "20261113",
@@ -16,7 +16,7 @@ window.WIND_LIVE = {
    "d20": 8.25,
    "ytd": -9.27,
    "mcap": 1571023749120,
-   "pre": 0.95,
+   "pre": 1.39,
    "post": null
   },
   "META.O": {
@@ -28,7 +28,7 @@ window.WIND_LIVE = {
    "d20": -15.45,
    "ytd": -4.12,
    "mcap": 1594466631680,
-   "pre": -0.07,
+   "pre": 0.41,
    "post": null
   },
   "IREN.O": {
@@ -40,7 +40,7 @@ window.WIND_LIVE = {
    "d20": -36.26,
    "ytd": -54.38,
    "mcap": 8266481664,
-   "pre": -1.37,
+   "pre": -0.42,
    "post": null
   },
   "NBIS.O": {
@@ -52,7 +52,7 @@ window.WIND_LIVE = {
    "d20": -30.84,
    "ytd": 43.01,
    "mcap": 34971455488,
-   "pre": -1.61,
+   "pre": -1.41,
    "post": null
   },
   "CRWV.O": {
@@ -64,7 +64,7 @@ window.WIND_LIVE = {
    "d20": -13.96,
    "ytd": -28.64,
    "mcap": 31476713472,
-   "pre": -0.15,
+   "pre": 0.27,
    "post": null
   },
   "BE.N": {
@@ -76,7 +76,7 @@ window.WIND_LIVE = {
    "d20": -15.63,
    "ytd": 104.61,
    "mcap": 59701956608,
-   "pre": 0.75,
+   "pre": 1.26,
    "post": null
   },
   "AMD.O": {
@@ -88,7 +88,7 @@ window.WIND_LIVE = {
    "d20": 2.54,
    "ytd": 161.91,
    "mcap": 959943081984,
-   "pre": -2.25,
+   "pre": -2.03,
    "post": null
   },
   "TSM.N": {
@@ -100,7 +100,7 @@ window.WIND_LIVE = {
    "d20": -5.7,
    "ytd": 26.87,
    "mcap": 2103062822912,
-   "pre": 0.88,
+   "pre": 1.25,
    "post": null
   },
   "TER.O": {
@@ -112,7 +112,7 @@ window.WIND_LIVE = {
    "d20": -26.62,
    "ytd": 27.07,
    "mcap": 41177903104,
-   "pre": 0.28,
+   "pre": 0.6,
    "post": null
   },
   "ONTO.N": {
@@ -124,7 +124,7 @@ window.WIND_LIVE = {
    "d20": -13.15,
    "ytd": 26.41,
    "mcap": 10291511296,
-   "pre": 0.43,
+   "pre": 0.45,
    "post": null
   },
   "NET.N": {
@@ -136,7 +136,7 @@ window.WIND_LIVE = {
    "d20": -1.8,
    "ytd": 62.48,
    "mcap": 114147934208,
-   "pre": 2.29,
+   "pre": 2.34,
    "post": null
   },
   "RBRK.N": {
@@ -148,7 +148,7 @@ window.WIND_LIVE = {
    "d20": -3.09,
    "ytd": 46.26,
    "mcap": 22719354880,
-   "pre": 1.95,
+   "pre": 2.85,
    "post": null
   },
   "OKTA.O": {
@@ -160,7 +160,7 @@ window.WIND_LIVE = {
    "d20": -13.86,
    "ytd": 118.24,
    "mcap": 31911811072,
-   "pre": 2.93,
+   "pre": 2.88,
    "post": null
   },
   "CHKP.O": {
@@ -225,10 +225,10 @@ window.WIND_LIVE = {
   "VIX.GI": {
    "name": "CBOE波动率",
    "date": "20261113",
-   "level": 18.19,
+   "level": 18.14,
    "prev": 18.7,
-   "chg": -2.73,
-   "d20": 10.51,
+   "chg": -2.99,
+   "d20": 10.21,
    "amount": null
   },
   "HSI.HI": {
@@ -270,28 +270,28 @@ window.WIND_LIVE = {
   "GDAXI.GI": {
    "name": "德国DAX",
    "date": "20261113",
-   "level": 26757.97,
+   "level": 26777.46,
    "prev": 26771.88,
-   "chg": -0.05,
-   "d20": 5.42,
+   "chg": 0.02,
+   "d20": 5.5,
    "amount": null
   },
   "FTSE.GI": {
    "name": "英国富时100",
    "date": "20261113",
-   "level": 10873.12,
-   "prev": 10863.1,
-   "chg": 0.09,
-   "d20": 0.3,
+   "level": 10877.19,
+   "prev": 10876.89,
+   "chg": 0,
+   "d20": 0.34,
    "amount": null
   },
   "SX5E.DF": {
    "name": "欧元区STOXX50(欧元)",
    "date": "20261113",
-   "level": 6392.95,
+   "level": 6391.19,
    "prev": 6398.98,
-   "chg": -0.09,
-   "d20": 3.64,
+   "chg": -0.12,
+   "d20": 3.61,
    "amount": null
   }
  },
@@ -299,12 +299,12 @@ window.WIND_LIVE = {
   "UST10Y": {
    "name": "美国:国债收益率:10年",
    "unit": "%",
-   "date": "20261112",
+   "date": "20261113",
    "value": 5.103,
-   "d1": 2.1,
-   "d20": -1.68,
-   "dbp1": 10.5,
-   "dbp20": -8.7
+   "d1": -0.82,
+   "d20": 0.28,
+   "dbp1": -4.2,
+   "dbp20": 1.4
   },
   "DXY": {
    "name": "美元指数",
@@ -331,7 +331,7 @@ window.WIND_LIVE = {
    "unit": "美元/金衡盎司",
    "date": "20261113",
    "value": 50.065,
-   "d1": 0.22,
+   "d1": 0.19,
    "d20": -11.91,
    "dbp1": null,
    "dbp20": null
@@ -341,7 +341,7 @@ window.WIND_LIVE = {
    "unit": "美元/吨",
    "date": "20261113",
    "value": 13659.84,
-   "d1": 0.64,
+   "d1": 0.59,
    "d20": -4.85,
    "dbp1": null,
    "dbp20": null
@@ -351,7 +351,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261113",
    "value": 88.74,
-   "d1": 0.11,
+   "d1": 0.38,
    "d20": -9.42,
    "dbp1": null,
    "dbp20": null
@@ -361,7 +361,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261113",
    "value": 95.82,
-   "d1": -0.37,
+   "d1": -0.13,
    "d20": -9.54,
    "dbp1": null,
    "dbp20": null
