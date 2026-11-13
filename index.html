@@ -1426,12 +1426,16 @@ function tierOf(mcap){ return mcap>=10e9 ? "大市值" : (mcap>=2e9 ? "中市值
 
 /* 行结构：两个表共用，ses = pre / post */
 function earnRow(r, ses){
-  const mv = ses==="pre" ? r.preChg : (r.postChg!=null ? r.postChg : r.preChg);
+  const mv = r.mv != null ? r.mv : (ses==="pre" ? r.preChg : (r.postChg!=null ? r.postChg : r.preChg));
   const hit = mv!=null && Math.abs(mv) >= r.threshold;
-  return { t:r.symbol, n:r.name, tier:r.tier, mcap:fmtCap(r.mcap), thr:r.threshold,
+  const f=r.fund||{};
+  return { t:r.symbol, n:r.name, tier:r.tier, mcap:fmtCap(r.mcap), mcapRaw:r.mcap, thr:r.threshold,
     q:(r.quarter||"").replace("/"," "), est:r.est, nEst:r.nEst, last:r.last,
     actual:r.actual, surprise:r.surprise, reported:!!r.reported, src:r.src||"",
     mv:mv, pre:r.preChg, post:r.postChg, day:r.dayChg, hit:hit,
+    gap:r.gap!=null?r.gap:(ses==="pre"?r.preChg:null), closeChg:r.closeChg!=null?r.closeChg:null,
+    prePx:r.prePx||null, postPx:r.postPx||null,
+    rev:f.rev||null, revPrev:f.revPrev||null, net:f.net||null,
     ind:r.ind||"", zh:r.zh||"",
     pooled:POOL_SYMS.indexOf(r.symbol)>=0, ses:ses };
 }
@@ -1634,8 +1638,14 @@ function hydrateExtra(Y){
       const n = mvNewsOf(x.sym);
       return {
         t: x.sym, n: x.name, sec: x.sec, track: x.track || "", earn: !!x.earn,
+        mcap: x.mcap != null ? x.mcap : null,
         mv: (x[ses] != null ? x[ses] : x.mv),
         px: (ses === "pre" ? x.prePx : x.postPx) != null ? (ses === "pre" ? x.prePx : x.postPx) : x.px,
+        prePx: x.prePx != null ? x.prePx : null,
+        postPx: x.postPx != null ? x.postPx : null,
+        closeChg: x.closeChg != null ? x.closeChg : null,
+        closePx: x.closePx != null ? x.closePx : null,
+        ind: x.ind || "", zh: x.zh || "",
         base: x.px,
         news: (n && n.ok) ? { title: n.title, sum: n.summary, t: n.t, src: n.src, cause: !!n.cause, mismatch: !!n.mismatch, en: !!n.en } : null,
         note: (n && !n.ok) ? n.note : null,
@@ -1643,7 +1653,7 @@ function hydrateExtra(Y){
     };
     if (Y.movers) {
       const pick = (ses) => (Y.movers[ses] || [])
-        .filter(x => Math.abs((x[ses] != null ? x[ses] : x.mv) || 0) >= MV_MIN)
+        .filter(x => Math.abs((x[ses] != null ? x[ses] : x.mv) || 0) >= THR_OF(x.mcap))
         .map(x => shape(x, ses))
         .sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
       const allPre = pick("pre"), allPost = pick("post");
@@ -1734,6 +1744,9 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const sgn = v => v>0?"up":(v<0?"down":"flat");
 const pct = (v,d) => (v==null?"—":(v>0?"+":"")+Number(v).toFixed(d==null?2:d)+"%");
+/* 市值分档门槛（美股常规口径）：大 ≥100亿 → 3%；中 20–100亿 → 5%；小 <20亿 → 8% */
+const THR_OF = (m) => (m != null && m >= 10e9) ? 3 : (m != null && m >= 2e9) ? 5 : (m != null ? 8 : 3); /* 市值未知（旧留档）按 3% 保底，避免漏条目 */
+const TIER_OF = (m) => (m != null && m >= 10e9) ? "大市值" : (m != null && m >= 2e9) ? "中市值" : (m != null ? "小市值" : "—");
 const chg = (v,unit) => unit==="bp"
   ? '<span class="chg '+sgn(v)+'">'+(v>0?"+":"")+Math.round(v)+'bp</span>'
   : '<span class="chg '+sgn(v)+'">'+pct(v)+'</span>';
@@ -1780,74 +1793,68 @@ function earnTable(blk, ses){
     return '<div class="card empty">未取到'+(isPre?"当日盘前":"前一交易日盘后")+'的披露记录，'+
       '请先运行同步脚本；<b>本表不放示例数据</b>。</div>';
   }
-  const hit = rows.filter(r=>r.hit).length;
-  const withNews = rows.filter(r=>(r.nres&&r.nres.length)||r.nhead).length;
+  const withNews = rows.filter(r=>(r.nres&&r.nres.length)||r.nguide&&r.nguide.length).length;
   let h='<div class="card" style="padding:10px 13px;margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:11.5px;color:var(--text-2)">'+
     '<span>日历日期 <b class="num">'+(blk.date||"—")+'</b></span>'+
-    '<span>该场次披露 <b class="num">'+(blk.total||rows.length)+'</b> 家，按市值列前 '+rows.length+' 家</span>'+
-    '<span>越过阈值 <b class="num '+(hit?'up':'')+'">'+hit+'</b> 家</span>'+
+    '<span>该场次披露 <b class="num">'+(blk.total||rows.length)+'</b> 家</span>'+
+    '<span>涨幅达到门槛入表 <b class="num '+(rows.length?'up':'')+'">'+rows.length+'</b> 家</span>'+
+    '<span class="tiny muted">门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%</span>'+
     '<span>业绩内容已抓取 <b class="num">'+withNews+'/'+rows.length+'</b> 家</span>'+
     (blk.cached?'<span class="chip-src">名单取首见快照</span>':'')+
     (blk.updated?'<span style="margin-left:auto" class="tiny muted">同步 '+blk.updated+'</span>':'')+
     '</div>';
 
   h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-     '<th style="width:132px">公司</th>'+
-     '<th style="width:80px">行业</th>'+
-     '<th style="width:22%">业绩要点（实际 vs 预期）</th>'+
-     '<th style="width:20%">指引 / 关键表述</th>'+
-     '<th class="num" style="width:60px">'+(isPre?"盘前":"盘后")+'</th>'+
-     '<th style="width:92px">'+(isPre?"开盘跳空 → 收盘":"次日盘前接力")+'</th>'+
-     '<th>解读</th></tr></thead><tbody>';
+     '<th style="width:128px">标的</th>'+
+     '<th class="num" style="width:66px">涨跌</th>'+
+     '<th class="num" style="width:70px">'+(isPre?"盘前价":"盘后价")+'</th>'+
+     '<th style="width:84px">行业</th>'+
+     '<th style="width:30%">业绩要点 / 指引</th>'+
+     (isPre?'<th style="width:104px">开盘跳空 → 收盘</th>':'')+
+     '<th style="width:24%">公司简介</th></tr></thead><tbody>';
+  if(!rows.length){
+    h+='<tr><td colspan="'+(isPre?7:6)+'" class="empty">该场次没有公司的公布后涨幅达到市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</td></tr>';
+  }
 
   rows.forEach(r=>{
-    const yoy = (r.est!=null && r.last!=null && r.last!==0) ? ((r.est-r.last)/Math.abs(r.last))*100 : null;
+    /* 业绩要点 / 指引（合并列）：营收 → EPS → 快讯要点 → 指引与管理层表述 → 出处 */
+    const revYoY = (r.rev!=null && r.revPrev) ? ((r.rev-r.revPrev)/Math.abs(r.revPrev))*100 : null;
+    let cell = '';
+    if(r.rev!=null) cell += '<div class="num" style="font-size:11.5px">营收 <b>'+fmtCap(r.rev)+'</b>'+
+      (revYoY!=null?' <span class="tiny '+(revYoY>0?"up":"down")+'">同比 '+pct(revYoY,1)+'</span>':'')+
+      (r.net!=null?' <span class="tiny muted">· 净利 '+fmtCap(r.net)+'</span>':'')+'</div>';
     const sur = r.surprise;
-
-    /* 业绩要点：先给可核对的实际 vs 预期，再放新闻原文要点 */
-    let cellRes = '<div class="num" style="font-size:11.5px">EPS <b>'+epsShow(r.actual!=null?r.actual:r.est)+'</b>'+
+    cell += '<div class="num" style="font-size:11.5px">EPS <b>'+epsShow(r.actual!=null?r.actual:r.est)+'</b>'+
       (r.reported && r.est!=null ? ' <span class="tiny muted">/ 预期 '+epsShow(r.est)+'</span>' : ' <span class="tiny muted">（预期）</span>')+
       (sur==null?'':' '+(Math.abs(sur)<0.5?'<span class="tiny muted">符合预期</span>':'<span class="tiny '+(sur>0?"up":"down")+'">'+(sur>0?"好于":"低于")+' '+Math.abs(sur).toFixed(1)+'%</span>'))+'</div>';
     if(r.nres && r.nres.length){
-      cellRes += r.nres.slice(0,3).map(x=>'<div class="read" style="font-size:11px;margin-top:2px">· '+x+'</div>').join("");
-    } else if(r.nhead){
-      cellRes += '<div class="read" style="font-size:11px;margin-top:3px">'+esc(r.nhead)+
-        ' <span class="chip-src">报道标题</span></div>';
-    } else if(!r.reported){
-      cellRes += '<div class="tiny muted" style="margin-top:2px">同比 '+ (yoy==null?"—":pct(yoy,1)) +'（去年 '+epsShow(r.last)+'）</div>';
+      cell += r.nres.slice(0,2).map(x=>'<div class="read" style="font-size:11px;margin-top:2px">· '+x+'</div>').join("");
     }
-    if(r.nurl){
-      cellRes += '<div class="tiny" style="margin-top:3px"><a href="'+r.nurl+'" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none">'+
-        (r.nsrc||"出处")+(r.ndate?" · "+r.ndate:"")+'</a></div>';
-    } else if(r.nnote){
-      cellRes += '<div class="tiny muted" style="margin-top:3px">'+r.nnote+'</div>';
-    }
-
-    /* 指引 */
-    let cellGuide;
     if(r.nguide && r.nguide.length){
-      cellGuide = r.nguide.slice(0,3).map(x=>'<div class="read" style="font-size:11px">· '+x+'</div>').join("");
-    } else if(r.nok){
-      cellGuide = '<span class="pending">本次报道未含指引表述</span>';
-    } else {
-      cellGuide = '<span class="pending">指引原文待抓取</span>'+
-        (r.nnote?'<div class="tiny muted" style="margin-top:2px">'+r.nnote+'</div>':'');
+      cell += r.nguide.slice(0,3).map(x=>'<div class="read" style="font-size:11px;margin-top:2px;color:#4a5a75">指引 · '+x+'</div>').join("");
     }
+    if(r.nurl && !/仅标题|新闻标题/.test(r.nsrc||"")){ /* 仅标题类出处无信息量，不展示 */
+      cell += '<div class="tiny" style="margin-top:3px"><a href="'+r.nurl+'" target="_blank" rel="noopener" style="color:var(--accent-2);text-decoration:none">'+
+        (r.nsrc||"出处")+(r.ndate?" · "+r.ndate:"")+'</a></div>';
+    }
+    if(!cell) cell='<span class="tiny muted">要点待抓取</span>';
+
+    /* 开盘跳空 → 收盘（仅盘前表） */
+    const cellGap = isPre
+      ? ((r.gap!=null?'<span class="mv '+sgn(r.gap)+'">'+pct(r.gap,1)+'</span>':'—')
+        +' → '
+        +(r.closeChg!=null?'<span class="mv '+sgn(r.closeChg)+'">'+pct(r.closeChg,1)+'</span>':'<span class="tiny muted">待收盘回填</span>'))
+      : '';
 
     h+='<tr>'+
       '<td><div class="tk">'+r.t+(r.pooled?' <span class="tag blue" style="font-size:9px">池内</span>':'')+'</div>'+
-      '<div class="tk-sub">'+r.n+' · '+r.tier+' '+r.mcap+'</div>'+
-      '<div class="tiny muted">'+r.q+'</div></td>'+
+      '<div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
+      '<td class="num">'+(r.mv==null?'<span class="pending">无报价</span>':'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>')+
+      '<div class="tiny muted">'+(r.tier||TIER_OF(r.mcapRaw))+' &gt;'+r.thr+'%</div></td>'+
+      '<td class="num">'+((isPre?r.prePx:r.postPx)!=null?'$'+Number(isPre?r.prePx:r.postPx).toFixed(2):'—')+'</td>'+
       '<td><span class="tag">'+esc(r.ind||"—")+'</span></td>'+
-      '<td>'+cellRes+'</td>'+
-      '<td class="read" style="font-size:11px">'+cellGuide+'</td>'+
-      '<td class="num">'+(r.mv==null?'<span class="pending">无报价</span>':'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>')+'</td>'+
-      '<td>'+(isPre
-          ? '<span class="pending">07:00 回填</span><div class="tiny muted" style="margin-top:3px">盘前价 '+pct(r.pre,1)+'</div>'
-          : (r.pre!=null ? '<div class="mv '+sgn(r.pre)+'">'+pct(r.pre,1)+'</div><div class="tiny muted">今日盘前</div>'
-                         : '<span class="pending">待报价</span>'))+
-      '</td>'+
-      '<td class="read" style="font-size:11px">'+earnRead(r)+'</td>'+
+      '<td class="read" style="font-size:11px;line-height:1.6">'+cell+'</td>'+
+      (isPre?('<td class="num" style="white-space:nowrap">'+cellGap+'</td>'):'')+
       '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
   });
   h+='</tbody></table></div>';
@@ -2015,36 +2022,47 @@ function viewBrief(){
 
   /* ---- 04 盘前：①业绩/异动 ②非财报异动 ---- */
   const mvTbl=(rows,empty,ses)=>{
+    const isPre = ses==="盘前";
+    /* 门槛按市值分档：大>3% / 中>5% / 小>8%；留档老数据没有市值的按 3% 展示（抓取侧本来就 ≥3%） */
+    const pass = rows.filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap));
     const cov=DATA.moversPool?(" · 全市场扫描 "+(DATA.moversUniverse||DATA.moversPool)+" 只，取到报价 "+(DATA.moversPool)+" 只"):"";
-    const dkey = ses==="盘前" ? "moversPreDate" : "moversPostDate";
-    const isLog = ses==="盘前" ? DATA.moversPreLog : DATA.moversPostLog;
+    const dkey = isPre ? "moversPreDate" : "moversPostDate";
+    const isLog = isPre ? DATA.moversPreLog : DATA.moversPostLog;
     const day = DATA[dkey] ? ' · 场次日 <b>'+DATA[dkey]+'</b>' : '';
     const logs = isLog ? ' <span class="upd" style="border-color:#f4d9c2;background:#fff8f2;color:#a4622a">取自滚动留档</span>' : '';
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · |'+ses+'涨跌| ≥ 4%'+cov+day+'）'+logs+'</span></div>';
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · 涨跌门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%'+cov+day+'）'+logs+'</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-       '<th style="width:150px">标的</th><th class="num" style="width:70px">涨跌</th>'+
-       '<th class="num" style="width:80px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
-       '<th style="width:84px">行业</th><th style="width:24%">公司简介</th>'+
-       '<th>归因（本场次时间窗口内的事件 / 出处）</th></tr></thead><tbody>';
-    if(!rows.length) h+='<tr><td colspan="6" class="empty">'+empty+'</td></tr>';
-    rows.forEach(r=>{
+       '<th style="width:138px">标的</th><th class="num" style="width:64px">涨跌</th>'+
+       '<th class="num" style="width:72px">'+(isPre?"盘前价":"盘后价")+'</th>'+
+       '<th style="width:80px">行业</th>'+
+       '<th>潜在原因</th>'+
+       (isPre?'<th style="width:104px">开盘跳空 → 收盘</th>':'')+
+       '<th style="width:22%">公司简介</th></tr></thead><tbody>';
+    if(!pass.length) h+='<tr><td colspan="'+(isPre?7:6)+'" class="empty">'+empty+'</td></tr>';
+    pass.forEach(r=>{
       let reason;
-      if(r.news){
+      if(r.news && (r.news.title||r.news.sum)){
         reason='<div style="line-height:1.55">'
           +(r.news.cause?'<span style="display:inline-block;padding:0 5px;border-radius:4px;background:#fbeaea;color:#b4322f;font-size:9px;font-weight:700;margin-right:5px">事件</span>':'')
-          +'<b>'+esc(r.news.title)+'</b></div>'
-          +(r.news.sum?'<div class="tiny muted" style="margin-top:3px;line-height:1.65">'+esc(r.news.sum)+'</div>':'')
-          +((r.news.mismatch)?'<div class="tiny" style="margin-top:3px;color:#a8760f">⚠ 该消息方向与股价相反，仅作参考，不构成本次异动的解释</div>':'')
-          +'<div class="tiny muted" style="margin-top:3px">'+esc(r.news.src||"")+(r.news.t?" · "+esc(r.news.t):"")+'</div>';
+          +(r.news.title?('<b>'+esc(r.news.title)+'</b>'):'')
+          +(r.news.sum?('<div class="tiny muted" style="margin-top:3px;line-height:1.65">'+esc(r.news.sum)+'</div>'):'')+'</div>'
+          +((r.news.mismatch)?'<div class="tiny" style="margin-top:3px;color:#a8760f">⚠ 消息方向与股价相反，仅作参考</div>':'');
       }else{
-        reason='<span class="tiny muted">'+esc(r.note||"原因未知（本场次窗口内未检索到对应消息，需人工核对公告与研报）")+'</span>';
+        reason='<span class="tiny muted">原因未知</span>';
       }
+      const pxShow = isPre ? r.prePx : r.postPx;
+      const gapCell = isPre
+        ? ((r.mv!=null?'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>':'—')
+          +' → '
+          +(r.closeChg!=null?'<span class="mv '+sgn(r.closeChg)+'">'+pct(r.closeChg,1)+'</span>':'<span class="tiny muted">待收盘回填</span>'))
+        : '';
       h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
-        '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
-        '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
+        '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span><div class="tiny muted">'+TIER_OF(r.mcap)+' &gt;'+THR_OF(r.mcap)+'%</div></td>'+
+        '<td class="num">'+(pxShow!=null?'$'+Number(pxShow).toFixed(2):(r.px!=null?'$'+Number(r.px).toFixed(2):'—'))+'</td>'+
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
-        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
-        '<td class="read">'+reason+'</td></tr>';
+        '<td class="read">'+reason+'</td>'+
+        (isPre?('<td class="num" style="white-space:nowrap">'+gapCell+'</td>'):'')+
+        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
     });
     return h+'</tbody></table></div>';
   };
@@ -2056,19 +2074,21 @@ function viewBrief(){
   const postSymSet=new Set(((b.post&&b.post.rows)||[]).map(r=>normSym(r.symbol)));
   const earnMvTbl=(rows,ses)=>{
     if(!rows.length) return '';
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 阈值 |'+ses+'涨跌| ≥ 4%）</span></div>';
+    const passE = rows.filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap));
+    if(!passE.length) return '';
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 涨跌门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%）</span></div>';
     h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
        '<th style="width:150px">标的</th><th class="num" style="width:70px">涨跌</th>'+
        '<th class="num" style="width:80px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
        '<th style="width:84px">行业</th><th style="width:24%">公司简介</th>'+
        '<th>说明</th></tr></thead><tbody>';
-    rows.forEach(r=>{
+    passE.forEach(r=>{
       h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
         '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
         '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
-        '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进详表（日历按市值取前 8 家），业绩明细待补。</span></td></tr>';
+        '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进 ① 详表，业绩明细待补。</span></td></tr>';
     });
     return h+'</tbody></table></div>';
   };
@@ -2078,19 +2098,19 @@ function viewBrief(){
   h+='<div class="sec">'+secHead("05","盘前",
       "场次 "+asOfFmt(preDay)+" 04:00–09:30 美东（北京 17:00–22:30）· ① 盘前业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 20:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
-  h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩 / 异动（Nasdaq 日历 · 大/中市值 3% · 中小市值 5%）</span></div>';
+  h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩（全市场披露 · 公布后涨幅达到门槛入表：大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</span></div>';
   h+=earnTable(b.pre,"pre");
   h+=earnMvTbl((DATA.earnMvPre||[]).filter(x=>!preSymSet.has(x.t)),"盘前");
-  h+=mvTbl(DATA.moversPre||[],"该场次未捕获到非财报驱动的显著异动（盘前窗口未开或当日确实没有 ≥4% 的非财报波动）","盘前");
+  h+=mvTbl(DATA.moversPre||[],"该场次未捕获到非财报驱动的显著异动（盘前窗口未开，或异动都没达到市值门槛）","盘前");
 
   /* ---- 06 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("06","盘后",
       "场次 "+asOfFmt(postDay)+" 16:00–20:00 美东（北京次日 05:00–09:00）· ① 盘后业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
       "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
-  h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩 / 异动（盘后 > 3% · 附潜在原因分析）</span></div>';
+  h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩（全市场披露 · 公布后涨幅达到门槛入表：大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</span></div>';
   h+=earnTable(b.post,"post");
   h+=earnMvTbl((DATA.earnMvPost||[]).filter(x=>!postSymSet.has(x.t)),"盘后");
-  h+=mvTbl(DATA.moversPost||[],"该场次未捕获到非财报驱动的显著异动（盘后窗口未开或当日确实没有 ≥4% 的非财报波动）","盘后");
+  h+=mvTbl(DATA.moversPost||[],"该场次未捕获到非财报驱动的显著异动（盘后窗口未开，或异动都没达到市值门槛）","盘后");
   if(!(DATA.moversPost||[]).length && !DATA.moversPostLog){
     h+='<div class="card" style="padding:11px 14px;margin-top:8px;font-size:11.5px;line-height:1.75;color:#8a5a12;background:#fffbf0;border-color:#f0dfb8">'+
        '<b>本场盘后窗口未留档。</b>Yahoo 的 <b>盘后涨跌只在盘后时段（美东 16:00–20:00）内返回</b>，窗口一过就切到下一场次的盘前字段。'+
@@ -2099,7 +2119,7 @@ function viewBrief(){
        '</div>';
   }
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
-     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（按市值排序，取前 8 家），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>按 <b>东方财富 7×24 快讯 → Yahoo 新闻标题</b> 两级取数，取到哪级标哪级；只有标题的标“报道标题”，不据此扩写；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥1 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（市值 ≥1 亿美元的普通股；再往下的仙股剔除）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 的原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>“原因未知”</b>，<b>不做推测性归因</b>。</div></div>';
+     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（<b>该场次全部披露公司，不设家数上限</b>），按「公布后股价涨幅达到市值门槛」入表（大 &gt;3% / 中 &gt;5% / 小 &gt;8%），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>取 <b>东方财富 7×24 快讯</b> 中该公司披露同期的表述（营收/EPS 之外还包括指引与管理层关键表述），覆盖不到的小市值公司留空待补；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥1 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（市值 ≥1 亿美元的普通股；再往下的仙股剔除）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 同样按市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）入表；原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>「原因未知」</b>，<b>不做推测性归因</b>。</div></div>';
 
   h+='<div class="sec">'+secHead("07","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
       "<span class='upd'>"+b.research.length+" 篇累计</span><span class='upd hot'>红色 = 本轮新增</span>");

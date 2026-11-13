@@ -7,7 +7,7 @@
   "firstD": "2026-11-12",
   "firstPx": 354.88,
   "lastD": "2026-11-13",
-  "lastPx": 358.61,
+  "lastPx": 357.86,
   "n": 2,
   "everAth": true
  },
@@ -31,7 +31,7 @@
   "firstD": "2026-11-12",
   "firstPx": 283.52,
   "lastD": "2026-11-13",
-  "lastPx": 287.62,
+  "lastPx": 286.14,
   "n": 2,
   "everAth": true
  },
@@ -43,7 +43,7 @@
   "firstD": "2026-11-12",
   "firstPx": 1092.21,
   "lastD": "2026-11-13",
-  "lastPx": 1105.71,
+  "lastPx": 1107.52,
   "n": 2,
   "everAth": true
  },
@@ -55,7 +55,7 @@
   "firstD": "2026-11-12",
   "firstPx": 97.44,
   "lastD": "2026-11-13",
-  "lastPx": 98.98,
+  "lastPx": 98.99,
   "n": 2,
   "everAth": true
  },
@@ -115,7 +115,7 @@
   "firstD": "2026-11-12",
   "firstPx": 105.8,
   "lastD": "2026-11-13",
-  "lastPx": 107.62,
+  "lastPx": 106.94,
   "n": 2,
   "everAth": false
  },
@@ -127,7 +127,7 @@
   "firstD": "2026-11-12",
   "firstPx": 215.71,
   "lastD": "2026-11-13",
-  "lastPx": 218.96,
+  "lastPx": 218.17,
   "n": 2,
   "everAth": false
  },
@@ -151,7 +151,7 @@
   "firstD": "2026-11-12",
   "firstPx": 193.92,
   "lastD": "2026-11-13",
-  "lastPx": 196.15,
+  "lastPx": 194.8,
   "n": 2,
   "everAth": false
  },
@@ -223,7 +223,7 @@
   "firstD": "2026-11-12",
   "firstPx": 131.64,
   "lastD": "2026-11-13",
-  "lastPx": 133.18,
+  "lastPx": 133.21,
   "n": 2,
   "everAth": false
  },
@@ -343,7 +343,7 @@
   "firstD": "2026-11-12",
   "firstPx": 51.26,
   "lastD": "2026-11-13",
-  "lastPx": 51.62,
+  "lastPx": 51.66,
   "n": 2,
   "everAth": true
  },
@@ -379,7 +379,7 @@
   "firstD": "2026-11-12",
   "firstPx": 68,
   "lastD": "2026-11-13",
-  "lastPx": 69.72,
+  "lastPx": 68.99,
   "n": 2,
   "everAth": true
  },
@@ -451,7 +451,7 @@
   "firstD": "2026-11-12",
   "firstPx": 38.74,
   "lastD": "2026-11-13",
-  "lastPx": 38.98,
+  "lastPx": 38.7,
   "n": 2,
   "everAth": true
  },
@@ -547,7 +547,7 @@
   "firstD": "2026-11-12",
   "firstPx": 28.83,
   "lastD": "2026-11-13",
-  "lastPx": 29.21,
+  "lastPx": 29.43,
   "n": 2,
   "everAth": true
  },
@@ -654,9 +654,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 48.95,
-  "lastD": "2026-11-12",
-  "lastPx": 48.95,
-  "n": 1,
+  "lastD": "2026-11-13",
+  "lastPx": 49.25,
+  "n": 2,
   "everAth": true
  },
  "RSG": {
@@ -667,7 +667,7 @@
   "firstD": "2026-11-13",
   "firstPx": 253.68,
   "lastD": "2026-11-13",
-  "lastPx": 254.65,
+  "lastPx": 253.37,
   "n": 1,
   "everAth": false
  },
@@ -679,7 +679,7 @@
   "firstD": "2026-11-13",
   "firstPx": 50.01,
   "lastD": "2026-11-13",
-  "lastPx": 50.25,
+  "lastPx": 50.1,
   "n": 1,
   "everAth": true
  },
@@ -691,7 +691,7 @@
   "firstD": "2026-11-13",
   "firstPx": 29.5,
   "lastD": "2026-11-13",
-  "lastPx": 29.57,
+  "lastPx": 29.22,
   "n": 1,
   "everAth": false
  },
@@ -703,7 +703,7 @@
   "firstD": "2026-11-13",
   "firstPx": 23.66,
   "lastD": "2026-11-13",
-  "lastPx": 24.06,
+  "lastPx": 24.31,
   "n": 1,
   "everAth": false
  },
@@ -715,7 +715,7 @@
   "firstD": "2026-11-13",
   "firstPx": 19.72,
   "lastD": "2026-11-13",
-  "lastPx": 19.75,
+  "lastPx": 20,
   "n": 1,
   "everAth": false
  },
@@ -727,7 +727,7 @@
   "firstD": "2026-11-13",
   "firstPx": 6.93,
   "lastD": "2026-11-13",
-  "lastPx": 6.95,
+  "lastPx": 6.99,
   "n": 1,
   "everAth": false
  },
@@ -739,7 +739,7 @@
   "firstD": "2026-11-13",
   "firstPx": 64.11,
   "lastD": "2026-11-13",
-  "lastPx": 63.85,
+  "lastPx": 63.82,
   "n": 1,
   "everAth": true
  },
@@ -751,7 +751,7 @@
   "firstD": "2026-11-13",
   "firstPx": 170.46,
   "lastD": "2026-11-13",
-  "lastPx": 170.46,
+  "lastPx": 169.88,
   "n": 1,
   "everAth": false
  },
@@ -763,7 +763,7 @@
   "firstD": "2026-11-13",
   "firstPx": 202.3,
   "lastD": "2026-11-13",
-  "lastPx": 202.3,
+  "lastPx": 202.47,
   "n": 1,
   "everAth": false
  },
@@ -775,7 +775,7 @@
   "firstD": "2026-11-13",
   "firstPx": 21.73,
   "lastD": "2026-11-13",
-  "lastPx": 21.73,
+  "lastPx": 21.8,
   "n": 1,
   "everAth": false
  },
@@ -787,7 +787,55 @@
   "firstD": "2026-11-13",
   "firstPx": 55.43,
   "lastD": "2026-11-13",
-  "lastPx": 55.43,
+  "lastPx": 56.34,
+  "n": 1,
+  "everAth": true
+ },
+ "GCT": {
+  "sym": "GCT",
+  "name": "GigaCloud Technology",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 66.18,
+  "lastD": "2026-11-13",
+  "lastPx": 66.18,
+  "n": 1,
+  "everAth": true
+ },
+ "OBIO": {
+  "sym": "OBIO",
+  "name": "Orchestra BioMed",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-13",
+  "firstPx": 6.45,
+  "lastD": "2026-11-13",
+  "lastPx": 6.45,
+  "n": 1,
+  "everAth": false
+ },
+ "RVSB": {
+  "sym": "RVSB",
+  "name": "Riverview Bancorp",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 6.58,
+  "lastD": "2026-11-13",
+  "lastPx": 6.58,
+  "n": 1,
+  "everAth": false
+ },
+ "WSBK": {
+  "sym": "WSBK",
+  "name": "Winchester Bancorp",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 13.85,
+  "lastD": "2026-11-13",
+  "lastPx": 13.85,
   "n": 1,
   "everAth": true
  }

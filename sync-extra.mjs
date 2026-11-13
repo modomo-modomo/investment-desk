@@ -371,7 +371,18 @@ function tier(mcap) {
   if (mcap >= 2e9) return "中市值";
   return "中小市值";
 }
-function threshold(t) { return t === "大市值" ? 3 : t === "中市值" ? 3 : 5; }
+/* 市值分档与异动/达标门槛（美股全市场常规口径）：
+   大市值 ≥100 亿美元 → 3%；中市值 20–100 亿 → 5%；小市值 <20 亿 → 8% */
+function threshold(t) { return t === "大市值" ? 3 : t === "中市值" ? 5 : 8; }
+
+/* 盘前跳空回查：20:30 那场把「盘前跳空」留档在 movers-log，07:00 回填收盘时用它补 */
+let MVGAP = null;
+function gapFromLog(sym, date) {
+  if (!MVGAP) { try { MVGAP = JSON.parse(readFileSync("movers-log.json", "utf8")); } catch { MVGAP = []; } }
+  const e = (MVGAP || []).find((x) => x.session === "pre" && x.date === date);
+  const r = e && (e.rows || []).find((x) => x.sym === sym);
+  return r ? r.mv : null;
+}
 
 async function build(date, session, limit) {
   let snap = { rows: [], total: 0, fromCache: false };
@@ -395,11 +406,29 @@ async function build(date, session, limit) {
 
   const q = await quotes(picked.map((r) => r.symbol));
   const MON = { Jan: "01", Feb: "02", Mar: "03", Apr: "04", May: "05", Jun: "06", Jul: "07", Aug: "08", Sep: "09", Oct: "10", Nov: "11", Dec: "12" };
-  const out = [];
+
+  /* 第一遍：只算涨跌，先按「公布后股价涨幅 ≥ 市值门槛」把名单筛出来；
+     达不到门槛的公司不进表（全市场披露名单可能上百条，全部铺开没有意义）。 */
+  const cands = [];
   for (const r of picked) {
     const m = q[r.symbol] || {};
     const mcap = capNum(r.marketCap);
-    const tr = tier(mcap);
+    const prevClose = m.regularMarketPreviousClose ?? null;
+    const reg = m.regularMarketPrice ?? null;
+    const preChg = m.preMarketPrice && prevClose ? (m.preMarketPrice / prevClose - 1) * 100 : null;
+    const postChg = m.postMarketPrice && reg ? (m.postMarketPrice / reg - 1) * 100 : null;
+    const dayChg = m.regularMarketChangePercent ?? null;
+    /* 公布后涨幅：收盘后跑的场次用当日收盘涨跌（精确）；盘前/盘中场次用盘前价接力 */
+    const mv = ET_HOUR >= 16 ? (dayChg ?? preChg) : (preChg ?? postChg ?? dayChg);
+    const gap = preChg ?? (session === "pre" ? gapFromLog(r.symbol, date) : null);
+    cands.push({ r, m, mcap, tr: tier(mcap), prevClose, reg, preChg, postChg, dayChg, mv, gap });
+  }
+  const qualified = cands.filter((c) => c.mv != null && Math.abs(c.mv) >= threshold(c.tr))
+    .sort((a, b) => Math.abs(b.mv) - Math.abs(a.mv));
+
+  const out = [];
+  for (const c of qualified) {
+    const { r, m, mcap, tr, prevClose, reg, preChg, postChg, dayChg, mv, gap } = c;
     const qEnd = r.fiscalQuarterEnding || "";
     const want = qEnd.replace(/([A-Za-z]{3})\/(\d{4})/, (_, mo, yr) => `${yr}-${MON[mo] || "01"}`);
 
@@ -422,10 +451,6 @@ async function build(date, session, limit) {
       cross = { yahoo: y.actual, nasdaq: nasAct, diffPct: diff * 100, conflict: diff > 0.2 };
     }
 
-    const prevClose = m.regularMarketPreviousClose ?? null;
-    const reg = m.regularMarketPrice ?? null;
-    const preChg = m.preMarketPrice && prevClose ? (m.preMarketPrice / prevClose - 1) * 100 : null;
-    const postChg = m.postMarketPrice && reg ? (m.postMarketPrice / reg - 1) * 100 : null;
     /* 中文行业 + 一句话简介（company-zh.json 永久缓存，展示用） */
     const zpro = await companyZh(r.symbol);
 
@@ -437,22 +462,25 @@ async function build(date, session, limit) {
       actual, reported: actual != null, surprise, src, cross,
       fund: (y && y.fund) || null,
       price: reg, prevClose,
-      preChg, postChg,
-      dayChg: m.regularMarketChangePercent ?? null,
+      preChg, postChg, dayChg,
+      prePx: (m.preMarketPrice != null && Number.isFinite(+m.preMarketPrice)) ? +Number(m.preMarketPrice).toFixed(2) : null,
+      postPx: (m.postMarketPrice != null && Number.isFinite(+m.postMarketPrice)) ? +Number(m.postMarketPrice).toFixed(2) : null,
+      mv, gap,
+      closeChg: ET_HOUR >= 16 ? dayChg : null,   /* 收盘涨幅只有收盘后的场次才有 */
       marketState: m.marketState || null,
       ind: zpro ? zpro.ind : "", zh: zpro ? zpro.desc : "",
     });
   }
   return { rows: out, total: snap.total || pool.length, fromCache: snap.fromCache,
-           /* 该场次「全部」披露标的（含被 limit 截掉的），用于把异动分成“财报驱动 / 非财报驱动” */
+           /* 该场次「全部」披露标的（含被门槛筛掉的），用于把异动分成“财报驱动 / 非财报驱动” */
            allSyms: [...new Set(rows.map((r) => String(r.symbol || "").replace(/\./g, "-")))],
-           hit: out.filter((r) => Math.abs(r.postChg ?? r.preChg ?? 0) >= r.threshold).length };
+           hit: out.length };
 }
 
 await yahooAuth();
 await warmZh();
-const pre = await build(TODAY, "time-pre-market", 8);
-const post = await build(YEST, "time-after-hours", 8);
+const pre = await build(TODAY, "time-pre-market", 300);
+const post = await build(YEST, "time-after-hours", 300);
 
 /* 覆盖标的下一财报日 */
 const nextEarn = {};
@@ -867,7 +895,10 @@ const trackOfClass = (sym, sector) => {
 };
 
 const slim = (x) => ({ sym: x.sym, name: x.name, sec: x.sec, ind: x.ind || "", zh: x.zh || "", track: x.track || "",
-  mv: x.mv != null ? x.mv : (x.post != null ? x.post : x.pre), px: x.px, earn: !!x.earn });
+  mcap: x.mcap || null, mv: x.mv != null ? x.mv : (x.post != null ? x.post : x.pre),
+  px: x.px, prePx: x.prePx || null, postPx: x.postPx || null,
+  closeChg: x.closeChg != null ? x.closeChg : null, closePx: x.closePx != null ? x.closePx : null,
+  earn: !!x.earn });
 
 const movers = {
   date: etToday.replace(/-/g, ""),
@@ -892,6 +923,29 @@ let mvLog = [];
 try { mvLog = JSON.parse(readFileSync("movers-log.json", "utf8")); } catch {}
 const mvState = movers.state;
 const sessionNow = /PRE/i.test(mvState) ? "pre" : (/POST/i.test(mvState) ? "post" : "");
+
+/* 回填：20:30 留档的盘前场次只有跳空；当日 16:00 收盘后（07:00 场）把收盘涨幅/收盘价补进留档，
+   页面「开盘跳空→收盘」列才有第二个数字。 */
+try {
+  const preEntry = (mvLog || []).find((x) => x.session === "pre" && x.date === etToday && (x.rows || []).some((r) => r.closeChg == null));
+  if (preEntry && ET_HOUR >= 16) {
+    const syms = preEntry.rows.filter((r) => r.closeChg == null).map((r) => r.sym);
+    for (let i = 0; i < syms.length; i += 30) {
+      const qq = await quotes(syms.slice(i, i + 30));
+      preEntry.rows.forEach((r) => {
+        const q = qq[r.sym];
+        if (!q || r.closeChg != null) return;
+        r.closeChg = q.regularMarketChangePercent != null ? +Number(q.regularMarketChangePercent).toFixed(2) : null;
+        r.closePx = q.regularMarketPrice != null ? +Number(q.regularMarketPrice).toFixed(2) : null;
+        if (!r.mcap && q.marketCap) r.mcap = q.marketCap;
+        /* 留档时的 px = 当时最近收盘价 = 跳空基准，盘前价可由 mv 反推 */
+        if (!r.prePx && r.mv != null && r.px) r.prePx = +Number(r.px * (1 + r.mv / 100)).toFixed(2);
+      });
+      await new Promise((s) => setTimeout(s, 120));
+    }
+    console.log("盘前留档收盘回填：" + preEntry.rows.filter((r) => r.closeChg != null).length + "/" + preEntry.rows.length);
+  }
+} catch (e) { console.warn("盘前留档收盘回填失败:", e.message); }
 const upsert = (session, rows, dateTag) => {
   if (!rows.length) return;
   const rec = { date: dateTag, session, ts: movers.ts, state: mvState, rows: rows.map(slim) };
