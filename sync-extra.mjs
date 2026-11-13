@@ -710,7 +710,7 @@ if (!movers.post.length && lastPost) {
 if (!movers.pre.length && lastPre) {
   movers.pre = lastPre.rows.map((r) => ({ ...r, earn: preEarnSet.has(r.sym) }));
   movers.preDate = lastPre.date; movers.preFromLog = true;
-} else movers.preDate = etToday;
+} else movers.preDate = (sessionNow === "pre") ? etToday : usCloseDate;
 movers.history = mvLog.slice(0, 10).map((x) => ({ date: x.date, session: x.session, n: x.rows.length }));
 /* 赛道归类补写（此时 trackOfClass 已定义） */
 mvLog.forEach((r) => r.rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, ""); }));
