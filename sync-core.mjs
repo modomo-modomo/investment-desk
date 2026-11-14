@@ -236,6 +236,7 @@ for (const c of stockCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
   const base20 = rows[rows.length - 22] || rows[0];
+  const base5 = rows[rows.length - 6] || rows[0];   /* 5 个交易日前 = 本周涨跌基准 */
   const q = stockQuotes[c.sym] || {};
   const bx = backfill(rows, q);
   if (bx.fixed) backfilled++;
@@ -246,6 +247,7 @@ for (const c of stockCharts) {
     price: +bx.price.toFixed(2),
     prev: +bx.prev.toFixed(2),
     chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
+    d5: +(pct(bx.price, base5.close) ?? 0).toFixed(2),
     d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
     ytd: ytd0 ? +(pct(bx.price, ytd0.close) ?? 0).toFixed(2) : null,
     mcap: q.marketCap ?? null,
@@ -267,6 +269,7 @@ for (const c of idxCharts) {
   if (!c || !c.rows.length) continue;
   const rows = c.rows;
   const base20 = rows[rows.length - 22] || rows[0];
+  const base5 = rows[rows.length - 6] || rows[0];
   const bx = settle(rows, idxQuotes[c.sym] || {}, true);
   if (bx.fixed) backfilled++;
   /* 指数用 amount 表示成交额，Yahoo chart 只有 volume，这里留 null 由 live-extra 补 */
@@ -276,6 +279,7 @@ for (const c of idxCharts) {
     level: +bx.price.toFixed(2),
     prev: +bx.prev.toFixed(2),
     chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
+    d5: +(pct(bx.price, base5.close) ?? 0).toFixed(2),
     d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
     amount: null,
   };
@@ -302,12 +306,14 @@ for (const [code, mkt, emc, name] of EM_IDX) {
     if (rows.length < 2) { console.warn("东财指数无数据 " + name); continue; }
     const last = rows[rows.length - 1];
     const base20 = rows[rows.length - 22] || rows[0];
+    const base5 = rows[rows.length - 6] || rows[0];
     indices[code] = {
       name,
       date: last.date.replace(/-/g, ""),
       level: +last.close.toFixed(2),
       prev: +(rows[rows.length - 2].close).toFixed(2),
       chg: +last.chg.toFixed(2),
+      d5: +(pct(last.close, base5.close) ?? 0).toFixed(2),
       d20: +(((last.close / base20.close) - 1) * 100).toFixed(2),
       amount: null,
     };
@@ -327,20 +333,24 @@ for (const c of crossCharts) {
   const [key, sym, name, unit, mul, isBp] = c.row;
   const rows = c.rows;
   const base20 = rows[rows.length - 22] || rows[0];
+  const base5 = rows[rows.length - 6] || rows[0];
   /* 期货/外汇 24h 报价，chart 末根可能是盘中价——统一取"最近已结算收盘" */
   const bx = settle(rows, crossQuotes[sym] || {});
   if (bx.fixed) backfilled++;
   const v = bx.price * mul;
   const p1 = bx.prev * mul;
   const p20 = base20.close * mul;
+  const p5 = base5.close * mul;
   cross[key] = {
     name,
     unit,
     date: bx.date.replace(/-/g, ""),
     value: +v.toFixed(v >= 1000 ? 2 : 4),
     d1: +(pct(v, p1) ?? 0).toFixed(2),
+    d5: +(pct(v, p5) ?? 0).toFixed(2),
     d20: +(pct(v, p20) ?? 0).toFixed(2),
     dbp1: isBp ? +((v - p1) * 100).toFixed(2) : null,
+    dbp5: isBp ? +((v - p5) * 100).toFixed(2) : null,
     dbp20: isBp ? +((v - p20) * 100).toFixed(2) : null,
   };
 }

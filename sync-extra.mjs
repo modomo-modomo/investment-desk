@@ -282,7 +282,10 @@ for (const [sym, cn] of Object.entries(SECTORS)) {
     const c = await chart(sym, "3mo");
     const last = c.rows[c.rows.length - 1], prev = c.rows[c.rows.length - 2];
     const base = c.rows.length >= 21 ? c.rows[c.rows.length - 21] : null;
-    sectors[sym] = { cn, chg: prev ? (last.close / prev.close - 1) * 100 : null, d20: base ? (last.close / base.close - 1) * 100 : null };
+    const base5 = c.rows.length >= 6 ? c.rows[c.rows.length - 6] : null;
+    sectors[sym] = { cn, chg: prev ? (last.close / prev.close - 1) * 100 : null,
+      d5: base5 ? (last.close / base5.close - 1) * 100 : null,
+      d20: base ? (last.close / base.close - 1) * 100 : null };
   } catch {}
 }
 
@@ -309,6 +312,7 @@ async function cryptoClose(sym) {
   return {
     price,
     chg: prevDay ? (price / prevDay.close - 1) * 100 : null,
+    d5: done.length >= 6 ? (price / done[done.length - 6].close - 1) * 100 : null,
     d20: base ? (price / base.close - 1) * 100 : null,
     date: prevUTC,
   };
@@ -325,7 +329,10 @@ try {
   const rd = rsp.rows, sd = spy.rows;
   const r20 = rd.length >= 21 ? (rd[rd.length - 1].close / rd[rd.length - 21].close - 1) * 100 : null;
   const s20 = sd.length >= 21 ? (sd[sd.length - 1].close / sd[sd.length - 21].close - 1) * 100 : null;
-  breadth = { rsp20: r20, spy20: s20, rel20: (r20 != null && s20 != null) ? r20 - s20 : null };
+  const r5 = rd.length >= 6 ? (rd[rd.length - 1].close / rd[rd.length - 6].close - 1) * 100 : null;
+  const s5 = sd.length >= 6 ? (sd[sd.length - 1].close / sd[sd.length - 6].close - 1) * 100 : null;
+  breadth = { rsp20: r20, spy20: s20, rel20: (r20 != null && s20 != null) ? r20 - s20 : null,
+    rsp5: r5, spy5: s5, rel5: (r5 != null && s5 != null) ? r5 - s5 : null };
 } catch (e) { console.warn("等权/市值权重失败:", e.message); }
 
 let spxVol = null;

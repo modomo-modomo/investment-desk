@@ -1,6 +1,1502 @@
 [
  {
   "date": "2026-11-13",
+  "session": "post",
+  "ts": "2026-11-14T01:57:47.795Z",
+  "state": "POSTPOST",
+  "rows": [
+   {
+    "sym": "ONEN",
+    "name": "ONE Nuclear Energy",
+    "sec": "公用事业",
+    "ind": "公用事业 - 独立电力生产商",
+    "zh": "ONE Nuclear Energy Inc. 使用快速天然气和先进的核小型模块化反应堆 (SMR) 技术提供大规模能源开发、所有权和综合发电平台的运营。它提供发展；建造;公用事业规模的所有权和运营",
+    "track": "其它",
+    "mcap": 163471058,
+    "mv": 9.29,
+    "px": 1.4,
+    "prePx": null,
+    "postPx": 1.53,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PMA",
+    "name": "PMA Graphene Technology",
+    "sec": "可选消费",
+    "ind": "工程建筑",
+    "zh": "PMA Graphene Technology Group Inc.通过其子公司在香港从事湿法工程。 Its works include plastering, tile laying, brick laying, fl",
+    "track": "其它",
+    "mcap": 197199750,
+    "mv": -8.82,
+    "px": 1.36,
+    "prePx": null,
+    "postPx": 1.24,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BGIN",
+    "name": "Bgin Blockchain",
+    "sec": "金融",
+    "ind": "电脑硬件",
+    "zh": "Bgin Blockchain Limited 通过其子公司作为一家数字资产技术公司在新加坡、香港、美国和国际上运营。它通过采矿业务和运营矿池生产加密货币。该公司还设计和销售矿机",
+    "track": "其它",
+    "mcap": 312255197,
+    "mv": -8.51,
+    "px": 3.88,
+    "prePx": null,
+    "postPx": 3.55,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "HTZ",
+    "name": "Hertz Global",
+    "sec": "可选消费",
+    "ind": "租赁服务",
+    "zh": "Hertz Global Holdings, Inc. 是一家汽车租赁公司。它通过两个部门运营：美洲 RAC 部门和国际 R​​AC 部门。该公司在美国的公司运营、被许可人和特许经营地点提供 Hertz、Dollar 和",
+    "track": "其它",
+    "mcap": 550497318,
+    "mv": 8.33,
+    "px": 1.5,
+    "prePx": null,
+    "postPx": 1.63,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ENHA",
+    "name": "Enhanced",
+    "sec": "可选消费",
+    "ind": "包装食品",
+    "zh": "Enhanced Group Inc. 涉足体育娱乐、表演技术和生活方式健康市场。它从事组织现场体育赛事；制作和分发相关内容；向客户营销生活方式和健康优化服务；并运营 Live Enhan",
+    "track": "其它",
+    "mcap": 2848710960,
+    "mv": 7.95,
+    "px": 6.67,
+    "prePx": null,
+    "postPx": 7.2,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "KYTX",
+    "name": "Kyverna Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Kyverna Therapeutics, Inc. 是一家后期生物制药公司，专注于为自身免疫性疾病患者开发细胞疗法。其主要候选产品是 KYV-101，这是一种自体 CD19 CAR T 细胞候选产品，用于治疗僵人综合症",
+    "track": "其它",
+    "mcap": 318006509,
+    "mv": 7.85,
+    "px": 5.05,
+    "prePx": null,
+    "postPx": 5.45,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PUSA",
+    "name": "Powerus",
+    "sec": "可选消费",
+    "ind": "航空航天与国防",
+    "zh": "Powerus Corporation 构建并扩展硬件和统一自治系统。其系统旨在在高后果环境中移动、保护和维持关键资产。该公司成立于 2025 年，总部位于南卡罗来纳州罗克希尔。",
+    "track": "其它",
+    "mcap": 234686017,
+    "mv": 7.47,
+    "px": 1.34,
+    "prePx": null,
+    "postPx": 1.44,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "INTT",
+    "name": "inTest",
+    "sec": "工业",
+    "ind": "半导体设备",
+    "zh": "inTEST Corporation 提供用于半导体、汽车/电动汽车、国防/航空航天、工业、生命科学、安全/安防以及美国和国际其他市场的测试和工艺技术解决方案。该公司通过三个部门运营：电子测试部门、环境部门",
+    "track": "其它",
+    "mcap": 188691655,
+    "mv": 7.28,
+    "px": 13.73,
+    "prePx": null,
+    "postPx": 14.73,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CLYM",
+    "name": "Climb Bio",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Climb Bio, Inc. 是一家临床阶段的生物技术公司，专注于开发疗法，以满足患有免疫介导疾病的患者未得到满足的需求。该公司的主要候选产品是budoprutug，一种抗CD19单克隆抗体，用于治疗B细胞介导的疾病。",
+    "track": "其它",
+    "mcap": 638483995,
+    "mv": -7.16,
+    "px": 10.36,
+    "prePx": null,
+    "postPx": 9.62,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CNCK",
+    "name": "Coincheck N.V.",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "Coincheck Group N.V. 在日本经营加密货币交易服务提供商。它运营 Coincheck NFT Marketplace 平台，可以购买不可替代的代币。该公司交易各种加密货币，例如比特币和以太坊。它还提供质",
+    "track": "其它",
+    "mcap": 210977770,
+    "mv": 7.14,
+    "px": 0.98,
+    "prePx": null,
+    "postPx": 1.05,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BRUN",
+    "name": "Boost Run",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Boost Run, Inc.提供人工智能云基础设施和高性能计算解决方案。该公司提供一系列托管在数据中心设施内的图形处理单元 (GPU) 服务器。其平台提供 GPU 计算、CPU 节点、管理 Kubernetes 编排以",
+    "track": "其它",
+    "mcap": 498352355,
+    "mv": -6.87,
+    "px": 5.53,
+    "prePx": null,
+    "postPx": 5.15,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ARAI",
+    "name": "Arrive AI",
+    "sec": "可选消费",
+    "ind": "科学技术仪器",
+    "zh": "Arrive AI Inc.是一家科技公司，在美国设计并实施了商业上可行的智能邮箱和平台系统。它提供了一个由 Arrive Points 智能储物柜和迷你交叉转运点组成的 ALM 网络，用于安全和异步交换点，连接无人机、",
+    "track": "其它",
+    "mcap": 107657297,
+    "mv": -6.67,
+    "px": 2.25,
+    "prePx": null,
+    "postPx": 2.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CCLD",
+    "name": "CareCloud",
+    "sec": "科技",
+    "ind": "健康信息服务",
+    "zh": "CareCloud, Inc. 是一家医疗保健信息技术公司，主要向美国的医疗保健提供商和医院提供技术支持的业务解决方案、软件即服务产品和相关业务服务。它通过医疗保健 IT 和医疗实践 Ma 进行运营",
+    "track": "其它",
+    "mcap": 112328988,
+    "mv": 6.61,
+    "px": 2.42,
+    "prePx": null,
+    "postPx": 2.58,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SAR",
+    "name": "Saratoga Investment New",
+    "sec": "金融",
+    "ind": "资产管理",
+    "zh": "Saratoga Investment Corp. 是一家业务开发公司，专门从事中低端市场公司的杠杆收购和管理层收购、收购融资、增长融资、资本重组、债务再融资和过渡融资交易。该基金的结构是",
+    "track": "其它",
+    "mcap": 181425379,
+    "mv": 6.53,
+    "px": 11.47,
+    "prePx": null,
+    "postPx": 12.22,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "IPHA",
+    "name": "Innate Pharma S.A. ADS",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Innate Pharma S.A. 是一家生物技术公司，为法国和国际上的癌症患者开发免疫疗法。该公司的产品包括Lacutamab（IPH4102），一种抗KIR3DL2抗体，目前处于治疗皮肤T细胞和外周细胞的II期临床",
+    "track": "其它",
+    "mcap": 167550521,
+    "mv": -6.52,
+    "px": 1.38,
+    "prePx": null,
+    "postPx": 1.29,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GDYN",
+    "name": "Grid Dynamics",
+    "sec": "科技",
+    "ind": "信息技术服务",
+    "zh": "Grid Dynamics Holdings, Inc. 及其子公司在北美、欧洲和国际上提供企业人工智能和数字化转型服务。该公司提供人工智能服务，例如通过战略咨询、数据模型进行人工智能准备",
+    "track": "其它",
+    "mcap": 1075361986,
+    "mv": 6.36,
+    "px": 13.21,
+    "prePx": null,
+    "postPx": 14.05,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "EQ",
+    "name": "Equillium",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Equillium, Inc. 是一家临床阶段的生物技术公司，在美国开发治疗严重自身免疫性和炎症或免疫炎症性疾病的疗法。该公司开发了 EQ504，这是一种新型 AhR 调节剂，处于临床前阶段，用于治疗溃疡性结肠炎和",
+    "track": "其它",
+    "mcap": 108668604,
+    "mv": 6.2,
+    "px": 1.29,
+    "prePx": null,
+    "postPx": 1.37,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "XLAB",
+    "name": "Exascale Labs",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Exascale Labs Holdings Inc. 开发和运营人工智能计算机基础设施平台。它提供图形处理单元（GPU）云基础设施、可扩展的GPU计算部署、人工智能就绪的数据中心解决方案、系统集成、GPU采购和租赁以及",
+    "track": "其它",
+    "mcap": 146039971,
+    "mv": -6.07,
+    "px": 2.14,
+    "prePx": null,
+    "postPx": 2.01,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GSM",
+    "name": "Ferroglobe",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Ferroglobe PLC 生产和销售金属硅以及硅锰合金。它提供用于一系列应用的硅金属，包括建筑相关产品、电子产品、个人护理用品和医疗保健，以及原铝和再生铝产品。",
+    "track": "其它",
+    "mcap": 569924577,
+    "mv": -6,
+    "px": 3,
+    "prePx": null,
+    "postPx": 2.82,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NN",
+    "name": "NextNav",
+    "sec": "工业",
+    "ind": "软件 - 基础设施",
+    "zh": "NextNav Inc. 在美国提供定位、导航和授时 (PNT) 解决方案。该公司为公共安全应用提供 Pinnacle 精确高度服务，包括为 Verizon 和国家蜂窝网络提供商提供增强型 911。它还提供 TerraP",
+    "track": "其它",
+    "mcap": 1480536870,
+    "mv": -5.85,
+    "px": 8.73,
+    "prePx": null,
+    "postPx": 8.22,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TE",
+    "name": "T1 Energy",
+    "sec": "科技",
+    "ind": "电气设备及零件",
+    "zh": "T1 Energy Inc. 在美国、挪威和国际上提供太阳能模块和电池的能源解决方案。它生产和销售光伏太阳能组件。该公司前身为 FREYR Battery, Inc.，于 2025 年 2 月更名为 T1 Energy ",
+    "track": "其它",
+    "mcap": 590682030,
+    "mv": -5.76,
+    "px": 1.91,
+    "prePx": null,
+    "postPx": 1.8,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "POWL",
+    "name": "Powell Industries",
+    "sec": "能源",
+    "ind": "电气设备及零件",
+    "zh": "Powell Industries, Inc. 及其子公司设计、开发、制造、销售定制工程设备和系统并提供服务。该公司的产品组合包括集成电力控制室变电站、定制设计模块和电气室；和传统",
+    "track": "其它",
+    "mcap": 5165044598,
+    "mv": -5.64,
+    "px": 142.72,
+    "prePx": null,
+    "postPx": 134.68,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TAC",
+    "name": "TransAlta",
+    "sec": "公用事业",
+    "ind": "公用事业 - 独立电力生产商",
+    "zh": "TransAlta Corporation 从事电能的开发、生产和销售。该公司通过水力、风能和太阳能、天然气、能源转型和能源营销部门开展业务。 Hydro 部门持有位于艾伯塔省和加拿大约 922 兆瓦 (MW) 的权益。",
+    "track": "其它",
+    "mcap": 4202045500,
+    "mv": -5.37,
+    "px": 13.21,
+    "prePx": null,
+    "postPx": 12.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AEVA",
+    "name": "Aeva Technologies",
+    "sec": "可选消费",
+    "ind": "软件 - 基础设施",
+    "zh": "Aeva Technologies, Inc. 在北美、欧洲、大洋洲和亚洲从事激光雷达传感系统以及相关感知和自主软件解决方案的设计、制造和销售。该公司采用调频连续波 (FMCW) 传感技术开发其产品",
+    "track": "其它",
+    "mcap": 824776033,
+    "mv": -5.29,
+    "px": 10.58,
+    "prePx": null,
+    "postPx": 10.02,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NPCE",
+    "name": "Neuropace",
+    "sec": "医疗",
+    "ind": "医疗器械",
+    "zh": "NeuroPace, Inc. 在美国作为一家医疗器械公司运营。该公司开发了 RNS 系统，这是一种大脑响应神经调节系统，可在癫痫发作源提供个性化的实时治疗，以治疗耐药性局灶性癫痫。其RNS系统包括RNS神经系统",
+    "track": "其它",
+    "mcap": 414107871,
+    "mv": -5.27,
+    "px": 7.56,
+    "prePx": null,
+    "postPx": 7.16,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "CYPH",
+    "name": "Cypherpunk Technologies",
+    "sec": "医疗",
+    "ind": "资产管理",
+    "zh": "Cypherpunk Technologies Inc.是一家隐私技术公司，在美国实施以Zcash为基础的数字资产战略。该公司致力于识别、开发、投资、收购和构建隐私增强技术；并积累数字资产，如Z",
+    "track": "其它",
+    "mcap": 209601723,
+    "mv": -5.18,
+    "px": 1.87,
+    "prePx": null,
+    "postPx": 1.77,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DUOT",
+    "name": "Duos Technologies",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Duos Technologies Group, Inc. 在北美设计、开发、部署和运营智能技术解决方案。其解决方案包括实时数据采集和分析的应用程序，包括快速移动车辆的检查和监控，以及分布式部署",
+    "track": "其它",
+    "mcap": 160824470,
+    "mv": 4.99,
+    "px": 5.03,
+    "prePx": null,
+    "postPx": 5.28,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SUPX",
+    "name": "SuperX AI Technology",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "SuperX AI Technology Limited 在日本和国际上提供人工智能基础设施解决方案。该公司以 SuperX 品牌提供人工智能服务器。它还提供先进的解决方案设计和规划、基础设施产品集成以及端到端的运维；人",
+    "track": "其它",
+    "mcap": 235813856,
+    "mv": -4.95,
+    "px": 5.05,
+    "prePx": null,
+    "postPx": 4.8,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LBTYK",
+    "name": "Liberty Global Common Shares",
+    "sec": "通信服务",
+    "ind": "电信服务",
+    "zh": "Liberty Global Ltd. 及其子公司为欧洲的住宅和企业客户提供宽带互联网、视频、固定电话和移动通信服务。它提供智能 WiFi 和宽带互联网服务，例如 ONE Con​​nect，可实现快速、便捷的服务",
+    "track": "其它",
+    "mcap": 3450225815,
+    "mv": -4.94,
+    "px": 10.52,
+    "prePx": null,
+    "postPx": 10,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CNTN",
+    "name": "Canton Strategic",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Canton Strategy Holdings, Inc. 专注于推进美国机构区块链的采用和数字化金融市场。该公司作为 Canton Network 上的验证者和超级验证者运营，为网络提供验证和活跃服务。它还提供",
+    "track": "其它",
+    "mcap": 143426450,
+    "mv": 4.93,
+    "px": 1.71,
+    "prePx": null,
+    "postPx": 1.79,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SHMD",
+    "name": "SCHMID N.V.",
+    "sec": "科技",
+    "ind": "特种工业机械",
+    "zh": "SCHMID Group N.V. 在德国和国际上作为印刷电路板 (PCB)、基板制造、光伏、玻璃和能源存储等多个行业的设备和服务供应商。它通过技术设备和流程以及备用 P 来运作",
+    "track": "其它",
+    "mcap": 149477485,
+    "mv": 4.93,
+    "px": 2.09,
+    "prePx": null,
+    "postPx": 2.19,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NANO",
+    "name": "Forge Nano",
+    "sec": "科技",
+    "ind": "半导体设备",
+    "zh": "Forge Nano Holdings Inc. 开发和制造原子层沉积设备，并为研究和商业规模的材料提供表面工程解决方案。该公司提供原子层沉积设备和解决方案，用于将精密涂层应用于诸如",
+    "track": "其它",
+    "mcap": 591815691,
+    "mv": 4.84,
+    "px": 4.34,
+    "prePx": null,
+    "postPx": 4.55,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RZLT",
+    "name": "Rezolute (NV)",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Rezolute, Inc. 是一家晚期罕见疾病公司，在美国专注于开发治疗与各种形式的高胰岛素血症 (HI) 相关的难治性和衰弱性低血糖的疗法。其主要临床资产是 ersodetug，一种静脉注射的人单克隆抗体",
+    "track": "其它",
+    "mcap": 374340893,
+    "mv": 4.8,
+    "px": 3.65,
+    "prePx": null,
+    "postPx": 3.83,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NUAI",
+    "name": "New Era Energy & Digital",
+    "sec": "能源",
+    "ind": "软件 - 基础设施",
+    "zh": "New Era Energy & Digital, Inc. 是先进人工智能超大规模企业的下一代数字基础设施和集成电力资产的开发商和运营商。其旗舰德克萨斯州关键数据中心项目位于埃克托县，占地 438 平方公里",
+    "track": "其它",
+    "mcap": 382348945,
+    "mv": -4.69,
+    "px": 3.2,
+    "prePx": null,
+    "postPx": 3.05,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TMQ",
+    "name": "Trilogy Metals",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Trilogy Metals Inc. 在美国从事矿产勘探和开发。它主要探索铜、钴、铅、锌、金和银的特性。该公司主要持有上科伯克矿产项目的权益，其中包括北极地区，其中包含",
+    "track": "其它",
+    "mcap": 363629224,
+    "mv": 4.64,
+    "px": 1.94,
+    "prePx": null,
+    "postPx": 2.03,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ABLV",
+    "name": "Able View Global",
+    "sec": "可选消费",
+    "ind": "专业零售",
+    "zh": "Able View Global Inc. 是中国美容和个人护理品牌的品牌管理合作伙伴。该公司提供品牌管理服务，例如战略、品牌、数字和社交营销、全渠道销售、客户服务、海外物流以及仓储和履行。我",
+    "track": "其它",
+    "mcap": 121485817,
+    "mv": -4.6,
+    "px": 2.29,
+    "prePx": null,
+    "postPx": 2.18,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VUZI",
+    "name": "Vuzix",
+    "sec": "科技",
+    "ind": "消费电子产品",
+    "zh": "Vuzix Corporation 在北美、欧洲、亚太地区和国际范围内设计、制造和销售人工智能 (AI) 驱动的智能眼镜、波导和增强现实 (AR) 技术。该公司提供的智能眼镜包括 M 系列、Vuzix Blade、Vuz",
+    "track": "其它",
+    "mcap": 156688652,
+    "mv": 4.55,
+    "px": 1.34,
+    "prePx": null,
+    "postPx": 1.41,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "USDE",
+    "name": "StablecoinX",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "StablecoinX Inc.是一家稳定币基础设施公司，专注于 Ethena 数字美元生态系统。它提供基础设施服务、稳定币中间件软件和稳定币分发服务。该公司总部位于德克萨斯州弗里斯科。",
+    "track": "其它",
+    "mcap": 166657101,
+    "mv": -4.53,
+    "px": 5.3,
+    "prePx": null,
+    "postPx": 5.06,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "STTK",
+    "name": "Shattuck Labs",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Shattuck Labs, Inc.是一家临床阶段生物技术公司，在美国从事治疗炎症和免疫介导疾病的抗体开发。公司开发死亡受体3阻断单克隆抗体SL-325，处于I期临床试验",
+    "track": "其它",
+    "mcap": 489862675,
+    "mv": -4.52,
+    "px": 4.65,
+    "prePx": null,
+    "postPx": 4.44,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GLSI",
+    "name": "Greenwich LifeSciences",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Greenwich LifeSciences, Inc. 是一家临床阶段的生物制药公司，在美国为乳腺癌和其他表达 HER2/neu 的癌症开发新型癌症免疫疗法。其主要候选产品是 GP2，一种 HER2/neu 跨膜肽，目",
+    "track": "其它",
+    "mcap": 224283018,
+    "mv": 4.48,
+    "px": 14.94,
+    "prePx": null,
+    "postPx": 15.61,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SSII",
+    "name": "SS Innovations International",
+    "sec": "医疗",
+    "ind": "医疗器械",
+    "zh": "SS Innovations International, Inc. 及其子公司在印度、菲律宾、印度尼西亚、南美洲、伊拉克、塞浦路斯、阿曼、阿拉伯联合酋长国 (UAE)、尼泊尔和国际上作为一家商业阶段的手术​​机器人公司",
+    "track": "其它",
+    "mcap": 264644724,
+    "mv": -4.45,
+    "px": 1.66,
+    "prePx": null,
+    "postPx": 1.59,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ZURA",
+    "name": "Zura Bio",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Zura Bio Limited 是一家临床阶段生物技术公司，在美国开发治疗自身免疫性和炎症性疾病的药物。该公司开发了 Tibulizumab，这是一种人源化 IgG4 单链可变片段双特异性抗体，经过设计可结合并中和 I",
+    "track": "其它",
+    "mcap": 119443510,
+    "mv": -4.43,
+    "px": 1.24,
+    "prePx": null,
+    "postPx": 1.19,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "JXG",
+    "name": "JX Luxventure",
+    "sec": "工业",
+    "ind": "服装制造",
+    "zh": "JX Luxventure Group Inc. 在中华人民共和国提供旅游服务并供应相关产品。它通过三个部门运营：技术部门、旅游服务部门和跨境电子商务部门。该公司提供机票和旅游服务，例如旅游套餐、合作伙伴",
+    "track": "其它",
+    "mcap": 220695790,
+    "mv": -4.29,
+    "px": 12.58,
+    "prePx": null,
+    "postPx": 12.04,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CRNT",
+    "name": "Ceragon Networks",
+    "sec": "科技",
+    "ind": "通讯设备",
+    "zh": "Ceragon Networks Ltd. 为北美、欧洲、非洲、亚太地区、中东、印度和拉丁美洲的蜂窝运营商和其他无线服务提供商提供无线传输解决方案。该公司的解决方案使用微波和毫米波无线电技术来传输",
+    "track": "其它",
+    "mcap": 217247619,
+    "mv": -4.18,
+    "px": 2.39,
+    "prePx": null,
+    "postPx": 2.29,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AEHL",
+    "name": "Antelope Enterprise",
+    "sec": "可选消费",
+    "ind": "建筑产品和设备",
+    "zh": "羚羊企业控股有限公司通过其子公司在中华人民共和国和美国提供直播电子商务、企业管理和信息系统咨询服务。该公司运营消费品社交媒体和电子商务平台",
+    "track": "其它",
+    "mcap": 191479600,
+    "mv": 4.16,
+    "px": 8.29,
+    "prePx": null,
+    "postPx": 8.63,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FF",
+    "name": "FutureFuel Common shares",
+    "sec": "工业",
+    "ind": "特种化学品",
+    "zh": "FutureFuel Corp. 及其子公司在美国生产和销售多元化的无机化学品、生物基燃料和生物基特种化学品。它通过两个部门运营：化学品部门和生物燃料部门。化学品部门包括定制化学品",
+    "track": "其它",
+    "mcap": 123913873,
+    "mv": 4.14,
+    "px": 2.9,
+    "prePx": null,
+    "postPx": 3.02,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ESP",
+    "name": "Espey Mfg. & Electronics",
+    "sec": "科技",
+    "ind": "电气设备及零件",
+    "zh": "Espey Mfg. & Electronics Corp. 主要从事美国和国际军事和工业应用的电子设备的制造和销售。主要产品包括电源供应器、电源转换器、滤波器、电源变压器、磁性元件、",
+    "track": "其它",
+    "mcap": 145174735,
+    "mv": -4.13,
+    "px": 46,
+    "prePx": null,
+    "postPx": 44.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ACRS",
+    "name": "Aclaris Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Aclaris Therapeutics, Inc. 是一家临床阶段的生物制药公司，在美国致力于发现和开发用于免疫炎症疾病的新型候选分子产品。公司产品线包括 Bosakitug (ATI-045)，一种抗胸腺基质淋巴细胞",
+    "track": "其它",
+    "mcap": 634448596,
+    "mv": -4.08,
+    "px": 3.92,
+    "prePx": null,
+    "postPx": 3.76,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "KRMN",
+    "name": "Karman",
+    "sec": "工业",
+    "ind": "航空航天与国防",
+    "zh": "Karman Holdings Inc. 通过其子公司在美国从事关键任务系统的设计、测试、制造和销售。该公司提供有效载荷保护和部署系统、空气动力学级间系统和推进系统。其产品服务于超级",
+    "track": "其它",
+    "mcap": 5361651157,
+    "mv": -4.08,
+    "px": 40.66,
+    "prePx": null,
+    "postPx": 39,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ORMP",
+    "name": "Oramed Pharmaceuticals",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Oramed Pharmaceuticals Inc. 从事药物解决方案的研究和开发，拥有用于口服治疗蛋白的技术平台。它开发了 ORMD-0801，一种口服胰岛素胶囊，目前处于治疗糖尿病患者的 III 期临床试验中",
+    "track": "其它",
+    "mcap": 175248346,
+    "mv": -4.04,
+    "px": 3.71,
+    "prePx": null,
+    "postPx": 3.56,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VOGX",
+    "name": "Vogenx",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Vogenx, Inc. 是一家临床阶段药物开发公司，开发代谢疗法，包括减肥后低血糖 (PBH) 和胃轻瘫。其产品包括米扎格列净和VGX-2857等药物。它还提供VGX-001，一种用于治疗的人单克隆抗体",
+    "track": "其它",
+    "mcap": 284474916,
+    "mv": -4.02,
+    "px": 16.67,
+    "prePx": null,
+    "postPx": 16,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SIF",
+    "name": "SIFCO Industries",
+    "sec": "工业",
+    "ind": "航空航天与国防",
+    "zh": "SIFCO Industries, Inc. 及其子公司主要为美国和国际航空航天和能源、国防和商业航天市场生产和销售锻件和机加工部件。公司的工艺和服务包括锻造、热处理、",
+    "track": "其它",
+    "mcap": 104569020,
+    "mv": -3.89,
+    "px": 15.68,
+    "prePx": null,
+    "postPx": 15.07,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ALXO",
+    "name": "ALX Oncology",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "ALX Oncology Holdings Inc.是一家临床阶段的免疫肿瘤公司，专注于为美国癌症患者开发治疗方法。该公司的主要候选产品是 Evorpacept，这是一种 CD47 阻断治疗生物制剂，开发为与其他抗癌药物",
+    "track": "其它",
+    "mcap": 134917502,
+    "mv": -3.85,
+    "px": 1.04,
+    "prePx": null,
+    "postPx": 1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FWDI",
+    "name": "Forward Industries",
+    "sec": "金融",
+    "ind": "资产管理",
+    "zh": "Forward Industries, Inc. 是一家专注于 Solana (SOL) 的数字资产财务公司。该公司通过数字资产和设计部门运营。数字资产部分捕获通过参与 Solana 网络的质押协议产生的基于 SOL 的",
+    "track": "其它",
+    "mcap": 413712116,
+    "mv": -3.85,
+    "px": 4.94,
+    "prePx": null,
+    "postPx": 4.75,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LHX",
+    "name": "L3Harris Technologies",
+    "sec": "工业",
+    "ind": "航空航天与国防",
+    "zh": "L3Harris Technologies, Inc. 为全球政府和商业客户提供关键任务解决方案。它通过三个部门运营：空间与任务系统（SMS）、通信与频谱优势（CSD）以及导弹解决方案（MSL）。 SMS 部分集成了卫星",
+    "track": "其它",
+    "mcap": 50616807259,
+    "mv": -3.82,
+    "px": 272.35,
+    "prePx": null,
+    "postPx": 261.94,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "KT",
+    "name": "KT",
+    "sec": "通信服务",
+    "ind": "电信服务",
+    "zh": "KT Corporation 在韩国、亚洲其他地区和国际范围内提供综合电信和平台服务。该公司提供基于5G、4G LTE和3G W-CDMA技术的移动语音和数据电信服务；固定电话服务，包括本地、国内电话",
+    "track": "其它",
+    "mcap": 9067585319,
+    "mv": -3.8,
+    "px": 18.97,
+    "prePx": null,
+    "postPx": 18.25,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TDUP",
+    "name": "ThredUp",
+    "sec": "可选消费",
+    "ind": "网络零售",
+    "zh": "ThredUp Inc. 及其子公司在美国运营一个在线转售平台。该公司的平台主要使消费者能够购买和销售二手服装、鞋子和配饰。 ThredUp Inc. 成立于 2009 年，总部位于加利福尼亚州奥克兰。",
+    "track": "其它",
+    "mcap": 199660821,
+    "mv": -3.8,
+    "px": 1.58,
+    "prePx": null,
+    "postPx": 1.52,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SWMR",
+    "name": "Swarmer",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Swarmer, Inc 在美国开发自主无人机群软件和人工智能解决方案。该公司专门为军事组织提供软件平台和人工智能系统，以部署和协调无人系统操作。其服务包括自主群体协调",
+    "track": "其它",
+    "mcap": 149018315,
+    "mv": -3.79,
+    "px": 8.84,
+    "prePx": null,
+    "postPx": 8.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ENGN",
+    "name": "enGene Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "enGene Therapeutics Inc. 通过其子公司 enGene, Inc. 在加拿大作为一家临床阶段生物技术公司运营。该公司开发基因药物来帮助膀胱癌患者。其主要候选产品是 detalimogene vora",
+    "track": "其它",
+    "mcap": 152797200,
+    "mv": -3.78,
+    "px": 2.41,
+    "prePx": null,
+    "postPx": 2.32,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ALLT",
+    "name": "Allot",
+    "sec": "通信服务",
+    "ind": "软件 - 基础设施",
+    "zh": "Allot Ltd. 及其子公司在以色列、欧洲、亚洲、大洋洲、美洲、中东和非洲开发、销售和推广网络智能和安全解决方案。该公司的Allot安全管理平台，提供端到端的安全管理基础设施",
+    "track": "其它",
+    "mcap": 380621710,
+    "mv": -3.77,
+    "px": 7.95,
+    "prePx": null,
+    "postPx": 7.65,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DH",
+    "name": "Definitive Healthcare",
+    "sec": "科技",
+    "ind": "健康信息服务",
+    "zh": "Definitive Healthcare Corp. 及其子公司在美国和国际上提供软件即服务 (SaaS) 医疗保健商业智能平台。其 SaaS 平台提供有关医疗保健提供商及其活动的信息，以帮助其客户从产品",
+    "track": "其它",
+    "mcap": 181877911,
+    "mv": 3.76,
+    "px": 1.31,
+    "prePx": null,
+    "postPx": 1.36,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "EDRY",
+    "name": "EuroDry Common Shares",
+    "sec": "可选消费",
+    "ind": "海运",
+    "zh": "EuroDry Ltd. 通过其子公司在全球范围内提供远洋运输服务。该公司拥有并经营干散货船，运输主要散货，如铁矿石、煤炭和谷物；以及少量散货，包括铝土矿、磷酸盐和化肥。截至2026年3月31日，该公司已运营",
+    "track": "其它",
+    "mcap": 120826811,
+    "mv": 3.72,
+    "px": 36.25,
+    "prePx": null,
+    "postPx": 37.6,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NSTR",
+    "name": "NorthStar Earth & Space Enterprises Common Shares",
+    "sec": "可选消费",
+    "ind": "航空航天与国防",
+    "zh": "NorthStar Earth & Space Enterprises, Inc. 是一家在加拿大、美国和欧洲运营的空间情报和数据分析公司。该公司设计、开发、集成和支持企业数据管理、业务应用程序和信息技术系统。公司场地信",
+    "track": "其它",
+    "mcap": 166374533,
+    "mv": -3.72,
+    "px": 2.31,
+    "prePx": null,
+    "postPx": 2.22,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "BEPC",
+    "name": "Brookfield Renewable Brookfield Renewable Subordinate Voting Shares",
+    "sec": "公用事业",
+    "ind": "公用事业 - 可再生能源",
+    "zh": "布鲁克菲尔德可再生能源公司拥有并经营一系列可再生能源和可持续解决方案资产。该公司的产品组合包括水力发电、风能、公用事业规模太阳能、分布式发电、抽水蓄能、碳捕获和存储、热电联产、生物质能和电子燃料。它是",
+    "track": "其它",
+    "mcap": 11415565526,
+    "mv": -3.71,
+    "px": 30.71,
+    "prePx": null,
+    "postPx": 29.57,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NVMI",
+    "name": "Nova",
+    "sec": "科技",
+    "ind": "半导体设备",
+    "zh": "Nova Ltd.在台湾、美国、中国、韩国和国际上从事半导体制造过程控制系统的设计、开发、生产和销售。该公司的产品组合包括一套用于尺寸、薄膜和测量的计量平台。",
+    "track": "其它",
+    "mcap": 10413372946,
+    "mv": 3.6,
+    "px": 317.86,
+    "prePx": null,
+    "postPx": 329.3,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "EROC",
+    "name": "ERock",
+    "sec": "能源",
+    "ind": "特种工业机械",
+    "zh": "ERock, Inc. 设计、部署、销售、运营和维护分布式发电系统，旨在为美国的商业和工业客户提供电力。其产品包括模块化电力系统的设计、安装和运营，以及持续运营",
+    "track": "其它",
+    "mcap": 1828699667,
+    "mv": -3.59,
+    "px": 8.41,
+    "prePx": null,
+    "postPx": 8.11,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ERAS",
+    "name": "Erasca",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Erasca, Inc. 是一家临床阶段精准肿瘤学公司，专注于为 RAS/MAPK 通路驱动的癌症患者发现、开发和商业化治疗方法。该公司的产品线包括ERAS-0015，这是一种泛RAS分子胶，用于治疗RAS突变患者",
+    "track": "其它",
+    "mcap": 5538092244,
+    "mv": -3.58,
+    "px": 15.66,
+    "prePx": null,
+    "postPx": 15.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CURI",
+    "name": "CuriosityStream",
+    "sec": "可选消费",
+    "ind": "传媒/广播",
+    "zh": "CuriosityStream Inc. 是一家媒体和娱乐公司，通过多种渠道提供事实内容。该公司通过直接提供科学、历史、社会、自然、生活方式和技术等各种事实娱乐类别的视频和音频节目服务。",
+    "track": "其它",
+    "mcap": 169706760,
+    "mv": -3.53,
+    "px": 3.13,
+    "prePx": null,
+    "postPx": 3.02,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DGXX",
+    "name": "Digi Power X Subordinate Voting Shares",
+    "sec": "金融",
+    "ind": "消费金融",
+    "zh": "Digi Power X 是一家人工智能基础设施公司，在阿拉巴马州、纽约州和北卡罗来纳州运营垂直整合的电力资产和数据中心容量组合。该公司的 NeoCloudz 平台在专用的裸机 NVIDIA 基础设施上提供 GPU 即服",
+    "track": "其它",
+    "mcap": 224086683,
+    "mv": -3.51,
+    "px": 2.28,
+    "prePx": null,
+    "postPx": 2.2,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SONO",
+    "name": "Sonos",
+    "sec": "必需消费",
+    "ind": "消费电子产品",
+    "zh": "Sonos, Inc. 及其子公司在美洲、欧洲、中东、非洲和亚太地区设计、开发、制造和销售音频产品和服务。该公司提供无线、便携式、插入式和家庭影院扬声器；以及耳机、条形音箱、组件",
+    "track": "其它",
+    "mcap": 2142303960,
+    "mv": -3.45,
+    "px": 17.97,
+    "prePx": null,
+    "postPx": 17.35,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "STRO",
+    "name": "Sutro Biopharma",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Sutro Biopharma, Inc. 是一家肿瘤学公司。该公司开发位点特异性和新型形式的抗体药物偶联物（ADC），使其专有的集成无细胞蛋白质合成平台 XpressCF 成为可能；和位点特异性缀合平台 XpressC",
+    "track": "其它",
+    "mcap": 159207531,
+    "mv": -3.43,
+    "px": 9.82,
+    "prePx": null,
+    "postPx": 9.48,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CHYM",
+    "name": "Chime Financial",
+    "sec": "金融",
+    "ind": "软件 - 应用程序",
+    "zh": "Chime Financial, Inc. 是一家金融技术公司，在美国和国际上提供数字消费者银行和支付解决方案。该公司提供各种消费产品，包括支票账户、借记卡、ATM 和现金存款网络、工资支票、出境服务",
+    "track": "其它",
+    "mcap": 12676311566,
+    "mv": 3.4,
+    "px": 33.55,
+    "prePx": null,
+    "postPx": 34.69,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RBBN",
+    "name": "Ribbon Communications",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Ribbon Communications Inc. 在美国、欧洲、中东、非洲、亚太地区和国际范围内提供通信技术。它通过云和边缘以及 IP 光网络两个部分运营。云和边缘部分提供软件和硬件产品，",
+    "track": "其它",
+    "mcap": 259801736,
+    "mv": 3.4,
+    "px": 1.47,
+    "prePx": null,
+    "postPx": 1.52,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SID",
+    "name": "Companhia Siderurgica Nacional S.A.",
+    "sec": "工业",
+    "ind": "钢",
+    "zh": "Companhia Siderúrgica Nacional 及其子公司在巴西和国际上作为一家综合钢铁生产商运营。它通过五个部门运营：钢铁工业、采矿、物流、能源和水泥。钢铁部门提供扁钢和长钢的生产和销售。敏",
+    "track": "其它",
+    "mcap": 1038198951,
+    "mv": 3.37,
+    "px": 0.63,
+    "prePx": null,
+    "postPx": 0.65,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "FAC",
+    "name": "Factorial Energy",
+    "sec": "Miscellaneous",
+    "ind": "电气设备及零件",
+    "zh": "Factorial Energy Inc.在美国和韩国开发和制造电池储能技术和固态电池技术。该公司的产品用于生产电动汽车、家庭和关键应用的电池。拥有战略合作伙伴",
+    "track": "其它",
+    "mcap": 442786016,
+    "mv": -3.33,
+    "px": 3.9,
+    "prePx": null,
+    "postPx": 3.77,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BIOA",
+    "name": "BioAge Labs",
+    "sec": "医疗",
+    "ind": "药品制造商 - 特种药品和非专利药品",
+    "zh": "BioAge Labs, Inc. 是一家临床阶段的生物制药公司，开发代谢性疾病的候选治疗产品。该公司的技术平台和差异化的人类数据集使用户能够根据对导致衰老的分子变化的洞察来识别目标。其领先",
+    "track": "其它",
+    "mcap": 259665576,
+    "mv": -3.32,
+    "px": 5.55,
+    "prePx": null,
+    "postPx": 5.37,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VFF",
+    "name": "Village Farms International Common Shares",
+    "sec": "必需消费",
+    "ind": "农产品",
+    "zh": "Village Farms International, Inc. 及其子公司在北美和荷兰生产、销售和分销温室种植的西红柿、甜椒和黄瓜。它分为五个部门：加拿大大麻、美国大麻、荷兰大麻、农产品和清洁能源",
+    "track": "其它",
+    "mcap": 310691154,
+    "mv": 3.31,
+    "px": 2.42,
+    "prePx": null,
+    "postPx": 2.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VISN",
+    "name": "Vistance Networks",
+    "sec": "科技",
+    "ind": "通讯设备",
+    "zh": "Vistance Networks, Inc. 为美国、欧洲、中东、非洲、亚太地区、加勒比地区和拉丁美洲的通信、数据中心和娱乐网络提供基础设施解决方案。该公司分为两个部门：RUCKUS 和 Aurora Networks",
+    "track": "其它",
+    "mcap": 814338168,
+    "mv": -3.3,
+    "px": 4.24,
+    "prePx": null,
+    "postPx": 4.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "MRAM",
+    "name": "Everspin Technologies",
+    "sec": "科技",
+    "ind": "半导体",
+    "zh": "Everspin Technologies, Inc. 在美国、日本、香港、德国、新加坡、加拿大和国际上制造和销售磁阻随机存取存储器 (MRAM) 技术。它提供 Toggle MRAM、自旋转移矩 MRAM 和隧道磁阻传",
+    "track": "其它",
+    "mcap": 314602116,
+    "mv": -3.29,
+    "px": 12.25,
+    "prePx": null,
+    "postPx": 11.85,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ACMR",
+    "name": "ACM Research",
+    "sec": "科技",
+    "ind": "半导体设备",
+    "zh": "ACM Research, Inc. 及其子公司在中国大陆和国际上开发、制造和销售资本设备。它还开发、制造并向晶圆组装和封装客户销售一系列封装工具。公司为客户提供湿洗设备",
+    "track": "其它",
+    "mcap": 3492156561,
+    "mv": -3.28,
+    "px": 47.95,
+    "prePx": null,
+    "postPx": 46.38,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TNK",
+    "name": "Teekay Tankers",
+    "sec": "可选消费",
+    "ind": "石油和天然气中游",
+    "zh": "Teekay Tankers Ltd. 及其子公司为百慕大和国际石油工业提供海上运输服务。该公司分为两个部门：油轮部门和海事服务部门。提供航次租船和定期租船服务；离岸船对船货物转运",
+    "track": "其它",
+    "mcap": 3069445819,
+    "mv": -3.26,
+    "px": 89.43,
+    "prePx": null,
+    "postPx": 86.51,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ONTO",
+    "name": "ONTO INNOVATION",
+    "sec": "半导体",
+    "ind": "半导体设备",
+    "zh": "Onto Innovation Inc. 在美国、台湾、韩国、日本、中国、东南亚、亚洲和欧洲从事宏观缺陷检测和计量的过程控制工具的设计、开发、制造和支持。该公司提供光刻系统和工艺",
+    "track": "先进封测",
+    "mcap": 10294455902,
+    "mv": -3.24,
+    "px": 203.62,
+    "prePx": null,
+    "postPx": 197.03,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RGC",
+    "name": "Regencell Bioscience",
+    "sec": "医疗",
+    "ind": "药品制造商 - 特种药品和非专利药品",
+    "zh": "丽晶生物科技控股有限公司专注于香港传统中药（TCM）的研究、开发和商业化。专注于中医药治疗神经认知障碍和退化、中医脑理论的研究、开发和商业化",
+    "track": "其它",
+    "mcap": 2541407427,
+    "mv": 3.24,
+    "px": 4.94,
+    "prePx": null,
+    "postPx": 5.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "H",
+    "name": "Hyatt Hotels",
+    "sec": "可选消费",
+    "ind": "住宿",
+    "zh": "凯悦酒店集团作为一家酒店公司在美国和国际上运营。它通过管理和特许经营、自有和租赁以及分销部门进行运营。该公司开发、拥有、经营、管理、特许经营、租赁和许可一系列财产，",
+    "track": "其它",
+    "mcap": 17482624474,
+    "mv": -3.19,
+    "px": 187.7,
+    "prePx": null,
+    "postPx": 181.72,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GCTS",
+    "name": "GCT Semiconductor",
+    "sec": "科技",
+    "ind": "半导体",
+    "zh": "GCT Semiconductor Holding, Inc. 是一家无晶圆厂半导体公司，为美国、台湾、中国、德国和韩国的工业、企业对企业和消费者应用设计、制造和销售通信半导体。公司提供无线通讯技术",
+    "track": "其它",
+    "mcap": 141083889,
+    "mv": 3.17,
+    "px": 1.26,
+    "prePx": null,
+    "postPx": 1.3,
+    "closeChg": null,
+    "closePx": null,
+    "earn": true
+   },
+   {
+    "sym": "AMPL",
+    "name": "Amplitude",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Amplitude, Inc. 及其子公司提供人工智能分析平台，帮助分析美国和国际数字产品中的客户行为。它提供振幅分析，可以实时洞察用户行为；振幅会话重播，t",
+    "track": "其它",
+    "mcap": 2209539577,
+    "mv": -3.14,
+    "px": 17.34,
+    "prePx": null,
+    "postPx": 16.8,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ZETA",
+    "name": "Zeta Global",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Zeta Global Holdings Corp. 运营一个全渠道数据驱动的云平台，为美国和国际企业提供消费者情报和营销自动化软件。该公司运营 Zeta Marketing 平台，该平台是一个单一平台，使企业能够",
+    "track": "其它",
+    "mcap": 9523510663,
+    "mv": -3.14,
+    "px": 36.65,
+    "prePx": null,
+    "postPx": 35.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "MOVE",
+    "name": "Corvex",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Corvex, Inc. 是一家人工智能云计算公司，为全球客户提供用于人工智能工作负载的 GPU 加速基础设施。该公司提供图形处理单元加速计算、机密计算、令牌工厂和专门用于保护和执行的推理服务。它还",
+    "track": "其它",
+    "mcap": 184346362,
+    "mv": -3.13,
+    "px": 4.47,
+    "prePx": null,
+    "postPx": 4.33,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ORGO",
+    "name": "Organogenesis",
+    "sec": "医疗",
+    "ind": "药品制造商 - 特种药品和非专利药品",
+    "zh": "Organogenesis Holdings Inc. 是一家再生医学公司，为美国先进伤口护理、外科和运动医学市场开发、制造和商业化产品。其先进的伤口护理产品包括 Affinity 和 Novachor，分别是羊膜和绒毛",
+    "track": "其它",
+    "mcap": 125258660,
+    "mv": 3.12,
+    "px": 0.81,
+    "prePx": null,
+    "postPx": 0.84,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ALAB",
+    "name": "Astera Labs",
+    "sec": "科技",
+    "ind": "半导体",
+    "zh": "Astera Labs, Inc. 在台湾和美国为云和人工智能基础设施设计、制造和销售基于半导体的连接解决方​​案。它提供了一个智能连接平台，由基于半导体的高速混合信号连接产品组成，这些产品集成了",
+    "track": "AI基础设施/数据中心",
+    "mcap": 39813608864,
+    "mv": -3.06,
+    "px": 221.83,
+    "prePx": null,
+    "postPx": 215.05,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CIFR",
+    "name": "Cipher Digital",
+    "sec": "金融",
+    "ind": "信息技术服务",
+    "zh": "Cipher Digital Inc. 及其子公司在美国开发和运营用于比特币挖矿和高性能计算 (HPC) 托管的工业规模数据中心。它为超大规模租户开发跨多个站点的 HPC 数据中心设施；操作功率为一位",
+    "track": "其它",
+    "mcap": 3263010558,
+    "mv": -3.06,
+    "px": 6.86,
+    "prePx": null,
+    "postPx": 6.65,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GLXY",
+    "name": "Galaxy Digital",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "Galaxy Digital Inc.在北美和国际上从事数字资产和数据中心基础设施业务。它通过数字资产、数据中心、财务和企业部门运营。数字资产部门提供场外现货和衍生品交易，",
+    "track": "其它",
+    "mcap": 5855486688,
+    "mv": -3.05,
+    "px": 14.38,
+    "prePx": null,
+    "postPx": 13.94,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OPTX",
+    "name": "Syntec Optics",
+    "sec": "科技",
+    "ind": "电子元件",
+    "zh": "Syntec Optics Holdings, Inc. 为美国和欧洲的国防、医疗、工业和消费终端市场制造和供应光学和光子元件、子系统和光学系统。它提供基于聚合物的光学器件；和光学组件、电光组件、模具",
+    "track": "其它",
+    "mcap": 273903170,
+    "mv": 3.04,
+    "px": 7.08,
+    "prePx": null,
+    "postPx": 7.3,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   }
+  ]
+ },
+ {
+  "date": "2026-11-13",
   "session": "pre",
   "ts": "2026-11-13T14:15:23.727Z",
   "state": "PRE",
@@ -14,7 +1510,11 @@
     "px": 4.62,
     "earn": true,
     "ind": "医疗器械",
-    "zh": "Owlet, Inc. 在美国、英国和国际上提供数字育儿解决方案。该公司提供一个数字育儿平台，为父母提供实时数据和见解。它还提供袜子监测器，包括可穿戴婴儿健康监测器 Dream Sock"
+    "zh": "Owlet, Inc. 在美国、英国和国际上提供数字育儿解决方案。该公司提供一个数字育儿平台，为父母提供实时数据和见解。它还提供袜子监测器，包括可穿戴婴儿健康监测器 Dream Sock",
+    "closeChg": -25.54,
+    "closePx": 3.44,
+    "mcap": 100522568,
+    "prePx": 2.34
    },
    {
     "sym": "NPCE",
@@ -25,7 +1525,11 @@
     "px": 12.02,
     "earn": false,
     "ind": "医疗器械",
-    "zh": "NeuroPace, Inc. 在美国作为一家医疗器械公司运营。该公司开发了 RNS 系统，这是一种大脑响应神经调节系统，可在癫痫发作源提供个性化的实时治疗，以治疗耐药性局灶性癫痫。其RNS系统包括RNS神经系统"
+    "zh": "NeuroPace, Inc. 在美国作为一家医疗器械公司运营。该公司开发了 RNS 系统，这是一种大脑响应神经调节系统，可在癫痫发作源提供个性化的实时治疗，以治疗耐药性局灶性癫痫。其RNS系统包括RNS神经系统",
+    "closeChg": -37.1,
+    "closePx": 7.56,
+    "mcap": 259491488,
+    "prePx": 6.47
    },
    {
     "sym": "CADL",
@@ -36,7 +1540,11 @@
     "px": 8.39,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Candel Therapeutics, Inc. 是一家临床阶段生物制药公司，为癌症患者开发免疫疗法。它开发了 CAN-2409，目前正处于治疗前列腺癌的 2a 期临床试验中；以及治疗非小细胞肺癌（NSCLC）的 2a"
+    "zh": "Candel Therapeutics, Inc. 是一家临床阶段生物制药公司，为癌症患者开发免疫疗法。它开发了 CAN-2409，目前正处于治疗前列腺癌的 2a 期临床试验中；以及治疗非小细胞肺癌（NSCLC）的 2a",
+    "closeChg": -26.1,
+    "closePx": 6.2,
+    "mcap": 474415104,
+    "prePx": 5.16
    },
    {
     "sym": "MOD",
@@ -47,7 +1555,11 @@
     "px": 106.1,
     "earn": false,
     "ind": "建筑产品和设备",
-    "zh": "Modine Manufacturing Company 在美国、加拿大、意大利、匈牙利、英国、中国和国际上设计、工程、测试、制造和销售关键任务热解决方案。它提供传热产品，包括圆管板翅片结构；燃气，h"
+    "zh": "Modine Manufacturing Company 在美国、加拿大、意大利、匈牙利、英国、中国和国际上设计、工程、测试、制造和销售关键任务热解决方案。它提供传热产品，包括圆管板翅片结构；燃气，h",
+    "closeChg": 27.86,
+    "closePx": 135.66,
+    "mcap": 7216694272,
+    "prePx": 139.82
    },
    {
     "sym": "LFTO",
@@ -58,7 +1570,11 @@
     "px": 18.71,
     "earn": false,
     "ind": "软件与数据服务",
-    "zh": "Liftoff（纳斯达克股票代码：LFTO）是专为移动应用经济打造的领先增长和货币化引擎。其人工智能驱动的平台 Cortex 统一了营销、创意和货币化，在整个应用程序生命周期中大规模提供可衡量的性能。 Liftoff 使"
+    "zh": "Liftoff（纳斯达克股票代码：LFTO）是专为移动应用经济打造的领先增长和货币化引擎。其人工智能驱动的平台 Cortex 统一了营销、创意和货币化，在整个应用程序生命周期中大规模提供可衡量的性能。 Liftoff 使",
+    "closeChg": 30.63,
+    "closePx": 24.44,
+    "mcap": 4138462464,
+    "prePx": 23.34
    },
    {
     "sym": "NMAX",
@@ -69,7 +1585,11 @@
     "px": 7.29,
     "earn": false,
     "ind": "传媒/广播",
-    "zh": "Newsmax Inc. 在纽约证券交易所 (NMAX) 上市，并通过美国领先的新闻媒体之一 Newsmax Broadcasting LLC 运营 Newsmax 频道。第四高收视率的网络由所有主要付费电视提供商运营。"
+    "zh": "Newsmax Inc. 在纽约证券交易所 (NMAX) 上市，并通过美国领先的新闻媒体之一 Newsmax Broadcasting LLC 运营 Newsmax 频道。第四高收视率的网络由所有主要付费电视提供商运营。",
+    "closeChg": 31.41,
+    "closePx": 9.58,
+    "mcap": 1237358976,
+    "prePx": 8.88
    },
    {
     "sym": "SHIM",
@@ -80,7 +1600,11 @@
     "px": 2.34,
     "earn": false,
     "ind": "工程建筑",
-    "zh": "Shimmick Corporation 为美国的水、能源、气候弹性和交通市场提供交钥匙基础设施解决方案。它扩建、修复、升级、建造和重建水和废水处理基础设施，例如海水淡化厂；实施t"
+    "zh": "Shimmick Corporation 为美国的水、能源、气候弹性和交通市场提供交钥匙基础设施解决方案。它扩建、修复、升级、建造和重建水和废水处理基础设施，例如海水淡化厂；实施t",
+    "closeChg": 38.89,
+    "closePx": 3.25,
+    "mcap": 134341424,
+    "prePx": 2.84
    },
    {
     "sym": "KLC",
@@ -91,7 +1615,11 @@
     "px": 2.11,
     "earn": false,
     "ind": "教育与培训服务",
-    "zh": "KinderCare Learning Companies, Inc. 在美国提供幼儿教育和护理服务。该公司为婴幼儿、学前班和幼儿园学生提供基于社区的幼儿教育服务；以及为组织、公司定制的家庭护理福利"
+    "zh": "KinderCare Learning Companies, Inc. 在美国提供幼儿教育和护理服务。该公司为婴幼儿、学前班和幼儿园学生提供基于社区的幼儿教育服务；以及为组织、公司定制的家庭护理福利",
+    "closeChg": -35.07,
+    "closePx": 1.37,
+    "mcap": 162368336,
+    "prePx": 1.73
    },
    {
     "sym": "CDXS",
@@ -102,7 +1630,11 @@
     "px": 0.96,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Codexis, Inc. 为治疗药物制造提供技术解决方案，利用其专有的 CodeEvolver 技术平台在美国、加拿大、拉丁美洲、欧洲、中东、非洲、澳大利亚、新西兰、"
+    "zh": "Codexis, Inc. 为治疗药物制造提供技术解决方案，利用其专有的 CodeEvolver 技术平台在美国、加拿大、拉丁美洲、欧洲、中东、非洲、澳大利亚、新西兰、",
+    "closeChg": 21.07,
+    "closePx": 1.16,
+    "mcap": 127026688,
+    "prePx": 1.13
    },
    {
     "sym": "GCTS",
@@ -113,7 +1645,11 @@
     "px": 1.54,
     "earn": false,
     "ind": "半导体",
-    "zh": "GCT Semiconductor Holding, Inc. 是一家无晶圆厂半导体公司，为美国、台湾、中国、德国和韩国的工业、企业对企业和消费者应用设计、制造和销售通信半导体。公司提供无线通讯技术"
+    "zh": "GCT Semiconductor Holding, Inc. 是一家无晶圆厂半导体公司，为美国、台湾、中国、德国和韩国的工业、企业对企业和消费者应用设计、制造和销售通信半导体。公司提供无线通讯技术",
+    "closeChg": -18.18,
+    "closePx": 1.26,
+    "mcap": 115881856,
+    "prePx": 1.27
    },
    {
     "sym": "EXOD",
@@ -124,7 +1660,11 @@
     "px": 4.83,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Exodus Movement, Inc. 在美国作为区块链和数字资产行业的金融技术公司运营。该公司开发了 Exodus 平台，这是一个非托管的自我托管数字资产钱包，可以让您进入去中心化金融世界和区块链的力量。它是一个"
+    "zh": "Exodus Movement, Inc. 在美国作为区块链和数字资产行业的金融技术公司运营。该公司开发了 Exodus 平台，这是一个非托管的自我托管数字资产钱包，可以让您进入去中心化金融世界和区块链的力量。它是一个",
+    "closeChg": -9.11,
+    "closePx": 4.39,
+    "mcap": 133906968,
+    "prePx": 4
    },
    {
     "sym": "DGXX",
@@ -135,7 +1675,11 @@
     "px": 2.21,
     "earn": true,
     "ind": "消费金融",
-    "zh": "Digi Power X 是一家人工智能基础设施公司，在阿拉巴马州、纽约州和北卡罗来纳州运营垂直整合的电力资产和数据中心容量组合。该公司的 NeoCloudz 平台在专用的裸机 NVIDIA 基础设施上提供 GPU 即服"
+    "zh": "Digi Power X 是一家人工智能基础设施公司，在阿拉巴马州、纽约州和北卡罗来纳州运营垂直整合的电力资产和数据中心容量组合。该公司的 NeoCloudz 平台在专用的裸机 NVIDIA 基础设施上提供 GPU 即服",
+    "closeChg": 3.17,
+    "closePx": 2.28,
+    "mcap": 231192048,
+    "prePx": 2.57
    },
    {
     "sym": "VIR",
@@ -146,7 +1690,11 @@
     "px": 12.12,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Vir Biotechnology, Inc. 是一家临床阶段的生物制药公司，在美国和国际上发现和开发用于治疗和预防严重传染病的治疗产品。其临床开发管道包括针对肝炎的产品研究疗法"
+    "zh": "Vir Biotechnology, Inc. 是一家临床阶段的生物制药公司，在美国和国际上发现和开发用于治疗和预防严重传染病的治疗产品。其临床开发管道包括针对肝炎的产品研究疗法",
+    "closeChg": -17.82,
+    "closePx": 9.96,
+    "mcap": 1705856896,
+    "prePx": 10.22
    },
    {
     "sym": "DEFT",
@@ -157,7 +1705,11 @@
     "px": 0.3,
     "earn": false,
     "ind": "资本市场",
-    "zh": "DeFi Technologies Inc. 是一家科技公司，开发交易所交易产品，综合跟踪加拿大单个 DeFi 协议或一篮子协议的价值。它提供资产管理服务，例如间接投资底层数字资产、数字资产指数或其他资产"
+    "zh": "DeFi Technologies Inc. 是一家科技公司，开发交易所交易产品，综合跟踪加拿大单个 DeFi 协议或一篮子协议的价值。它提供资产管理服务，例如间接投资底层数字资产、数字资产指数或其他资产",
+    "closeChg": 7.02,
+    "closePx": 0.32,
+    "mcap": 126091488,
+    "prePx": 0.35
    },
    {
     "sym": "ARAI",
@@ -168,7 +1720,11 @@
     "px": 2.06,
     "earn": false,
     "ind": "科学技术仪器",
-    "zh": "Arrive AI Inc.是一家科技公司，在美国设计并实施了商业上可行的智能邮箱和平台系统。它提供了一个由 Arrive Points 智能储物柜和迷你交叉转运点组成的 ALM 网络，用于安全和异步交换点，连接无人机、"
+    "zh": "Arrive AI Inc.是一家科技公司，在美国设计并实施了商业上可行的智能邮箱和平台系统。它提供了一个由 Arrive Points 智能储物柜和迷你交叉转运点组成的 ALM 网络，用于安全和异步交换点，连接无人机、",
+    "closeChg": 9.22,
+    "closePx": 2.25,
+    "mcap": 3223759,
+    "prePx": 2.36
    },
    {
     "sym": "NEOV",
@@ -179,7 +1735,11 @@
     "px": 2.85,
     "earn": false,
     "ind": "电气设备及零件",
-    "zh": "NeoVolta Inc.在美国从事储能系统的设计、制造和销售。该公司提供 NV14、NV24、NVPlus 和 NV7600 储能系统，通过电池和逆变器在住宅、商业和工业以及公用事业中存储和使用能源"
+    "zh": "NeoVolta Inc.在美国从事储能系统的设计、制造和销售。该公司提供 NV14、NV24、NVPlus 和 NV7600 储能系统，通过电池和逆变器在住宅、商业和工业以及公用事业中存储和使用能源",
+    "closeChg": -0.35,
+    "closePx": 2.84,
+    "mcap": 167853040,
+    "prePx": 3.22
    },
    {
     "sym": "CBRS",
@@ -190,7 +1750,11 @@
     "px": 97.75,
     "earn": false,
     "ind": "半导体",
-    "zh": "Cerebras Systems (NASDAQ: CBRS) is building the world's fastest AI infrastructure. Its wafer-scale computing t"
+    "zh": "Cerebras Systems (NASDAQ: CBRS) is building the world's fastest AI infrastructure. Its wafer-scale computing t",
+    "closeChg": 11.22,
+    "closePx": 108.72,
+    "mcap": 25827962880,
+    "prePx": 110.16
    },
    {
     "sym": "HAWK",
@@ -201,7 +1765,11 @@
     "px": 14.67,
     "earn": false,
     "ind": "软件与数据服务",
-    "zh": "HawkEye 360​​ 总部位于弗吉尼亚州赫恩登，是一家信号情报公司，提供关键任务情报数据和分析以加强国家和全球安全。通过检测、表征和地理定位 RF 信号，HawkEye 360​​ 为国防、情报和商业提供装备"
+    "zh": "HawkEye 360​​ 总部位于弗吉尼亚州赫恩登，是一家信号情报公司，提供关键任务情报数据和分析以加强国家和全球安全。通过检测、表征和地理定位 RF 信号，HawkEye 360​​ 为国防、情报和商业提供装备",
+    "closeChg": 23.79,
+    "closePx": 18.16,
+    "mcap": 1779054464,
+    "prePx": 16.49
    },
    {
     "sym": "SBC",
@@ -212,7 +1780,11 @@
     "px": 5.34,
     "earn": true,
     "ind": "医疗/护理服务",
-    "zh": "SBC Medical 是一家医疗服务组织，为广泛的医疗保健领域提供管理支持，包括高级美容保健、皮肤科、骨科、生育治疗、妇科、牙科、脱发治疗 (AGA) 和眼科。该公司管理一个部门"
+    "zh": "SBC Medical 是一家医疗服务组织，为广泛的医疗保健领域提供管理支持，包括高级美容保健、皮肤科、骨科、生育治疗、妇科、牙科、脱发治疗 (AGA) 和眼科。该公司管理一个部门",
+    "closeChg": 37.64,
+    "closePx": 7.35,
+    "mcap": 755925056,
+    "prePx": 5.97
    },
    {
     "sym": "FLO",
@@ -223,7 +1795,11 @@
     "px": 6.01,
     "earn": false,
     "ind": "包装食品",
-    "zh": "Flowers Foods, Inc. 在美国生产和销售包装烘焙食品。该公司的主要产品包括新鲜面包、小圆面包、面包卷、零食、百吉饼、英式松饼、玉米饼、烘焙混合料、冷冻面包和面包卷以及酒吧、蛋糕、巧克力等零食。"
+    "zh": "Flowers Foods, Inc. 在美国生产和销售包装烘焙食品。该公司的主要产品包括新鲜面包、小圆面包、面包卷、零食、百吉饼、英式松饼、玉米饼、烘焙混合料、冷冻面包和面包卷以及酒吧、蛋糕、巧克力等零食。",
+    "closeChg": -7.99,
+    "closePx": 5.53,
+    "mcap": 1172677632,
+    "prePx": 5.3
    },
    {
     "sym": "TNDM",
@@ -234,7 +1810,11 @@
     "px": 17.51,
     "earn": false,
     "ind": "医疗器械",
-    "zh": "Tandem Diabetes Care, Inc. 为美国和国际糖尿病患者设计、开发和商业化技术解决方案。其旗舰产品是t:slim X2胰岛素输送系统；和 Tandem Mobi 胰岛素泵，一种自动胰岛素输送系统。该公"
+    "zh": "Tandem Diabetes Care, Inc. 为美国和国际糖尿病患者设计、开发和商业化技术解决方案。其旗舰产品是t:slim X2胰岛素输送系统；和 Tandem Mobi 胰岛素泵，一种自动胰岛素输送系统。该公",
+    "closeChg": 14.62,
+    "closePx": 20.07,
+    "mcap": 1400762496,
+    "prePx": 19.48
    },
    {
     "sym": "YSS",
@@ -245,7 +1825,11 @@
     "px": 6.6,
     "earn": false,
     "ind": "航空航天与国防",
-    "zh": "约克空间系统公司是一家太空和国防领先企业，为美国国家安全、政府和商业客户提供一整套关键任务解决方案。它为太空和国防提供专有的硬件和软件功能设计"
+    "zh": "约克空间系统公司是一家太空和国防领先企业，为美国国家安全、政府和商业客户提供一整套关键任务解决方案。它为太空和国防提供专有的硬件和软件功能设计",
+    "closeChg": -12.42,
+    "closePx": 5.78,
+    "mcap": 793926976,
+    "prePx": 5.86
    },
    {
     "sym": "RZLT",
@@ -256,7 +1840,11 @@
     "px": 3.87,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Rezolute, Inc. 是一家晚期罕见疾病公司，在美国专注于开发治疗与各种形式的高胰岛素血症 (HI) 相关的难治性和衰弱性低血糖的疗法。其主要临床资产是 ersodetug，一种静脉注射的人单克隆抗体"
+    "zh": "Rezolute, Inc. 是一家晚期罕见疾病公司，在美国专注于开发治疗与各种形式的高胰岛素血症 (HI) 相关的难治性和衰弱性低血糖的疗法。其主要临床资产是 ersodetug，一种静脉注射的人单克隆抗体",
+    "closeChg": -5.56,
+    "closePx": 3.65,
+    "mcap": 353544160,
+    "prePx": 4.3
    },
    {
     "sym": "SES",
@@ -267,7 +1855,11 @@
     "px": 0.58,
     "earn": false,
     "ind": "汽车配件",
-    "zh": "SES AI Corporation 开发和生产人工智能增强型锂金属和锂离子充电电池技术，用于电动汽车、城市空中交通、无人机、机器人、电池储能系统和其他应用。它制造和销售住宅和商业 ESS 系统，"
+    "zh": "SES AI Corporation 开发和生产人工智能增强型锂金属和锂离子充电电池技术，用于电动汽车、城市空中交通、无人机、机器人、电池储能系统和其他应用。它制造和销售住宅和商业 ESS 系统，",
+    "closeChg": -8.39,
+    "closePx": 0.53,
+    "mcap": 196708064,
+    "prePx": 0.64
    },
    {
     "sym": "WW",
@@ -278,7 +1870,11 @@
     "px": 12.27,
     "earn": false,
     "ind": "医疗设施",
-    "zh": "WW International, Inc. 在美国、德国、加拿大和国际上提供体重管理产品和服务。它为个人体重目标以及服用 GLP-1 药物或 l 的人们提供各种营养、活动、行为和生活方式工具和方法。"
+    "zh": "WW International, Inc. 在美国、德国、加拿大和国际上提供体重管理产品和服务。它为个人体重目标以及服用 GLP-1 药物或 l 的人们提供各种营养、活动、行为和生活方式工具和方法。",
+    "closeChg": -15.48,
+    "closePx": 10.37,
+    "mcap": 103687144,
+    "prePx": 10.95
    },
    {
     "sym": "LRMR",
@@ -289,7 +1885,11 @@
     "px": 2.7,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Larimar Therapeutics, Inc. 是一家临床阶段生物技术公司，专注于利用其新型细胞穿透肽技术平台开发罕见疾病的治疗方法。其主要候选产品是 CTI-1601，目前正处于治疗 Friedreich 共济失"
+    "zh": "Larimar Therapeutics, Inc. 是一家临床阶段生物技术公司，专注于利用其新型细胞穿透肽技术平台开发罕见疾病的治疗方法。其主要候选产品是 CTI-1601，目前正处于治疗 Friedreich 共济失",
+    "closeChg": 11.85,
+    "closePx": 3.02,
+    "mcap": 313726464,
+    "prePx": 2.99
    },
    {
     "sym": "LTRX",
@@ -300,7 +1900,11 @@
     "px": 4.48,
     "earn": false,
     "ind": "通讯设备",
-    "zh": "Lantronix, Inc. 在美洲、欧洲、中东、非洲和亚太地区日本开发、营销和销售工业和企业物联网 (IoT) 产品和服务。该公司的嵌入式物联网解决方案提供嵌入式产品，包括计算模块系统和"
+    "zh": "Lantronix, Inc. 在美洲、欧洲、中东、非洲和亚太地区日本开发、营销和销售工业和企业物联网 (IoT) 产品和服务。该公司的嵌入式物联网解决方案提供嵌入式产品，包括计算模块系统和",
+    "closeChg": -3.35,
+    "closePx": 4.33,
+    "mcap": 203268416,
+    "prePx": 4.96
    },
    {
     "sym": "MSB",
@@ -311,7 +1915,10 @@
     "px": 17.16,
     "earn": false,
     "ind": "钢",
-    "zh": "Mesabi Trust 是一家特许权使用费信托公司，在美国从事铁矿石开采业务。 Mesabi Trust 成立于 1961 年，总部位于纽约州纽约市。"
+    "zh": "Mesabi Trust 是一家特许权使用费信托公司，在美国从事铁矿石开采业务。 Mesabi Trust 成立于 1961 年，总部位于纽约州纽约市。",
+    "closeChg": -5.42,
+    "closePx": 16.23,
+    "prePx": 18.88
    },
    {
     "sym": "SPCE",
@@ -322,7 +1929,11 @@
     "px": 2.67,
     "earn": false,
     "ind": "航空航天与国防",
-    "zh": "维珍银河控股公司是一家航空航天和太空旅行公司，专注于太空飞船及相关技术的开发、制造和运营。从事设计开发、制造、地面和飞行测试、航天运行和飞后维护"
+    "zh": "维珍银河控股公司是一家航空航天和太空旅行公司，专注于太空飞船及相关技术的开发、制造和运营。从事设计开发、制造、地面和飞行测试、航天运行和飞后维护",
+    "closeChg": -31.09,
+    "closePx": 1.84,
+    "mcap": 278936480,
+    "prePx": 2.42
    },
    {
     "sym": "TMC",
@@ -333,7 +1944,11 @@
     "px": 2.3,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "TMC the Metals Company Inc. 是一家深海矿物勘探公司，专注于加利福尼亚海底发现的多金属结核的收集、加工和精炼。主要勘探镍、钴、铜和锰产品。公司持有勘探及商业"
+    "zh": "TMC the Metals Company Inc. 是一家深海矿物勘探公司，专注于加利福尼亚海底发现的多金属结核的收集、加工和精炼。主要勘探镍、钴、铜和锰产品。公司持有勘探及商业",
+    "closeChg": 0.43,
+    "closePx": 2.31,
+    "mcap": 1019022976,
+    "prePx": 2.51
    },
    {
     "sym": "ACCV",
@@ -344,7 +1959,11 @@
     "px": 12.21,
     "earn": false,
     "ind": "工业机械",
-    "zh": "Acceletion 是一家领先的设计商、制造商和安装商，为关键任务基础设施提供定制结构、电气和机械系统。其垂直整​​合模式结合了美国制造和全国范围的现场服务能力，使客户能够更快地从"
+    "zh": "Acceletion 是一家领先的设计商、制造商和安装商，为关键任务基础设施提供定制结构、电气和机械系统。其垂直整​​合模式结合了美国制造和全国范围的现场服务能力，使客户能够更快地从",
+    "closeChg": 5.81,
+    "closePx": 12.92,
+    "mcap": 2875243264,
+    "prePx": 13.27
    },
    {
     "sym": "UXIN",
@@ -355,7 +1974,11 @@
     "px": 0.77,
     "earn": false,
     "ind": "汽车和卡车经销商",
-    "zh": "优信有限公司及其子公司在中华人民共和国经营二手车零售商。公司提供二手车收购、检验、翻新、仓储、售前、售后服务；保修和维修、送货上门、所有权转让和车辆"
+    "zh": "优信有限公司及其子公司在中华人民共和国经营二手车零售商。公司提供二手车收购、检验、翻新、仓储、售前、售后服务；保修和维修、送货上门、所有权转让和车辆",
+    "closeChg": 1.09,
+    "closePx": 0.81,
+    "mcap": 177898032,
+    "prePx": 0.7
    },
    {
     "sym": "ZSQR",
@@ -366,7 +1989,11 @@
     "px": 2.47,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Z Squared Inc. 在北卡罗来纳州、南卡罗来纳州和爱荷华州运营一家计算和数字基础设施公司。该公司参与数字资产挖掘，通过使用脚本算法 ASIC 硬件的合并挖掘来生成狗狗币和莱特币。它还管理和优化"
+    "zh": "Z Squared Inc. 在北卡罗来纳州、南卡罗来纳州和爱荷华州运营一家计算和数字基础设施公司。该公司参与数字资产挖掘，通过使用脚本算法 ASIC 硬件的合并挖掘来生成狗狗币和莱特币。它还管理和优化",
+    "closeChg": -3.85,
+    "closePx": 2.38,
+    "mcap": 125875944,
+    "prePx": 2.68
    },
    {
     "sym": "ANDG",
@@ -377,7 +2004,11 @@
     "px": 65.42,
     "earn": false,
     "ind": "Business Services",
-    "zh": "Andersen Group Inc. is a leading integrated professional services firm delivering tax, legal, valuation, globa"
+    "zh": "Andersen Group Inc. is a leading integrated professional services firm delivering tax, legal, valuation, globa",
+    "closeChg": -8.19,
+    "closePx": 60.06,
+    "mcap": 1171425152,
+    "prePx": 59.99
    },
    {
     "sym": "OPTX",
@@ -388,7 +2019,11 @@
     "px": 6.8,
     "earn": false,
     "ind": "电子元件",
-    "zh": "Syntec Optics Holdings, Inc. 为美国和欧洲的国防、医疗、工业和消费终端市场制造和供应光学和光子元件、子系统和光学系统。它提供基于聚合物的光学器件；和光学组件、电光组件、模具"
+    "zh": "Syntec Optics Holdings, Inc. 为美国和欧洲的国防、医疗、工业和消费终端市场制造和供应光学和光子元件、子系统和光学系统。它提供基于聚合物的光学器件；和光学组件、电光组件、模具",
+    "closeChg": 4.12,
+    "closePx": 7.08,
+    "mcap": 285181536,
+    "prePx": 7.35
    },
    {
     "sym": "PRQR",
@@ -399,7 +2034,11 @@
     "px": 1.36,
     "earn": false,
     "ind": "生物技术",
-    "zh": "ProQR Therapeutics N.V. 是一家临床阶段生物技术公司，专注于新型治疗药物的发现和开发。该公司通过其 Axiomer RNA 编辑技术开发了一个 RNA 编辑平台，用于治疗未满足需求的遗传性疾病。其主"
+    "zh": "ProQR Therapeutics N.V. 是一家临床阶段生物技术公司，专注于新型治疗药物的发现和开发。该公司通过其 Axiomer RNA 编辑技术开发了一个 RNA 编辑平台，用于治疗未满足需求的遗传性疾病。其主",
+    "closeChg": 3.68,
+    "closePx": 1.41,
+    "mcap": 199274736,
+    "prePx": 1.47
    },
    {
     "sym": "SLS",
@@ -410,7 +2049,11 @@
     "px": 8.03,
     "earn": false,
     "ind": "生物技术",
-    "zh": "SELLAS Life Sciences Group, Inc.是一家后期临床生物制药公司，专注于在美国开发针对各种癌症适应症的新型疗法。该公司的主要候选产品是 galinpepimut-S (GPS)，这是一种针对 W"
+    "zh": "SELLAS Life Sciences Group, Inc.是一家后期临床生物制药公司，专注于在美国开发针对各种癌症适应症的新型疗法。该公司的主要候选产品是 galinpepimut-S (GPS)，这是一种针对 W",
+    "closeChg": -2.12,
+    "closePx": 7.86,
+    "mcap": 1587293312,
+    "prePx": 8.66
    },
    {
     "sym": "SID",
@@ -421,7 +2064,11 @@
     "px": 0.77,
     "earn": false,
     "ind": "钢",
-    "zh": "Companhia Siderúrgica Nacional 及其子公司在巴西和国际上作为一家综合钢铁生产商运营。它通过五个部门运营：钢铁工业、采矿、物流、能源和水泥。钢铁部门提供扁钢和长钢的生产和销售。敏"
+    "zh": "Companhia Siderúrgica Nacional 及其子公司在巴西和国际上作为一家综合钢铁生产商运营。它通过五个部门运营：钢铁工业、采矿、物流、能源和水泥。钢铁部门提供扁钢和长钢的生产和销售。敏",
+    "closeChg": -18.58,
+    "closePx": 0.63,
+    "mcap": 833847872,
+    "prePx": 0.71
    },
    {
     "sym": "MXCT",
@@ -432,7 +2079,11 @@
     "px": 1.19,
     "earn": false,
     "ind": "医疗器械",
-    "zh": "MaxCyte, Inc. 是一家生命科学公司，在美国和国际上发现、开发细胞疗法并将其商业化。该公司的产品包括ExPERT ATx，一种用于中小规模转染的静态电穿孔仪器； ExPERT STx，一种流式电穿孔技术"
+    "zh": "MaxCyte, Inc. 是一家生命科学公司，在美国和国际上发现、开发细胞疗法并将其商业化。该公司的产品包括ExPERT ATx，一种用于中小规模转染的静态电穿孔仪器； ExPERT STx，一种流式电穿孔技术",
+    "closeChg": 0,
+    "closePx": 1.19,
+    "mcap": 122867848,
+    "prePx": 1.1
    },
    {
     "sym": "TII",
@@ -443,7 +2094,11 @@
     "px": 1.89,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "Titan Mining Corporation 是一家自然资源公司，收购、勘探、开发、生产和提取矿产。该公司勘探锌和石墨以及氧化铁铜金矿床。其主要资产是帝国州矿山项目，占地约"
+    "zh": "Titan Mining Corporation 是一家自然资源公司，收购、勘探、开发、生产和提取矿产。该公司勘探锌和石墨以及氧化铁铜金矿床。其主要资产是帝国州矿山项目，占地约",
+    "closeChg": -5.82,
+    "closePx": 1.78,
+    "mcap": 176269296,
+    "prePx": 2.03
    },
    {
     "sym": "WSE",
@@ -454,7 +2109,11 @@
     "px": 10.93,
     "earn": false,
     "ind": "信息技术服务",
-    "zh": "Wise Group plc 在英国、欧洲其他地区、亚太地区、北美和国际上提供跨境和国内金融服务。它提供汇款、货币兑换和账户服务。该公司的产品包括Wise Account，一个工业解决方案"
+    "zh": "Wise Group plc 在英国、欧洲其他地区、亚太地区、北美和国际上提供跨境和国内金融服务。它提供汇款、货币兑换和账户服务。该公司的产品包括Wise Account，一个工业解决方案",
+    "closeChg": 2.74,
+    "closePx": 11.23,
+    "mcap": 10835547136,
+    "prePx": 11.74
    },
    {
     "sym": "SCZM",
@@ -465,7 +2124,11 @@
     "px": 7.05,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "Santacruz Silver Mining Ltd. 及其子公司在拉丁美洲从事矿产收购、勘探、开发、生产和经营。该公司主要勘探银矿和锌矿，以及铅矿和铜矿。它还拥有以下投资组合"
+    "zh": "Santacruz Silver Mining Ltd. 及其子公司在拉丁美洲从事矿产收购、勘探、开发、生产和经营。该公司主要勘探银矿和锌矿，以及铅矿和铜矿。它还拥有以下投资组合",
+    "closeChg": -3.12,
+    "closePx": 6.83,
+    "mcap": 635123648,
+    "prePx": 7.56
    },
    {
     "sym": "REPL",
@@ -476,7 +2139,11 @@
     "px": 21.98,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Replimune Group, Inc.是一家临床阶段生物技术公司，专注于在美国和英国治疗癌症的溶瘤免疫疗法的开发和商业化。该公司专有的溶瘤免疫疗法候选产品旨在"
+    "zh": "Replimune Group, Inc.是一家临床阶段生物技术公司，专注于在美国和英国治疗癌症的溶瘤免疫疗法的开发和商业化。该公司专有的溶瘤免疫疗法候选产品旨在",
+    "closeChg": -0.41,
+    "closePx": 21.89,
+    "mcap": 2075180672,
+    "prePx": 20.4
    },
    {
     "sym": "AEHL",
@@ -487,7 +2154,11 @@
     "px": 10.07,
     "earn": false,
     "ind": "建筑产品和设备",
-    "zh": "羚羊企业控股有限公司通过其子公司在中华人民共和国和美国提供直播电子商务、企业管理和信息系统咨询服务。该公司运营消费品社交媒体和电子商务平台"
+    "zh": "羚羊企业控股有限公司通过其子公司在中华人民共和国和美国提供直播电子商务、企业管理和信息系统咨询服务。该公司运营消费品社交媒体和电子商务平台",
+    "closeChg": -17.73,
+    "closePx": 8.29,
+    "mcap": 157538080,
+    "prePx": 10.78
    },
    {
     "sym": "KEP",
@@ -498,7 +2169,11 @@
     "px": 11.13,
     "earn": false,
     "ind": "公用事业 - 受监管的电力",
-    "zh": "韩国电力公司及其子公司在韩国和国际上从事发电、输电和配电业务。该公司通过五个部门运营：电力销售部门、核能发电部门、火力发电部门、电力供应部门"
+    "zh": "韩国电力公司及其子公司在韩国和国际上从事发电、输电和配电业务。该公司通过五个部门运营：电力销售部门、核能发电部门、火力发电部门、电力供应部门",
+    "closeChg": -8.72,
+    "closePx": 10.16,
+    "mcap": 13044710400,
+    "prePx": 10.35
    },
    {
     "sym": "GYRE",
@@ -509,7 +2184,11 @@
     "px": 4.3,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Gyre Therapeutics, Inc.是一家制药公司，致力于针对器官纤维化的小分子、抗炎和抗纤维化药物的开发和商业化。该公司提供 ETUARY（吡非尼酮），一种被批准用于治疗特发性肺纤维化的抗纤维化药物。"
+    "zh": "Gyre Therapeutics, Inc.是一家制药公司，致力于针对器官纤维化的小分子、抗炎和抗纤维化药物的开发和商业化。该公司提供 ETUARY（吡非尼酮），一种被批准用于治疗特发性肺纤维化的抗纤维化药物。",
+    "closeChg": 0.23,
+    "closePx": 4.31,
+    "mcap": 471736256,
+    "prePx": 4.6
    },
    {
     "sym": "CYPH",
@@ -520,7 +2199,11 @@
     "px": 1.95,
     "earn": false,
     "ind": "资产管理",
-    "zh": "Cypherpunk Technologies Inc.是一家隐私技术公司，在美国实施以Zcash为基础的数字资产战略。该公司致力于识别、开发、投资、收购和构建隐私增强技术；并积累数字资产，如Z"
+    "zh": "Cypherpunk Technologies Inc.是一家隐私技术公司，在美国实施以Zcash为基础的数字资产战略。该公司致力于识别、开发、投资、收购和构建隐私增强技术；并积累数字资产，如Z",
+    "closeChg": -3.86,
+    "closePx": 1.87,
+    "mcap": 201519392,
+    "prePx": 2.09
    },
    {
     "sym": "RMIX",
@@ -531,7 +2214,11 @@
     "px": 8.12,
     "earn": true,
     "ind": "建筑材料",
-    "zh": "Suncrete 是一家领先的纯预拌混凝土公司，总部位于俄克拉荷马州塔尔萨，为俄克拉荷马州、阿肯色州、德克萨斯州和路易斯安那州的基础设施、商业和住宅建筑项目以及阿肯色州、路易斯安那州的混凝土产品等多元化客户群提供服务。"
+    "zh": "Suncrete 是一家领先的纯预拌混凝土公司，总部位于俄克拉荷马州塔尔萨，为俄克拉荷马州、阿肯色州、德克萨斯州和路易斯安那州的基础设施、商业和住宅建筑项目以及阿肯色州、路易斯安那州的混凝土产品等多元化客户群提供服务。",
+    "closeChg": -37.44,
+    "closePx": 5.08,
+    "mcap": 383697216,
+    "prePx": 8.68
    },
    {
     "sym": "BGIN",
@@ -542,7 +2229,11 @@
     "px": 2.76,
     "earn": false,
     "ind": "电脑硬件",
-    "zh": "Bgin Blockchain Limited 通过其子公司作为一家数字资产技术公司在新加坡、香港、美国和国际上运营。它通过采矿业务和运营矿池生产加密货币。该公司还设计和销售矿机"
+    "zh": "Bgin Blockchain Limited 通过其子公司作为一家数字资产技术公司在新加坡、香港、美国和国际上运营。它通过采矿业务和运营矿池生产加密货币。该公司还设计和销售矿机",
+    "closeChg": 40.58,
+    "closePx": 3.88,
+    "mcap": 438967488,
+    "prePx": 2.57
    },
    {
     "sym": "PHR",
@@ -553,7 +2244,11 @@
     "px": 12.62,
     "earn": false,
     "ind": "健康信息服务",
-    "zh": "Phreesia, Inc. 为美国和加拿大的医疗保健行业提供基于 SaaS 的集成软件和支付平台。它提供的解决方案包括使用人工智能支持的工作流程进行预约优化和转介管理；以及基于AI的智能应答解决方案患者沟通"
+    "zh": "Phreesia, Inc. 为美国和加拿大的医疗保健行业提供基于 SaaS 的集成软件和支付平台。它提供的解决方案包括使用人工智能支持的工作流程进行预约优化和转介管理；以及基于AI的智能应答解决方案患者沟通",
+    "closeChg": 0.55,
+    "closePx": 12.69,
+    "mcap": 787680256,
+    "prePx": 13.48
    },
    {
     "sym": "PRAX",
@@ -564,7 +2259,11 @@
     "px": 324.76,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Praxis Precision Medicines, Inc. 是一家临床阶段的生物制药公司，在美国致力于开发以神经元兴奋抑制失衡为特征的中枢神经系统 (CNS) 疾病的疗法。该公司的平台包括 Cebrum，一种小分子"
+    "zh": "Praxis Precision Medicines, Inc. 是一家临床阶段的生物制药公司，在美国致力于开发以神经元兴奋抑制失衡为特征的中枢神经系统 (CNS) 疾病的疗法。该公司的平台包括 Cebrum，一种小分子",
+    "closeChg": 1.04,
+    "closePx": 328.13,
+    "mcap": 9171742720,
+    "prePx": 346.75
    },
    {
     "sym": "RYDE",
@@ -575,7 +2274,11 @@
     "px": 0.95,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Ryde Group Ltd 在新加坡从事提供移动和快速商务解决方案。该公司提供按需和预约的拼车和叫车服务；将乘客与其司机合作伙伴匹配；以及按需、定时和多站包裹递送服务。它还经营"
+    "zh": "Ryde Group Ltd 在新加坡从事提供移动和快速商务解决方案。该公司提供按需和预约的拼车和叫车服务；将乘客与其司机合作伙伴匹配；以及按需、定时和多站包裹递送服务。它还经营",
+    "closeChg": 13.39,
+    "closePx": 1.08,
+    "mcap": 194644416,
+    "prePx": 0.89
    },
    {
     "sym": "MITK",
@@ -586,7 +2289,11 @@
     "px": 18.25,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Mitek Systems, Inc. 在全球范围内提供数字身份验证和欺诈预防解决方案。该公司提供 Mobile Deposit，这是一种面向零售金融机构、经纪公司和预付卡提供商的移动远程存款捕获解决方案； Check "
+    "zh": "Mitek Systems, Inc. 在全球范围内提供数字身份验证和欺诈预防解决方案。该公司提供 Mobile Deposit，这是一种面向零售金融机构、经纪公司和预付卡提供商的移动远程存款捕获解决方案； Check ",
+    "closeChg": -0.6,
+    "closePx": 18.14,
+    "mcap": 818519872,
+    "prePx": 19.45
    },
    {
     "sym": "NNNN",
@@ -597,7 +2304,11 @@
     "px": 3.8,
     "earn": false,
     "ind": "医疗器械及用品",
-    "zh": "Anbio Biotechnology 在欧盟、亚太地区、北美、南美和国际上提供体外诊断 (IVD) 产品。公司提供侧流免疫分析、荧光免疫分析、环介导等温扩增、SHA干化学、化学发光"
+    "zh": "Anbio Biotechnology 在欧盟、亚太地区、北美、南美和国际上提供体外诊断 (IVD) 产品。公司提供侧流免疫分析、荧光免疫分析、环介导等温扩增、SHA干化学、化学发光",
+    "closeChg": 0.53,
+    "closePx": 3.82,
+    "mcap": 167664384,
+    "prePx": 4.05
    },
    {
     "sym": "SOC",
@@ -608,7 +2319,11 @@
     "px": 0.62,
     "earn": false,
     "ind": "石油和天然气钻探",
-    "zh": "Sable Offshore Corp. 在美国作为一家独立的石油和天然气公司运营。该公司通过位于加利福尼亚州近海联邦水域的三个平台进行运营。它还拥有并经营 16 个联邦租赁地，占地约 76,000 英亩，以及运输海底管"
+    "zh": "Sable Offshore Corp. 在美国作为一家独立的石油和天然气公司运营。该公司通过位于加利福尼亚州近海联邦水域的三个平台进行运营。它还拥有并经营 16 个联邦租赁地，占地约 76,000 英亩，以及运输海底管",
+    "closeChg": 17.69,
+    "closePx": 0.73,
+    "mcap": 151804816,
+    "prePx": 0.66
    },
    {
     "sym": "OPRT",
@@ -619,7 +2334,11 @@
     "px": 11.76,
     "earn": false,
     "ind": "信用服务",
-    "zh": "Oportun Financial Corporation 在美国提供金融服务。该公司提供个人贷款和信用卡。它通过在线和电话以及零售和贷款即服务合作伙伴地点为客户提供服务。公司成立于2005年，现任董事长"
+    "zh": "Oportun Financial Corporation 在美国提供金融服务。该公司提供个人贷款和信用卡。它通过在线和电话以及零售和贷款即服务合作伙伴地点为客户提供服务。公司成立于2005年，现任董事长",
+    "closeChg": -0.26,
+    "closePx": 11.73,
+    "mcap": 540516288,
+    "prePx": 12.51
    },
    {
     "sym": "HOS",
@@ -630,7 +2349,11 @@
     "px": 5.83,
     "earn": false,
     "ind": "海运",
-    "zh": "Hornbeck Offshore Services, Inc. 为美国和国际上的勘探和生产、油田服务、海上施工和军事客户提供海上运输服务。该公司经营近海供应船、多用途支援船和一艘岸基船。"
+    "zh": "Hornbeck Offshore Services, Inc. 为美国和国际上的勘探和生产、油田服务、海上施工和军事客户提供海上运输服务。该公司经营近海供应船、多用途支援船和一艘岸基船。",
+    "closeChg": 1.72,
+    "closePx": 5.93,
+    "mcap": 1316288256,
+    "prePx": 6.2
    },
    {
     "sym": "FTK",
@@ -641,7 +2364,11 @@
     "px": 25.83,
     "earn": false,
     "ind": "石油和天然气设备与服务",
-    "zh": "Flotek Industries, Inc. 是一家化学和数据分析公司，在美国、阿拉伯联合酋长国和国际上开展业务。该公司分为化学技术 (CT) 和数据分析 (DA) 两个部门。 CT 部门提供化学解决方案，例如专有化学"
+    "zh": "Flotek Industries, Inc. 是一家化学和数据分析公司，在美国、阿拉伯联合酋长国和国际上开展业务。该公司分为化学技术 (CT) 和数据分析 (DA) 两个部门。 CT 部门提供化学解决方案，例如专有化学",
+    "closeChg": -1.94,
+    "closePx": 25.33,
+    "mcap": 919012224,
+    "prePx": 27.46
    },
    {
     "sym": "BAK",
@@ -652,7 +2379,11 @@
     "px": 1.13,
     "earn": false,
     "ind": "化学品",
-    "zh": "Braskem S.A. 及其子公司在巴西从事化学品、石化产品和燃料的制造、销售、进出口业务。该公司向第二代生产商提供电力和其他投入；销售公用事业，例如蒸汽、水、压缩空气和工业"
+    "zh": "Braskem S.A. 及其子公司在巴西从事化学品、石化产品和燃料的制造、销售、进出口业务。该公司向第二代生产商提供电力和其他投入；销售公用事业，例如蒸汽、水、压缩空气和工业",
+    "closeChg": 0,
+    "closePx": 1.13,
+    "mcap": 450287136,
+    "prePx": 1.2
    },
    {
     "sym": "SHMD",
@@ -663,7 +2394,11 @@
     "px": 2.38,
     "earn": false,
     "ind": "特种工业机械",
-    "zh": "SCHMID Group N.V. 在德国和国际上作为印刷电路板 (PCB)、基板制造、光伏、玻璃和能源存储等多个行业的设备和服务供应商。它通过技术设备和流程以及备用 P 来运作"
+    "zh": "SCHMID Group N.V. 在德国和国际上作为印刷电路板 (PCB)、基板制造、光伏、玻璃和能源存储等多个行业的设备和服务供应商。它通过技术设备和流程以及备用 P 来运作",
+    "closeChg": -12.18,
+    "closePx": 2.09,
+    "mcap": 139273312,
+    "prePx": 2.53
    },
    {
     "sym": "EOSE",
@@ -674,7 +2409,11 @@
     "px": 1.81,
     "earn": false,
     "ind": "电气设备及零件",
-    "zh": "Eos Energy Enterprises, Inc. 为美国公用事业规模、微电网以及商业和工业应用设计、开发、制造和销售储能解决方案。该公司提供Znyth技术的电池储能系统（BESS），可提供操作灵活性"
+    "zh": "Eos Energy Enterprises, Inc. 为美国公用事业规模、微电网以及商业和工业应用设计、开发、制造和销售储能解决方案。该公司提供Znyth技术的电池储能系统（BESS），可提供操作灵活性",
+    "closeChg": 5.52,
+    "closePx": 1.91,
+    "mcap": 699755200,
+    "prePx": 1.92
    },
    {
     "sym": "GDYN",
@@ -685,7 +2424,11 @@
     "px": 13.38,
     "earn": false,
     "ind": "信息技术服务",
-    "zh": "Grid Dynamics Holdings, Inc. 及其子公司在北美、欧洲和国际上提供企业人工智能和数字化转型服务。该公司提供人工智能服务，例如通过战略咨询、数据模型进行人工智能准备"
+    "zh": "Grid Dynamics Holdings, Inc. 及其子公司在北美、欧洲和国际上提供企业人工智能和数字化转型服务。该公司提供人工智能服务，例如通过战略咨询、数据模型进行人工智能准备",
+    "closeChg": -1.27,
+    "closePx": 13.21,
+    "mcap": 1061689408,
+    "prePx": 14.19
    },
    {
     "sym": "VISN",
@@ -696,7 +2439,11 @@
     "px": 4,
     "earn": false,
     "ind": "通讯设备",
-    "zh": "Vistance Networks, Inc. 为美国、欧洲、中东、非洲、亚太地区、加勒比地区和拉丁美洲的通信、数据中心和娱乐网络提供基础设施解决方案。该公司分为两个部门：RUCKUS 和 Aurora Networks"
+    "zh": "Vistance Networks, Inc. 为美国、欧洲、中东、非洲、亚太地区、加勒比地区和拉丁美洲的通信、数据中心和娱乐网络提供基础设施解决方案。该公司分为两个部门：RUCKUS 和 Aurora Networks",
+    "closeChg": 6,
+    "closePx": 4.24,
+    "mcap": 863198400,
+    "prePx": 4.24
    },
    {
     "sym": "VUZI",
@@ -707,7 +2454,11 @@
     "px": 1.84,
     "earn": false,
     "ind": "消费电子产品",
-    "zh": "Vuzix Corporation 在北美、欧洲、亚太地区和国际范围内设计、制造和销售人工智能 (AI) 驱动的智能眼镜、波导和增强现实 (AR) 技术。该公司提供的智能眼镜包括 M 系列、Vuzix Blade、Vuz"
+    "zh": "Vuzix Corporation 在北美、欧洲、亚太地区和国际范围内设计、制造和销售人工智能 (AI) 驱动的智能眼镜、波导和增强现实 (AR) 技术。该公司提供的智能眼镜包括 M 系列、Vuzix Blade、Vuz",
+    "closeChg": -26.9,
+    "closePx": 1.34,
+    "mcap": 113537144,
+    "prePx": 1.73
    },
    {
     "sym": "STNE",
@@ -718,7 +2469,11 @@
     "px": 7.72,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "StoneCo Ltd. 为商家和综合合作伙伴提供金融技术和软件解决方案，以在巴西通过店内、在线和移动渠道开展电子商务。该公司提供金融服务，包括支付、预付款、数字银行和信贷解决方案。"
+    "zh": "StoneCo Ltd. 为商家和综合合作伙伴提供金融技术和软件解决方案，以在巴西通过店内、在线和移动渠道开展电子商务。该公司提供金融服务，包括支付、预付款、数字银行和信贷解决方案。",
+    "closeChg": 2.59,
+    "closePx": 7.92,
+    "mcap": 1826317440,
+    "prePx": 7.26
    },
    {
     "sym": "OFRM",
@@ -729,7 +2484,11 @@
     "px": 10.18,
     "earn": false,
     "ind": "包装食品",
-    "zh": "Once Upon A Farm，PBC 生产和销售有机婴儿食品袋、儿童餐食和零食。该公司提供袋装食品，包括水果和蔬菜混合物、功能性混合物和冰沙；冷冻有机食品；以及儿童软烤棒。它通过零售店、电子商务销售其产品"
+    "zh": "Once Upon A Farm，PBC 生产和销售有机婴儿食品袋、儿童餐食和零食。该公司提供袋装食品，包括水果和蔬菜混合物、功能性混合物和冰沙；冷冻有机食品；以及儿童软烤棒。它通过零售店、电子商务销售其产品",
+    "closeChg": -5.21,
+    "closePx": 9.65,
+    "mcap": 405209760,
+    "prePx": 9.58
    },
    {
     "sym": "NUAI",
@@ -740,7 +2499,11 @@
     "px": 2.72,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "New Era Energy & Digital, Inc. 是先进人工智能超大规模企业的下一代数字基础设施和集成电力资产的开发商和运营商。其旗舰德克萨斯州关键数据中心项目位于埃克托县，占地 438 平方公里"
+    "zh": "New Era Energy & Digital, Inc. 是先进人工智能超大规模企业的下一代数字基础设施和集成电力资产的开发商和运营商。其旗舰德克萨斯州关键数据中心项目位于埃克托县，占地 438 平方公里",
+    "closeChg": 17.65,
+    "closePx": 3.2,
+    "mcap": 449822304,
+    "prePx": 2.88
    },
    {
     "sym": "BHF",
@@ -751,7 +2514,11 @@
     "px": 44.1,
     "earn": false,
     "ind": "保险 - 人寿",
-    "zh": "Brighthouse Financial, Inc. 在美国提供年金和人寿保险产品。该公司通过年金、人寿和径流部门运营。年金部门提供可变年金、固定年金、指数挂钩年金和收入年金，以满足合约持有人受保护财富积累的需求"
+    "zh": "Brighthouse Financial, Inc. 在美国提供年金和人寿保险产品。该公司通过年金、人寿和径流部门运营。年金部门提供可变年金、固定年金、指数挂钩年金和收入年金，以满足合约持有人受保护财富积累的需求",
+    "closeChg": -0.48,
+    "closePx": 43.89,
+    "mcap": 2524182528,
+    "prePx": 46.69
    },
    {
     "sym": "ENHA",
@@ -762,7 +2529,11 @@
     "px": 7.2,
     "earn": false,
     "ind": "包装食品",
-    "zh": "Enhanced Group Inc. 涉足体育娱乐、表演技术和生活方式健康市场。它从事组织现场体育赛事；制作和分发相关内容；向客户营销生活方式和健康优化服务；并运营 Live Enhan"
+    "zh": "Enhanced Group Inc. 涉足体育娱乐、表演技术和生活方式健康市场。它从事组织现场体育赛事；制作和分发相关内容；向客户营销生活方式和健康优化服务；并运营 Live Enhan",
+    "closeChg": -7.36,
+    "closePx": 6.67,
+    "mcap": 1817705600,
+    "prePx": 6.78
    },
    {
     "sym": "ZVRA",
@@ -773,7 +2544,11 @@
     "px": 11.16,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Zevra Therapeutics, Inc. 是一家商业阶段公司，专注于解决美国罕见疾病治疗中未满足的需求。该公司通过配体激活技术平台开发其产品。其主要候选产品是 KP1077，由 KP1077IH 组成，正在开发中"
+    "zh": "Zevra Therapeutics, Inc. 是一家商业阶段公司，专注于解决美国罕见疾病治疗中未满足的需求。该公司通过配体激活技术平台开发其产品。其主要候选产品是 KP1077，由 KP1077IH 组成，正在开发中",
+    "closeChg": -18.64,
+    "closePx": 9.08,
+    "mcap": 540301952,
+    "prePx": 10.54
    },
    {
     "sym": "NU",
@@ -784,7 +2559,11 @@
     "px": 11.83,
     "earn": false,
     "ind": "消费金融",
-    "zh": "Nu is one of the largest digital financial services platforms in the world, serving above 135 million across B"
+    "zh": "Nu is one of the largest digital financial services platforms in the world, serving above 135 million across B",
+    "closeChg": 11.75,
+    "closePx": 13.22,
+    "mcap": 63861706752,
+    "prePx": 12.49
    },
    {
     "sym": "SMHI",
@@ -795,7 +2574,11 @@
     "px": 8.73,
     "earn": false,
     "ind": "海运",
-    "zh": "SEACOR Marine Holdings Inc. 为全球海上能源设施提供海运和支持运输服务。该公司从事海上支持船队的运营和管理，这些船队向海上设施（包括海上风电场）运送货物和人员"
+    "zh": "SEACOR Marine Holdings Inc. 为全球海上能源设施提供海运和支持运输服务。该公司从事海上支持船队的运营和管理，这些船队向海上设施（包括海上风电场）运送货物和人员",
+    "closeChg": -4.12,
+    "closePx": 8.37,
+    "mcap": 227254896,
+    "prePx": 8.25
    },
    {
     "sym": "ALEC",
@@ -806,7 +2589,11 @@
     "px": 2.45,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Alector, Inc. 是一家临床阶段生物技术公司，在美国开发对抗神经退行性疾病进展的疗法。其产品线包括 Nivisnebart，一种用于治疗流行的神经退行性疾病的研究性人类重组单克隆抗体； AL137，一个"
+    "zh": "Alector, Inc. 是一家临床阶段生物技术公司，在美国开发对抗神经退行性疾病进展的疗法。其产品线包括 Nivisnebart，一种用于治疗流行的神经退行性疾病的研究性人类重组单克隆抗体； AL137，一个",
+    "closeChg": 3.67,
+    "closePx": 2.54,
+    "mcap": 378147744,
+    "prePx": 2.58
    },
    {
     "sym": "ALOY",
@@ -817,7 +2604,11 @@
     "px": 6.32,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "REalloys Inc. 是一家在北美运营的稀土金属和材料公司。该公司生产稀土金属，包括钕、镨、镝、铽、钐、钆、钇和钪，以及磁体，例如NdFeB、SmFe12和MnBi磁体。公司"
+    "zh": "REalloys Inc. 是一家在北美运营的稀土金属和材料公司。该公司生产稀土金属，包括钕、镨、镝、铽、钐、钆、钇和钪，以及磁体，例如NdFeB、SmFe12和MnBi磁体。公司",
+    "closeChg": -9.65,
+    "closePx": 5.71,
+    "mcap": 397796704,
+    "prePx": 5.99
    },
    {
     "sym": "STN",
@@ -828,7 +2619,11 @@
     "px": 75.13,
     "earn": false,
     "ind": "国防军工",
-    "zh": "Stantec empowers clients, people, and communities to rise to the world's greatest challenges at a time when th"
+    "zh": "Stantec empowers clients, people, and communities to rise to the world's greatest challenges at a time when th",
+    "closeChg": 14.06,
+    "closePx": 85.69,
+    "mcap": 9631531008,
+    "prePx": 78.77
    },
    {
     "sym": "XLAB",
@@ -839,7 +2634,11 @@
     "px": 2.27,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Exascale Labs Holdings Inc. 开发和运营人工智能计算机基础设施平台。它提供图形处理单元（GPU）云基础设施、可扩展的GPU计算部署、人工智能就绪的数据中心解决方案、系统集成、GPU采购和租赁以及"
+    "zh": "Exascale Labs Holdings Inc. 开发和运营人工智能计算机基础设施平台。它提供图形处理单元（GPU）云基础设施、可扩展的GPU计算部署、人工智能就绪的数据中心解决方案、系统集成、GPU采购和租赁以及",
+    "closeChg": -5.73,
+    "closePx": 2.14,
+    "mcap": 137676448,
+    "prePx": 2.38
    },
    {
     "sym": "IFRX",
@@ -850,7 +2649,11 @@
     "px": 1.24,
     "earn": false,
     "ind": "生物技术",
-    "zh": "InflaRx N.V. 是一家临床阶段的生物制药公司，在德国和美国利用 C5a 技术发现和开发抑制剂。该公司的C5a是一种炎症介质，可治疗多种自身免疫性疾病和其他炎症性疾病。其主要候选产品是 vilobelimab，"
+    "zh": "InflaRx N.V. 是一家临床阶段的生物制药公司，在德国和美国利用 C5a 技术发现和开发抑制剂。该公司的C5a是一种炎症介质，可治疗多种自身免疫性疾病和其他炎症性疾病。其主要候选产品是 vilobelimab，",
+    "closeChg": -5.65,
+    "closePx": 1.17,
+    "mcap": 172420816,
+    "prePx": 1.3
    },
    {
     "sym": "RRGB",
@@ -861,7 +2664,11 @@
     "px": 8.83,
     "earn": false,
     "ind": "餐饮",
-    "zh": "Red Robin Gourmet Burgers, Inc. 及其子公司在北美和加拿大一省开发、经营和特许经营休闲餐厅。其餐厅主要提供汉堡和披萨、开胃菜、沙拉、其他主菜、甜点、鸡翅、奶昔、酒精饮料和饮料。"
+    "zh": "Red Robin Gourmet Burgers, Inc. 及其子公司在北美和加拿大一省开发、经营和特许经营休闲餐厅。其餐厅主要提供汉堡和披萨、开胃菜、沙拉、其他主菜、甜点、鸡翅、奶昔、酒精饮料和饮料。",
+    "closeChg": -0.23,
+    "closePx": 8.81,
+    "mcap": 166542064,
+    "prePx": 8.4
    },
    {
     "sym": "STRL",
@@ -872,7 +2679,11 @@
     "px": 301.6,
     "earn": false,
     "ind": "工程建筑",
-    "zh": "Sterling Infrastructure, Inc. 在美国从事提供电子基础设施、交通和建筑解决方案。它通过三个部门运营：电子基础设施部门、交通部门和建筑解决方案部门。电子基础设施解决方案部门提供站点开发服务"
+    "zh": "Sterling Infrastructure, Inc. 在美国从事提供电子基础设施、交通和建筑解决方案。它通过三个部门运营：电子基础设施部门、交通部门和建筑解决方案部门。电子基础设施解决方案部门提供站点开发服务",
+    "closeChg": -3.05,
+    "closePx": 292.39,
+    "mcap": 8918636544,
+    "prePx": 316.2
    },
    {
     "sym": "ABAT",
@@ -883,7 +2694,11 @@
     "px": 1.24,
     "earn": false,
     "ind": "废物管理",
-    "zh": "美国电池技术公司在美国作为一家电池材料公司运营。它勘探锂、镍、钴、锰、铜、铝和石墨等关键矿物。该公司还参与新技术的开发和商业化"
+    "zh": "美国电池技术公司在美国作为一家电池材料公司运营。它勘探锂、镍、钴、锰、铜、铝和石墨等关键矿物。该公司还参与新技术的开发和商业化",
+    "closeChg": -8.87,
+    "closePx": 1.13,
+    "mcap": 161112864,
+    "prePx": 1.18
    },
    {
     "sym": "LAB",
@@ -894,7 +2709,11 @@
     "px": 0.65,
     "earn": false,
     "ind": "医疗器械",
-    "zh": "Standard BioTools Inc. 及其子公司开发、制造并向科学家和生物医学研究人员销售一系列仪器、消耗品和服务，以在美洲、欧洲、中东、非洲和亚太地区开发治疗方法。公司经营"
+    "zh": "Standard BioTools Inc. 及其子公司开发、制造并向科学家和生物医学研究人员销售一系列仪器、消耗品和服务，以在美洲、欧洲、中东、非洲和亚太地区开发治疗方法。公司经营",
+    "closeChg": 8.6,
+    "closePx": 0.71,
+    "mcap": 279274752,
+    "prePx": 0.62
    },
    {
     "sym": "CDLR",
@@ -905,7 +2724,11 @@
     "px": 6.93,
     "earn": false,
     "ind": "工程建筑",
-    "zh": "Cadeler plc 及其子公司在丹麦、英国、德国、波兰、欧洲其他地区、美国和台湾作为海上风电安装船承包商运营。公司从事海上风力发电机组的运输和安装、基础设施建设"
+    "zh": "Cadeler plc 及其子公司在丹麦、英国、德国、波兰、欧洲其他地区、美国和台湾作为海上风电安装船承包商运营。公司从事海上风力发电机组的运输和安装、基础设施建设",
+    "closeChg": -4.04,
+    "closePx": 6.65,
+    "mcap": 2363442176,
+    "prePx": 6.6
    },
    {
     "sym": "RBLX",
@@ -916,7 +2739,11 @@
     "px": 51.42,
     "earn": false,
     "ind": "电子游戏和多媒体",
-    "zh": "Roblox Corporation 在美国和国际上运营着一个用于连接和交流的沉浸式平台。它提供Roblox Client，一个允许用户探索沉浸式体验的应用程序； Roblox Studio，一个免费的工具集，允许开发人"
+    "zh": "Roblox Corporation 在美国和国际上运营着一个用于连接和交流的沉浸式平台。它提供Roblox Client，一个允许用户探索沉浸式体验的应用程序； Roblox Studio，一个免费的工具集，允许开发人",
+    "closeChg": -2.94,
+    "closePx": 49.91,
+    "mcap": 35721252864,
+    "prePx": 48.99
    },
    {
     "sym": "URG",
@@ -927,7 +2754,11 @@
     "px": 0.62,
     "earn": false,
     "ind": "铀",
-    "zh": "Ur-Energy Inc. 在美国从事铀矿产的收购、勘探、开发和运营。它拥有位于美国的 12 个项目的权益。该公司的旗舰项目是 Lost Creek 项目，占地约 1,800 unp"
+    "zh": "Ur-Energy Inc. 在美国从事铀矿产的收购、勘探、开发和运营。它拥有位于美国的 12 个项目的权益。该公司的旗舰项目是 Lost Creek 项目，占地约 1,800 unp",
+    "closeChg": -0.87,
+    "closePx": 0.61,
+    "mcap": 244468224,
+    "prePx": 0.65
    },
    {
     "sym": "ALMU",
@@ -938,7 +2769,11 @@
     "px": 7.58,
     "earn": false,
     "ind": "半导体",
-    "zh": "Aeluma, Inc. 在美国开发用于通信和传感的光子和电子技术。该公司涉足光电探测器、光电探测器阵列、激光器、光放大器和其他技术的开发。其产品应用于电信、人工智能"
+    "zh": "Aeluma, Inc. 在美国开发用于通信和传感的光子和电子技术。该公司涉足光电探测器、光电探测器阵列、激光器、光放大器和其他技术的开发。其产品应用于电信、人工智能",
+    "closeChg": -13.59,
+    "closePx": 6.55,
+    "mcap": 126512752,
+    "prePx": 7.23
    },
    {
     "sym": "EARN",
@@ -949,7 +2784,11 @@
     "px": 3.21,
     "earn": false,
     "ind": "资产管理",
-    "zh": "艾灵顿信贷公司是一家封闭式管理投资公司，专注于通过主要投资于抵押贷款债务来产生当前收益率和风险调整后的总回报。它投资于夹层债务和股权部分。该公司前身为 Ellington Resident"
+    "zh": "艾灵顿信贷公司是一家封闭式管理投资公司，专注于通过主要投资于抵押贷款债务来产生当前收益率和风险调整后的总回报。它投资于夹层债务和股权部分。该公司前身为 Ellington Resident",
+    "closeChg": 1.25,
+    "closePx": 3.25,
+    "mcap": 127725000,
+    "prePx": 3.36
    },
    {
     "sym": "BCAX",
@@ -960,7 +2799,11 @@
     "px": 10.11,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Bicara Therapeutics Inc.是一家临床阶段的生物制药公司，致力于实体瘤双功能疗法的开发。其主导项目是 ficerafusp alfa，这是一种双功能抗体，结合了经过临床验证的表皮生长因子受体定向单克隆"
+    "zh": "Bicara Therapeutics Inc.是一家临床阶段的生物制药公司，致力于实体瘤双功能疗法的开发。其主导项目是 ficerafusp alfa，这是一种双功能抗体，结合了经过临床验证的表皮生长因子受体定向单克隆",
+    "closeChg": -0.89,
+    "closePx": 10.02,
+    "mcap": 665199744,
+    "prePx": 9.67
    },
    {
     "sym": "GCL",
@@ -971,7 +2814,11 @@
     "px": 1.16,
     "earn": false,
     "ind": "电子游戏和多媒体",
-    "zh": "GCL Global Holdings Ltd. 及其子公司在亚洲、欧洲、美国和拉丁美洲开发、发行、分销和营销视频游戏和其他娱乐内容。该公司通过三个部门运营：PC 和游戏机游戏的分销和销售部门以及 IT 部门"
+    "zh": "GCL Global Holdings Ltd. 及其子公司在亚洲、欧洲、美国和拉丁美洲开发、发行、分销和营销视频游戏和其他娱乐内容。该公司通过三个部门运营：PC 和游戏机游戏的分销和销售部门以及 IT 部门",
+    "closeChg": 3.02,
+    "closePx": 1.2,
+    "mcap": 152970400,
+    "prePx": 1.11
    },
    {
     "sym": "AAON",
@@ -982,7 +2829,11 @@
     "px": 78.8,
     "earn": false,
     "ind": "建筑产品和设备",
-    "zh": "AAON, Inc. 及其子公司在美国和加拿大从事空调和供暖设备的工程、制造、营销和销售业务。该公司通过三个部门运营：AAON Oklahoma、AAON Coil Products 和 BASX。它提供屋顶单元、数据中"
+    "zh": "AAON, Inc. 及其子公司在美国和加拿大从事空调和供暖设备的工程、制造、营销和销售业务。该公司通过三个部门运营：AAON Oklahoma、AAON Coil Products 和 BASX。它提供屋顶单元、数据中",
+    "closeChg": 1.84,
+    "closePx": 80.25,
+    "mcap": 6617618432,
+    "prePx": 82.18
    },
    {
     "sym": "AMRO",
@@ -993,7 +2844,11 @@
     "px": 6.4,
     "earn": false,
     "ind": "航空航天与国防",
-    "zh": "Amaero Inc.从事增材制造和先进制造用耐火材料和钛合金球形金属粉末的研究、开发、制造和销售。公司提供钛增材制造粉末、耐火增材制造粉末、粉末冶金"
+    "zh": "Amaero Inc.从事增材制造和先进制造用耐火材料和钛合金球形金属粉末的研究、开发、制造和销售。公司提供钛增材制造粉末、耐火增材制造粉末、粉末冶金",
+    "closeChg": -14.06,
+    "closePx": 5.5,
+    "mcap": 152441712,
+    "prePx": 6.67
    },
    {
     "sym": "SSMR",
@@ -1004,7 +2859,11 @@
     "px": 13.51,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "Sunshine Silver Mining & Refining Company 在美国从事矿产勘探和开发。它主要勘探银矿和铜矿。公司的主要资产是位于 Coeur d'Alene Min 的 Sunshine Comp"
+    "zh": "Sunshine Silver Mining & Refining Company 在美国从事矿产勘探和开发。它主要勘探银矿和铜矿。公司的主要资产是位于 Coeur d'Alene Min 的 Sunshine Comp",
+    "closeChg": -3.85,
+    "closePx": 12.99,
+    "mcap": 1867008640,
+    "prePx": 12.94
    },
    {
     "sym": "EDIT",
@@ -1015,7 +2874,11 @@
     "px": 2.14,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Editas Medicine, Inc. 是一家临床阶段基因组编辑公司，专注于开发变革性基因组药物来治疗一系列严重疾病。该公司开发了基于CRISPR技术的专有基因编辑平台。其主导项目是 EDIT-401，这是一种旨在"
+    "zh": "Editas Medicine, Inc. 是一家临床阶段基因组编辑公司，专注于开发变革性基因组药物来治疗一系列严重疾病。该公司开发了基于CRISPR技术的专有基因编辑平台。其主导项目是 EDIT-401，这是一种旨在",
+    "closeChg": 1.4,
+    "closePx": 2.17,
+    "mcap": 334917248,
+    "prePx": 2.23
    },
    {
     "sym": "BGS",
@@ -1026,7 +2889,11 @@
     "px": 3.35,
     "earn": false,
     "ind": "包装食品",
-    "zh": "B&G Foods, Inc. 在美国、加拿大和波多黎各生产、销售和分销一系列耐储存食品和冷冻食品以及家用产品。该公司通过特色食品、餐饮、冷冻和蔬菜以及香料和风味解决方案部门进行运营。该公司提供冷冻和冷藏"
+    "zh": "B&G Foods, Inc. 在美国、加拿大和波多黎各生产、销售和分销一系列耐储存食品和冷冻食品以及家用产品。该公司通过特色食品、餐饮、冷冻和蔬菜以及香料和风味解决方案部门进行运营。该公司提供冷冻和冷藏",
+    "closeChg": 4.48,
+    "closePx": 3.5,
+    "mcap": 283992704,
+    "prePx": 3.21
    },
    {
     "sym": "IA",
@@ -1037,7 +2904,11 @@
     "px": 21.51,
     "earn": false,
     "ind": "航空航天与国防",
-    "zh": "Innovative Aerosystems, Inc., engages in the engineering, manufacturing, and supply of advanced avionic soluti"
+    "zh": "Innovative Aerosystems, Inc., engages in the engineering, manufacturing, and supply of advanced avionic soluti",
+    "closeChg": -2.05,
+    "closePx": 21.07,
+    "mcap": 377135552,
+    "prePx": 22.37
    },
    {
     "sym": "ENGN",
@@ -1048,7 +2919,11 @@
     "px": 2.28,
     "earn": false,
     "ind": "生物技术",
-    "zh": "enGene Therapeutics Inc. 通过其子公司 enGene, Inc. 在加拿大作为一家临床阶段生物技术公司运营。该公司开发基因药物来帮助膀胱癌患者。其主要候选产品是 detalimogene vora"
+    "zh": "enGene Therapeutics Inc. 通过其子公司 enGene, Inc. 在加拿大作为一家临床阶段生物技术公司运营。该公司开发基因药物来帮助膀胱癌患者。其主要候选产品是 detalimogene vora",
+    "closeChg": 5.7,
+    "closePx": 2.41,
+    "mcap": 161509328,
+    "prePx": 2.37
    },
    {
     "sym": "NPWR",
@@ -1059,7 +2934,11 @@
     "px": 0.76,
     "earn": false,
     "ind": "特种工业机械",
-    "zh": "NET Power Inc. 在美国作为一家能源技术公司运营。其技术包括富氧燃烧循环，这是一种发电系统，旨在利用天然气发电，同时捕获大气排放。该公司成立于 2010 年，总部位于德克萨斯州休斯顿"
+    "zh": "NET Power Inc. 在美国作为一家能源技术公司运营。其技术包括富氧燃烧循环，这是一种发电系统，旨在利用天然气发电，同时捕获大气排放。该公司成立于 2010 年，总部位于德克萨斯州休斯顿",
+    "closeChg": -0.84,
+    "closePx": 0.75,
+    "mcap": 66679040,
+    "prePx": 0.79
    },
    {
     "sym": "KLXE",
@@ -1070,7 +2949,11 @@
     "px": 1.16,
     "earn": false,
     "ind": "石油和天然气设备与服务",
-    "zh": "KLX Energy Services Holdings, Inc. 为美国陆上石油和天然气生产地区提供钻井、完井、生产和修井服务及产品。该公司通过三个部门运营：西南部门、落基山脉部门和东北/中部地区部门。它提供了迪"
+    "zh": "KLX Energy Services Holdings, Inc. 为美国陆上石油和天然气生产地区提供钻井、完井、生产和修井服务及产品。该公司通过三个部门运营：西南部门、落基山脉部门和东北/中部地区部门。它提供了迪",
+    "closeChg": 10.34,
+    "closePx": 1.28,
+    "mcap": 135318256,
+    "prePx": 1.11
    },
    {
     "sym": "AGRO",
@@ -1081,7 +2964,11 @@
     "px": 8.47,
     "earn": false,
     "ind": "农产品",
-    "zh": "Adecoagro S.A. 在阿根廷、巴西、智利和乌拉圭从事农业和农工业活动。该公司通过三个部门运营：糖、乙醇和能源、化肥和农业。该公司从事一系列农产品的生产，包括"
+    "zh": "Adecoagro S.A. 在阿根廷、巴西、智利和乌拉圭从事农业和农工业活动。该公司通过三个部门运营：糖、乙醇和能源、化肥和农业。该公司从事一系列农产品的生产，包括",
+    "closeChg": 7.56,
+    "closePx": 9.11,
+    "mcap": 1314413184,
+    "prePx": 8.14
    },
    {
     "sym": "MF",
@@ -1092,7 +2979,11 @@
     "px": 18.9,
     "earn": false,
     "ind": "广告公司",
-    "zh": "MindForge Inc. 及其子公司利用人工智能驱动的技术为中国保险行业的企业提供增值服务。它提供数字推广服务；风险评估服务；以及增值捆绑福利，包括汽车维护"
+    "zh": "MindForge Inc. 及其子公司利用人工智能驱动的技术为中国保险行业的企业提供增值服务。它提供数字推广服务；风险评估服务；以及增值捆绑福利，包括汽车维护",
+    "closeChg": 3.5,
+    "closePx": 19.5,
+    "mcap": 273538176,
+    "prePx": 18.17
    },
    {
     "sym": "QNC",
@@ -1103,7 +2994,11 @@
     "px": 0.94,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Quantum eMotion Corp. 在加拿大从事基于量子的加密解决方案的开发。它提供硬件和软件产品。该公司提供下一代量子安全加密平台Sentry-Q，可保护网络和应用程序中的敏感数据； eFlux-Q，云"
+    "zh": "Quantum eMotion Corp. 在加拿大从事基于量子的加密解决方案的开发。它提供硬件和软件产品。该公司提供下一代量子安全加密平台Sentry-Q，可保护网络和应用程序中的敏感数据； eFlux-Q，云",
+    "closeChg": -3.99,
+    "closePx": 0.9,
+    "mcap": 197082736,
+    "prePx": 0.9
    },
    {
     "sym": "MUX",
@@ -1114,7 +3009,11 @@
     "px": 11.95,
     "earn": false,
     "ind": "其他贵金属和采矿业",
-    "zh": "McEwen Inc. 在美国、加拿大、墨西哥和阿根廷从事金银矿床的勘探、开发、生产和销售。它还勘探铜矿床。公司拥有位于内华达州Gold Bar金矿100%权益；狐狸情结包括"
+    "zh": "McEwen Inc. 在美国、加拿大、墨西哥和阿根廷从事金银矿床的勘探、开发、生产和销售。它还勘探铜矿床。公司拥有位于内华达州Gold Bar金矿100%权益；狐狸情结包括",
+    "closeChg": -0.42,
+    "closePx": 11.9,
+    "mcap": 733052992,
+    "prePx": 12.41
    },
    {
     "sym": "BRUN",
@@ -1125,7 +3024,11 @@
     "px": 5.92,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Boost Run, Inc.提供人工智能云基础设施和高性能计算解决方案。该公司提供一系列托管在数据中心设施内的图形处理单元 (GPU) 服务器。其平台提供 GPU 计算、CPU 节点、管理 Kubernetes 编排以"
+    "zh": "Boost Run, Inc.提供人工智能云基础设施和高性能计算解决方案。该公司提供一系列托管在数据中心设施内的图形处理单元 (GPU) 服务器。其平台提供 GPU 计算、CPU 节点、管理 Kubernetes 编排以",
+    "closeChg": -6.59,
+    "closePx": 5.53,
+    "mcap": 439565568,
+    "prePx": 6.14
    },
    {
     "sym": "ABSI",
@@ -1136,7 +3039,11 @@
     "px": 9.13,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Absci Corporation 是一家临床阶段的生物制药公司，在美国开发各种抗体疗法。其临床前开发项目包括ABS-101，目前正处于治疗炎症性肠病的一期临床试验； ABS-201，一种抗催乳素受体（P"
+    "zh": "Absci Corporation 是一家临床阶段的生物制药公司，在美国开发各种抗体疗法。其临床前开发项目包括ABS-101，目前正处于治疗炎症性肠病的一期临床试验； ABS-201，一种抗催乳素受体（P",
+    "closeChg": -7.5,
+    "closePx": 8.45,
+    "mcap": 1450138368,
+    "prePx": 9.48
    },
    {
     "sym": "KLTR",
@@ -1147,7 +3054,11 @@
     "px": 1.39,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Kaltura, Inc. 及其子公司在美国、欧洲、中东、非洲和国际上提供各种软件即服务 (SaaS) 产品和解决方案以及平台即服务 (PaaS)。该公司通过两个部门运营：企业部门、教育部门和技术部门"
+    "zh": "Kaltura, Inc. 及其子公司在美国、欧洲、中东、非洲和国际上提供各种软件即服务 (SaaS) 产品和解决方案以及平台即服务 (PaaS)。该公司通过两个部门运营：企业部门、教育部门和技术部门",
+    "closeChg": -1.44,
+    "closePx": 1.37,
+    "mcap": 211092720,
+    "prePx": 1.44
    },
    {
     "sym": "GRRR",
@@ -1158,7 +3069,11 @@
     "px": 7.2,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Gorilla Technology Group Inc. 在台湾和英国提供安全、网络、商业智能和物联网 (IoT) 技术的解决方案。它通过三个部分运营：视频物联网、安全融合和其他部分。公司提供办公楼及办公楼；波尔"
+    "zh": "Gorilla Technology Group Inc. 在台湾和英国提供安全、网络、商业智能和物联网 (IoT) 技术的解决方案。它通过三个部分运营：视频物联网、安全融合和其他部分。公司提供办公楼及办公楼；波尔",
+    "closeChg": 2.92,
+    "closePx": 7.41,
+    "mcap": 203845600,
+    "prePx": 7.47
    },
    {
     "sym": "CGON",
@@ -1169,7 +3084,11 @@
     "px": 70.15,
     "earn": false,
     "ind": "生物技术",
-    "zh": "CG Oncology, Inc. 是一家后期临床生物制药公司，在美国为膀胱癌患者开发并商业化 cretostimogene grenadenorepvec。该公司的候选产品是 cretostimogene，一种研究性溶"
+    "zh": "CG Oncology, Inc. 是一家后期临床生物制药公司，在美国为膀胱癌患者开发并商业化 cretostimogene grenadenorepvec。该公司的候选产品是 cretostimogene，一种研究性溶",
+    "closeChg": 6.06,
+    "closePx": 74.4,
+    "mcap": 6645327360,
+    "prePx": 72.77
    },
    {
     "sym": "CRMD",
@@ -1180,7 +3099,11 @@
     "px": 4.84,
     "earn": false,
     "ind": "生物技术",
-    "zh": "CorMedix Inc. 是一家生物制药公司，专注于在美国开发和商业化针对危及生命的疾病和病症的治疗产品。其主要候选产品是 DefenCath，这是一种抗菌导管封管解决方案，可减少导管相关并发症的发生率。"
+    "zh": "CorMedix Inc. 是一家生物制药公司，专注于在美国开发和商业化针对危及生命的疾病和病症的治疗产品。其主要候选产品是 DefenCath，这是一种抗菌导管封管解决方案，可减少导管相关并发症的发生率。",
+    "closeChg": -3.72,
+    "closePx": 4.66,
+    "mcap": 370363712,
+    "prePx": 5.02
    },
    {
     "sym": "XRX",
@@ -1191,7 +3114,11 @@
     "px": 0.99,
     "earn": false,
     "ind": "商业设备及用品",
-    "zh": "施乐控股公司及其子公司是一家工作场所技术公司，为北美、拉丁美洲、欧洲、中东、非洲、印度和国际企业集成硬件、服务和软件。 It operates in two segments, Print and"
+    "zh": "施乐控股公司及其子公司是一家工作场所技术公司，为北美、拉丁美洲、欧洲、中东、非洲、印度和国际企业集成硬件、服务和软件。 It operates in two segments, Print and",
+    "closeChg": -7.66,
+    "closePx": 0.92,
+    "mcap": 125470072,
+    "prePx": 1.03
    },
    {
     "sym": "TRV",
@@ -1202,7 +3129,11 @@
     "px": 403.18,
     "earn": false,
     "ind": "保险 - 财产与意外伤害",
-    "zh": "The Travelers Companies, Inc. 通过其子公司，向美国、加拿大和国际上的企业、政府单位、协会和个人提供一系列商业和个人财产以及伤亡保险产品和服务。它通过三段运作"
+    "zh": "The Travelers Companies, Inc. 通过其子公司，向美国、加拿大和国际上的企业、政府单位、协会和个人提供一系列商业和个人财产以及伤亡保险产品和服务。它通过三段运作",
+    "closeChg": 0.01,
+    "closePx": 403.23,
+    "mcap": 82640519168,
+    "prePx": 418.02
    },
    {
     "sym": "FENC",
@@ -1213,7 +3144,11 @@
     "px": 10.9,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Fennec Pharmaceuticals Inc. 在美国作为一家商业阶段的生物制药公司运营。该公司的候选产品包括 PEDMARK，一种硫代硫酸钠制剂，用于预防顺铂引起的儿科患者耳毒性。它通过 regio 销售其产品"
+    "zh": "Fennec Pharmaceuticals Inc. 在美国作为一家商业阶段的生物制药公司运营。该公司的候选产品包括 PEDMARK，一种硫代硫酸钠制剂，用于预防顺铂引起的儿科患者耳毒性。它通过 regio 销售其产品",
+    "closeChg": 6.61,
+    "closePx": 11.62,
+    "mcap": 409198304,
+    "prePx": 11.3
    },
    {
     "sym": "BRCB",
@@ -1224,7 +3159,11 @@
     "px": 9.64,
     "earn": false,
     "ind": "餐饮",
-    "zh": "Black Rock Coffee Bar, Inc. 在美国拥有并经营一系列得来速咖啡吧。它提供全天早餐品牌的经典浓缩咖啡饮料、能量饮料以及咸味和甜味食品。该公司成立于 2008 年，总部位于亚利桑那州斯科茨代尔。"
+    "zh": "Black Rock Coffee Bar, Inc. 在美国拥有并经营一系列得来速咖啡吧。它提供全天早餐品牌的经典浓缩咖啡饮料、能量饮料以及咸味和甜味食品。该公司成立于 2008 年，总部位于亚利桑那州斯科茨代尔。",
+    "closeChg": 11.93,
+    "closePx": 10.79,
+    "mcap": 248108496,
+    "prePx": 9.29
    },
    {
     "sym": "RR",
@@ -1235,7 +3174,11 @@
     "px": 0.82,
     "earn": false,
     "ind": "特种工业机械",
-    "zh": "Richtech Robotics Inc. 在美国开发、制造、部署和销售用于服务行业自动化的机器人解决方案。该公司提供商业机器人产品，包括Matradee，一系列餐厅服务机器人，用于公交车、服务、托管、广告和娱乐"
+    "zh": "Richtech Robotics Inc. 在美国开发、制造、部署和销售用于服务行业自动化的机器人解决方案。该公司提供商业机器人产品，包括Matradee，一系列餐厅服务机器人，用于公交车、服务、托管、广告和娱乐",
+    "closeChg": -7.76,
+    "closePx": 0.76,
+    "mcap": 170019488,
+    "prePx": 0.85
    },
    {
     "sym": "BAND",
@@ -1246,7 +3189,11 @@
     "px": 46.29,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Bandwidth Inc. 在美国和国际上作为基于云的软件驱动的通信平台即服务提供商运营。该公司的平台使企业能够跨各种移动应用程序或应用程序创建、扩展和运营语音或消息通信服务。"
+    "zh": "Bandwidth Inc. 在美国和国际上作为基于云的软件驱动的通信平台即服务提供商运营。该公司的平台使企业能够跨各种移动应用程序或应用程序创建、扩展和运营语音或消息通信服务。",
+    "closeChg": -5.47,
+    "closePx": 43.76,
+    "mcap": 1417098112,
+    "prePx": 47.96
    },
    {
     "sym": "ELDN",
@@ -1257,7 +3204,11 @@
     "px": 2.37,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Eledon Pharmaceuticals, Inc. 是一家临床阶段生物技术公司。它利用其针对 CD40 配体 (CD40L) 途径的免疫学专业知识来开发保护移植器官和预防排斥反应的疗法，以及治疗肌萎缩侧索硬化症 ("
+    "zh": "Eledon Pharmaceuticals, Inc. 是一家临床阶段生物技术公司。它利用其针对 CD40 配体 (CD40L) 途径的免疫学专业知识来开发保护移植器官和预防排斥反应的疗法，以及治疗肌萎缩侧索硬化症 (",
+    "closeChg": -10.57,
+    "closePx": 2.12,
+    "mcap": 171867344,
+    "prePx": 2.46
    },
    {
     "sym": "CRWD",
@@ -1268,7 +3219,11 @@
     "px": 229.87,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "CrowdStrike Holdings, Inc. 在美国和国际上提供网络安全解决方案。其统一平台通过基于软件即服务 (SaaS) 订阅的模型提供端点、云工作负载、身份和数据的云保护。公司提供语料库"
+    "zh": "CrowdStrike Holdings, Inc. 在美国和国际上提供网络安全解决方案。其统一平台通过基于软件即服务 (SaaS) 订阅的模型提供端点、云工作负载、身份和数据的云保护。公司提供语料库",
+    "closeChg": -1.42,
+    "closePx": 226.61,
+    "mcap": 232033878016,
+    "prePx": 238.01
    },
    {
     "sym": "PANW",
@@ -1279,7 +3234,11 @@
     "px": 322.66,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "Palo Alto Networks, Inc. 在美洲、欧洲、中东、非洲、亚太地区和日本提供网络安全解决方案。它提供 Prisma Access，一种安全访问服务边缘解决方案； Strata Cloud Manager"
+    "zh": "Palo Alto Networks, Inc. 在美洲、欧洲、中东、非洲、亚太地区和日本提供网络安全解决方案。它提供 Prisma Access，一种安全访问服务边缘解决方案； Strata Cloud Manager",
+    "closeChg": -0.13,
+    "closePx": 322.24,
+    "mcap": 263735115776,
+    "prePx": 333.89
    },
    {
     "sym": "AIRJ",
@@ -1290,7 +3249,11 @@
     "px": 2.31,
     "earn": false,
     "ind": "建筑产品和设备",
-    "zh": "AirJoule Technologies Corporation 是一家大气可再生能源和水收集技术公司。它提供能源和除湿、集水系统、水回收系统、蒸发热泵系统、水加热系统、低相对湿度干燥系统"
+    "zh": "AirJoule Technologies Corporation 是一家大气可再生能源和水收集技术公司。它提供能源和除湿、集水系统、水回收系统、蒸发热泵系统、水加热系统、低相对湿度干燥系统",
+    "closeChg": -6.93,
+    "closePx": 2.15,
+    "mcap": 157696896,
+    "prePx": 2.39
    },
    {
     "sym": "ANGX",
@@ -1301,7 +3264,11 @@
     "px": 4.36,
     "earn": false,
     "ind": "娱乐",
-    "zh": "Angel Studios, Inc. 是一家媒体和技术公司。该公司制作和发行电影和电视剧；并发行授权电影或节目。该公司的平台允许用户通过其流媒体平台观看所有年龄段的电影、节目和纪录片。它还提供了"
+    "zh": "Angel Studios, Inc. 是一家媒体和技术公司。该公司制作和发行电影和电视剧；并发行授权电影或节目。该公司的平台允许用户通过其流媒体平台观看所有年龄段的电影、节目和纪录片。它还提供了",
+    "closeChg": 5.28,
+    "closePx": 4.59,
+    "mcap": 901964416,
+    "prePx": 4.51
    },
    {
     "sym": "H",
@@ -1312,7 +3279,11 @@
     "px": 187.21,
     "earn": false,
     "ind": "住宿",
-    "zh": "凯悦酒店集团作为一家酒店公司在美国和国际上运营。它通过管理和特许经营、自有和租赁以及分销部门进行运营。该公司开发、拥有、经营、管理、特许经营、租赁和许可一系列财产，"
+    "zh": "凯悦酒店集团作为一家酒店公司在美国和国际上运营。它通过管理和特许经营、自有和租赁以及分销部门进行运营。该公司开发、拥有、经营、管理、特许经营、租赁和许可一系列财产，",
+    "closeChg": 0.26,
+    "closePx": 187.7,
+    "mcap": 17529319424,
+    "prePx": 193.58
    },
    {
     "sym": "RLMD",
@@ -1323,7 +3294,11 @@
     "px": 4.16,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Relmada Therapeutics, Inc. 在美国作为一家临床阶段生物技术公司运营。该公司专注于开发 NDV-01，这是一种吉西他滨和多西他赛的控释膀胱内制剂，目前正处于针对侵袭性 NDV 患者的 2 期临床试"
+    "zh": "Relmada Therapeutics, Inc. 在美国作为一家临床阶段生物技术公司运营。该公司专注于开发 NDV-01，这是一种吉西他滨和多西他赛的控释膀胱内制剂，目前正处于针对侵袭性 NDV 患者的 2 期临床试",
+    "closeChg": 1.2,
+    "closePx": 4.21,
+    "mcap": 449080064,
+    "prePx": 4.3
    },
    {
     "sym": "FWDI",
@@ -1334,7 +3309,11 @@
     "px": 5.08,
     "earn": false,
     "ind": "资产管理",
-    "zh": "Forward Industries, Inc. 是一家专注于 Solana (SOL) 的数字资产财务公司。该公司通过数字资产和设计部门运营。数字资产部分捕获通过参与 Solana 网络的质押协议产生的基于 SOL 的"
+    "zh": "Forward Industries, Inc. 是一家专注于 Solana (SOL) 的数字资产财务公司。该公司通过数字资产和设计部门运营。数字资产部分捕获通过参与 Solana 网络的质押协议产生的基于 SOL 的",
+    "closeChg": -2.76,
+    "closePx": 4.94,
+    "mcap": 402310592,
+    "prePx": 5.25
    },
    {
     "sym": "GENB",
@@ -1345,7 +3324,11 @@
     "px": 12.57,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Generate Biomedicines, Inc.，在美国从事生成生物学领域，通过新型蛋白质疗法的编程，利用机器学习进行药物发现和开发。它使用基于蛋白质的方式进行药物开发。其产品包括GB-0895，是"
+    "zh": "Generate Biomedicines, Inc.，在美国从事生成生物学领域，通过新型蛋白质疗法的编程，利用机器学习进行药物发现和开发。它使用基于蛋白质的方式进行药物开发。其产品包括GB-0895，是",
+    "closeChg": -3.98,
+    "closePx": 12.07,
+    "mcap": 1549213824,
+    "prePx": 12.99
    },
    {
     "sym": "PRME",
@@ -1356,7 +3339,11 @@
     "px": 3.89,
     "earn": false,
     "ind": "生物技术",
-    "zh": "Prime Medicine, Inc. 是一家生物技术公司，致力于通过在美国部署基因编辑技术来提供基因药物来解决一系列疾病。其主要候选治疗产品是用于治疗慢性肉芽肿病的 PM359，目前正处于 1/2 期临床试验阶段"
+    "zh": "Prime Medicine, Inc. 是一家生物技术公司，致力于通过在美国部署基因编辑技术来提供基因药物来解决一系列疾病。其主要候选治疗产品是用于治疗慢性肉芽肿病的 PM359，目前正处于 1/2 期临床试验阶段",
+    "closeChg": 9.77,
+    "closePx": 4.27,
+    "mcap": 774479232,
+    "prePx": 4.02
    },
    {
     "sym": "FSLY",
@@ -1367,7 +3354,11 @@
     "px": 17.19,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Fastly, Inc. 运营一个边缘云平台，用于处理、服务和保护美国、亚太地区、欧洲和国际客户的应用程序。边缘云是基础设施即服务的一个类别，使开发人员能够构建、保护和交付数字数据"
+    "zh": "Fastly, Inc. 运营一个边缘云平台，用于处理、服务和保护美国、亚太地区、欧洲和国际客户的应用程序。边缘云是基础设施即服务的一个类别，使开发人员能够构建、保护和交付数字数据",
+    "closeChg": -3.32,
+    "closePx": 16.62,
+    "mcap": 2679144192,
+    "prePx": 17.76
    },
    {
     "sym": "SKM",
@@ -1378,7 +3369,11 @@
     "px": 34.12,
     "earn": false,
     "ind": "电信服务",
-    "zh": "SK Telecom Co., Ltd. 在韩国提供无线电信服务。该公司通过三个部门运营：蜂窝服务部门、固网电信服务部门和其他业务部门。蜂窝服务部门提供无线语音和数据传输"
+    "zh": "SK Telecom Co., Ltd. 在韩国提供无线电信服务。该公司通过三个部门运营：蜂窝服务部门、固网电信服务部门和其他业务部门。蜂窝服务部门提供无线语音和数据传输",
+    "closeChg": 1.32,
+    "closePx": 34.57,
+    "mcap": 13271078912,
+    "prePx": 35.25
    },
    {
     "sym": "VRA",
@@ -1389,7 +3384,11 @@
     "px": 7.56,
     "earn": false,
     "ind": "鞋类及配饰",
-    "zh": "Vera Bradley, Inc. 及其子公司在美国设计和制造女士手袋、行李箱和旅行用品、时尚和家居饰品以及礼品。它通过两个部门运营：Vera Bradley Direct 部门和 Vera Bradley Indir"
+    "zh": "Vera Bradley, Inc. 及其子公司在美国设计和制造女士手袋、行李箱和旅行用品、时尚和家居饰品以及礼品。它通过两个部门运营：Vera Bradley Direct 部门和 Vera Bradley Indir",
+    "closeChg": 0.66,
+    "closePx": 7.61,
+    "mcap": 218320736,
+    "prePx": 7.81
    },
    {
     "sym": "ANAB",
@@ -1400,7 +3399,11 @@
     "px": 47.77,
     "earn": false,
     "ind": "生物技术",
-    "zh": "AnaptysBio, Inc. 在美国发现并授权治疗机构。该公司管理 Jemperli 的财务合作，Jemperli 是一种用于各种实体瘤适应症的 PD-1 拮抗剂； Quimilza 是一种 IL-36R 拮抗剂单克"
+    "zh": "AnaptysBio, Inc. 在美国发现并授权治疗机构。该公司管理 Jemperli 的财务合作，Jemperli 是一种用于各种实体瘤适应症的 PD-1 拮抗剂； Quimilza 是一种 IL-36R 拮抗剂单克",
+    "closeChg": -3.18,
+    "closePx": 46.25,
+    "mcap": 1382654976,
+    "prePx": 46.2
    },
    {
     "sym": "IESC",
@@ -1411,7 +3414,11 @@
     "px": 174.17,
     "earn": false,
     "ind": "工程建筑",
-    "zh": "IES Holdings, Inc. 在美国设计和安装集成电气和技术系统，并提供基础设施产品和服务。通信部门设计、构建和维护数据中心内的通信基础设施，以实现主机托管和托管"
+    "zh": "IES Holdings, Inc. 在美国设计和安装集成电气和技术系统，并提供基础设施产品和服务。通信部门设计、构建和维护数据中心内的通信基础设施，以实现主机托管和托管",
+    "closeChg": -2.23,
+    "closePx": 170.28,
+    "mcap": 7220690432,
+    "prePx": 179.88
    },
    {
     "sym": "S",
@@ -1422,7 +3429,11 @@
     "px": 22.29,
     "earn": false,
     "ind": "软件 - 基础设施",
-    "zh": "SentinelOne, Inc. 在美国和国际上作为网络安全提供商运营。该公司的奇点平台在组织的端点、云工作负载和网络中提供人工智能驱动的自主威胁预防、检测和响应功能。"
+    "zh": "SentinelOne, Inc. 在美国和国际上作为网络安全提供商运营。该公司的奇点平台在组织的端点、云工作负载和网络中提供人工智能驱动的自主威胁预防、检测和响应功能。",
+    "closeChg": -0.4,
+    "closePx": 22.2,
+    "mcap": 7726690816,
+    "prePx": 23.02
    },
    {
     "sym": "OPRX",
@@ -1433,7 +3444,11 @@
     "px": 8.87,
     "earn": false,
     "ind": "健康信息服务",
-    "zh": "OptimizeRx Corporation 是一家数字医疗保健技术公司。它提供动态受众激活平台，通过机器学习方法进行预测分析，生成动态受众；微社区定位，使用隐私保护创建消费者受众"
+    "zh": "OptimizeRx Corporation 是一家数字医疗保健技术公司。它提供动态受众激活平台，通过机器学习方法进行预测分析，生成动态受众；微社区定位，使用隐私保护创建消费者受众",
+    "closeChg": -17.25,
+    "closePx": 7.34,
+    "mcap": 138255888,
+    "prePx": 8.58
    },
    {
     "sym": "ECX",
@@ -1444,7 +3459,11 @@
     "px": 0.82,
     "earn": false,
     "ind": "汽车配件",
-    "zh": "ECARX Holdings Inc.通过其子公司在中国和国际上提供汽车计算平台。该公司提供智能座舱、智能驾驶和融合平台，以及片上系统和Cloudpeak软件。它还提供信息娱乐主机、数字"
+    "zh": "ECARX Holdings Inc.通过其子公司在中国和国际上提供汽车计算平台。该公司提供智能座舱、智能驾驶和融合平台，以及片上系统和Cloudpeak软件。它还提供信息娱乐主机、数字",
+    "closeChg": -1.66,
+    "closePx": 0.81,
+    "mcap": 318479808,
+    "prePx": 0.85
    },
    {
     "sym": "NNBR",
@@ -1455,7 +3474,11 @@
     "px": 3.07,
     "earn": false,
     "ind": "企业集团",
-    "zh": "NN, Inc. 及其子公司为美国、中国、巴西、墨西哥、德国、波兰和国际各个终端市场设计、制造和销售高精度零部件和组件。该公司通过两个部门运营：移动解决方案部门和电源解决方案部门"
+    "zh": "NN, Inc. 及其子公司为美国、中国、巴西、墨西哥、德国、波兰和国际各个终端市场设计、制造和销售高精度零部件和组件。该公司通过两个部门运营：移动解决方案部门和电源解决方案部门",
+    "closeChg": -0.98,
+    "closePx": 3.04,
+    "mcap": 284982496,
+    "prePx": 3.17
    },
    {
     "sym": "USDE",
@@ -1466,7 +3489,11 @@
     "px": 6.13,
     "earn": false,
     "ind": "资本市场",
-    "zh": "StablecoinX Inc.是一家稳定币基础设施公司，专注于 Ethena 数字美元生态系统。它提供基础设施服务、稳定币中间件软件和稳定币分发服务。该公司总部位于德克萨斯州弗里斯科。"
+    "zh": "StablecoinX Inc.是一家稳定币基础设施公司，专注于 Ethena 数字美元生态系统。它提供基础设施服务、稳定币中间件软件和稳定币分发服务。该公司总部位于德克萨斯州弗里斯科。",
+    "closeChg": -13.54,
+    "closePx": 5.3,
+    "mcap": 127355696,
+    "prePx": 6.33
    },
    {
     "sym": "COLB",
@@ -1477,7 +3504,11 @@
     "px": 30.59,
     "earn": false,
     "ind": "银行 - 区域",
-    "zh": "Columbia Banking System, Inc. 作为哥伦比亚银行的银行控股公司运营，在美国提供银行、私人银行、抵押贷款和其他金融服务。公司提供的存款产品包括商业、无息支票、有息支票"
+    "zh": "Columbia Banking System, Inc. 作为哥伦比亚银行的银行控股公司运营，在美国提供银行、私人银行、抵押贷款和其他金融服务。公司提供的存款产品包括商业、无息支票、有息支票",
+    "closeChg": 0.03,
+    "closePx": 30.6,
+    "mcap": 8656809984,
+    "prePx": 31.58
    },
    {
     "sym": "VICR",
@@ -1488,7 +3519,11 @@
     "px": 164.69,
     "earn": false,
     "ind": "电子元件",
-    "zh": "Vicor Corporation 及其子公司设计、开发、制造和销售用于转换电力的模块化电源组件和电源系统，用于美国、欧洲、亚太地区和国际上的电动设备。该公司提供"
+    "zh": "Vicor Corporation 及其子公司设计、开发、制造和销售用于转换电力的模块化电源组件和电源系统，用于美国、欧洲、亚太地区和国际上的电动设备。该公司提供",
+    "closeChg": -3.42,
+    "closePx": 159.05,
+    "mcap": 7339934720,
+    "prePx": 169.99
    },
    {
     "sym": "ASPI",
@@ -1499,7 +3534,11 @@
     "px": 1.87,
     "earn": false,
     "ind": "特种化学品",
-    "zh": "ASP Isotopes Inc. 是一家处于发展阶段的先进材料公司，在南非、香港和美国从事同位素的生产、分销、营销和销售。它分为两个部门：核燃料部门和专业同位素及相关服务部门。核燃料领域"
+    "zh": "ASP Isotopes Inc. 是一家处于发展阶段的先进材料公司，在南非、香港和美国从事同位素的生产、分销、营销和销售。它分为两个部门：核燃料部门和专业同位素及相关服务部门。核燃料领域",
+    "closeChg": -6.95,
+    "closePx": 1.74,
+    "mcap": 266758320,
+    "prePx": 1.93
    },
    {
     "sym": "BLMN",
@@ -1510,7 +3549,11 @@
     "px": 10.12,
     "earn": false,
     "ind": "餐饮",
-    "zh": "Bloomin' Brands, Inc. 通过其子公司在美国和国际上拥有并经营休闲餐厅、精致休闲餐厅和高级餐厅。该公司通过美国和国际特许经营部门运营。其餐厅组合有四个概念，包括 Outback Stea"
+    "zh": "Bloomin' Brands, Inc. 通过其子公司在美国和国际上拥有并经营休闲餐厅、精致休闲餐厅和高级餐厅。该公司通过美国和国际特许经营部门运营。其餐厅组合有四个概念，包括 Outback Stea",
+    "closeChg": 2.47,
+    "closePx": 10.37,
+    "mcap": 889252288,
+    "prePx": 10.44
    },
    {
     "sym": "ALM",
@@ -1521,7 +3564,11 @@
     "px": 7.63,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "Almonty Industries Inc. 从事钨精矿的开采、加工和运输。该公司勘探锡和钨矿床。持有加拿大、韩国、葡萄牙、西班牙、美国项目及矿山100%权益。该公司总部位于蒙大拿州狄龙。"
+    "zh": "Almonty Industries Inc. 从事钨精矿的开采、加工和运输。该公司勘探锡和钨矿床。持有加拿大、韩国、葡萄牙、西班牙、美国项目及矿山100%权益。该公司总部位于蒙大拿州狄龙。",
+    "closeChg": 7.73,
+    "closePx": 8.22,
+    "mcap": 2371311616,
+    "prePx": 7.87
    },
    {
     "sym": "CVLT",
@@ -1532,7 +3579,11 @@
     "px": 166.16,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Commvault Systems, Inc. 为企业提供网络弹性解决方案，以保护、保护和恢复数据、应用程序和身份系统。该公司为混合企业工作负载中的备份和恢复功能提供操作恢复，例如备份、恢复、恢复验证"
+    "zh": "Commvault Systems, Inc. 为企业提供网络弹性解决方案，以保护、保护和恢复数据、应用程序和身份系统。该公司为混合企业工作负载中的备份和恢复功能提供操作恢复，例如备份、恢复、恢复验证",
+    "closeChg": -8.48,
+    "closePx": 152.07,
+    "mcap": 6221578240,
+    "prePx": 160.99
    },
    {
     "sym": "BURL",
@@ -1543,7 +3594,11 @@
     "px": 251.87,
     "earn": false,
     "ind": "服装零售",
-    "zh": "Burlington Stores, Inc. 在美国和波多黎各经营品牌商品零售商。该公司提供以时尚为中心的商品，包括女装成衣、男装、青年服装、鞋类、配饰、家居用品、玩具、礼品和外套，以及"
+    "zh": "Burlington Stores, Inc. 在美国和波多黎各经营品牌商品零售商。该公司提供以时尚为中心的商品，包括女装成衣、男装、青年服装、鞋类、配饰、家居用品、玩具、礼品和外套，以及",
+    "closeChg": -3.58,
+    "closePx": 242.86,
+    "mcap": 15255298048,
+    "prePx": 244.19
    },
    {
     "sym": "USAS",
@@ -1554,7 +3609,11 @@
     "px": 2.79,
     "earn": true,
     "ind": "金属采矿",
-    "zh": "Americas Gold and Silver Corporation 是一家快速发展的北美白银和其他关键矿产生产商，支持人工智能、电气化、先进制造业和国家安全的发展。该公司在美国和墨西哥拥有高品位矿业资产组合"
+    "zh": "Americas Gold and Silver Corporation 是一家快速发展的北美白银和其他关键矿产生产商，支持人工智能、电气化、先进制造业和国家安全的发展。该公司在美国和墨西哥拥有高品位矿业资产组合",
+    "closeChg": -10.39,
+    "closePx": 2.5,
+    "mcap": 845393984,
+    "prePx": 2.71
    },
    {
     "sym": "SLNH",
@@ -1565,7 +3624,11 @@
     "px": 0.53,
     "earn": false,
     "ind": "资本市场",
-    "zh": "Soluna Holdings, Inc. 及其子公司通过数据中心从事加密货币开采。它通过三个部门运营：加密货币挖矿、数据中心托管和高性能计算服务。该公司还从事区块链业务"
+    "zh": "Soluna Holdings, Inc. 及其子公司通过数据中心从事加密货币开采。它通过三个部门运营：加密货币挖矿、数据中心托管和高性能计算服务。该公司还从事区块链业务",
+    "closeChg": -6.84,
+    "closePx": 0.5,
+    "mcap": 121634896,
+    "prePx": 0.55
    },
    {
     "sym": "GLOO",
@@ -1576,7 +3639,11 @@
     "px": 2.98,
     "earn": false,
     "ind": "软件 - 应用程序",
-    "zh": "Gloo Holdings, Inc. 为信仰和繁荣的生态系统设计和开发垂直技术平台。它向网络能力提供商（NCP）以及教堂和前线组织（CFL）提供产品和服务。该公司的平台包括下标Gloo Workspace"
+    "zh": "Gloo Holdings, Inc. 为信仰和繁荣的生态系统设计和开发垂直技术平台。它向网络能力提供商（NCP）以及教堂和前线组织（CFL）提供产品和服务。该公司的平台包括下标Gloo Workspace",
+    "closeChg": -2.68,
+    "closePx": 2.9,
+    "mcap": 268485024,
+    "prePx": 3.07
    },
    {
     "sym": "CRML",
@@ -1587,7 +3654,11 @@
     "px": 5.31,
     "earn": false,
     "ind": "其他工业金属和采矿",
-    "zh": "Critical Metals Corp. 是一家采矿勘探和开发公司，在德国、澳大利亚、奥地利和格陵兰岛运营。该公司勘探锂和稀土元素矿藏。其旗舰项目是位于格陵兰岛南部Kujalleq地区的Tanbreez项目。康帕"
+    "zh": "Critical Metals Corp. 是一家采矿勘探和开发公司，在德国、澳大利亚、奥地利和格陵兰岛运营。该公司勘探锂和稀土元素矿藏。其旗舰项目是位于格陵兰岛南部Kujalleq地区的Tanbreez项目。康帕",
+    "closeChg": -8.1,
+    "closePx": 4.88,
+    "mcap": 947791808,
+    "prePx": 5.47
    },
    {
     "sym": "KMPR",
@@ -1598,7 +3669,11 @@
     "px": 34.3,
     "earn": false,
     "ind": "保险 - 财产与意外伤害",
-    "zh": "Kemper Corporation 是一家保险控股公司，在美国提供保险产品。它分为两个部门：专业财产和伤亡保险部门以及人寿保险部门。专业财产和意外伤害保险部门主要提供专业个人汽车和商业保险"
+    "zh": "Kemper Corporation 是一家保险控股公司，在美国提供保险产品。它分为两个部门：专业财产和伤亡保险部门以及人寿保险部门。专业财产和意外伤害保险部门主要提供专业个人汽车和商业保险",
+    "closeChg": -0.44,
+    "closePx": 34.15,
+    "mcap": 2012254464,
+    "prePx": 35.33
    }
   ]
  }

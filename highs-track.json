@@ -7,7 +7,7 @@
   "firstD": "2026-11-12",
   "firstPx": 354.88,
   "lastD": "2026-11-13",
-  "lastPx": 357.86,
+  "lastPx": 356.27,
   "n": 2,
   "everAth": true
  },
@@ -31,7 +31,7 @@
   "firstD": "2026-11-12",
   "firstPx": 283.52,
   "lastD": "2026-11-13",
-  "lastPx": 286.14,
+  "lastPx": 285.75,
   "n": 2,
   "everAth": true
  },
@@ -43,7 +43,7 @@
   "firstD": "2026-11-12",
   "firstPx": 1092.21,
   "lastD": "2026-11-13",
-  "lastPx": 1107.52,
+  "lastPx": 1106.21,
   "n": 2,
   "everAth": true
  },
@@ -55,7 +55,7 @@
   "firstD": "2026-11-12",
   "firstPx": 97.44,
   "lastD": "2026-11-13",
-  "lastPx": 98.99,
+  "lastPx": 99.25,
   "n": 2,
   "everAth": true
  },
@@ -115,7 +115,7 @@
   "firstD": "2026-11-12",
   "firstPx": 105.8,
   "lastD": "2026-11-13",
-  "lastPx": 106.94,
+  "lastPx": 107.15,
   "n": 2,
   "everAth": false
  },
@@ -127,7 +127,7 @@
   "firstD": "2026-11-12",
   "firstPx": 215.71,
   "lastD": "2026-11-13",
-  "lastPx": 218.17,
+  "lastPx": 218.03,
   "n": 2,
   "everAth": false
  },
@@ -138,9 +138,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 43.65,
-  "lastD": "2026-11-12",
-  "lastPx": 43.65,
-  "n": 1,
+  "lastD": "2026-11-13",
+  "lastPx": 44.5,
+  "n": 2,
   "everAth": false
  },
  "WCN": {
@@ -151,7 +151,7 @@
   "firstD": "2026-11-12",
   "firstPx": 193.92,
   "lastD": "2026-11-13",
-  "lastPx": 194.8,
+  "lastPx": 193.97,
   "n": 2,
   "everAth": false
  },
@@ -343,7 +343,7 @@
   "firstD": "2026-11-12",
   "firstPx": 51.26,
   "lastD": "2026-11-13",
-  "lastPx": 51.66,
+  "lastPx": 51.56,
   "n": 2,
   "everAth": true
  },
@@ -474,9 +474,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 71.64,
-  "lastD": "2026-11-12",
-  "lastPx": 71.64,
-  "n": 1,
+  "lastD": "2026-11-13",
+  "lastPx": 73.47,
+  "n": 2,
   "everAth": false
  },
  "SPNT": {
@@ -655,7 +655,7 @@
   "firstD": "2026-11-12",
   "firstPx": 48.95,
   "lastD": "2026-11-13",
-  "lastPx": 49.25,
+  "lastPx": 49.61,
   "n": 2,
   "everAth": true
  },
@@ -667,7 +667,7 @@
   "firstD": "2026-11-13",
   "firstPx": 253.68,
   "lastD": "2026-11-13",
-  "lastPx": 253.37,
+  "lastPx": 252.99,
   "n": 1,
   "everAth": false
  },
@@ -679,7 +679,7 @@
   "firstD": "2026-11-13",
   "firstPx": 50.01,
   "lastD": "2026-11-13",
-  "lastPx": 50.1,
+  "lastPx": 49.87,
   "n": 1,
   "everAth": true
  },
@@ -703,7 +703,7 @@
   "firstD": "2026-11-13",
   "firstPx": 23.66,
   "lastD": "2026-11-13",
-  "lastPx": 24.31,
+  "lastPx": 24.89,
   "n": 1,
   "everAth": false
  },
@@ -739,7 +739,7 @@
   "firstD": "2026-11-13",
   "firstPx": 64.11,
   "lastD": "2026-11-13",
-  "lastPx": 63.82,
+  "lastPx": 63.5,
   "n": 1,
   "everAth": true
  },
@@ -751,7 +751,7 @@
   "firstD": "2026-11-13",
   "firstPx": 170.46,
   "lastD": "2026-11-13",
-  "lastPx": 169.88,
+  "lastPx": 169.8,
   "n": 1,
   "everAth": false
  },
@@ -763,7 +763,7 @@
   "firstD": "2026-11-13",
   "firstPx": 202.3,
   "lastD": "2026-11-13",
-  "lastPx": 202.47,
+  "lastPx": 202.81,
   "n": 1,
   "everAth": false
  },
@@ -823,7 +823,7 @@
   "firstD": "2026-11-13",
   "firstPx": 6.58,
   "lastD": "2026-11-13",
-  "lastPx": 6.58,
+  "lastPx": 6.68,
   "n": 1,
   "everAth": false
  },
@@ -838,5 +838,17 @@
   "lastPx": 13.85,
   "n": 1,
   "everAth": true
+ },
+ "CROX": {
+  "sym": "CROX",
+  "name": "Crocs",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 163.72,
+  "lastD": "2026-11-13",
+  "lastPx": 163.72,
+  "n": 1,
+  "everAth": false
  }
 }

@@ -1,10 +1,12 @@
 name: 投资工作台 · 每交易日更新
 
-# 北京时间 07:00 与 20:30，各跑一次
+# 北京时间 07:00（美股收盘后）与 20:30（美股盘前）各跑一次
+# 07:00 场：周二–周六（处理周一–周五的美股收盘）；20:30 场：周一–周五
+# 周六 07:00 = 周五收盘 → 同时生成「本周核心结论 + 下周策略展望」
 # GitHub 的 cron 用 UTC，且实际触发常延迟 5–15 分钟，属正常现象
 on:
   schedule:
-    - cron: "0 23 * * 0-4"    # UTC 周日–周四 23:00 = 北京 周一–周五 07:00
+    - cron: "0 23 * * 1-5"    # UTC 周一–周五 23:00 = 北京 周二–周六 07:00
     - cron: "30 12 * * 1-5"   # UTC 周一–周五 12:30 = 北京 周一–周五 20:30
   workflow_dispatch:           # 支持在 Actions 页面手动触发
 
@@ -35,6 +37,10 @@ jobs:
 
       - name: 抓辅助数据与财报日历（live-extra.js）
         run: node sync-extra.mjs
+        continue-on-error: true
+
+      - name: 核心结论存档（brief-log.json：日/周/月）
+        run: node sync-brief.mjs
         continue-on-error: true
 
       - name: 抓业绩内容（live-news.js，走东方财富）

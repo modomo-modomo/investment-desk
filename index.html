@@ -1945,13 +1945,24 @@ function mktClose(){
 function viewBrief(){
   const b=DATA.brief, m=DATA.meta, s=DATA.senti;
   let h=feedBar();
+  /* 核心结论的唯一数据源：brief-log（日/周/月存档）。页面不再硬编码结论，
+     写入侧（sync-brief.mjs 规则生成 / 更新会话人工覆盖）改了这里就跟着变。 */
+  const BL=(typeof window!=="undefined"&&window.NEWS_DATA&&Array.isArray(window.NEWS_DATA.briefLog))?window.NEWS_DATA.briefLog:[];
+  const lastDaily=BL.find(x=>x.kind==="daily")||null;
+  const hStance=(lastDaily&&lastDaily.stance)||m.stance;
+  const hNote=(lastDaily&&lastDaily.stanceNote)||m.stanceNote;
+  const hConc=(lastDaily&&Array.isArray(lastDaily.conclusions)&&lastDaily.conclusions.length)?lastDaily.conclusions:b.conclusions;
+  const hDate=(lastDaily&&lastDaily.d)||m.closeDate||m.date;
+  const WKD=["周日","周一","周二","周三","周四","周五","周六"];
+  const hWeek=(()=>{ const d=new Date(String(hDate)+"T00:00:00Z"); return isNaN(d)?(m.week||""):WKD[d.getUTCDay()]; })();
   h+='<div class="hero"><div class="hero-left">';
-  h+='<div class="hero-kicker"><span class="date">'+(m.closeDate||m.date)+' 收盘 · '+m.week+'</span>'+
-     '<span class="tag red">'+m.stance+'</span>'+
+  h+='<div class="hero-kicker"><span class="date">'+hDate+' 收盘 · '+hWeek+'</span>'+
+     '<span class="tag red">'+esc(hStance)+'</span>'+
      '<span class="tag blue">美股 / 中国香港 / 中国内地 三大市场均已收盘</span>'+
+     (lastDaily?'<span class="tiny muted">存档 '+lastDaily.d+(lastDaily.source==="manual"?" · 会话定稿":" · 脚本兜底")+'</span>':'')+
      '<span style="margin-left:auto">'+modStamp()+'</span></div>';
-  h+='<h2>核心结论</h2><div class="stance">今日基调：<b>'+m.stance+'</b>　'+esc(m.stanceNote)+'</div><ol class="concl">';
-  b.conclusions.forEach(c=>{ h+='<li><b>'+c[0]+'</b> '+c[1]+'</li>'; });
+  h+='<h2>核心结论</h2><div class="stance">今日基调：<b>'+esc(hStance)+'</b>　'+hNote+'</div><ol class="concl">';
+  hConc.forEach(c=>{ h+='<li><b>'+c[0]+'</b> '+c[1]+'</li>'; });
   h+='</ol></div><div class="hero-right">';
   h+='<div class="senti"><div class="senti-top"><span class="k">风险偏好指数</span>'+
      '<span class="v">'+s.appetite.v+'</span><span class="lb up">'+s.appetite.label+'</span></div>'+
@@ -1962,29 +1973,70 @@ function viewBrief(){
      '<div class="gauge"><span style="width:'+s.fng.v+'%;background:linear-gradient(90deg,#0d8a5f,#8fbf3f,#e8a33d,#d2373a)"></span></div>'+
      '<div class="gscale"><span>'+s.fng.scale[0]+'</span><span>更新 '+s.fng.at+'</span><span>'+s.fng.scale[4]+'</span></div><div class="comp">';
   s.comps.forEach(c=>{ h+='<div class="comp-row"><span>'+c[0]+'</span><span class="bar"><i style="width:'+c[1]+'%"></i></span><span class="n num">'+c[1]+'</span></div>'; });
-  h+='</div><div class="tiny muted" style="margin-top:6px">每个交易日两次同步：20:30 与次日 07:00，每次全站同批刷新</div></div>';
+  h+='</div><div class="tiny muted" style="margin-top:6px">更新节奏：<b>周二–周六 07:00</b>（美股收盘后）与 <b>周一–周五 20:30</b>（美股盘前），每次全站同批刷新</div></div>';
   h+='</div></div>';
 
+  /* ---- 01b 本周核心结论（周六 07:00 场生成；一周内有效） ---- */
+  const lastWeek=BL.find(x=>x.kind==="weekly");
+  if(lastWeek){
+    const age=(Date.parse(String(hDate)+"T00:00:00Z")-Date.parse(String(lastWeek.d)+"T00:00:00Z"))/864e5;
+    if(age>=0 && age<=21){
+      h+='<details class="card" open style="padding:13px 16px;margin-bottom:8px">'+
+         '<summary style="cursor:pointer;display:flex;gap:9px;align-items:center;flex-wrap:wrap;list-style:none">'+
+         '<span class="tag blue">本周核心结论</span>'+
+         '<b style="font-size:12.5px">'+esc(lastWeek.period||lastWeek.d)+'</b>'+
+         '<span class="tiny muted">'+esc(lastWeek.stance||"")+'</span>'+
+         '<span class="tiny muted" style="margin-left:auto">'+(lastWeek.conclusions||[]).length+' 条结论 · '+(lastWeek.outlook||[]).length+' 条展望'+
+         (lastWeek.source==="manual"?" · 会话定稿":" · 脚本生成")+'</span></summary>'+
+         '<div style="margin-top:9px;border-top:1px solid var(--line);padding-top:9px">'+
+         (lastWeek.stanceNote?'<div class="stance">'+lastWeek.stanceNote+'</div>':'')+
+         '<ol class="concl">'+(lastWeek.conclusions||[]).map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol>'+
+         ((lastWeek.outlook||[]).length?'<div style="margin-top:11px;padding-top:10px;border-top:1px dashed var(--line)">'+
+           '<b style="font-size:12px">下周策略展望</b><ol class="concl">'+lastWeek.outlook.map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol></div>':'')+
+         '</div></details>';
+    }
+  }
+
   /* ---- 02 核心结论存档：每日 + 周 + 月，供复盘 ---- */
-  const BL=(typeof window!=="undefined"&&window.NEWS_DATA&&Array.isArray(window.NEWS_DATA.briefLog))?window.NEWS_DATA.briefLog:[];
-  const KIND={daily:["当日",""],weekly:["本周","blue"],"month-draft":["月初稿",""],"month-final":["月终稿","red"]};
+  const KIND={daily:["当日",""],weekly:["本周","blue"],"month-draft":["月·初稿",""],"month-final":["月·终稿","red"]};
+  const blKind=(e)=>String(e.kind||"daily").startsWith("month")?"month":(e.kind||"daily");
+  const snapLine=(e)=>{
+    const s=e.snapshot||{}; if(!Object.keys(s).length) return '';
+    return '<span class="tiny muted" style="margin-left:auto">'+
+      '标普 '+(s.spx!=null?(s.spx>0?'+':'')+Number(s.spx).toFixed(2)+'%':'—')+
+      ' · 纳指 '+(s.ndx!=null?(s.ndx>0?'+':'')+Number(s.ndx).toFixed(2)+'%':'—')+
+      ' · 恒生 '+(s.hsi!=null?(s.hsi>0?'+':'')+Number(s.hsi).toFixed(2)+'%':'—')+
+      ' · 上证 '+(s.sh!=null?(s.sh>0?'+':'')+Number(s.sh).toFixed(2)+'%':'—')+
+      ' · VIX '+(s.vix!=null?Number(s.vix).toFixed(2):'—')+
+      ' · BTC '+(s.btc!=null?'$'+Number(s.btc).toLocaleString():'—')+'</span>';
+  };
   h+='<div class="sec">'+secHead("02","核心结论存档 · 复盘用",
-      "每个交易日的核心结论 + 每周/每月总结的留档 · 点开看全文 · 滚动保留 200 天",
+      "每日 + 每周 + 每月留档 · 日存档滚动保留 200 天，周/月长期保留",
       "<span class='upd'>"+BL.length+" 条</span>");
-  h+='<div class="tiny muted" style="margin:0 0 10px;padding-left:2px;line-height:1.8">设计：<b>当日核心结论每天收盘后存一条</b>；<b>周六 07:00</b>（处理周五收盘）在当日之外加存一条<b>本周核心结论</b>；<b>每月 25 日</b>加存<b>本月核心结论初稿</b>；<b>月末最后交易日</b>加存<b>本月核心结论终稿</b>。存档的就是上面 hero 卡里的内容（基调 + 结论列表），原样留存、不改写，方便日后对照当时的数据与判断复盘。</div>';
+  h+='<div class="tiny muted" style="margin:0 0 8px;padding-left:2px;line-height:1.8">写入节奏：<b>日</b>——每个交易日 07:00（美股收盘后）；<b>周</b>——周六 07:00（周五收盘后，含下周策略展望）；<b>月</b>——每月 25 日出初稿、月末最后交易日收盘后出终稿。存档原样保留、不改写，方便日后对照当时的数据与判断复盘。</div>';
   if(!BL.length){
-    h+='<div class="card" style="padding:12px 14px"><span class="tiny muted">暂无存档——07:00 更新会话会把当日核心结论写入 brief-log.json，逐日积累。</span></div>';
+    h+='<div class="card" style="padding:12px 14px"><span class="tiny muted">暂无存档——07:00 场会把当日核心结论写入 brief-log.json，逐日积累。</span></div>';
   } else {
+    h+='<div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 9px">'+
+       ['all','daily','weekly','month'].map((k,i)=>'<span class="tag" data-blf style="cursor:pointer;font-weight:'+(k==="all"?"700":"400")+'" onclick="window.__blFilter(\''+k+'\',this)">'+
+          (k==="all"?"全部":k==="daily"?"日":k==="weekly"?"周":"月")+'</span>').join('')+
+       '<span class="tiny muted" style="margin-left:auto">点标签筛选</span></div>';
     BL.forEach(e=>{
       const kd=KIND[e.kind||"daily"]||KIND.daily;
-      h+='<details class="card" style="padding:10px 14px;margin-bottom:8px">'+
+      h+='<details class="card" data-blk="'+blKind(e)+'" style="padding:10px 14px;margin-bottom:8px">'+
          '<summary style="cursor:pointer;display:flex;align-items:center;gap:8px;flex-wrap:wrap;list-style:none">'+
          '<b>'+(e.d||"—")+'</b><span class="tag'+(kd[1]?" "+kd[1]:"")+'" style="font-size:10px">'+kd[0]+'</span>'+
-         (e.stance?'<span class="tiny" style="color:var(--text-2)">基调：'+e.stance+'</span>':'')+
-         '<span class="tiny muted" style="margin-left:auto">'+((e.conclusions||[]).length)+' 条结论</span></summary>'+
+         (e.period?'<span class="tiny muted">'+esc(e.period)+'</span>':'')+
+         (e.stance?'<span class="tiny" style="color:var(--text-2)">基调：'+esc(e.stance)+'</span>':'')+
+         '<span class="tiny muted">'+((e.conclusions||[]).length)+' 条</span>'+
+         snapLine(e)+'</summary>'+
          '<div style="margin-top:9px;border-top:1px solid var(--line);padding-top:9px">'+
          (e.stanceNote?'<div class="stance">'+e.stanceNote+'</div>':'')+
-         '<ol class="concl">'+(e.conclusions||[]).map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol></div></details>';
+         '<ol class="concl">'+(e.conclusions||[]).map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol>'+
+         ((e.outlook||[]).length?'<div style="margin-top:11px;padding-top:10px;border-top:1px dashed var(--line)">'+
+            '<b style="font-size:12px">'+((e.kind||"").startsWith("month")?"下月策略展望":"下周策略展望")+'</b>'+
+            '<ol class="concl">'+e.outlook.map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol></div>':'')+
+         '</div></details>';
     });
   }
   h+='</div>';
@@ -3301,6 +3353,13 @@ function viewRisk(){
 }
 
 /* ---------- router ---------- */
+/* 核心结论存档的筛选（不重渲染，只切显示，避免整页重绘） */
+window.__blFilter = function(k, el){
+  document.querySelectorAll("[data-blk]").forEach(function(n){ n.style.display = (k==="all" || n.getAttribute("data-blk")===k) ? "" : "none"; });
+  document.querySelectorAll("[data-blf]").forEach(function(n){ n.style.fontWeight="400"; n.style.opacity=".6"; });
+  if(el){ el.style.fontWeight="700"; el.style.opacity="1"; }
+};
+
 const VIEWS={brief:viewBrief,tracks:viewTracks,events:viewEvents,movers:viewMovers,
   stocks:viewStocks,strategy:viewStrategy,portfolio:viewPortfolio,risk:viewRisk};
 
