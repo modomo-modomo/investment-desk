@@ -223,7 +223,7 @@
   "firstD": "2026-11-12",
   "firstPx": 131.64,
   "lastD": "2026-11-13",
-  "lastPx": 133.21,
+  "lastPx": 132.74,
   "n": 2,
   "everAth": false
  },
@@ -379,7 +379,7 @@
   "firstD": "2026-11-12",
   "firstPx": 68,
   "lastD": "2026-11-13",
-  "lastPx": 68.99,
+  "lastPx": 70.02,
   "n": 2,
   "everAth": true
  },
@@ -451,7 +451,7 @@
   "firstD": "2026-11-12",
   "firstPx": 38.74,
   "lastD": "2026-11-13",
-  "lastPx": 38.7,
+  "lastPx": 38.4,
   "n": 2,
   "everAth": true
  },
@@ -691,7 +691,7 @@
   "firstD": "2026-11-13",
   "firstPx": 29.5,
   "lastD": "2026-11-13",
-  "lastPx": 29.22,
+  "lastPx": 29.29,
   "n": 1,
   "everAth": false
  },
@@ -715,7 +715,7 @@
   "firstD": "2026-11-13",
   "firstPx": 19.72,
   "lastD": "2026-11-13",
-  "lastPx": 20,
+  "lastPx": 20.61,
   "n": 1,
   "everAth": false
  },
@@ -727,7 +727,7 @@
   "firstD": "2026-11-13",
   "firstPx": 6.93,
   "lastD": "2026-11-13",
-  "lastPx": 6.99,
+  "lastPx": 7.35,
   "n": 1,
   "everAth": false
  },
@@ -775,7 +775,7 @@
   "firstD": "2026-11-13",
   "firstPx": 21.73,
   "lastD": "2026-11-13",
-  "lastPx": 21.8,
+  "lastPx": 21.83,
   "n": 1,
   "everAth": false
  },
@@ -787,7 +787,7 @@
   "firstD": "2026-11-13",
   "firstPx": 55.43,
   "lastD": "2026-11-13",
-  "lastPx": 56.34,
+  "lastPx": 56.92,
   "n": 1,
   "everAth": true
  },
@@ -799,7 +799,7 @@
   "firstD": "2026-11-13",
   "firstPx": 66.18,
   "lastD": "2026-11-13",
-  "lastPx": 66.18,
+  "lastPx": 66.63,
   "n": 1,
   "everAth": true
  },
@@ -811,7 +811,7 @@
   "firstD": "2026-11-13",
   "firstPx": 6.45,
   "lastD": "2026-11-13",
-  "lastPx": 6.45,
+  "lastPx": 7.25,
   "n": 1,
   "everAth": false
  },
@@ -835,7 +835,7 @@
   "firstD": "2026-11-13",
   "firstPx": 13.85,
   "lastD": "2026-11-13",
-  "lastPx": 13.85,
+  "lastPx": 13.89,
   "n": 1,
   "everAth": true
  },
@@ -848,6 +848,42 @@
   "firstPx": 163.72,
   "lastD": "2026-11-13",
   "lastPx": 163.72,
+  "n": 1,
+  "everAth": false
+ },
+ "FROG": {
+  "sym": "FROG",
+  "name": "JFrog",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 113.6,
+  "lastD": "2026-11-13",
+  "lastPx": 113.6,
+  "n": 1,
+  "everAth": true
+ },
+ "KOD": {
+  "sym": "KOD",
+  "name": "Kodiak Sciences",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-13",
+  "firstPx": 111.19,
+  "lastD": "2026-11-13",
+  "lastPx": 111.19,
+  "n": 1,
+  "everAth": false
+ },
+ "DDI": {
+  "sym": "DDI",
+  "name": "DoubleDown Interactive American Depository Shares",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-13",
+  "firstPx": 15.77,
+  "lastD": "2026-11-13",
+  "lastPx": 15.77,
   "n": 1,
   "everAth": false
  }

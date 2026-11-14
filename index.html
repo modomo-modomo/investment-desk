@@ -119,6 +119,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .pending{font-size:10.5px;color:#98a2b3;border:1px dashed #d5dbe6;border-radius:5px;padding:1px 6px;display:inline-block;background:#fcfdfe}
 
 .tbl-wrap{overflow-x:auto;border-radius:var(--radius);-webkit-overflow-scrolling:touch}
+/* 长表：只显示约 10 行，其余右侧滚轴上下拉；表头固定 */
+.tbl-scroll{max-height:660px;overflow-y:auto;overscroll-behavior:contain}
+.tbl-scroll table.tbl thead th{position:sticky;top:0;z-index:3;background:var(--surface-2);box-shadow:inset 0 -1px 0 var(--line)}
+.tbl-scroll::-webkit-scrollbar{width:9px}
+.tbl-scroll::-webkit-scrollbar-track{background:#f4f7fb;border-radius:5px}
+.tbl-scroll::-webkit-scrollbar-thumb{background:#c6d1e2;border-radius:5px}
+.tbl-scroll::-webkit-scrollbar-thumb:hover{background:#aebcd2}
+.scroll-hint{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);margin:0 0 5px;padding-left:2px}
 table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 table.tbl th{text-align:left;font-weight:600;font-size:10.5px;letter-spacing:.5px;color:var(--muted);
   text-transform:uppercase;padding:9px 12px;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap}
@@ -368,6 +376,7 @@ ol.concl li b{color:var(--text);font-weight:650}
   table.tbl{min-width:640px;font-size:12px}
   table.tbl th{padding:6px 8px}
   table.tbl td{padding:7px 8px}
+  .tbl-scroll{max-height:520px}
   .card{border-radius:10px}
   .filters .fchip{padding:4px 9px}
   .foot{padding:12px 14px 22px}
@@ -1672,6 +1681,25 @@ function hydrateExtra(Y){
       DATA.moversPreLog = !!Y.movers.preFromLog;
       DATA.earnPreTotal = Y.movers.preTotal || 0;
       DATA.earnPostTotal = Y.movers.postTotal || 0;
+
+      /* ② 非财报异动的滚动积累（近 6 个场次）：日期 → 标的；历史条目不再套用当日新闻，避免张冠李戴 */
+      const latestRollDate = (Y.movers.rolling && Y.movers.rolling[0] && Y.movers.rolling[0].date) || "";
+      const mkRoll = (sess) => {
+        const out = [];
+        (Y.movers.rolling || []).forEach(blk => {
+          if (blk.session !== sess) return;
+          (blk.rows || []).forEach(r => {
+            const o = shape(r, sess);
+            o.date = blk.date;
+            if (blk.date !== latestRollDate) { o.news = null; o.note = null; }
+            out.push(o);
+          });
+        });
+        out.sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")) || (b.mcap || 0) - (a.mcap || 0));
+        return out;
+      };
+      DATA.moversRollPre = mkRoll("pre");
+      DATA.moversRollPost = mkRoll("post");
     } else {
       /* 旧版 live-extra（无 movers 字段）兜底：退回只看研究标的 */
       const w = (typeof window !== "undefined" && window.WIND_LIVE) ? window.WIND_LIVE : null;
@@ -1747,6 +1775,11 @@ const pct = (v,d) => (v==null?"—":(v>0?"+":"")+Number(v).toFixed(d==null?2:d)+
 /* 市值分档门槛（美股常规口径）：大 ≥100亿 → 3%；中 20–100亿 → 5%；小 <20亿 → 8% */
 const THR_OF = (m) => (m != null && m >= 10e9) ? 3 : (m != null && m >= 2e9) ? 5 : (m != null ? 8 : 3); /* 市值未知（旧留档）按 3% 保底，避免漏条目 */
 const TIER_OF = (m) => (m != null && m >= 10e9) ? "大市值" : (m != null && m >= 2e9) ? "中市值" : (m != null ? "小市值" : "—");
+/* 表格统一口径：按市值从大到小；超过 10 行时表内滚动（右侧滚轴），表头固定 */
+const mcapOf = (r) => (r && (r.mcapRaw != null ? r.mcapRaw : r.mcap)) || 0;
+const byMcapDesc = (rows) => (rows || []).slice().sort((a, b) => mcapOf(b) - mcapOf(a));
+const wrapTbl = (tbl, n) => n > 10 ? '<div class="tbl-scroll">' + tbl + '</div>' : tbl;
+const scrollHint = (n) => n > 10 ? '<div class="scroll-hint">共 <b class="num">' + n + '</b> 条 · 表内滚动（约 10 行），右侧滚轴上下拉</div>' : '';
 const chg = (v,unit) => unit==="bp"
   ? '<span class="chg '+sgn(v)+'">'+(v>0?"+":"")+Math.round(v)+'bp</span>'
   : '<span class="chg '+sgn(v)+'">'+pct(v)+'</span>';
@@ -1787,7 +1820,8 @@ function impDot(imp){ return '<span class="imp '+imp+'"></span>'; }
 
 /* ---- 业绩表（盘前 / 盘后共用）---- */
 function earnTable(blk, ses){
-  const rows = (blk && blk.rows) || [];
+  const raw = (blk && blk.rows) || [];
+  const rows = byMcapDesc(raw);           /* 排序：市值从大到小 */
   const isPre = ses==="pre";
   if(!rows.length){
     return '<div class="card empty">未取到'+(isPre?"当日盘前":"前一交易日盘后")+'的披露记录，'+
@@ -1799,12 +1833,13 @@ function earnTable(blk, ses){
     '<span>该场次披露 <b class="num">'+(blk.total||rows.length)+'</b> 家</span>'+
     '<span>涨幅达到门槛入表 <b class="num '+(rows.length?'up':'')+'">'+rows.length+'</b> 家</span>'+
     '<span class="tiny muted">门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%</span>'+
+    '<span class="tiny muted">排序：市值从大到小</span>'+
     '<span>业绩内容已抓取 <b class="num">'+withNews+'/'+rows.length+'</b> 家</span>'+
     (blk.cached?'<span class="chip-src">名单取首见快照</span>':'')+
     (blk.updated?'<span style="margin-left:auto" class="tiny muted">同步 '+blk.updated+'</span>':'')+
     '</div>';
 
-  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+  let t='<table class="tbl"><thead><tr>'+
      '<th style="width:128px">标的</th>'+
      '<th class="num" style="width:66px">涨跌</th>'+
      '<th class="num" style="width:70px">'+(isPre?"盘前价":"盘后价")+'</th>'+
@@ -1813,7 +1848,7 @@ function earnTable(blk, ses){
      (isPre?'<th style="width:104px">开盘跳空 → 收盘</th>':'')+
      '<th style="width:24%">公司简介</th></tr></thead><tbody>';
   if(!rows.length){
-    h+='<tr><td colspan="'+(isPre?7:6)+'" class="empty">该场次没有公司的公布后涨幅达到市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</td></tr>';
+    t+='<tr><td colspan="'+(isPre?7:6)+'" class="empty">该场次没有公司的公布后涨幅达到市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</td></tr>';
   }
 
   rows.forEach(r=>{
@@ -1846,7 +1881,7 @@ function earnTable(blk, ses){
         +(r.closeChg!=null?'<span class="mv '+sgn(r.closeChg)+'">'+pct(r.closeChg,1)+'</span>':'<span class="tiny muted">待收盘回填</span>'))
       : '';
 
-    h+='<tr>'+
+    t+='<tr>'+
       '<td><div class="tk">'+r.t+(r.pooled?' <span class="tag blue" style="font-size:9px">池内</span>':'')+'</div>'+
       '<div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
       '<td class="num">'+(r.mv==null?'<span class="pending">无报价</span>':'<span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span>')+
@@ -1857,8 +1892,8 @@ function earnTable(blk, ses){
       (isPre?('<td class="num" style="white-space:nowrap">'+cellGap+'</td>'):'')+
       '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
   });
-  h+='</tbody></table></div>';
-  return h;
+  t+='</tbody></table>';
+  return h+scrollHint(rows.length)+'<div class="card tbl-wrap">'+wrapTbl(t, rows.length)+'</div>';
 }
 
 /* ---------- 01 ---------- */
@@ -2075,22 +2110,26 @@ function viewBrief(){
   /* ---- 04 盘前：①业绩/异动 ②非财报异动 ---- */
   const mvTbl=(rows,empty,ses)=>{
     const isPre = ses==="盘前";
-    /* 门槛按市值分档：大>3% / 中>5% / 小>8%；留档老数据没有市值的按 3% 展示（抓取侧本来就 ≥3%） */
-    const pass = rows.filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap));
-    const cov=DATA.moversPool?(" · 全市场扫描 "+(DATA.moversUniverse||DATA.moversPool)+" 只，取到报价 "+(DATA.moversPool)+" 只"):"";
-    const dkey = isPre ? "moversPreDate" : "moversPostDate";
-    const isLog = isPre ? DATA.moversPreLog : DATA.moversPostLog;
-    const day = DATA[dkey] ? ' · 场次日 <b>'+DATA[dkey]+'</b>' : '';
-    const logs = isLog ? ' <span class="upd" style="border-color:#f4d9c2;background:#fff8f2;color:#a4622a">取自滚动留档</span>' : '';
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场 · 涨跌门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%'+cov+day+'）'+logs+'</span></div>';
-    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-       '<th style="width:138px">标的</th><th class="num" style="width:64px">涨跌</th>'+
-       '<th class="num" style="width:72px">'+(isPre?"盘前价":"盘后价")+'</th>'+
+    /* ② 非财报异动：滚动积累（跨场次），日期倒序 → 同日市值倒序 */
+    const pass = (rows||[])
+      .filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap))
+      .sort((a,b)=> String(b.date||"").localeCompare(String(a.date||"")) || mcapOf(b)-mcapOf(a));
+    const cov=DATA.moversPool?(" · 全市场扫描 "+(DATA.moversUniverse||DATA.moversPool)+" 只"):"";
+    const days=Array.from(new Set(pass.map(r=>r.date).filter(Boolean))).length;
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">② '+ses+'非财报驱动异动（全市场滚动积累 '+days+' 个场次'+cov+' · 门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8% · 排序：日期倒序 → 同日市值倒序）</span></div>';
+    if(!pass.length){
+      return h+'<div class="card"><div class="empty" style="padding:14px">'+empty+'</div></div>';
+    }
+    h+=scrollHint(pass.length);
+    let t='<table class="tbl"><thead><tr>'+
+       '<th style="width:96px">日期</th>'+
+       '<th style="width:132px">标的</th>'+
+       '<th class="num" style="width:88px">涨跌</th>'+
+       '<th class="num" style="width:76px">'+(isPre?"盘前价":"盘后价")+'</th>'+
        '<th style="width:80px">行业</th>'+
        '<th>潜在原因</th>'+
        (isPre?'<th style="width:104px">开盘跳空 → 收盘</th>':'')+
        '<th style="width:22%">公司简介</th></tr></thead><tbody>';
-    if(!pass.length) h+='<tr><td colspan="'+(isPre?7:6)+'" class="empty">'+empty+'</td></tr>';
     pass.forEach(r=>{
       let reason;
       if(r.news && (r.news.title||r.news.sum)){
@@ -2108,7 +2147,10 @@ function viewBrief(){
           +' → '
           +(r.closeChg!=null?'<span class="mv '+sgn(r.closeChg)+'">'+pct(r.closeChg,1)+'</span>':'<span class="tiny muted">待收盘回填</span>'))
         : '';
-      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
+      t+='<tr>'+
+        '<td class="num" style="white-space:nowrap">'+esc(r.date||"—")+
+          '<div class="tiny muted">'+(isPre?"盘前":"盘后")+'</div></td>'+
+        '<td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span><div class="tiny muted">'+TIER_OF(r.mcap)+' &gt;'+THR_OF(r.mcap)+'%</div></td>'+
         '<td class="num">'+(pxShow!=null?'$'+Number(pxShow).toFixed(2):(r.px!=null?'$'+Number(r.px).toFixed(2):'—'))+'</td>'+
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
@@ -2116,7 +2158,8 @@ function viewBrief(){
         (isPre?('<td class="num" style="white-space:nowrap">'+gapCell+'</td>'):'')+
         '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
     });
-    return h+'</tbody></table></div>';
+    t+='</tbody></table>';
+    return h+'<div class="card tbl-wrap">'+wrapTbl(t, pass.length)+'</div>';
   };
 
   /* ①b：全市场扫描里“确属财报驱动、但不在上面 8 家详表”的异动
@@ -2126,23 +2169,25 @@ function viewBrief(){
   const postSymSet=new Set(((b.post&&b.post.rows)||[]).map(r=>normSym(r.symbol)));
   const earnMvTbl=(rows,ses)=>{
     if(!rows.length) return '';
-    const passE = rows.filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap));
+    const passE = byMcapDesc(rows.filter(r => Math.abs(r.mv||0) >= THR_OF(r.mcap)));
     if(!passE.length) return '';
-    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 涨跌门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8%）</span></div>';
-    h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
+    let h='<div class="sec-head" style="margin:12px 0 6px"><span class="sec-title" style="font-size:11px">①b 其他财报标的的'+ses+'异动（全市场扫描命中 · 确认当日该场次披露 · 门槛：大市值 &gt;3% / 中市值 &gt;5% / 小市值 &gt;8% · 排序：市值从大到小）</span></div>';
+    h+=scrollHint(passE.length);
+    let t='<table class="tbl"><thead><tr>'+
        '<th style="width:150px">标的</th><th class="num" style="width:70px">涨跌</th>'+
        '<th class="num" style="width:80px">'+(ses==="盘前"?"盘前价":"盘后价")+'</th>'+
        '<th style="width:84px">行业</th><th style="width:24%">公司简介</th>'+
        '<th>说明</th></tr></thead><tbody>';
     passE.forEach(r=>{
-      h+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
+      t+='<tr><td><div class="tk">'+esc(r.t)+'</div><div class="tk-sub">'+esc(r.n||"")+'</div></td>'+
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
         '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
         '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
         '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进 ① 详表，业绩明细待补。</span></td></tr>';
     });
-    return h+'</tbody></table></div>';
+    t+='</tbody></table>';
+    return h+'<div class="card tbl-wrap">'+wrapTbl(t, passE.length)+'</div>';
   };
 
   const preDay=DATA.moversPreDate||DATA.meta.dataAsOf||"";
@@ -2153,7 +2198,7 @@ function viewBrief(){
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘前公司业绩（全市场披露 · 公布后涨幅达到门槛入表：大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</span></div>';
   h+=earnTable(b.pre,"pre");
   h+=earnMvTbl((DATA.earnMvPre||[]).filter(x=>!preSymSet.has(x.t)),"盘前");
-  h+=mvTbl(DATA.moversPre||[],"该场次未捕获到非财报驱动的显著异动（盘前窗口未开，或异动都没达到市值门槛）","盘前");
+  h+=mvTbl((DATA.moversRollPre&&DATA.moversRollPre.length)?DATA.moversRollPre:(DATA.moversPre||[]),"该场次未捕获到非财报驱动的显著异动（盘前窗口未开，或异动都没达到市值门槛）","盘前");
 
   /* ---- 06 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("06","盘后",
@@ -2162,7 +2207,7 @@ function viewBrief(){
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩（全市场披露 · 公布后涨幅达到门槛入表：大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</span></div>';
   h+=earnTable(b.post,"post");
   h+=earnMvTbl((DATA.earnMvPost||[]).filter(x=>!postSymSet.has(x.t)),"盘后");
-  h+=mvTbl(DATA.moversPost||[],"该场次未捕获到非财报驱动的显著异动（盘后窗口未开，或异动都没达到市值门槛）","盘后");
+  h+=mvTbl((DATA.moversRollPost&&DATA.moversRollPost.length)?DATA.moversRollPost:(DATA.moversPost||[]),"该场次未捕获到非财报驱动的显著异动（盘后窗口未开，或异动都没达到市值门槛）","盘后");
   if(!(DATA.moversPost||[]).length && !DATA.moversPostLog){
     h+='<div class="card" style="padding:11px 14px;margin-top:8px;font-size:11.5px;line-height:1.75;color:#8a5a12;background:#fffbf0;border-color:#f0dfb8">'+
        '<b>本场盘后窗口未留档。</b>Yahoo 的 <b>盘后涨跌只在盘后时段（美东 16:00–20:00）内返回</b>，窗口一过就切到下一场次的盘前字段。'+
@@ -2284,13 +2329,14 @@ function ebInner(){
      '②同一行业连续多季出现达标公司，才是<b>行业级景气</b>的证据；③市值越大、达标门槛越低（3%），所以大市值上榜不代表弹性大，<b>看的是确定性不是爆发力</b>。'+
      '</div></div>';
 
-  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr>'+
-     '<th style="width:160px">标的</th>'+th("d","公布日","96px")+'<th style="width:64px">场次</th>'+
+  h+=scrollHint(n);
+  let t='<table class="tbl"><thead><tr>'+
+     th("d","公布日","96px")+'<th style="width:160px">标的</th><th style="width:64px">场次</th>'+
      th("chg","公布后涨幅","100px")+th("mcap","公布日市值","100px")+th("mcapAt","公布后收盘市值","110px")+
      '<th style="width:24%">业绩 / 指引超预期</th>'+th("sec","行业","110px")+
      '<th style="width:26%">公司简介</th></tr></thead><tbody>';
   if(!n){
-    h+='<tr><td colspan="9" class="empty">该季度暂无达标记录</td></tr>';
+    t+='<tr><td colspan="9" class="empty">该季度暂无达标记录</td></tr>';
   }
   rows.forEach(x=>{
     const isNew=!!x.isNew;
@@ -2301,9 +2347,9 @@ function ebInner(){
         : '<b class="down">EPS 低于预期 '+pct(x.surp,1)+'</b>（指引/叙事驱动）')
       : '<span class="muted">EPS 超预期幅度待补</span>';
     const numTxt = (x.epsAct!=null&&x.epsEst!=null) ? '<span class="tiny muted">实际 '+x.epsAct+' / 预期 '+x.epsEst+'</span>' : '';
-    h+='<tr'+(isNew?' class="isnew"':'')+'>'+
-      '<td><div class="tk">'+x.sym+(isNew?' <span class="newflag">新</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
+    t+='<tr'+(isNew?' class="isnew"':'')+'>'+
       '<td class="num" style="white-space:nowrap">'+x.d+'</td>'+
+      '<td><div class="tk">'+x.sym+(isNew?' <span class="newflag">新</span>':'')+'</div><div class="tk-sub">'+esc(x.name||"")+'</div></td>'+
       '<td><span class="tag'+(x.sess==="pre"?" blue":" violet")+'">'+(x.sess==="pre"?"盘前":"盘后")+'</span></td>'+
       '<td class="num" style="font-weight:650">'+(c!=null?'<span class="chg '+sgn(c)+'">'+pct(c,1)+'</span>':'<span class="tiny muted">'+(x.sess==="pre"?"待当日收盘":"待次日收盘")+'</span>')+'</td>'+
       '<td class="num">'+fmtCap(x.mcap)+'<div class="tiny muted">'+x.size+'</div></td>'+
@@ -2313,7 +2359,8 @@ function ebInner(){
       '<td><span class="tag">'+esc(secZh(x.sec))+'</span></td>'+
       '<td class="read" style="font-size:11px;line-height:1.6">'+esc(x.desc||"—")+'</td></tr>';
   });
-  h+='</tbody></table></div>';
+  t+='</tbody></table>';
+  h+='<div class="card tbl-wrap">'+wrapTbl(t, n)+'</div>';
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：<b>公布后涨幅</b>——盘前公布取公布当日收盘涨幅（相对前一交易日收盘），盘后公布取<b>次日</b>收盘涨幅（相对公布日收盘），统一用日线收盘自算，不取盘中/盘后瞬时价；<b>公布日市值</b>为披露当日（收盘口径）市值，<b>公布后收盘市值</b>按公布后对应场次收盘价折算（= 公布日市值 × 收盘价 ÷ 建档时点价）；<b>指引</b>取东方财富 7×24 快讯中该公司披露同期（±1.5 天）的指引表述，随存档落盘供复盘，未覆盖的标「指引待补」；<b>场次</b>区分盘前/盘后；对应场次还没收盘的记「待当日收盘 / 待次日收盘」，下一轮自动补齐（补算后不达门槛的<b>撤档</b>）。覆盖当日全部披露公司中市值 ≥5 亿美元的前 40 家，按自然季度滚动保留最近 4 个季度。</div>';
   return h;
 }

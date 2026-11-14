@@ -988,6 +988,21 @@ for (const arr of [movers.pre, movers.post].concat(mvLog.map((x) => x.rows))) {
 /* 赛道归类补写（此时 trackOfClass 已定义） */
 mvLog.forEach((r) => r.rows.forEach((x) => { if (!x.track) x.track = trackOfClass(x.sym, ""); }));
 writeFileSync("movers-log.json", JSON.stringify(mvLog, null, 1));
+
+/* ② 非财报异动的「滚动积累」：最近 6 个场次，按市值门槛过滤后交给页面
+   （页面按 日期倒序 → 市值倒序 排，表内滚动只显示 10 行） */
+const tierThr = (r) => (r.mcap != null && r.mcap >= 10e9) ? 3 : (r.mcap != null && r.mcap >= 2e9) ? 5 : 8;
+movers.rolling = mvLog.slice(0, 6).map((x) => ({
+  date: x.date,
+  session: x.session,
+  rows: (x.rows || [])
+    .filter((r) => Math.abs(r.mv || 0) >= tierThr(r))
+    .sort((a, b) => (b.mcap || 0) - (a.mcap || 0))
+    .slice(0, 80)
+    .map((r) => ({ sym: r.sym, name: r.name, sec: r.sec, ind: r.ind || "", zh: r.zh || "",
+      mcap: r.mcap || null, mv: r.mv, px: r.px, prePx: r.prePx || null, postPx: r.postPx || null,
+      closeChg: r.closeChg != null ? r.closeChg : null, earn: !!r.earn })),
+}));
 console.log("全市场异动：" + moverRows.length + " 只取到报价 · 盘前 ≥" + MV_EMIT + "% " + movers.pre.length +
   " 条（财报 " + movers.pre.filter((x) => x.earn).length + " / 非财报 " + movers.pre.filter((x) => !x.earn).length + "）" +
   " · 盘后 ≥" + MV_EMIT + "% " + movers.post.length +
@@ -1279,6 +1294,54 @@ for (const rec of pendingOld) {
   if (rec.capPx) rec.mcapAt = Math.round(rec.mcap * rec.px / rec.capPx);
   if (!rec.guide) { const g = await earnGuide(KX, rec.sym, rec.name, rec.d); if (g) rec.guide = g; }
 }
+/* 富途兜底：Yahoo 缺营收/净利时，用富途「业绩」页补齐（只补缺项）
+   安全阀：富途返回的 reportTime 必须与公布日相差 ≤10 天，且财季为最新一期，避免把上一季的数贴到本季
+   （investing.com 有 Cloudflare 403，未采用；Yahoo 仍是主源，Nasdaq 补日历，东财补指引表述） */
+async function futuEarn(sym) {
+  const u = `https://www.futunn.com/stock/${encodeURIComponent(sym)}-US/earnings`;
+  try {
+    const ctl = new AbortController();
+    const tm = setTimeout(() => ctl.abort(), 20000);
+    const r = await fetch(u, { headers: { "User-Agent": UA, "Accept-Language": "zh-CN,zh;q=0.9" }, signal: ctl.signal });
+    clearTimeout(tm);
+    if (!r.ok) return null;
+    const h = await r.text();
+    const i = h.indexOf('"earningReport":');
+    if (i < 0) return null;
+    let st = h.indexOf("{", i), depth = 0, end = -1, inStr = false, esc = false;
+    for (let k = st; k < h.length; k++) {
+      const c = h[k];
+      if (inStr) { if (esc) esc = false; else if (c === "\\") esc = true; else if (c === '"') inStr = false; continue; }
+      if (c === '"') { inStr = true; continue; }
+      if (c === "{") depth++; else if (c === "}") { depth--; if (depth === 0) { end = k + 1; break; } }
+    }
+    if (end < 0) return null;
+    const j = JSON.parse(h.slice(st, end));
+    const ind = j.indicators || [];
+    const pick = (t) => ind.find((x) => x.type === t) || {};
+    const n = (v) => (v == null || !Number.isFinite(+v) ? null : +v / 1e4);   /* 富途指标按「万」放大 */
+    const rev = pick(1), eps = pick(2), net = pick(4);
+    const rt = j.reportTime ? +j.reportTime * 1000 : null;
+    return { rev: n(rev.actualValue), revEst: n(rev.predictValue),
+      epsAct: n(eps.actualValue), epsEst: n(eps.predictValue), net: n(net.actualValue),
+      fy: (j.titleInfo || {}).fiscalYear || null, fq: (j.titleInfo || {}).quarter || null, rt };
+  } catch { return null; }
+}
+const futuNeed = beatLog.filter((x) => x.rev == null || x.net == null).slice(0, 8);
+let futuOk = 0;
+for (const rec of futuNeed) {
+  const f = await futuEarn(rec.sym);
+  if (!f || f.rev == null) continue;
+  if (f.rt != null && Math.abs(f.rt - Date.parse(rec.d + "T00:00:00Z")) > 10 * 864e5) continue;  /* 对不上公布日就不用 */
+  if (rec.rev == null) rec.rev = f.rev;
+  if (rec.net == null && f.net != null) rec.net = f.net;
+  if (rec.epsAct == null && f.epsAct != null) rec.epsAct = f.epsAct;
+  if (rec.epsEst == null && f.epsEst != null) rec.epsEst = f.epsEst;
+  rec.srcExtra = "富途";
+  futuOk++;
+}
+if (futuNeed.length) console.log("富途补业绩：" + futuOk + "/" + futuNeed.length + " 条补齐");
+
 /* 只保留最近 4 个季度、最多 400 条 */
 const qs = [...new Set(beatLog.map((x) => x.q))].sort().reverse().slice(0, 4);
 beatLog = beatLog.filter((x) => qs.includes(x.q)).slice(-400);

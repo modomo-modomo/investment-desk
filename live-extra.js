@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-14T02:00:27.338Z",
+  "syncedAt": "2026-11-14T02:49:40.505Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-13",
   "postDate": "2026-11-12"
@@ -18,47 +18,47 @@ window.YF_DATA = {
   "META": {
    "symbol": "META",
    "price": 641.69,
-   "prevClose": 628.77001953125,
-   "chg": -0.820655250632707,
+   "prevClose": 623.6099853515625,
+   "chg": 2.899250735962977,
    "w52h": 779.82,
    "w52l": 520.26,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "IREN": {
    "symbol": "IREN",
    "price": 18.17,
-   "prevClose": 20.84000015258789,
-   "chg": -6.525914589221726,
+   "prevClose": 19.479999542236328,
+   "chg": -6.7248434123525325,
    "w52h": 70.707,
    "w52l": 17.155,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "NBIS": {
    "symbol": "NBIS",
    "price": 115.88,
-   "prevClose": 154.69000244140625,
-   "chg": -16.840133583697547,
+   "prevClose": 128.63999938964844,
+   "chg": -9.919155936545543,
    "w52h": 299.86,
    "w52l": 73.52,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "CRWV": {
    "symbol": "CRWV",
    "price": 53.13,
-   "prevClose": 60.77000045776367,
-   "chg": -6.8619416689667645,
+   "prevClose": 56.599998474121094,
+   "chg": -6.130737631719951,
    "w52h": 138.25,
    "w52l": 40.58,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "BE": {
    "symbol": "BE",
    "price": 191.99,
-   "prevClose": 209.47000122070312,
-   "chg": -3.5995648546244707,
+   "prevClose": 201.92999267578125,
+   "chg": -4.922491726415712,
    "w52h": 351.28,
    "w52l": 75.7,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "AMD": {
    "symbol": "AMD",
@@ -90,38 +90,38 @@ window.YF_DATA = {
   "ONTO": {
    "symbol": "ONTO",
    "price": 203.62,
-   "prevClose": 215.05999755859375,
-   "chg": -2.506277062604312,
+   "prevClose": 209.6699981689453,
+   "chg": -2.885488197926589,
    "w52h": 386.46,
    "w52l": 121.575,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "NET": {
    "symbol": "NET",
    "price": 305.81,
-   "prevClose": 315,
-   "chg": 1.1111111111111072,
+   "prevClose": 318.5,
+   "chg": -3.984302179405419,
    "w52h": 370.35,
    "w52l": 158.83,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "RBRK": {
    "symbol": "RBRK",
    "price": 109.88,
-   "prevClose": 109.26000213623047,
-   "chg": 1.025073307056168,
+   "prevClose": 110.37999725341797,
+   "chg": -0.45298062370129344,
    "w52h": 139.92,
    "w52l": 42.25,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "OKTA": {
    "symbol": "OKTA",
    "price": 182.87,
-   "prevClose": 182.25,
-   "chg": 0.1591184011702662,
+   "prevClose": 182.5399932861328,
+   "chg": 0.1807833040387008,
    "w52h": 235,
    "w52l": 62.66,
-   "date": "2026-11-12"
+   "date": "2026-11-13"
   },
   "CHKP": {
    "symbol": "CHKP",
@@ -142,9 +142,9 @@ window.YF_DATA = {
   },
   "XLC": {
    "cn": "通信服务",
-   "chg": -0.9576435820808693,
-   "d5": 3.086066066434956,
-   "d20": -4.340096742131894
+   "chg": 1.0505809859254756,
+   "d5": 3.7217305962452985,
+   "d20": -1.4775174564240379
   },
   "XLY": {
    "cn": "可选消费",
@@ -196,9 +196,9 @@ window.YF_DATA = {
   },
   "XLRE": {
    "cn": "房地产",
-   "chg": -0.5158096915211186,
-   "d5": 0.13544328289925023,
-   "d20": 5.644198230885378
+   "chg": 0.0225390473301168,
+   "d5": 0.8409066633744633,
+   "d20": 5.241933331288462
   }
  },
  "btc": {
@@ -3290,7 +3290,7 @@ window.YF_DATA = {
     "sym": "NOW",
     "price": 102.3,
     "chg": 1.58,
-    "d20": -26.95,
+    "d20": -31.18,
     "ytd": -30.65,
     "ccy": "$",
     "mcap": 106127015936
@@ -3300,7 +3300,7 @@ window.YF_DATA = {
     "sym": "PLTR",
     "price": 168,
     "chg": -2.09,
-    "d20": -16.41,
+    "d20": -16.21,
     "ytd": 0.08,
     "ccy": "$",
     "mcap": 404771504128
@@ -3310,7 +3310,7 @@ window.YF_DATA = {
     "sym": "RBRK",
     "price": 109.9,
     "chg": -0.45,
-    "d20": -3.53,
+    "d20": -7.37,
     "ytd": 45.59,
     "ccy": "$",
     "mcap": 22616440832
@@ -3320,7 +3320,7 @@ window.YF_DATA = {
     "sym": "OKTA",
     "price": 182.9,
     "chg": 0.18,
-    "d20": -13.71,
+    "d20": -12.3,
     "ytd": 118.64,
     "ccy": "$",
     "mcap": 31969503232
@@ -3330,7 +3330,7 @@ window.YF_DATA = {
     "sym": "NET",
     "price": 305.8,
     "chg": -3.98,
-    "d20": -5.71,
+    "d20": -3.32,
     "ytd": 56.01,
     "ccy": "$",
     "mcap": 109599932416
@@ -3372,7 +3372,7 @@ window.YF_DATA = {
     "sym": "CRWV",
     "price": 53.13,
     "chg": -6.13,
-    "d20": -19.23,
+    "d20": -23.76,
     "ytd": -33.02,
     "ccy": "$",
     "mcap": 29546958848
@@ -3382,7 +3382,7 @@ window.YF_DATA = {
     "sym": "IREN",
     "price": 18.17,
     "chg": -6.72,
-    "d20": -40.54,
+    "d20": -40.21,
     "ytd": -57.45,
     "ccy": "$",
     "mcap": 7710573568
@@ -3392,7 +3392,7 @@ window.YF_DATA = {
     "sym": "NBIS",
     "price": 115.9,
     "chg": -9.92,
-    "d20": -37.7,
+    "d20": -38.5,
     "ytd": 28.83,
     "ccy": "$",
     "mcap": 31502583808
@@ -3402,7 +3402,7 @@ window.YF_DATA = {
     "sym": "BE",
     "price": 192,
     "chg": -4.92,
-    "d20": -19.78,
+    "d20": -18.75,
     "ytd": 94.54,
     "ccy": "$",
     "mcap": 56763133952
@@ -3412,7 +3412,7 @@ window.YF_DATA = {
     "sym": "VRT",
     "price": 202.1,
     "chg": -3.61,
-    "d20": -9.32,
+    "d20": -5.9,
     "ytd": 15.07,
     "ccy": "$",
     "mcap": 77809164288
@@ -3422,7 +3422,7 @@ window.YF_DATA = {
     "sym": "ANET",
     "price": 197.3,
     "chg": -4.52,
-    "d20": 0.96,
+    "d20": 6.31,
     "ytd": 47.67,
     "ccy": "$",
     "mcap": 249256640512
@@ -3432,7 +3432,7 @@ window.YF_DATA = {
     "sym": "GEV",
     "price": 803.1,
     "chg": -1.88,
-    "d20": -14.72,
+    "d20": -13.31,
     "ytd": 18.19,
     "ccy": "$",
     "mcap": 212570095616
@@ -3474,7 +3474,7 @@ window.YF_DATA = {
     "sym": "ONTO",
     "price": 203.6,
     "chg": -2.89,
-    "d20": -15.65,
+    "d20": -12.21,
     "ytd": 22.76,
     "ccy": "$",
     "mcap": 9994550272
@@ -3516,7 +3516,7 @@ window.YF_DATA = {
     "sym": "ARM",
     "price": 190.5,
     "chg": -4.63,
-    "d20": -19.95,
+    "d20": -22.17,
     "ytd": 66.07,
     "ccy": "$",
     "mcap": 203867095040
@@ -3702,7 +3702,7 @@ window.YF_DATA = {
     "sym": "CRWD",
     "price": 226.6,
     "chg": -1.42,
-    "d20": -9.1,
+    "d20": -7.34,
     "ytd": 99.84,
     "ccy": "$",
     "mcap": 232033878016
@@ -3712,7 +3712,7 @@ window.YF_DATA = {
     "sym": "PANW",
     "price": 322.2,
     "chg": -0.13,
-    "d20": -14.08,
+    "d20": -12.97,
     "ytd": 79.65,
     "ccy": "$",
     "mcap": 263735115776
@@ -3722,7 +3722,7 @@ window.YF_DATA = {
     "sym": "ZS",
     "price": 192.5,
     "chg": -0.39,
-    "d20": -12.83,
+    "d20": -12.68,
     "ytd": -12.74,
     "ccy": "$",
     "mcap": 31383138304
@@ -3732,7 +3732,7 @@ window.YF_DATA = {
     "sym": "S",
     "price": 22.2,
     "chg": -0.4,
-    "d20": -2.72,
+    "d20": -5.01,
     "ytd": 51.64,
     "ccy": "$",
     "mcap": 7726690816
@@ -3742,7 +3742,7 @@ window.YF_DATA = {
     "sym": "RBRK",
     "price": 109.9,
     "chg": -0.45,
-    "d20": -3.53,
+    "d20": -7.37,
     "ytd": 45.59,
     "ccy": "$",
     "mcap": 22616440832
@@ -3752,7 +3752,7 @@ window.YF_DATA = {
     "sym": "OKTA",
     "price": 182.9,
     "chg": 0.18,
-    "d20": -13.71,
+    "d20": -12.3,
     "ytd": 118.64,
     "ccy": "$",
     "mcap": 31969503232
@@ -3814,7 +3814,7 @@ window.YF_DATA = {
     "sym": "PYPL",
     "price": 59.28,
     "chg": 1.68,
-    "d20": 5.67,
+    "d20": 3.71,
     "ytd": 1.96,
     "ccy": "$",
     "mcap": 49241423872
@@ -3824,7 +3824,7 @@ window.YF_DATA = {
     "sym": "XYZ",
     "price": 84.58,
     "chg": 2.82,
-    "d20": 11.51,
+    "d20": 5.95,
     "ytd": 29.82,
     "ccy": "$",
     "mcap": 51130470400
@@ -3834,7 +3834,7 @@ window.YF_DATA = {
     "sym": "COIN",
     "price": 127.6,
     "chg": -2.31,
-    "d20": -26.17,
+    "d20": -30.56,
     "ytd": -46.03,
     "ccy": "$",
     "mcap": 33795727360
@@ -3844,7 +3844,7 @@ window.YF_DATA = {
     "sym": "HOOD",
     "price": 77.86,
     "chg": -4.29,
-    "d20": -22.97,
+    "d20": -25.13,
     "ytd": -32.42,
     "ccy": "$",
     "mcap": 70112247808
@@ -3854,7 +3854,7 @@ window.YF_DATA = {
     "sym": "SOFI",
     "price": 15.42,
     "chg": -1.34,
-    "d20": 8.44,
+    "d20": 2.19,
     "ytd": -43.85,
     "ccy": "$",
     "mcap": 20012699648
@@ -3864,7 +3864,7 @@ window.YF_DATA = {
     "sym": "NU",
     "price": 13.22,
     "chg": 11.75,
-    "d20": -11.45,
+    "d20": -10.25,
     "ytd": -22.33,
     "ccy": "$",
     "mcap": 63861706752
@@ -3894,7 +3894,7 @@ window.YF_DATA = {
     "sym": "PAGS",
     "price": 7.98,
     "chg": 2.05,
-    "d20": -26.32,
+    "d20": -28.24,
     "ytd": -17.48,
     "ccy": "$",
     "mcap": 2199655168
@@ -3956,7 +3956,7 @@ window.YF_DATA = {
     "sym": "ABBV",
     "price": 295,
     "chg": 0.2,
-    "d20": 4.07,
+    "d20": 4.1,
     "ytd": 28.66,
     "ccy": "$",
     "mcap": 521499836416
@@ -4194,6 +4194,38 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "TW",
+    "name": "Tradeweb Markets",
+    "type": "52w",
+    "market": "US",
+    "sec": "金融",
+    "track": "其它",
+    "px": 132.74,
+    "chg": 0.84,
+    "d20": 18.52,
+    "ytd": 23.43,
+    "hi52": 132.46,
+    "hiDay": 133.59,
+    "mcap": 28424175616
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "FROG",
+    "name": "JFrog",
+    "type": "ath",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 113.6,
+    "chg": 2.71,
+    "d20": 20.16,
+    "ytd": 81.88,
+    "hi52": 113.23,
+    "hiDay": 114.44,
+    "mcap": 14157117440
+   },
+   {
+    "d": "2026-11-13",
     "sym": "OGE",
     "name": "OGE Energy",
     "type": "ath",
@@ -4207,6 +4239,22 @@ window.YF_DATA = {
     "hi52": 51.62,
     "hiDay": 51.78,
     "mcap": 10658791424
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "TBBB",
+    "name": "BBB Foods Common Shares",
+    "type": "ath",
+    "market": "US",
+    "sec": "必需消费",
+    "track": "其它",
+    "px": 70.02,
+    "chg": 2.97,
+    "d20": 24.97,
+    "ytd": 109.7,
+    "hi52": 68.39,
+    "hiDay": 70.26,
+    "mcap": 8441805312
    },
    {
     "d": "2026-11-13",
@@ -4226,6 +4274,22 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "KOD",
+    "name": "Kodiak Sciences",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 111.19,
+    "chg": 2.72,
+    "d20": 26.18,
+    "ytd": 297.68,
+    "hi52": 112.31,
+    "hiDay": 112.79,
+    "mcap": 6988231168
+   },
+   {
+    "d": "2026-11-13",
     "sym": "FCN",
     "name": "FTI Consulting",
     "type": "52w",
@@ -4239,6 +4303,38 @@ window.YF_DATA = {
     "hi52": 202.3,
     "hiDay": 203.69,
     "mcap": 5527421952
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "MGNI",
+    "name": "Magnite",
+    "type": "52w",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 29.29,
+    "chg": -0.17,
+    "d20": 19.65,
+    "ytd": 80.47,
+    "hi52": 29.67,
+    "hiDay": 29.78,
+    "mcap": 4204857088
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "HG",
+    "name": "Hamilton Insurance Common Shares",
+    "type": "ath",
+    "market": "US",
+    "sec": "金融",
+    "track": "其它",
+    "px": 38.4,
+    "chg": -0.88,
+    "d20": 8.17,
+    "ytd": 37.63,
+    "hi52": 39.16,
+    "hiDay": 39.21,
+    "mcap": 3781048832
    },
    {
     "d": "2026-11-13",
@@ -4258,6 +4354,38 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "GCT",
+    "name": "GigaCloud Technology",
+    "type": "ath",
+    "market": "US",
+    "sec": "可选消费",
+    "track": "其它",
+    "px": 66.63,
+    "chg": 2.84,
+    "d20": 12.29,
+    "ytd": 69.63,
+    "hi52": 67.18,
+    "hiDay": 67.4,
+    "mcap": 2373628672
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "XHR",
+    "name": "Xenia Hotels & Resorts",
+    "type": "52w",
+    "market": "US",
+    "sec": "可选消费",
+    "track": "其它",
+    "px": 21.83,
+    "chg": 0.23,
+    "d20": 16.93,
+    "ytd": 54.38,
+    "hi52": 22.34,
+    "hiDay": 22.39,
+    "mcap": 2160536320
+   },
+   {
+    "d": "2026-11-13",
     "sym": "WWW",
     "name": "Wolverine World Wide",
     "type": "52w",
@@ -4274,6 +4402,70 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "PUBM",
+    "name": "PubMatic",
+    "type": "52w",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 20.61,
+    "chg": 8.36,
+    "d20": 15.59,
+    "ytd": 132.36,
+    "hi52": 19.48,
+    "hiDay": 20.81,
+    "mcap": 944736704
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "DDI",
+    "name": "DoubleDown Interactive American Depository Shares",
+    "type": "52w",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 15.77,
+    "chg": 0.45,
+    "d20": 14.9,
+    "ytd": 82.73,
+    "hi52": 15.78,
+    "hiDay": 15.8,
+    "mcap": 781457792
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "IBEX",
+    "name": "IBEX Common Shares",
+    "type": "ath",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 56.92,
+    "chg": 3.74,
+    "d20": 23.98,
+    "ytd": 49.08,
+    "hi52": 55.77,
+    "hiDay": 57.92,
+    "mcap": 759555392
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "SBC",
+    "name": "SBC Medical",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 7.35,
+    "chg": 37.64,
+    "d20": 38.68,
+    "ytd": 70.53,
+    "hi52": 5.79,
+    "hiDay": 7.39,
+    "mcap": 755925056
+   },
+   {
+    "d": "2026-11-13",
     "sym": "WCCB",
     "name": "West Coast Community Bancorp",
     "type": "ath",
@@ -4287,6 +4479,22 @@ window.YF_DATA = {
     "hi52": 64.06,
     "hiDay": 64.13,
     "mcap": 668309056
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "OBIO",
+    "name": "Orchestra BioMed",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 7.25,
+    "chg": 17.89,
+    "d20": 26.31,
+    "ytd": 74.7,
+    "hi52": 6.5,
+    "hiDay": 7.36,
+    "mcap": 570610944
    },
    {
     "d": "2026-11-13",
@@ -4319,6 +4527,22 @@ window.YF_DATA = {
     "hi52": 6.5,
     "hiDay": 6.68,
     "mcap": 131851616
+   },
+   {
+    "d": "2026-11-13",
+    "sym": "WSBK",
+    "name": "Winchester Bancorp",
+    "type": "ath",
+    "market": "US",
+    "sec": "金融",
+    "track": "其它",
+    "px": 13.89,
+    "chg": 0.5,
+    "d20": 7.34,
+    "ytd": 32.92,
+    "hi52": 13.84,
+    "hiDay": 13.89,
+    "mcap": 124460240
    }
   ],
   "log": [
@@ -4452,6 +4676,22 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "DDI",
+    "name": "DoubleDown Interactive American Depository Shares",
+    "type": "52w",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 15.77,
+    "chg": 0.45,
+    "d20": 14.9,
+    "ytd": 82.73,
+    "hi52": 15.78,
+    "hiDay": 15.8,
+    "mcap": 781457792
+   },
+   {
+    "d": "2026-11-13",
     "sym": "EW",
     "name": "Edwards Lifesciences",
     "type": "52w",
@@ -4484,19 +4724,35 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "FROG",
+    "name": "JFrog",
+    "type": "ath",
+    "market": "US",
+    "sec": "科技",
+    "track": "其它",
+    "px": 113.6,
+    "chg": 2.71,
+    "d20": 20.16,
+    "ytd": 81.88,
+    "hi52": 113.23,
+    "hiDay": 114.44,
+    "mcap": 14157117440
+   },
+   {
+    "d": "2026-11-13",
     "sym": "GCT",
     "name": "GigaCloud Technology",
     "type": "ath",
     "market": "US",
     "sec": "可选消费",
     "track": "其它",
-    "px": 66.18,
-    "chg": 2.19,
-    "d20": 11.54,
-    "ytd": 68.5,
+    "px": 66.63,
+    "chg": 2.84,
+    "d20": 12.29,
+    "ytd": 69.63,
     "hi52": 67.18,
     "hiDay": 67.4,
-    "mcap": 2358666496
+    "mcap": 2373628672
    },
    {
     "d": "2026-11-13",
@@ -4506,13 +4762,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "金融",
     "track": "其它",
-    "px": 38.7,
-    "chg": -0.1,
-    "d20": 9.01,
-    "ytd": 38.71,
+    "px": 38.4,
+    "chg": -0.88,
+    "d20": 8.17,
+    "ytd": 37.63,
     "hi52": 39.16,
     "hiDay": 39.21,
-    "mcap": 3810588160
+    "mcap": 3781048832
    },
    {
     "d": "2026-11-13",
@@ -4522,13 +4778,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "科技",
     "track": "其它",
-    "px": 56.34,
-    "chg": 2.56,
-    "d20": 22.72,
-    "ytd": 47.56,
+    "px": 56.92,
+    "chg": 3.74,
+    "d20": 23.98,
+    "ytd": 49.08,
     "hi52": 55.77,
-    "hiDay": 56.34,
-    "mcap": 750929664
+    "hiDay": 57.92,
+    "mcap": 759555392
    },
    {
     "d": "2026-11-13",
@@ -4580,19 +4836,35 @@ window.YF_DATA = {
    },
    {
     "d": "2026-11-13",
+    "sym": "KOD",
+    "name": "Kodiak Sciences",
+    "type": "52w",
+    "market": "US",
+    "sec": "医疗",
+    "track": "生物医药",
+    "px": 111.19,
+    "chg": 2.72,
+    "d20": 26.18,
+    "ytd": 297.68,
+    "hi52": 112.31,
+    "hiDay": 112.79,
+    "mcap": 6988231168
+   },
+   {
+    "d": "2026-11-13",
     "sym": "MGNI",
     "name": "Magnite",
     "type": "52w",
     "market": "US",
     "sec": "科技",
     "track": "其它",
-    "px": 29.22,
-    "chg": -0.27,
-    "d20": 19.36,
-    "ytd": 80.04,
+    "px": 29.29,
+    "chg": -0.17,
+    "d20": 19.65,
+    "ytd": 80.47,
     "hi52": 29.67,
-    "hiDay": 29.74,
-    "mcap": 4200550144
+    "hiDay": 29.78,
+    "mcap": 4204857088
    },
    {
     "d": "2026-11-13",
@@ -4602,13 +4874,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "医疗",
     "track": "生物医药",
-    "px": 6.45,
-    "chg": 5.37,
-    "d20": 12.46,
-    "ytd": 55.54,
+    "px": 7.25,
+    "chg": 17.89,
+    "d20": 26.31,
+    "ytd": 74.7,
     "hi52": 6.5,
-    "hiDay": 6.56,
-    "mcap": 510008128
+    "hiDay": 7.36,
+    "mcap": 570610944
    },
    {
     "d": "2026-11-13",
@@ -4666,13 +4938,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "科技",
     "track": "其它",
-    "px": 20,
-    "chg": 5.52,
-    "d20": 12.2,
-    "ytd": 125.54,
+    "px": 20.61,
+    "chg": 8.36,
+    "d20": 15.59,
+    "ytd": 132.36,
     "hi52": 19.48,
-    "hiDay": 20.27,
-    "mcap": 919983744
+    "hiDay": 20.81,
+    "mcap": 944736704
    },
    {
     "d": "2026-11-13",
@@ -4714,13 +4986,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "医疗",
     "track": "生物医药",
-    "px": 6.99,
-    "chg": 30.56,
-    "d20": 31.89,
-    "ytd": 62.18,
+    "px": 7.35,
+    "chg": 37.64,
+    "d20": 38.68,
+    "ytd": 70.53,
     "hi52": 5.79,
-    "hiDay": 7,
-    "mcap": 717357440
+    "hiDay": 7.39,
+    "mcap": 755925056
    },
    {
     "d": "2026-11-13",
@@ -4730,13 +5002,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "必需消费",
     "track": "其它",
-    "px": 68.99,
-    "chg": 1.43,
-    "d20": 23.13,
-    "ytd": 106.62,
+    "px": 70.02,
+    "chg": 2.97,
+    "d20": 24.97,
+    "ytd": 109.7,
     "hi52": 68.39,
     "hiDay": 70.26,
-    "mcap": 8315214848
+    "mcap": 8441805312
    },
    {
     "d": "2026-11-13",
@@ -4762,13 +5034,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "金融",
     "track": "其它",
-    "px": 133.21,
-    "chg": 1.12,
-    "d20": 18.94,
-    "ytd": 23.87,
+    "px": 132.74,
+    "chg": 0.84,
+    "d20": 18.52,
+    "ytd": 23.43,
     "hi52": 132.46,
     "hiDay": 133.59,
-    "mcap": 28505544704
+    "mcap": 28424175616
    },
    {
     "d": "2026-11-13",
@@ -4810,13 +5082,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "金融",
     "track": "其它",
-    "px": 13.85,
-    "chg": 0.21,
-    "d20": 7.03,
-    "ytd": 32.53,
+    "px": 13.89,
+    "chg": 0.5,
+    "d20": 7.34,
+    "ytd": 32.92,
     "hi52": 13.84,
-    "hiDay": 13.85,
-    "mcap": 124101808
+    "hiDay": 13.89,
+    "mcap": 124460240
    },
    {
     "d": "2026-11-13",
@@ -4842,13 +5114,13 @@ window.YF_DATA = {
     "market": "US",
     "sec": "可选消费",
     "track": "其它",
-    "px": 21.8,
-    "chg": 0.14,
-    "d20": 16.76,
-    "ytd": 54.17,
+    "px": 21.83,
+    "chg": 0.23,
+    "d20": 16.93,
+    "ytd": 54.38,
     "hi52": 22.34,
     "hiDay": 22.39,
-    "mcap": 2158556672
+    "mcap": 2160536320
    },
    {
     "d": "2026-11-12",
@@ -5734,16 +6006,16 @@ window.YF_DATA = {
   "daily": [
    {
     "d": "2026-11-13",
-    "n": 33,
-    "w": 17,
-    "a": 16,
+    "n": 36,
+    "w": 19,
+    "a": 17,
     "sec": {
      "k": "金融",
      "v": 9
     },
     "trk": {
      "k": "生物医药",
-     "v": 6
+     "v": 7
     }
    },
    {
@@ -5762,18 +6034,18 @@ window.YF_DATA = {
    }
   ],
   "logDays": 2,
-  "logTotal": 88,
+  "logTotal": 91,
   "weekly": {
    "byMkt": {
-    "US": 88
+    "US": 91
    },
    "bySec": {
     "平台": 2,
     "金融": 24,
-    "医疗": 21,
+    "医疗": 22,
     "通信服务": 1,
     "可选消费": 15,
-    "科技": 9,
+    "科技": 11,
     "必需消费": 4,
     "能源": 4,
     "公用事业": 4,
@@ -5782,28 +6054,28 @@ window.YF_DATA = {
    },
    "byTrack": {
     "端侧AI": 2,
-    "其它": 65,
-    "生物医药": 21
+    "其它": 67,
+    "生物医药": 22
    },
    "byType": {
-    "ath": 47,
-    "52w": 41
+    "ath": 48,
+    "52w": 43
    },
-   "total": 88,
+   "total": 91,
    "days": 2,
    "window": 7
   },
   "monthly": {
    "byMkt": {
-    "US": 88
+    "US": 91
    },
    "bySec": {
     "平台": 2,
     "金融": 24,
-    "医疗": 21,
+    "医疗": 22,
     "通信服务": 1,
     "可选消费": 15,
-    "科技": 9,
+    "科技": 11,
     "必需消费": 4,
     "能源": 4,
     "公用事业": 4,
@@ -5812,14 +6084,14 @@ window.YF_DATA = {
    },
    "byTrack": {
     "端侧AI": 2,
-    "其它": 65,
-    "生物医药": 21
+    "其它": 67,
+    "生物医药": 22
    },
    "byType": {
-    "ath": 47,
-    "52w": 41
+    "ath": 48,
+    "52w": 43
    },
-   "total": 88,
+   "total": 91,
    "days": 2,
    "window": 30
   },
@@ -5936,10 +6208,10 @@ window.YF_DATA = {
     "firstD": "2026-11-12",
     "firstPx": 131.64,
     "lastD": "2026-11-13",
-    "lastPx": 133.21,
+    "lastPx": 132.74,
     "n": 2,
     "everAth": false,
-    "chg": 1.19
+    "chg": 0.84
    },
    {
     "sym": "OGE",
@@ -5962,10 +6234,10 @@ window.YF_DATA = {
     "firstD": "2026-11-12",
     "firstPx": 68,
     "lastD": "2026-11-13",
-    "lastPx": 68.99,
+    "lastPx": 70.02,
     "n": 2,
     "everAth": true,
-    "chg": 1.46
+    "chg": 2.97
    },
    {
     "sym": "HG",
@@ -5975,10 +6247,10 @@ window.YF_DATA = {
     "firstD": "2026-11-12",
     "firstPx": 38.74,
     "lastD": "2026-11-13",
-    "lastPx": 38.7,
+    "lastPx": 38.4,
     "n": 2,
     "everAth": true,
-    "chg": -0.1
+    "chg": -0.88
    },
    {
     "sym": "COLM",
@@ -6079,10 +6351,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 29.5,
     "lastD": "2026-11-13",
-    "lastPx": 29.22,
+    "lastPx": 29.29,
     "n": 1,
     "everAth": false,
-    "chg": -0.95
+    "chg": -0.71
    },
    {
     "sym": "WWW",
@@ -6105,10 +6377,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 19.72,
     "lastD": "2026-11-13",
-    "lastPx": 20,
+    "lastPx": 20.61,
     "n": 1,
     "everAth": false,
-    "chg": 1.42
+    "chg": 4.51
    },
    {
     "sym": "SBC",
@@ -6118,10 +6390,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 6.93,
     "lastD": "2026-11-13",
-    "lastPx": 6.99,
+    "lastPx": 7.35,
     "n": 1,
     "everAth": false,
-    "chg": 0.87
+    "chg": 6.06
    },
    {
     "sym": "WCCB",
@@ -6170,10 +6442,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 21.73,
     "lastD": "2026-11-13",
-    "lastPx": 21.8,
+    "lastPx": 21.83,
     "n": 1,
     "everAth": false,
-    "chg": 0.32
+    "chg": 0.46
    },
    {
     "sym": "IBEX",
@@ -6183,10 +6455,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 55.43,
     "lastD": "2026-11-13",
-    "lastPx": 56.34,
+    "lastPx": 56.92,
     "n": 1,
     "everAth": true,
-    "chg": 1.64
+    "chg": 2.69
    },
    {
     "sym": "GCT",
@@ -6196,10 +6468,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 66.18,
     "lastD": "2026-11-13",
-    "lastPx": 66.18,
+    "lastPx": 66.63,
     "n": 1,
     "everAth": true,
-    "chg": 0
+    "chg": 0.68
    },
    {
     "sym": "OBIO",
@@ -6209,10 +6481,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 6.45,
     "lastD": "2026-11-13",
-    "lastPx": 6.45,
+    "lastPx": 7.25,
     "n": 1,
     "everAth": false,
-    "chg": 0
+    "chg": 12.4
    },
    {
     "sym": "RVSB",
@@ -6235,10 +6507,10 @@ window.YF_DATA = {
     "firstD": "2026-11-13",
     "firstPx": 13.85,
     "lastD": "2026-11-13",
-    "lastPx": 13.85,
+    "lastPx": 13.89,
     "n": 1,
     "everAth": true,
-    "chg": 0
+    "chg": 0.29
    },
    {
     "sym": "CROX",
@@ -6249,6 +6521,45 @@ window.YF_DATA = {
     "firstPx": 163.72,
     "lastD": "2026-11-13",
     "lastPx": 163.72,
+    "n": 1,
+    "everAth": false,
+    "chg": 0
+   },
+   {
+    "sym": "FROG",
+    "name": "JFrog",
+    "sec": "科技",
+    "track": "其它",
+    "firstD": "2026-11-13",
+    "firstPx": 113.6,
+    "lastD": "2026-11-13",
+    "lastPx": 113.6,
+    "n": 1,
+    "everAth": true,
+    "chg": 0
+   },
+   {
+    "sym": "KOD",
+    "name": "Kodiak Sciences",
+    "sec": "医疗",
+    "track": "生物医药",
+    "firstD": "2026-11-13",
+    "firstPx": 111.19,
+    "lastD": "2026-11-13",
+    "lastPx": 111.19,
+    "n": 1,
+    "everAth": false,
+    "chg": 0
+   },
+   {
+    "sym": "DDI",
+    "name": "DoubleDown Interactive American Depository Shares",
+    "sec": "科技",
+    "track": "其它",
+    "firstD": "2026-11-13",
+    "firstPx": 15.77,
+    "lastD": "2026-11-13",
+    "lastPx": 15.77,
     "n": 1,
     "everAth": false,
     "chg": 0
@@ -6750,7 +7061,7 @@ window.YF_DATA = {
   ]
  },
  "earnBeat": {
-  "updatedAt": "2026-11-14T02:00:27.338Z",
+  "updatedAt": "2026-11-14T02:49:40.505Z",
   "quarters": [
    {
     "q": "2026Q4",
@@ -6762,12 +7073,12 @@ window.YF_DATA = {
       "name": "SBC Medical",
       "size": "小型",
       "cut": 8,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 37.64,
+      "at": "2026-11-13",
+      "px": 7.35,
       "mcap": 538917950,
       "capPx": 6.88,
-      "mcapAt": null,
+      "mcapAt": 575733566,
       "epsAct": 0.1,
       "epsEst": 0.117,
       "surp": -14.9,
@@ -6779,7 +7090,7 @@ window.YF_DATA = {
       "q": "2026Q4",
       "addedAt": "2026-11-13T15:18:58.945Z",
       "zhDone": true,
-      "isNew": false
+      "isNew": true
      },
      {
       "d": "2026-11-12",
@@ -6788,9 +7099,9 @@ window.YF_DATA = {
       "name": "Cerebras Systems",
       "size": "大市值",
       "cut": 3,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 11.22,
+      "at": "2026-11-13",
+      "px": 108.72,
       "mcap": 23221884900,
       "epsAct": 0.125,
       "epsEst": -0.143,
@@ -6801,13 +7112,14 @@ window.YF_DATA = {
       "desc": "Cerebras Systems（纳斯达克股票代码：CBRS）正在构建世界上最快的人工智能基础设施。其晶圆级计算技术提供高速AI推理，使能",
       "q": "2026Q4",
       "addedAt": "2026-11-13T14:17:56.642Z",
-      "isNew": false,
+      "isNew": true,
       "zhDone": true,
       "capPx": 107.85,
       "guide": [
        "【发布利好！英伟达竞争对手盘后暴涨超18%】11月12日美股收盘后，AI芯片厂商Cerebras(CBRS.US)公布2026年第三季度财报，在AI推理需求拉动下，公司季度营收刷新历史纪录，同时上调全年业绩指引，四季度业绩展望大幅超出市场预期，盘后股价大涨超18%",
        "【业绩超预期 美股AI芯片龙头盘后大涨超19%】美股盘后，晶圆级AI芯片龙头企业Cerebras Systems发布超预期的最新财报，Cerebras Systems股价盘后大涨超19%"
-      ]
+      ],
+      "mcapAt": 23409210258
      },
      {
       "d": "2026-11-12",
@@ -6816,9 +7128,9 @@ window.YF_DATA = {
       "name": "Liftoff Mobile",
       "size": "中型",
       "cut": 5,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 30.63,
+      "at": "2026-11-13",
+      "px": 24.44,
       "mcap": 3168192770,
       "epsAct": 0.414,
       "epsEst": 0.203,
@@ -6829,9 +7141,10 @@ window.YF_DATA = {
       "desc": "Liftoff（纳斯达克股票代码：LFTO）是专为移动应用经济打造的领先增长和货币化引擎。其人工智能驱动的平台 Cortex 统一了营销、创意和货币化，在整个应用程序生命周期中大规模提供可衡量的性能。 Liftoff 使",
       "q": "2026Q4",
       "addedAt": "2026-11-13T14:17:58.345Z",
-      "isNew": false,
+      "isNew": true,
       "zhDone": true,
-      "capPx": 23.37
+      "capPx": 23.37,
+      "mcapAt": 3313249093
      },
      {
       "d": "2026-11-12",
@@ -6840,9 +7153,9 @@ window.YF_DATA = {
       "name": "Accelevation",
       "size": "中型",
       "cut": 5,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 5.81,
+      "at": "2026-11-13",
+      "px": 12.92,
       "mcap": 2886734080,
       "epsAct": null,
       "epsEst": 0.066,
@@ -6853,9 +7166,10 @@ window.YF_DATA = {
       "desc": "Acceletion 是一家领先的设计商、制造商和安装商，为关键任务基础设施提供定制结构、电气和机械系统。其垂直整​​合模式结合了美国制造和全国范围的现场服务能力，使客户能够更快地从",
       "q": "2026Q4",
       "addedAt": "2026-11-13T14:18:02.137Z",
-      "isNew": false,
+      "isNew": true,
       "zhDone": true,
-      "capPx": 12.58
+      "capPx": 12.58,
+      "mcapAt": 2964753920
      },
      {
       "d": "2026-11-12",
@@ -6864,9 +7178,9 @@ window.YF_DATA = {
       "name": "HawkEye 360",
       "size": "小型",
       "cut": 8,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 23.79,
+      "at": "2026-11-13",
+      "px": 18.16,
       "mcap": 1437154690,
       "epsAct": 0.007,
       "epsEst": 0.017,
@@ -6877,9 +7191,10 @@ window.YF_DATA = {
       "desc": "HawkEye 360​​ 总部位于弗吉尼亚州赫恩登，是一家信号情报公司，提供关键任务情报数据和分析以加强国家和全球安全。通过检测、表征和地理定位 RF 信号，HawkEye 360​​ 为国防、情报和商业提供装备",
       "q": "2026Q4",
       "addedAt": "2026-11-13T14:18:03.970Z",
-      "isNew": false,
+      "isNew": true,
       "zhDone": true,
-      "capPx": 17.14
+      "capPx": 17.14,
+      "mcapAt": 1522679648
      },
      {
       "d": "2026-11-12",
@@ -6888,9 +7203,9 @@ window.YF_DATA = {
       "name": "Newsmax",
       "size": "小型",
       "cut": 8,
-      "chg": null,
-      "at": null,
-      "px": null,
+      "chg": 31.41,
+      "at": "2026-11-13",
+      "px": 9.58,
       "mcap": 941581120,
       "epsAct": 0.12,
       "epsEst": -0.01,
@@ -6901,9 +7216,10 @@ window.YF_DATA = {
       "desc": "Newsmax Inc. 在纽约证券交易所 (NMAX) 上市，并通过美国领先的新闻媒体之一 Newsmax Broadcasting LLC 运营 Newsmax 频道。第四高收视率的网络由所有主要付费电视提供商运营。",
       "q": "2026Q4",
       "addedAt": "2026-11-13T14:18:06.822Z",
-      "isNew": false,
+      "isNew": true,
       "zhDone": true,
-      "capPx": 9.7
+      "capPx": 9.7,
+      "mcapAt": 929932694
      },
      {
       "d": "2026-11-12",
@@ -6934,34 +7250,34 @@ window.YF_DATA = {
      {
       "d": "2026-11-12",
       "sess": "post",
-      "sym": "ENHA",
-      "name": "Enhanced",
-      "size": "中型",
-      "cut": 5,
-      "chg": null,
-      "at": null,
-      "px": null,
-      "mcap": 2848710910,
-      "capPx": 6.67,
-      "mcapAt": null,
-      "epsAct": -0.863,
-      "epsEst": -0.3,
-      "surp": -187.6,
-      "rev": 3307430,
-      "net": -13462650,
-      "sec": "包装食品",
-      "desc": "Enhanced Group Inc. 涉足体育娱乐、表演技术和生活方式健康市场。它从事组织现场体育赛事；制作和分发相关内容；向客户营销生活方式和健康优化服务；并运营 Live Enhan",
+      "sym": "NU",
+      "name": "Nu",
+      "size": "大市值",
+      "cut": 3,
+      "chg": 11.75,
+      "at": "2026-11-13",
+      "px": 13.22,
+      "mcap": 57442619000,
+      "capPx": 13.22,
+      "mcapAt": 57442620160,
+      "epsAct": 0.224,
+      "epsEst": 0.223,
+      "surp": 0.3,
+      "rev": 5820364000,
+      "net": 1090836000,
+      "sec": "消费金融",
+      "desc": "Nu 是全球最大的数字金融服务平台之一，为巴西、墨西哥和哥伦比亚超过 1.35 亿人提供服务。公司已被",
       "guide": null,
       "q": "2026Q4",
-      "addedAt": "2026-11-14T01:51:29.876Z",
+      "addedAt": "2026-11-14T02:49:39.950Z",
       "zhDone": true,
-      "isNew": false
+      "isNew": true
      }
     ]
    }
   ],
   "total": 8,
-  "pending": 7
+  "pending": 0
  },
  "gpuRent": {
   "meta": {
@@ -8241,7 +8557,7 @@ window.YF_DATA = {
  "movers": {
   "date": "20261113",
   "closeDate": "2026-11-13",
-  "ts": "2026-11-14T01:57:47.795Z",
+  "ts": "2026-11-14T02:46:53.814Z",
   "pool": 3729,
   "universe": 3733,
   "preTotal": 18,
@@ -12298,6 +12614,902 @@ window.YF_DATA = {
     "date": "2026-11-13",
     "session": "pre",
     "n": 145
+   }
+  ],
+  "rolling": [
+   {
+    "date": "2026-11-13",
+    "session": "post",
+    "rows": [
+     {
+      "sym": "LHX",
+      "name": "L3Harris Technologies",
+      "sec": "工业",
+      "ind": "航空航天与国防",
+      "zh": "L3Harris Technologies, Inc. 为全球政府和商业客户提供关键任务解决方案。它通过三个部门运营：空间与任务系统（SMS）、通信与频谱优势（CSD）以及导弹解决方案（MSL）。 SMS 部分集成了卫星",
+      "mcap": 50616807259,
+      "mv": -3.82,
+      "px": 272.35,
+      "prePx": null,
+      "postPx": 261.94,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "ALAB",
+      "name": "Astera Labs",
+      "sec": "科技",
+      "ind": "半导体",
+      "zh": "Astera Labs, Inc. 在台湾和美国为云和人工智能基础设施设计、制造和销售基于半导体的连接解决方​​案。它提供了一个智能连接平台，由基于半导体的高速混合信号连接产品组成，这些产品集成了",
+      "mcap": 39813608864,
+      "mv": -3.06,
+      "px": 221.83,
+      "prePx": null,
+      "postPx": 215.05,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "H",
+      "name": "Hyatt Hotels",
+      "sec": "可选消费",
+      "ind": "住宿",
+      "zh": "凯悦酒店集团作为一家酒店公司在美国和国际上运营。它通过管理和特许经营、自有和租赁以及分销部门进行运营。该公司开发、拥有、经营、管理、特许经营、租赁和许可一系列财产，",
+      "mcap": 17482624474,
+      "mv": -3.19,
+      "px": 187.7,
+      "prePx": null,
+      "postPx": 181.72,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "CHYM",
+      "name": "Chime Financial",
+      "sec": "金融",
+      "ind": "软件 - 应用程序",
+      "zh": "Chime Financial, Inc. 是一家金融技术公司，在美国和国际上提供数字消费者银行和支付解决方案。该公司提供各种消费产品，包括支票账户、借记卡、ATM 和现金存款网络、工资支票、出境服务",
+      "mcap": 12676311566,
+      "mv": 3.4,
+      "px": 33.55,
+      "prePx": null,
+      "postPx": 34.69,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "BEPC",
+      "name": "Brookfield Renewable Brookfield Renewable Subordinate Voting Shares",
+      "sec": "公用事业",
+      "ind": "公用事业 - 可再生能源",
+      "zh": "布鲁克菲尔德可再生能源公司拥有并经营一系列可再生能源和可持续解决方案资产。该公司的产品组合包括水力发电、风能、公用事业规模太阳能、分布式发电、抽水蓄能、碳捕获和存储、热电联产、生物质能和电子燃料。它是",
+      "mcap": 11415565526,
+      "mv": -3.71,
+      "px": 30.71,
+      "prePx": null,
+      "postPx": 29.57,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "NVMI",
+      "name": "Nova",
+      "sec": "科技",
+      "ind": "半导体设备",
+      "zh": "Nova Ltd.在台湾、美国、中国、韩国和国际上从事半导体制造过程控制系统的设计、开发、生产和销售。该公司的产品组合包括一套用于尺寸、薄膜和测量的计量平台。",
+      "mcap": 10413372946,
+      "mv": 3.6,
+      "px": 317.86,
+      "prePx": null,
+      "postPx": 329.3,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "ONTO",
+      "name": "ONTO INNOVATION",
+      "sec": "半导体",
+      "ind": "半导体设备",
+      "zh": "Onto Innovation Inc. 在美国、台湾、韩国、日本、中国、东南亚、亚洲和欧洲从事宏观缺陷检测和计量的过程控制工具的设计、开发、制造和支持。该公司提供光刻系统和工艺",
+      "mcap": 10294455902,
+      "mv": -3.24,
+      "px": 203.62,
+      "prePx": null,
+      "postPx": 197.03,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "POWL",
+      "name": "Powell Industries",
+      "sec": "能源",
+      "ind": "电气设备及零件",
+      "zh": "Powell Industries, Inc. 及其子公司设计、开发、制造、销售定制工程设备和系统并提供服务。该公司的产品组合包括集成电力控制室变电站、定制设计模块和电气室；和传统",
+      "mcap": 5165044598,
+      "mv": -5.64,
+      "px": 142.72,
+      "prePx": null,
+      "postPx": 134.68,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "TAC",
+      "name": "TransAlta",
+      "sec": "公用事业",
+      "ind": "公用事业 - 独立电力生产商",
+      "zh": "TransAlta Corporation 从事电能的开发、生产和销售。该公司通过水力、风能和太阳能、天然气、能源转型和能源营销部门开展业务。 Hydro 部门持有位于艾伯塔省和加拿大约 922 兆瓦 (MW) 的权益。",
+      "mcap": 4202045500,
+      "mv": -5.37,
+      "px": 13.21,
+      "prePx": null,
+      "postPx": 12.5,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "ENHA",
+      "name": "Enhanced",
+      "sec": "可选消费",
+      "ind": "包装食品",
+      "zh": "Enhanced Group Inc. 涉足体育娱乐、表演技术和生活方式健康市场。它从事组织现场体育赛事；制作和分发相关内容；向客户营销生活方式和健康优化服务；并运营 Live Enhan",
+      "mcap": 2848710960,
+      "mv": 7.95,
+      "px": 6.67,
+      "prePx": null,
+      "postPx": 7.2,
+      "closeChg": null,
+      "earn": true
+     },
+     {
+      "sym": "HTZ",
+      "name": "Hertz Global",
+      "sec": "可选消费",
+      "ind": "租赁服务",
+      "zh": "Hertz Global Holdings, Inc. 是一家汽车租赁公司。它通过两个部门运营：美洲 RAC 部门和国际 R​​AC 部门。该公司在美国的公司运营、被许可人和特许经营地点提供 Hertz、Dollar 和",
+      "mcap": 550497318,
+      "mv": 8.33,
+      "px": 1.5,
+      "prePx": null,
+      "postPx": 1.63,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "BGIN",
+      "name": "Bgin Blockchain",
+      "sec": "金融",
+      "ind": "电脑硬件",
+      "zh": "Bgin Blockchain Limited 通过其子公司作为一家数字资产技术公司在新加坡、香港、美国和国际上运营。它通过采矿业务和运营矿池生产加密货币。该公司还设计和销售矿机",
+      "mcap": 312255197,
+      "mv": -8.51,
+      "px": 3.88,
+      "prePx": null,
+      "postPx": 3.55,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "PMA",
+      "name": "PMA Graphene Technology",
+      "sec": "可选消费",
+      "ind": "工程建筑",
+      "zh": "PMA Graphene Technology Group Inc.通过其子公司在香港从事湿法工程。 Its works include plastering, tile laying, brick laying, fl",
+      "mcap": 197199750,
+      "mv": -8.82,
+      "px": 1.36,
+      "prePx": null,
+      "postPx": 1.24,
+      "closeChg": null,
+      "earn": false
+     },
+     {
+      "sym": "ONEN",
+      "name": "ONE Nuclear Energy",
+      "sec": "公用事业",
+      "ind": "公用事业 - 独立电力生产商",
+      "zh": "ONE Nuclear Energy Inc. 使用快速天然气和先进的核小型模块化反应堆 (SMR) 技术提供大规模能源开发、所有权和综合发电平台的运营。它提供发展；建造;公用事业规模的所有权和运营",
+      "mcap": 163471058,
+      "mv": 9.29,
+      "px": 1.4,
+      "prePx": null,
+      "postPx": 1.53,
+      "closeChg": null,
+      "earn": false
+     }
+    ]
+   },
+   {
+    "date": "2026-11-13",
+    "session": "pre",
+    "rows": [
+     {
+      "sym": "PANW",
+      "name": "Palo Alto",
+      "sec": "网安",
+      "ind": "软件 - 基础设施",
+      "zh": "Palo Alto Networks, Inc. 在美洲、欧洲、中东、非洲、亚太地区和日本提供网络安全解决方案。它提供 Prisma Access，一种安全访问服务边缘解决方案； Strata Cloud Manager",
+      "mcap": 263735115776,
+      "mv": 3.48,
+      "px": 322.66,
+      "prePx": 333.89,
+      "postPx": null,
+      "closeChg": -0.13,
+      "earn": false
+     },
+     {
+      "sym": "CRWD",
+      "name": "CrowdStrike",
+      "sec": "网安",
+      "ind": "软件 - 基础设施",
+      "zh": "CrowdStrike Holdings, Inc. 在美国和国际上提供网络安全解决方案。其统一平台通过基于软件即服务 (SaaS) 订阅的模型提供端点、云工作负载、身份和数据的云保护。公司提供语料库",
+      "mcap": 232033878016,
+      "mv": 3.54,
+      "px": 229.87,
+      "prePx": 238.01,
+      "postPx": null,
+      "closeChg": -1.42,
+      "earn": false
+     },
+     {
+      "sym": "TRV",
+      "name": "The Travelers Companies",
+      "sec": "金融",
+      "ind": "保险 - 财产与意外伤害",
+      "zh": "The Travelers Companies, Inc. 通过其子公司，向美国、加拿大和国际上的企业、政府单位、协会和个人提供一系列商业和个人财产以及伤亡保险产品和服务。它通过三段运作",
+      "mcap": 82640519168,
+      "mv": 3.68,
+      "px": 403.18,
+      "prePx": 418.02,
+      "postPx": null,
+      "closeChg": 0.01,
+      "earn": false
+     },
+     {
+      "sym": "NU",
+      "name": "Nu",
+      "sec": "金融",
+      "ind": "消费金融",
+      "zh": "Nu is one of the largest digital financial services platforms in the world, serving above 135 million across B",
+      "mcap": 63861706752,
+      "mv": 5.55,
+      "px": 11.83,
+      "prePx": 12.49,
+      "postPx": null,
+      "closeChg": 11.75,
+      "earn": false
+     },
+     {
+      "sym": "RBLX",
+      "name": "Roblox",
+      "sec": "科技",
+      "ind": "电子游戏和多媒体",
+      "zh": "Roblox Corporation 在美国和国际上运营着一个用于连接和交流的沉浸式平台。它提供Roblox Client，一个允许用户探索沉浸式体验的应用程序； Roblox Studio，一个免费的工具集，允许开发人",
+      "mcap": 35721252864,
+      "mv": -4.73,
+      "px": 51.42,
+      "prePx": 48.99,
+      "postPx": null,
+      "closeChg": -2.94,
+      "earn": false
+     },
+     {
+      "sym": "CBRS",
+      "name": "Cerebras Systems",
+      "sec": "科技",
+      "ind": "半导体",
+      "zh": "Cerebras Systems (NASDAQ: CBRS) is building the world's fastest AI infrastructure. Its wafer-scale computing t",
+      "mcap": 25827962880,
+      "mv": 12.7,
+      "px": 97.75,
+      "prePx": 110.16,
+      "postPx": null,
+      "closeChg": 11.22,
+      "earn": false
+     },
+     {
+      "sym": "H",
+      "name": "Hyatt Hotels",
+      "sec": "可选消费",
+      "ind": "住宿",
+      "zh": "凯悦酒店集团作为一家酒店公司在美国和国际上运营。它通过管理和特许经营、自有和租赁以及分销部门进行运营。该公司开发、拥有、经营、管理、特许经营、租赁和许可一系列财产，",
+      "mcap": 17529319424,
+      "mv": 3.4,
+      "px": 187.21,
+      "prePx": 193.58,
+      "postPx": null,
+      "closeChg": 0.26,
+      "earn": false
+     },
+     {
+      "sym": "BURL",
+      "name": "Burlington Stores",
+      "sec": "可选消费",
+      "ind": "服装零售",
+      "zh": "Burlington Stores, Inc. 在美国和波多黎各经营品牌商品零售商。该公司提供以时尚为中心的商品，包括女装成衣、男装、青年服装、鞋类、配饰、家居用品、玩具、礼品和外套，以及",
+      "mcap": 15255298048,
+      "mv": -3.05,
+      "px": 251.87,
+      "prePx": 244.19,
+      "postPx": null,
+      "closeChg": -3.58,
+      "earn": false
+     },
+     {
+      "sym": "SKM",
+      "name": "SK Telecom",
+      "sec": "通信服务",
+      "ind": "电信服务",
+      "zh": "SK Telecom Co., Ltd. 在韩国提供无线电信服务。该公司通过三个部门运营：蜂窝服务部门、固网电信服务部门和其他业务部门。蜂窝服务部门提供无线语音和数据传输",
+      "mcap": 13271078912,
+      "mv": 3.31,
+      "px": 34.12,
+      "prePx": 35.25,
+      "postPx": null,
+      "closeChg": 1.32,
+      "earn": false
+     },
+     {
+      "sym": "KEP",
+      "name": "Korea Electric Power",
+      "sec": "公用事业",
+      "ind": "公用事业 - 受监管的电力",
+      "zh": "韩国电力公司及其子公司在韩国和国际上从事发电、输电和配电业务。该公司通过五个部门运营：电力销售部门、核能发电部门、火力发电部门、电力供应部门",
+      "mcap": 13044710400,
+      "mv": -7.01,
+      "px": 11.13,
+      "prePx": 10.35,
+      "postPx": null,
+      "closeChg": -8.72,
+      "earn": false
+     },
+     {
+      "sym": "WSE",
+      "name": "Wise",
+      "sec": "工业",
+      "ind": "信息技术服务",
+      "zh": "Wise Group plc 在英国、欧洲其他地区、亚太地区、北美和国际上提供跨境和国内金融服务。它提供汇款、货币兑换和账户服务。该公司的产品包括Wise Account，一个工业解决方案",
+      "mcap": 10835547136,
+      "mv": 7.41,
+      "px": 10.93,
+      "prePx": 11.74,
+      "postPx": null,
+      "closeChg": 2.74,
+      "earn": false
+     },
+     {
+      "sym": "PRAX",
+      "name": "Praxis Precision Medicines",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Praxis Precision Medicines, Inc. 是一家临床阶段的生物制药公司，在美国致力于开发以神经元兴奋抑制失衡为特征的中枢神经系统 (CNS) 疾病的疗法。该公司的平台包括 Cebrum，一种小分子",
+      "mcap": 9171742720,
+      "mv": 6.77,
+      "px": 324.76,
+      "prePx": 346.75,
+      "postPx": null,
+      "closeChg": 1.04,
+      "earn": false
+     },
+     {
+      "sym": "MOD",
+      "name": "Modine Manufacturing",
+      "sec": "可选消费",
+      "ind": "建筑产品和设备",
+      "zh": "Modine Manufacturing Company 在美国、加拿大、意大利、匈牙利、英国、中国和国际上设计、工程、测试、制造和销售关键任务热解决方案。它提供传热产品，包括圆管板翅片结构；燃气，h",
+      "mcap": 7216694272,
+      "mv": 31.78,
+      "px": 106.1,
+      "prePx": 139.82,
+      "postPx": null,
+      "closeChg": 27.86,
+      "earn": false
+     },
+     {
+      "sym": "LFTO",
+      "name": "Liftoff Mobile",
+      "sec": "科技",
+      "ind": "软件与数据服务",
+      "zh": "Liftoff（纳斯达克股票代码：LFTO）是专为移动应用经济打造的领先增长和货币化引擎。其人工智能驱动的平台 Cortex 统一了营销、创意和货币化，在整个应用程序生命周期中大规模提供可衡量的性能。 Liftoff 使",
+      "mcap": 4138462464,
+      "mv": 24.76,
+      "px": 18.71,
+      "prePx": 23.34,
+      "postPx": null,
+      "closeChg": 30.63,
+      "earn": false
+     },
+     {
+      "sym": "ACCV",
+      "name": "Accelevation",
+      "sec": "能源",
+      "ind": "工业机械",
+      "zh": "Acceletion 是一家领先的设计商、制造商和安装商，为关键任务基础设施提供定制结构、电气和机械系统。其垂直整​​合模式结合了美国制造和全国范围的现场服务能力，使客户能够更快地从",
+      "mcap": 2875243264,
+      "mv": 8.68,
+      "px": 12.21,
+      "prePx": 13.27,
+      "postPx": null,
+      "closeChg": 5.81,
+      "earn": false
+     },
+     {
+      "sym": "BHF",
+      "name": "Brighthouse Financial",
+      "sec": "金融",
+      "ind": "保险 - 人寿",
+      "zh": "Brighthouse Financial, Inc. 在美国提供年金和人寿保险产品。该公司通过年金、人寿和径流部门运营。年金部门提供可变年金、固定年金、指数挂钩年金和收入年金，以满足合约持有人受保护财富积累的需求",
+      "mcap": 2524182528,
+      "mv": 5.87,
+      "px": 44.1,
+      "prePx": 46.69,
+      "postPx": null,
+      "closeChg": -0.48,
+      "earn": false
+     },
+     {
+      "sym": "REPL",
+      "name": "Replimune",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Replimune Group, Inc.是一家临床阶段生物技术公司，专注于在美国和英国治疗癌症的溶瘤免疫疗法的开发和商业化。该公司专有的溶瘤免疫疗法候选产品旨在",
+      "mcap": 2075180672,
+      "mv": -7.19,
+      "px": 21.98,
+      "prePx": 20.4,
+      "postPx": null,
+      "closeChg": -0.41,
+      "earn": false
+     },
+     {
+      "sym": "HAWK",
+      "name": "HawkEye 360",
+      "sec": "科技",
+      "ind": "软件与数据服务",
+      "zh": "HawkEye 360​​ 总部位于弗吉尼亚州赫恩登，是一家信号情报公司，提供关键任务情报数据和分析以加强国家和全球安全。通过检测、表征和地理定位 RF 信号，HawkEye 360​​ 为国防、情报和商业提供装备",
+      "mcap": 1779054464,
+      "mv": 12.41,
+      "px": 14.67,
+      "prePx": 16.49,
+      "postPx": null,
+      "closeChg": 23.79,
+      "earn": false
+     },
+     {
+      "sym": "VIR",
+      "name": "Vir Biotechnology",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Vir Biotechnology, Inc. 是一家临床阶段的生物制药公司，在美国和国际上发现和开发用于治疗和预防严重传染病的治疗产品。其临床开发管道包括针对肝炎的产品研究疗法",
+      "mcap": 1705856896,
+      "mv": -15.68,
+      "px": 12.12,
+      "prePx": 10.22,
+      "postPx": null,
+      "closeChg": -17.82,
+      "earn": false
+     },
+     {
+      "sym": "TNDM",
+      "name": "Tandem Diabetes Care",
+      "sec": "医疗",
+      "ind": "医疗器械",
+      "zh": "Tandem Diabetes Care, Inc. 为美国和国际糖尿病患者设计、开发和商业化技术解决方案。其旗舰产品是t:slim X2胰岛素输送系统；和 Tandem Mobi 胰岛素泵，一种自动胰岛素输送系统。该公",
+      "mcap": 1400762496,
+      "mv": 11.25,
+      "px": 17.51,
+      "prePx": 19.48,
+      "postPx": null,
+      "closeChg": 14.62,
+      "earn": false
+     },
+     {
+      "sym": "NMAX",
+      "name": "Newsmax",
+      "sec": "工业",
+      "ind": "传媒/广播",
+      "zh": "Newsmax Inc. 在纽约证券交易所 (NMAX) 上市，并通过美国领先的新闻媒体之一 Newsmax Broadcasting LLC 运营 Newsmax 频道。第四高收视率的网络由所有主要付费电视提供商运营。",
+      "mcap": 1237358976,
+      "mv": 21.81,
+      "px": 7.29,
+      "prePx": 8.88,
+      "postPx": null,
+      "closeChg": 31.41,
+      "earn": false
+     },
+     {
+      "sym": "FLO",
+      "name": "Flowers Foods",
+      "sec": "必需消费",
+      "ind": "包装食品",
+      "zh": "Flowers Foods, Inc. 在美国生产和销售包装烘焙食品。该公司的主要产品包括新鲜面包、小圆面包、面包卷、零食、百吉饼、英式松饼、玉米饼、烘焙混合料、冷冻面包和面包卷以及酒吧、蛋糕、巧克力等零食。",
+      "mcap": 1172677632,
+      "mv": -11.81,
+      "px": 6.01,
+      "prePx": 5.3,
+      "postPx": null,
+      "closeChg": -7.99,
+      "earn": false
+     },
+     {
+      "sym": "ANDG",
+      "name": "Andersen",
+      "sec": "可选消费",
+      "ind": "Business Services",
+      "zh": "Andersen Group Inc. is a leading integrated professional services firm delivering tax, legal, valuation, globa",
+      "mcap": 1171425152,
+      "mv": -8.3,
+      "px": 65.42,
+      "prePx": 59.99,
+      "postPx": null,
+      "closeChg": -8.19,
+      "earn": false
+     },
+     {
+      "sym": "TMC",
+      "name": "TMC the metals",
+      "sec": "原材料",
+      "ind": "其他工业金属和采矿",
+      "zh": "TMC the Metals Company Inc. 是一家深海矿物勘探公司，专注于加利福尼亚海底发现的多金属结核的收集、加工和精炼。主要勘探镍、钴、铜和锰产品。公司持有勘探及商业",
+      "mcap": 1019022976,
+      "mv": 9.04,
+      "px": 2.3,
+      "prePx": 2.51,
+      "postPx": null,
+      "closeChg": 0.43,
+      "earn": false
+     },
+     {
+      "sym": "YSS",
+      "name": "York Space Systems",
+      "sec": "工业",
+      "ind": "航空航天与国防",
+      "zh": "约克空间系统公司是一家太空和国防领先企业，为美国国家安全、政府和商业客户提供一整套关键任务解决方案。它为太空和国防提供专有的硬件和软件功能设计",
+      "mcap": 793926976,
+      "mv": -11.15,
+      "px": 6.6,
+      "prePx": 5.86,
+      "postPx": null,
+      "closeChg": -12.42,
+      "earn": false
+     },
+     {
+      "sym": "SBC",
+      "name": "SBC Medical",
+      "sec": "医疗",
+      "ind": "医疗/护理服务",
+      "zh": "SBC Medical 是一家医疗服务组织，为广泛的医疗保健领域提供管理支持，包括高级美容保健、皮肤科、骨科、生育治疗、妇科、牙科、脱发治疗 (AGA) 和眼科。该公司管理一个部门",
+      "mcap": 755925056,
+      "mv": 11.89,
+      "px": 5.34,
+      "prePx": 5.97,
+      "postPx": null,
+      "closeChg": 37.64,
+      "earn": true
+     },
+     {
+      "sym": "CADL",
+      "name": "Candel Therapeutics",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Candel Therapeutics, Inc. 是一家临床阶段生物制药公司，为癌症患者开发免疫疗法。它开发了 CAN-2409，目前正处于治疗前列腺癌的 2a 期临床试验中；以及治疗非小细胞肺癌（NSCLC）的 2a",
+      "mcap": 474415104,
+      "mv": -38.5,
+      "px": 8.39,
+      "prePx": 5.16,
+      "postPx": null,
+      "closeChg": -26.1,
+      "earn": false
+     },
+     {
+      "sym": "RZLT",
+      "name": "Rezolute (NV)",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Rezolute, Inc. 是一家晚期罕见疾病公司，在美国专注于开发治疗与各种形式的高胰岛素血症 (HI) 相关的难治性和衰弱性低血糖的疗法。其主要临床资产是 ersodetug，一种静脉注射的人单克隆抗体",
+      "mcap": 353544160,
+      "mv": 11.11,
+      "px": 3.87,
+      "prePx": 4.3,
+      "postPx": null,
+      "closeChg": -5.56,
+      "earn": false
+     },
+     {
+      "sym": "LRMR",
+      "name": "Larimar Therapeutics",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "Larimar Therapeutics, Inc. 是一家临床阶段生物技术公司，专注于利用其新型细胞穿透肽技术平台开发罕见疾病的治疗方法。其主要候选产品是 CTI-1601，目前正处于治疗 Friedreich 共济失",
+      "mcap": 313726464,
+      "mv": 10.74,
+      "px": 2.7,
+      "prePx": 2.99,
+      "postPx": null,
+      "closeChg": 11.85,
+      "earn": false
+     },
+     {
+      "sym": "OPTX",
+      "name": "Syntec Optics",
+      "sec": "科技",
+      "ind": "电子元件",
+      "zh": "Syntec Optics Holdings, Inc. 为美国和欧洲的国防、医疗、工业和消费终端市场制造和供应光学和光子元件、子系统和光学系统。它提供基于聚合物的光学器件；和光学组件、电光组件、模具",
+      "mcap": 285181536,
+      "mv": 8.09,
+      "px": 6.8,
+      "prePx": 7.35,
+      "postPx": null,
+      "closeChg": 4.12,
+      "earn": false
+     },
+     {
+      "sym": "SPCE",
+      "name": "Virgin Galactic",
+      "sec": "可选消费",
+      "ind": "航空航天与国防",
+      "zh": "维珍银河控股公司是一家航空航天和太空旅行公司，专注于太空飞船及相关技术的开发、制造和运营。从事设计开发、制造、地面和飞行测试、航天运行和飞后维护",
+      "mcap": 278936480,
+      "mv": -9.5,
+      "px": 2.67,
+      "prePx": 2.42,
+      "postPx": null,
+      "closeChg": -31.09,
+      "earn": false
+     },
+     {
+      "sym": "NPCE",
+      "name": "Neuropace",
+      "sec": "医疗",
+      "ind": "医疗器械",
+      "zh": "NeuroPace, Inc. 在美国作为一家医疗器械公司运营。该公司开发了 RNS 系统，这是一种大脑响应神经调节系统，可在癫痫发作源提供个性化的实时治疗，以治疗耐药性局灶性癫痫。其RNS系统包括RNS神经系统",
+      "mcap": 259491488,
+      "mv": -46.2,
+      "px": 12.02,
+      "prePx": 6.47,
+      "postPx": null,
+      "closeChg": -37.1,
+      "earn": false
+     },
+     {
+      "sym": "DGXX",
+      "name": "Digi Power X Subordinate Voting Shares",
+      "sec": "金融",
+      "ind": "消费金融",
+      "zh": "Digi Power X 是一家人工智能基础设施公司，在阿拉巴马州、纽约州和北卡罗来纳州运营垂直整合的电力资产和数据中心容量组合。该公司的 NeoCloudz 平台在专用的裸机 NVIDIA 基础设施上提供 GPU 即服",
+      "mcap": 231192048,
+      "mv": 16.29,
+      "px": 2.21,
+      "prePx": 2.57,
+      "postPx": null,
+      "closeChg": 3.17,
+      "earn": true
+     },
+     {
+      "sym": "LTRX",
+      "name": "Lantronix",
+      "sec": "通信服务",
+      "ind": "通讯设备",
+      "zh": "Lantronix, Inc. 在美洲、欧洲、中东、非洲和亚太地区日本开发、营销和销售工业和企业物联网 (IoT) 产品和服务。该公司的嵌入式物联网解决方案提供嵌入式产品，包括计算模块系统和",
+      "mcap": 203268416,
+      "mv": 10.71,
+      "px": 4.48,
+      "prePx": 4.96,
+      "postPx": null,
+      "closeChg": -3.35,
+      "earn": false
+     },
+     {
+      "sym": "PRQR",
+      "name": "ProQR Therapeutics N.V.",
+      "sec": "医疗",
+      "ind": "生物技术",
+      "zh": "ProQR Therapeutics N.V. 是一家临床阶段生物技术公司，专注于新型治疗药物的发现和开发。该公司通过其 Axiomer RNA 编辑技术开发了一个 RNA 编辑平台，用于治疗未满足需求的遗传性疾病。其主",
+      "mcap": 199274736,
+      "mv": 8.09,
+      "px": 1.36,
+      "prePx": 1.47,
+      "postPx": null,
+      "closeChg": 3.68,
+      "earn": false
+     },
+     {
+      "sym": "SES",
+      "name": "SES AI",
+      "sec": "Miscellaneous",
+      "ind": "汽车配件",
+      "zh": "SES AI Corporation 开发和生产人工智能增强型锂金属和锂离子充电电池技术，用于电动汽车、城市空中交通、无人机、机器人、电池储能系统和其他应用。它制造和销售住宅和商业 ESS 系统，",
+      "mcap": 196708064,
+      "mv": 11.07,
+      "px": 0.58,
+      "prePx": 0.64,
+      "postPx": null,
+      "closeChg": -8.39,
+      "earn": false
+     },
+     {
+      "sym": "UXIN",
+      "name": "Uxin ADS",
+      "sec": "可选消费",
+      "ind": "汽车和卡车经销商",
+      "zh": "优信有限公司及其子公司在中华人民共和国经营二手车零售商。公司提供二手车收购、检验、翻新、仓储、售前、售后服务；保修和维修、送货上门、所有权转让和车辆",
+      "mcap": 177898032,
+      "mv": -8.55,
+      "px": 0.77,
+      "prePx": 0.7,
+      "postPx": null,
+      "closeChg": 1.09,
+      "earn": false
+     },
+     {
+      "sym": "NEOV",
+      "name": "NeoVolta",
+      "sec": "Miscellaneous",
+      "ind": "电气设备及零件",
+      "zh": "NeoVolta Inc.在美国从事储能系统的设计、制造和销售。该公司提供 NV14、NV24、NVPlus 和 NV7600 储能系统，通过电池和逆变器在住宅、商业和工业以及公用事业中存储和使用能源",
+      "mcap": 167853040,
+      "mv": 13.04,
+      "px": 2.85,
+      "prePx": 3.22,
+      "postPx": null,
+      "closeChg": -0.35,
+      "earn": false
+     },
+     {
+      "sym": "KLC",
+      "name": "KinderCare Learning Companies",
+      "sec": "可选消费",
+      "ind": "教育与培训服务",
+      "zh": "KinderCare Learning Companies, Inc. 在美国提供幼儿教育和护理服务。该公司为婴幼儿、学前班和幼儿园学生提供基于社区的幼儿教育服务；以及为组织、公司定制的家庭护理福利",
+      "mcap": 162368336,
+      "mv": -18.01,
+      "px": 2.11,
+      "prePx": 1.73,
+      "postPx": null,
+      "closeChg": -35.07,
+      "earn": false
+     },
+     {
+      "sym": "SHIM",
+      "name": "Shimmick",
+      "sec": "工业",
+      "ind": "工程建筑",
+      "zh": "Shimmick Corporation 为美国的水、能源、气候弹性和交通市场提供交钥匙基础设施解决方案。它扩建、修复、升级、建造和重建水和废水处理基础设施，例如海水淡化厂；实施t",
+      "mcap": 134341424,
+      "mv": 21.37,
+      "px": 2.34,
+      "prePx": 2.84,
+      "postPx": null,
+      "closeChg": 38.89,
+      "earn": false
+     },
+     {
+      "sym": "EXOD",
+      "name": "Exodus Movement",
+      "sec": "金融",
+      "ind": "软件 - 基础设施",
+      "zh": "Exodus Movement, Inc. 在美国作为区块链和数字资产行业的金融技术公司运营。该公司开发了 Exodus 平台，这是一个非托管的自我托管数字资产钱包，可以让您进入去中心化金融世界和区块链的力量。它是一个",
+      "mcap": 133906968,
+      "mv": -17.18,
+      "px": 4.83,
+      "prePx": 4,
+      "postPx": null,
+      "closeChg": -9.11,
+      "earn": false
+     },
+     {
+      "sym": "CDXS",
+      "name": "Codexis",
+      "sec": "工业",
+      "ind": "生物技术",
+      "zh": "Codexis, Inc. 为治疗药物制造提供技术解决方案，利用其专有的 CodeEvolver 技术平台在美国、加拿大、拉丁美洲、欧洲、中东、非洲、澳大利亚、新西兰、",
+      "mcap": 127026688,
+      "mv": 17.94,
+      "px": 0.96,
+      "prePx": 1.13,
+      "postPx": null,
+      "closeChg": 21.07,
+      "earn": false
+     },
+     {
+      "sym": "DEFT",
+      "name": "Defi Technologies",
+      "sec": "金融",
+      "ind": "资本市场",
+      "zh": "DeFi Technologies Inc. 是一家科技公司，开发交易所交易产品，综合跟踪加拿大单个 DeFi 协议或一篮子协议的价值。它提供资产管理服务，例如间接投资底层数字资产、数字资产指数或其他资产",
+      "mcap": 126091488,
+      "mv": 15.61,
+      "px": 0.3,
+      "prePx": 0.35,
+      "postPx": null,
+      "closeChg": 7.02,
+      "earn": false
+     },
+     {
+      "sym": "ZSQR",
+      "name": "Z Squared",
+      "sec": "金融",
+      "ind": "软件 - 基础设施",
+      "zh": "Z Squared Inc. 在北卡罗来纳州、南卡罗来纳州和爱荷华州运营一家计算和数字基础设施公司。该公司参与数字资产挖掘，通过使用脚本算法 ASIC 硬件的合并挖掘来生成狗狗币和莱特币。它还管理和优化",
+      "mcap": 125875944,
+      "mv": 8.5,
+      "px": 2.47,
+      "prePx": 2.68,
+      "postPx": null,
+      "closeChg": -3.85,
+      "earn": false
+     },
+     {
+      "sym": "GCTS",
+      "name": "GCT Semiconductor",
+      "sec": "科技",
+      "ind": "半导体",
+      "zh": "GCT Semiconductor Holding, Inc. 是一家无晶圆厂半导体公司，为美国、台湾、中国、德国和韩国的工业、企业对企业和消费者应用设计、制造和销售通信半导体。公司提供无线通讯技术",
+      "mcap": 115881856,
+      "mv": -17.65,
+      "px": 1.54,
+      "prePx": 1.27,
+      "postPx": null,
+      "closeChg": -18.18,
+      "earn": false
+     },
+     {
+      "sym": "WW",
+      "name": "WW International",
+      "sec": "可选消费",
+      "ind": "医疗设施",
+      "zh": "WW International, Inc. 在美国、德国、加拿大和国际上提供体重管理产品和服务。它为个人体重目标以及服用 GLP-1 药物或 l 的人们提供各种营养、活动、行为和生活方式工具和方法。",
+      "mcap": 103687144,
+      "mv": -10.76,
+      "px": 12.27,
+      "prePx": 10.95,
+      "postPx": null,
+      "closeChg": -15.48,
+      "earn": false
+     },
+     {
+      "sym": "OWLT",
+      "name": "Owlet",
+      "sec": "工业",
+      "ind": "医疗器械",
+      "zh": "Owlet, Inc. 在美国、英国和国际上提供数字育儿解决方案。该公司提供一个数字育儿平台，为父母提供实时数据和见解。它还提供袜子监测器，包括可穿戴婴儿健康监测器 Dream Sock",
+      "mcap": 100522568,
+      "mv": -49.31,
+      "px": 4.62,
+      "prePx": 2.34,
+      "postPx": null,
+      "closeChg": -25.54,
+      "earn": true
+     },
+     {
+      "sym": "ARAI",
+      "name": "Arrive AI",
+      "sec": "可选消费",
+      "ind": "科学技术仪器",
+      "zh": "Arrive AI Inc.是一家科技公司，在美国设计并实施了商业上可行的智能邮箱和平台系统。它提供了一个由 Arrive Points 智能储物柜和迷你交叉转运点组成的 ALM 网络，用于安全和异步交换点，连接无人机、",
+      "mcap": 3223759,
+      "mv": 14.56,
+      "px": 2.06,
+      "prePx": 2.36,
+      "postPx": null,
+      "closeChg": 9.22,
+      "earn": false
+     },
+     {
+      "sym": "MSB",
+      "name": "Mesabi Trust",
+      "sec": "工业",
+      "ind": "钢",
+      "zh": "Mesabi Trust 是一家特许权使用费信托公司，在美国从事铁矿石开采业务。 Mesabi Trust 成立于 1961 年，总部位于纽约州纽约市。",
+      "mcap": null,
+      "mv": 10.02,
+      "px": 17.16,
+      "prePx": 18.88,
+      "postPx": null,
+      "closeChg": -5.42,
+      "earn": false
+     }
+    ]
    }
   ]
  }
