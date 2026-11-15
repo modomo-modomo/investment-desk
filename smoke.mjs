@@ -3,6 +3,8 @@ const html = fs.readFileSync("index.html", "utf8");
 const body = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const rd = (f) => { const s = fs.readFileSync(f, "utf8"); return JSON.parse(s.slice(s.indexOf("=") + 1, s.lastIndexOf(";"))); };
 const W = rd("live-data.js"), Y = rd("live-extra.js"), ND = rd("live-news.js");
+const FD = fs.existsSync("live-feed.js") ? rd("live-feed.js") : { items: {} };
+const TN = fs.existsSync("track-news.js") ? rd("track-news.js") : { items: [] };
 const mkFake = () => {
   const fn = function(){};
   return new Proxy(fn, {
@@ -20,7 +22,7 @@ const mkFake = () => {
     apply: () => mkFake(),
   });
 };
-globalThis.window = { WIND_LIVE: W, YF_DATA: Y, NEWS_DATA: ND, addEventListener(){}, scrollTo(){} };
+globalThis.window = { WIND_LIVE: W, YF_DATA: Y, NEWS_DATA: ND, FEED_DATA: FD, TRACK_NEWS: TN, addEventListener(){}, scrollTo(){} };
 globalThis.document = { querySelector: () => mkFake(), querySelectorAll: () => [], getElementById: () => mkFake(), addEventListener(){}, createElement: () => mkFake(), body: mkFake() };
 globalThis.localStorage = { getItem: () => null, setItem(){}, removeItem(){} };
 globalThis.location = { hash: "", origin: "file://" };
@@ -38,6 +40,12 @@ try {
     const pf=pfCalc();
     console.log("模拟组合:", "净值", pf.nav.toFixed(4), "累计", (pf.ret*100).toFixed(2)+"%", "当日", pf.day.toFixed(2)+"pct",
       "· 持仓", pf.rows.map(x=>x.t+" "+(x.ret*100).toFixed(1)+"%").join(" / "));
+    const prr=pfRiskRules();
+    console.log("组合风险:", prr.rules.map(r=>r.n+"="+r.status+"("+r.read.slice(0,26)+")").join(" | "));
+    const meta=DATA.stocks.find(z=>z.t==="META");
+    const fl=feedList(meta);
+    const byType={}; fl.forEach(x=>byType[x.type]=(byType[x.type]||0)+1);
+    console.log("公司动态(META):", fl.length, "条", JSON.stringify(byType), "| 首条:", fl[0]&&(fl[0].d+" "+fl[0].type+" "+fl[0].text.slice(0,40)));
     openStock(1); console.log("openStock OK");
     trackSel="fin"; const fin=DATA.tracks.find(x=>x.id==="fin");
     console.log("fin 标的池:", (fin.symsLive||[]).length, "只 · 样例:", JSON.stringify((fin.symsLive||[])[0]));

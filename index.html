@@ -597,6 +597,8 @@ tr.isnew td{background:#fffafa}
 <script src="live-news.js"></script>
 <script src="track-news.js"></script>
 <script src="fed-news.js"></script>
+<!-- 个股动态长期档案（20261115(12)）：Yahoo 个股新闻 + 播客匹配 + X/KOL 录入，由 sync-feed.mjs 生成 -->
+<script src="live-feed.js"></script>
 <script>
 /* ==========================================================================
    行情数据适配层
@@ -3577,11 +3579,14 @@ function mktOf(t){
   if(/\.(SH|SZ|SS)$/.test(s)) return "A 股";
   return "美股";
 }
+/* 排序用的市场序：美股 → 港股 → A 股（标的列首排即按这个分组，组内 A→Z） */
+function mktRank(t){ return mktOf(t)==="美股"?0:(mktOf(t)==="港股"?1:2); }
 
 /* ---------- 标的研究：单张可筛选排序表（20261115(5)） ----------
    一行一只标的：行情八列 + 行业 / 赛道 + 策略建议 + 下一个催化；点击行进抽屉看基本面
-   20261115(11)：加 市场 / 策略建议 / 关键词 三个维度，与赛道、45 天催化、策略更新并列 */
-const STK_ST={trk:"全部", mkt:"全部", act:"全部", q:"", near:false, upd:false, sort:{key:"mv",dir:1}};
+   20261115(11)：加 市场 / 策略建议 / 关键词 三个维度，与赛道、45 天催化、策略更新并列
+   20261115(12)：标的列可排序（默认 A→Z，美股在前、港股次之、A 股最后）；新增「市场」列 */
+const STK_ST={trk:"全部", mkt:"全部", act:"全部", q:"", near:false, upd:false, sort:{key:"t",dir:-1}};
 
 /* 每只标的的策略建议（口径与投资策略 5-3 对齐）；upd=true 时表格内标红 */
 const STOCK_ADVICE={
@@ -3689,6 +3694,8 @@ function stkBody(){
     let va,vb;
     if(k==="sec"){ va=a.s.sec; vb=b.s.sec; }
     else if(k==="trk"){ va=a.trk; vb=b.trk; }
+    else if(k==="t"){ va=mktRank(a.s.t)+"|"+String(a.s.t).toUpperCase(); vb=mktRank(b.s.t)+"|"+String(b.s.t).toUpperCase(); }
+    else if(k==="mkt"){ va=-mktRank(a.s.t); vb=-mktRank(b.s.t); }
     else if(k==="adv"){ va=actRank[a.adv.act]??-1; vb=actRank[b.adv.act]??-1; va+=a.adv.upd?10:0; vb+=b.adv.upd?10:0; }
     else if(k==="cat"){ va=a.catDays==null?null:-a.catDays; vb=b.catDays==null?null:-b.catDays; }
     else { va=num(k==="price"?a.price:(k==="chg"?a.chg:(k==="mv"?a.chg:(k==="px"?a.price:a[k])))); vb=num(k==="price"?b.price:(k==="chg"?b.chg:(k==="mv"?b.chg:(k==="px"?b.price:b[k])))); }
@@ -3699,20 +3706,21 @@ function stkBody(){
   const arrow=(k)=> st.sort.key===k ? (st.sort.dir>0?" ▾":" ▴") : "";
   const thS=(k,label,w)=>'<th data-sort="'+k+'"'+(w?' style="width:'+w+'"':'')+' class="sortable" title="点击排序">'+label+arrow(k)+'</th>';
   let h='<div class="card tbl-wrap" style="max-height:760px;overflow:auto"><table class="tbl tbl-stk"><thead><tr>'+
-    '<th style="width:128px">标的</th>'+
+    thS("t","标的","128px")+thS("mkt","市场","54px")+
     thS("price","股价","60px")+thS("mv","当日","52px")+thS("pre","盘前","50px")+thS("post","盘后","50px")+
     thS("d5","5 日","50px")+thS("d20","20 日","52px")+thS("ytd","YTD","54px")+
     thS("sec","行业","112px")+thS("trk","赛道","90px")+
     thS("adv","策略建议（红 = 本轮更新）","250px")+thS("cat","下一个催化","186px")+
     '</tr></thead><tbody>';
   if(!rows.length){
-    h+='<tr><td colspan="12" class="empty">当前筛选条件下无记录</td></tr>';
+    h+='<tr><td colspan="13" class="empty">当前筛选条件下无记录</td></tr>';
   } else {
     const cell=(v,d)=>v!=null?'<span class="chg '+sgn(v)+'">'+pct(v,1)+'</span>':'<span class="tiny muted">—</span>';
     rows.forEach(x=>{
       const px=x.price!=null?(curSym(x.s.t)+x.price.toFixed(2)):x.s.px;
       h+='<tr data-i="'+x.i+'" class="stk-row" title="点击查看 '+x.s.t+' 详情">'+
         '<td><div class="tk">'+x.s.t+'</div><div class="tk-sub">'+esc(x.s.n)+'</div></td>'+
+        '<td><span class="tiny" style="font-size:10px;color:var(--muted)">'+mktOf(x.s.t)+'</span></td>'+
         '<td class="num" style="font-weight:600">'+px+'</td>'+
         '<td class="num">'+cell(x.chg)+'</td>'+
         '<td class="num">'+cell(x.pre)+'</td>'+
@@ -3732,10 +3740,10 @@ function stkBody(){
     const nearN=rows.filter(x=>x.catNear).length, updN=rows.filter(x=>x.adv.upd).length;
     const ytds=rows.map(x=>x.ytd).filter(v=>v!=null);
     const ytdAvg=ytds.length?(ytds.reduce((a,b)=>a+b,0)/ytds.length):null;
-    h+='<tr><td colspan="12" class="tiny muted" style="padding:8px 10px">共 '+rows.length+' 只 · 当日涨 '+up+' / 跌 '+dn+' · 45 天内有催化 '+nearN+' 只 · 策略有更新 '+updN+' 只 · 平均 YTD '+(ytdAvg==null?"—":pct(ytdAvg,1))+'</td></tr>';
+    h+='<tr><td colspan="13" class="tiny muted" style="padding:8px 10px">共 '+rows.length+' 只 · 当日涨 '+up+' / 跌 '+dn+' · 45 天内有催化 '+nearN+' 只 · 策略有更新 '+updN+' 只 · 平均 YTD '+(ytdAvg==null?"—":pct(ytdAvg,1))+'</td></tr>';
   }
   h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px;line-height:1.8">口径：股价 / 当日 / 5 日 / 20 日 / YTD 为 Yahoo 已结算收盘口径；<b>盘前 / 盘后</b>为最近一次场外成交涨跌幅（无成交显示 —）；<b>策略建议</b>为研究台观点、红色 [更新] = 本轮有边际修正；<b>催化剂时间表</b>覆盖未来 12–18 个月（抽屉内有全表），未来三个月按事件颗粒度列出，45 天内标红 ⚠。除「标的」与「策略建议文本」外其余列均可点表头排序；<b>点击行进入该标的详情抽屉</b>（业绩 / 核心逻辑 / 研报 / 催化全表 / KOL）。</div>';
+  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px;line-height:1.8">口径：股价 / 当日 / 5 日 / 20 日 / YTD 为 Yahoo 已结算收盘口径；<b>盘前 / 盘后</b>为最近一次场外成交涨跌幅（无成交显示 —）；<b>策略建议</b>为研究台观点、红色 [更新] = 本轮有边际修正；<b>催化剂时间表</b>覆盖未来 12–18 个月（抽屉内有全表），未来三个月按事件颗粒度列出，45 天内标红 ⚠。<b>除「策略建议文本」外所有列都可点表头排序</b>——「标的」默认 A→Z，且美股在前、港股次之、A 股最后（先按市场分组再按字母）；「市场」列可单独按 美股 / 港股 / A 股 排。<b>点击行进入该标的详情抽屉</b>（业绩 / 策略建议 / 核心逻辑 / 研报 / 催化全表 / 公司动态档案）。</div>';
   return h;
 }
 
@@ -3744,7 +3752,7 @@ function viewStocks(){
   let h=feedBar();
   const cntOther=DATA.stocks.filter(s=>trkOf(s)==="other").length;
   h+='<div class="sec">'+secHead("01","重点标的研究池",
-      DATA.stocks.length+" 只在册 · 可按 市场 / 赛道 / 策略建议 / 关键词 筛选，12 列除标的与建议文本外均可点表头排序 · 点击行看详情",
+      DATA.stocks.length+" 只在册 · 可按 市场 / 赛道 / 策略建议 / 关键词 筛选，13 列中除「策略建议文本」外全部可点表头排序（标的默认 A→Z，美股→港股→A 股）· 点击行看详情",
       "<span class='upd'>标签手动设定</span>");
   h+='<div class="filters" id="stock-filters"></div>';
   h+='<div style="display:flex;align-items:center;gap:8px;margin:-4px 0 12px;flex-wrap:wrap">'+
@@ -3768,6 +3776,121 @@ function viewStocks(){
   return h;
 }
 
+/* ==================================================================
+   公司动态 · 长期档案（20261115(12)）
+   目的：把「公告 / 新闻 / 研报 / KOL / X / 播客」放到同一条时间轴，长期滚动积累
+   数据来源（越多越全，任一缺失不影响渲染）：
+     1. 手写档案        s.updates（公司公告 / 财报 / 行业）· s.reports（券商研报与目标价）
+     2. live-feed.js    Yahoo Finance 个股新闻（每只 20 条）+ 播客 RSS 匹配 —— sync-feed.mjs
+     3. track-news.js   赛道 KOL / 播客 / 富途中文财经媒体 —— sync-tracks.mjs（按公司名或赛道匹配）
+     4. kol-log.json    X / KOL 人工录入（X 无公开接口，配置 token 后可由 sync-tracks 直连）
+   ================================================================== */
+const FEED_TYPES=["全部","公告","新闻","研报","KOL","X","播客"];
+let FEED_TYPE="全部";
+
+function feedD(d){
+  const s=String(d||"");
+  if(/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0,10);
+  if(/^\d{2}-\d{2}$/.test(s)) return DATA.meta.date.slice(0,4)+"-"+s;
+  if(/^\d{4}-\d{2}$/.test(s)) return s+"-01";
+  return "";
+}
+/* 公司关键词：代码去后缀 + 名称按括号/顿号拆开，用于匹配新闻标题 */
+function stockKeys(s){
+  const out=[];
+  const bare=String(s.t).replace(/\..*$/,"");
+  if(bare) out.push(bare);
+  String(s.n||"").split(/[（()）、/,]/).forEach(x=>{ const v=x.trim(); if(v.length>=3&&out.indexOf(v)<0) out.push(v); });
+  return out;
+}
+function feedHit(s,text){
+  const T=" "+String(text||"").toLowerCase()+" ";
+  return stockKeys(s).some(k=>{
+    const kk=k.toLowerCase();
+    if(kk.length>=5) return T.indexOf(kk)>=0;
+    const esc2=kk.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    return new RegExp("(^|[^a-z0-9])"+esc2+"([^a-z0-9]|$)","i").test(T);
+  });
+}
+function feedList(s){
+  const out=[], D=feedD;
+  (s.updates||[]).forEach(u=>out.push({d:D(u.d), type:"公告", src:u.src||"公司公告", text:u.txt, key:!!u.key, isnew:!!u.key}));
+  (s.reports||[]).forEach(r=>out.push({d:D(r.d), type:"研报",
+    src:(r.house||"")+(r.rating&&r.rating!=="—"?" · "+r.rating:"")+(r.tp&&r.tp!=="—"?" · 目标价 "+r.tp:""),
+    text:r.sum||"", key:!!r.chg, isnew:!!r.chg}));
+  /* Yahoo 个股新闻 + 播客（sync-feed.mjs 累积） */
+  const FD=(typeof window!=="undefined"&&window.FEED_DATA)||null;
+  if(FD&&FD.items){
+    const arr=FD.items[CODE_OF[s.t]||s.t]||FD.items[s.t]||[];
+    arr.forEach(x=>out.push({d:D(x.d), type:(x.type==="pod"?"播客":(x.type==="x"?"X":"新闻")),
+      src:x.src||"", text:(x.title||"")+(x.text?"｜"+x.text:""), url:x.url||"", key:!!x.key, isnew:!!x.new}));
+  }
+  /* 赛道资讯里的 KOL / 播客 / 中文媒体（sync-tracks.mjs）；命中公司名 → 标公司级，否则标「赛道」 */
+  const TN=(typeof window!=="undefined"&&window.TRACK_NEWS)||null;
+  if(TN&&TN.items){
+    const trk=trkOf(s);
+    const kindMap={kol:"KOL",pod:"播客",podcast:"播客",futu:"新闻",media:"新闻"};
+    TN.items.forEach(x=>{
+      const type=kindMap[x.kind]; if(!type) return;
+      const hit=feedHit(s,(x.title||"")+" "+(x.snip||""));
+      const trackLevel=(x.kind==="kol"||x.kind==="pod"||x.kind==="podcast")&&x.track===trk;
+      if(!hit&&!trackLevel) return;
+      out.push({d:D(x.d), type:type, src:String(x.src||"").replace(/^富途·/,"富途 · ")+(hit?"":" · 赛道"),
+        text:(x.title||"")+(x.snip?"｜"+x.snip:""), url:x.url||"", key:false, isnew:!!x.isNew});
+    });
+  }
+  /* X / KOL 手写档案 */
+  (s.kol||[]).forEach(k=>out.push({d:D(k.d), type:"X", src:k.handle||"@", text:k.view||"", key:!!k.key, isnew:!!k.new}));
+  out.sort((a,b)=>(a.d<b.d?1:(a.d>b.d?-1:0)));
+  return out;
+}
+function feedHtml(s){
+  const all=feedList(s);
+  const cnt={}; all.forEach(x=>cnt[x.type]=(cnt[x.type]||0)+1);
+  const list=(FEED_TYPE==="全部")?all:all.filter(x=>x.type===FEED_TYPE);
+  let h='<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:7px">';
+  FEED_TYPES.forEach(t=>{
+    const n=(t==="全部")?all.length:(cnt[t]||0);
+    if(t!=="全部"&&!n) return;
+    h+='<button class="fchip'+(FEED_TYPE===t?' on':'')+'" data-ft="'+t+'">'+t+
+       ' <span class="tiny" style="opacity:.6">'+n+'</span></button>';
+  });
+  h+='</div>';
+  h+='<div style="max-height:430px;overflow-y:auto;overscroll-behavior:contain;padding-right:8px;border-top:1px solid var(--line)">';
+  if(!list.length){
+    h+='<div class="tiny muted" style="padding:12px 0">该筛选下暂无条目——档案是「只增不减」的，新条目会在下一场抓数后自动补进来。</div>';
+  }
+  list.slice(0,120).forEach(x=>{
+    const red=x.isnew;
+    const txt=String(x.text||"");
+    h+='<div style="padding:8px 0 8px 9px;border-bottom:1px dashed #eef1f6;border-left:2px solid '+(red?"var(--up)":"transparent")+'">'+
+       '<div style="display:flex;gap:6px;align-items:center;font-size:9.5px;color:var(--muted)">'+
+         '<span class="num" style="flex:0 0 60px;'+(red?"color:var(--up);font-weight:700":"")+'">'+(x.d?x.d.slice(5):"—")+'</span>'+
+         '<span class="tag" style="font-size:8.5px;padding:0 4px;flex:0 0 auto">'+x.type+'</span>'+
+         '<span style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(x.src)+'</span>'+
+         (red?'<span style="color:var(--up);font-weight:700;flex:0 0 auto">新</span>':'')+
+       '</div>'+
+       '<div style="font-size:11.5px;line-height:1.7;margin-top:2px;'+(x.key?"font-weight:700;color:var(--text)":"color:var(--text-2)")+'">'+
+         (x.url?'<a href="'+esc(x.url)+'" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">':'')+
+         esc(txt.slice(0,240))+(x.url?'</a>':'')+
+       '</div></div>';
+  });
+  h+='</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;line-height:1.75">共 '+all.length+' 条 · <b>只增不减</b>（feed-log.json 累积，每只上限 160 条）· 红色 = 近 7 天新增，<b>黑体</b> = 关键变化 / 观点边际修正。信源：公司公告与券商研报（手写）+ Yahoo Finance 个股新闻、知名播客（自动抓，每日）+ 赛道 KOL · 播客 · 富途中文财经媒体（自动抓）+ X（人工录入；X 无公开免费接口，需 token 才能直连）。</div>';
+  return h;
+}
+function bindFeed(s){
+  const root=$("#dw-feed"); if(!root) return;
+  const draw=()=>{
+    root.innerHTML=feedHtml(s);
+    root.querySelectorAll("[data-ft]").forEach(b=>{
+      b.onclick=()=>{ FEED_TYPE=b.dataset.ft; draw(); };
+    });
+  };
+  if(FEED_TYPES.indexOf(FEED_TYPE)<0) FEED_TYPE="全部";
+  draw();
+}
+
 function openStock(i){
   const s=DATA.stocks[i], dw=$("#drawer");
   let h='<div class="dw-head"><button class="dw-close" id="dw-close">✕</button>'+
@@ -3782,6 +3905,19 @@ function openStock(i){
   h+='<div class="dw-sec" style="margin-top:-2px"><h4>研究标签<span class="ln"></span>'+
      '<span class="tiny muted" style="text-transform:none;letter-spacing:0">手动设定，系统不预判</span></h4>'+
      '<div class="lab-picker" id="lab-picker"></div></div>';
+
+  /* 策略建议（20261115(12)）：与标的池表格同一数据源、同一文案，避免两处口径打架 */
+  h+=(function(){
+    const adv=STOCK_ADVICE[s.t]||{act:"—",d:"",txt:"暂无策略建议",upd:false};
+    const cls={"清仓":"cut","减持":"cut","减配":"cut","观察":"watch","持有":"","增配":"add"}[adv.act]||"dash";
+    return '<div class="dw-sec"><h4>策略建议<span class="ln"></span>'+
+      '<span class="tiny muted" style="text-transform:none;letter-spacing:0">与标的池表格一致'+(adv.d?' · 更新于 '+adv.d:'')+'</span></h4>'+
+      '<div style="display:flex;gap:10px;align-items:flex-start">'+
+        '<span class="tag '+cls+'" style="font-size:11.5px;padding:3px 10px;flex:0 0 auto">'+adv.act+'</span>'+
+        (adv.upd?'<span style="color:var(--up);font-weight:700;font-size:10px;flex:0 0 auto;margin-top:5px">[本轮更新]</span>':'')+
+        '<div style="flex:1;font-size:12px;line-height:1.85;color:var(--text-2)">'+esc(adv.txt)+'</div>'+
+      '</div></div>';
+  })();
 
   h+='<div class="dw-sec"><h4>业绩强制跟踪<span class="ln"></span>'+
      (s.earn.status==="imminent"?'<span class="tag red">临近</span>':'')+'</h4>'+
@@ -3825,21 +3961,8 @@ function openStock(i){
   });
   h+='</tbody></table><div class="tiny muted" style="margin-top:4px">估值：'+s.val+'</div></div>';
 
-  h+='<div class="dw-sec"><h4>公司信息更新<span class="ln"></span><span class="tiny muted" style="text-transform:none;letter-spacing:0">红色为本轮新增</span></h4><div class="tl" style="margin-left:2px">';
-  s.updates.forEach(u=>{
-    h+='<div class="tl-item'+(u.key?" new":"")+'" style="padding-bottom:10px">'+
-       '<div class="tl-meta"><span'+(u.key?' style="color:var(--up);font-weight:650"':'')+'>'+u.d+(u.key?'　新增':'')+'</span><span class="src">'+u.src+'</span></div>'+
-       '<div class="tl-body" style="margin-top:2px">'+u.txt+'</div></div>';
-  });
-  h+='</div></div>';
-
-  h+='<div class="dw-sec"><h4>X / KOL 观点<span class="ln"></span><span class="tiny muted" style="text-transform:none;letter-spacing:0">红色为本轮新增</span></h4>';
-  s.kol.forEach(k=>{
-    h+='<div class="quote'+(k.new?" isnew":"")+'" style="margin-bottom:6px"><div class="q-meta">'+(k.new?'<i class="q-new"></i>':'')+
-       '<span'+(k.new?' style="color:var(--up)"':'')+'>'+k.d+'</span> · '+k.handle+'</div>'+
-       '<div class="zh" style="margin-top:0;color:var(--text-2);font-size:11.5px">'+k.view+'</div></div>';
-  });
-  h+='</div>';
+  /* 原来的「公司信息更新」「X / KOL 观点」独立区块（20261115(12) 起合并到抽屉底部的
+     「公司动态 · 长期档案」信息流：同一条时间轴上可按 公告 / 新闻 / 研报 / KOL / X / 播客 筛选） */
 
   h+='<div class="dw-sec"><h4>催化时间表 / 风险 / 映射<span class="ln"></span><span class="tiny muted" style="text-transform:none;letter-spacing:0">临近 45 天内标红提醒</span></h4>';
   const catL=CATALYSTS[s.t];
@@ -3860,10 +3983,17 @@ function openStock(i){
   }
   h+='<p style="margin-top:4px"><b style="color:var(--text)">风险：</b>'+s.risk+'</p>'+
      '<p style="margin-top:4px"><b style="color:var(--text)">A 股映射：</b>'+s.map+'</p></div>';
+
+  /* 公司动态 · 长期档案（20261115(12)）：放在 A 股映射下方，公告 / 新闻 / 研报 / KOL / X / 播客 同一条时间轴 */
+  h+='<div class="dw-sec"><h4>公司动态 · 长期档案<span class="ln"></span>'+
+     '<span class="tiny muted" style="text-transform:none;letter-spacing:0">只增不减 · 红 = 近期新增 · 黑体 = 关键</span></h4>'+
+     '<div id="dw-feed"></div></div>';
+
   h+='<div class="tiny muted" style="border-top:1px solid var(--line);padding-top:10px">示例数据，不构成投资建议</div></div>';
 
   dw.innerHTML=h; dw.classList.add("on"); $("#overlay").classList.add("on");
   $("#dw-close").onclick=closeDrawer;
+  bindFeed(s);
   const pk=$("#lab-picker");
   LABELS.forEach(l=>{
     const b=document.createElement("button");
@@ -4181,6 +4311,35 @@ function pfCalc(){
     return {n:b.n, ret:(v&&v.level!=null)?(v.level/b.b-1):null};
   });
   return {rows:rows, nav:nav, ret:gross, day:day, bench:bench};
+}
+/* 组合风险规则（20261115(12)）：8 条硬约束，读数全部来自 pfCalc 的实时结果。
+   阈值分两档：触发 / 接近（≥阈值 80%）；方向 up = 越大越危险，down = 越小越危险。 */
+function pfRiskRules(){
+  const c=pfCalc();
+  const w=(t)=>{ const r=c.rows.find(x=>x.t===t); return r?r.w1:0; };
+  const sorted=c.rows.slice().sort((a,b)=>b.w1-a.w1);
+  const maxRow=sorted[0]||{t:"—",w1:0};
+  const top3=sorted.slice(0,3).reduce((a,x)=>a+x.w1,0);
+  const aiW=["IREN","ONTO","META","TSLA"].reduce((a,t)=>a+w(t),0);
+  const cutRows=c.rows.filter(x=>["减配","减持","清仓"].indexOf(x.adv)>=0);
+  const cutW=cutRows.reduce((a,x)=>a+x.w1,0);
+  const cashW=PF.cashW/c.nav;
+  const fxW=c.rows.filter(x=>curSym(x.t)!=="$").reduce((a,x)=>a+x.w1,0);
+  const spx=c.bench.find(b=>b.n==="标普 500"), sox=c.bench.find(b=>b.n==="费城半导体");
+  const alpha=(spx&&spx.ret!=null)?(c.ret-spx.ret)*100:null;
+  const lagSox=(sox&&sox.ret!=null)?(c.ret-sox.ret)*100:null;
+  const R=(id,n,read,v,trig,near,dir,thr,act)=>({id:("pf"+id),n:n,read:read,v:v,status:riskOf(v,trig,near,dir),thr:thr,act:act});
+  const rules=[
+    R(1,"单票权重超上限","最大 "+maxRow.t+" "+maxRow.w1.toFixed(1)+"%",maxRow.w1,20,18,"up","20% / 18%","把 "+maxRow.t+" 减回 20% 以内：卖出的部分留现金，不换股"),
+    R(2,"前三大持仓集中度",sorted.slice(0,3).map(x=>x.t+" "+x.w1.toFixed(1)+"%").join(" · ")+" = "+top3.toFixed(1)+"%",top3,55,45,"up","55% / 45%","前三大 >55% 时禁止加新标的，只能在现有池里换手"),
+    R(3,"AI 算力链合计","IREN / ONTO / META / TSLA 合计 "+aiW.toFixed(1)+"%",aiW,60,50,"up","60% / 50%","同一个 capex 周期，四条腿会同时回撤——超 60% 用现金或非 AI 腿对冲"),
+    R(4,"「建议减配」持仓占比",(cutRows.length?cutRows.map(x=>x.t).join(" / "):"无")+" 合计 "+cutW.toFixed(1)+"%",cutW,15,10,"up","15% / 10%","研究说减、组合还拿着：要么改建议，要么减仓，不能两头都占"),
+    R(5,"现金缓冲",cashW.toFixed(1)+"%（"+PF.cashW+"% ÷ 净值 "+c.nav.toFixed(3)+"）",cashW,10,15,"down","10% / 15%","现金 <10% 先卖再加；<15% 停止一切加仓"),
+    R(6,"组合累计收益",pct(c.ret*100,2)+"（起点 "+PF.base+"）",c.ret*100,-5,-2,"down","-5% / -2%","亏 5% 即降总仓位 10pct——这是纪律，不是预测"),
+    R(7,"相对基准超额","vs 标普 "+(alpha==null?"—":(alpha>0?"+":"")+alpha.toFixed(2)+"pct")+" · vs 费半 "+(lagSox==null?"—":(lagSox>0?"+":"")+lagSox.toFixed(2)+"pct"),lagSox,-5,-2,"down","-5pct / -2pct","跑输费半但跑赢标普 = 选股没问题、赛道 beta 拖累，不必换股"),
+    R(8,"非美元资产敞口","2105.HK + 002436.SZ 合计 "+fxW.toFixed(1)+"%",fxW,30,25,"up","30% / 25%","港币/人民币敞口未套保，>30% 时新增仓位只用美元资产")
+  ];
+  return {rules:rules, nav:c.nav, ret:c.ret, alpha:alpha, cashW:cashW, maxW:maxRow.w1, maxT:maxRow.t};
 }
 function viewPortfolio(){
   const c=pfCalc(), S={}; (DATA.stocks||[]).forEach(x=>S[x.t]=x);
@@ -4536,6 +4695,36 @@ function viewRisk(){
   h+='</tbody></table></div>';
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：所有读数来自实时行情（Yahoo / Wind 口径），<b>刷新即重算</b>；状态分三档——<b>触发</b>（已越阈值，按动作执行）、<b>接近</b>（≥ 阈值 80%，准备预案）、<b>正常</b>。规则卡标红 [更新] = 与上次打开对比发生跨档或读数变化（快照存在本机，首次打开只标触发项）。策略模块 03「潜在风险点」是主观判断，这里是可执行的规则层。</div>';
   h+='</div>';
+
+  /* 05 模拟组合风险（20261115(12)）：组合层面的 8 条硬约束，读数全部现算 */
+  const pr=pfRiskRules();
+  const pTrig=pr.rules.filter(r=>r.status==="触发").length, pNear=pr.rules.filter(r=>r.status==="接近").length;
+  h+='<div class="sec">'+secHead("05","模拟组合风险","建仓 "+PF.base+" · 单票上限 / 集中度 / 建议冲突 / 现金 / 相对基准",
+      "<span class='upd'>触发 "+pTrig+" · 接近 "+pNear+"</span>");
+  h+='<div class="grid" style="grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch">';
+  [[pr.nav.toFixed(4),"组合净值","#1c2533","起点 1.0000"],
+   [pct(pr.ret*100,2),"累计收益",pr.ret>=0?"#d2373a":"#2f9e6f","vs 标普 "+(pr.alpha==null?"—":(pr.alpha>0?"+":"")+pr.alpha.toFixed(2)+"pct")],
+   [pr.maxW.toFixed(1)+"%","最大单票（"+pr.maxT+"）",pr.maxW>20?"#d2373a":"#1c2533","上限 20%"],
+   [pr.cashW.toFixed(1)+"%","现金占比",pr.cashW<10?"#d2373a":"#1c2533","低于 10% 触发"]].forEach(x=>{
+    h+='<div class="card" style="padding:12px 14px"><div class="tiny muted">'+x[1]+'</div>'+
+       '<div class="num" style="font-size:21px;font-weight:750;color:'+x[2]+'">'+x[0]+'</div>'+
+       '<div class="tiny muted" style="margin-top:2px">'+x[3]+'</div></div>';
+  });
+  h+='</div>';
+  h+='<div class="card tbl-wrap" style="margin-top:10px"><table class="tbl"><thead><tr>'+
+     '<th style="width:196px">检查项</th><th style="width:170px">当前读数</th><th style="width:104px">阈值</th>'+
+     '<th style="width:66px">状态</th><th>动作</th></tr></thead><tbody>';
+  pr.rules.forEach(r=>{
+    const trig=r.status==="触发", near=r.status==="接近";
+    h+='<tr'+(trig?' class="isnew"':'')+'><td'+(trig?' style="font-weight:700"':'')+'>'+r.n+'</td>'+
+       '<td class="read"'+(trig?' style="color:var(--up);font-weight:700"':(near?' style="font-weight:600"':''))+'>'+r.read+'</td>'+
+       '<td class="tiny muted">'+r.thr+'</td>'+
+       '<td>'+riskSt(r.status)+'</td>'+
+       '<td class="read tiny">'+(trig?'<b>'+r.act+'</b>':r.act)+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">组合口径：权重按<b>当前市值权重</b>（随价格漂移，不再平衡）；「建议冲突」= 持仓里策略建议为减配 / 减持 / 清仓的合计权重——这是组合与自己的研究结论打架的地方，<b>优先级高于任何个股逻辑</b>。最多 2 条触发时应先处理权重，而不是先找新标的。</div>';
+  h+='</div>';
   return h;
 }
 
@@ -4608,7 +4797,10 @@ function bindNotes(){
 }
 
 function route(){
-  const id=(location.hash||"#brief").slice(1);
+  /* 支持深链：#stocks/META 直接打开该标的抽屉（便于分享单只标的） */
+  const raw=(location.hash||"#brief").slice(1).split("/");
+  const id=raw[0]||"brief";
+  const deepSym=raw[1]?decodeURIComponent(raw[1]):null;
   const mod=MODULES.find(m=>m.id===id)||MODULES[0];
   document.querySelectorAll(".nav-item").forEach(el=>el.classList.toggle("active",el.dataset.id===mod.id));
   $("#ttl").textContent=mod.name;
@@ -4816,6 +5008,11 @@ function route(){
   if(mod.id==="strategy"){
     document.querySelectorAll("[data-v]").forEach(el=>{ el.onclick=()=>{ varTab=el.dataset.v; route(); }; });
     bindNotes();
+  }
+
+  if(deepSym){
+    const di=DATA.stocks.findIndex(x=>x.t===deepSym);
+    if(di>=0) openStock(di);
   }
 }
 

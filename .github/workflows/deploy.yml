@@ -13,6 +13,7 @@ on:
       - "live-news.js"
       - "track-news.js"
       - "fed-news.js"
+      - "live-feed.js"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -39,7 +40,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js; do
             [ -f "$f" ] && cp "$f" _site/
           done
           echo "--- 产物 ---"
@@ -49,7 +50,7 @@ jobs:
       - name: 给数据文件加版本号（绕开 Pages CDN 的 10 分钟缓存）
         run: |
           V=$(date +%s)
-          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js; do
             sed -i "s|$f\"|$f?v=$V\"|g" _site/index.html
           done
           echo "--- 版本号已写入 ---"
