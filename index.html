@@ -2811,9 +2811,10 @@ function viewEvents(){
       '<div class="fed-i"><b>市场影响：</b>'+x.impact+'</div></div>';
   };
   const chairSp=FSp.filter(function(x){return x.role==="主席";});
-  const boardSp=FSp.filter(function(x){return x.role!=="主席";});
-  h+='<div class="sec" style="margin-top:18px">'+secHead("05","美联储讲话 · 主席 / 副主席 / 理事",
-      "讲话摘要 + 解读 + 市场影响 · 长期滚动积累，最新在前 · 只收理事会成员（地区联储主席不收录）· 关键句加粗",
+  const nySp=FSp.filter(function(x){return /纽约联储/.test(x.role||"");});
+  const boardSp=FSp.filter(function(x){return x.role!=="主席" && !/纽约联储/.test(x.role||"");});
+  h+='<div class="sec" style="margin-top:18px">'+secHead("05","美联储讲话 · 主席 / 纽约联储 / 副主席 / 理事",
+      "讲话摘要 + 解读 + 市场影响 · 长期滚动积累，最新在前 · 收理事会成员 + 纽约联储主席（永久票委），其余地区联储主席不收录 · 关键句加粗",
       "<span class='upd hot'>红=本轮新增</span>");
   if(!FSp.length){
     h+='<div class="card"><div class="empty">暂无讲话记录——抓取源为联储官网讲话页，下轮（每日 07:00 / 20:30）自动补齐</div></div></div>';
@@ -2823,6 +2824,13 @@ function viewEvents(){
        '<span class="right tiny muted">共 '+chairSp.length+' 篇 · 最新在前</span></div>'+
        (chairSp.length ? chairSp.slice(0,3).map(fItem).join("")
           : '<div class="empty">窗口内无主席讲话（沃什最近一次为 8/28 Jackson Hole《In Our Time》）</div>')+
+       '</div>';
+    h+='<div class="card" style="padding:14px 16px;margin-bottom:12px">'+
+       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">纽约联储主席 · 威廉姆斯（John C. Williams）</span>'+
+       '<span class="right tiny muted">FOMC 永久票委 · 共 '+nySp.length+' 篇 · 最新在前</span></div>'+
+       (nySp.length ? nySp.slice(0,2).map(fItem).join("")
+          : '<div class="empty">窗口内无纽约联储主席讲话记录</div>')+
+       '<div class="tiny muted" style="margin-top:6px;line-height:1.7">纽约联储主席是<b>FOMC 永久票委</b>（与其余 11 位轮值票委不同），其表态对 12 月议息定价的权重仅次于主席；抓取源为纽约联储官网（联储官网讲话页只收理事会成员）。</div>'+
        '</div>';
     h+='<div class="card" style="padding:14px 16px">'+
        '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">副主席 / 理事 · 最新讲话</span>'+

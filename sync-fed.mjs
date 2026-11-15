@@ -53,7 +53,7 @@ const ZH_TITLE = {
   "Vice Chair for Supervision": "监管副主席",
   "Governor": "理事",
 };
-const ZH_NAME = { Warsh: "沃什", Jefferson: "杰斐逊", Bowman: "鲍曼", Barr: "巴尔", Cook: "库克", Powell: "鲍威尔", Waller: "沃勒", Miran: "米兰", Kugler: "库格勒" };
+const ZH_NAME = { Warsh: "沃什", Jefferson: "杰斐逊", Bowman: "鲍曼", Barr: "巴尔", Cook: "库克", Powell: "鲍威尔", Waller: "沃勒", Miran: "米兰", Kugler: "库格勒", Williams: "威廉姆斯", WilliamsJr: "威廉姆斯" };
 
 async function loadBoard() {
   try {
@@ -267,6 +267,35 @@ function read(text) {
   return { tone, read: readTxt, impact };
 }
 
+/* 纽约联储主席（FOMC 永久票委）：讲话不在联储官网，需从 newyorkfed.org 单独抓 */
+const NYFED = { zh: "威廉姆斯", name: "John C. Williams", title: "President, Federal Reserve Bank of New York", role: "纽约联储主席 · 永久票委" };
+async function loadNyFed() {
+  const out = [];
+  try {
+    const r = await get("https://www.newyorkfed.org/newsevents/speeches", 2);
+    const rows = [...r.text.matchAll(/<a href="(\/newsevents\/speeches\/(20\d\d)\/([a-z]+)(\d{2})(\d{2})(\d{2}))"[^>]*>([^<]+)<\/a>/g)];
+    for (const m of rows) {
+      const [, href, , slug, yy, mm, dd, title] = m;
+      if (!/^wil/i.test(slug)) continue;                       /* 只要 Williams 本人 */
+      if (!/^Williams\s*:/i.test(decode(title))) continue;
+      const date = "20" + yy + "-" + mm + "-" + dd;
+      if (date < new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10)) continue;
+      out.push({
+        date, url: "https://www.newyorkfed.org" + href,
+        title: decode(title).replace(/^Williams\s*:\s*/i, "").trim(),
+        speaker: "John C. Williams", venue: "", nyfed: true,
+        member: { name: NYFED.name, surname: "Williams", title: NYFED.title, zh: NYFED.zh, role: NYFED.role },
+      });
+    }
+  } catch (e) { console.log("纽约联储讲话抓取失败：" + e.message); }
+  /* 去重 + 取最近 8 篇 */
+  const seen = new Set();
+  const uniq = out.filter((x) => (seen.has(x.url) ? false : (seen.add(x.url), true)));
+  uniq.sort((a, b) => b.date.localeCompare(a.date));
+  console.log("纽约联储主席讲话：命中 " + uniq.length + " 篇（近 400 天）");
+  return uniq.slice(0, 8);
+}
+
 async function loadSpeeches() {
   const yr = new Date().getUTCFullYear();
   let list = [];
@@ -298,23 +327,27 @@ async function loadSpeeches() {
     if (!b) continue;                 /* 地区联储主席 / 非理事 */
     mine.push({ ...x, member: b });
   }
-  mine.sort((a, b) => b.date.localeCompare(a.date));
-  console.log("讲话：列表 " + list.length + " 条，理事会成员 " + mine.length + " 条");
-  return mine;
+  const ny = await loadNyFed();
+  const all = mine.concat(ny).sort((a, b) => b.date.localeCompare(a.date));
+  console.log("讲话：联储官网 " + list.length + " 条 → 理事会 " + mine.length + " 条 ｜ 纽约联储主席 " + ny.length + " 条 ｜ 合计 " + all.length);
+  return all;
 }
 
 async function enrich(list, prevLog) {
-  const seen = new Set(prevLog.map((x) => x.url));
   const out = [];
   let fetched = 0;
-  for (const x of list.slice(0, 24)) {
+  /* 抓取顺序：主席 → 纽约联储主席 → 副主席/理事，保证关键人物每轮都能进 */
+  const prio = (x) => (/纽约联储/.test(x.member.role || "") ? 3 : ZH_TITLE[x.member.title] === "主席" ? 4 : 1);
+  const order = list.slice().sort((a, b) => prio(b) - prio(a) || b.date.localeCompare(a.date));
+  for (const x of order.slice(0, 30)) {
     const old = prevLog.find((p) => p.url === x.url);
     if (old) { out.push({ ...old, isNew: false }); continue; }
-    if (fetched >= 8) continue;       /* 每轮最多精读 8 篇，避免拖长 */
+    if (fetched >= (prevLog.length ? 12 : 22)) continue;   /* 首轮多补（22 篇），之后每轮 12 篇 */
     let body = "";
     try {
-      const r = await get(x.url, 1);
-      const i = r.text.indexOf('id="article"');
+      const r = await get(x.url, 2);
+      const isNy = /newyorkfed\.org/.test(x.url);
+      const i = isNy ? r.text.indexOf("<h1") : r.text.indexOf('id="article"');
       const j = r.text.indexOf('id="lastUpdate"', i);
       const seg = r.text.slice(i > 0 ? i : 0, j > i && j > 0 ? j : undefined);
       const paras = [...seg.matchAll(/<p[^>]*>([\s\S]{40,1500}?)<\/p>/g)]
@@ -336,17 +369,19 @@ async function enrich(list, prevLog) {
       body = clean.join(" ");
       fetched++;
     } catch { }
-    if (!body) continue;
+    if (!body) { console.log("  跳过（正文抓取失败）：" + x.date + " " + x.title.slice(0, 40)); continue; }
     const snip = pickSentences(body);
-    if (!snip) continue;
+    if (!snip) { console.log("  跳过（无可抽取句）：" + x.date + " " + x.title.slice(0, 40)); continue; }
     const R = read(body);
     out.push({
       date: x.date, url: x.url, title: x.title, speaker: x.member.zh, en: x.member.name,
-      role: ZH_TITLE[x.member.title] || x.member.title, venue: x.venue,
+      role: x.member.role || ZH_TITLE[x.member.title] || x.member.title, venue: x.venue,
       snip: boldify(snip), tone: R.tone, read: R.read, impact: R.impact, isNew: true,
     });
-    await sleep(250);
+    await sleep(500);
   }
+  out.sort((a, b) => b.date.localeCompare(a.date));
+  console.log("  精读成功 " + out.length + " 篇（候选 " + order.length + "，配额 " + (prevLog.length ? 12 : 22) + "）");
   return out;
 }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -364,8 +399,13 @@ let log = [];
 try { log = JSON.parse(readFileSync("fed-log.json", "utf8")); } catch { }
 if (!Array.isArray(log)) log = [];
 const speeches = await enrich(speechesRaw, log);
+/* 滚动窗口：一般理事留 120 天；主席与纽约联储主席讲话少，留 400 天，避免“窗口内无主席讲话” */
 const cut = new Date(Date.now() - 120 * 864e5).toISOString().slice(0, 10);
-log = speeches.filter((x) => x.date >= cut).slice(0, 40);
+const cutKey = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);
+const isKeyRole = (x) => x.role === "主席" || /纽约联储/.test(x.role || "");
+log = speeches.filter((x) => x.date >= (isKeyRole(x) ? cutKey : cut))
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 40);
 console.log("讲话留档 " + log.length + " 条，本轮新增 " + log.filter((x) => x.isNew).length + " 条");
 
 if (!DRY) {
