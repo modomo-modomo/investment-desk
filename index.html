@@ -415,6 +415,14 @@ ol.concl li b{color:var(--text);font-weight:650}
 .mini-tbl td{padding:5px 6px;border-bottom:1px solid #f2f5f9;color:var(--text-2);vertical-align:top}
 .mini-tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
 .mini-tbl tr:last-child td{border-bottom:none}
+/* 调仓记录：理由/纪律可人工改写（20261115(14)） */
+.pf-note{outline:none;border-radius:5px;padding:2px 5px;margin:-2px -5px;transition:.15s;cursor:text;min-height:18px;line-height:1.7}
+.pf-note:hover{background:#f7f9fd;box-shadow:inset 0 0 0 1px var(--line)}
+.pf-note:focus{background:#fff;box-shadow:inset 0 0 0 1px var(--accent-2),0 0 0 3px rgba(47,93,168,.09)}
+.pf-note:empty:before{content:"点这里写调仓理由…";color:#b6bfcc;font-style:italic}
+.pf-note[data-edited="1"]{box-shadow:inset 2px 0 0 var(--accent-2);background:#f7faff}
+.pf-note-flag{font-size:9px;color:var(--accent-2);margin-left:6px;font-weight:650;opacity:0;transition:.2s}
+.pf-note-flag.on{opacity:1}
 
 .trade{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:var(--surface);display:flex;gap:11px}
 .trade .side{width:4px;align-self:stretch;border-radius:2px;flex:0 0 auto}
@@ -2183,7 +2191,7 @@ const MODULES = [
   {id:"stocks", name:"标的研究", icon:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', desc:"公司更新 · 研报与目标价 · KOL 观点 · 业绩强制跟踪"},
   {id:"strategy", name:"投资策略", icon:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', desc:"在交易什么 · 盯盘变量 · 风险点 · 美股→A股 · 策略建议"},
   {id:"portfolio", name:"模拟组合", icon:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/>', desc:"建仓 2026-11-06 · 持仓 · 净值 · 归因"},
-  {id:"risk", name:"风险预警", icon:'<path d="M12 3l9 16H3z"/><path d="M12 9v5M12 17h.01"/>', desc:"预警规则 · 集中度 · 事件日历（待细化）", soon:"待细化"}
+  {id:"risk", name:"风险预警", icon:'<path d="M12 3l9 16H3z"/><path d="M12 9v5M12 17h.01"/>', desc:"预警规则 · 集中度与回撤 · 事件日历 · 模拟组合风险"}
 ];
 
 const $ = s => document.querySelector(s);
@@ -4551,19 +4559,36 @@ function bindPfChart(root){
   svg.addEventListener("mouseleave",hide);
 }
 
-/* ---- 07 调仓记录：读 pf-nav.js 的 trades，长期累积，侧边滚动 ---- */
+/* ---- 07 调仓记录：读 pf-nav.js 的 trades，长期累积，侧边滚动
+   理由/纪律默认取 pf-trades.json 原文；人工改写存本机（desk_pf_notes），
+   下次自动抓数覆盖 pf-nav.js 后仍然生效；改动可一键复制成 JSON 粘回 pf-trades.json。 ---- */
+const PF_NOTES_LS="desk_pf_notes";
+let PF_TRADE_DEF={};
+function pfNotes(){ try{ return JSON.parse(localStorage.getItem(PF_NOTES_LS)||"{}"); }catch(e){ return {}; } }
+function pfNotesSave(o){ try{ localStorage.setItem(PF_NOTES_LS,JSON.stringify(o)); }catch(e){} }
+function pfNoteKey(x){ return x.d+"|"+x.t+"|"+x.act; }
 function pfTrades(){
   const N=(typeof window!=="undefined"&&window.PF_NAV)||null;
   const arr=(N&&N.trades)?N.trades.slice():[];
   if(!arr.length) return '<div class="card" style="padding:14px 16px"><div class="tiny muted">还没有调仓记录——每次调仓在 pf-trades.json 里追加一条，sync-pf.mjs 会带进净值序列。</div></div>';
   arr.sort((a,b)=>(a.d<b.d?1:(a.d>b.d?-1:0)));
+  const NOTE=pfNotes(); PF_TRADE_DEF={};
   const actCls={"建仓":"green","加仓":"add","增配":"add","减仓":"cut","减配":"cut","清仓":"cut","调权":"amber","再平衡":"amber"};
-  let h='<div class="card" style="padding:0;overflow:hidden"><div style="max-height:340px;overflow-y:auto;overscroll-behavior:contain">'+
+  let h='<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:7px">'+
+    '<span class="tiny muted">理由/纪律 <b>可直接点开改写</b>（存本机浏览器，抓数覆盖数据文件也不会丢）</span>'+
+    '<span style="margin-left:auto"></span>'+
+    '<button class="btn-ghost" id="pf-note-copy" style="font-size:10.5px">复制全部记录（JSON）</button>'+
+    '<button class="btn-ghost" id="pf-note-reset" style="font-size:10.5px">恢复原文</button>'+
+    '<span id="pf-note-state" class="tiny" style="color:var(--accent-2);font-weight:650;min-width:48px"></span></div>';
+  h+='<div class="card" style="padding:0;overflow:hidden"><div style="max-height:340px;overflow-y:auto;overscroll-behavior:contain">'+
     '<table class="tbl" style="min-width:0"><thead style="position:sticky;top:0;z-index:2;background:var(--surface)"><tr>'+
     '<th style="width:88px">日期</th><th style="width:96px">标的</th><th style="width:62px">动作</th>'+
     '<th class="num" style="width:88px">成交价</th><th class="num" style="width:62px">前权重</th>'+
-    '<th class="num" style="width:62px">后权重</th><th>调仓理由 / 纪律</th></tr></thead><tbody>';
+    '<th class="num" style="width:62px">后权重</th><th>调仓理由 / 纪律 <span class="tiny" style="font-weight:400;color:#a3adbb">可编辑</span></th></tr></thead><tbody>';
   arr.forEach(x=>{
+    const k=pfNoteKey(x), def=String(x.note||"");
+    PF_TRADE_DEF[k]=def;
+    const ov=NOTE[k], val=(ov!=null?ov:def), edited=(ov!=null&&ov!==def);
     h+='<tr'+(x.key?' style="background:#fffafa"':'')+'>'+
       '<td class="num tiny" style="color:var(--muted)">'+esc(x.d)+'</td>'+
       '<td><div class="tk" style="font-size:12px;font-weight:650">'+esc(x.t)+'</div></td>'+
@@ -4571,12 +4596,65 @@ function pfTrades(){
       '<td class="num">'+(x.px==null?'<span class="muted">—</span>':curSym(x.t)+(+x.px).toFixed(2))+'</td>'+
       '<td class="num tiny">'+(x.w0?x.w0.toFixed(0)+"%":"—")+'</td>'+
       '<td class="num tiny" style="font-weight:650">'+(x.w1!=null?x.w1.toFixed(0)+"%":"—")+'</td>'+
-      '<td class="tiny" style="color:var(--text-2);line-height:1.65">'+(x.key?'<span style="color:var(--up);font-weight:700">[关键] </span>':'')+esc(x.note||"")+'</td></tr>';
+      '<td class="tiny" style="color:var(--text-2)">'+
+        (x.key?'<span style="color:var(--up);font-weight:700">[关键] </span>':'')+
+        '<span class="pf-note" contenteditable="true" spellcheck="false" title="点击直接改写这条理由 / 纪律（自动存本机）" data-k="'+esc(k)+'" data-edited="'+(edited?"1":"0")+'">'+esc(val)+'</span>'+
+        '<span class="pf-note-flag'+(edited?" on":"")+'">'+(edited?"已改":"")+'</span></td></tr>';
   });
   h+='</tbody></table></div></div>';
   h+='<div class="tiny muted" style="margin-top:6px;line-height:1.75">共 <b>'+arr.length+'</b> 条 · 记录存在 <code>pf-trades.json</code>，只增不改（调仓当天追加，净值序列随之重算）。'+
-     '<b>前权重 → 后权重</b> 是调仓前后的组合权重，现金单独成行；「关键」= 触发纪律或改变组合结构的那一笔。</div>';
+     '<b>前权重 → 后权重</b> 是调仓前后的组合权重，现金单独成行；「关键」= 触发纪律或改变组合结构的那一笔。'+
+     '人工改写的理由存在本机浏览器；要固化到管道，点「复制全部记录」把 JSON 覆盖进 <code>pf-trades.json</code> 的 items。</div>';
   return h;
+}
+/* 调仓理由编辑的保存/恢复/复制 */
+function bindPfNotes(){
+  const flash=(t)=>{ const el=$("#pf-note-state"); if(!el) return; el.textContent=t; setTimeout(()=>{ el.textContent=""; },1600); };
+  document.querySelectorAll(".pf-note[contenteditable]").forEach(el=>{
+    let tm;
+    const save=()=>{
+      const k=el.dataset.k, v=String(el.textContent||"").replace(/\s+$/,"").trim(), def=PF_TRADE_DEF[k]||"";
+      const o=pfNotes();
+      if(v&&v!==def) o[k]=v; else delete o[k];
+      pfNotesSave(o);
+      const edited=!!(v&&v!==def);
+      el.dataset.edited=edited?"1":"0";
+      const fl=el.parentElement.querySelector(".pf-note-flag");
+      if(fl){ fl.textContent=edited?"已改":""; fl.className="pf-note-flag"+(edited?" on":""); }
+      flash("已保存");
+    };
+    el.addEventListener("input",()=>{ clearTimeout(tm); tm=setTimeout(save,600); });
+    el.addEventListener("blur",()=>{ clearTimeout(tm); save(); });
+    /* 回车不换行，直接落库（避免把表格撑高） */
+    el.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); el.blur(); } });
+  });
+  const rs=$("#pf-note-reset");
+  if(rs) rs.onclick=()=>{
+    const y=window.scrollY; pfNotesSave({}); route(); window.scrollTo({top:y,behavior:"instant"});
+    flash("已恢复原文");
+  };
+  const cp=$("#pf-note-copy");
+  if(cp) cp.onclick=()=>{
+    const N=(typeof window!=="undefined"&&window.PF_NAV)||{};
+    const NOTE=pfNotes();
+    const out=(N.trades||[]).map(x=>{
+      const k=pfNoteKey(x), o=Object.assign({},x);
+      if(NOTE[k]!=null) o.note=NOTE[k];
+      return o;
+    });
+    const txt=JSON.stringify(out,null,1);
+    const done=()=>flash("已复制 JSON");
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done).catch(()=>fallbackCopy(txt,done)); }
+    else fallbackCopy(txt,done);
+  };
+  function fallbackCopy(txt,done){
+    try{
+      const ta=document.createElement("textarea");
+      ta.value=txt; ta.style.position="fixed"; ta.style.opacity="0";
+      document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta);
+      done();
+    }catch(e){ flash("复制失败，请手动选择"); }
+  }
 }
 
 /* ---- 05 持仓明细（原 02，位置后移到归因之后） ---- */
@@ -5110,6 +5188,7 @@ function route(){
       });
       const box=document.querySelector(".pf-chart");
       if(box) bindPfChart(box.parentElement);
+      bindPfNotes();
     };
     bindPf();
   }
