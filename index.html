@@ -137,6 +137,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* 滚动表里简介压到 3 行，保证约 10 行可见 */
 .tbl-scroll td.zhclamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .scroll-hint{display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--muted);margin:0 0 5px;padding-left:2px}
+/* 赛道资讯列表：多信源滚动（与表格滚动条同一观感） */
+.tn-list{max-height:560px;overflow-y:scroll;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:6px}
+.tn-list::-webkit-scrollbar{width:14px}
+.tn-list::-webkit-scrollbar-track{background:#eef2f8;border-left:1px solid #e0e7f1}
+.tn-list::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
+.tn-list::-webkit-scrollbar-thumb:hover{background:#6c82a3}
+.tn-item{display:flex;gap:8px;padding:8px 0;border-bottom:1px dashed #eef1f6;align-items:flex-start}
+.tn-item:last-child{border-bottom:0}
+.tn-k{font-size:9.5px;font-weight:700;border-radius:4px;padding:1px 5px;white-space:nowrap;flex:0 0 auto;margin-top:2px}
+.tn-futu{background:#eef3fb;color:#1d3a6e}
+.tn-pod{background:#f3eefb;color:#6d4aa8}
+.tn-media{background:#eef2f8;color:#41526b}
+.tn-kol{background:#fdeeee;color:#d2373a}
+.tn-x{background:#e9f7f1;color:#0d8a5f}
+.tn-main{min-width:0;flex:1}
+.tn-t{font-size:12.5px;font-weight:600;line-height:1.5;color:var(--ink,inherit)}
+.tn-t a{color:inherit;text-decoration:none}
+.tn-t a:hover{text-decoration:underline}
+.tn-m{font-size:10.5px;color:var(--muted);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tn-s{font-size:11px;color:#5c6b7f;line-height:1.6;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tn-new{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--up);margin-right:4px;vertical-align:2px}
 .tbl-expand{cursor:pointer;color:var(--accent);font-weight:650;user-select:none}
 .tbl-expand:hover{text-decoration:underline}
 table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
@@ -495,6 +516,7 @@ tr.isnew td{background:#fffafa}
 <script src="live-data.js"></script>
 <script src="live-extra.js"></script>
 <script src="live-news.js"></script>
+<script src="track-news.js"></script>
 <script>
 /* ==========================================================================
    行情数据适配层
@@ -2483,6 +2505,55 @@ const gpuChartSvg = () => {
     '</svg>';
 };
 
+/* ---------- 赛道资讯：富途 / 播客 / 财经媒体 / KOL 多信源每日抓取（sync-tracks.mjs 产出） ---------- */
+const TN_LABEL={futu:"富途·中文财经",pod:"播客",media:"财经媒体",kol:"KOL 观点",x:"X 直连"};
+const TN_SHORT={futu:"富途",pod:"播客",media:"媒体",kol:"KOL",x:"X"};
+const TN_CLASS={futu:"tn-futu",pod:"tn-pod",media:"tn-media",kol:"tn-kol",x:"tn-x"};
+function trackNewsSrcLine(m){
+  const S=(m&&m.sources)||{};
+  const parts=[];
+  if(S.futu) parts.push("富途 <b class='num'>"+S.futu.ok+"/"+(S.futu.ok+S.futu.fail)+"</b> 只");
+  if(S.pod) parts.push("播客 <b class='num'>"+S.pod.ok+"/"+(S.pod.ok+S.pod.fail)+"</b> 源");
+  if(S.media) parts.push("财经媒体 <b class='num'>"+S.media.ok+"/"+(S.media.ok+S.media.fail)+"</b> 源");
+  if(S.search) parts.push("赛道检索 <b class='num'>"+S.search.ok+"/"+(S.search.ok+S.search.fail)+"</b>");
+  if(S.kol) parts.push("KOL <b class='num'>"+(S.kol.n||0)+"</b> 条");
+  let t=parts.join(" · ");
+  t+="；X 原帖需 API token（服务器 IP 被 X 限流），当前以<b>财经媒体转述的 KOL 观点</b>替代";
+  return t;
+}
+function trackNewsSec(t){
+  const TN=(typeof window!=="undefined"&&window.TRACK_NEWS)?window.TRACK_NEWS:null;
+  if(!TN||!TN.items) return "";
+  const rows=(TN.items||[]).filter(x=>x.track===t.id);
+  const head="富途个股资讯 / 播客 / 财经媒体 / KOL 观点 · 近 21 天滚动积累，最新在上 · 每日 07:00 与 20:30 两轮自动更新";
+  if(!rows.length){
+    return "<div class='sec' style='margin-top:18px'>"+secHead("02","赛道资讯 · "+t.name,head,"")+
+      "<div class='card'><div class='empty'>本赛道本轮暂无抓取记录，下一轮（每日 07:00 / 20:30）会自动补齐</div></div></div>";
+  }
+  const cnt={}; rows.forEach(x=>{ cnt[x.kind]=(cnt[x.kind]||0)+1; });
+  const order=["futu","pod","media","kol","x"].filter(k=>cnt[k]);
+  let h="<div class='sec' style='margin-top:18px'>"+secHead("02","赛道资讯 · "+t.name,head,
+      "<span class='upd hot'>红点为本次新增</span>");
+  h+="<div class='card' style='padding:14px 16px'>";
+  h+="<div class='kpi-row' style='margin-bottom:8px'>"+
+     "<span class='tag' data-tnk='all' style='cursor:pointer;font-weight:700' onclick=\"window.__tnKind('all',this)\">全部 "+rows.length+"</span>"+
+     order.map(k=>"<span class='tag' data-tnk='"+k+"' style='cursor:pointer;opacity:.62' onclick=\"window.__tnKind('"+k+"',this)\">"+TN_LABEL[k]+" "+cnt[k]+"</span>").join("")+
+     "</div><div class='tn-list'>";
+  rows.forEach(x=>{
+    h+="<div class='tn-item' data-k='"+x.kind+"'>"+
+       "<span class='tn-k "+(TN_CLASS[x.kind]||"tn-media")+"'>"+(TN_SHORT[x.kind]||"资讯")+"</span>"+
+       "<div class='tn-main'><div class='tn-t'>"+(x.isNew?"<span class='tn-new'></span>":"")+
+       (x.url?"<a href='"+esc(x.url)+"' target='_blank' rel='noopener'>"+esc(x.title)+"</a>":esc(x.title))+"</div>"+
+       "<div class='tn-m'><span>"+esc(String(x.t||"").slice(5,16))+"</span><span class='chip-src'>"+esc(x.src||"")+"</span></div>"+
+       (x.snip?"<div class='tn-s'>"+esc(x.snip)+"</div>":"")+
+       "</div></div>";
+  });
+  h+="</div><div class='tiny muted' style='margin-top:8px;line-height:1.8'>信源状态："+trackNewsSrcLine(TN.meta)+
+     "。资讯按<b>赛道关键词 + 代表标的</b>自动归集，只保留近 21 天、每源每赛道取最新若干条；标题可点开原文。</div>";
+  h+="</div></div>";
+  return h;
+}
+
 function viewTracks(){
   let h=feedBar();
   h+='<div class="subtabs">';
@@ -2575,6 +2646,7 @@ function viewTracks(){
       '<div class="tl-body">'+l.body+'</div></div>';
   });
   h+='</div></div></div>';
+  h+=trackNewsSec(t);
   return h;
 }
 
@@ -3420,6 +3492,13 @@ window.__tblExpand = function(btn){
   const open = box.classList.toggle("tbl-open");
   if(wrap.classList) wrap.classList.toggle("tbl-open", open);
   btn.textContent = open ? "收起 ▴" : "展开全部 ▾";
+};
+
+/* 赛道资讯的筛选（只切显示，不重渲染） */
+window.__tnKind = function(k, el){
+  document.querySelectorAll(".tn-item").forEach(function(n){ n.style.display = (k==="all" || n.getAttribute("data-k")===k) ? "" : "none"; });
+  document.querySelectorAll("[data-tnk]").forEach(function(n){ n.style.opacity=".62"; n.style.fontWeight="400"; });
+  if(el){ el.style.opacity="1"; el.style.fontWeight="700"; }
 };
 
 /* 核心结论存档的筛选（不重渲染，只切显示，避免整页重绘） */
