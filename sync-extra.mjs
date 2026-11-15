@@ -1113,8 +1113,35 @@ try {
     }
   }
   writeFileSync("highs-track.json", JSON.stringify(hiTrack, null, 1));
+  /* follow 增补字段（供合并表筛选/排序）：类型（everAth→历史新高，否则 52 周新高）/
+     市场 / 5 日 / 20 日 / YTD——每只标的取 1y 日线现算（并发 4 + 限速，约 74 只），
+     现价用日线最后收盘兜底（比 quote 场次口径更接近「已结算」） */
+  const fSyms = Object.values(hiTrack).map((t) => t.sym);
+  const fCharts = {};
+  for (let i = 0; i < fSyms.length; i += 4) {
+    await Promise.all(fSyms.slice(i, i + 4).map(async (sym) => {
+      try { fCharts[sym] = (await chart(sym, "1y")).rows; }
+      catch (e) { console.warn("follow chart 失败 " + sym + ": " + e.message); }
+    }));
+    if (i + 4 < fSyms.length) await new Promise((r) => setTimeout(r, 260));
+  }
+  const fY0 = new Date().getFullYear() + "-01-01";
   highs.follow = Object.values(hiTrack)
-    .map((t) => ({ ...t, chg: t.firstPx ? +((t.lastPx / t.firstPx - 1) * 100).toFixed(2) : null }))
+    .map((t) => {
+      const rows = fCharts[t.sym] || [];
+      const lastC = rows.length && rows[rows.length - 1].close != null ? rows[rows.length - 1].close : null;
+      const price = lastC != null ? lastC : t.lastPx;
+      const chg = t.firstPx && price != null ? +((price / t.firstPx - 1) * 100).toFixed(2) : null;
+      const d5 = price != null && rows.length >= 6 && rows[rows.length - 6].close != null
+        ? +((price / rows[rows.length - 6].close - 1) * 100).toFixed(2) : null;
+      const d20 = price != null && rows.length >= 22 && rows[rows.length - 22].close != null
+        ? +((price / rows[rows.length - 22].close - 1) * 100).toFixed(2) : null;
+      const y0 = rows.find((r) => r.date >= fY0);
+      const ytd = price != null && y0 && y0.close != null ? +((price / y0.close - 1) * 100).toFixed(2) : null;
+      return { ...t,
+        lastPx: price != null ? +Number(price).toFixed(2) : t.lastPx,
+        chg, market: "US", type: t.everAth ? "ath" : "52w", d5, d20, ytd };
+    })
     .sort((a, b) => String(b.lastD || "").localeCompare(String(a.lastD || "")))
     .slice(0, 300);
   highs.log = recentLog(hl, 20);
