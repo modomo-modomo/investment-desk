@@ -267,6 +267,8 @@ async function nextEarnings(symbol) {
 const CHECK = {
   TSLA: "TSLA", META: "META", IREN: "IREN", NBIS: "NBIS", CRWV: "CRWV", BE: "BE",
   AMD: "AMD", TSM: "TSM", TER: "TER", ONTO: "ONTO", NET: "NET", RBRK: "RBRK", OKTA: "OKTA", CHKP: "CHKP", SPCX: "SPCX",
+  /* 20261115(10)：美股生物医药（港股/A 股的 calendarEvents 不可靠——腾讯返回 11/18 而实际 11/13 已披露，故不纳入） */
+  CMPS: "CMPS", LLY: "LLY",
 };
 const quotesOut = {};
 for (const [t, sym] of Object.entries(CHECK)) {

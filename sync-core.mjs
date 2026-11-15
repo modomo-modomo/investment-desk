@@ -36,6 +36,17 @@ const STOCKS = [
   ["OKTA.O", "OKTA", "OKTA"],
   ["CHKP.O", "CHKP", "CHECK POINT SOFTWARE TECHNOLOGIES"],
   ["SPCX.O", "SPCX", "SPACE EXPLORATION TECHNOLOGIES"],
+  /* 20261115(10)：港股（.HK）/ A 股（.SH/.SZ）——Yahoo 代码仅在沪市用 .SS，A 股深市保持 .SZ */
+  ["2105.HK", "2105.HK", "来凯医药(LAEKNA)"],
+  ["2359.HK", "2359.HK", "药明康德(WUXI APPTEC)"],
+  ["0700.HK", "0700.HK", "腾讯控股(TENCENT)"],
+  ["CMPS.O", "CMPS", "COMPASS PATHWAYS"],
+  ["LLY.N", "LLY", "礼来(ELI LILLY)"],
+  ["688825.SH", "688825.SS", "长鑫科技(CXMT)", 8.66],   /* 第 4 位 = 发行价，年内新股 YTD 用它做基准 */
+  ["002156.SZ", "002156.SZ", "通富微电(TONGFU MICROELECTRONICS)"],
+  ["002436.SZ", "002436.SZ", "兴森科技(SHENZHEN FASTPRINT)"],
+  ["300604.SZ", "300604.SZ", "长川科技(HANGZHOU CHANGCHUAN)"],
+  ["688702.SH", "688702.SS", "盛科通信(SUZHOU CENTEC)"],
 ];
 
 const INDICES = [
@@ -227,7 +238,7 @@ const YTD_START = new Date().getFullYear() + "-01-01";
 console.log("抓取标的行情（" + STOCKS.length + " 只）…");
 const stockCharts = await batched(STOCKS, 5, async (s) => {
   const c = await chart(s[1], "1y");
-  return { code: s[0], sym: s[1], name: s[2], rows: c.rows };
+  return { code: s[0], sym: s[1], name: s[2], ipo: s[3] ?? null, rows: c.rows };
 });
 const stockQuotes = await quotes(STOCKS.map((s) => s[1]));
 
@@ -241,7 +252,11 @@ for (const c of stockCharts) {
   const q = stockQuotes[c.sym] || {};
   const bx = backfill(rows, q);
   if (bx.fixed) backfilled++;
+  /* YTD 基准：年内上市的新股用发行价（与东财/Wind 口径一致，长鑫 688825 用 8.66 而不是首日收盘 49），
+     其余用 2026 年首个交易日收盘。不做这个分支，长鑫的 YTD 会显示 -18%（首日收盘起算）而不是 +360%。 */
   const ytd0 = rows.find((r) => r.date >= YTD_START);
+  const listedThisYear = rows[0].date >= YTD_START;
+  const ytdBase = listedThisYear && c.ipo ? c.ipo : (ytd0 ? ytd0.close : null);
   stocks[c.code] = {
     name: c.name,
     date: bx.date.replace(/-/g, ""),
@@ -250,7 +265,7 @@ for (const c of stockCharts) {
     chg: +(pct(bx.price, bx.prev) ?? 0).toFixed(2),
     d5: +(pct(bx.price, base5.close) ?? 0).toFixed(2),
     d20: +(pct(bx.price, base20.close) ?? 0).toFixed(2),
-    ytd: ytd0 ? +(pct(bx.price, ytd0.close) ?? 0).toFixed(2) : null,
+    ytd: ytdBase ? +(pct(bx.price, ytdBase) ?? 0).toFixed(2) : null,
     mcap: q.marketCap ?? null,
     pre: q.preMarketChangePercent != null ? +Number(q.preMarketChangePercent).toFixed(2) : null,
     post: q.postMarketChangePercent != null ? +Number(q.postMarketChangePercent).toFixed(2) : null,
