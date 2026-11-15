@@ -5,6 +5,7 @@ const rd = (f) => { const s = fs.readFileSync(f, "utf8"); return JSON.parse(s.sl
 const W = rd("live-data.js"), Y = rd("live-extra.js"), ND = rd("live-news.js");
 const FD = fs.existsSync("live-feed.js") ? rd("live-feed.js") : { items: {} };
 const TN = fs.existsSync("track-news.js") ? rd("track-news.js") : { items: [] };
+const PN = fs.existsSync("pf-nav.js") ? rd("pf-nav.js") : { series: [], bench: {}, trades: [] };
 const mkFake = () => {
   const fn = function(){};
   return new Proxy(fn, {
@@ -22,7 +23,7 @@ const mkFake = () => {
     apply: () => mkFake(),
   });
 };
-globalThis.window = { WIND_LIVE: W, YF_DATA: Y, NEWS_DATA: ND, FEED_DATA: FD, TRACK_NEWS: TN, addEventListener(){}, scrollTo(){} };
+globalThis.window = { WIND_LIVE: W, YF_DATA: Y, NEWS_DATA: ND, FEED_DATA: FD, TRACK_NEWS: TN, PF_NAV: PN, addEventListener(){}, scrollTo(){} };
 globalThis.document = { querySelector: () => mkFake(), querySelectorAll: () => [], getElementById: () => mkFake(), addEventListener(){}, createElement: () => mkFake(), body: mkFake() };
 globalThis.localStorage = { getItem: () => null, setItem(){}, removeItem(){} };
 globalThis.location = { hash: "", origin: "file://" };
@@ -42,6 +43,13 @@ try {
       "· 持仓", pf.rows.map(x=>x.t+" "+(x.ret*100).toFixed(1)+"%").join(" / "));
     const prr=pfRiskRules();
     console.log("组合风险:", prr.rules.map(r=>r.n+"="+r.status+"("+r.read.slice(0,26)+")").join(" | "));
+    /* (13) 饼图 / 净值走势 / 调仓记录 */
+    const pie=pfPie(pf), ch=pfChart(pf);
+    console.log("饼图:", pie.length, "字符 · 扇区", (pie.match(/<path /g)||[]).length, "个 · 含净值中心", /组合净值/.test(pie));
+    console.log("走势图:", ch.length, "字符 · 折线", (ch.match(/<path /g)||[]).length, "条 · 区间按钮", (ch.match(/data-prng/g)||[]).length, "· 基准开关", (ch.match(/data-pbench/g)||[]).length,
+      "· 默认不叠基准", !(pfChart(pf).match(/stroke-dasharray="5 4"/)));
+    console.log("调仓记录:", (window.PF_NAV.trades||[]).length, "条 · 首条:", JSON.stringify((window.PF_NAV.trades||[])[0]||{}).slice(0,90));
+    console.log("净值序列:", (window.PF_NAV.series||[]).length, "点 · 末点", JSON.stringify((window.PF_NAV.series||[]).slice(-1)[0]||{}));
     const meta=DATA.stocks.find(z=>z.t==="META");
     const fl=feedList(meta);
     const byType={}; fl.forEach(x=>byType[x.type]=(byType[x.type]||0)+1);

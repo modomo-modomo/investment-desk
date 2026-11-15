@@ -599,6 +599,8 @@ tr.isnew td{background:#fffafa}
 <script src="fed-news.js"></script>
 <!-- 个股动态长期档案（20261115(12)）：Yahoo 个股新闻 + 播客匹配 + X/KOL 录入，由 sync-feed.mjs 生成 -->
 <script src="live-feed.js"></script>
+<!-- 模拟组合净值序列 + 调仓记录（20261115(13)）：由 sync-pf.mjs 每个交易日收盘后追加 -->
+<script src="pf-nav.js"></script>
 <script>
 /* ==========================================================================
    行情数据适配层
@@ -3818,16 +3820,24 @@ function feedList(s){
   (s.reports||[]).forEach(r=>out.push({d:D(r.d), type:"研报",
     src:(r.house||"")+(r.rating&&r.rating!=="—"?" · "+r.rating:"")+(r.tp&&r.tp!=="—"?" · 目标价 "+r.tp:""),
     text:r.sum||"", key:!!r.chg, isnew:!!r.chg}));
-  /* Yahoo 个股新闻 + 播客（sync-feed.mjs 累积） */
+  /* Yahoo 个股新闻 + 播客（sync-feed.mjs 累积）；英文标题已在管道里译好存在 zh 字段 */
   const FD=(typeof window!=="undefined"&&window.FEED_DATA)||null;
+  const CJK=/[\u4e00-\u9fa5]/;
+  const zhSrc=(s)=>String(s||"").replace(/^Yahoo Finance$/,"雅虎财经").replace(/^Yahoo$/,"雅虎财经");
   if(FD&&FD.items){
     const arr=FD.items[CODE_OF[s.t]||s.t]||FD.items[s.t]||[];
-    arr.forEach(x=>out.push({d:D(x.d), type:(x.type==="pod"?"播客":(x.type==="x"?"X":"新闻")),
-      src:x.src||"", text:(x.title||"")+(x.text?"｜"+x.text:""), url:x.url||"", key:!!x.key, isnew:!!x.new}));
+    arr.forEach(x=>{
+      const ti=x.zh||x.title||"";
+      const tx=(x.text&&CJK.test(x.text))?x.text:"";   /* 英文摘要不硬塞进中文流，只留有译文的 */
+      out.push({d:D(x.d), type:(x.type==="pod"?"播客":(x.type==="x"?"X":"新闻")),
+        src:zhSrc(x.src), text:ti+(tx?"｜"+tx:""), url:x.url||"", key:!!x.key, isnew:!!x.new});
+    });
   }
-  /* 赛道资讯里的 KOL / 播客 / 中文媒体（sync-tracks.mjs）；命中公司名 → 标公司级，否则标「赛道」 */
+  /* 赛道资讯里的 KOL / 播客 / 中文媒体（sync-tracks.mjs）；命中公司名 → 标公司级，否则标「赛道」
+     英文标题按标题查 FD.tr 译文表（sync-feed.mjs 预先生成），摘要只保留中文，避免中文流里夹英文 */
   const TN=(typeof window!=="undefined"&&window.TRACK_NEWS)||null;
   if(TN&&TN.items){
+    const tr=(FD&&FD.tr)||{};
     const trk=trkOf(s);
     const kindMap={kol:"KOL",pod:"播客",podcast:"播客",futu:"新闻",media:"新闻"};
     TN.items.forEach(x=>{
@@ -3835,8 +3845,10 @@ function feedList(s){
       const hit=feedHit(s,(x.title||"")+" "+(x.snip||""));
       const trackLevel=(x.kind==="kol"||x.kind==="pod"||x.kind==="podcast")&&x.track===trk;
       if(!hit&&!trackLevel) return;
+      const ti=tr[x.title]||x.title||"";
+      const snip=(x.snip&&CJK.test(x.snip))?x.snip:"";
       out.push({d:D(x.d), type:type, src:String(x.src||"").replace(/^富途·/,"富途 · ")+(hit?"":" · 赛道"),
-        text:(x.title||"")+(x.snip?"｜"+x.snip:""), url:x.url||"", key:false, isnew:!!x.isNew});
+        text:ti+(snip?"｜"+snip:""), url:x.url||"", key:false, isnew:!!x.isNew});
     });
   }
   /* X / KOL 手写档案 */
@@ -4341,12 +4353,271 @@ function pfRiskRules(){
   ];
   return {rules:rules, nav:c.nav, ret:c.ret, alpha:alpha, cashW:cashW, maxW:maxRow.w1, maxT:maxRow.t};
 }
+/* ---------- 模拟组合：图表与区块（20261115(13)） ----------
+   净值序列 / 基准 / 调仓记录全部来自 pf-nav.js（sync-pf.mjs 每日生成），
+   页面内只保留「区间」「基准叠加」两个视图态——基准默认不画，勾选才出现。 */
+const PF_UI = { rng:"all", b:{ NDX:false, HSI:false } };
+const PF_RNG = [["1w","近 1 周",7],["1m","近 1 月",30],["3m","近 3 月",90],["all","全部",0]];
+const PF_BENCH = [["NDX","纳指 100","#b26a00"],["HSI","恒生指数","#0d8a5f"]];
+const PIE_C = ["#1d3a6e","#2f5da8","#4f83c4","#6d4aa8","#9b7bc9","#b26a00","#0d8a5f","#7a8798"];
+
+function pfNavBlob(){
+  const N=(typeof window!=="undefined"&&window.PF_NAV)||null;
+  return (N&&N.series&&N.series.length>=2)?N:null;
+}
+function pfSeriesIn(N){
+  const arr=(N?N.series:[]).slice();
+  const days=((PF_RNG.filter(r=>r[0]===PF_UI.rng)[0]||PF_RNG[3])[2])||0;
+  if(!days) return arr;
+  const last=Date.parse(arr[arr.length-1].d), cut=last-days*864e5;
+  const f=arr.filter(x=>Date.parse(x.d)>=cut);
+  return f.length>=2?f:arr;
+}
+function pfAlign(bench, arr){
+  if(!bench) return null;
+  const map={}; bench.forEach(x=>{ map[x.d]=x.v; });
+  let prev=null;
+  return arr.map(x=>{ if(map[x.d]!=null) prev=map[x.d]; return prev; });
+}
+
+/* ---- 02 持仓饼图：按「当前权重」画环形图（含现金），旁边配图例 ---- */
+function pfPie(c){
+  const cashW=PF.cashW/c.nav;
+  const items=c.rows.map((x,i)=>({k:x.t, n:x.n, w:x.w1, c:PIE_C[i%PIE_C.length], ret:x.ret}))
+    .concat([{k:"现金", n:"未计息 · 回撤缓冲", w:cashW, c:"#c3cbd8", ret:null}]);
+  items.sort((a,b)=>b.w-a.w);
+  const cx=96, cy=96, r=88, r2=54;
+  let a0=-Math.PI/2, h='<svg viewBox="0 0 192 192" style="width:192px;height:192px;flex:0 0 auto">';
+  const P=(a,rr)=>[ (cx+rr*Math.cos(a)).toFixed(2), (cy+rr*Math.sin(a)).toFixed(2) ];
+  items.forEach(it=>{
+    const frac=Math.max(it.w,0)/100, a1=a0+frac*Math.PI*2;
+    const big=(a1-a0)>Math.PI?1:0;
+    const [x0,y0]=P(a0,r),[x1,y1]=P(a1,r),[x2,y2]=P(a1,r2),[x3,y3]=P(a0,r2);
+    h+='<path d="M'+x0+' '+y0+'A'+r+' '+r+' 0 '+big+' 1 '+x1+' '+y1+
+       'L'+x2+' '+y2+'A'+r2+' '+r2+' 0 '+big+' 0 '+x3+' '+y3+'Z" fill="'+it.c+'" stroke="#fff" stroke-width="1.4">'+
+       '<title>'+esc(it.k+" · "+(it.n||"")+" · "+it.w.toFixed(1)+"%")+'</title></path>';
+    if(it.w>=6){
+      const am=(a0+a1)/2, [tx,ty]=P(am,(r+r2)/2);
+      h+='<text x="'+tx+'" y="'+ty+'" text-anchor="middle" dominant-baseline="central" '+
+         'font-size="9.5" fill="#fff" style="font-weight:700;font-variant-numeric:tabular-nums">'+it.w.toFixed(0)+'%</text>';
+    }
+    a0=a1;
+  });
+  h+='<text x="'+cx+'" y="'+(cy-7)+'" text-anchor="middle" font-size="17" fill="#0e1726" style="font-weight:750;font-variant-numeric:tabular-nums">'+c.nav.toFixed(4)+'</text>';
+  h+='<text x="'+cx+'" y="'+(cy+10)+'" text-anchor="middle" font-size="8.5" fill="#7a8798">组合净值</text>';
+  h+='<text x="'+cx+'" y="'+(cy+24)+'" text-anchor="middle" font-size="9" fill="'+(c.ret>=0?"#d2373a":"#0d8a5f")+'" style="font-weight:700">'+pct(c.ret*100,2)+'</text>';
+  h+='</svg>';
+
+  let lg='<div style="flex:1;min-width:220px">';
+  lg+='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:2px 14px">';
+  items.forEach(it=>{
+    lg+='<div style="display:flex;align-items:center;gap:7px;padding:3.5px 0;border-bottom:1px dashed #f0f3f8">'+
+      '<i style="width:9px;height:9px;border-radius:2.5px;background:'+it.c+';flex:0 0 auto"></i>'+
+      '<span style="font-size:11.5px;font-weight:650;flex:0 0 auto;min-width:52px">'+esc(it.k)+'</span>'+
+      '<span class="tiny muted" style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(it.n||"")+'</span>'+
+      '<span class="num" style="font-size:11.5px;font-weight:650;flex:0 0 auto">'+it.w.toFixed(1)+'%</span>'+
+      (it.ret==null?'<span class="tiny muted" style="flex:0 0 54px;text-align:right">—</span>'
+        :'<span class="num chg '+sgn(it.ret*100)+'" style="font-size:10.5px;flex:0 0 54px;text-align:right">'+pct(it.ret*100,1)+'</span>')+
+      '</div>';
+  });
+  lg+='</div>';
+  lg+='<div class="tiny muted" style="margin-top:8px;line-height:1.7">扇区 = <b>当前权重</b>（价格漂移后自动归一，含现金 '+(PF.cashW/c.nav).toFixed(1)+'%）；右侧小字是各标的<b>建仓以来涨跌</b>。不做再平衡，所以扇区会随时间自己变。</div>';
+  lg+='</div>';
+  return '<div class="card" style="padding:14px 16px"><div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">'+h+lg+'</div></div>';
+}
+
+/* ---- 03 净值走势：纯 SVG 折线 + 基准叠加 + 区间切换 + hover 读数 ---- */
+function pfChart(c){
+  const N=pfNavBlob();
+  const arr=N?pfSeriesIn(N):[];
+  if(arr.length<2){
+    return '<div class="card" style="padding:14px 16px"><div class="tiny muted">净值序列还没攒够两个交易日——sync-pf.mjs 每个交易日收盘后追加一个点，攒够后这里自动出图。</div></div>';
+  }
+  const W=720,H=252,PL=42,PR=58,PT=14,PB=28;
+  const iw=W-PL-PR, ih=H-PT-PB, n=arr.length;
+  const xs=arr.map((_,i)=>PL+iw*i/(n-1));
+  const ser=[{k:"PF",n:"本组合",c:"#1d3a6e",w:2.4,dash:"",v:arr.map(x=>x.nav)}];
+  const rows=arr.map((x,i)=>({d:x.d,PF:x.nav}));
+  PF_BENCH.forEach(b=>{
+    if(!PF_UI.b[b[0]]) return;
+    const v=N&&N.bench&&N.bench[b[0]]?pfAlign(N.bench[b[0]].series,arr):null;
+    if(!v||v[0]==null) return;
+    ser.push({k:b[0],n:b[1],c:b[2],w:1.6,dash:"5 4",v:v});
+    v.forEach((y,i)=>{ if(y!=null) rows[i][b[0]]=y; });
+  });
+  let lo=1,hi=1;
+  ser.forEach(s=>s.v.forEach(y=>{ if(y!=null){ if(y<lo)lo=y; if(y>hi)hi=y; } }));
+  const pad=(hi-lo)*0.18||0.01; lo-=pad; hi+=pad;
+  const Y=v=>PT+ih-(v-lo)/(hi-lo)*ih;
+  const X=i=>xs[i];
+  const tips=arr.map((x,i)=>x.d).join("|");
+
+  let h='<div class="pf-chart" data-geo=\''+JSON.stringify({W:W,PL:PL,iw:iw,xs:xs,rows:rows}).replace(/'/g,"&#39;")+'\' style="position:relative">';
+  h+='<svg class="pf-svg" viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block">';
+  /* 网格与 y 轴（按收益百分点标注） */
+  for(let g=0;g<=4;g++){
+    const v=lo+(hi-lo)*g/4, y=Y(v);
+    h+='<line x1="'+PL+'" y1="'+y.toFixed(1)+'" x2="'+(W-PR)+'" y2="'+y.toFixed(1)+'" stroke="#eef1f6" stroke-width="1"/>';
+    h+='<text x="'+(PL-6)+'" y="'+(y+3.5).toFixed(1)+'" text-anchor="end" font-size="9" fill="#98a2b3" style="font-variant-numeric:tabular-nums">'+((v-1)*100).toFixed(1)+'%</text>';
+  }
+  /* 净值 1.0 基线 */
+  if(lo<1&&hi>1){
+    const y0=Y(1);
+    h+='<line x1="'+PL+'" y1="'+y0.toFixed(1)+'" x2="'+(W-PR)+'" y2="'+y0.toFixed(1)+'" stroke="#c8d0dd" stroke-width="1" stroke-dasharray="3 3"/>';
+  }
+  /* x 轴日期（最多 7 个刻度） */
+  const step=Math.max(1,Math.ceil(n/7));
+  arr.forEach((x,i)=>{
+    if(i%step&&i!==n-1) return;
+    if(i!==n-1&&(n-1-i)<step*0.6) return;
+    h+='<text x="'+X(i).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" font-size="9" fill="#98a2b3">'+x.d.slice(5)+'</text>';
+  });
+  /* 折线 */
+  ser.forEach(s=>{
+    let d="",open=false;
+    s.v.forEach((y,i)=>{ if(y==null){ open=false; return; } d+=(open?"L":"M")+X(i).toFixed(1)+" "+Y(y).toFixed(1)+" "; open=true; });
+    h+='<path d="'+d+'" fill="none" stroke="'+s.c+'" stroke-width="'+s.w+'"'+(s.dash?' stroke-dasharray="'+s.dash+'"':'')+' stroke-linejoin="round" stroke-linecap="round"/>';
+  });
+  /* 组合节点 */
+  ser[0].v.forEach((y,i)=>{ h+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(y).toFixed(1)+'" r="2.6" fill="#fff" stroke="#1d3a6e" stroke-width="1.8"/>'; });
+  /* 末端读数标签（避免两条线末端太近时标签互相压住） */
+  const usedY=[];
+  ser.forEach(s=>{
+    const y=s.v[s.v.length-1];
+    if(y==null) return;
+    let ly=Y(y), tries=0;
+    while(tries<12 && usedY.some(u=>Math.abs(u-ly)<11)){ ly+=(ly<=H/2?-11:11); tries++; }
+    ly=Math.max(PT+6,Math.min(ly,H-PB-6));
+    usedY.push(ly);
+    h+='<text x="'+(W-PR+7)+'" y="'+(ly+3.4).toFixed(1)+'" font-size="9.5" fill="'+s.c+'" style="font-weight:700;font-variant-numeric:tabular-nums">'+((y-1)*100>0?"+":"")+((y-1)*100).toFixed(2)+'%</text>';
+  });
+  /* 悬浮引导线 */
+  h+='<line class="pf-guide" x1="0" y1="'+PT+'" x2="0" y2="'+(PT+ih)+'" stroke="#b9c3d3" stroke-width="1" stroke-dasharray="3 3" opacity="0"/>';
+  h+='</svg>';
+  h+='<div class="pf-tip" style="position:absolute;pointer-events:none;opacity:0;transition:opacity .12s;background:#fff;border:1px solid var(--line-strong);border-radius:8px;padding:7px 9px;font-size:10.5px;line-height:1.6;box-shadow:0 8px 20px -10px rgba(16,29,54,.35);white-space:nowrap;z-index:5"></div>';
+  h+='</div>';
+
+  /* 上方控件：区间 + 基准勾选 */
+  let bar='<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:9px">'+
+    '<span class="tiny muted" style="margin-right:1px">区间</span>';
+  PF_RNG.forEach(r=>{ bar+='<button class="fchip'+(PF_UI.rng===r[0]?' on':'')+'" data-prng="'+r[0]+'">'+r[1]+'</button>'; });
+  bar+='<span style="width:12px"></span><span class="tiny muted" style="margin-right:1px">叠加基准</span>';
+  PF_BENCH.forEach(b=>{
+    const on=!!PF_UI.b[b[0]];
+    bar+='<button class="fchip'+(on?' on':'')+'" data-pbench="'+b[0]+'" style="'+(on?'background:'+b[2]+';border-color:'+b[2]+';color:#fff':'border-style:dashed')+'">'+
+      (on?'✓ ':'+ ')+b[1]+'</button>';
+  });
+  bar+='<span class="tiny muted" style="margin-left:auto">默认只画本组合 · 基准由你手动叠加</span></div>';
+
+  const last=arr[arr.length-1], first=arr[0];
+  const seg=(last.nav-first.nav)*100;
+  let foot='<div class="tiny muted" style="margin-top:6px;line-height:1.7">'+
+    '样本 <b>'+n+'</b> 个交易日（'+first.d+' → '+last.d+'）· 区间内组合 '+
+    '<b class="'+(seg>=0?"up":"down")+'">'+pct(seg,2)+'</b>'+
+    (N&&N.meta&&N.meta.updated?' · 序列更新于 '+N.meta.updated:'')+
+    ' · 口径：权重按建仓比例不再平衡，不含交易成本与汇率波动；基准以 '+PF.base+' 收盘归一为 1。</div>';
+  return '<div class="card" style="padding:14px 16px 10px">'+bar+h+foot+'</div>';
+}
+function bindPfChart(root){
+  if(!root) return;
+  const box=root.querySelector(".pf-chart"); if(!box) return;
+  const svg=box.querySelector("svg.pf-svg"), tip=box.querySelector(".pf-tip"), guide=box.querySelector(".pf-guide");
+  if(!svg||!tip||!guide) return;
+  let geo=null; try{ geo=JSON.parse(box.dataset.geo); }catch(e){ return; }
+  if(!geo) return;
+  const hide=()=>{ tip.style.opacity=0; guide.setAttribute("opacity",0); };
+  svg.addEventListener("mousemove",e=>{
+    const b=svg.getBoundingClientRect();
+    const vx=(e.clientX-b.left)/b.width*geo.W;
+    let bi=0,bd=1e9;
+    geo.xs.forEach((x,i)=>{ const d=Math.abs(x-vx); if(d<bd){ bd=d; bi=i; } });
+    const r=geo.rows[bi];
+    guide.setAttribute("x1",geo.xs[bi]); guide.setAttribute("x2",geo.xs[bi]); guide.setAttribute("opacity","1");
+    let t='<div style="font-weight:700;margin-bottom:2px">'+r.d+'</div>';
+    const keyOrder=["PF"].concat(PF_BENCH.map(b=>b[0]));
+    keyOrder.forEach(k=>{
+      if(r[k]==null) return;
+      const nm=k==="PF"?"本组合":((PF_BENCH.filter(b=>b[0]===k)[0]||[])[1]||k);
+      const v=(r[k]-1)*100;
+      t+='<div style="display:flex;gap:10px;justify-content:space-between">'+
+        '<span style="color:'+(k==="PF"?"#1d3a6e":((PF_BENCH.filter(x=>x[0]===k)[0]||[])[2]||"#666"))+'">'+nm+'</span>'+
+        '<b style="font-variant-numeric:tabular-nums;color:'+(v>=0?"#d2373a":"#0d8a5f")+'">'+(v>0?"+":"")+v.toFixed(2)+'%</b></div>';
+    });
+    tip.innerHTML=t; tip.style.opacity=1;
+    const pctLeft=geo.xs[bi]/geo.W*100;
+    tip.style.top="10px";
+    tip.style.left=(pctLeft>62?"calc("+pctLeft+"% - 152px)":"calc("+pctLeft+"% + 12px)");
+  });
+  svg.addEventListener("mouseleave",hide);
+}
+
+/* ---- 07 调仓记录：读 pf-nav.js 的 trades，长期累积，侧边滚动 ---- */
+function pfTrades(){
+  const N=(typeof window!=="undefined"&&window.PF_NAV)||null;
+  const arr=(N&&N.trades)?N.trades.slice():[];
+  if(!arr.length) return '<div class="card" style="padding:14px 16px"><div class="tiny muted">还没有调仓记录——每次调仓在 pf-trades.json 里追加一条，sync-pf.mjs 会带进净值序列。</div></div>';
+  arr.sort((a,b)=>(a.d<b.d?1:(a.d>b.d?-1:0)));
+  const actCls={"建仓":"green","加仓":"add","增配":"add","减仓":"cut","减配":"cut","清仓":"cut","调权":"amber","再平衡":"amber"};
+  let h='<div class="card" style="padding:0;overflow:hidden"><div style="max-height:340px;overflow-y:auto;overscroll-behavior:contain">'+
+    '<table class="tbl" style="min-width:0"><thead style="position:sticky;top:0;z-index:2;background:var(--surface)"><tr>'+
+    '<th style="width:88px">日期</th><th style="width:96px">标的</th><th style="width:62px">动作</th>'+
+    '<th class="num" style="width:88px">成交价</th><th class="num" style="width:62px">前权重</th>'+
+    '<th class="num" style="width:62px">后权重</th><th>调仓理由 / 纪律</th></tr></thead><tbody>';
+  arr.forEach(x=>{
+    h+='<tr'+(x.key?' style="background:#fffafa"':'')+'>'+
+      '<td class="num tiny" style="color:var(--muted)">'+esc(x.d)+'</td>'+
+      '<td><div class="tk" style="font-size:12px;font-weight:650">'+esc(x.t)+'</div></td>'+
+      '<td><span class="tag '+(actCls[x.act]||"")+'" style="font-size:9.5px">'+esc(x.act)+'</span></td>'+
+      '<td class="num">'+(x.px==null?'<span class="muted">—</span>':curSym(x.t)+(+x.px).toFixed(2))+'</td>'+
+      '<td class="num tiny">'+(x.w0?x.w0.toFixed(0)+"%":"—")+'</td>'+
+      '<td class="num tiny" style="font-weight:650">'+(x.w1!=null?x.w1.toFixed(0)+"%":"—")+'</td>'+
+      '<td class="tiny" style="color:var(--text-2);line-height:1.65">'+(x.key?'<span style="color:var(--up);font-weight:700">[关键] </span>':'')+esc(x.note||"")+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;line-height:1.75">共 <b>'+arr.length+'</b> 条 · 记录存在 <code>pf-trades.json</code>，只增不改（调仓当天追加，净值序列随之重算）。'+
+     '<b>前权重 → 后权重</b> 是调仓前后的组合权重，现金单独成行；「关键」= 触发纪律或改变组合结构的那一笔。</div>';
+  return h;
+}
+
+/* ---- 05 持仓明细（原 02，位置后移到归因之后） ---- */
+function pfDetail(c){
+  let h='<div class="card tbl-wrap"><table class="tbl tbl-stk"><thead><tr>'+
+     '<th style="width:132px">标的</th><th style="width:82px">赛道</th>'+
+     '<th class="num" style="width:64px">建仓权重</th><th class="num" style="width:96px">买入价 11-06</th>'+
+     '<th class="num" style="width:96px">现价</th><th class="num" style="width:72px">涨跌幅</th>'+
+     '<th class="num" style="width:70px">当前权重</th><th class="num" style="width:80px">盈亏贡献</th>'+
+     '<th style="width:64px">建议</th></tr></thead><tbody>';
+  const actCls={"清仓":"cut","减持":"cut","减配":"cut","观察":"watch","持有":"","增配":"add"};
+  c.rows.forEach(x=>{
+    h+='<tr class="stk-row pf-row" data-t="'+x.t+'" title="点击查看 '+x.t+' 详情">'+
+       '<td><div class="tk">'+x.t+'</div><div class="tk-sub">'+esc(x.n)+'</div></td>'+
+       '<td><span class="tag violet" style="font-size:9.5px">'+(TRACK_NAME[x.trk]||"其它").split(" / ")[0]+'</span></td>'+
+       '<td class="num">'+x.w0.toFixed(0)+'%</td>'+
+       '<td class="num">'+x.cur+x.px0.toFixed(2)+'</td>'+
+       '<td class="num" style="font-weight:600">'+x.cur+x.px.toFixed(2)+'</td>'+
+       '<td class="num"><span class="chg '+sgn(x.ret*100)+'" style="font-weight:600">'+pct(x.ret*100,2)+'</span></td>'+
+       '<td class="num">'+x.w1.toFixed(1)+'%</td>'+
+       '<td class="num"><span class="chg '+sgn(x.contrib)+'">'+pct(x.contrib,2)+'</span></td>'+
+       '<td><span class="tag '+(actCls[x.adv]||"")+'" style="font-size:9.5px">'+x.adv+'</span></td></tr>';
+  });
+  h+='<tr style="background:var(--bg-2)"><td><div class="tk">现金</div><div class="tk-sub">未计息</div></td>'+
+     '<td><span class="tag" style="font-size:9.5px">现金</span></td>'+
+     '<td class="num">'+PF.cashW+'%</td><td class="num">—</td><td class="num">—</td><td class="num">0.00%</td>'+
+     '<td class="num">'+(PF.cashW/c.nav).toFixed(1)+'%</td><td class="num">0.00</td><td>—</td></tr>'+
+     '<tr style="font-weight:700"><td>合计</td><td></td><td class="num">100%</td><td class="num">—</td><td class="num">—</td>'+
+     '<td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td>'+
+     '<td class="num">100.0%</td><td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td><td></td></tr>';
+  h+='</tbody></table></div>';
+  return h;
+}
+
 function viewPortfolio(){
   const c=pfCalc(), S={}; (DATA.stocks||[]).forEach(x=>S[x.t]=x);
   const spx=c.bench.find(b=>b.n==="标普 500");
   const alpha=(spx&&spx.ret!=null)?c.ret-spx.ret:null;
   const winner=c.rows.slice().sort((a,b)=>b.contrib-a.contrib)[0];
   const loser=c.rows.slice().sort((a,b)=>a.contrib-b.contrib)[0];
+  const N=pfNavBlob();
 
   let h=feedBar();
   /* 01 总览 */
@@ -4374,39 +4645,18 @@ function viewPortfolio(){
      '持仓 80% 集中在 AI 算力链（IREN / ONTO / META / TSLA）与两条独立腿（来凯医药、兴森科技），'+
      '现金 20% 是这一轮高波动下的机动仓位——<b>不动权重，只看逻辑是否被破坏</b>。</div></div>';
 
-  /* 02 持仓明细 */
-  h+='<div class="sec">'+secHead("02","持仓明细","买入价 = 2026-11-06 收盘 · 现价为最近已结算收盘 · 当前权重按净值归一",
-      "<span class='upd'>"+c.rows.length+" 持仓</span>");
-  h+='<div class="card tbl-wrap"><table class="tbl tbl-stk"><thead><tr>'+
-     '<th style="width:132px">标的</th><th style="width:82px">赛道</th>'+
-     '<th class="num" style="width:64px">建仓权重</th><th class="num" style="width:96px">买入价 11-06</th>'+
-     '<th class="num" style="width:96px">现价</th><th class="num" style="width:72px">涨跌幅</th>'+
-     '<th class="num" style="width:70px">当前权重</th><th class="num" style="width:80px">盈亏贡献</th>'+
-     '<th style="width:64px">建议</th></tr></thead><tbody>';
-  const actCls={"清仓":"cut","减持":"cut","减配":"cut","观察":"watch","持有":"","增配":"add"};
-  c.rows.forEach(x=>{
-    h+='<tr class="stk-row pf-row" data-t="'+x.t+'" title="点击查看 '+x.t+' 详情">'+
-       '<td><div class="tk">'+x.t+'</div><div class="tk-sub">'+esc(x.n)+'</div></td>'+
-       '<td><span class="tag violet" style="font-size:9.5px">'+(TRACK_NAME[x.trk]||"其它").split(" / ")[0]+'</span></td>'+
-       '<td class="num">'+x.w0.toFixed(0)+'%</td>'+
-       '<td class="num">'+x.cur+x.px0.toFixed(2)+'</td>'+
-       '<td class="num" style="font-weight:600">'+x.cur+x.px.toFixed(2)+'</td>'+
-       '<td class="num"><span class="chg '+sgn(x.ret*100)+'" style="font-weight:600">'+pct(x.ret*100,2)+'</span></td>'+
-       '<td class="num">'+x.w1.toFixed(1)+'%</td>'+
-       '<td class="num"><span class="chg '+sgn(x.contrib)+'">'+pct(x.contrib,2)+'</span></td>'+
-       '<td><span class="tag '+(actCls[x.adv]||"")+'" style="font-size:9.5px">'+x.adv+'</span></td></tr>';
-  });
-  h+='<tr style="background:var(--bg-2)"><td><div class="tk">现金</div><div class="tk-sub">未计息</div></td>'+
-     '<td><span class="tag" style="font-size:9.5px">现金</span></td>'+
-     '<td class="num">'+PF.cashW+'%</td><td class="num">—</td><td class="num">—</td><td class="num">0.00%</td>'+
-     '<td class="num">'+(PF.cashW/c.nav).toFixed(1)+'%</td><td class="num">0.00</td><td>—</td></tr>'+
-     '<tr style="font-weight:700"><td>合计</td><td></td><td class="num">100%</td><td class="num">—</td><td class="num">—</td>'+
-     '<td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td>'+
-     '<td class="num">100.0%</td><td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td><td></td></tr>';
-  h+='</tbody></table></div>';
+  /* 02 持仓饼图 */
+  h+='<div class="sec">'+secHead("02","持仓结构","按当前权重（含现金）· 价格漂移后自动归一，不做再平衡",
+      "<span class='upd'>"+(c.rows.length+1)+" 块</span>");
+  h+=pfPie(c);
 
-  /* 03 基准对比 + 赛道归因 */
-  h+='<div class="sec">'+secHead("03","基准对比与赛道归因","同一建仓基期（11-06）· 未计汇率波动","<span class='upd'>组合 vs 4 条基准</span>");
+  /* 03 净值走势 */
+  h+='<div class="sec">'+secHead("03","净值走势","建仓以来逐日净值 · 纳指 100 / 恒生指数为可选叠加基准 · 区间可切换",
+      "<span class='upd'>"+(N?(N.series.length+" 个交易日"):"待接入")+"</span>");
+  h+=pfChart(c);
+
+  /* 04 基准对比 + 赛道归因 */
+  h+='<div class="sec">'+secHead("04","基准对比与赛道归因","同一建仓基期（11-06）· 未计汇率波动","<span class='upd'>组合 vs 4 条基准</span>");
   h+='<div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:start">';
   h+='<div class="card" style="padding:14px"><div class="tiny muted" style="margin-bottom:8px">组合与基准（'+PF.base+' → 最新收盘）</div>'+
      '<table class="mini-tbl"><thead><tr><th>基准</th><th class="num">期间收益</th><th class="num">组合超额</th></tr></thead><tbody>';
@@ -4436,14 +4686,25 @@ function viewPortfolio(){
      '%，现金 '+PF.cashW+'%——组合本质是<b>一条 AI 主线 + 两条独立事件 + 缓冲</b>。</div></div>';
   h+='</div>';
 
-  /* 04 口径与纪律 */
-  h+='<div class="sec">'+secHead("04","口径与纪律","固定建仓价 · 不随行情改动 · 便于回溯决策质量","<span class='upd'>只记录，不预测</span>");
+  /* 05 持仓明细 */
+  h+='<div class="sec">'+secHead("05","持仓明细","买入价 = 2026-11-06 收盘 · 现价为最近已结算收盘 · 当前权重按净值归一",
+      "<span class='upd'>"+c.rows.length+" 持仓</span>");
+  h+=pfDetail(c);
+
+  /* 06 口径与纪律 */
+  h+='<div class="sec">'+secHead("06","口径与纪律","固定建仓价 · 不随行情改动 · 便于回溯决策质量","<span class='upd'>只记录，不预测</span>");
   h+='<div class="card" style="padding:14px 16px"><div style="font-size:12px;line-height:1.95">'+
      '<b>1. 买入价口径：</b>全部持仓以 <b>2026-11-06 收盘价</b> 建仓（'+PF.rows.map(r=>r.t+" "+r.px0.toFixed(2)).join("；")+'），此后不再调整买入价，避免“摊薄成本”把判断失误藏起来。<br>'+
      '<b>2. 权重口径：</b>建仓权重 20/15/10/10/10/10/5 + 现金 20；<b>当前权重</b>随价格漂移自动归一，不做再平衡——再平衡会被单列成交易记录。<br>'+
      '<b>3. 币种口径：</b>来凯医药按 <b>HK$</b>、兴森科技按 <b>¥</b>、其余按 <b>$</b> 计价；组合收益为各持仓<b>本币收益的加权</b>，未计汇率波动（人民币口径会额外受美元/港币影响）。<br>'+
-     '<b>4. 基准口径：</b>标普 500 / 纳指 100 / 费半 / 恒指均取 11-06 收盘为基期，与组合同一起点，避免“基准窗口滚动”造成的假超额。<br>'+
-     '<b>5. 纪律：</b>单票上限 20%（来凯已达上限，不再加）；现金低于 10% 时必须先卖出再加仓；任一持仓的基本面逻辑被破坏（而非股价下跌）即减仓，理由写进「标的研究」的公司更新里。</div></div>';
+     '<b>4. 基准口径：</b>标普 500 / 纳指 100 / 费半 / 恒指均取 11-06 收盘为基期，与组合同一起点，避免“基准窗口滚动”造成的假超额。<b>净值走势图里纳指 100 与恒生指数默认关闭，需要时手动勾选叠加</b>。<br>'+
+     '<b>5. 净值口径：</b>净值 = Σ 建仓权重 ×（现价 / 买入价）+ 现金，逐日收盘后由 <code>sync-pf.mjs</code> 追加一个点，<b>历史点不回改</b>——回撤与超额都能回溯到具体哪一天。<br>'+
+     '<b>6. 纪律：</b>单票上限 20%（来凯已达上限，不再加）；现金低于 10% 时必须先卖出再加仓；任一持仓的基本面逻辑被破坏（而非股价下跌）即减仓，理由写进「标的研究」的公司更新里，同时在<b>调仓记录</b>留一条。</div></div>';
+
+  /* 07 调仓记录 */
+  h+='<div class="sec">'+secHead("07","调仓记录","日期 · 标的 · 成交价 · 权重变化 · 理由 · 长期累积",
+      "<span class='upd'>只增不改</span>");
+  h+=pfTrades();
   return h;
 }
 /* ==================================================================
@@ -4839,6 +5100,18 @@ function route(){
         if(i>=0) openStock(i);
       };
     });
+    /* 走势图：区间切换 / 基准叠加 / 悬浮读数（20261115(13)）——只重绘组合页，不整页跳转 */
+    const bindPf=()=>{
+      document.querySelectorAll("[data-prng]").forEach(b=>{
+        b.onclick=()=>{ const y=window.scrollY; PF_UI.rng=b.dataset.prng; route(); window.scrollTo({top:y,behavior:"instant"}); };
+      });
+      document.querySelectorAll("[data-pbench]").forEach(b=>{
+        b.onclick=()=>{ const y=window.scrollY; const k=b.dataset.pbench; PF_UI.b[k]=!PF_UI.b[k]; route(); window.scrollTo({top:y,behavior:"instant"}); };
+      });
+      const box=document.querySelector(".pf-chart");
+      if(box) bindPfChart(box.parentElement);
+    };
+    bindPf();
   }
 
   if(mod.id==="tracks"){

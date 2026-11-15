@@ -59,9 +59,13 @@ jobs:
         run: node sync-feed.mjs
         continue-on-error: true
 
+      - name: 模拟组合净值序列（sync-pf.mjs：逐日净值 + 纳指100/恒指基准 + 调仓记录）
+        run: node sync-pf.mjs
+        continue-on-error: true
+
       - name: 校验产物
         run: |
-          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js pf-nav.js; do
             if [ ! -s "$f" ]; then echo "::error::$f 为空或缺失"; exit 1; fi
             node --check "$f" 2>/dev/null || node -e "new Function(require('fs').readFileSync('$f','utf8'))" || { echo "::error::$f 语法错误"; exit 1; }
             echo "✓ $f $(wc -c < $f) 字节"
@@ -76,7 +80,8 @@ jobs:
           for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js cal-cache.json \
                    highs-log.json geo-log.json trump-log.json movers-log.json gpu-rent.json \
                    earn-beat-log.json company-zh.json brief-log.json \
-                   track-news-log.json fed-log.json feed-log.json kol-log.json; do
+                   track-news-log.json fed-log.json feed-log.json kol-log.json \
+                   pf-nav.js pf-trades.json; do
             [ -f "$f" ] && git add "$f" || true
           done
           if git diff --staged --quiet; then
@@ -90,13 +95,13 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js _site/ 2>/dev/null || true
+          cp live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js pf-nav.js _site/ 2>/dev/null || true
           ls -la _site
 
       - name: 给数据文件加版本号（绕开 Pages CDN 的 10 分钟缓存）
         run: |
           V=$(date +%s)
-          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js live-feed.js pf-nav.js; do
             sed -i "s|$f\"|$f?v=$V\"|g" _site/index.html
           done
           echo "--- 版本号已写入 ---"

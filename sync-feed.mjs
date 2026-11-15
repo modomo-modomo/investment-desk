@@ -52,11 +52,11 @@ const KW = {
 };
 
 const FEEDS = [
-  ["播客 · Acquired", "https://feeds.transistor.fm/acquired"],
-  ["播客 · Invest Like the Best", "https://feeds.megaphone.fm/investlikethebest"],
-  ["播客 · All-In", "https://allinchamathjason.libsyn.com/rss"],
-  ["播客 · Lex Fridman", "https://lexfridman.com/feed/podcast/"],
-  ["播客 · Odd Lots", "https://omny.fm/shows/odd-lots/playlists/podcast.rss"],
+  ["播客 · 并购风云（Acquired）", "https://feeds.transistor.fm/acquired"],
+  ["播客 · 像最优秀的投资者那样思考（Invest Like the Best）", "https://feeds.megaphone.fm/investlikethebest"],
+  ["播客 · All-In 四人谈", "https://allinchamathjason.libsyn.com/rss"],
+  ["播客 · 莱克斯·弗里德曼（Lex Fridman）", "https://lexfridman.com/feed/podcast/"],
+  ["播客 · 奇闻异事（Odd Lots）", "https://omny.fm/shows/odd-lots/playlists/podcast.rss"],
   ["播客 · 硅谷 101", "https://feeds.fireside.fm/sv101/rss"]
 ];
 
@@ -109,7 +109,7 @@ for (const s of STOCKS) {
     for (const it of items) {
       const id = idOf("yh:" + it.title);
       if (prev.items[s.code].some((x) => x.id === id)) continue;
-      prev.items[s.code].push({ id, d: it.date, type: "news", src: "Yahoo Finance", title: it.title, url: it.url, first: today });
+      prev.items[s.code].push({ id, d: it.date, type: "news", src: "雅虎财经", title: it.title, url: it.url, first: today });
       newsN++;
     }
   } catch (e) {
@@ -155,6 +155,46 @@ for (const [code, arr] of Object.entries(kolLog.items || {})) {
     prev.items[code].push({ id, d: k.d, type: "x", src: "X · " + (k.handle || ""), title: k.title || "", text: k.view || "", url: k.url || "", key: !!k.key, first: today });
     xn++;
   }
+}
+
+/* ---------- 3.5 英译中：标题逐条翻译，结果缓存在 zh 字段（同一条只翻一次） ---------- */
+const HAS_CJK = /[\u4e00-\u9fa5]/;
+async function zhText(text){
+  const u = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=" +
+    encodeURIComponent(String(text).slice(0, 900));
+  const r = await fetch(u, { headers: { "User-Agent": UA } });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  const j = await r.json();
+  return ((j && j[0]) || []).map((x) => x[0]).join("").trim();
+}
+console.log("翻译英文标题…");
+let trN = 0, trFail = 0;
+for (const code of Object.keys(prev.items)) {
+  for (const it of prev.items[code]) {
+    const raw = it.title || "";
+    if (!raw || it.zh || HAS_CJK.test(raw)) continue;
+    try { const z = await zhText(raw); if (z) { it.zh = z; trN++; } }
+    catch (e) { trFail++; }
+    await new Promise((r) => setTimeout(r, 110));
+  }
+}
+console.log(`  新翻译 ${trN} 条` + (trFail ? ` · 失败 ${trFail}` : ""));
+
+/* 赛道资讯（track-news.js）里的英文标题也要中文化：译文按标题存进 tr 映射，
+   页面渲染时按标题查表，避免同一句被翻两次。 */
+prev.tr = prev.tr || {};
+if (fs.existsSync("track-news.js")) {
+  try {
+    const tj = JSON.parse(fs.readFileSync("track-news.js", "utf8").replace(/^window\.TRACK_NEWS\s*=\s*/, "").replace(/;\s*$/, ""));
+    const need = (tj.items || []).filter((x) => x.title && !HAS_CJK.test(x.title) && !prev.tr[x.title]).slice(0, 220);
+    console.log(`赛道资讯英译中（${need.length} 条）…`);
+    let ok = 0;
+    for (const it of need) {
+      try { const z = await zhText(it.title); if (z) { prev.tr[it.title] = z; ok++; } } catch (e) {}
+      await new Promise((r) => setTimeout(r, 110));
+    }
+    console.log(`  赛道资讯翻译 ${ok} 条`);
+  } catch (e) { console.warn("  赛道资讯翻译跳过：" + e.message); }
 }
 
 /* ---------- 4. 归档：标红窗口 + 截断 ---------- */
