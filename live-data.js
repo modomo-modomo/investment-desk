@@ -188,6 +188,19 @@ window.WIND_LIVE = {
    "mcap": 15027170304,
    "pre": null,
    "post": 0.22
+  },
+  "SPCX.O": {
+   "name": "SPACE EXPLORATION TECHNOLOGIES",
+   "date": "20261113",
+   "price": 139.11,
+   "prev": 139.94,
+   "chg": -0.59,
+   "d5": 3.6,
+   "d20": -4.74,
+   "ytd": -13.56,
+   "mcap": 1889261846528,
+   "pre": null,
+   "post": -2.06
   }
  },
  "indices": {

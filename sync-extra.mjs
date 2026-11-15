@@ -266,7 +266,7 @@ async function nextEarnings(symbol) {
 /* ---------------- 1. 交叉校验 ---------------- */
 const CHECK = {
   TSLA: "TSLA", META: "META", IREN: "IREN", NBIS: "NBIS", CRWV: "CRWV", BE: "BE",
-  AMD: "AMD", TSM: "TSM", TER: "TER", ONTO: "ONTO", NET: "NET", RBRK: "RBRK", OKTA: "OKTA", CHKP: "CHKP",
+  AMD: "AMD", TSM: "TSM", TER: "TER", ONTO: "ONTO", NET: "NET", RBRK: "RBRK", OKTA: "OKTA", CHKP: "CHKP", SPCX: "SPCX",
 };
 const quotesOut = {};
 for (const [t, sym] of Object.entries(CHECK)) {
@@ -606,9 +606,9 @@ const POOL = [
   ["TSLA","特斯拉","电动车/机器人"],["META","脸书","社交媒体"],["IREN","IREN","AI基础设施"],["NBIS","NEBIUS","AI基础设施"],
   ["CRWV","COREWEAVE","AI基础设施"],["BE","BLOOM ENERGY","电力设备"],["AMD","超威半导体","半导体"],["TSM","台积电","半导体"],
   ["TER","泰瑞达","半导体设备"],["ONTO","ONTO INNOVATION","半导体设备"],["NET","CLOUDFLARE","网络/网安"],["RBRK","RUBRIK","网安"],
-  ["OKTA","OKTA","网安"],["CHKP","CHECK POINT","网安"],
+  ["OKTA","OKTA","网安"],["CHKP","CHECK POINT","网安"],["SPCX","SpaceX","商业航天"],
 ];
-const SYM2WIND = { TSLA:"TSLA.O", META:"META.O", IREN:"IREN.O", NBIS:"NBIS.O", CRWV:"CRWV.O", BE:"BE.N", AMD:"AMD.O", TSM:"TSM.N", TER:"TER.O", ONTO:"ONTO.N", NET:"NET.N", RBRK:"RBRK.N", OKTA:"OKTA.O", CHKP:"CHKP.O" };
+const SYM2WIND = { TSLA:"TSLA.O", META:"META.O", IREN:"IREN.O", NBIS:"NBIS.O", CRWV:"CRWV.O", BE:"BE.N", AMD:"AMD.O", TSM:"TSM.N", TER:"TER.O", ONTO:"ONTO.N", NET:"NET.N", RBRK:"RBRK.N", OKTA:"OKTA.O", CHKP:"CHKP.O", SPCX:"SPCX.O" };
 const MKT_IDX = [["^GSPC","标普500","US"],["^HSI","恒生指数","HK"],["000001.SS","上证指数","CN"]];
 const highsToday = [];
 const poolQuotes = await quotes(POOL.map((p) => p[0]));
