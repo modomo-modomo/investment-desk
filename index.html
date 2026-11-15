@@ -2900,38 +2900,52 @@ function viewEvents(){
   h+='</div>';   /* #f04-right */
   h+='</div>';   /* grid */
 
-  /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（每日抓取，最新在前，新增标红）---- */
+  /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（每日抓取 · 噪音过滤 · 实质 > 表态分级）---- */
   const G=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.geo)?window.NEWS_DATA.geo:null;
   const gItems=(G&&G.items)||[];
-  const gOf=(topic)=>gItems.filter(x=>x.topic===topic);
+  /* 无效信息过滤器（20261115(6)）：吹风会通稿 / 后勤保障 / 区域宣传 / 礼仪性会见 / 个股 13F —— 对股市与策略零信息量，
+     直接丢弃、不留档、不占位；没有有效更新时宁可只给判断，不拿通稿凑数 */
+  const GEO_NOISE=/吹风会|新闻中心|筹备工作|筹备就绪|各项筹备|绿电|供电保障|志愿者|经济总量|大湾区|活力最强|党建|从严治党|国有企业党的|13F|建仓|增持|清仓|减持|亚朵|携程|南非|索马里|文旅|招待会|文艺演出|场馆|交通保障|安保|纪念品|形象片|宣传片|参观|合影|塔斯社|会见.{0,12}董事长|要闻汇总|消息汇总|一览|速览|盘前必读|早知道/;
+  /* 实质信息：能改定价的硬变量（关税 / 管制 / 协议 / 军演 / 会晤与磋商），其余命中项归「表态」 */
+  const GEO_HARD=/关税|出口管制|管制措施|制裁|实体清单|反制|禁令|豁免|协议|备忘录|联合声明|公报|降税|采购|军演|演习|过航|侦察|限制措施|法案|清单|会谈|磋商|会晤|通话|会议|谈判|芯片/;
+  const geoLvl=(g)=>{ const s=String(g.o||""); if(GEO_NOISE.test(s)) return "x"; return GEO_HARD.test(s)?"s":"t"; };
+  const gOf=(topic)=>gItems.filter(x=>x.topic===topic).map(x=>Object.assign({},x,{lvl:geoLvl(x)})).filter(x=>x.lvl!=="x");
+  const gItemHTML=(g)=>'<div class="tl-item'+(g.isNew?" new":"")+'">'+
+     '<div class="tl-meta"><span><b>'+(g.t||"—")+'</b></span>'+(g.isNew?'<span class="newflag">新增</span>':'')+
+     '<span class="tag amber" style="margin-left:auto">影响：'+esc(g.imp||"—")+'</span></div>'+
+     '<div class="tl-title'+(g.isNew?" new":"")+'">'+esc(g.o)+'</div>'+
+     '<div class="tl-body"><b>解读：</b>'+esc(g.r)+'</div></div>';
 
   h+='<div class="grid g3" style="margin-top:14px">';
   [["APEC","APEC · 中美关系与地缘",e.apec],["美伊谈判","美伊谈判",e.iran],["俄乌局势","俄乌局势",e.ukraine]].forEach(x=>{
     const topic=x[0], title=x[1], o=x[2];
-    const list=gOf(topic);
-    const fresh=list.filter(y=>y.isNew).length;
+    const all=gOf(topic);
+    const hard=all.filter(y=>y.lvl==="s"), talk=all.filter(y=>y.lvl==="t");
+    const fresh=hard.filter(y=>y.isNew).length;
     h+='<div class="card" style="padding:14px 16px"><div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px">'+
-       '<div><div style="font-size:12.5px;font-weight:650">'+title+'</div><div class="tiny muted">'+o.when+'　·　滚动积累 '+list.length+' 条</div></div>'+
+       '<div><div style="font-size:12.5px;font-weight:650">'+title+'</div><div class="tiny muted">'+o.when+'　·　有效信息 '+hard.length+' 条'+
+       (talk.length?'（另有表态 '+talk.length+' 条已收起）':'')+'</div></div>'+
        '<span class="tag blue" style="margin-left:auto">'+o.status+'</span></div>';
-    if(list.length){
+    if(hard.length){
       h+='<div class="tl">';
-      list.slice(0,6).forEach(g=>{
-        h+='<div class="tl-item'+(g.isNew?" new":"")+'">'+
-           '<div class="tl-meta"><span><b>'+(g.t||"—")+'</b></span>'+(g.isNew?'<span class="newflag">新增</span>':'')+
-           '<span class="tag amber" style="margin-left:auto">影响：'+esc(g.imp||"—")+'</span></div>'+
-           '<div class="tl-title'+(g.isNew?" new":"")+'">'+esc(g.o)+'</div>'+
-           '<div class="tl-body"><b>解读：</b>'+esc(g.r)+'</div></div>';
-      });
+      hard.slice(0,6).forEach(g=>{ h+=gItemHTML(g); });
       h+='</div>';
     } else {
+      /* 没有有效更新：不展示任何通稿，直接给判断 */
+      h+='<div style="border-left:3px solid var(--violet);background:#fbfaff;border-radius:6px;padding:9px 11px;margin-bottom:8px">'+
+         '<b style="font-size:11.5px">本轮无新增有效信息 · 直接给判断</b>'+
+         '<div class="tiny muted" style="margin-top:2px;line-height:1.6">信源只给到吹风会 / 后勤保障 / 礼仪性会见这类通稿，对定价没有信息量，<b>已丢弃不入档</b>——不用噪音占位。</div></div>';
       o.points.forEach(p=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:5px">· '+p+'</div>'; });
-      h+='<div class="tiny muted" style="margin-top:4px">本轮未抓到该议题的新资讯（信源：东财 7×24 · Yahoo 新闻）；以下是长期跟踪要点。</div>';
+    }
+    if(talk.length){
+      h+='<details style="margin-top:6px"><summary class="tiny muted" style="cursor:pointer;line-height:1.6">另有 '+talk.length+' 条表态 / 礼节性会见（低信息量，已收起 · 点开查看）</summary>'+
+         '<div class="tl" style="margin-top:5px">'+talk.slice(0,5).map(gItemHTML).join("")+'</div></details>';
     }
     h+='<div style="border-top:1px dashed #eef1f6;margin-top:8px;padding-top:7px"><div class="tiny muted">市场影响（结构性）</div>'+
        '<div class="read" style="font-size:11px">'+o.impact+'</div></div></div>';
   });
   h+='</div>';
-  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">抓取口径：每日从东财 7×24 快讯（含 Yahoo 新闻兜底）按关键词命中 <b>APEC·中美（元首会晤 / 贸易磋商 / 对华出口管制 / 台海 / 南海）/ 美伊（伊朗）/ 俄乌（乌克兰·俄罗斯·普京·泽连斯基）</b> 的条目，写入 <b>geo-log.json 滚动保留 60 天</b>；每条含 <b>日期 · 资讯 · 解读 · 市场影响</b>，<b>按时间倒序、最新的在最前</b>，本轮新增用红色标记。命中但无实质进展的表态也会收录——<b>“没进展”本身是信息</b>，不做主观删减。</div>';
+  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">抓取口径：每日从东财 7×24 快讯（含 Yahoo 新闻兜底）按关键词命中 <b>APEC·中美（元首会晤 / 贸易磋商 / 对华出口管制 / 台海 / 南海）/ 美伊（伊朗）/ 俄乌（乌克兰·俄罗斯·普京·泽连斯基）</b> 的条目，<b>再按信息量分三级</b>：<b>吹风会 / 后勤保障 / 区域宣传 / 礼仪性会见 / 个股 13F</b> 这类对股市与策略零信息量的稿件<b>直接丢弃、不留档</b>；剩下的分 <b>实质（关税·管制·协议·军演·磋商）＞ 表态（发言人回应·例行会见）</b>，<b>表态默认收起（折叠）</b>，只有实质条目单独列出。<b>某议题本轮没有实质更新时，不拿通稿凑数，直接给判断。</b>日志写入 <b>geo-log.json 滚动保留 60 天</b>，按时间倒序，本轮新增标红。</div>';
   return h;
 }
 

@@ -403,10 +403,22 @@ const GEO_READ = [
   [/空袭|袭击|导弹|无人机|军事|军队|交火/, "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。"],
   [/峰会|会见|声明|公报|宣言/, "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。"],
 ];
+/* 无效信息过滤器（20261115(6)）：先于关键词命中执行。
+   吹风会通稿 / 后勤保障 / 区域宣传 / 礼仪性会见 / 个股 13F —— 对股市与投资策略零信息量，直接丢弃、不入日志。
+   用户口径：宁可只给判断，也不拿无效信息充数。 */
+const GEO_NOISE = /吹风会|新闻中心|筹备工作|筹备就绪|各项筹备|绿电|供电保障|志愿者|经济总量|大湾区|活力最强|党建|从严治党|国有企业党的|13F|建仓|增持|清仓|减持|亚朵|携程|南非|索马里|文旅|招待会|文艺演出|场馆|交通保障|安保|纪念品|形象片|宣传片|参观|合影|塔斯社|会见.{0,12}董事长|要闻汇总|消息汇总|一览|速览|盘前必读|早知道/;
+/* 信息量分级：s=实质（能改定价的硬变量）/ t=表态（发言人回应、例行会见）；页面上表态默认收起 */
+const GEO_HARD = /关税|出口管制|管制措施|制裁|实体清单|反制|禁令|豁免|协议|备忘录|联合声明|公报|降税|采购|军演|演习|过航|侦察|限制措施|法案|清单|会谈|磋商|会晤|通话|会议|谈判|芯片/;
+const geoLevel = (s) => (GEO_NOISE.test(s) ? "x" : GEO_HARD.test(s) ? "s" : "t");
+
 let geoLog = [];
 try { geoLog = JSON.parse(readFileSync("geo-log.json", "utf8")); } catch {}
+/* 历史日志清洗：把此前入库的噪音条目一次性剔除 */
+const geoDropped = geoLog.filter((x) => geoLevel(String(x.o || "")) === "x");
+geoLog = geoLog.filter((x) => geoLevel(String(x.o || "")) !== "x");
 const seenG = new Set(geoLog.map((x) => x.t + "|" + x.topic));
 const geoAll = [];
+let geoSkipped = 0;
 for (const x of corpus) {
   const txt = (x.title || "") + (x.summary || "");
   const rule = GEO_RULES.find((r) => r.re.test(txt));
@@ -415,17 +427,39 @@ for (const x of corpus) {
   const key = t + "|" + rule.topic;
   if (seenG.has(key)) continue;
   const body = String(x.summary || x.title || "").trim().replace(/\s+/g, " ").slice(0, 150);
+  const lvl = geoLevel(body);
+  if (lvl === "x") { geoSkipped++; seenG.add(key); continue; }   /* 噪音：丢弃，不留档 */
   const rd2 = GEO_READ.find(([re]) => re.test(body));
-  geoAll.push({ t, topic: rule.topic, o: body, r: rd2 ? rd2[1] : "地缘表态，暂无具体动作，观察后续是否落地。", imp: rule.imp, isNew: true });
+  geoAll.push({ t, topic: rule.topic, o: body, r: rd2 ? rd2[1] : "地缘表态，暂无具体动作，观察后续是否落地。", imp: rule.imp, lvl, isNew: true });
   seenG.add(key);
 }
 geoAll.sort((a, b) => b.t.localeCompare(a.t));
-const geoItems = geoAll.slice(0, 12);
-for (const it of geoItems) if (it.isNew) geoLog.unshift({ t: it.t, topic: it.topic, o: it.o, r: it.r, imp: it.imp });
+/* 只把本轮新增条目写入日志（含信息量等级） */
+for (const it of geoAll.slice(0, 12)) if (it.isNew) geoLog.unshift({ t: it.t, topic: it.topic, o: it.o, r: it.r, imp: it.imp, lvl: it.lvl });
 const geoCutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(5, 10);
 geoLog = geoLog.filter((x) => String(x.t).slice(0, 5) >= geoCutoff).slice(0, 60);
 writeFileSync("geo-log.json", JSON.stringify(geoLog, null, 1), "utf8");
-console.log("地缘跟踪：本轮新增 " + geoItems.length + " 条（APEC·中美/美伊/俄乌），日志 " + geoLog.length + " 条");
+
+/* 卡片展示口径（20261115(6)）：本轮新增 + 各议题近 3 条「实质」条目（保证有效信息不被当轮噪音挤掉），
+   表态只留本轮；噪音永不进入 items，页面拿不到就不存在“用通稿充数” */
+const GEO_TOPICS = ["APEC", "美伊谈判", "俄乌局势"];
+const geoRecent = [];
+for (const tp of GEO_TOPICS) {
+  geoLog
+    .filter((x) => x.topic === tp && (x.lvl || geoLevel(String(x.o || ""))) === "s")
+    .sort((a, b) => String(b.t).localeCompare(String(a.t)))
+    .slice(0, 3)
+    .forEach((x) => geoRecent.push({ t: x.t, topic: x.topic, o: x.o, r: x.r, imp: x.imp, lvl: "s", isNew: false }));
+}
+const geoSeen = new Set();
+const geoItems = geoAll
+  .concat(geoRecent)
+  .sort((a, b) => b.t.localeCompare(a.t) || (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0))
+  .filter((x) => { const k = x.t + "|" + x.o; if (geoSeen.has(k)) return false; geoSeen.add(k); return true; })
+  .slice(0, 18);
+console.log("地缘跟踪：本轮新增 " + geoAll.length + " 条（实质 " + geoAll.filter((x) => x.lvl === "s").length +
+  " / 表态 " + geoAll.filter((x) => x.lvl === "t").length + "），页面展示 " + geoItems.length + " 条，过滤噪音 " + geoSkipped +
+  " 条，清洗历史噪音 " + geoDropped.length + " 条，日志 " + geoLog.length + " 条");
 
 /* 核心结论存档：brief-log.json（每日更新会话写入：daily/weekly/month-draft/month-final），透传给页面复盘 */
 let briefLog = [];
