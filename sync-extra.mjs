@@ -271,6 +271,7 @@ const CHECK = {
   CMPS: "CMPS", LLY: "LLY",
   /* 20261115(11)：美股新增 7 只（AMD 已在列；财年错位与港股/A 股不纳入的理由同 (10)） */
   HOOD: "HOOD", SOFI: "SOFI", ABCL: "ABCL", TWST: "TWST", MRNA: "MRNA", LITE: "LITE", AEHR: "AEHR",
+  FROG: "FROG",
 };
 const quotesOut = {};
 for (const [t, sym] of Object.entries(CHECK)) {

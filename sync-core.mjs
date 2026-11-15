@@ -55,6 +55,8 @@ const STOCKS = [
   ["MRNA.O", "MRNA", "MODERNA"],
   ["LITE.O", "LITE", "LUMENTUM"],
   ["AEHR.O", "AEHR", "AEHR TEST SYSTEMS"],
+  /* 20261115(12) */
+  ["FROG.O", "FROG", "JFROG"],
 ];
 
 const INDICES = [

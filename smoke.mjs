@@ -33,8 +33,11 @@ try {
 
 try {
   const test = new Function("window","document","localStorage","location","navigator", body + `
-    const views=["brief","tracks","events","movers","stocks","strategy"];
+    const views=["brief","tracks","events","movers","stocks","strategy","portfolio","risk"];
     for(const v of views){ const h=VIEWS[v](); if(!h||h.length<200) throw new Error(v+" 渲染过短"); console.log("view",v,"OK",h.length,"chars"); }
+    const pf=pfCalc();
+    console.log("模拟组合:", "净值", pf.nav.toFixed(4), "累计", (pf.ret*100).toFixed(2)+"%", "当日", pf.day.toFixed(2)+"pct",
+      "· 持仓", pf.rows.map(x=>x.t+" "+(x.ret*100).toFixed(1)+"%").join(" / "));
     openStock(1); console.log("openStock OK");
     trackSel="fin"; const fin=DATA.tracks.find(x=>x.id==="fin");
     console.log("fin 标的池:", (fin.symsLive||[]).length, "只 · 样例:", JSON.stringify((fin.symsLive||[])[0]));

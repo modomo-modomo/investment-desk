@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-15T09:45:32.090Z",
+  "syncedAt": "2026-11-15T10:07:48.807Z",
   "source": "Yahoo Finance",
   "stockDate": "20261113",
   "indexDate": "20261113",
@@ -422,6 +422,19 @@ window.WIND_LIVE = {
    "mcap": 1868647296,
    "pre": null,
    "post": -2.84
+  },
+  "FROG.O": {
+   "name": "JFROG",
+   "date": "20261113",
+   "price": 113.6,
+   "prev": 110.6,
+   "chg": 2.71,
+   "d5": 12.5,
+   "d20": 20.16,
+   "ytd": 90.7,
+   "mcap": 14157117440,
+   "pre": null,
+   "post": -0.02
   }
  },
  "indices": {

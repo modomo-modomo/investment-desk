@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-15T09:55:13.352Z",
+  "syncedAt": "2026-11-15T10:15:20.439Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-13",
   "postDate": "2026-11-12"
@@ -220,6 +220,15 @@ window.YF_DATA = {
    "chg": -6.651378296847687,
    "w52h": 147.4,
    "w52l": 18.7,
+   "date": "2026-11-13"
+  },
+  "FROG": {
+   "symbol": "FROG",
+   "price": 113.6,
+   "prevClose": 110.5999984741211,
+   "chg": 2.7124774334440493,
+   "w52h": 114.44,
+   "w52l": 34.05,
    "date": "2026-11-13"
   }
  },
@@ -1313,6 +1322,9 @@ window.YF_DATA = {
   ],
   "AEHR": [
    "2026-11-02"
+  ],
+  "FROG": [
+   "2026-11-05"
   ]
  },
  "crosscheck": {
@@ -5587,7 +5599,7 @@ window.YF_DATA = {
   ]
  },
  "earnBeat": {
-  "updatedAt": "2026-11-15T09:55:13.352Z",
+  "updatedAt": "2026-11-15T10:15:20.439Z",
   "quarters": [
    {
     "q": "2026Q4",
@@ -7083,7 +7095,7 @@ window.YF_DATA = {
  "movers": {
   "date": "20261115",
   "closeDate": "2026-11-13",
-  "ts": "2026-11-15T09:52:19.379Z",
+  "ts": "2026-11-15T10:12:28.503Z",
   "pool": 3729,
   "universe": 3733,
   "preTotal": 25,

@@ -1422,7 +1422,23 @@ const DATA = {
               {d:"11-02", src:"订单", txt:"bookings 4670 万、book-to-bill 约 1.4；backlog 1.009 亿、含季后订单的有效 backlog 1.093 亿；FY27 指引由 1.3–1.5 亿上调至 1.5 亿"},
               {d:"11-02", src:"客户进展", txt:"Sonoma 月交付十余台支持超大规模客户首个 AI 处理器；该客户第二个 AI 处理器已完成 Sonoma 认证、预计量产后规模更大；另一家 AI 加速器/CPU 客户采购 FOX-XP 送台湾 OSAT 验证，2027 年初装机"}],
      reports:[{d:"11-05", house:"（覆盖较少，中小型机构为主）", rating:"—", tp:"—", sum:"核心分歧是“第二个客户能否在 2027 转量产”：若台湾 OSAT 验证通过，backlog 与 FY28 指引会再上一台阶；反之单客户依赖无法解除", chg:true}],
-     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 AI 芯片 burn-in 的测试时长与产能瓶颈"}]}
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 AI 芯片 burn-in 的测试时长与产能瓶颈"}]},
+
+    /* ---------------- 20261115(12) ---------------- */
+    {t:"FROG", n:"JFrog", sec:"DevOps / 软件供应链", cap:"$14.2B", px:"$113.60", mv:2.7,
+     logic:"Q3 营收 1.792 亿 +31%、<b>云收入 1.015 亿 +60%</b>（占比 57%，去年同期 46%），NDR 124%（+6pct）、RPO 8.12 亿 +60%、&gt;100 万美元 ARR 客户 112 家 +58%。抓手不是「开发者工具」，而是 <b>AI 代理产出的模型、数据集、MCP server、插件都必须落到一个可存储 / 可扫描 / 可治理的地方</b>——Artifactory 要做这个记录系统。Q3 签下 7,600 万美元多年期 SaaS（某电信，云用量承诺 +167%），财报后股价 +23%。",
+     kpi:[["Q3 营收","1.792 亿（+31%）"],["云收入","1.015 亿（+60%，占 57%）"],["NDR","124%（+6pct）"],["RPO","8.12 亿（+60%）"],["非 GAAP 营业利润率","22.7%（+4.0pct）"],["自由现金流","6650 万（去年 2880 万）"]],
+     val:"FY26 指引 6.80–6.82 亿（+28%）、非 GAAP EPS 1.14–1.16 → 约 99x；P/S 约 21x——SaaS 里给的是「AI 资产治理基础设施」的溢价，不是 DevOps 的溢价",
+     cat:"Q4 财报 / 大单云用量转化 / AI 资产治理放量",
+     risk:"增长靠云用量转化，超出合约最低承诺的部分不计入指引（波动大）；自托管仅 +6%，是老客户流失的先行指标；99x PE 对任何指引下修极敏感；Wiz / 微软 / Snyk 在相邻层重叠竞争。",
+     map:"（A 股无直接映射）用友网络 / 恒生电子（企业软件平台化）；金山办公（订阅制转型可比）",
+     earn:{next:"2027-02", status:"covered", note:"Q3 已于 2026-11-05 披露：营收 1.792 亿 +31%、云 +60%、非 GAAP EPS 0.32；FY26 指引上调至 6.80–6.82 亿 / EPS 1.14–1.16",
+       hist:[{d:"2026-11-05", res:"Q3 营收 1.792 亿 +31%、云收入 1.015 亿 +60%、NDR 124%、RPO 8.12 亿 +60%；上调全年指引", react:"+23%（盘后）"}]},
+     updates:[{d:"11-05", src:"Q3 财报", txt:"营收 1.792 亿 +31%；云 1.015 亿 +60%（占 57%）；非 GAAP 营业利润率 22.7%、FCF 6650 万；NDR 124%、RPO 8.12 亿 +60%", key:true},
+              {d:"11-05", src:"大单", txt:"签下 7,600 万美元多年期 SaaS 协议（某大型电信），云数据用量承诺较此前 +167%，含 AI 安全与治理产品；单一客户收入占比均低于 3%"},
+              {d:"11-05", src:"产品", txt:"推出 Zero-Touch Remediation 自愈式供应链安全生态（Broadcom / Chainguard / IBM Red Hat / Moderne / TuxCare / Seal Security）；扩展 AI Asset Scanning、Agent Guard 与微软 Agent Package Manager 支持；与 Wiz 合作打通代码-云-运行时"}],
+     reports:[{d:"11-10", house:"（覆盖充分）", rating:"—", tp:"—", sum:"分歧在「AI 资产治理」是不是新预算池：多头按治理层稀缺性给 20x P/S，空头认为仍是 30% 增速的 DevOps 工具、应给 10x", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 AI agent 产出的构件治理与 Artifactory 的替代风险"}]}
   ],
 
   strategy:{
@@ -1605,7 +1621,9 @@ const CODE_OF = {TSLA:"TSLA.O",META:"META.O",IREN:"IREN.O",NBIS:"NBIS.O",CRWV:"C
   CMPS:"CMPS.O",LLY:"LLY.N",
   "688825.SH":"688825.SH","002156.SZ":"002156.SZ","002436.SZ":"002436.SZ","300604.SZ":"300604.SZ","688702.SH":"688702.SH",
   /* 20261115(11)：美股新增 7 只 */
-  HOOD:"HOOD.O",SOFI:"SOFI.O",ABCL:"ABCL.O",TWST:"TWST.O",MRNA:"MRNA.O",LITE:"LITE.O",AEHR:"AEHR.O"};
+  HOOD:"HOOD.O",SOFI:"SOFI.O",ABCL:"ABCL.O",TWST:"TWST.O",MRNA:"MRNA.O",LITE:"LITE.O",AEHR:"AEHR.O",
+  /* 20261115(12) */
+  FROG:"FROG.O"};
 
 /* 计价币种：港股 HK$、A 股 ¥，其余默认美元。行情、市值、抽屉头统一走这里，避免港股标价挂 $ */
 function curSym(t){
@@ -2160,7 +2178,7 @@ const MODULES = [
   {id:"movers", name:"异动监测", icon:'<path d="M3 12h4l3-7 4 14 3-7h4"/>', desc:"盘前/盘中/盘后异动 · 财报与非财报归因 · 新高"},
   {id:"stocks", name:"标的研究", icon:'<circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>', desc:"公司更新 · 研报与目标价 · KOL 观点 · 业绩强制跟踪"},
   {id:"strategy", name:"投资策略", icon:'<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>', desc:"在交易什么 · 盯盘变量 · 风险点 · 美股→A股 · 策略建议"},
-  {id:"portfolio", name:"模拟盘 / 组合", icon:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/>', desc:"组合净值 · 持仓 · 归因（待细化）", soon:"待细化"},
+  {id:"portfolio", name:"模拟组合", icon:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/>', desc:"建仓 2026-11-06 · 持仓 · 净值 · 归因"},
   {id:"risk", name:"风险预警", icon:'<path d="M12 3l9 16H3z"/><path d="M12 9v5M12 17h.01"/>', desc:"预警规则 · 集中度 · 事件日历（待细化）", soon:"待细化"}
 ];
 
@@ -3542,7 +3560,8 @@ const STOCK_TRACK = {
   "0700.HK":"app",
   "688825.SH":"mem", "002156.SZ":"pkg", "002436.SZ":"pkg", "300604.SZ":"pkg", "688702.SH":"cpu",
   /* 20261115(11) */
-  HOOD:"fin", SOFI:"fin", LITE:"infra", ABCL:"bio", TWST:"bio", MRNA:"bio", AEHR:"pkg"
+  HOOD:"fin", SOFI:"fin", LITE:"infra", ABCL:"bio", TWST:"bio", MRNA:"bio", AEHR:"pkg",
+  FROG:"sec"
 };
 const TRACK_NAME = {
   app:"AI 应用", infra:"AI 基础设施 / 数据中心", pkg:"先进封测", cpu:"CPU",
@@ -3601,7 +3620,10 @@ const STOCK_ADVICE={
   TWST:{act:"减配", d:"11-15", upd:true, txt:"15 个季度环比增长、EBITDA 首次转正，基本面是好的；但 20 日 -23% 后 FY27 PS 仍约 13x，已把 AI 制药 1 亿收入提前定价——FY27Q1 兑现前减，不加"},
   MRNA:{act:"持有", d:"11-15", upd:true, txt:"Q3 转盈 + 第 5 个产品获批 + intismeran III 期阳性，范式从「新冠后衰退」切到「肿瘤疫苗平台」；但 YTD +624% 已把成功提前定价——持有不加，等 ASH 与监管路径"},
   LITE:{act:"观察", d:"11-15", upd:true, txt:"基本面（Q2 环比再加 3.5 亿、CPO 二单 >50 亿美元承诺）已被并购条款替代：现价 = 4.5×MRVL 再打 15% 折价。要这个敞口就买 MRVL，或做价差，别当成长股买"},
-  AEHR:{act:"增配", d:"11-15", upd:true, txt:"Q1 营收 +200%、B/B 1.4、有效 backlog 1.09 亿、FY27 指引 1.5 亿；第二个 AI 处理器已在 Sonoma 认证、台湾 OSAT 2027 初装机——AI 测试链里订单可见度最高的小市值"}
+  AEHR:{act:"增配", d:"11-15", upd:true, txt:"Q1 营收 +200%、B/B 1.4、有效 backlog 1.09 亿、FY27 指引 1.5 亿；第二个 AI 处理器已在 Sonoma 认证、台湾 OSAT 2027 初装机——AI 测试链里订单可见度最高的小市值"},
+
+  /* ---- 20261115(12) ---- */
+  FROG:{act:"观察", d:"11-15", upd:true, txt:"Q3 营收 +31%、云 +60%、NDR 124%、RPO +60%，财报后 +23%——AI 资产治理是真需求；但 YTD +91%、99x PE 已把「新预算池」定价，等 Q4 云用量转化兑现或回踩再谈仓位"}
 };
 
 /* 催化日期归一化：完整日 / 月 / 半年 → 期间末日（毫秒），用于「下一个催化」与临近判断 */
@@ -3898,7 +3920,10 @@ const CATALYSTS={
   TWST:[["2026-12","11 月 NGS 订单与诊断客户采购（季度内跟踪）"],["2027-01","AI 制药客户 2027 年订单签约（指引 1 亿美元）"],["2027-02","FY27Q1 财报（指引 1.30–1.32 亿、+26%）"],["2027-03","产能扩张 capex 落地（FY27–28 约 1.5 亿美元）"],["2027H1","Twist MRD Express 与 Express Screening 抗体放量"],["2027H1","Lilly TuneLab 抗体表征服务订单转化"],["2027H2","FY27 中报：AI 制药收入是否超 1 亿"],["2027H2","合成 DNA 产能二期投产（毛利率能否守住 52.5%）"]],
   MRNA:[["2026-11-20","ASH 摘要公布（mRNA-2808 多发性骨髓瘤）"],["2026-12","mRNA-3927（丙酸血症）关键数据读出"],["2026-12-12","ASH 年会 12/12–15：mRNA-2808 完整数据"],["2027-01","mFLUSIVA 上市后首季处方量"],["2027-02","Q4/全年财报（2027 营收指引与年末现金 81–83 亿）"],["2027H1","intismeran（个体化新抗原疗法）监管沟通 / BLA 路径"],["2027H1","流感-新冠联合疫苗 III 期启动"],["2027H2","intismeran 黑色素瘤辅助治疗上市申请递交"]],
   LITE:[["2026-11-20","MRVL 股价（换股价值 = 4.5 × MRVL，当前折价约 15%）"],["2026-12","CPO/NPO 第二单 50 亿美元采购承诺的交付节奏"],["2027-02","FY27Q2 财报（指引 15.75–16.25 亿 / EPS 5.90–6.20）"],["2027-03","OCS（光路交换）订单与产能扩张"],["2027H1","S-4 生效与双方股东会（并购审批第一步）"],["2027H1","中国 / 欧盟反垄断审查（合并最大不确定性）"],["2027H2","FY28 指引与 10 亿美元协同的落地路径"],["2028H1","交易交割（预计 2028 上半年完成）"]],
-  AEHR:[["2026-12","Sonoma 第二个 AI 处理器的量产爬坡订单"],["2027-01","台湾 OSAT 的 FOX-XP 装机（计划 2027 年初）"],["2027-02","FY27Q2 财报（book-to-bill 与 backlog 转化）"],["2027-03","台湾客户高产量验证结论（是否进入量产）"],["2027-04","FY27Q3 财报（全年 1.5 亿指引兑现度）"],["2027H1","硅光 / SiC 新客户首单"],["2027H1","Sonoma 产能扩张（月交付十余台 → 二十台以上）"],["2027-07","FY27 全年业绩与 FY28 指引（第二个客户量产与否）"]]
+  AEHR:[["2026-12","Sonoma 第二个 AI 处理器的量产爬坡订单"],["2027-01","台湾 OSAT 的 FOX-XP 装机（计划 2027 年初）"],["2027-02","FY27Q2 财报（book-to-bill 与 backlog 转化）"],["2027-03","台湾客户高产量验证结论（是否进入量产）"],["2027-04","FY27Q3 财报（全年 1.5 亿指引兑现度）"],["2027H1","硅光 / SiC 新客户首单"],["2027H1","Sonoma 产能扩张（月交付十余台 → 二十台以上）"],["2027-07","FY27 全年业绩与 FY28 指引（第二个客户量产与否）"]],
+
+  /* ---- 20261115(12) ---- */
+  FROG:[["2026-11-20","AI Asset Scanning / Agent Guard 首批客户案例披露"],["2026-12","7,600 万美元电信大单的交付与云用量爬坡"],["2027-01","2026 年度安全业务数据（管理层称年底公布）"],["2027-02","Q4 财报（指引 1.83–1.85 亿 / EPS 0.28–0.30）"],["2027-03","2027 年指引：云增速能否守住 50% 以上"],["2027H1","Wiz 合作落地（代码-云-运行时统一视图）"],["2027H1","微软 Agent Package Manager 集成带来的 agent / MCP 资产上量"],["2027H2","RPO 转化率与 NDR 能否维持 120% 以上"]]
 };
 
 /* ---------- 06 ---------- */
@@ -4109,17 +4134,158 @@ function phCard(t,d){
   return '<div class="ph-card"><div class="t">'+t+'</div><div class="d">'+d+'</div>'+
     '<div class="skel"><i></i><i></i><i></i></div></div>';
 }
+/* ---------- 07 模拟组合（20261115(12)） ----------
+   建仓：2026-11-06 收盘价（用户指定口径），权重按给定比例，现金 20%
+   现价 / 当日涨跌走 live；组合净值 = Σ 建仓权重×(现价/建仓价) + 现金
+   基准同样以 11-06 收盘为基期，硬编码基期点位，避免「滚动 5 日」把基准窗口带跑 */
+const PF = {
+  base:"2026-11-06",
+  cashW:20,
+  rows:[
+    {t:"2105.HK",  w:20, px0:6.05},
+    {t:"IREN",     w:15, px0:21.64},
+    {t:"ONTO",     w:10, px0:173.28},
+    {t:"META",     w:10, px0:610.15},
+    {t:"TSLA",     w:10, px0:358.22},
+    {t:"CHKP",     w:10, px0:144.17},
+    {t:"002436.SZ", w:5, px0:25.65}
+  ],
+  bench:[
+    {k:"SPX.GI", n:"标普 500", b:7376.86},
+    {k:"NDX.GI", n:"纳指 100", b:26989.99},
+    {k:"SOX.GI", n:"费城半导体", b:9390.25},
+    {k:"HSI.HI", n:"恒生指数", b:24481.86}
+  ]
+};
+function pfCalc(){
+  const S={}; (DATA.stocks||[]).forEach(x=>S[x.t]=x);
+  const rows=PF.rows.map(r=>{
+    const s=S[r.t]||{}, l=s.live||{};
+    const px=(l.price!=null?l.price:r.px0);
+    const ret=px/r.px0-1;
+    return {t:r.t, n:s.n||r.t, sec:s.sec||"", trk:trkOf({t:r.t}), w0:r.w, px0:r.px0, px:px,
+            ret:ret, chg:(l.chg!=null?l.chg:0), adv:(STOCK_ADVICE[r.t]||{}).act||"—", cur:curSym(r.t)};
+  });
+  const gross=rows.reduce((a,x)=>a+x.w0*x.ret,0)/100;   /* 持仓合计贡献（权重 × 收益） */
+  const nav=1+gross;
+  rows.forEach(x=>{
+    x.w1=x.w0*(1+x.ret)/nav;          /* 当前权重（现金按 20% 不变，故需整体归一） */
+    x.contrib=x.w0*x.ret;             /* 对净值的百分点贡献 */
+    x.day=(x.w0/100)*((1+x.ret)/nav)*x.chg; /* 当日贡献（百分点） */
+  });
+  const day=rows.reduce((a,x)=>a+x.day,0);
+  const L=(typeof window!=="undefined"&&window.WIND_LIVE)||{};
+  const I=L.indices||{};
+  const bench=PF.bench.map(b=>{
+    const v=I[b.k];
+    return {n:b.n, ret:(v&&v.level!=null)?(v.level/b.b-1):null};
+  });
+  return {rows:rows, nav:nav, ret:gross, day:day, bench:bench};
+}
 function viewPortfolio(){
-  return feedBar()+'<div class="ph-hero"><h3>模拟盘 / 组合　<span class="tag blue">待细化</span></h3>'+
-    '<p>按你的口径确定后填入：是“策略模拟盘”（验证交易框架，含对冲腿与失效条件）还是“实盘镜像”（记录真实持仓、成本与调仓）。两者对字段与归因口径要求完全不同。</p></div>'+
-    '<div class="ph-grid">'+
-      phCard("组合净值曲线","与纳指 / 标普 500 / SOX 基准对比，含最大回撤与夏普，日频更新。")+
-      phCard("持仓明细","标的 · 方向 · 成本 · 现价 · 权重 · 盈亏 · 持有逻辑 · 失效条件。")+
-      phCard("交易记录","开平仓日期、价格、仓位变化与当时理由，可回溯决策质量。")+
-      phCard("收益归因","按主题（AI 电力 / 封装 / 端侧）与因子（动量 / 成长）拆分贡献。")+
-      phCard("风险敞口","净多头、行业集中度、单标的上限、久期与 beta。")+
-      phCard("复盘日历","周度复盘模板：判断对错、执行偏差，沉淀到赛道模块的认知更新。")+
-    '</div><div class="tiny muted" style="margin-top:14px">待确认：①初始资金与基准 ②单票上限 ③是否允许做空/期权 ④调仓频率。</div>';
+  const c=pfCalc(), S={}; (DATA.stocks||[]).forEach(x=>S[x.t]=x);
+  const spx=c.bench.find(b=>b.n==="标普 500");
+  const alpha=(spx&&spx.ret!=null)?c.ret-spx.ret:null;
+  const winner=c.rows.slice().sort((a,b)=>b.contrib-a.contrib)[0];
+  const loser=c.rows.slice().sort((a,b)=>a.contrib-b.contrib)[0];
+
+  let h=feedBar();
+  /* 01 总览 */
+  h+='<div class="sec">'+secHead("01","模拟组合总览",
+      "建仓日 "+PF.base+" · "+c.rows.length+" 只持仓 + "+PF.cashW+"% 现金 · 买入价统一取 11-06 收盘",
+      "<span class='upd'>口径固定，不随日期滚动</span>");
+  h+='<div class="grid" style="grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch">';
+  [
+    ["组合净值", c.nav.toFixed(4), "", "起点 1.0000（"+PF.base+"）"],
+    ["累计收益", pct(c.ret*100,2), sgn(c.ret*100), alpha==null?"":"相对标普 "+(alpha>0?"+":"")+(alpha*100).toFixed(2)+"pct"],
+    ["当日盈亏", pct(c.day,2), sgn(c.day), "按当前权重加权"],
+    ["现金", PF.cashW+"%", "", "未计息，作为回撤缓冲"]
+  ].forEach(x=>{
+    h+='<div class="card" style="padding:12px 14px"><div class="tiny muted">'+x[0]+'</div>'+
+       '<div class="num '+(x[2]?'chg '+x[2]:'')+'" style="font-size:22px;font-weight:750">'+x[1]+'</div>'+
+       '<div class="tiny muted" style="margin-top:2px">'+x[3]+'</div></div>';
+  });
+  h+='</div>';
+  h+='<div class="card" style="padding:12px 14px;margin-top:10px;border-left:3px solid var(--up)">'+
+     '<div style="font-size:12px;line-height:1.85">'+
+     '<b>一句话结论：</b>建仓 7 个交易日，组合 <b class="'+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</b>'+
+     (spx&&spx.ret!=null?('，同期标普 '+pct(spx.ret*100,2)+'、费半 '+pct((c.bench.find(b=>b.n==="费城半导体")||{}).ret*100,2)):'')+
+     '。<b>最大贡献</b> '+winner.t+' <span class="chg '+sgn(winner.contrib)+'">'+pct(winner.contrib,2)+'pct</span>'+
+     '，<b>最大拖累</b> '+loser.t+' <span class="chg '+sgn(loser.contrib)+'">'+pct(loser.contrib,2)+'pct</span>。'+
+     '持仓 80% 集中在 AI 算力链（IREN / ONTO / META / TSLA）与两条独立腿（来凯医药、兴森科技），'+
+     '现金 20% 是这一轮高波动下的机动仓位——<b>不动权重，只看逻辑是否被破坏</b>。</div></div>';
+
+  /* 02 持仓明细 */
+  h+='<div class="sec">'+secHead("02","持仓明细","买入价 = 2026-11-06 收盘 · 现价为最近已结算收盘 · 当前权重按净值归一",
+      "<span class='upd'>"+c.rows.length+" 持仓</span>");
+  h+='<div class="card tbl-wrap"><table class="tbl tbl-stk"><thead><tr>'+
+     '<th style="width:132px">标的</th><th style="width:82px">赛道</th>'+
+     '<th class="num" style="width:64px">建仓权重</th><th class="num" style="width:96px">买入价 11-06</th>'+
+     '<th class="num" style="width:96px">现价</th><th class="num" style="width:72px">涨跌幅</th>'+
+     '<th class="num" style="width:70px">当前权重</th><th class="num" style="width:80px">盈亏贡献</th>'+
+     '<th style="width:64px">建议</th></tr></thead><tbody>';
+  const actCls={"清仓":"cut","减持":"cut","减配":"cut","观察":"watch","持有":"","增配":"add"};
+  c.rows.forEach(x=>{
+    h+='<tr class="stk-row pf-row" data-t="'+x.t+'" title="点击查看 '+x.t+' 详情">'+
+       '<td><div class="tk">'+x.t+'</div><div class="tk-sub">'+esc(x.n)+'</div></td>'+
+       '<td><span class="tag violet" style="font-size:9.5px">'+(TRACK_NAME[x.trk]||"其它").split(" / ")[0]+'</span></td>'+
+       '<td class="num">'+x.w0.toFixed(0)+'%</td>'+
+       '<td class="num">'+x.cur+x.px0.toFixed(2)+'</td>'+
+       '<td class="num" style="font-weight:600">'+x.cur+x.px.toFixed(2)+'</td>'+
+       '<td class="num"><span class="chg '+sgn(x.ret*100)+'" style="font-weight:600">'+pct(x.ret*100,2)+'</span></td>'+
+       '<td class="num">'+x.w1.toFixed(1)+'%</td>'+
+       '<td class="num"><span class="chg '+sgn(x.contrib)+'">'+pct(x.contrib,2)+'</span></td>'+
+       '<td><span class="tag '+(actCls[x.adv]||"")+'" style="font-size:9.5px">'+x.adv+'</span></td></tr>';
+  });
+  h+='<tr style="background:var(--bg-2)"><td><div class="tk">现金</div><div class="tk-sub">未计息</div></td>'+
+     '<td><span class="tag" style="font-size:9.5px">现金</span></td>'+
+     '<td class="num">'+PF.cashW+'%</td><td class="num">—</td><td class="num">—</td><td class="num">0.00%</td>'+
+     '<td class="num">'+(PF.cashW/c.nav).toFixed(1)+'%</td><td class="num">0.00</td><td>—</td></tr>'+
+     '<tr style="font-weight:700"><td>合计</td><td></td><td class="num">100%</td><td class="num">—</td><td class="num">—</td>'+
+     '<td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td>'+
+     '<td class="num">100.0%</td><td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td><td></td></tr>';
+  h+='</tbody></table></div>';
+
+  /* 03 基准对比 + 赛道归因 */
+  h+='<div class="sec">'+secHead("03","基准对比与赛道归因","同一建仓基期（11-06）· 未计汇率波动","<span class='upd'>组合 vs 4 条基准</span>");
+  h+='<div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));align-items:start">';
+  h+='<div class="card" style="padding:14px"><div class="tiny muted" style="margin-bottom:8px">组合与基准（'+PF.base+' → 最新收盘）</div>'+
+     '<table class="mini-tbl"><thead><tr><th>基准</th><th class="num">期间收益</th><th class="num">组合超额</th></tr></thead><tbody>';
+  h+='<tr style="font-weight:700"><td>本组合</td><td class="num"><span class="chg '+sgn(c.ret*100)+'">'+pct(c.ret*100,2)+'</span></td><td class="num">—</td></tr>';
+  c.bench.forEach(b=>{
+    const ex=(b.ret!=null)?(c.ret-b.ret)*100:null;
+    h+='<tr><td>'+b.n+'</td><td class="num">'+(b.ret==null?'—':'<span class="chg '+sgn(b.ret*100)+'">'+pct(b.ret*100,2)+'</span>')+'</td>'+
+       '<td class="num">'+(ex==null?'—':'<span class="chg '+sgn(ex)+'">'+(ex>0?"+":"")+ex.toFixed(2)+'pct</span>')+'</td></tr>';
+  });
+  h+='</tbody></table><div class="tiny muted" style="margin-top:6px">超额 = 组合收益 − 基准收益；正数即跑赢。费半是最难跑赢的一条，因为持仓只有一半在半导体设备/制造上。</div></div>';
+
+  const byTrk={};
+  c.rows.forEach(x=>{ const k=x.trk; byTrk[k]=byTrk[k]||{w0:0,contrib:0,n:0,tk:[]}; byTrk[k].w0+=x.w0; byTrk[k].contrib+=x.contrib; byTrk[k].n++; byTrk[k].tk.push(x.t); });
+  const trkArr=Object.entries(byTrk).sort((a,b)=>b[1].w0-a[1].w0);
+  h+='<div class="card" style="padding:14px"><div class="tiny muted" style="margin-bottom:8px">赛道分布（按建仓权重）</div>'+
+     '<table class="mini-tbl"><thead><tr><th>赛道</th><th class="num">权重</th><th class="num">贡献</th><th>标的</th></tr></thead><tbody>';
+  trkArr.forEach(([k,v])=>{
+    h+='<tr><td>'+TRACK_NAME[k]+'</td><td class="num">'+v.w0+'%</td>'+
+       '<td class="num"><span class="chg '+sgn(v.contrib)+'">'+pct(v.contrib,2)+'</span></td>'+
+       '<td class="tiny" style="color:var(--text-2)">'+v.tk.join(" / ")+'</td></tr>';
+  });
+  h+='<tr style="font-weight:700"><td>现金</td><td class="num">'+PF.cashW+'%</td><td class="num">0.00</td><td class="tiny">缓冲</td></tr>';
+  h+='</tbody></table><div class="tiny muted" style="margin-top:6px">贡献 = 建仓权重 × 期间收益（百分点）。AI 算力链（IREN / ONTO / META / TSLA）建仓合计 '+
+     c.rows.filter(x=>["IREN","ONTO","META","TSLA"].indexOf(x.t)>=0).reduce((a,x)=>a+x.w0,0)+
+     '%，事件腿（来凯医药 + 兴森科技）合计 '+
+     c.rows.filter(x=>["2105.HK","002436.SZ"].indexOf(x.t)>=0).reduce((a,x)=>a+x.w0,0)+
+     '%，现金 '+PF.cashW+'%——组合本质是<b>一条 AI 主线 + 两条独立事件 + 缓冲</b>。</div></div>';
+  h+='</div>';
+
+  /* 04 口径与纪律 */
+  h+='<div class="sec">'+secHead("04","口径与纪律","固定建仓价 · 不随行情改动 · 便于回溯决策质量","<span class='upd'>只记录，不预测</span>");
+  h+='<div class="card" style="padding:14px 16px"><div style="font-size:12px;line-height:1.95">'+
+     '<b>1. 买入价口径：</b>全部持仓以 <b>2026-11-06 收盘价</b> 建仓（'+PF.rows.map(r=>r.t+" "+r.px0.toFixed(2)).join("；")+'），此后不再调整买入价，避免“摊薄成本”把判断失误藏起来。<br>'+
+     '<b>2. 权重口径：</b>建仓权重 20/15/10/10/10/10/5 + 现金 20；<b>当前权重</b>随价格漂移自动归一，不做再平衡——再平衡会被单列成交易记录。<br>'+
+     '<b>3. 币种口径：</b>来凯医药按 <b>HK$</b>、兴森科技按 <b>¥</b>、其余按 <b>$</b> 计价；组合收益为各持仓<b>本币收益的加权</b>，未计汇率波动（人民币口径会额外受美元/港币影响）。<br>'+
+     '<b>4. 基准口径：</b>标普 500 / 纳指 100 / 费半 / 恒指均取 11-06 收盘为基期，与组合同一起点，避免“基准窗口滚动”造成的假超额。<br>'+
+     '<b>5. 纪律：</b>单票上限 20%（来凯已达上限，不再加）；现金低于 10% 时必须先卖出再加仓；任一持仓的基本面逻辑被破坏（而非股价下跌）即减仓，理由写进「标的研究」的公司更新里。</div></div>';
+  return h;
 }
 /* ==================================================================
    风险预警：规则引擎（20261115(9)）
@@ -4471,6 +4637,16 @@ function route(){
       });
     };
     bindEb();
+  }
+
+  if(mod.id==="portfolio"){
+    /* 模拟组合：点行直接进该标的抽屉（复用标的研究的档案） */
+    document.querySelectorAll("tr.pf-row").forEach(tr=>{
+      tr.onclick=()=>{
+        const i=DATA.stocks.findIndex(s=>s.t===tr.dataset.t);
+        if(i>=0) openStock(i);
+      };
+    });
   }
 
   if(mod.id==="tracks"){
