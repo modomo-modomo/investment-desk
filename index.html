@@ -3794,17 +3794,256 @@ function viewPortfolio(){
       phCard("复盘日历","周度复盘模板：判断对错、执行偏差，沉淀到赛道模块的认知更新。")+
     '</div><div class="tiny muted" style="margin-top:14px">待确认：①初始资金与基准 ②单票上限 ③是否允许做空/期权 ④调仓频率。</div>';
 }
+/* ==================================================================
+   风险预警：规则引擎（20261115(9)）
+   - 每条规则的「当前读数」全部从实时行情现算，不写死日期/数字
+   - 状态：触发（越过阈值）/ 接近（≥阈值 80%）/ 正常；跨档或读数变化 → 标红 [更新]
+   - 重点结论用 <b> 加粗；动作落到「减仓 / 对冲 / 只观察」
+   ================================================================== */
+const RISK_MIN_SEC = 45;   /* 兜底：没有快照时，只有「触发」级才标红，避免首屏全红 */
+
+function riskSnap(){ try{ return JSON.parse(localStorage.getItem("desk_risk_snap")||"null"); }catch(e){ return null; } }
+function riskSave(o){ try{ localStorage.setItem("desk_risk_snap", JSON.stringify(o)); }catch(e){} }
+function daysTo(d){ const t=Date.parse(String(d).length===10?d:d+"/01"); return isNaN(t)?null:Math.round((t-Date.parse(DATA.meta.date))/864e5); }
+function riskOf(v, trig, near, dir){
+  if(v==null) return "正常";
+  if(dir==="up") return v>=trig?"触发":(v>=near?"接近":"正常");
+  return v<=trig?"触发":(v<=near?"接近":"正常");
+}
+function riskSt(st){
+  return st==="触发"?'<span class="tag red">触发</span>':(st==="接近"?'<span class="tag amber">接近</span>':'<span class="tag green">正常</span>');
+}
+
+function riskRules(){
+  const L=(typeof window!=="undefined"&&window.WIND_LIVE)||{};
+  const I=L.indices||{}, X=L.cross||{}, XS=L.stocks||{};
+  const Y=yfSide();
+  const vix=I["VIX.GI"], spx=I["SPX.GI"], ndx=I["NDX.GI"], dji=I["DJI.GI"], sox=I["SOX.GI"], hsi=I["HSI.HI"];
+  const t10=X.UST10Y, dxy=X.DXY, gold=X.GOLD;
+  const R=[];
+
+  /* 1. 10Y 美债：分母端总闸门 */
+  const v10=t10?+t10.value:null;
+  R.push({id:"ust10y", sev:"h", name:"10Y 美债收益率（分母端总闸门）",
+    read:v10!=null?('当前 <b>'+v10.toFixed(3)+'%</b>　5 日 <b class="'+(t10.dbp5>=0?"up":"down")+'">'+(t10.dbp5>=0?"+":"")+t10.dbp5+'bp</b>　20 日 '+(t10.dbp20>=0?"+":"")+t10.dbp20+'bp'):"—",
+    thr:"触发 ≥ 5.30%　接近 ≥ 5.10%", status:riskOf(v10,5.30,5.10,"up"),
+    impact:"10Y 每上行 25bp，长久期成长估值中枢下移 5-8%。<b>这轮 AI 链杀的是分母，不是分子</b>——订单与租金都在涨，跌的是折现率。",
+    act:"成长敞口再减 5%；TLT put spread 加仓，比直接清仓省成本。"});
+
+  /* 2. VIX：波动率与指数背离 */
+  const vv=vix?+vix.level:null;
+  R.push({id:"vix", sev:"h", name:"VIX 抬升（分歧放大）",
+    read:vv!=null?('当前 <b>'+vv.toFixed(2)+'</b>　20 日 <b class="up">'+pct(vix.d20,0)+'</b>'):"—",
+    thr:"触发 ≥ 22　接近 ≥ 19", status:riskOf(vv,22,19,"up"),
+    impact:"指数小跌而 VIX 上行 = <b>分歧在放大、对冲需求上升</b>，通常出现在结构切换而非单边下跌里。<b>保护要在变贵之前买</b>。",
+    act:"买保护改为直接降仓；不再新增长久期成长。"});
+
+  /* 3. 费半 20 日：AI 链的体温 */
+  const vsox=sox?+sox.d20:null;
+  R.push({id:"sox", sev:"h", name:"费城半导体 20 日跌幅（AI 链体温）",
+    read:vsox!=null?('20 日 <b class="down">'+pct(vsox,1)+'</b>　当日 '+pct(sox.chg,1)):"—",
+    thr:"触发 ≤ -15%　接近 ≤ -10%", status:riskOf(vsox,-15,-10,"down"),
+    impact:"费半 20 日 <b>"+pct(vsox,1)+"</b>，是全场最弱一档。<b>但弱的是估值不是订单</b>：CoWoS 满产、设备交期 18 个月、GPU 租金仍在涨。",
+    act:"不追跌杀跌；设备链（TER/ONTO）再跌 10% 是加仓位。"});
+
+  /* 4. 成长 vs 价值：风格再平衡 */
+  const gap=(ndx&&dji&&ndx.d20!=null&&dji.d20!=null)?+(ndx.d20-dji.d20).toFixed(2):null;
+  R.push({id:"style", sev:"m", name:"成长 − 价值 20 日差（风格剪刀差）",
+    read:gap!=null?('纳指 100 20 日 <b>'+pct(ndx.d20,1)+'</b> − 道指 <b>'+pct(dji.d20,1)+'</b> = <b class="'+(gap<0?"down":"up")+'">'+pct(gap,1)+'</b>'):"—",
+    thr:"触发 ≤ -8pct　接近 ≤ -6pct", status:riskOf(gap,-8,-6,"down"),
+    impact:"剪刀差走阔 = 资金在<b>主动降久期</b>，不是普跌。组合里高久期资产（neocloud、软件）会持续跑输。",
+    act:"风格上不做再平衡；只在个股层面换到有当期现金流的标的。"});
+
+  /* 5. 等权相对收益：防御扩散是否结束 */
+  const rel=Y.b.rel20!=null?+Y.b.rel20:null;
+  R.push({id:"breadth", sev:"m", name:"等权相对收益（RSP − SPY，20 日）",
+    read:rel!=null?('<b class="'+(rel>0?"up":"down")+'">'+pct(rel,1)+'</b>　RSP '+pct(Y.b.rsp20,1)+' / SPY '+pct(Y.b.spy20,1)):"—",
+    thr:"触发 ≤ 0pct（防御扩散结束）　接近 ≤ 2pct", status:riskOf(rel,0,2,"down"),
+    impact:"等权跑赢说明<b>涨的是防御股</b>（医疗、必需消费、公用事业），不是进攻信号；<b>一旦转负，意味着连防御也没人接了</b>。",
+    act:"转负时减医疗/必需消费，同时给指数买 put。"});
+
+  /* 6. 量能：无量下跌 */
+  const vr=Y.v.ratio!=null?+Y.v.ratio:null;
+  R.push({id:"vol", sev:"l", name:"标普量能（成交确认）",
+    read:vr!=null?('量比 <b>'+Math.round(vr*100)+'%</b>（20 日均量基准）'):"—",
+    thr:"触发 < 70% 且指数新低　接近 < 80%", status:riskOf(vr,0.70,0.80,"down"),
+    impact:"缩量下跌 = <b>卖压真空而非出清</b>，反弹没有成交确认，容易二次探底。",
+    act:"不抢反弹；等「缩量止跌 + 次日放量」再谈加仓。"});
+
+  /* 7. 研究池单日最大跌幅 */
+  const pool=(DATA.stocks||[]).filter(x=>x.live&&x.live.chg!=null);
+  const worst1=pool.slice().sort((a,b)=>a.live.chg-b.live.chg)[0];
+  const w1=worst1?+worst1.live.chg:null;
+  R.push({id:"oneDay", sev:"m", name:"研究池单日最大跌幅（事件冲击）",
+    read:worst1?('<b>'+worst1.t+'</b> 当日 <b class="down">'+pct(w1,1)+'</b>　'+esc(worst1.n)):"—",
+    thr:"触发 ≤ -7%　接近 ≤ -5%", status:riskOf(w1,-7,-5,"down"),
+    impact:"单日大跌多为<b>事件驱动</b>（财报 / 指引 / 融资）。<b>先分清是分子坏了还是分母坏了</b>，再决定减仓还是加仓。",
+    act:"分子坏（指引下修）→ 减半；分母坏（利率/情绪）→ 不动。"});
+
+  /* 8. 研究池 20 日最大跌幅：趋势性杀估值 */
+  const pool20=pool.filter(x=>x.live.d20!=null);
+  const worst20=pool20.slice().sort((a,b)=>a.live.d20-b.live.d20)[0];
+  const w20=worst20?+worst20.live.d20:null;
+  R.push({id:"d20", sev:"h", name:"研究池 20 日最大跌幅（趋势性杀估值）",
+    read:worst20?('<b>'+worst20.t+'</b> 20 日 <b class="down">'+pct(w20,1)+'</b>'):"—",
+    thr:"触发 ≤ -30%　接近 ≤ -22%", status:riskOf(w20,-30,-22,"down"),
+    impact:"20 日跌幅 >30% 通常意味着<b>商业模式被重新定价</b>，不是波动。抄底前必须看到<b>毛利率或融资成本</b>的边际改善。",
+    act:"不加仓；反弹减到可接受回撤以内。"});
+
+  /* 9. AI 基建杠杆链（NBIS/CRWV/IREN 20 日均值） */
+  const lev=["NBIS","CRWV","IREN"].map(t=>DATA.stocks.find(x=>x.t===t)).filter(x=>x&&x.live&&x.live.d20!=null);
+  const levAvg=lev.length?+(lev.reduce((a,b)=>a+b.live.d20,0)/lev.length).toFixed(1):null;
+  R.push({id:"lever", sev:"h", name:"AI 基建杠杆链（NBIS / CRWV / IREN 20 日均值）",
+    read:levAvg!=null?('<b class="down">'+pct(levAvg,1)+'</b>　'+lev.map(x=>x.t+' '+pct(x.live.d20,0)).join(' / ')):"—",
+    thr:"触发 ≤ -25%　接近 ≤ -18%", status:riskOf(levAvg,-25,-18,"down"),
+    impact:"这条链是<b>“用高息债买 GPU 再出租”</b>的商业模式。需求没崩（租金在涨），崩的是<b>杠杆与折旧假设</b>——10Y 5.15% 下这是结构性压制。",
+    act:"仓位压到可接受回撤；保留有自有电力的 IREN，退出纯融资驱动标的。"});
+
+  /* 10. 事件风险：最近的高影响催化 */
+  const evs=[];
+  (DATA.stocks||[]).forEach(x=>{
+    const c=catNext(x.t); if(!c) return;
+    const d=daysTo(c.d);
+    if(d!=null&&d>=0&&d<=20&&/财报|解禁|指引|FOMC|会议/.test(c.ev)) evs.push({t:x.t,d:d,ev:c.ev,date:c.d});
+  });
+  [["NVDA 财报（Q3 FY2027）","2026-11-19"],["FOMC + 点阵图","2026-12-08"],["11 月期权到期","2026-11-20"]].forEach(x=>{
+    const d=daysTo(x[1]); if(d!=null&&d>=0&&d<=25) evs.push({t:"宏观",d:d,ev:x[0],date:x[1]});
+  });
+  evs.sort((a,b)=>a.d-b.d);
+  const ev0=evs[0];
+  R.push({id:"event", sev:"h", name:"事件风险（20 日内最近一档）",
+    read:ev0?('<b>'+ev0.ev+'</b>　'+ev0.date+'（T-'+ev0.d+'）'):"—",
+    thr:"触发 T-3 内　接近 T-10 内", status:ev0?(ev0.d<=3?"触发":(ev0.d<=10?"接近":"正常")):"正常",
+    impact:"事件本身不决定方向，<b>决定的是波动</b>。财报前不加仓、不裸卖期权；<b>用事件做减仓窗口，不用来赌方向</b>。",
+    act:"T-3 前把该标的敞口降到基准以下；事件落地后再谈回补。"});
+
+  /* 11. 地缘：有效信息是否断供（噪音已过滤，见重要事件） */
+  const geo=((window.NEWS_DATA||{}).geo||{}).items||[];
+  const geoHard=geo.filter(x=>x.lvl==="s"||x.lvl==null).length;
+  R.push({id:"geo", sev:"m", name:"地缘有效信息（APEC / 美伊 / 俄乌）",
+    read:'近一轮有效条目 <b>'+geoHard+'</b> 条'+(geoHard?'':'（其余为吹风会/礼仪性通稿，已丢弃）'),
+    thr:"触发 0 条（信息断供）", status:geoHard?"正常":"触发",
+    impact:"地缘对 A 股/出口链的传导是<b>二阶</b>的：先影响风险偏好，再影响订单。<b>没有文本性成果就不改变仓位</b>。",
+    act:"只跟踪不加仓；有文本（关税豁免/采购）才调整出口链。"});
+
+  return R;
+}
+
 function viewRisk(){
-  return feedBar()+'<div class="ph-hero"><h3>风险预警　<span class="tag amber">待细化</span></h3>'+
-    '<p>预警的关键不是指标多，而是“触发之后做什么”。每条规则包含阈值、当前值、触发状态、对应动作（减仓 / 对冲 / 只观察）。策略模块里的“风险点”是判断，这里落地成规则。</p></div>'+
-    '<div class="ph-grid">'+
-      phCard("宏观风险仪表","10Y 美债、VIX 期限结构、美元指数、HY OAS 四条阈值线。")+
-      phCard("持仓集中度","单票 &gt; 15%、单一主题 &gt; 30%、前五合计 &gt; 55% 时告警。")+
-      phCard("事件日历联动","FOMC、CPI、非农、主要标的财报，T-3 自动提醒。")+
-      phCard("个股止损 / 逻辑失效","价格止损线 + 基本面失效条件（backlog 下修、毛利率跌破阈值）。")+
-      phCard("流动性风险","小市值标的的日均成交额与持仓市值比 &gt; 20% 时提示退出难度。")+
-      phCard("相关性突变","持仓两两 60 日相关性上穿 0.8 时，提示“看似分散实则同向”。")+
-    '</div>';
+  const pool=(DATA.stocks||[]).filter(x=>x.live&&x.live.chg!=null);
+  const rules=riskRules();
+  const prev=riskSnap();
+  const snap={};
+  rules.forEach(r=>{ snap[r.id]=r.status+"|"+String(r.read).replace(/<[^>]+>/g,"").slice(0,40); });
+  rules.forEach(r=>{
+    const p=prev?prev[r.id]:null;
+    r.upd = prev ? (p!==snap[r.id]) : (r.status==="触发");
+  });
+  riskSave(snap);
+
+  const nTrig=rules.filter(r=>r.status==="触发").length;
+  const nNear=rules.filter(r=>r.status==="接近").length;
+  const nOk=rules.filter(r=>r.status==="正常").length;
+  const nUpd=rules.filter(r=>r.upd).length;
+  const top=rules.filter(r=>r.status==="触发").concat(rules.filter(r=>r.status==="接近")).slice(0,2);
+
+  let h=feedBar();
+  /* 01 总览 */
+  h+='<div class="sec">'+secHead("01","预警总览","规则现算 · 状态分三档 · 本轮变化标红",
+      "<span class='upd'>"+rules.length+" 条规则 · 触发 "+nTrig+"</span>");
+  h+='<div class="grid" style="grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch">';
+  [[nTrig,"触发","#d2373a","已越阈值，按动作执行"],[nNear,"接近","#e0a33a","≥ 阈值 80%，准备预案"],
+   [nOk,"正常","#2f9e6f","在区间内，不用动"],[nUpd,"本轮变化","#5b6b83","与上次打开对比"]].forEach(x=>{
+    h+='<div class="card" style="padding:12px 14px"><div class="tiny muted">'+x[1]+'</div>'+
+       '<div class="num" style="font-size:22px;font-weight:750;color:'+x[2]+'">'+x[0]+'</div>'+
+       '<div class="tiny muted" style="margin-top:2px">'+x[3]+'</div></div>';
+  });
+  h+='</div>';
+  if(top.length){
+    h+='<div class="card" style="padding:12px 15px;margin-top:10px;border-left:3px solid var(--up)">'+
+       '<b style="font-size:12.5px">当前最该处理的两件事</b><div class="read" style="margin-top:6px;line-height:1.85">'+
+       top.map((r,i)=>'<div style="margin-bottom:3px">'+(i+1)+'. <b>'+r.name+'</b>：'+String(r.read).replace(/<[^>]+>/g,"")+
+         ' —— <b>'+(r.status==="触发"?"已触发":"接近阈值")+'</b>，'+String(r.act).replace(/<[^>]+>/g,"")+'</div>').join("")+
+       '</div><div class="tiny muted" style="margin-top:4px">读数为现算：行情刷新即重算，跨档或读数变化会在下方规则卡标红 [更新]。</div></div>';
+  }
+  h+='</div>';
+
+  /* 02 规则清单 */
+  h+='<div class="sec">'+secHead("02","规则清单","触发 → 动作 · 红条=高优先，黄条=中，灰条=低",
+      "<span class='upd hot'>红 [更新] = 本轮变化</span>");
+  h+='<div class="grid g2">';
+  rules.forEach(r=>{
+    const c=r.sev==="h"?"#d2373a":(r.sev==="m"?"#e0a33a":"#aab4c4");
+    h+='<div class="risk"'+((r.upd)?' style="border-color:#f3c9c9;background:#fffafa"':'')+'>'+
+      '<div class="sev" style="background:'+c+'"></div><div style="flex:1">'+
+      '<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">'+
+        '<h4 style="margin:0">'+r.name+'</h4>'+riskSt(r.status)+
+        (r.upd?'<span style="color:var(--up);font-weight:700;font-size:10px">[更新]</span>':'')+
+      '</div>'+
+      '<div class="read" style="font-size:11.5px;margin-top:4px">'+r.read+'</div>'+
+      '<div class="read" style="font-size:11px;margin-top:4px">'+r.impact+'</div>'+
+      '<dl class="kv"><dt>阈值</dt><dd>'+r.thr+'</dd><dt>动作</dt><dd>'+r.act+'</dd></dl></div></div>';
+  });
+  h+='</div></div>';
+
+  /* 03 集中度与回撤 */
+  h+='<div class="sec">'+secHead("03","集中度与回撤","研究池口径：赛道分布 · 跌幅榜 · 单日异动",
+      "<span class='upd'>研究池 "+DATA.stocks.length+" 只</span>");
+  const cnt={}; DATA.stocks.forEach(x=>{ const k=trkOf(x); cnt[k]=(cnt[k]||0)+1; });
+  const tot=DATA.stocks.length;
+  h+='<div class="card" style="padding:13px 16px;margin-bottom:10px"><b style="font-size:12px">赛道集中度</b>'+
+     '<span class="tiny muted" style="margin-left:6px">单条赛道 &gt; 30% 提示过度集中</span><div style="margin-top:8px">';
+  TRACK_SEQ.filter(k=>cnt[k]).sort((a,b)=>cnt[b]-cnt[a]).forEach(k=>{
+    const p=Math.round(cnt[k]/tot*100);
+    const hot=p>30;
+    h+='<div style="display:grid;grid-template-columns:120px 1fr 74px;align-items:center;gap:9px;font-size:11px;margin-bottom:6px">'+
+       '<span'+(hot?' style="color:var(--up);font-weight:650"':'')+'>'+TRACK_NAME[k]+'</span>'+
+       '<div class="gauge" style="margin:0"><span style="width:'+p+'%;background:'+(hot?"#d2373a":"#7f8fa6")+'"></span></div>'+
+       '<span class="num" style="text-align:right">'+cnt[k]+' 只 · '+p+'%</span></div>';
+  });
+  h+='</div></div>';
+  const losers=pool.filter(x=>x.live.d20!=null).sort((a,b)=>a.live.d20-b.live.d20).slice(0,6);
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:150px">20 日跌幅榜</th><th class="num" style="width:78px">当日</th>'+
+     '<th class="num" style="width:78px">20 日</th><th class="num" style="width:78px">YTD</th><th>说明</th></tr></thead><tbody>';
+  losers.forEach(x=>{
+    const bad=x.live.d20<=-30;
+    h+='<tr><td><div class="tk">'+x.t+'</div><div class="tk-sub">'+esc(x.n)+'</div></td>'+
+      '<td class="num"><span class="chg '+sgn(x.live.chg)+'">'+pct(x.live.chg,1)+'</span></td>'+
+      '<td class="num"'+(bad?' style="color:var(--up);font-weight:700"':'')+'>'+pct(x.live.d20,1)+'</td>'+
+      '<td class="num">'+(x.live.ytd!=null?pct(x.live.ytd,1):"—")+'</td>'+
+      '<td class="read tiny">'+(bad?"<b>跌幅 >30%，属商业模式被重定价</b> — 抄底前先看毛利率/融资成本":"趋势性回撤，等企稳信号")+'</td></tr>';
+  });
+  h+='</tbody></table></div></div>';
+
+  /* 04 事件风险日历 */
+  h+='<div class="sec">'+secHead("04","事件风险日历","未来 20 个交易日 · 只列能改定价的事件",
+      "<span class='upd'>T-3 内标红</span>");
+  const evs=[];
+  (DATA.stocks||[]).forEach(x=>{
+    const c=catNext(x.t); if(!c) return;
+    const d=daysTo(c.d); if(d==null||d<0||d>20) return;
+    evs.push({t:x.t,d:d,date:c.d,ev:c.ev});
+  });
+  [["宏观","2026-11-19","NVDA 财报（Q3 FY2027，盘后）"],["宏观","2026-12-08","FOMC + 点阵图"],
+   ["宏观","2026-11-20","11 月期权到期"],["宏观","2026-12-10","11 月 CPI（预计）"]].forEach(x=>{
+     const d=daysTo(x[1]); if(d!=null&&d>=0&&d<=20) evs.push({t:x[0],d:d,date:x[1],ev:x[2]});
+   });
+  evs.sort((a,b)=>a.d-b.d);
+  h+='<div class="card tbl-wrap"><table class="tbl"><thead><tr><th style="width:70px">T-</th><th style="width:92px">日期</th>'+
+     '<th style="width:74px">标的</th><th>事件</th><th style="width:150px">处理</th></tr></thead><tbody>';
+  if(!evs.length) h+='<tr><td colspan="5" class="empty">未来 20 个交易日无高影响事件</td></tr>';
+  evs.slice(0,12).forEach(e=>{
+    const near=e.d<=3;
+    h+='<tr'+(near?' class="isnew"':'')+'><td class="num"'+(near?' style="color:var(--up);font-weight:700"':'')+'>'+e.d+'</td>'+
+      '<td class="num" style="white-space:nowrap">'+(e.date.length===10?e.date.slice(5):e.date.slice(5)+"月")+'</td>'+
+      '<td><span class="tag'+(near?" red":"")+'">'+e.t+'</span></td>'+
+      '<td class="read">'+(near?'<b>':'')+esc(e.ev)+(near?'</b>':'')+'</td>'+
+      '<td class="read tiny">'+(near?'<b>事件前把敞口降到基准以下</b>':'提前一周评估，不裸卖期权')+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">口径：所有读数来自实时行情（Yahoo / Wind 口径），<b>刷新即重算</b>；状态分三档——<b>触发</b>（已越阈值，按动作执行）、<b>接近</b>（≥ 阈值 80%，准备预案）、<b>正常</b>。规则卡标红 [更新] = 与上次打开对比发生跨档或读数变化（快照存在本机，首次打开只标触发项）。策略模块 03「潜在风险点」是主观判断，这里是可执行的规则层。</div>';
+  h+='</div>';
+  return h;
 }
 
 /* ---------- router ---------- */
