@@ -18,8 +18,19 @@ const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
  * 北京 07:00 → 美东当天 18:00：pre=今天（可回填收盘）、post=昨天 */
 const etDate = (off = 0) =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(Date.now() + off * 86400e3));
-const TODAY = process.env.RPT_PRE || etDate(0);   // 今日（盘前披露）
-const YEST  = process.env.RPT_POST || etDate(-1); // 昨日（盘后披露）
+/* 周末回退：周六/周日运行时 Nasdaq 日历是空的（周六盘前=无、周日凌晨=无），
+   自动回退到最近交易日，保证周六盘前→周五盘前、周日→周五盘前/周四盘后；
+   工作日行为不变（etDate 本身就是工作日） */
+const lastWD = (iso) => {
+  const d = new Date(iso + "T12:00:00Z");
+  while (d.getUTCDay() === 0 || d.getUTCDay() === 6) d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
+};
+const TODAY = process.env.RPT_PRE || lastWD(etDate(0));    // 今日（盘前披露）
+const YEST = process.env.RPT_POST || (() => {
+  const p = lastWD(etDate(-1));
+  return p >= TODAY ? lastWD(new Date(Date.parse(TODAY) - 864e5).toISOString().slice(0, 10)) : p;
+})(); // 昨日（盘后披露），周末兜底再退一天
 /* 当前美东小时（0-23）：判断「今天这根日线到底收没收盘」，避免把盘中半根 bar 当作收盘价 */
 const ET_HOUR = +new Intl.DateTimeFormat("en-GB", { timeZone: "America/New_York", hour: "2-digit", hour12: false }).format(new Date());
 const ET_TODAY = etDate(0);
@@ -367,7 +378,10 @@ async function cal(date, session) {
     CALCACHE[key] = { at: new Date().toISOString(), symbols: tagged };
   }
   const keep = new Set(CALCACHE[key].symbols);
-  const hit = fresh.filter((r) => keep.has(r.symbol));
+  /* 披露完成后 Nasdaq 会把历史日期的 time 清成 time-not-supplied，
+     只按 time 匹配会把命中率从 121 掉到个位数——缓存存在时退回「全量行 ∩ 缓存符号」 */
+  const pool = tagged.length >= keep.size ? tagged : fresh;
+  const hit = pool.filter((r) => keep.has(r.symbol));
   if (process.env.DBG) console.log(`  [dbg] ${key} fresh=${fresh.length} tagged=${tagged.length} keep=${keep.size} hit=${hit.length}`);
   return { rows: hit, total: keep.size, fromCache: tagged.length < keep.size };
 }
@@ -396,12 +410,13 @@ async function build(date, session, limit) {
   try { snap = await cal(date, session); } catch (e) { console.warn("日历失败", date, e.message); }
 
   const rows = snap.rows;
-  /* 用缓存名单时，日历可能已丢失 marketCap，不能再按市值过滤，否则整表塌掉 */
-  const pool = rows.filter((r) => snap.fromCache ? true : capNum(r.marketCap) > 0);
+  /* 用缓存名单时（历史日期 time/marketCap 可能被 Nasdaq 清空），
+     市值未知一律按「中市值」兜底：门槛 5%，既不塌表也不放大阈值 */
+  const mc = (r) => { const v = capNum(r.marketCap); return v > 0 ? v : (snap.fromCache ? 5e9 : 0); };
+  const pool = rows.filter((r) => mc(r) > 0);
   const seenSym = new Set(), seenName = new Set();
   const picked = pool
-    .filter((r) => capNum(r.marketCap) > 0)
-    .sort((a, b) => capNum(b.marketCap) - capNum(a.marketCap))
+    .sort((a, b) => mc(b) - mc(a))
     // 去掉同一公司的第二类别股（PBR.A / BRK.B 之类），避免重复
     .filter((r) => {
       if (r.symbol.includes(".") && rows.some((x) => x.symbol === r.symbol.split(".")[0])) return false;
@@ -419,7 +434,7 @@ async function build(date, session, limit) {
   const cands = [];
   for (const r of picked) {
     const m = q[r.symbol] || {};
-    const mcap = capNum(r.marketCap);
+    const mcap = mc(r);
     const prevClose = m.regularMarketPreviousClose ?? null;
     const reg = m.regularMarketPrice ?? null;
     const preChg = m.preMarketPrice && prevClose ? (m.preMarketPrice / prevClose - 1) * 100 : null;

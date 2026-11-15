@@ -392,7 +392,8 @@ console.log("异动归因：" + mvTargets.length + " 只待归因，窗口内匹
 
 /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（geo-log.json 滚动积累，最新在前） ---- */
 const GEO_RULES = [
-  { re: /APEC|亚太经合/i, topic: "APEC", imp: "贸易与供应链" },
+  /* APEC 卡主跟踪中美关系与地缘政治可能发展：元首会晤 / 关税与磋商 / 对华科技管制 / 台海 / 南海 */
+  { re: /APEC|亚太经合|中美|习特|习近平|元首会晤|元首|贸易磋商|经贸谈判|对华|中方|台海|南海|海峡两岸/i, topic: "APEC", imp: "中美关系 · 贸易与供应链" },
   { re: /美伊|伊朗/i, topic: "美伊谈判", imp: "原油与地缘风险溢价" },
   { re: /俄乌|乌克兰|俄罗斯|普京|泽连/i, topic: "俄乌局势", imp: "能源/军工/欧洲风险偏好" },
 ];
@@ -424,7 +425,7 @@ for (const it of geoItems) if (it.isNew) geoLog.unshift({ t: it.t, topic: it.top
 const geoCutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(5, 10);
 geoLog = geoLog.filter((x) => String(x.t).slice(0, 5) >= geoCutoff).slice(0, 60);
 writeFileSync("geo-log.json", JSON.stringify(geoLog, null, 1), "utf8");
-console.log("地缘跟踪：本轮新增 " + geoItems.length + " 条（APEC/美伊/俄乌），日志 " + geoLog.length + " 条");
+console.log("地缘跟踪：本轮新增 " + geoItems.length + " 条（APEC·中美/美伊/俄乌），日志 " + geoLog.length + " 条");
 
 /* 核心结论存档：brief-log.json（每日更新会话写入：daily/weekly/month-draft/month-final），透传给页面复盘 */
 let briefLog = [];

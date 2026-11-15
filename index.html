@@ -310,6 +310,13 @@ ol.concl li b{color:var(--text);font-weight:650}
 .fed-pred-h .tag{margin-left:auto;font-size:9.5px}
 .fed-pred-b{font-size:11px;line-height:1.75;color:var(--text-2)}
 .fed-dec{font-size:11px;color:var(--text-2);margin:-1px 0 5px;padding:3px 7px;background:#f6f8fc;border-left:2px solid #c9d6ea;border-radius:0 4px 4px 0;display:inline-block}
+/* 头部赛道标签行（赛道跟踪页的 #dsc） */
+.dsc-tab{cursor:pointer;color:var(--muted);transition:.15s}
+.dsc-tab:hover{color:var(--text)}
+.dsc-tab.on{color:var(--text);font-weight:650}
+.dsc-tab .num{font-weight:600;color:var(--accent)}
+.dsc-tab.on .num{color:var(--up)}
+.dsc-sep{margin:0 7px;color:#c3cedd}
 .quote-scroll::-webkit-scrollbar{width:14px}
 .quote-scroll::-webkit-scrollbar-track{background:#eef2f8;border-left:1px solid #e0e7f1}
 .quote-scroll::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
@@ -972,11 +979,11 @@ const DATA = {
       ],
       watch:["12/4 非农（预计）","12/10 11 月 CPI（预计）","点阵图是否上调终点利率","隔夜逆回购余额"]
     },
-    apec:{ status:"筹备 / 预热", when:"2026 年 11 月 · 中国深圳", points:[
-        "主题聚焦贸易便利化、供应链互联互通、数字贸易规则与绿色转型融资。",
-        "工商领导人峰会议程已公布，AI 治理与跨境数据流动是新增议题。",
-        "关注双边经贸沟通窗口：关税豁免清单、农产品与能源采购、科技出口管制口径。"
-      ], impact:"对 A 股/港股风险偏好有事件性提振；关注跨境电商、物流、数字贸易主题。" },
+    apec:{ status:"筹备 / 预热", when:"2026 年 11 月 · 中国深圳 · 主跟踪中美关系", points:[
+        "中美元首互动是本片核心变量：关税豁免清单、农产品与能源采购、科技出口管制口径，都可能在双边场合释放信号。",
+        "地缘观察清单：台海与南海军事活动节奏、朝鲜动向、中东局势对峰会议程的外溢——每一条都可能改写风险偏好。",
+        "多边议程（贸易便利化 / 供应链 / 数字贸易）看公报措辞即可，真正驱动行情的是双边安排：是否见面、谈什么、给了什么。"
+      ], impact:"中美缓和利好出口链、跨境电商与中概；对抗升级利好国产替代、军工与稀土；台海/南海升温直接抬升油运与保险费率。" },
     iran:{ status:"谈判进行中", when:"最近更新 2026-11-08", points:[
         "核谈判：阿曼斡旋下的间接谈判恢复，焦点仍是浓缩铀丰度上限与核查机制。",
         "制裁：美方新增对伊石油出口相关实体的制裁，伊方以限制核查回应。",
@@ -2671,6 +2678,25 @@ function viewTracks(){
        '<div class="tiny muted" style="margin-top:8px;line-height:1.7">租金钱形是<b>算力供需最直接的温度计</b>：租金上行 = 供给紧张/需求外溢，利好 NVDA/CRWV/IREN 与电力链；租金连续两月下行 = Neocloud 定价权叙事修正，警惕 CRWV/NBIS 的杠杆模型。<b>注意</b>：'+esc((G.meta&&G.meta.note)||"")+'（数据更新于 '+esc((G.meta&&G.meta.updatedAt)||"—")+'）。</div></div></div>';
   }
 
+  /* 赛道行情分析：拐点判断 + 择市 / 择股 / 择时，长期滚动积累，最新在最前 */
+  if(t.views && t.views.length){
+    h+='<div class="sec" style="margin-top:14px">'+secHead("",'赛道行情分析 · 策略建议',
+        "拐点判断 / 择市（美股·港股·A股） / 择股 / 择时 · 长期滚动积累，最新在最前",
+        "<span class='upd hot'>红色为最新观点</span>");
+    h+='<div class="card" style="padding:14px 16px"><div class="tl">';
+    t.views.forEach(v=>{
+      h+='<div class="tl-item'+(v.new?" new":"")+'">'+
+        '<div class="tl-meta"><span><b>'+v.d+'</b></span>'+
+        '<span class="tag '+(v.action==="买入"||v.action==="增持"?"red":(v.action==="减配"||v.action==="回避"?"blue":""))+'">择时：'+v.action+'</span>'+
+        '<span class="tag blue">择市：'+v.mkt+'</span></div>'+
+        '<div class="tl-title'+(v.new?" new":"")+'">'+v.title+'</div>'+
+        '<div class="tl-body">'+v.body+'</div>'+
+        '<div class="tiny" style="margin-top:6px;color:#5c6b7f;line-height:1.7"><b>择股：</b>'+v.pick+'　·　<b>证伪：</b>'+v.kill+'</div></div>';
+    });
+    h+='</div></div></div>';
+  }
+
+
   /* 代表标的行情：点击赛道即落实到标的（含基本面与催化剂时间表） */
   if(t.symsLive && t.symsLive.length){
     h+='<div class="sec" style="margin-top:14px">'+secHead("",'代表标的行情',t.name+" · 价格 / 当日 / 20 日 / YTD / 基本面 / 催化剂时间表",
@@ -2696,24 +2722,6 @@ function viewTracks(){
         '<td class="read" style="font-size:11px">'+catTxt+'</td></tr>';
     });
     h+='</tbody></table></div><div class="tiny muted" style="margin-top:5px;padding-left:2px">价格 / 当日为最新实时报价；20 日与 YTD 基于日线收盘序列。基本面为<b>一句话跟踪要点</b>（随每日更新滚动修订，标红为本次有变）；催化剂为<b>未来一年时间表</b>，45 天内标红「⚠ 临近」。A股/港股/台股标的以所在市场货币计价。</div></div>';
-  }
-
-  /* 赛道行情分析：拐点判断 + 择市 / 择股 / 择时，长期滚动积累，最新在最前 */
-  if(t.views && t.views.length){
-    h+='<div class="sec" style="margin-top:14px">'+secHead("",'赛道行情分析 · 策略建议',
-        "拐点判断 / 择市（美股·港股·A股） / 择股 / 择时 · 长期滚动积累，最新在最前",
-        "<span class='upd hot'>红色为最新观点</span>");
-    h+='<div class="card" style="padding:14px 16px"><div class="tl">';
-    t.views.forEach(v=>{
-      h+='<div class="tl-item'+(v.new?" new":"")+'">'+
-        '<div class="tl-meta"><span><b>'+v.d+'</b></span>'+
-        '<span class="tag '+(v.action==="买入"||v.action==="增持"?"red":(v.action==="减配"||v.action==="回避"?"blue":""))+'">择时：'+v.action+'</span>'+
-        '<span class="tag blue">择市：'+v.mkt+'</span></div>'+
-        '<div class="tl-title'+(v.new?" new":"")+'">'+v.title+'</div>'+
-        '<div class="tl-body">'+v.body+'</div>'+
-        '<div class="tiny" style="margin-top:6px;color:#5c6b7f;line-height:1.7"><b>择股：</b>'+v.pick+'　·　<b>证伪：</b>'+v.kill+'</div></div>';
-    });
-    h+='</div></div></div>';
   }
 
   h+='<div class="sec" style="margin-top:18px">'+secHead("01","认知更新 · "+t.name,"新物种 / 新业态 / 新拐点 · 长期滚动积累（日期 + 出处）",
@@ -2881,7 +2889,7 @@ function viewEvents(){
   const gOf=(topic)=>gItems.filter(x=>x.topic===topic);
 
   h+='<div class="grid g3" style="margin-top:14px">';
-  [["APEC","APEC 会议动态",e.apec],["美伊谈判","美伊谈判",e.iran],["俄乌局势","俄乌局势",e.ukraine]].forEach(x=>{
+  [["APEC","APEC · 中美关系与地缘",e.apec],["美伊谈判","美伊谈判",e.iran],["俄乌局势","俄乌局势",e.ukraine]].forEach(x=>{
     const topic=x[0], title=x[1], o=x[2];
     const list=gOf(topic);
     const fresh=list.filter(y=>y.isNew).length;
@@ -2906,7 +2914,7 @@ function viewEvents(){
        '<div class="read" style="font-size:11px">'+o.impact+'</div></div></div>';
   });
   h+='</div>';
-  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">抓取口径：每日从东财 7×24 快讯（含 Yahoo 新闻兜底）按关键词命中 <b>APEC / 美伊（伊朗）/ 俄乌（乌克兰·俄罗斯·普京·泽连斯基）</b> 的条目，写入 <b>geo-log.json 滚动保留 60 天</b>；每条含 <b>日期 · 资讯 · 解读 · 市场影响</b>，<b>按时间倒序、最新的在最前</b>，本轮新增用红色标记。命中但无实质进展的表态也会收录——<b>“没进展”本身是信息</b>，不做主观删减。</div>';
+  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">抓取口径：每日从东财 7×24 快讯（含 Yahoo 新闻兜底）按关键词命中 <b>APEC·中美（元首会晤 / 贸易磋商 / 对华出口管制 / 台海 / 南海）/ 美伊（伊朗）/ 俄乌（乌克兰·俄罗斯·普京·泽连斯基）</b> 的条目，写入 <b>geo-log.json 滚动保留 60 天</b>；每条含 <b>日期 · 资讯 · 解读 · 市场影响</b>，<b>按时间倒序、最新的在最前</b>，本轮新增用红色标记。命中但无实质进展的表态也会收录——<b>“没进展”本身是信息</b>，不做主观删减。</div>';
   return h;
 }
 
@@ -3725,7 +3733,13 @@ function route(){
   const id=(location.hash||"#brief").slice(1);
   const mod=MODULES.find(m=>m.id===id)||MODULES[0];
   document.querySelectorAll(".nav-item").forEach(el=>el.classList.toggle("active",el.dataset.id===mod.id));
-  $("#ttl").textContent=mod.name; $("#dsc").textContent=mod.desc;
+  $("#ttl").textContent=mod.name;
+  if(mod.id==="tracks" && DATA.tracks){
+    /* 赛道跟踪页头部：直接显示九条赛道标签行（与视图内 subtab 同源，可点击切换） */
+    $("#dsc").innerHTML=DATA.tracks.map(function(t){
+      return '<span class="dsc-tab'+(t.id===trackSel?" on":"")+'" data-tt="'+t.id+'">'+esc(t.name)+' <b class="num">'+t.log.length+'</b></span>';
+    }).join('<span class="dsc-sep">·</span>');
+  } else $("#dsc").textContent=mod.desc;
   const v=$("#view"); v.innerHTML=VIEWS[mod.id]();
   v.style.animation="none"; void v.offsetWidth; v.style.animation="";
   window.scrollTo({top:0,behavior:"instant"});
@@ -3830,6 +3844,12 @@ function route(){
       };
       draw2(); bindSort2();
     }
+  }
+
+  if(mod.id==="tracks"){
+    document.querySelectorAll("#dsc .dsc-tab").forEach(function(el){
+      el.onclick=function(){ trackSel=el.dataset.tt; route(); };
+    });
   }
 
   if(mod.id==="stocks"){
