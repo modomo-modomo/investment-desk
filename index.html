@@ -1189,7 +1189,7 @@ const DATA = {
 
   strategy:{
     /* ---- 逻辑路径第一步：市场选择 ---- */
-    market:{ updated:"11-11 07:00", verdict:"美股 &gt; 港股 &gt; A 股",
+    market:{ updated:"11-15 17:00", verdict:"美股 &gt; 港股 &gt; A 股",
       note:"顺序的含义：先决定“钱放哪个市场”，再谈行业和个股。市场选错，行业再对也赚不到钱。",
       rows:[
         {m:"美股", view:"超配", w:"60%", dw:"+2pct", chg:"+2pct",
@@ -1212,7 +1212,7 @@ const DATA = {
          inp:"只做映射，不做 beta"}
       ]},
     /* ---- 逻辑路径第二步：行业选择 ---- */
-    sectorSel:{ updated:"11-11 07:00",
+    sectorSel:{ updated:"11-15 17:00",
       good:"医疗 · 必需消费 · AI 电力 · 半导体设备/封测",
       bad:"信息技术（整体）· 能源 · 高杠杆小盘",
       note:"判断依据是 20 日板块相对表现 + 利率敏感度，不是“故事好不好”。同一行业内部分化极大，所以“看空信息技术”和“看多封测设备”可以同时成立。",
@@ -1262,22 +1262,20 @@ const DATA = {
        why:"等 12 月 FOMC 前的回调窗口，目标加仓位：纳指较当前 -4%。", cat:"—", inv:"—"}
     ],
     vars:{
-      next:{ label:"下一交易日 · 11/12（周四）", rows:[
-        {t:"全天", ev:"消化 11/10 CPI：12 月加息定价 84%，盯 50bp 尾部定价是否升温", tk:"全市场", focus:"2Y 是否站稳 4.7%；加息预期若继续升温，长久期成长再承压", imp:"h"},
-        {t:"16:00", ev:"欧洲央行行长讲话", tk:"EUR / DAX", focus:"对美欧利差与欧元区终端利率的表述", imp:"l"},
-        {t:"20:30", ev:"NBIS 盘前财报", tk:"NBIS / AI 云", focus:"毛利率指引是否守住 55%；客户集中度披露", imp:"h"},
-        {t:"21:30", ev:"美国初请失业金人数", tk:"利率", focus:"是否连续三周上行（突破 24 万）", imp:"m"},
-        {t:"22:00", ev:"联储票委讲话", tk:"利率 / 成长股", focus:"是否强化“更高更久”表述", imp:"m"},
-        {t:"23:30", ev:"EIA 天然气库存", tk:"BE / GEV", focus:"气价对燃料电池成本的影响", imp:"l"},
-        {t:"盘后", ev:"AMAT 财报（16:30 ET 电话会）", tk:"半导体设备", focus:"订单出货比与中国区收入占比", imp:"h"},
-        {t:"盘后", ev:"IREN 月度运营更新", tk:"IREN", focus:"AI 云上架率与 GPU 交付", imp:"l"}
+      next:{ label:"下一交易日 · 11/16（周一）", rows:[
+        {t:"09:30", ev:"开盘消化 11/13 收盘结构：费半 -3.43%（20 日 -12.4%）、纳指 100 -1.22%、道指 +0.10%", tk:"全市场", focus:"第一小时看 AI 基建链（NBIS / CRWV / IREN）能否止跌；道指是否继续吸收轮动资金", imp:"h"},
+        {t:"10:00", ev:"中国 10 月经济数据（工业增加值 / 社零 / 固投）", tk:"A 股 / 大宗", focus:"社零与固投是否继续走弱——内需政策预期的定价窗口", imp:"m"},
+        {t:"21:30", ev:"纽约联储 11 月制造业指数", tk:"宏观 / 周期", focus:"是否跌破荣枯线；新订单与支付价格分项", imp:"l"},
+        {t:"22:00", ev:"联储票委讲话（本周密集窗口）", tk:"利率 / 成长股", focus:"10Y 5.15%（5 日 +29.5bp）下是否强化“更高更久”表述", imp:"m"},
+        {t:"23:30", ev:"EIA 天然气库存", tk:"BE / GEV", focus:"气价对燃料电池成本与“快电”经济性的影响", imp:"l"},
+        {t:"盘后", ev:"APEC 会议周（深圳）边会与中美经贸信号", tk:"中美 / 出口链", focus:"只看有没有可落地文本（关税豁免清单 / 采购规模）；口头善意不改变仓位", imp:"h"}
       ]},
-      d5:{ label:"未来 5 个交易日 · 11/12 - 11/18", rows:[
-        {t:"11/12", ev:"NBIS + AMAT 同日财报", tk:"AI 云 / 设备", focus:"两个变量撞车，是本周最大波动源；CPI 已于 11/10 落地", imp:"h"},
-        {t:"11/13", ev:"美国 10 月 PPI + 密歇根通胀预期", tk:"利率", focus:"PPI 是否延续上行；通胀预期是否上破 3.2%", imp:"m"},
-        {t:"11/16", ev:"纽约联储制造业指数", tk:"宏观", focus:"是否跌破荣枯线", imp:"l"},
-        {t:"11/17", ev:"美国 10 月工业产出 / 零售龙头财报", tk:"周期股", focus:"消费韧性的验证", imp:"m"},
-        {t:"11/18", ev:"WMT 财报", tk:"消费", focus:"低收入客群是否降级——衰退的领先信号", imp:"m"}
+      d5:{ label:"未来 5 个交易日 · 11/16 - 11/20", rows:[
+        {t:"11/16", ev:"纽约联储制造业指数 + APEC 会议周首日边会", tk:"宏观 / 中美", focus:"AI 基建链能否止跌是第一观察项；中美是否给出文本性成果（NBIS 已于 11/12 披露，不再是变量）", imp:"m"},
+        {t:"11/17", ev:"美国 10 月工业产出 + 零售龙头（HD / TGT）财报", tk:"周期 / 消费", focus:"消费韧性与库存周期的验证；工业产出环比是否转负", imp:"m"},
+        {t:"11/18", ev:"WMT 财报 + APEC 领导人会议（深圳）主会期", tk:"消费 / 中美", focus:"低收入客群是否降级（衰退领先信号）；双边安排是否落地为文本", imp:"h"},
+        {t:"11/19", ev:"NVIDIA 财报（Q3 FY2027，盘后）+ 初请失业金", tk:"全市场", focus:"<b>本季最重要单一事件</b>：指引决定 AI 链估值中枢；初请是否连续三周上行破 24 万", imp:"h"},
+        {t:"11/20", ev:"11 月期权到期 + 密歇根消费者信心终值", tk:"技术面 / 利率", focus:"到期后仓位再平衡；AI 链的 gamma 释放方向", imp:"m"}
       ]},
       month:{ label:"当月 · 11 月", rows:[
         {t:"11/19", ev:"NVIDIA 财报（Q3 FY2027）", tk:"全市场", focus:"本季最重要单一事件；指引决定 AI 链估值中枢", imp:"h"},
@@ -1317,18 +1315,18 @@ const DATA = {
       {theme:"AI 应用 / 办公", us:"MSFT / CRM", cn:"金山办公、用友网络、金蝶国际", logic:"订阅 ARR 与 Agent 付费模式验证", s:"弱-中"}
     ],
     /* ---- 逻辑路径第四步：风险关注（要盯什么、触发后做什么） ---- */
-    watch:{ updated:"11-11 07:00", rows:[
-      {k:"10Y 美债收益率", now:"4.98%（20 日 -23bp）", thr:"站稳 5.30%", lvl:"h",
+    watch:{ updated:"11-15 17:00", rows:[
+      {k:"10Y 美债收益率", now:"5.154%（5 日 +29.5bp / 20 日 +6.5bp）", thr:"站稳 5.30%", lvl:"h",
        act:"成长股再减 5%；TLT put spread 加仓，比直接清仓更省成本"},
       {k:"HY OAS（高收益债利差）", now:"免费源无日频序列，待接入", thr:"走阔 100bp 至 380bp", lvl:"h",
        act:"CRWV 减半，仓位切到有自有电力的 IREN；NBIS 直接退出"},
-      {k:"财报季指引（11-12 NBIS / 11-19 NVDA）", now:"待披露", thr:"capex 或下季指引下修", lvl:"h",
+      {k:"财报季指引（11-19 NVDA；NBIS 已披露 -16.8%）", now:"NVDA 待披露（11/19 盘后）", thr:"capex 或下季指引下修", lvl:"h",
        act:"设备链（TER/ONTO）先减，电力（BE/IREN）保留——订单滞后于 capex 一年"},
-      {k:"等权相对收益（RSP − SPY，20 日）", now:"+7.2pct", thr:"转负", lvl:"m",
+      {k:"等权相对收益（RSP − SPY，20 日）", now:"+4.5pct（RSP +3.3% / SPY -1.2%）", thr:"转负", lvl:"m",
        act:"防御扩散结束的信号；届时减医疗/必需消费，加回成长"},
-      {k:"VIX 期限结构", now:"VIX 19.46，20 日 +27%", thr:"VIX/VIX3M > 1.05（近端升水）", lvl:"m",
+      {k:"VIX 期限结构", now:"VIX 19.30，20 日 +17%", thr:"VIX/VIX3M > 1.05（近端升水）", lvl:"m",
        act:"买保护变贵，改为直接降仓，不再买险"},
-      {k:"标普量能", now:"量比 89%（缩量 -11%）", thr:"连续 3 日 < 80% 且指数创新低", lvl:"l",
+      {k:"标普量能", now:"量比 78%（缩量 -22%）", thr:"连续 3 日 < 80% 且指数创新低", lvl:"l",
        act:"确认“无量下跌”，等缩量止跌信号再加，不抢反弹"},
       {k:"地缘溢价（布油 − WTI 与绝对油价）", now:"地缘溢价约 1.8 美元/桶，定价极不充分", thr:"霍尔木兹通行量下降", lvl:"m",
        act:"能源股战术性对冲，不做方向性重仓"}
@@ -3577,6 +3575,30 @@ const CATALYSTS={
 };
 
 /* ---------- 06 ---------- */
+/* 策略模块的读数尽量现算：指数/板块/量能全部来自实时行情，避免“日期停在某一天、数字不跟” */
+function idxOf(code){ const L=(typeof window!=="undefined"&&window.WIND_LIVE)||{}; return (L.indices||{})[code]||null; }
+function yfSide(){ const Y=(typeof window!=="undefined"&&window.YF_DATA)||{}; return {b:Y.breadth||{}, v:Y.spxVol||{}, s:Y.sectors||{}}; }
+function mktPerf(name){
+  const spx=idxOf("SPX.GI"), ndx=idxOf("NDX.GI"), sox=idxOf("SOX.GI"), hsi=idxOf("HSI.HI"), sh=idxOf("000001.SH");
+  const {b}=yfSide();
+  if(name==="美股"&&spx&&ndx) return "标普 20 日 "+pct(spx.d20,1)+"／纳指 100 "+pct(ndx.d20,1)+"／费半 "+pct(sox&&sox.d20,1)+"；等权 RSP "+(b.rsp20!=null?pct(b.rsp20,1):"—");
+  if(name==="港股"&&hsi) return "恒指 20 日 "+pct(hsi.d20,1)+"（当日 "+pct(hsi.chg,1)+"）";
+  if(name==="A 股"&&sh) return "上证 20 日 "+pct(sh.d20,1)+"（当日 "+pct(sh.chg,1)+"）";
+  return null;
+}
+function secD20Live(etf, fallback){ const {s}=yfSide(); const x=s[etf]; return x&&x.d20!=null?+x.d20:fallback; }
+function watchNow(k, fallback){
+  try{
+    const L=(typeof window!=="undefined"&&window.WIND_LIVE)||{};
+    const t10=(L.cross||{}).UST10Y, vix=idxOf("VIX.GI"), {b,v}=yfSide();
+    const sg=(x)=>(x>=0?"+":"")+x;
+    if(/10Y/.test(k)&&t10) return Number(t10.value).toFixed(3)+"%（5 日 "+sg(t10.dbp5)+"bp / 20 日 "+sg(t10.dbp20)+"bp）";
+    if(/VIX/.test(k)&&vix) return "VIX "+Number(vix.level).toFixed(2)+"，20 日 "+pct(vix.d20,0);
+    if(/等权/.test(k)&&b.rel20!=null) return pct(b.rel20,1)+"（RSP "+pct(b.rsp20,1)+" / SPY "+pct(b.spy20,1)+"）";
+    if(/量能/.test(k)&&v.ratio) return "量比 "+Math.round(v.ratio*100)+"%";
+  }catch(e){}
+  return fallback;
+}
 let varTab="next";
 function subHead(no, title, desc){
   return '<div class="sub-h"><span class="sn">'+no+'</span><b>'+title+'</b>'+(desc?'<span class="d">'+desc+'</span>':'')+
@@ -3607,7 +3629,8 @@ function viewStrategy(){
   h+='</div>';
 
   /* ===== 02 接下来需要盯的变量 ===== */
-  h+='<div class="sec">'+secHead("02","接下来需要盯的变量","下一交易日 · 未来 5 日 · 当月 · 未来三个月");
+  h+='<div class="sec">'+secHead("02","接下来需要盯的变量","下一交易日 11/16（周一）· 未来 5 日 11/16-11/20 · 当月 · 未来三个月",
+      "<span class='upd'>按 "+String(DATA.meta.dataAsOf||"20261113").replace(/^(\d{4})(\d{2})(\d{2})$/,"$1-$2-$3")+" 收盘口径</span>");
   h+='<div class="subtabs" style="margin-bottom:10px">';
   [["next",s.vars.next.label],["d5",s.vars.d5.label],["month",s.vars.month.label],["q",s.vars.q.label]].forEach(x=>{
     h+='<div class="subtab'+(varTab===x[0]?" on":"")+'" data-v="'+x[0]+'">'+x[1]+'</div>';
@@ -3654,9 +3677,9 @@ function viewStrategy(){
   h+='<div class="card" style="padding:13px 16px;margin-bottom:10px;border-left:3px solid var(--up)">'+
      '<b style="font-size:12.5px">本轮更新要点</b><span style="color:var(--up);font-size:10.5px;margin-left:8px">红色 = 本轮更新</span>'+
      '<div class="read" style="margin-top:7px;line-height:1.9">'+
-     '<div style="margin-bottom:5px"><span style="color:var(--up);font-weight:650">[更新]</span> 市场主线：<b>11-11 缩量反弹修复，20 日防御轮动结构未变（纳指 20 日 -7.2% vs 道指 +1.6%）</b>——反弹是调仓窗口，不是追涨窗口。</div>'+
-     '<div style="margin-bottom:5px"><span style="color:var(--up);font-weight:650">[更新]</span> 主要风险：<b>10Y 贴近 5% 且 12 月加息定价 84%</b>——若缩量反弹被 12/8-9 FOMC 证伪，成长股有二次探底风险；VIX 已回落，对冲成本下降但保护不撤。</div>'+
-     '<div><span style="color:var(--up);font-weight:650">[更新]</span> 市场选择：<b>美股 &gt; 港股 &gt; A 股</b>（顺序不变；港股由低配上调至标配偏高）。</div>'+
+     '<div style="margin-bottom:5px"><span style="color:var(--up);font-weight:650">[更新 11-15]</span> 市场主线：<b>11-13 收盘把“分化”推到极致——道指 +0.10%，纳指 100 -1.22%、费半 -3.43%（20 日 -12.4%）</b>；钱没有离开市场，是在 AI 链内部重新定价（<b>本周盯 11/19 NVDA 指引</b>）。</div>'+
+     '<div style="margin-bottom:5px"><span style="color:var(--up);font-weight:650">[更新 11-15]</span> 主要风险：<b>10Y 5.154%（5 日 +29.5bp）、VIX 19.3（20 日 +17%）</b>，12 月加息定价 84%——若 NVDA 指引不及预期，“杀估值 + 杀盈利”会同时发生，这是本周唯一的不对称风险。</div>'+
+     '<div><span style="color:var(--up);font-weight:650">[更新 11-15]</span> 市场选择：<b>美股 &gt; 港股 &gt; A 股</b>（顺序不变）；但美股内部从“买 beta”切到“买现金流”——防御化不是看空，是换定价因子。</div>'+
      '</div></div>';
   h+='<div class="card" style="padding:13px 16px;margin-bottom:12px"><b style="font-size:12.5px">资产配比建议（现金 / 国债 / 黄金 / 股票）</b>'+
      '<span style="color:var(--up);font-size:10.5px;margin-left:8px">红色 = 本轮更新</span>'+
@@ -3685,7 +3708,7 @@ function viewStrategy(){
        '<span style="margin-left:auto;font-size:13px;font-weight:700" class="num">'+m.w+'</span></div>'+
        '<div style="padding:6px 14px 12px">'+
        '<div class="mrow"><span class="mk">边际</span><span class="mv2"><b class="'+(m.dw.indexOf("-")===0?"down":"up")+'">'+m.dw+'</b> 仓位</span></div>'+
-       '<div class="mrow"><span class="mk">20 日</span><span class="mv2">'+m.perf+'</span></div>'+
+       '<div class="mrow"><span class="mk">20 日</span><span class="mv2">'+(mktPerf(m.m)||m.perf)+'</span></div>'+
        '<div class="mrow"><span class="mk">估值</span><span class="mv2">'+m.val+'</span></div>'+
        '<div class="mrow"><span class="mk">为什么</span><span class="mv2">'+m.why+'</span></div>'+
        '<div class="mrow"><span class="mk">变化</span><span class="mv2">'+m.diff+'</span></div>'+
@@ -3706,7 +3729,7 @@ function viewStrategy(){
       '<td><div class="strong">'+r.s+'</div><div class="tiny muted">'+r.etf+'</div></td>'+
       '<td><span class="'+vc+'">'+r.view+'</span><div class="tiny muted" style="margin-top:3px">'+r.w+
         ' <b class="'+(r.dw.indexOf("-")===0?"down":"up")+'">'+r.dw+'</b></div></td>'+
-      '<td class="num"><span class="chg '+sgn(r.d20)+'">'+pct(r.d20,1)+'</span></td>'+
+      '<td class="num"><span class="chg '+sgn(secD20Live(r.etf,r.d20))+'">'+pct(secD20Live(r.etf,r.d20),1)+'</span></td>'+
       '<td class="read">'+r.why+'</td>'+
       '<td class="read">'+r.diff+'</td></tr>';
   });
@@ -3737,9 +3760,10 @@ function viewStrategy(){
      '<th style="width:180px">关注项</th><th style="width:20%">当前读数</th><th style="width:20%">触发阈值</th><th>触发后动作</th></tr></thead><tbody>';
   s.watch.rows.forEach(w=>{
     const dot = w.lvl==="h" ? '<span class="imp h"></span>' : (w.lvl==="m" ? '<span class="imp m"></span>' : '<span class="imp l"></span>');
-    const pend = /待接入|待披露/.test(w.now);
+    const wNow = watchNow(w.k, w.now);
+    const pend = /待接入|待披露/.test(wNow);
     h+='<tr><td><div style="display:flex;gap:6px;align-items:flex-start">'+dot+'<span class="strong">'+w.k+'</span></div></td>'+
-      '<td class="read '+(pend?"muted":"")+'">'+w.now+'</td>'+
+      '<td class="read '+(pend?"muted":"")+'">'+wNow+((wNow!==w.now)?' <span class="tiny muted" style="font-size:9.5px">· 现算</span>':'')+'</td>'+
       '<td class="read"><span class="tag amber">'+w.thr+'</span></td>'+
       '<td class="read">'+w.act+'</td></tr>';
   });
