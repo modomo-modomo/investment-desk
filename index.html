@@ -180,6 +180,14 @@ table.tbl.tbl-hif td .tk{font-size:12px}
 table.tbl.tbl-hif td .tk-sub{font-size:10px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 table.tbl.tbl-hif .tag{font-size:9.5px;padding:1px 5px}
 table.tbl.tbl-hif th.num{padding-right:8px}
+/* 标的研究单表：点击行进抽屉 */
+table.tbl.tbl-stk thead th{vertical-align:bottom;line-height:1.3;padding:7px 8px;letter-spacing:.2px}
+table.tbl.tbl-stk td{padding:7px 8px;vertical-align:middle}
+table.tbl.tbl-stk tr.stk-row{cursor:pointer}
+table.tbl.tbl-stk tr.stk-row:hover{background:#f6f9fe}
+table.tbl.tbl-stk td .tk{font-size:12px}
+table.tbl.tbl-stk td .tk-sub{font-size:10px;max-width:118px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+table.tbl.tbl-stk .tag{font-size:9.5px;padding:1px 5px}
 .read{font-size:11.5px;color:var(--text-2);line-height:1.62}
 
 .hero{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--line);border-radius:var(--radius);
@@ -1427,7 +1435,7 @@ function hydrate(L){
     s.mv = q.chg;
     s.d20 = q.d20;
     s.cap = fmtCap(q.mcap);
-    s.live = {price:q.price, chg:q.chg, d20:q.d20, mcap:q.mcap, date:q.date,
+    s.live = {price:q.price, chg:q.chg, d5:q.d5, d20:q.d20, ytd:q.ytd, mcap:q.mcap, date:q.date,
               pre:q.pre, post:q.post, prev:q.prev};
   });
 
@@ -3267,44 +3275,133 @@ const TRACK_NAME = {
 const TRACK_SEQ = ["app","infra","pkg","cpu","phy","edge","sec","fin","bio","other"];
 const trkOf = (s)=> STOCK_TRACK[s.t] || "other";
 
-function stockCard(s,i){
-  const es=s.earn.status;
-  let esTxt,esCls;
-  if(es==="imminent"){ esTxt="财报临近"; esCls="tag red"; }
-  else if(s.earn.next && /^\d{4}-/.test(s.earn.next)){ esTxt="下次披露 "+s.earn.next; esCls="tag blue"; }
-  else if(es==="no-fixed"){ esTxt="无定期披露"; esCls="tag dash"; }
-  else if(es==="reported"){ esTxt="已披露 · 下次待公告"; esCls="tag"; }
-  else { esTxt="披露日待公告"; esCls="tag"; }
-  return '<div class="stock-card" data-i="'+i+'">'+
-    '<div class="sc-top"><div><div class="sc-tk">'+s.t+'</div><div class="sc-name">'+s.n+'</div>'+
-    '<div class="tiny muted" style="margin-top:1px">'+esc(s.sec)+'</div></div>'+
-    '<div class="sc-px"><div class="p num">'+s.px+'</div>'+
-    (s.mv===null?'<div class="d muted">一级市场</div>':'<div class="d '+sgn(s.mv)+'">'+pct(s.mv,1)+'</div>')+
-    (s.d20!=null?'<div class="tiny muted num">20日 '+pct(s.d20,1)+'</div>':'')+
-    '</div></div><div class="sc-logic">'+s.logic+'</div>'+
-    '<div class="sc-foot">'+labelHTML(getLabel(s.t))+
-    '<span class="'+esCls+'" style="font-size:9.5px">'+esTxt+'</span>'+
-    '<span class="cap">'+s.cap+'</span></div></div>';
+/* ---------- 标的研究：单张可筛选排序表（20261115(5)） ----------
+   一行一只标的：行情八列 + 行业 / 赛道 + 策略建议 + 下一个催化；点击行进抽屉看基本面 */
+const STK_ST={trk:"全部", near:false, upd:false, sort:{key:"mv",dir:1}};
+
+/* 每只标的的策略建议（口径与投资策略 5-3 对齐）；upd=true 时表格内标红 */
+const STOCK_ADVICE={
+  TSLA:{act:"观察", d:"11-14", upd:false, txt:"交付与能源业务是底盘，Robotaxi 叙事未验证前不加仓；1 月底 Q4 财报看 2027 指引成色"},
+  META:{act:"持有", d:"11-14", upd:false, txt:"广告 AI 工具货币化在兑现，capex 口径是唯一悬项；1/28 财报前不加敞口"},
+  IREN:{act:"减配", d:"11-14", upd:true,  txt:"AI 云合同单价溢价是真的，但 20 日 -36% 说明杠杆扩张在被重定价——合同落地前不加，反弹减"},
+  NBIS:{act:"减配", d:"11-14", upd:true,  txt:"Q3 营收 +168% 但财报日 -16.8%：市场对折旧与融资成本定价苛刻，毛利率止跌前不接刀"},
+  CRWV:{act:"持有", d:"11-14", upd:true,  txt:"backlog 555 亿是全场最硬的合同，融资成本是唯一软肋；2027 capex 口径落地前不加仓"},
+  BE:{act:"观察", d:"11-14", upd:true,   txt:"10/22 财报后两日累计约 -19%，交付节奏被质疑；快电逻辑没坏，等新订单与下一披露日确认"},
+  AMD:{act:"增配", d:"11-14", upd:true,  txt:"创历史新高 + MI450 2027H1 量产，是 AI 链里唯一「有产品、有毛利、有客户」的；回调即加"},
+  TSM:{act:"持有", d:"11-14", upd:false, txt:"1/14 法说会的 2027 capex 指引是全行业最关键单一数据点，之前维持"},
+  TER:{act:"增配", d:"11-14", upd:true,  txt:"HBM4 测试订单 + 订单出货比 1.6，2027 capex 指引前从 20% 加到 25%"},
+  ONTO:{act:"持有", d:"11-14", upd:false, txt:"HBM4 先进封装设备订单周期未变，等 Q4 财报确认中国区收入边际"},
+  NET:{act:"持有", d:"11-14", upd:false, txt:"Workers AI 付费化 + R2 ARR 是第二曲线，12/04 Innovation Week 是近期催化"},
+  RBRK:{act:"持有", d:"11-14", upd:false, txt:"数据安全景气度在，FedRAMP 高授权是下一个台阶；12-09 财报验证"},
+  OKTA:{act:"清仓", d:"11-14", upd:true,  txt:"cRPO 连续三季下滑 + 身份层被云厂商原生吞掉，结构性问题——12-01 财报是最后验证窗口"},
+  CHKP:{act:"减持", d:"11-14", upd:false, txt:"网安支出粘性高但增速平庸，资金向 AI 原生安全迁移；维持低配"},
+  SPCX:{act:"不入池", d:"11-14", upd:false, txt:"一级市场：星舰 V4 首飞与星链直连是估值事件，IPO 窗口前只跟踪不定价"}
+};
+
+/* 催化日期归一化：完整日 / 月 / 半年 → 期间末日（毫秒），用于「下一个催化」与临近判断 */
+function catPeriodEnd(d){
+  let m;
+  if((m=d.match(/^(\d{4})-(\d{2})-(\d{2})$/))) return Date.parse(d);
+  if((m=d.match(/^(\d{4})-(\d{2})$/))) return new Date(+m[1],+m[2],0).getTime();
+  if((m=d.match(/^(\d{4})H1/))) return new Date(+m[1],6,0).getTime();
+  if((m=d.match(/^(\d{4})H2/))) return new Date(+m[1],12,0).getTime();
+  return null;
+}
+/* 该标的下一个尚未过期的催化（过期列表为空时取最后一条兜底） */
+function catNext(t){
+  const list=CATALYSTS[t]||[], T=Date.parse(DATA.meta.date);
+  let best=null;
+  list.forEach(([d,ev])=>{
+    const e=catPeriodEnd(d); if(e==null) return;
+    if(e>=T && (!best||e<best.e)) best={d:d,ev:ev,e:e};
+  });
+  if(!best && list.length){ const p=list[list.length-1]; best={d:p[0],ev:p[1],e:catPeriodEnd(p[0])||0}; }
+  return best;
+}
+function catShow(c){
+  if(!c) return '<span class="tiny muted">—</span>';
+  const days=(c.e-Date.parse(DATA.meta.date))/864e5;
+  const near=days>=-1&&days<=45;
+  const esc2=(s)=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  return '<div style="line-height:1.45"><b'+(near?' style="color:var(--up)"':'')+' style="display:inline-block">'+c.d+'</b>'+
+    (near?' <span style="color:var(--up);font-weight:700;font-size:9.5px">⚠ 临近</span>':'')+
+    '<div class="tiny" style="color:var(--text-2);font-size:10.5px">'+esc2(c.ev)+'</div></div>';
 }
 
-/* 按赛道分组渲染；key = "全部" 或某个赛道 id */
-function stockGroups(key){
-  const idx = DATA.stocks.map((s,i)=>({s:s,i:i}));
-  const groups = TRACK_SEQ.filter(t=> key==="全部" || key===t);
-  let out='';
-  let total=0;
-  groups.forEach(t=>{
-    const list = idx.filter(x=>trkOf(x.s)===t);
-    if(!list.length) return;
-    total+=list.length;
-    const down=list.filter(x=>x.s.mv!=null && x.s.mv<0).length;
-    out+='<div class="trk-h"><span class="tag violet">'+(t==="other"?"其它":"赛道")+'</span>'+
-      '<span>'+TRACK_NAME[t]+'</span><span class="tiny muted">'+list.length+' 只'+
-      (t!=="other" ? '　·　当日跌 '+down+' 只' : '')+'</span><span class="line"></span></div>';
-    out+='<div class="subgrid">'+list.map(x=>stockCard(x.s,x.i)).join("")+'</div>';
+function stkBody(){
+  const st=STK_ST, today=DATA.meta.date;
+  const actCls={"清仓":"cut","减持":"cut","减配":"cut","观察":"watch","持有":"","增配":"add","不入池":"dash"};
+  const actRank={"清仓":0,"减持":1,"减配":2,"观察":3,"持有":4,"增配":5,"不入池":0};
+  let rows=DATA.stocks.map((s,i)=>({s:s,i:i}));
+  if(st.trk!=="全部") rows=rows.filter(x=>trkOf(x.s)===st.trk);
+  rows.forEach(x=>{
+    const s=x.s, l=s.live||{};
+    x.price=l.price; x.chg=l.chg!=null?l.chg:s.mv;
+    x.pre=l.pre!=null?l.pre:null; x.post=l.post!=null?l.post:null;
+    x.d5=l.d5!=null?l.d5:null; x.d20=l.d20!=null?l.d20:s.d20; x.ytd=l.ytd!=null?l.ytd:null;
+    x.trk=trkOf(s);
+    x.adv=STOCK_ADVICE[s.t]||{act:"—",d:"",txt:"",upd:false};
+    x.cat=catNext(s.t);
+    x.catDays=x.cat?((x.cat.e-Date.parse(today))/864e5):null;
+    x.catNear=x.catDays!=null&&x.catDays>=-1&&x.catDays<=45;
   });
-  if(!total) out+='<div class="card empty">该分类下暂无标的</div>';
-  return out;
+  if(st.near) rows=rows.filter(x=>x.catNear);
+  if(st.upd) rows=rows.filter(x=>x.adv.upd);
+  /* dir=1 降序 / -1 升序；null 排最后 */
+  rows.sort((a,b)=>{
+    const k=st.sort.key;
+    const num=(v)=>typeof v==="number"?v:(v==null?null:parseFloat(v));
+    let va,vb;
+    if(k==="sec"){ va=a.s.sec; vb=b.s.sec; }
+    else if(k==="trk"){ va=a.trk; vb=b.trk; }
+    else if(k==="adv"){ va=actRank[a.adv.act]??-1; vb=actRank[b.adv.act]??-1; va+=a.adv.upd?10:0; vb+=b.adv.upd?10:0; }
+    else if(k==="cat"){ va=a.catDays==null?null:-a.catDays; vb=b.catDays==null?null:-b.catDays; }
+    else { va=num(k==="price"?a.price:(k==="chg"?a.chg:(k==="mv"?a.chg:(k==="px"?a.price:a[k])))); vb=num(k==="price"?b.price:(k==="chg"?b.chg:(k==="mv"?b.chg:(k==="px"?b.price:b[k])))); }
+    if(va==null&&vb==null) return 0; if(va==null) return 1; if(vb==null) return -1;
+    const c=(typeof va==="number"&&typeof vb==="number")?(vb-va)*st.sort.dir:String(vb).localeCompare(String(va))*st.sort.dir;
+    return c||(b.chg||0)-(a.chg||0);
+  });
+  const arrow=(k)=> st.sort.key===k ? (st.sort.dir>0?" ▾":" ▴") : "";
+  const thS=(k,label,w)=>'<th data-sort="'+k+'"'+(w?' style="width:'+w+'"':'')+' class="sortable" title="点击排序">'+label+arrow(k)+'</th>';
+  let h='<div class="card tbl-wrap" style="max-height:760px;overflow:auto"><table class="tbl tbl-stk"><thead><tr>'+
+    '<th style="width:128px">标的</th>'+
+    thS("price","股价","60px")+thS("mv","当日","52px")+thS("pre","盘前","50px")+thS("post","盘后","50px")+
+    thS("d5","5 日","50px")+thS("d20","20 日","52px")+thS("ytd","YTD","54px")+
+    thS("sec","行业","112px")+thS("trk","赛道","90px")+
+    thS("adv","策略建议（红 = 本轮更新）","250px")+thS("cat","下一个催化","186px")+
+    '</tr></thead><tbody>';
+  if(!rows.length){
+    h+='<tr><td colspan="12" class="empty">当前筛选条件下无记录</td></tr>';
+  } else {
+    const cell=(v,d)=>v!=null?'<span class="chg '+sgn(v)+'">'+pct(v,1)+'</span>':'<span class="tiny muted">—</span>';
+    rows.forEach(x=>{
+      const px=x.price!=null?"$"+x.price.toFixed(2):x.s.px;
+      h+='<tr data-i="'+x.i+'" class="stk-row" title="点击查看 '+x.s.t+' 详情">'+
+        '<td><div class="tk">'+x.s.t+'</div><div class="tk-sub">'+esc(x.s.n)+'</div></td>'+
+        '<td class="num" style="font-weight:600">'+px+'</td>'+
+        '<td class="num">'+cell(x.chg)+'</td>'+
+        '<td class="num">'+cell(x.pre)+'</td>'+
+        '<td class="num">'+cell(x.post)+'</td>'+
+        '<td class="num">'+cell(x.d5)+'</td>'+
+        '<td class="num">'+cell(x.d20)+'</td>'+
+        '<td class="num">'+cell(x.ytd)+'</td>'+
+        '<td><span class="tiny" style="font-size:10.5px;color:var(--text-2)">'+esc(x.s.sec)+'</span></td>'+
+        '<td><span class="tag violet" style="font-size:9.5px">'+TRACK_NAME[x.trk].split(" / ")[0]+'</span></td>'+
+        '<td><div style="line-height:1.45"><span class="tag '+(actCls[x.adv.act]||"")+'" style="font-size:9.5px">'+x.adv.act+'</span>'+
+        (x.adv.upd?' <span style="color:var(--up);font-weight:700;font-size:9.5px">[更新]</span>':'')+
+        '<span class="tiny muted" style="font-size:9.5px;margin-left:4px">'+x.adv.d+'</span>'+
+        '<div class="tiny" style="color:var(--text-2);font-size:10.5px;margin-top:1px">'+esc(x.adv.txt)+'</div></div></td>'+
+        '<td>'+catShow(x.cat)+'</td></tr>';
+    });
+    const up=rows.filter(x=>x.chg!=null&&x.chg>0).length, dn=rows.filter(x=>x.chg!=null&&x.chg<0).length;
+    const nearN=rows.filter(x=>x.catNear).length, updN=rows.filter(x=>x.adv.upd).length;
+    const ytds=rows.map(x=>x.ytd).filter(v=>v!=null);
+    const ytdAvg=ytds.length?(ytds.reduce((a,b)=>a+b,0)/ytds.length):null;
+    h+='<tr><td colspan="12" class="tiny muted" style="padding:8px 10px">共 '+rows.length+' 只 · 当日涨 '+up+' / 跌 '+dn+' · 45 天内有催化 '+nearN+' 只 · 策略有更新 '+updN+' 只 · 平均 YTD '+(ytdAvg==null?"—":pct(ytdAvg,1))+'</td></tr>';
+  }
+  h+='</tbody></table></div>';
+  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px;line-height:1.8">口径：股价 / 当日 / 5 日 / 20 日 / YTD 为 Yahoo 已结算收盘口径；<b>盘前 / 盘后</b>为最近一次场外成交涨跌幅（无成交显示 —）；<b>策略建议</b>为研究台观点、红色 [更新] = 本轮有边际修正；<b>催化剂时间表</b>覆盖未来 12–18 个月（抽屉内有全表），未来三个月按事件颗粒度列出，45 天内标红 ⚠。除「标的」与「策略建议文本」外其余列均可点表头排序；<b>点击行进入该标的详情抽屉</b>（业绩 / 核心逻辑 / 研报 / 催化全表 / KOL）。</div>';
+  return h;
 }
 
 function viewStocks(){
@@ -3312,7 +3409,7 @@ function viewStocks(){
   let h=feedBar();
   const cntOther=DATA.stocks.filter(s=>trkOf(s)==="other").length;
   h+='<div class="sec">'+secHead("01","重点标的研究池",
-      DATA.stocks.length+" 只在册 · 按赛道分类（与赛道跟踪对齐，无关的归「其它」）· 点击卡片看详情",
+      DATA.stocks.length+" 只在册 · 单张可筛选排序表：行情 + 行业赛道 + 策略建议 + 催化剂 · 点击行看详情",
       "<span class='upd'>标签手动设定</span>");
   h+='<div class="filters" id="stock-filters"></div>';
   if(added.length){
@@ -3326,8 +3423,8 @@ function viewStocks(){
     });
     h+='</div>';
   }
-  h+='<div id="stock-groups">'+stockGroups("全部")+'</div>';
-  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">分类口径：<b>一级分类 = 赛道</b>（AI 应用 / AI 基础设施 / 先进封测 / CPU / 物理 AI / 端侧 AI / 网安 / 金融科技 / 生物医药），与「赛道跟踪」模块一一对应，<b>买的是同一条逻辑的标的放在一起看</b>；<b>二级标签 = 行业</b>（卡片上的小字，如“AI 云 / Neocloud”“晶圆代工”“身份安全”）。与上述九条赛道都无关的（如商业航天）归入<b>「其它」</b>，不硬塞。当前「其它」'+cntOther+' 只。</div></div>';
+  h+='<div id="stk-body">'+stkBody()+'</div>';
+  h+='<div class="tiny muted" style="margin-top:8px;padding-left:2px;line-height:1.75">分类口径：<b>赛道</b>与「赛道跟踪」模块一一对应（AI 应用 / AI 基础设施 / 先进封测 / CPU / 物理 AI / 端侧 AI / 网安 / 金融科技 / 生物医药），无关的归「其它」（当前 '+cntOther+' 只）；<b>行业</b>为二级标签（如“AI 云 / Neocloud”“晶圆代工”“身份安全”）。</div></div>';
   return h;
 }
 
@@ -3444,23 +3541,24 @@ function openStock(i){
 }
 function closeDrawer(){ $("#drawer").classList.remove("on"); $("#overlay").classList.remove("on"); }
 
-/* 催化时间表：未来 1-2 年颗粒度细化（示例时间表，以公司公告为准）
-   d 在 DATA.meta.date 之后 45 天内 → 标红“临近” */
+/* 催化时间表：未来 12–18 个月全覆盖；未来三个月按事件颗粒度列出（示例时间表，以公司公告为准）
+   日期格式：YYYY-MM-DD / YYYY-MM / YYYYH1 / YYYYH2；45 天内标红“临近” */
 const CATALYSTS={
-  SPCX:[["2026-12","星舰 V4 首飞（复用验证）"],["2027H1","星链直连手机商用扩围（目标 30+ 国）"],["2027H2","IPO 窗口评估 / 星舰 cargo 商业合同"]],
-  TSLA:[["2027-01-02","Q4 交付与产量（周度数据先行）"],["2027-01-28","Q4 财报 + 2027 年指引（Robotaxi 进度）"],["2027H1","Optimus 产线爬坡里程碑 / FSD v14 欧洲审批"],["2027-04-22","Q1 财报"]],
-  META:[["2026-12","Llama 5 发布窗口（预热始于 11 月）"],["2027-01-28","Q4 财报（广告 AI 工具货币化数据）"],["2027H1","Reality Labs 新硬件 / AI 眼镜出货"]],
-  IREN:[["2026-12-05","月度运营更新（算力上线与客户合同）"],["2027-02","Q2 FY2027 财报"],["2027H1","新数据中心订单落地 / 电力接入里程碑"]],
-  NBIS:[["2026-11-12","Q3 财报（今日盘前）— 毛利率与订单簿"],["2027-02","Q4 财报"],["2027H1","新数据中心投运 / 债务融资进展"]],
-  CRWV:[["2026-12-08","指引更新窗口"],["2027-03-05","Q4 财报（backlog 与 GPU 交付）"],["2027H1","新增客户合同 / 数据中心二期投运"]],
-  BE:[["2026-12","新订单公告（韩国/印度公用事业规模项目）"],["2027-02-26","Q4 财报"],["2027H2","固体氧化物燃料电池商业化出货"]],
-  AMD:[["2026-12-09","Financial Analyst Day（MI450 路线图与 2027 指引）"],["2027-02-03","Q4 财报"],["2027H1","MI450 规模出货 / OpenAI 合同交付节奏"],["2027-05-05","Q1 财报"]],
-  TSM:[["2027-01-14","Q4 法说会 — 2027 capex 指引（全行业最关键单一数据点）"],["2027H1","2nm 量产爬坡 / A16 进度"],["2027-04-16","Q1 法说会"]],
-  TER:[["2027-02-10","Q4 财报"],["2027H1","AI 测试新平台发布 / 中国区收入边际"],["2027-07","Q2 财报"]],
-  ONTO:[["2027-02-19","Q4 财报"],["2027H1","先进封装（HBM4）设备订单周期"],["2027-07-30","Q2 财报"]],
-  NET:[["2026-12-04","Cloudflare Innovation Week（产品发布）"],["2027-02-05","Q4 财报（Workers AI 付费化）"],["2027H1","推理需求放量 / R2 存储 ARR"]],
-  RBRK:[["2026-12-09","Q3 FY2027 财报（首次上市后周年节点）"],["2027-03-12","Q4 财报"],["2027H1","FedRAMP 高授权 / 数据安全新品 GA"]],
-  OKTA:[["2026-12-03","Q3 FY2027 财报"],["2027-03-04","Q4 财报"],["2027H1","身份安全 AI Agent 产品 GA / 大客户续约周期"]],
+  SPCX:[["2026-12","星舰 V4 首飞窗口（复用验证）"],["2027-01","星链直连手机用户数里程碑"],["2027H1","星链直连手机商用扩围（目标 30+ 国）/ 星舰 cargo 商业合同"],["2027H2","V3 发射节奏与 Mars 载荷测试"],["2028H1","IPO 窗口评估（估值事件，待定）"]],
+  TSLA:[["2026-11-20","11 月中国区周度交付数据窗口"],["2026-12-01","11 月欧洲注册量 / 能源存储装机读数"],["2026-12","FSD v14 北美推送扩大 / Optimus 产线进展更新"],["2027-01-02","Q4 交付与产量（周度数据先行）"],["2027-01-28","Q4 财报 + 2027 年指引（Robotaxi 进度）"],["2027-03","Robotaxi 城市扩围里程碑 / FSD 欧洲审批节点"],["2027-04-22","Q1 财报"],["2027H1","Optimus 产线爬坡里程碑 / 更廉价车型量产节点"],["2027H2","4680 电池三期投产 / Robotaxi 商业化定价"]],
+  META:[["2026-11-25","Threads 广告测试扩大窗口"],["2026-12","Llama 5 发布窗口（预热始于 11 月）"],["2026-12-15","Q4 广告定价与 AI 工具渗透率第三方读数"],["2027-01-28","Q4 财报（广告 AI 工具货币化数据）"],["2027-02","Llama 5 商业授权与推理成本披露"],["2027-04-29","Q1 财报"],["2027H1","Reality Labs 新硬件 / AI 眼镜出货"],["2027H2","2027 capex 重估窗口 / AI 搜索产品化"]],
+  IREN:[["2026-11-24","FY Q1 财报（AI 云收入确认节奏与客户集中度）"],["2026-12-05","月度运营更新（算力上线与客户合同）"],["2026-12","Sweetwater 二期并网进度 / 新电力接入公告"],["2027-01","月度运营更新 + 新 AI 云合同签约窗口"],["2027-02-04","Q2 FY2027 财报"],["2027H1","新数据中心订单落地 / 电力接入里程碑"],["2027H2","GPU 采购交付与上架节奏（2027 capex 执行）"]],
+  NBIS:[["2026-11-25","Q3 财报后首个运营更新（数据中心投运）"],["2026-12","新数据中心投运公告 / 主权云订单窗口"],["2027-01","债务融资进展（可转债 / 项目贷定价）"],["2027-02-11","Q4 财报（毛利率能否止跌）"],["2027H1","新数据中心投运 / 欧洲主权云扩展"],["2027H2","2027 capex 与融资结构重估"]],
+  CRWV:[["2026-12-08","指引更新窗口"],["2027-01","新客户合同披露窗口（企业级 AI 云）"],["2027-03-05","Q4 财报（backlog 与 GPU 交付节奏）"],["2027-04","数据中心二期投运进度"],["2027H1","新增客户合同 / 数据中心二期投运"],["2027H2","2027 capex 执行与债务展期窗口"]],
+  BE:[["2026-11-25","韩国 / 印度公用事业项目投标窗口"],["2026-12","新订单公告（公用事业规模项目）"],["2027-01","产能爬坡季度更新（2GW→3GW）"],["2027-02-26","Q4 财报（订单转化率验证）"],["2027-04","下一披露日（待公告）"],["2027H1","固体氧化物燃料电池中试进展"],["2027H2","固体氧化物燃料电池商业化出货"]],
+  AMD:[["2026-12-09","Financial Analyst Day（MI450 路线图与 2027 指引）"],["2027-01","MI400 系列出货读数 / ROCm 生态更新"],["2027-02-03","Q4 财报（数据中心 GPU 收入占比）"],["2027-03","MI450 客户验证与 OpenAI 交付节点"],["2027-05-05","Q1 财报"],["2027H1","MI450 规模出货 / OpenAI 合同交付节奏"],["2027H2","ROCm 生态进展 / ARM 侵蚀 x86 跟踪"]],
+  TSM:[["2026-12","12 月月度收入（CoWoS 排产读数）"],["2027-01-10","Q4 季度收入预告确认"],["2027-01-14","Q4 法说会 — 2027 capex 指引（全行业最关键单一数据点）"],["2027-04-16","Q1 法说会"],["2027H1","2nm 量产爬坡 / A16 进度"],["2027H2","2nm 良率与 HBM4 产能分配"]],
+  TER:[["2026-12","HBM4 测试订单季度读数"],["2027-01","订单出货比更新（当前 1.6）"],["2027-02-10","Q4 财报"],["2027-03","AI 测试新平台发布窗口"],["2027-07-08","Q2 财报"],["2027H1","AI 测试新平台发布 / 中国区收入边际"],["2027H2","HBM4 量产测试设备追加订单"]],
+  ONTO:[["2026-12","12 月订单出货读数"],["2027-02-19","Q4 财报"],["2027-04","HBM4 先进封装设备招标窗口"],["2027-07-30","Q2 财报"],["2027H1","先进封装（HBM4）设备订单周期"],["2027H2","中国区收入与出口管制边际"]],
+  NET:[["2026-12-04","Cloudflare Innovation Week（产品发布）"],["2026-12-15","Workers AI 用量第三方读数"],["2027-02-05","Q4 财报（Workers AI 付费化）"],["2027-04","R2 存储 ARR 里程碑"],["2027H1","推理需求放量 / R2 存储 ARR"],["2027H2","企业级 AI 网关 GA"]],
+  RBRK:[["2026-12-09","Q3 FY2027 财报（首次上市后周年节点）"],["2027-01","FedRAMP 高授权审批窗口"],["2027-03-12","Q4 财报"],["2027H1","FedRAMP 高授权 / 数据安全新品 GA"],["2027H2","AI 原生安全平台企业客户渗透"]],
+  OKTA:[["2026-12-01","Q3 FY2027 财报（cRPO 验证窗口）"],["2027-01","大客户续约周期读数"],["2027-03-04","Q4 财报"],["2027H1","身份安全 AI Agent 产品 GA / 大客户续约周期"],["2027H2","AI Agent 身份层商业化进展"]],
+  CHKP:[["2026-11-24","11 月月末渠道读数"],["2026-12-10","Q4 财报"],["2027-02","2027 指引窗口"],["2027-04","Q1 财报"],["2027H1","Check Point Infinity 平台 AI 功能渗透"],["2027H2","AI 原生安全新品竞争格局"]]
 };
 
 /* ---------- 06 ---------- */
@@ -3864,19 +3962,34 @@ function route(){
   if(mod.id==="stocks"){
     const f=$("#stock-filters");
     const keys=["全部"].concat(TRACK_SEQ.filter(t=>DATA.stocks.some(s=>trkOf(s)===t)));
-    const bind=()=>{
-      f.querySelectorAll(".fchip").forEach(b=>{
-        b.onclick=()=>{
-          f.querySelectorAll(".fchip").forEach(x=>x.classList.remove("on"));
-          b.classList.add("on");
-          $("#stock-groups").innerHTML=stockGroups(b.dataset.t);
-          bind();
+    const drawStk=()=>{
+      $("#stk-body").innerHTML=stkBody(); bindStk();
+    };
+    const bindStk=()=>{
+      $("#stk-body").querySelectorAll("th[data-sort]").forEach((th)=>{
+        th.onclick=()=>{
+          const k=th.dataset.sort;
+          if(STK_ST.sort.key===k) STK_ST.sort.dir*=-1; else STK_ST.sort={key:k,dir:1};
+          drawStk();
         };
       });
-      document.querySelectorAll(".stock-card").forEach(c=>{ c.onclick=()=>openStock(+c.dataset.i); });
+      $("#stk-body").querySelectorAll("tr[data-i]").forEach((tr)=>{
+        tr.onclick=()=>openStock(+tr.dataset.i);
+      });
     };
-    f.innerHTML=keys.map((k,i)=>'<button class="fchip'+(i===0?' on':'')+'" data-t="'+k+'">'+(k==="全部"?"全部赛道":TRACK_NAME[k])+'</button>').join("");
-    bind();
+    const drawChips=()=>{
+      f.innerHTML=keys.map((k)=>'<button class="fchip'+(STK_ST.trk===k?' on':'')+'" data-t="'+k+'">'+(k==="全部"?"全部赛道":TRACK_NAME[k])+'</button>').join("")+
+        '<button class="fchip'+(STK_ST.near?' on':'')+'" data-x="near">45 天内有催化</button>'+
+        '<button class="fchip'+(STK_ST.upd?' on':'')+'" data-x="upd">策略有更新</button>';
+      f.querySelectorAll(".fchip").forEach(b=>{
+        b.onclick=()=>{
+          if(b.dataset.x){ STK_ST[b.dataset.x]=!STK_ST[b.dataset.x]; }
+          else STK_ST.trk=b.dataset.t;
+          drawChips(); drawStk();
+        };
+      });
+    };
+    drawChips(); drawStk();
   }
 
   if(mod.id==="strategy"){
