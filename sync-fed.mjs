@@ -231,6 +231,16 @@ function pickSentences(body) {
   if (out.length > 420) out = out.slice(0, 415).replace(/[,;，；]\s*$/, "") + "…";
   return out;
 }
+const BOLD_ZH = ["通胀预期", "通胀", "联邦基金利率", "政策利率", "限制性", "劳动力市场", "就业", "资产负债表", "关税", "生产率", "降息", "加息"];
+function boldZh(txt) {
+  let out = txt, n = 0;
+  for (const w of BOLD_ZH) {
+    if (n >= 4) break;
+    if (out.includes(w)) { out = out.replace(w, "<b>" + w + "</b>"); n++; }
+  }
+  return out;
+}
+
 function boldify(txt) {
   let out = txt, n = 0;
   for (const w of BOLD) {
@@ -327,10 +337,10 @@ async function loadSpeeches() {
     if (!b) continue;                 /* 地区联储主席 / 非理事 */
     mine.push({ ...x, member: b });
   }
-  const ny = await loadNyFed();
-  const all = mine.concat(ny).sort((a, b) => b.date.localeCompare(a.date));
-  console.log("讲话：联储官网 " + list.length + " 条 → 理事会 " + mine.length + " 条 ｜ 纽约联储主席 " + ny.length + " 条 ｜ 合计 " + all.length);
-  return all;
+  /* 只保留主席（沃什）的讲话：副主席 / 理事 / 地区联储一律不收 */
+  const chairOnly = mine.filter((x) => /^Warsh$/i.test(x.member.surname));
+  console.log("讲话：联储官网 " + list.length + " 条 → 主席（沃什）" + chairOnly.length + " 条");
+  return chairOnly;
 }
 
 async function enrich(list, prevLog) {
@@ -373,10 +383,16 @@ async function enrich(list, prevLog) {
     const snip = pickSentences(body);
     if (!snip) { console.log("  跳过（无可抽取句）：" + x.date + " " + x.title.slice(0, 40)); continue; }
     const R = read(body);
+    /* 英文 → 中文：标题与摘要都译，摘要保留英文原文备查 */
+    const cnSnip = await tr(snip.replace(/<[^>]+>/g, ""));
+    const cnTitle = await tr(x.title);
+    await sleep(300);
     out.push({
-      date: x.date, url: x.url, title: x.title, speaker: x.member.zh, en: x.member.name,
+      date: x.date, url: x.url, title: x.title, cnTitle: cnTitle || x.title,
+      speaker: x.member.zh, en: x.member.name,
       role: x.member.role || ZH_TITLE[x.member.title] || x.member.title, venue: x.venue,
-      snip: boldify(snip), tone: R.tone, read: R.read, impact: R.impact, isNew: true,
+      snip: cnSnip ? boldZh(cnSnip) : boldify(snip), snipEn: snip,
+      tone: R.tone, read: R.read, impact: R.impact, isNew: true,
     });
     await sleep(500);
   }
@@ -385,6 +401,31 @@ async function enrich(list, prevLog) {
   return out;
 }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/* ================= 英译中（免费接口，失败回退） ================= */
+const trCache = new Map();
+async function tr(text) {
+  const src = String(text || "").trim();
+  if (!src) return "";
+  if (trCache.has(src)) return trCache.get(src);
+  let out = "";
+  try {
+    const u = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=" + encodeURIComponent(src.slice(0, 1800));
+    const r = await get(u, 2);
+    const j = JSON.parse(r.text);
+    out = (j[0] || []).map((x) => x[0]).join("").trim();
+  } catch { }
+  if (!out) {
+    try {
+      const u = "https://api.mymemory.translated.net/get?langpair=en|zh-CN&q=" + encodeURIComponent(src.slice(0, 450));
+      const r = await get(u, 1);
+      out = (JSON.parse(r.text).responseData || {}).translatedText || "";
+    } catch { }
+  }
+  if (!out) out = "";
+  trCache.set(src, out);
+  return out;
+}
 
 /* ================= 主流程 ================= */
 await loadBoard();
@@ -399,13 +440,11 @@ let log = [];
 try { log = JSON.parse(readFileSync("fed-log.json", "utf8")); } catch { }
 if (!Array.isArray(log)) log = [];
 const speeches = await enrich(speechesRaw, log);
-/* 滚动窗口：一般理事留 120 天；主席与纽约联储主席讲话少，留 400 天，避免“窗口内无主席讲话” */
-const cut = new Date(Date.now() - 120 * 864e5).toISOString().slice(0, 10);
-const cutKey = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);
-const isKeyRole = (x) => x.role === "主席" || /纽约联储/.test(x.role || "");
-log = speeches.filter((x) => x.date >= (isKeyRole(x) ? cutKey : cut))
+/* 长期滚动积累：主席讲话本来就少，保留 400 天 / 最多 60 条 */
+const cut = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);
+log = speeches.filter((x) => x.date >= cut)
   .sort((a, b) => b.date.localeCompare(a.date))
-  .slice(0, 40);
+  .slice(0, 60);
 console.log("讲话留档 " + log.length + " 条，本轮新增 " + log.filter((x) => x.isNew).length + " 条");
 
 if (!DRY) {

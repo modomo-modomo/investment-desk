@@ -1,10 +1,10 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-14T02:51:42.748Z",
+  "syncedAt": "2026-11-15T05:15:38.192Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 2700,
+  "corpus": 3000,
   "total": 68,
-  "ok": 67,
+  "ok": 66,
   "full": 2
  },
  "items": {
@@ -73,9 +73,9 @@ window.NEWS_DATA = {
    "name": "Neuropace, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Update: NeuroPace Shares Down Pre-Bell After Q3 Revenue Miss, Downgraded 2026 Sales Outlook",
+   "headline": "NeuroPace, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/neuropace-shares-down-pre-bell-102109282.html",
+   "url": "https://finance.yahoo.com/healthcare/articles/neuropace-inc-q3-2026-earnings-133000906.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -88,9 +88,9 @@ window.NEWS_DATA = {
    "name": "KinderCare Learning Companies, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "What KinderCare Learning Companies (KLC) Said on Its Q3 Earnings Call",
+   "headline": "KinderCare Learning Companies, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/kindercare-learning-companies-klc-said-081445199.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kindercare-learning-companies-inc-q3-133000165.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -118,9 +118,9 @@ window.NEWS_DATA = {
    "name": "Newsmax, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Newsmax Q3 Earnings Call Highlights",
+   "headline": "Newsmax, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/media-advertising/articles/newsmax-q3-earnings-call-highlights-101435196.html",
+   "url": "https://finance.yahoo.com/media-advertising/articles/newsmax-inc-q3-2026-earnings-133000249.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -133,9 +133,9 @@ window.NEWS_DATA = {
    "name": "Virgin Galactic Holdings, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Virgin Galactic (SPCE) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-spce-q3-2026-055923034.html",
+   "headline": "Is Virgin Galactic Holdings (SPCE) Undervalued As Earnings And A $250 Million Equity Plan Stir Doubts?",
+   "date": "2026-11-14",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-holdings-spce-undervalued-051704101.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -163,9 +163,9 @@ window.NEWS_DATA = {
    "name": "Inuvo, Inc",
    "session": "post",
    "ok": true,
-   "headline": "Inuvo (INUV) Q3 2026 Earnings Call Transcript",
+   "headline": "Inuvo, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/inuvo-inuv-q3-2026-earnings-055911189.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/inuvo-inc-q3-2026-earnings-133000624.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -178,9 +178,9 @@ window.NEWS_DATA = {
    "name": "Sensus Healthcare, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Sensus Healthcare (SRTS) Q3 2026 Earnings Call Transcript",
+   "headline": "Sensus Healthcare, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/sensus-healthcare-srts-q3-2026-073104020.html",
+   "url": "https://finance.yahoo.com/healthcare/articles/sensus-healthcare-inc-q3-2026-133000660.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -208,9 +208,9 @@ window.NEWS_DATA = {
    "name": "Vuzix Corporation",
    "session": "post",
    "ok": true,
-   "headline": "Vuzix (VUZI) Q3 2026 Earnings Call Transcript",
+   "headline": "Vuzix Corporation Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/vuzix-vuzi-q3-2026-earnings-064913369.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vuzix-corporation-q3-2026-earnings-133000516.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -238,9 +238,9 @@ window.NEWS_DATA = {
    "name": "Xos, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Xos Inc (XOS) Q3 2026 Earnings Call Transcript",
+   "headline": "Xos, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/xos-inc-xos-q3-2026-055911007.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/xos-inc-q3-2026-earnings-133000000.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -298,9 +298,9 @@ window.NEWS_DATA = {
    "name": "HireQuest, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "HireQuest (HQI) Q3 2026 Earnings Call Transcript",
+   "headline": "HireQuest, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/hirequest-hqi-q3-2026-earnings-061513381.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/hirequest-inc-q3-2026-earnings-133000680.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -343,9 +343,9 @@ window.NEWS_DATA = {
    "name": "Codexis, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Codexis (CDXS) Q3 2026 Earnings Call Transcript",
+   "headline": "Codexis, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/codexis-cdxs-q3-2026-earnings-064854070.html",
+   "url": "https://finance.yahoo.com/healthcare/articles/codexis-inc-q3-2026-earnings-133000280.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -358,9 +358,9 @@ window.NEWS_DATA = {
    "name": "Rekor Systems, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Rekor Systems (REKR) Q3 2026 Earnings Call Transcript",
+   "headline": "Rekor Systems, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rekor-systems-rekr-q3-2026-065854556.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/rekor-systems-inc-q3-2026-133000428.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -403,9 +403,9 @@ window.NEWS_DATA = {
    "name": "Heartflow, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "HeartFlow (HTFL) Q3 2026 Earnings Call Transcript",
+   "headline": "Heartflow, Inc. Common Stock Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/heartflow-htfl-q3-2026-earnings-074608676.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/heartflow-inc-common-stock-q3-133000938.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -433,9 +433,9 @@ window.NEWS_DATA = {
    "name": "GCT Semiconductor Holding, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "GCTS: Major Customer Orders Delayed One More Quarter",
+   "headline": "GCT Semiconductor Holding, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/gcts-major-customer-orders-delayed-130100824.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gct-semiconductor-holding-inc-q3-133000140.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -613,9 +613,9 @@ window.NEWS_DATA = {
    "name": "IZEA Worldwide, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "IZEA Worldwide (IZEA) Q3 2026 Earnings Call Transcript",
+   "headline": "IZEA Worldwide, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/izea-worldwide-izea-q3-2026-073044303.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/izea-worldwide-inc-q3-2026-133000612.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -733,9 +733,9 @@ window.NEWS_DATA = {
    "name": "Fractyl Health, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Fractyl Health (GUTS) Q3 2026 Earnings Call Transcript",
+   "headline": "Fractyl Health, Inc. Common Stock Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/fractyl-health-guts-q3-2026-055911911.html",
+   "url": "https://finance.yahoo.com/healthcare/articles/fractyl-health-inc-common-stock-133000740.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -769,9 +769,9 @@ window.NEWS_DATA = {
    "name": "TOMI Environmental Solutions, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "TOMI Environmental Solutions Inc (TOMZ) (Q3 2026) Earnings Call Highlights: Third Straight ...",
+   "headline": "TOMI Environmental Solutions, Inc. Q3 2026 Earnings Call Summary",
    "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/tomi-environmental-solutions-inc-tomz-050424062.html",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tomi-environmental-solutions-inc-q3-133000159.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -830,16 +830,16 @@ window.NEWS_DATA = {
    "symbol": "ANDG",
    "name": "Andersen Group Inc.",
    "session": "post",
-   "ok": true,
-   "headline": "Andersen (ANDG) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/andersen-andg-q3-2026-earnings-074614244.html",
+   "ok": false,
+   "headline": "",
+   "date": "",
+   "url": "",
    "res": [],
    "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
+   "src": "",
    "matched": 0,
    "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
+   "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
   },
   "ENHA": {
    "symbol": "ENHA",
@@ -861,9 +861,9 @@ window.NEWS_DATA = {
    "name": "Cisco Systems, Inc.",
    "session": "post",
    "ok": true,
-   "headline": "Earnings week scorecard: beats rewarded selectively as AI-infrastructure names pull back",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/earnings-week-scorecard-beats-rewarded-203315112.html",
+   "headline": "Is Cisco Systems a Buy After Its Latest Earnings Report?",
+   "date": "2026-11-14",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cisco-systems-buy-latest-earnings-082002821.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -1040,20 +1040,71 @@ window.NEWS_DATA = {
  "trump": {
   "items": [
    {
+    "d": "2026-11-15",
+    "t": "11-15 08:19",
+    "o": "【美国纽约州长就停飞事件要求美交通部长辞职】14日，美国纽约州民主党籍州长霍楚尔发表声明，要求美国交通部长达菲辞职，否则应由总统特朗普将其免职。霍楚尔在声明中称：“从长期存在的空中交通管制员短缺问题，到接二连三的通信系统故障，在达菲任内，美国航空系统的严重失误已经成为一种常态。”",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
+    "t": "11-14 19:30",
+    "o": "【特朗普据悉曾就打击<b>伊朗</b>征询沙特王储和土耳其总统意见】据一位美国高级官员及另一位知情人士透露，在过去两周的通话中，特朗普曾征询沙特王储穆罕默德·本·萨勒曼和土耳其总统埃尔多安的意见；两人均敦促他不要对伊朗发动攻击。据称，特朗普并未就此做出任何明确表态。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
+    "t": "11-14 19:06",
+    "o": "【特朗普据悉考虑暂缓对<b>伊朗</b><b>军事打击</b>】知情人士透露，美国总统唐纳德·特朗普近日向高级顾问表示，如果美国未受到来自伊朗或也门胡塞武装的任何新挑衅，他可能会暂缓对伊朗采取军事打击。特朗普在“通过新一轮打击升级战事”与“缓和敌对状态”这两种立场之间摇摆不定。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
+    "t": "11-14 16:33",
+    "o": "【特朗普：推动《电影、电视与娱乐产业振兴<b>法案</b>》】美国总统特朗普表示，正在联合共和、民主两党多名参议员和众议员，共同推动《电影、电视与娱乐产业振兴法案》，希望通过立法和<b>税收</b>优惠，将流向加拿大、英国、澳大利亚等国的影视制作项目重新吸引回美国。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
+    "t": "11-14 13:51",
+    "o": "【加拿大总理卡尼：有可能与美国达成双边协议】加拿大总理卡尼表示，在马尼拉之行前与特朗普进行了长时间实质性会谈；有可能与美国达成双边协议，但这尚未实现。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
+    "t": "11-14 13:19",
+    "o": "【特朗普下周访问亚洲 被曝会带马斯克 回避提及英伟达、黄仁勋】据美联社报道，美国总统特朗普计划下周访问亚洲时带上马斯克。匿名政府官员透露，作为SpaceX和特斯拉的掌门人，马斯克在经济和国家安全方面拥有重要利益，这使他成为特朗普的宝贵顾问。官员还透露，特朗普并不打算提及黄仁勋相关",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": false
+   },
+   {
+    "d": "2026-11-14",
     "t": "11-14 09:28",
-    "o": "【特朗普：美空管系统故障疑由老旧破损的基础设施所致】据美国福克斯新闻频道报道，美国总统特朗普13日表示，美国空管系统故障与网络攻击或人工智能无关，疑由老旧、破损的基础设施导致。",
+    "o": "【特朗普：美空管系统故障疑由老旧破损的基础设施所致】据美国福克斯新闻频道报道，美国总统特朗普13日表示，美国空管系统故障与网络攻击或<b>人工智能</b>无关，疑由老旧、破损的基础设施导致。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
     "isNew": false
    },
    {
+    "d": "2026-11-14",
     "t": "11-14 08:47",
-    "o": "【特朗普说美空管系统故障与网络攻击无关】据美国福克斯新闻频道13日报道，美国总统特朗普当天在接受该媒体记者采访时说，美国空管系统故障与网络攻击或人工智能无关，而是由老旧、破损的基础设施导致。",
+    "o": "【特朗普说美空管系统故障与网络攻击无关】据美国福克斯新闻频道13日报道，美国总统特朗普当天在接受该媒体记者采访时说，美国空管系统故障与网络攻击或<b>人工智能</b>无关，而是由老旧、破损的基础设施导致。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
     "isNew": false
    },
    {
+    "d": "2026-11-14",
     "t": "11-14 06:20",
     "o": "【特朗普就全美停飞听取简报】美国东部时间11月13日下午，美国国土安全部长马克韦恩·马林就全国范围内的航班停飞表示，美国总统特朗普已听取简报。据美媒援引知情人士消息报道，美国联邦调查局认为，导致空中交通管制系统出现通信故障的并非网络攻击或犯罪行为，目前调查重点之一是此次故障是否由",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
@@ -1061,13 +1112,15 @@ window.NEWS_DATA = {
     "isNew": false
    },
    {
+    "d": "2026-11-14",
     "t": "11-14 01:50",
-    "o": "特朗普将针对石油和化肥运输的航运豁免延长90天。",
+    "o": "特朗普将针对<b>石油</b>和化肥运输的航运豁免延长90天。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "能源价格表态短期扰动油价，供需才是定价主轴。",
     "isNew": false
    },
    {
+    "d": "2026-11-14",
     "t": "11-14 00:09",
     "o": "美国上诉法院表示，特朗普政府不能因纽约州商业驾照问题扣留7350万美元公路资金。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
@@ -1075,56 +1128,15 @@ window.NEWS_DATA = {
     "isNew": false
    },
    {
+    "d": "2026-11-13",
     "t": "11-13 17:48",
-    "o": "【特朗普称应中东盟友请求延缓对伊朗行动】美国总统特朗普在一条12日发布的专访视频中称，他本可以“立即结束”伊朗战事，但应美国的中东盟友请求，他选择延缓对伊朗行动。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 15:21",
-    "o": "【知情人士：特朗普政府要求日本从2027财年开始 在未来五年内将驻日美军费用分摊额提高至3万亿日元以上】知情人士称，特朗普政府要求日本从2027财年开始，在未来五年内将驻日美军费用分摊额提高至3万亿日元以上（约合190亿美元），相当于目前水平的三倍。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 15:17",
-    "o": "【预测市场行业开始谨慎行事？Kalshi停止与特朗普长子的顾问合作】预测市场平台Kalshi已终止与美国总统特朗普长子小唐纳德·特朗普之间的顾问合作，Kalshi称这是双方共同做出的商业决定。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 14:37",
-    "o": "【黄仁勋创办英伟达时造的词 被《经济学人》用谐音梗“二创”了】此前，《经济学人》以《黄仁勋必须下台》为题发文。《经济学人》用“英伟达”（Nvidia）这一公司名称与“招致愤恨的、令人反感的”（invidious）这一形容词，合成了谐音词“Nvidious”，并单独用作小标题批评黄",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 14:22",
-    "o": "【“散发着潜在腐败气息” 特朗普的“黑暗公主”成民主党调查目标】2026年中期选举后，民主党人准备对特朗普政府展开一系列调查。特朗普的首席筹款人梅雷迪思·奥罗克，可能成为他们撬开白宫调查大门的突破口。据新华社援引美国媒体12日报道，国会民主党高层证实，明年1月民主党人正式掌控国会",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 10:23",
-    "o": "【乌克兰总统：欧洲代表将参加下一轮谈判】在12日结束与俄罗斯总统普京的会晤后，美国总统特使威特科夫和总统特朗普的女婿库什纳离开了莫斯科，并于当地时间12日晚间抵达爱尔兰首都都柏林。当晚，乌克兰总统泽连斯基在都柏林会见了威特科夫和库什纳。泽连斯基表示，美国在欧洲参与围绕乌克兰问题的",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
-    "isNew": false
-   },
-   {
-    "t": "11-13 09:50",
-    "o": "【美媒披露特朗普政府多名高层面临民主党调查和弹劾】据美国媒体12日报道，国会民主党高层证实，明年1月民主党人正式掌控国会后，包括国务卿鲁比奥在内的特朗普政府多名高级官员可能成为调查和弹劾目标。",
+    "o": "【特朗普称应中东盟友请求延缓对<b>伊朗</b>行动】美国总统特朗普在一条12日发布的专访视频中称，他本可以“立即结束”伊朗战事，但应美国的中东盟友请求，他选择延缓对伊朗行动。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
     "isNew": false
    }
   ],
-  "logCount": 37
+  "logCount": 43
  },
  "moversNews": {
   "ONEN": {
@@ -1169,10 +1181,10 @@ window.NEWS_DATA = {
   },
   "ARAI": {
    "ok": true,
-   "title": "Arrive AI Inc. Q3 2026 Earnings Call Summary",
+   "title": "Arrive AI: 3 Key Takeaways for Long-Term Investors",
    "summary": "",
-   "t": "11-14 05:50",
-   "src": "Moby（英文）",
+   "t": "11-14 11:12",
+   "src": "Motley Fool（英文）",
    "cause": false,
    "en": true
   },
@@ -1338,99 +1350,99 @@ window.NEWS_DATA = {
  "geo": {
   "items": [
    {
-    "t": "2026-11-14 10:20",
-    "topic": "APEC",
-    "o": "【粤港澳大湾区已成为中国经济活力最强的区域之一】今天（14日）上午10:00，2026年APEC领导人会议周新闻中心举行广东省、深圳市专场中外媒体吹风会。吹风会上介绍，经过这些年的发展，2025年大湾区经济总量突破15万亿元，拥有香港、广州、深圳3个地区生产总值超3万亿元的城市，已成为中国经济活力最",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "贸易与供应链",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-14 10:05",
-    "topic": "APEC",
-    "o": "【APEC深圳会议各项筹备工作已经就绪】广东省委常委、APEC会议广东省筹备工作领导小组副组长王曦14日在2026年APEC领导人会议周新闻中心首场吹风会上表示，目前，各项筹备工作已经就绪，我们满怀热忱，静候八方宾客到来。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "贸易与供应链",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-13 04:51",
-    "topic": "俄乌局势",
-    "o": "【美国、俄罗斯 接连披露“癌症疫苗”进展】就在AI巨头忙着用“十年后解决癌症”的噱头推销股票之际，已经投入临床试验的个体化mRNA癌症疫苗又传出新消息。美国生物技术公司莫德纳周四宣布，正基于黑色素瘤Ⅲ期试验的积极结果，推进生产和商业化准备；俄罗斯国有研究机构也披露，首例接受相关疫苗治疗的黑色素瘤患者",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-13 04:47",
+    "t": "2026-11-14 19:48",
     "topic": "美伊谈判",
-    "o": "美国总统特朗普表示，如有必要，可能会对伊朗动用武力。被问及是否可能对古巴动用武力，特朗普回答说会考虑。",
+    "o": "【伊朗国家天然气公司称今年的供应将“非常困难”】伊朗国家天然气公司表示：“今年是天然气供应的特殊且非常困难的一年，全国11个省份面临天然气供应紧张的局面。”据伊朗媒体报道，伊朗过去24小时天然气日产量达到7.09亿立方米，其中68%被居民、商业和小工业部门消耗。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "isNew": true
    },
    {
-    "t": "2026-11-13 04:02",
-    "topic": "俄乌局势",
-    "o": "【欧盟称将继续参与乌克兰和平谈判】欧洲理事会主席科斯塔和欧盟委员会主席冯德莱恩12日在爱尔兰首都都柏林会见乌克兰总统泽连斯基后发表联合声明说，欧盟已参与本周在阿联酋首都阿布扎比举行的和平谈判，并将继续跟进后续进程。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-13 03:56",
+    "t": "2026-11-14 19:30",
     "topic": "美伊谈判",
-    "o": "【特朗普称无需与伊朗达成协议 要求万斯聚焦国内问题】美国总统特朗普12日称美国不需要与伊朗达成协议，并要求副总统万斯将全部精力集中到国内反腐和犯罪问题上。特朗普当天在社交媒体发文说，他已要求万斯将“全部精力集中在民主党执政的城市与州的严重腐败和犯罪问题上”，并称“我们不需要与伊朗达成任何协议，那些日",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "o": "【特朗普据悉曾就打击伊朗征询沙特王储和土耳其总统意见】据一位美国高级官员及另一位知情人士透露，在过去两周的通话中，特朗普曾征询沙特王储穆罕默德·本·萨勒曼和土耳其总统埃尔多安的意见；两人均敦促他不要对伊朗发动攻击。据称，特朗普并未就此做出任何明确表态。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "isNew": true
    },
    {
-    "t": "2026-11-13 03:27",
-    "topic": "俄乌局势",
-    "o": "【佩斯科夫称欧洲国家表现自相矛盾】当地时间12日，俄罗斯总统新闻秘书佩斯科夫表示，欧洲国家有意展现某种实现和平的意愿，但却同时声称将在乌克兰部署军事力量。欧洲国家武装力量在乌境内的部署意味着战争将以更大的规模延续。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-13 03:18",
+    "t": "2026-11-14 19:06",
     "topic": "美伊谈判",
-    "o": "【消息人士称伊朗霍尔木兹甘省锡里克遭敌方袭击】当地时间12日，伊朗官方消息人士表示，位于伊朗霍尔木兹甘省的锡里克当晚遭到了敌方袭击，袭击属于“军事性质”。目前伊朗官方并未就此发表正式声明。",
+    "o": "【特朗普据悉考虑暂缓对伊朗军事打击】知情人士透露，美国总统唐纳德·特朗普近日向高级顾问表示，如果美国未受到来自伊朗或也门胡塞武装的任何新挑衅，他可能会暂缓对伊朗采取军事打击。特朗普在“通过新一轮打击升级战事”与“缓和敌对状态”这两种立场之间摇摆不定。",
     "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "原油与地缘风险溢价",
     "isNew": true
    },
    {
-    "t": "2026-11-13 02:35",
-    "topic": "俄乌局势",
-    "o": "【特朗普女婿库什纳称俄乌问题多边谈判将于下周举行】当地时间12日，特朗普的女婿库什纳在离开俄罗斯之前表示，多边谈判将于下周举行，美国谈判代表在与普京会晤期间讨论的所有内容，都将对即将举行的多边谈判产生影响。但他并未说明多边谈判的具体时间、地点和参与方。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-13 02:32",
+    "t": "2026-11-14 18:23",
     "topic": "美伊谈判",
-    "o": "【伊朗专家会议呼吁审议退出《不扩散核武器条约》】据伊朗伊斯兰共和国广播电视台12日报道，伊朗专家会议当天发表声明呼吁有关部门审议退出《不扩散核武器条约》，重新审视国家防御战略并建立必要威慑能力。",
-    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
+    "o": "伊朗海军称一艘油轮在霍尔木兹海峡以东限制水域触雷后起火，这是今天发生的第二起此类事件。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "isNew": true
    },
    {
-    "t": "2026-11-12 23:53",
+    "t": "2026-11-14 18:23",
     "topic": "俄乌局势",
-    "o": "【美国特使威特科夫表示：在与普京会面后 双方已商定举行新一轮会谈】美国特使威特科夫表示，在与普京会面后，双方已商定举行新一轮会谈。美国特使库什纳称，与普京的会谈“实质且详细”。",
+    "o": "乌克兰称袭击了俄罗斯萨马拉地区的一处输油泵站。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 18:09",
+    "topic": "APEC",
+    "o": "【何立峰出席亚太经合组织工商咨询理事会第四次会议】11月14日，中共中央政治局委员、国务院副总理何立峰在深圳出席亚太经合组织（APEC）工商咨询理事会第四次会议开幕式并致辞。何立峰指出，亚太经合组织第三十三次领导人非正式会议即将在深圳举行，为亚太合作明确方向、凝聚力量。希望工商咨询理事会继续发扬开拓",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "贸易与供应链",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 17:28",
+    "topic": "美伊谈判",
+    "o": "伊朗伊斯兰革命卫队14日通报称，几小时内，至少有4艘油轮在霍尔木兹海峡触雷起火。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "原油与地缘风险溢价",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 17:09",
+    "topic": "俄乌局势",
+    "o": "【俄罗斯国防部：俄军已控制乌克兰扎波罗热地区的特尔西安卡定居点】俄罗斯国防部称，俄军已控制乌克兰扎波罗热地区的特尔西安卡定居点；俄方打击了乌克兰用于军事目的的能源和交通基础设施，以及无人机生产和储存设施。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 17:08",
+    "topic": "俄乌局势",
+    "o": "【泽连斯基：美国建议乌克兰放弃顿巴斯地区 以换取加入北约】乌克兰总统泽连斯基表示，美国特使曾询问乌克兰是否愿意将东部的顿巴斯地区让给俄罗斯，以此换取加入北约的机会；这表明华盛顿的谈判策略可能发生了转变。",
     "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
     "imp": "能源/军工/欧洲风险偏好",
     "isNew": true
    },
    {
-    "t": "2026-11-12 23:16",
+    "t": "2026-11-14 17:06",
     "topic": "俄乌局势",
-    "o": "【欧盟领导人：将继续向乌克兰提供财政和军事援助】当地时间11月12日，欧盟委员会主席冯德莱恩和欧洲理事会主席科斯塔在爱尔兰首都都柏林与乌克兰总统泽连斯基会晤后发表联合声明，重申欧盟对乌克兰的坚定支持，并表示将继续向乌克兰提供大规模财政和军事援助。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "o": "【泽连斯基：要求欧洲盟友在11月底前决定由谁代表欧洲参加和平谈判】乌克兰总统泽连斯基表示，要求欧洲盟友在11月底前决定由谁代表欧洲参加和平谈判。美国特使表示，俄罗斯总统普京同意在下一轮谈判中让欧洲参与。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
     "imp": "能源/军工/欧洲风险偏好",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 14:23",
+    "topic": "俄乌局势",
+    "o": "【美民主党人要求马斯克保留“星链”限速记录】美国《华尔街日报》13日报道，美国两名民主党籍联邦参议员已正式致信美国太空探索技术公司(SpaceX)首席执行官马斯克，要求后者保留关于限制乌克兰使用“星链”和“星盾”系统的所有记录。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-14 14:07",
+    "topic": "美伊谈判",
+    "o": "【伊朗称霍尔木兹海峡以东一艘违规油轮触雷起火】伊朗军队海军当地时间14日发布消息称，当天清晨，一艘油轮在霍尔木兹海峡以东触碰水雷并起火。伊朗方面表示，该油轮此前曾无视警告，在关闭追踪与识别系统的情况下，擅自航行至霍尔木兹海峡以东的一处不安全禁区。随后，该油轮触碰水雷，起火后被迫停航。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "原油与地缘风险溢价",
     "isNew": true
    }
   ],

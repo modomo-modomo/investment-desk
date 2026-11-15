@@ -197,23 +197,40 @@ const TRUMP_RULES = [
 ];
 let trumpLog = [];
 try { trumpLog = JSON.parse(readFileSync("trump-log.json", "utf8")); } catch {}
-const seenT = new Set(trumpLog.map((x) => x.t));
+/* 兼容旧格式（只有 t="MM-DD HH:mm"）：补全 d 完整日期 */
+const pad4 = (n) => String(n).padStart(2, "0");
+const thisYear = new Date(Date.now() + 8 * 3600e3).getUTCFullYear();
+for (const x of trumpLog) if (!x.d) x.d = thisYear + "-" + String(x.t || "").slice(0, 5);
+const seenT = new Set(trumpLog.map((x) => (x.d || "") + " " + String(x.t || "").slice(6)));
 const trumpHits = corpus.filter((x) => TRUMP_RE.test((x.title || "") + (x.summary || "")));
+/* 政策关键点加粗（正文是中文转载文本，按关键词标黑体） */
+const POL = ["关税", "芯片", "半导体", "美联储", "联储", "降息", "加息", "中国", "人工智能", "AI", "石油", "原油", "俄乌", "乌克兰", "普京", "移民", "税收", "法案", "伊朗", "制裁", "出口管制", "军事打击"];
+function boldPol(txt) {
+  let out = txt, n = 0;
+  for (const w of POL) {
+    if (n >= 3) break;
+    if (out.includes(w)) { out = out.replace(w, "<b>" + w + "</b>"); n++; }
+  }
+  return out;
+}
 const trumpItems = trumpHits.slice(0, 12).map((x) => {
   const txt = (x.summary || x.title || "").trim().replace(/\s+/g, " ").slice(0, 140);
+  const full = (x.showTime || "").slice(0, 10) || new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
   const t = (x.showTime || "").slice(5, 16);
   const rule = TRUMP_RULES.find(([re]) => re.test(txt));
   return {
-    t, o: txt,
+    d: full, t, o: boldPol(txt),
     src: "东方财富 7×24（转载 X / 财经媒体）",
     r: rule ? rule[1] : "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    isNew: !seenT.has(t),
+    isNew: !seenT.has(full + " " + t.slice(6)),
   };
 });
-for (const it of trumpItems) if (it.isNew) trumpLog.unshift({ t: it.t, o: it.o, src: it.src, r: it.r });
-/* 滚动保留约 31 天（t 格式 "MM-DD HH:mm"，跨年仅在 12 月末有一处边界，可接受） */
-const cutoffMD = new Date(Date.now() - 31 * 86400000).toISOString().slice(5, 10);
-trumpLog = trumpLog.filter((x) => x.t.slice(0, 5) >= cutoffMD).slice(0, 40);
+for (const it of trumpItems) if (it.isNew) trumpLog.unshift({ d: it.d, t: it.t, o: it.o, src: it.src, r: it.r });
+/* 长期滚动积累：近 400 天 / 最多 400 条 */
+const cutoffDay = new Date(Date.now() - 400 * 86400000).toISOString().slice(0, 10);
+trumpLog = trumpLog.filter((x) => (x.d || "") >= cutoffDay)
+  .sort((a, b) => String(b.d + " " + (b.t || "")).localeCompare(String(a.d + " " + (a.t || ""))))
+  .slice(0, 400);
 writeFileSync("trump-log.json", JSON.stringify(trumpLog, null, 1), "utf8");
 console.log("川普语录：语料命中 " + trumpHits.length + " 条，本轮新增 " + trumpItems.filter((x) => x.isNew).length + " 条，日志 " + trumpLog.length + " 条");
 

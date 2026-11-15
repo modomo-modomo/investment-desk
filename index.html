@@ -293,6 +293,13 @@ ol.concl li b{color:var(--text);font-weight:650}
 .hi{color:var(--up);font-weight:600}
 .hi-b{color:var(--up);font-weight:700}
 .q-new{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--up);vertical-align:middle;margin-right:5px}
+.quote-scroll{max-height:560px;overflow-y:scroll;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:8px}
+.quote-scroll::-webkit-scrollbar{width:14px}
+.quote-scroll::-webkit-scrollbar-track{background:#eef2f8;border-left:1px solid #e0e7f1}
+.quote-scroll::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
+.quote-scroll::-webkit-scrollbar-thumb:hover{background:#6c82a3}
+.quote-scroll .quote:last-child{margin-bottom:0}
+.quote .o b{color:var(--ink,#111);font-weight:700}
 .quote.isnew{border-left-color:var(--up);background:#fffafa}
 .quote.isnew .q-meta{color:var(--up)}
 .chip-src{font-size:9.5px;color:#98a2b3;border:1px solid var(--line);border-radius:4px;padding:0 4px;white-space:nowrap}
@@ -967,12 +974,12 @@ const DATA = {
         "欧洲：分歧在冻结资产收益的使用与派兵意愿，财政负担是主要约束。"
       ], impact:"欧洲天然气与军工对消息高度敏感；重建主题属事件驱动，不宜提前埋伏。" },
     trump:{ updated:"11-11 07:00", rows:[
-      {d:"11-10", new:true, o:"Tariffs on semiconductors are coming. Not next year — soon. We want the chips made here.", zh:"半导体的关税要来了，不是明年，是很快。我们要芯片在这里造。", r:"若落地，直接冲击以进口为主的设备与模组厂。但“很快”这类表述过去半年出现过 4 次，实际执行滞后——按“预期扰动”而非“既成事实”处理。"},
-      {d:"11-07", o:"The Fed should be cutting. They are always late. I know better than them.", zh:"联储应该降息，他们总是慢半拍，我比他们懂。", r:"对货币政策独立性的施压。在 CPI 黏性超预期、12 月加息 84% 的定价下，这类表态与联储路径正面对撞，政治噪音会放大市场波动。"},
-      {d:"11-03", o:"We will not let anyone take our AI lead. Whatever it takes.", zh:"我们不会让任何人拿走我们的 AI 领先地位，不惜一切代价。", r:"利好本土算力与电力投资；对出口管制是进一步收紧的信号，关注半导体设备对华收入占比。"},
-      {d:"10-28", o:"Deals are easy. I make deals. The war would have been over in one day.", zh:"协议很简单，我会做交易。那场战争一天就能结束。", r:"俄乌相关表态对能源价格有短期扰动，但缺乏可执行细节，不建议据此建仓。"},
-      {d:"10-20", o:"The market is at an all-time high because of me. Remember that in November.", zh:"市场创新高是因为我，十一月要记住这一点。", r:"中期选举前的政策倾向：倾向维持市场友好型政策，对风险资产偏正面。"}
-    ], note:"自动条目按关键词从东财 7×24（转载 X / 财经媒体 / 金十）过滤，解读为规则生成；原话以官方文本为准，不构成投资建议。日志滚动保留约一个月。若当日无命中则不产生条目，宁缺勿错。" }
+      {d:"2026-11-10", new:true, o:"<b>Tariffs on semiconductors are coming</b>. Not next year — soon. We want the chips made here.", zh:"半导体的关税要来了，不是明年，是很快。我们要芯片在这里造。", r:"若落地，直接冲击以进口为主的设备与模组厂。但“很快”这类表述过去半年出现过 4 次，实际执行滞后——按“预期扰动”而非“既成事实”处理。"},
+      {d:"2026-11-07", o:"<b>The Fed should be cutting</b>. They are always late. I know better than them.", zh:"联储应该降息，他们总是慢半拍，我比他们懂。", r:"对货币政策独立性的施压。在 CPI 黏性超预期、12 月加息 84% 的定价下，这类表态与联储路径正面对撞，政治噪音会放大市场波动。"},
+      {d:"2026-11-03", o:"We will not let anyone take our <b>AI lead</b>. Whatever it takes.", zh:"我们不会让任何人拿走我们的 AI 领先地位，不惜一切代价。", r:"利好本土算力与电力投资；对出口管制是进一步收紧的信号，关注半导体设备对华收入占比。"},
+      {d:"2026-10-28", o:"Deals are easy. I make deals. The war would have been over in one day.", zh:"协议很简单，我会做交易。那场战争一天就能结束。", r:"俄乌相关表态对能源价格有短期扰动，但缺乏可执行细节，不建议据此建仓。"},
+      {d:"2026-10-20", o:"The market is at an all-time high because of me. Remember that in November.", zh:"市场创新高是因为我，十一月要记住这一点。", r:"中期选举前的政策倾向：倾向维持市场友好型政策，对风险资产偏正面。"}
+    ], note:"自动条目按关键词从东财 7×24（转载 X / 财经媒体 / 金十）过滤，解读为规则生成；原话以官方文本为准，不构成投资建议。长期滚动积累（近 400 天，最多 400 条），加粗为政策关键点。若当日无命中则不产生条目，宁缺勿错。" }
   },
 
   stocks:[
@@ -2714,7 +2721,7 @@ function viewEvents(){
   /* 川普语录：自动抓取条目（东财 7×24 转载过滤）排在最前，新增标红 */
   const NDt=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.trump)?window.NEWS_DATA.trump:null;
   if(NDt&&NDt.items&&NDt.items.length){
-    const dyn=NDt.items.map(x=>({d:x.t,new:!!x.isNew,o:x.o,zh:"",r:x.r,src:x.src}));
+    const dyn=NDt.items.map(x=>({d:x.d||x.t,t:x.t,new:!!x.isNew,o:x.o,zh:"",r:x.r,src:x.src}));
     e.trump.rows=dyn.concat(e.trump.rows);
   }
   let h=feedBar();
@@ -2750,12 +2757,15 @@ function viewEvents(){
   });
   h+='</div>';
 
-  h+='<div class="sec">'+secHead("04","重点跟踪","美联储 · 川普语录 · APEC · 美伊 · 俄乌");
-  h+='<div class="grid g2">';
+  h+='<div class="sec">'+secHead("04","重点跟踪","美联储议息与主席讲话 · 川普语录 · APEC · 美伊 · 俄乌");
+  h+='<div class="grid g2" style="align-items:start">';
   const FD=(typeof window!=="undefined"&&window.FED_DATA)?window.FED_DATA:null;
   const FP=(FD&&FD.probs&&FD.probs.probs&&FD.probs.probs.length)?FD.probs:null;
   const fedMeeting=FP?FP.meeting:e.fed.meeting, fedDecision=FP?FP.decision:e.fed.decision;
   const fedProbs=FP?FP.probs:e.fed.probs;
+
+  /* 左列：议息定价 + 主席（沃什）讲话 —— 英文原文译为中文，长期滚动 */
+  h+='<div style="display:flex;flex-direction:column;gap:12px;min-width:0">';
   h+='<div class="card" style="padding:15px 17px"><div style="margin-bottom:8px"><div style="font-size:13px;font-weight:650">美联储 · 下次议息</div>'+
      '<div class="tiny muted">'+fedMeeting+'　决议 '+fedDecision+'</div></div>';
   fedProbs.forEach(p=>{
@@ -2783,62 +2793,45 @@ function viewEvents(){
   e.fed.watch.forEach(w=>{ h+='<span class="tag blue">'+w+'</span>'; });
   h+='</div></div>';
 
-  h+='<div class="card" style="padding:15px 17px"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:9px">'+
-     '<div><div style="font-size:13px;font-weight:650">川普最新语录</div><div class="tiny muted">滚动积累（约一个月）· 信源：X / 各大财经媒体 / 金十财经（经东财 7×24 转载过滤）· 日期 + 原话 + 解读 · 红色为本轮新增</div></div>'+
-     '<span class="tag amber" style="margin-left:auto">'+e.trump.rows.length+' 条</span></div>';
-  e.trump.rows.forEach(q=>{
-    h+='<div class="quote'+(q.new?" isnew":"")+'"><div class="q-meta">'+(q.new?'<i class="q-new"></i>':'')+q.d+
-       (q.src?'　<span class="tiny muted">'+q.src+'</span>':'')+
-       (q.new?'　<span style="color:var(--up)">新增</span>':'')+'</div><div class="o">“'+q.o+'”</div>'+
-       (q.zh?'<div class="zh">'+q.zh+'</div>':'')+
-       '<div class="r"><b>解读：</b>'+q.r+'</div></div>';
-  });
-  h+='<div class="tiny muted" style="margin-top:4px">'+e.trump.note+'</div></div>';
-  h+='</div>';
-
-  /* ---- 05 美联储讲话：主席 + 副主席 / 理事（滚动积累，新增标红，重点加粗）---- */
-  const FSp=(FD&&FD.speeches)?FD.speeches:[];
+  /* 主席讲话：只收沃什，英文翻译为中文，长期滚动，新增标红，重点加粗 */
+  const FSp=(FD&&FD.speeches)?FD.speeches.filter(function(x){return x.role==="主席";}):[];
   const fItem=function(x){
     const toneCls = x.tone==="偏鹰" ? "red" : x.tone==="偏鸽" ? "green" : "";
     return '<div class="fed-item'+(x.isNew?" isnew":"")+'">'+
       '<div class="fed-h"><span class="num">'+esc(String(x.date).slice(5))+'</span>'+
-      '<span class="fed-who">'+esc(x.speaker)+'</span><span class="tag dash">'+esc(x.role)+'</span>'+
+      '<span class="fed-who">'+esc(x.speaker||"沃什")+'</span><span class="tag dash">主席</span>'+
       (toneCls?'<span class="tag '+toneCls+'">'+esc(x.tone)+'</span>':'<span class="tag">中性</span>')+
       (x.isNew?'<span style="color:var(--up);font-weight:700">新增</span>':'')+'</div>'+
-      '<div class="fed-t"><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.title)+'</a></div>'+
-      '<div class="fed-s">'+x.snip+'</div>'+
+      '<div class="fed-t"><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.cnTitle||x.title)+'</a></div>'+
+      '<div class="tiny muted" style="margin:-1px 0 4px">'+esc(x.title)+'</div>'+
+      '<div class="fed-s">'+(x.snip||"")+'</div>'+
       '<div class="fed-r"><b>解读：</b>'+x.read+'</div>'+
       '<div class="fed-i"><b>市场影响：</b>'+x.impact+'</div></div>';
   };
-  const chairSp=FSp.filter(function(x){return x.role==="主席";});
-  const nySp=FSp.filter(function(x){return /纽约联储/.test(x.role||"");});
-  const boardSp=FSp.filter(function(x){return x.role!=="主席" && !/纽约联储/.test(x.role||"");});
-  h+='<div class="sec" style="margin-top:18px">'+secHead("05","美联储讲话 · 主席 / 纽约联储 / 副主席 / 理事",
-      "讲话摘要 + 解读 + 市场影响 · 长期滚动积累，最新在前 · 收理事会成员 + 纽约联储主席（永久票委），其余地区联储主席不收录 · 关键句加粗",
-      "<span class='upd hot'>红=本轮新增</span>");
-  if(!FSp.length){
-    h+='<div class="card"><div class="empty">暂无讲话记录——抓取源为联储官网讲话页，下轮（每日 07:00 / 20:30）自动补齐</div></div></div>';
-  } else {
-    h+='<div class="card" style="padding:14px 16px;margin-bottom:12px">'+
-       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">主席 · 沃什（Kevin Warsh）</span>'+
-       '<span class="right tiny muted">共 '+chairSp.length+' 篇 · 最新在前</span></div>'+
-       (chairSp.length ? chairSp.slice(0,3).map(fItem).join("")
-          : '<div class="empty">窗口内无主席讲话（沃什最近一次为 8/28 Jackson Hole《In Our Time》）</div>')+
-       '</div>';
-    h+='<div class="card" style="padding:14px 16px;margin-bottom:12px">'+
-       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">纽约联储主席 · 威廉姆斯（John C. Williams）</span>'+
-       '<span class="right tiny muted">FOMC 永久票委 · 共 '+nySp.length+' 篇 · 最新在前</span></div>'+
-       (nySp.length ? nySp.slice(0,2).map(fItem).join("")
-          : '<div class="empty">窗口内无纽约联储主席讲话记录</div>')+
-       '<div class="tiny muted" style="margin-top:6px;line-height:1.7">纽约联储主席是<b>FOMC 永久票委</b>（与其余 11 位轮值票委不同），其表态对 12 月议息定价的权重仅次于主席；抓取源为纽约联储官网（联储官网讲话页只收理事会成员）。</div>'+
-       '</div>';
-    h+='<div class="card" style="padding:14px 16px">'+
-       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">副主席 / 理事 · 最新讲话</span>'+
-       '<span class="right tiny muted">共 '+boardSp.length+' 篇 · 表内向下滚动</span></div>'+
-       '<div class="fed-list">'+(boardSp.length?boardSp.map(fItem).join(""):'<div class="empty">暂无记录</div>')+'</div>'+
-       '<div class="tiny muted" style="margin-top:6px;line-height:1.7">摘要为<b>关键句抽取</b>、解读为<b>规则生成</b>（鹰鸽关键词计数 + 主题映射），不是人工撰写；原话与全文以联储官网链接为准。理事名单自动同步联储官网，人员变动无需改代码。</div>'+
-       '</div></div>';
-  }
+  h+='<div class="card" style="padding:14px 16px">'+
+     '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">美联储主席 · 沃什讲话</span>'+
+     '<span class="right tiny muted">长期滚动 · 共 '+FSp.length+' 篇 · 英文原文已译中文</span></div>';
+  h+='<div class="fed-list" style="max-height:430px">'+
+     (FSp.length?FSp.map(fItem).join(""):'<div class="empty">暂无主席讲话记录——每轮自动抓取联储官网讲话页</div>')+'</div>';
+  h+='<div class="tiny muted" style="margin-top:6px;line-height:1.7">摘要为<b>关键句抽取后机器翻译</b>、解读为<b>规则生成</b>（鹰鸽计数 + 主题映射），不是人工撰写；原话以官网链接为准。只收主席本人，副主席 / 理事 / 地区联储主席均不收录。</div>'+
+     '</div>';
+  h+='</div>';
+
+  /* 右列：川普语录（长期滚动 + 右侧滚动条） */
+  h+='<div class="card" style="padding:15px 17px"><div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:9px">'+
+     '<div><div style="font-size:13px;font-weight:650">川普最新语录</div><div class="tiny muted">长期滚动积累 · 信源：X / 各大财经媒体 / 金十财经（经东财 7×24 转载过滤）· 日期 + 原话 + 解读 · 红=本轮新增 · <b>加粗为政策关键点</b></div></div>'+
+     '<span class="tag amber" style="margin-left:auto">'+e.trump.rows.length+' 条</span></div>';
+  h+='<div class="quote-scroll">';
+  e.trump.rows.forEach(q=>{
+    h+='<div class="quote'+(q.new?" isnew":"")+'"><div class="q-meta">'+(q.new?'<i class="q-new"></i>':'')+esc(q.d||"")+(q.t?' '+esc(String(q.t).slice(6)):'')+
+       (q.src?'　<span class="tiny muted">'+q.src+'</span>':'')+
+       (q.new?'　<span style="color:var(--up);font-weight:700">新增</span>':'')+'</div><div class="o">“'+q.o+'”</div>'+
+       (q.zh?'<div class="zh">'+q.zh+'</div>':'')+
+       '<div class="r"><b>解读：</b>'+q.r+'</div></div>';
+  });
+  h+='</div>';
+  h+='<div class="tiny muted" style="margin-top:4px">'+e.trump.note+'　·　长期滚动保留（近 400 天，最多 400 条），列表右侧可上下滚动</div></div>';
+  h+='</div>';
 
   /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（每日抓取，最新在前，新增标红）---- */
   const G=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.geo)?window.NEWS_DATA.geo:null;
