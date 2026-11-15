@@ -120,13 +120,25 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 .tbl-wrap{overflow-x:auto;border-radius:var(--radius);-webkit-overflow-scrolling:touch}
 /* 长表：只显示约 10 行，其余右侧滚轴上下拉；表头固定 */
-.tbl-scroll{max-height:660px;overflow-y:auto;overscroll-behavior:contain}
+.tbl-scroll{max-height:800px;overflow-y:scroll;overscroll-behavior:contain;scrollbar-gutter:stable;
+  scrollbar-width:auto;scrollbar-color:#8fa2bd #eef2f8}   /* Firefox：常显滚动条 */
 .tbl-scroll table.tbl thead th{position:sticky;top:0;z-index:3;background:var(--surface-2);box-shadow:inset 0 -1px 0 var(--line)}
-.tbl-scroll::-webkit-scrollbar{width:9px}
-.tbl-scroll::-webkit-scrollbar-track{background:#f4f7fb;border-radius:5px}
-.tbl-scroll::-webkit-scrollbar-thumb{background:#c6d1e2;border-radius:5px}
-.tbl-scroll::-webkit-scrollbar-thumb:hover{background:#aebcd2}
-.scroll-hint{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);margin:0 0 5px;padding-left:2px}
+/* Chromium/Edge：自定义常显滚动条（不依赖悬浮触发），加粗 + 轨道，保证一眼可见 */
+.tbl-scroll::-webkit-scrollbar{width:14px}
+.tbl-scroll::-webkit-scrollbar-track{background:#eef2f8;border-left:1px solid #e0e7f1}
+.tbl-scroll::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
+.tbl-scroll::-webkit-scrollbar-thumb:hover{background:#6c82a3}
+.tbl-scroll.tbl-open{max-height:none;overflow:visible}
+/* 底部渐隐：提示下面还有内容 */
+.tbl-fadewrap{position:relative}
+.tbl-fadewrap.tbl-open:after{display:none}
+.tbl-fadewrap:after{content:"";position:absolute;left:0;right:14px;bottom:0;height:30px;
+  background:linear-gradient(rgba(255,255,255,0),var(--surface));pointer-events:none;z-index:2}
+/* 滚动表里简介压到 3 行，保证约 10 行可见 */
+.tbl-scroll td.zhclamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.scroll-hint{display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--muted);margin:0 0 5px;padding-left:2px}
+.tbl-expand{cursor:pointer;color:var(--accent);font-weight:650;user-select:none}
+.tbl-expand:hover{text-decoration:underline}
 table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 table.tbl th{text-align:left;font-weight:600;font-size:10.5px;letter-spacing:.5px;color:var(--muted);
   text-transform:uppercase;padding:9px 12px;background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap}
@@ -376,7 +388,7 @@ ol.concl li b{color:var(--text);font-weight:650}
   table.tbl{min-width:640px;font-size:12px}
   table.tbl th{padding:6px 8px}
   table.tbl td{padding:7px 8px}
-  .tbl-scroll{max-height:520px}
+  .tbl-scroll{max-height:600px}
   .card{border-radius:10px}
   .filters .fchip{padding:4px 9px}
   .foot{padding:12px 14px 22px}
@@ -1778,8 +1790,8 @@ const TIER_OF = (m) => (m != null && m >= 10e9) ? "大市值" : (m != null && m 
 /* 表格统一口径：按市值从大到小；超过 10 行时表内滚动（右侧滚轴），表头固定 */
 const mcapOf = (r) => (r && (r.mcapRaw != null ? r.mcapRaw : r.mcap)) || 0;
 const byMcapDesc = (rows) => (rows || []).slice().sort((a, b) => mcapOf(b) - mcapOf(a));
-const wrapTbl = (tbl, n) => n > 10 ? '<div class="tbl-scroll">' + tbl + '</div>' : tbl;
-const scrollHint = (n) => n > 10 ? '<div class="scroll-hint">共 <b class="num">' + n + '</b> 条 · 表内滚动（约 10 行），右侧滚轴上下拉</div>' : '';
+const wrapTbl = (tbl, n) => n > 10 ? '<div class="tbl-fadewrap"><div class="tbl-scroll">' + tbl + '</div></div>' : tbl;
+const scrollHint = (n) => n > 10 ? '<div class="scroll-hint">共 <b class="num">' + n + '</b> 条 · 表内只显示约 10 行，右侧滚轴上下拉 · <span class="tbl-expand" onclick="__tblExpand(this)">展开全部 ▾</span></div>' : '';
 const chg = (v,unit) => unit==="bp"
   ? '<span class="chg '+sgn(v)+'">'+(v>0?"+":"")+Math.round(v)+'bp</span>'
   : '<span class="chg '+sgn(v)+'">'+pct(v)+'</span>';
@@ -1890,7 +1902,7 @@ function earnTable(blk, ses){
       '<td><span class="tag">'+esc(r.ind||"—")+'</span></td>'+
       '<td class="read" style="font-size:11px;line-height:1.6">'+cell+'</td>'+
       (isPre?('<td class="num" style="white-space:nowrap">'+cellGap+'</td>'):'')+
-      '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
+      '<td class="read zhclamp" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
   });
   t+='</tbody></table>';
   return h+scrollHint(rows.length)+'<div class="card tbl-wrap">'+wrapTbl(t, rows.length)+'</div>';
@@ -2156,7 +2168,7 @@ function viewBrief(){
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
         '<td class="read">'+reason+'</td>'+
         (isPre?('<td class="num" style="white-space:nowrap">'+gapCell+'</td>'):'')+
-        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
+        '<td class="read zhclamp" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td></tr>';
     });
     t+='</tbody></table>';
     return h+'<div class="card tbl-wrap">'+wrapTbl(t, pass.length)+'</div>';
@@ -2183,7 +2195,7 @@ function viewBrief(){
         '<td class="num"><span class="mv '+sgn(r.mv)+'">'+pct(r.mv,1)+'</span></td>'+
         '<td class="num">'+(r.px!=null?'$'+Number(r.px).toFixed(2):'—')+'</td>'+
         '<td><span class="tag">'+esc(r.ind||r.sec||"—")+'</span></td>'+
-        '<td class="read" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
+        '<td class="read zhclamp" style="font-size:11px;line-height:1.6">'+esc(r.zh||"—")+'</td>'+
         '<td class="read"><span class="tiny muted">当日'+ses+'披露财报，与上面详表同属「财报驱动」；该股未进 ① 详表，业绩明细待补。</span></td></tr>';
     });
     t+='</tbody></table>';
@@ -2357,7 +2369,7 @@ function ebInner(){
       '<td class="read" style="font-size:11px;line-height:1.6">'+surpTxt+(numTxt?('<br>'+numTxt):'')+
         (x.guide&&x.guide.length?(''+x.guide.slice(0,2).map(g=>'<div class="tiny" style="margin-top:3px;color:#4a5a75;line-height:1.55">指引 · '+esc(String(g).slice(0,90))+'</div>').join('')):'<div class="tiny muted" style="margin-top:3px">指引待补（东财快讯未覆盖该公司本场披露）</div>')+'</td>'+
       '<td><span class="tag">'+esc(secZh(x.sec))+'</span></td>'+
-      '<td class="read" style="font-size:11px;line-height:1.6">'+esc(x.desc||"—")+'</td></tr>';
+      '<td class="read zhclamp" style="font-size:11px;line-height:1.6">'+esc(x.desc||"—")+'</td></tr>';
   });
   t+='</tbody></table>';
   h+='<div class="card tbl-wrap">'+wrapTbl(t, n)+'</div>';
@@ -3400,6 +3412,16 @@ function viewRisk(){
 }
 
 /* ---------- router ---------- */
+/* 长表「展开全部 / 收起」：滚动条看不见时也能读完 */
+window.__tblExpand = function(btn){
+  const wrap = btn.closest(".scroll-hint").nextElementSibling;
+  const box = wrap && wrap.querySelector(".tbl-scroll");
+  if(!box) return;
+  const open = box.classList.toggle("tbl-open");
+  if(wrap.classList) wrap.classList.toggle("tbl-open", open);
+  btn.textContent = open ? "收起 ▴" : "展开全部 ▾";
+};
+
 /* 核心结论存档的筛选（不重渲染，只切显示，避免整页重绘） */
 window.__blFilter = function(k, el){
   document.querySelectorAll("[data-blk]").forEach(function(n){ n.style.display = (k==="all" || n.getAttribute("data-blk")===k) ? "" : "none"; });
