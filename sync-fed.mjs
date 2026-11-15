@@ -18,6 +18,7 @@
  * 用法：node sync-fed.mjs [--dry]
  */
 import { readFileSync, writeFileSync } from "node:fs";
+import { inflateSync, inflateRawSync } from "node:zlib";
 
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
 const DRY = process.argv.includes("--dry");
@@ -211,7 +212,7 @@ function dstr(nd, nm, ny) {
 }
 
 /* ================= 4) 讲话 ================= */
-const KEY_RE = /inflation|monetary policy|federal funds rate|policy rate|labor market|employment|unemployment|balance sheet|restrictive|tariff|productivity|rate cut|rate hike|outlook/i;
+const KEY_RE = /inflation|monetary policy|federal funds rate|policy rate|labor market|employment|unemployment|balance sheet|restrictive|tariff|productivity|rate cut|rate hike|outlook|financial conditions|market|equit|yield|price stability/i;
 const HAWK = /restrictive|elevated|upside risk|not yet|higher for longer|persistent|above (our )?2|firming|tighten|remain high|still high|further (rate )?(increase|hike)/gi;
 const DOVE = /cooling|soften|easing|downside risk|patient|well positioned|gradual|cut|accommodat|slack/gi;
 const BOLD = ["inflation", "inflation expectations", "federal funds rate", "policy rate", "restrictive", "labor market", "balance sheet", "tariff", "tariffs", "productivity", "rate cut", "rate hike"];
@@ -275,6 +276,236 @@ function read(text) {
       ? "短端下行、曲线陡峭化，利好久期资产与黄金；成长股弹性大于价值，小盘与高杠杆板块受益"
       : "对定价影响有限，市场更看重随后公布的数据（CPI / 非农）而非表态本身";
   return { tone, read: readTxt, impact };
+}
+
+/* ================= 4b) 议息记者会（PDF 文稿 → 只留主席发言） =================
+   联储每次议息后 1-2 天发布记者会逐字稿 PDF：
+     https://www.federalreserve.gov/mediacenter/files/FOMCpresconfYYYYMMDD.pdf
+   文稿里讲者名全大写 + " . " 分隔（CHAIRMAN WARSH . …），据此切出发言轮次，
+   只保留主席本人的段落（开场声明 + 答问），用来判断他对市场 / 通胀 / 就业 / 利率的口径。 */
+const TOPIC_DEF = [
+  ["市场", /market|financial conditions|equit|stock|bond|yield|financial stability|asset price/i],
+  ["通胀", /inflation|price stability|CPI|PCE|price level|prices/i],
+  ["就业", /employment|unemployment|job|payroll|labor market|workforce|hiring/i],
+  ["利率", /federal funds rate|policy rate|target range|rate (hike|cut)|restrictive|basis point|rate path/i],
+];
+const topicsOf = (t) => TOPIC_DEF.filter(([, re]) => re.test(t)).map(([k]) => k);
+
+async function getBuf(url, tries = 2) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    const c = new AbortController();
+    const to = setTimeout(() => c.abort(), 30000);
+    try {
+      const r = await fetch(url, { headers: { "User-Agent": UA, Accept: "*/*" }, signal: c.signal, redirect: "follow" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return Buffer.from(await r.arrayBuffer());
+    } catch (e) { last = e; } finally { clearTimeout(to); }
+  }
+  throw last;
+}
+function pdfUnescape(s) {
+  return String(s).replace(/\\([nrtbf()\\]|[0-7]{1,3})/g, (m, g) => {
+    if (g === "n") return "\n";
+    if (g === "t") return "\t";
+    if (g === "(") return "(";
+    if (g === ")") return ")";
+    if (g === "\\") return "\\";
+    if (/^[0-7]+$/.test(g)) return String.fromCharCode(parseInt(g, 8));
+    return "";
+  });
+}
+/* 最小 PDF 文本抽取：inflate 每个 stream → 取 Tj / TJ 里的字符串 */
+function pdfText(buf) {
+  const raw = buf.toString("latin1");
+  const chunks = [];
+  const re = /stream\r?\n/g;
+  let m;
+  while ((m = re.exec(raw))) {
+    const start = m.index + m[0].length;
+    const end = raw.indexOf("endstream", start);
+    if (end < 0) continue;
+    const seg = buf.subarray(start, end);
+    let out = null;
+    try { out = inflateSync(seg); } catch { try { out = inflateRawSync(seg); } catch { } }
+    if (out) chunks.push(out.toString("latin1"));
+  }
+  const body = chunks.join("\n");
+  const parts = [];
+  const tj = /\((?:\\.|[^\\()])*\)\s*Tj|\[(?:[^\[\]]|\\.)*\]\s*TJ/g;
+  let t;
+  while ((t = tj.exec(body))) {
+    const s = t[0];
+    if (s.endsWith("TJ")) {
+      const arr = s.slice(0, s.lastIndexOf("]"));
+      parts.push([...arr.matchAll(/\((?:\\.|[^\\()])*\)/g)].map((x) => pdfUnescape(x[0].slice(1, -1))).join(""));
+    } else {
+      const mm = s.match(/\(((?:\\.|[^\\()])*)\)\s*Tj/);
+      if (mm) parts.push(pdfUnescape(mm[1]));
+    }
+  }
+  /* 清理 PDF 拆字：撇号变 \u0092、标点前多空格、单词被拆成 "don ’ t" */
+  return parts.join(" ")
+    .replace(/[\u0092\u2019]/g, "’")
+    .replace(/\s+’\s+/g, "’")
+    .replace(/\s+([.,;:!?%])/g, "$1")
+    /* 分数写法归一化：3 ¾ → 3.75、¼ percentage point → 0.25 percentage point
+       （不归一化的话机翻会把 3¾ 译成 "3.5%"、把 ¼ 译成 "0.4 个百分点"） */
+    .replace(/(\d+(?:\.\d+)?)\s*([¼½¾])/g, (m, a, f) => (+a + FRAC[f]).toFixed(2))
+    .replace(/([¼½¾])\s*(percentage point|basis points?|of a percentage point)/gi, (m, f, unit) => FRAC[f].toFixed(2) + " " + unit)
+    .replace(/\s+/g, " ")
+    .trim();
+}
+/* 按「全大写讲者名 + 空格句点」切轮次 */
+function turns(text) {
+  const re = /([A-Z][A-Z.'\- ]{2,40}?)\s\.\s/g;
+  const marks = [];
+  let m;
+  while ((m = re.exec(text))) marks.push({ i: m.index, len: m[0].length, name: m[1].trim() });
+  const out = [];
+  for (let k = 0; k < marks.length; k++) {
+    const s = marks[k].i + marks[k].len;
+    const e = k + 1 < marks.length ? marks[k + 1].i : text.length;
+    out.push({ name: marks[k].name, text: text.slice(s, e).trim() });
+  }
+  return out;
+}
+const FRAC = { "¼": 0.25, "½": 0.5, "¾": 0.75 };
+function numOf(s) {
+  const m = String(s).trim().match(/^(\d+(?:\.\d+)?)\s*([¼½¾])?$/);
+  if (!m) return null;
+  return +m[1] + (m[2] ? FRAC[m[2]] : 0);
+}
+/* 从开场声明解析本次决议：动作 / 幅度 / 新目标区间
+   注意：区间写法带分数（3¾ to 4），幅度只认「by a ¼ percentage point」这类短语，
+   不能拿全文里的 ¾ 判幅度（9 月那次会被误判成 75bp） */
+function parseDecision(text) {
+  /* 按句定位：区间里的小数点（3.75）会被 [^.] 截断，所以先切句再在句内解析 */
+  const sents = String(text).split(/(?<=[.!?])\s+/);
+  const seg = sents.find((x) => /target (?:range|rate)/i.test(x) && /(raise|lower|maintain|leave|hold)/i.test(x)) || "";
+  if (!seg) return null;
+  const w = (seg.match(/(raise|lower|maintain|leave|hold)/i) || [])[1].toLowerCase();
+  const act = w === "raise" ? "加息" : w === "lower" ? "降息" : "维持不变";
+  let bp = 0;
+  const bm = seg.match(/by\s+(?:a\s+|an\s+)?(¼|½|¾|\d+(?:\.\d+)?)\s*(?:percentage point|basis points?)/i);
+  if (bm) {
+    const v = bm[1];
+    if (v === "¼") bp = 25; else if (v === "½") bp = 50; else if (v === "¾") bp = 75;
+    else { const n = +v; bp = n < 1 ? Math.round(n * 100) : Math.round(n); }
+  }
+  const r = seg.match(/(\d+(?:\.\d+)?[¼½¾]?|[¼½¾])\s*(?:to|–|—|-)\s*(\d+(?:\.\d+)?[¼½¾]?|[¼½¾])\s*percent/i);
+  let range = "";
+  if (r) {
+    const a = numOf(r[1]), b = numOf(r[2]);
+    if (a != null && b != null) range = a.toFixed(2) + "–" + b.toFixed(2) + "%";
+  }
+  return { act, bp, range, label: act + (bp && act !== "维持不变" ? " " + bp + "bp" : "") + (range ? " → " + range : "") };
+}
+
+async function loadPressers(prevLog, limit = 3) {
+  const out = [];
+  let dates = [];
+  try {
+    const r = await get("https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", 2);
+    dates = [...new Set([...r.text.matchAll(/\/monetarypolicy\/fomcpresconf(\d{8})\.htm/g)].map((m) => m[1]))];
+  } catch (e) { console.log("记者会日历抓取失败：" + e.message); }
+  const today = new Date().toISOString().slice(0, 10);
+  dates = dates
+    .map((d) => d.slice(0, 4) + "-" + d.slice(4, 6) + "-" + d.slice(6, 8))
+    .filter((d) => /^20\d\d-\d\d-\d\d$/.test(d) && d <= today)
+    .sort().reverse();
+  console.log("议息记者会：可用文稿 " + dates.length + " 场（最近 " + (dates[0] || "—") + "）");
+  for (const date of dates.slice(0, limit)) {
+    const ym = date.replace(/-/g, "");
+    const url = "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf" + ym + ".pdf";
+    const old = (prevLog || []).find((p) => p.url === url);
+    if (old) { out.push({ ...old, isNew: false }); continue; }
+    try {
+      const raw = pdfText(await getBuf(url, 2));
+      const all = turns(raw);
+      const chair = all.filter((t) => /^CHAIRMAN\s+WARSH/i.test(t.name)).map((t) => t.text).join(" ").trim();
+      const body = chair || raw;                 /* 没有标记时退回全文（罕见） */
+      if (body.length < 400) { console.log("  跳过（文稿过短）：" + date); continue; }
+      const dec = parseDecision(body);
+      const snips = pickPresserSentences(body);
+      const snip = snips.length ? snips.join(" ／ ") : pickSentences(body);
+      if (!snip) { console.log("  跳过（无可抽取句）：" + date); continue; }
+      const R = read(body);
+      let cnSnip = "";
+      for (const one of (snips.length ? snips : [snip])) {
+        const zh = await tr(one);
+        if (zh) cnSnip += (cnSnip ? "；" : "") + zh.replace(/[。；;]\s*$/, "");
+      }
+      const cnTitle = await tr("Chairman Warsh's press conference, " + date) || ("议息会议记者会 " + date);
+      await sleep(300);
+      out.push({
+        date, url, kind: "presser",
+        title: "Chairman Warsh's Press Conference (" + date + ")",
+        cnTitle: (date.slice(5, 7).replace(/^0/, "") + " 月议息会议记者会") + (dec ? " · " + dec.label : ""),
+        speaker: "沃什", en: "Kevin Warsh", role: "主席",
+        venue: dec ? dec.label : "",
+        decision: dec, topics: topicsOf(body),
+        snip: cnSnip ? boldZh(cnSnip) : boldify(snip), snipEn: snip,
+        tone: R.tone, read: R.read, impact: R.impact, isNew: true,
+      });
+      console.log("  记者会 " + date + "：" + (dec ? dec.label : "决议未解析") + " · 主席发言 " + body.length + " 字符 · 主题 " + topicsOf(body).join("/"));
+    } catch (e) { console.log("  记者会抓取失败 " + date + "：" + e.message); }
+    await sleep(600);
+  }
+  return out;
+}
+
+/* 记者会取句：开场声明与政策声明重复，价值在答问里的前瞻表述，
+   故跳过开头、排除记者提问（问号结尾）、按「主题命中 + 前瞻用词」打分；
+   只取 2 句、每句在逗号处截断（口语长句机翻会糊成一团），并清掉 you know / I mean 之类填充词 */
+function pickPresserSentences(body) {
+  const sents = body.split(/(?<=[.!?])\s+(?=[A-Z“"(])/).map((s) => s.trim()).filter((s) => s.length > 80 && s.length < 430);
+  const scored = sents.map((s, i) => {
+    if (i < 4) return { s, i, sc: -99 };
+    let sc = (s.match(KEY_RE) || []).length * 3;
+    sc += TOPIC_DEF.filter(([, re]) => re.test(s)).length * 2;
+    if (/I (expect|anticipate|believe|think|would|will)|going forward|in the (coming|months ahead)|over the (next|coming)|outlook|trajectory|path/i.test(s)) sc += 3;
+    if (/\?\s*$/.test(s)) sc -= 6;
+    if (/^(Q|QUESTION)/.test(s)) sc -= 4;
+    return { s, i, sc };
+  }).sort((a, b) => b.sc - a.sc).slice(0, 2).sort((a, b) => a.i - b.i);
+  return scored.map((x) => {
+    let t = x.s.replace(/\b(you know|I mean|um|uh|well,|so,)\b/gi, "").replace(/\s+/g, " ").replace(/^[,;\s]+/, "").trim();
+    if (t.length > 210) {
+      const cut = t.slice(0, 210);
+      const k = Math.max(cut.lastIndexOf(", "), cut.lastIndexOf("; "));
+      t = (k > 90 ? cut.slice(0, k) : cut) + "…";
+    }
+    return t;
+  });
+}
+
+/* 综合预判：近 200 天主席表态的鹰鸽分布 + 最近一次记者会决议 + 期货自算概率是否同向 */
+function predictOf(list, probs) {
+  const cut = new Date(Date.now() - 200 * 864e5).toISOString().slice(0, 10);
+  const recent = list.filter((x) => x.date >= cut);
+  const h = recent.filter((x) => x.tone === "偏鹰").length;
+  const d = recent.filter((x) => x.tone === "偏鸽").length;
+  const n = recent.filter((x) => x.tone === "中性").length;
+  const topicHit = {};
+  recent.forEach((x) => (x.topics || []).forEach((k) => (topicHit[k] = (topicHit[k] || 0) + 1)));
+  const dir = h > d ? "继续收紧" : d > h ? "转向宽松" : "维持观望";
+  const lastP = recent.find((x) => x.kind === "presser" && x.decision);
+  let agree = null;
+  if (probs && probs.probs && probs.probs.length) {
+    const top = probs.probs[0];
+    const mkt = /加息/.test(top.label) ? "继续收紧" : /降息/.test(top.label) ? "转向宽松" : "维持观望";
+    agree = mkt === dir;
+    const dec = lastP && lastP.decision ? "最近一次记者会（" + lastP.date + "）已" + lastP.decision.label + "，" : "";
+    return {
+      tone: dir, hawk: h, dove: d, neutral: n, total: recent.length, topics: topicHit, agree,
+      text: dec + "近 200 天主席表态 偏鹰 " + h + " / 中性 " + n + " / 偏鸽 " + d +
+        " → 方向指向<b>" + dir + "</b>；期货自算 " + probs.meeting + "最可能为<b>" + top.label + " " + top.p + "%</b>，" +
+        (agree ? "<b>与表态同向</b>（口径一致，可作为基准情形）" : "<b>与表态不同向</b>（市场定价走得更远或更近，注意会后修正风险）") + "。",
+    };
+  }
+  return { tone: dir, hawk: h, dove: d, neutral: n, total: recent.length, topics: topicHit, agree: null,
+    text: "近 200 天主席表态 偏鹰 " + h + " / 中性 " + n + " / 偏鸽 " + d + " → 方向指向<b>" + dir + "</b>（期货概率未取到，暂无法交叉验证）。" };
 }
 
 /* 纽约联储主席（FOMC 永久票委）：讲话不在联储官网，需从 newyorkfed.org 单独抓 */
@@ -440,12 +671,19 @@ let log = [];
 try { log = JSON.parse(readFileSync("fed-log.json", "utf8")); } catch { }
 if (!Array.isArray(log)) log = [];
 const speeches = await enrich(speechesRaw, log);
+/* 议息记者会（含 9 月会议）——主席开场声明 + 答问，按「市场 / 通胀 / 就业 / 利率」四大主题抽取 */
+const pressers = await loadPressers(log, 3);
+const merged = speeches.concat(pressers)
+  .filter((x, i, a) => a.findIndex((y) => y.url === x.url) === i);
 /* 长期滚动积累：主席讲话本来就少，保留 400 天 / 最多 60 条 */
 const cut = new Date(Date.now() - 400 * 864e5).toISOString().slice(0, 10);
-log = speeches.filter((x) => x.date >= cut)
+log = merged.filter((x) => x.date >= cut)
   .sort((a, b) => b.date.localeCompare(a.date))
   .slice(0, 60);
-console.log("讲话留档 " + log.length + " 条，本轮新增 " + log.filter((x) => x.isNew).length + " 条");
+const predict = predictOf(log, probs);
+console.log("讲话留档 " + log.length + " 条（含记者会 " + log.filter((x) => x.kind === "presser").length +
+  " 场），本轮新增 " + log.filter((x) => x.isNew).length + " 条");
+console.log("预判：" + predict.text.replace(/<[^>]+>/g, ""));
 
 if (!DRY) {
   writeFileSync("fed-log.json", JSON.stringify(log, null, 1), "utf8");
@@ -454,9 +692,10 @@ if (!DRY) {
       syncedAt: new Date().toISOString(),
       board: BOARD.map((b) => ({ zh: b.zh, en: b.name, title: ZH_TITLE[b.title] || b.title })),
       probsSrc: probs ? probs.src : "",
-      note: "讲话摘要与解读为规则生成（关键句抽取 + 鹰鸽计数），非人工判断；原话以联储官网为准",
+      note: "讲话摘要与解读为规则生成（关键句抽取 + 鹰鸽计数），非人工判断；原话以联储官网为准。含议息会议记者会（只取主席发言）。",
     },
     probs,
+    predict,
     speeches: log,
   }, null, 1) + ";\n", "utf8");
   console.log("已写入 fed-news.js / fed-log.json");
