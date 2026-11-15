@@ -2721,7 +2721,14 @@ function viewEvents(){
   /* 川普语录：自动抓取条目（东财 7×24 转载过滤）排在最前，新增标红 */
   const NDt=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.trump)?window.NEWS_DATA.trump:null;
   if(NDt&&NDt.items&&NDt.items.length){
-    const dyn=NDt.items.map(x=>({d:x.d||x.t,t:x.t,new:!!x.isNew,o:x.o,zh:"",r:x.r,src:x.src}));
+    /* 标红口径：本轮新增 or 近两日内（长期滚动后 isNew 会失效，用日期兜底，保证最新几条始终是红的） */
+    const TDb=new Date(Date.now()+8*3600e3).toISOString().slice(0,10);
+    const YDb=new Date(Date.now()+8*3600e3-86400000).toISOString().slice(0,10);
+    const seen=new Set(e.trump.rows.map(x=>String(x.o||"").slice(0,26)));
+    const dyn=NDt.items.filter(x=>!seen.has(String(x.o||"").slice(0,26))).map(x=>{
+      const d=String(x.d||TDb).slice(0,10);
+      return {d:d,t:x.t,new:!!x.isNew||d===TDb||d===YDb,o:x.o,zh:"",r:x.r,src:x.src};
+    });
     e.trump.rows=dyn.concat(e.trump.rows);
   }
   let h=feedBar();

@@ -202,7 +202,25 @@ const pad4 = (n) => String(n).padStart(2, "0");
 const thisYear = new Date(Date.now() + 8 * 3600e3).getUTCFullYear();
 for (const x of trumpLog) if (!x.d) x.d = thisYear + "-" + String(x.t || "").slice(0, 5);
 const seenT = new Set(trumpLog.map((x) => (x.d || "") + " " + String(x.t || "").slice(6)));
-const trumpHits = corpus.filter((x) => TRUMP_RE.test((x.title || "") + (x.summary || "")));
+/* 主体判定：必须是「特朗普本人在说/在做」，剔除只是顺带提到特朗普的新闻
+   （如「特朗普政府被起诉」「特朗普长子的公司」「泽连斯基称…哄特朗普开心」）
+   —— 句首 30 字内出现，且不带 政府/长子/家族/媒体/的 等限定；
+   或出现在句中但紧跟「表示/称/宣布/据悉/考虑…」等动作动词 */
+const TRUMP_NOISE = /^(政府|长子|家族|集团|媒体|公司|酒店|的|竞选团队)/;
+const TRUMP_VERB = /^(表示|称|说|宣布|发文|发帖|写道|透露|签署|威胁|警告|回应|批评|要求|下令|据悉|考虑|计划|打算|证实|否认|强调|指出|承诺|重申)/;
+function isTrumpSubject(txt) {
+  const m = String(txt).search(TRUMP_RE);
+  if (m < 0) return false;
+  const after = String(txt).slice(m).replace(TRUMP_RE, "");
+  if (TRUMP_NOISE.test(after)) return false;
+  if (m <= 30) return true;
+  return TRUMP_VERB.test(after);
+}
+const trumpHits = corpus.filter((x) => isTrumpSubject((x.title || "") + (x.summary || "")));
+/* 旧日志同样按新口径清洗（此前「特朗普政府 / 长子」类新闻占了三成） */
+const trumpLogBefore = trumpLog.length;
+trumpLog = trumpLog.filter((x) => isTrumpSubject(x.o || ""));
+if (trumpLogBefore !== trumpLog.length) console.log("川普语录：按主体判定清洗 " + (trumpLogBefore - trumpLog.length) + " 条（" + trumpLogBefore + " → " + trumpLog.length + "）");
 /* 政策关键点加粗（正文是中文转载文本，按关键词标黑体） */
 const POL = ["关税", "芯片", "半导体", "美联储", "联储", "降息", "加息", "中国", "人工智能", "AI", "石油", "原油", "俄乌", "乌克兰", "普京", "移民", "税收", "法案", "伊朗", "制裁", "出口管制", "军事打击"];
 function boldPol(txt) {
