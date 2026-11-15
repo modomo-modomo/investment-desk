@@ -243,6 +243,40 @@ ol.concl li b{color:var(--text);font-weight:650}
 .cal-dow{font-size:9.5px;color:#a0aaba;letter-spacing:.8px}
 .cal-date{font-size:14px;font-weight:650;margin:1px 0 5px;font-variant-numeric:tabular-nums}
 .cal-day.today .cal-date{color:var(--accent-2)}
+/* 事件日历：本周 + 下周，横向滚动（滚轴常显） */
+.cal-wrap{padding:10px 0 2px}
+.cal-strip{display:flex;align-items:stretch;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;
+  scrollbar-gutter:stable;padding:2px 10px 10px}
+.cal-strip::-webkit-scrollbar{height:14px}
+.cal-strip::-webkit-scrollbar-track{background:#eef2f8;border-top:1px solid #e0e7f1}
+.cal-strip::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
+.cal-strip::-webkit-scrollbar-thumb:hover{background:#6c82a3}
+.cal-grp{flex:0 0 auto;display:flex;flex-direction:column;padding-right:6px}
+.cal-glabel{font-size:10px;font-weight:700;color:#41526b;background:#eef2f8;border-radius:5px;
+  padding:3px 8px;margin:0 8px 6px;letter-spacing:.3px;white-space:nowrap;align-self:flex-start}
+.cal-grp.next .cal-glabel{background:#fdeeee;color:#b3261e}
+.cal-gdays{display:flex}
+.cal-strip .cal-day{flex:0 0 208px;width:208px;scroll-snap-align:start;border-bottom:none}
+.cal-strip .cal-day:last-child{border-right:none}
+.cal-today-flag{font-size:8.5px;color:#fff;background:var(--accent-2);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:2px}
+.cal-hint{display:flex;align-items:center;gap:8px;font-size:10.5px;color:var(--muted);padding:2px 14px 10px}
+/* 美联储讲话 */
+.fed-list{max-height:520px;overflow-y:scroll;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:8px}
+.fed-list::-webkit-scrollbar{width:14px}
+.fed-list::-webkit-scrollbar-track{background:#eef2f8;border-left:1px solid #e0e7f1}
+.fed-list::-webkit-scrollbar-thumb{background:#8fa2bd;border-radius:7px;border:3px solid #eef2f8}
+.fed-list::-webkit-scrollbar-thumb:hover{background:#6c82a3}
+.fed-item{border-left:2px solid #d8dee9;padding:9px 12px;background:var(--surface-2);border-radius:0 8px 8px 0;margin-bottom:9px}
+.fed-item.isnew{border-left-color:var(--up);background:#fff8f8}
+.fed-h{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:10.5px;color:var(--muted);margin-bottom:4px}
+.fed-who{font-weight:700;color:var(--text);font-size:11.5px}
+.fed-t{font-size:12.5px;font-weight:650;line-height:1.5;margin-bottom:4px}
+.fed-t a{color:inherit;text-decoration:none}
+.fed-t a:hover{text-decoration:underline}
+.fed-s{font-size:11.5px;color:var(--text-2);line-height:1.68}
+.fed-s b,.fed-r b,.fed-i b{color:var(--ink,#111);font-weight:700}
+.fed-r,.fed-i{font-size:11px;line-height:1.65;margin-top:5px;padding-top:5px;border-top:1px dashed #e7ebf2;color:var(--text-2)}
+.fed-r>b,.fed-i>b{color:var(--accent-2)}
 .cal-ev{font-size:10.5px;line-height:1.45;padding:4px 0;border-top:1px dashed #f0f3f8;display:flex;gap:5px}
 .cal-ev:first-of-type{border-top:none}
 .cal-ev .t{color:#a0aaba;font-variant-numeric:tabular-nums;flex:0 0 auto;font-size:9.5px;padding-top:1px}
@@ -517,6 +551,7 @@ tr.isnew td{background:#fffafa}
 <script src="live-extra.js"></script>
 <script src="live-news.js"></script>
 <script src="track-news.js"></script>
+<script src="fed-news.js"></script>
 <script>
 /* ==========================================================================
    行情数据适配层
@@ -859,6 +894,29 @@ const DATA = {
         {t:"23:00", ev:"密歇根大学消费者信心初值 / 通胀预期", imp:"m"}]},
       {dow:"周六", date:"11-14", items:[{t:"—", ev:"APEC 工商领导人峰会筹备会议", imp:"l"}]},
       {dow:"周日", date:"11-15", items:[{t:"—", ev:"G20 财长与央行行长会议（视频）", imp:"l"}]}
+    ],
+    nextLabel:"下周 11/16 - 11/22 · 预排（以官方日历为准）",
+    nextDays:[
+      {dow:"周一", date:"11-16", items:[
+        {t:"09:30", ev:"中国 10 月社零 / 规模以上工业增加值 / 固定资产投资", imp:"m"},
+        {t:"21:30", ev:"美国 11 月纽约联储制造业指数", imp:"l"}]},
+      {dow:"周二", date:"11-17", items:[
+        {t:"21:30", ev:"美国 10 月进口物价指数", imp:"l"},
+        {t:"22:15", ev:"美国 10 月工业产出", imp:"m"},
+        {t:"盘前", ev:"家得宝 HD 财报（美国消费与地产链风向标）", imp:"m"}]},
+      {dow:"周三", date:"11-18", items:[
+        {t:"盘前", ev:"沃尔玛 WMT 财报 — 低收入消费的体温计", imp:"h"},
+        {t:"21:30", ev:"美国 10 月新屋开工 / 营建许可", imp:"m"},
+        {t:"23:30", ev:"EIA 原油库存", imp:"l"}]},
+      {dow:"周四", date:"11-19", items:[
+        {t:"21:30", ev:"美国初请失业金人数", imp:"m"},
+        {t:"23:00", ev:"费城联储制造业指数", imp:"l"},
+        {t:"盘后", ev:"<b>NVIDIA 财报（Q3 FY2027）</b> — 本季最重要单一事件，看 Rubin 出货与数据中心毛利率", imp:"h"}]},
+      {dow:"周五", date:"11-20", items:[
+        {t:"21:30", ev:"美国 10 月零售销售（延后发布）", imp:"h"},
+        {t:"23:00", ev:"成屋销售 / 密歇根消费者信心终值（含通胀预期）", imp:"m"}]},
+      {dow:"周六", date:"11-21", items:[{t:"—", ev:"无重大安排", imp:"l"}]},
+      {dow:"周日", date:"11-22", items:[{t:"—", ev:"无重大安排", imp:"l"}]}
     ]},
     month:[
       {d:"11-18", ev:"沃尔玛 WMT 财报（消费风向标）", tag:"个股", imp:"m"},
@@ -881,8 +939,8 @@ const DATA = {
       {d:"03 月中旬", ev:"FOMC + 季度点阵图（全年最关键一次，日期待确认）", tag:"联储", imp:"h"}
     ],
     fed:{ meeting:"2026 年 12 月 8-9 日", decision:"12 月 10 日 03:00（北京时间）",
-      probs:[{label:"加息 25bp", p:84, color:"#d2373a"},{label:"维持不变", p:16, color:"#7a8798"}],
-      monthAgo:"CPI 公布前：市场已普遍定价 12 月重启加息；11/10 晚数据落地后概率升至 84%，其中约 15% 定价直接加息 50bp",
+      probs:[{label:"加息 25bp", p:92, color:"#d2373a"},{label:"加息 50bp", p:8, color:"#d2373a"}],
+      monthAgo:"联邦基金期货隐含 12 月加息约 27bp：25bp 约 92%、50bp 约 8%，维持不变已完全不在定价内（页面上限为 FED_DATA 抓取失败时的兜底值）",
       reasons:[
         "10 月 CPI 环比 0.4%、核心 0.3%，双双高于预期；核心环比已连续三个月维持 0.3%，粘性未被打破。",
         "本期无官方同比（去年 10 月政府停摆致数据缺失），美银插值估算同比约 3.8%、核心约 2.7%，仍远高于 2% 目标。",
@@ -2660,20 +2718,24 @@ function viewEvents(){
     e.trump.rows=dyn.concat(e.trump.rows);
   }
   let h=feedBar();
-  h+='<div class="sec">'+secHead("01","当周事件日历",e.week.label+" · 精确到时间与影响等级",
-      "<span class='upd'>红=高 黄=中 灰=低</span>");
-  h+='<div class="card" style="overflow:hidden"><div class="cal">';
-  e.week.days.forEach(d=>{
-    const isToday=d.date===e.week.today;
+  const TD=(function(){var d=new Date(Date.now()+8*3600e3);return String(d.getUTCMonth()+1).padStart(2,"0")+"-"+String(d.getUTCDate()).padStart(2,"0");})();
+  const dayCell=function(d){
+    const isToday=d.date===TD;
     const wk=(d.dow==="周六"||d.dow==="周日");
-    h+='<div class="cal-day'+(isToday?" today":"")+(wk?" weekend":"")+'">'+
-       '<div class="cal-dow">'+d.dow+'</div><div class="cal-date">'+d.date.split("-")[1]+'</div>';
-    d.items.forEach(it=>{
-      h+='<div class="cal-ev">'+impDot(it.imp)+'<span class="t">'+it.t+'</span><span class="x">'+it.ev+'</span></div>';
-    });
-    h+='</div>';
-  });
-  h+='</div></div></div>';
+    return '<div class="cal-day'+(isToday?" today":"")+(wk?" weekend":"")+'">'+
+      '<div class="cal-dow">'+d.dow+'</div><div class="cal-date">'+d.date.split("-")[1]+(isToday?'<span class="cal-today-flag">今天</span>':'')+'</div>'+
+      d.items.map(function(it){
+        return '<div class="cal-ev">'+impDot(it.imp)+'<span class="t">'+it.t+'</span><span class="x">'+it.ev+'</span></div>';
+      }).join("")+'</div>';
+  };
+  h+='<div class="sec">'+secHead("01","事件日历 · 本周 + 下周",e.week.label+"　|　"+e.week.nextLabel+" · 精确到时间与影响等级",
+      "<span class='upd'>红=高 黄=中 灰=低</span>");
+  h+='<div class="card" style="padding:8px 0 0"><div class="cal-wrap"><div class="cal-strip">'+
+     '<div class="cal-grp"><div class="cal-glabel">本周 · '+e.week.label.replace(/^本周\s*/,"")+'</div><div class="cal-gdays">'+
+     e.week.days.map(dayCell).join("")+'</div></div>'+
+     '<div class="cal-grp next"><div class="cal-glabel">下周 · '+(e.week.nextLabel||"").replace(/^下周\s*/,"").replace(/·.*$/,"")+'</div><div class="cal-gdays">'+
+     (e.week.nextDays||[]).map(dayCell).join("")+'</div></div>'+
+     '</div></div><div class="cal-hint">← 下方滚轴左右拖动，或按住 Shift+滚轮，可查看下周全部 7 天 →　本周为已核对日历，下周为预排（随官方确认滚动修订）</div></div></div>';
 
   h+='<div class="grid g2">';
   [["02","当月重要事件",e.month],["03","未来三个月",e.quarter]].forEach(g=>{
@@ -2690,14 +2752,31 @@ function viewEvents(){
 
   h+='<div class="sec">'+secHead("04","重点跟踪","美联储 · 川普语录 · APEC · 美伊 · 俄乌");
   h+='<div class="grid g2">';
+  const FD=(typeof window!=="undefined"&&window.FED_DATA)?window.FED_DATA:null;
+  const FP=(FD&&FD.probs&&FD.probs.probs&&FD.probs.probs.length)?FD.probs:null;
+  const fedMeeting=FP?FP.meeting:e.fed.meeting, fedDecision=FP?FP.decision:e.fed.decision;
+  const fedProbs=FP?FP.probs:e.fed.probs;
   h+='<div class="card" style="padding:15px 17px"><div style="margin-bottom:8px"><div style="font-size:13px;font-weight:650">美联储 · 下次议息</div>'+
-     '<div class="tiny muted">'+e.fed.meeting+'　决议 '+e.fed.decision+'</div></div>';
-  e.fed.probs.forEach(p=>{
-    h+='<div style="display:grid;grid-template-columns:78px 1fr 44px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:8px">'+
+     '<div class="tiny muted">'+fedMeeting+'　决议 '+fedDecision+'</div></div>';
+  fedProbs.forEach(p=>{
+    h+='<div style="display:grid;grid-template-columns:86px 1fr 52px;align-items:center;gap:9px;font-size:11.5px;margin-bottom:8px">'+
        '<span>'+p.label+'</span><div class="gauge" style="margin:0"><span style="width:'+p.p+'%;background:'+p.color+'"></span></div>'+
        '<span class="num" style="text-align:right;font-weight:650">'+p.p+'%</span></div>';
   });
-  h+='<div class="tiny muted">'+e.fed.monthAgo+'</div>';
+  if(FP){
+    h+='<div class="tiny" style="color:var(--text-2);line-height:1.7;margin-top:2px">隐含会后利率 <b class="num">'+
+       FP.impliedAfter.toFixed(3)+'%</b>（EFFR '+FP.effr+'% 目标区间 '+FP.target+'）· 隐含变动 <b class="num">'+
+       (FP.impliedMoveBp>0?"+":"")+FP.impliedMoveBp+'bp</b>　→　把总变动按 25bp 一档拆成相邻两种结果</div>';
+    if(FP.path&&FP.path.length){
+      h+='<div class="kpi-row" style="margin-top:6px">'+FP.path.map(function(x){
+        return '<span class="tag">'+x.d.slice(5)+' 会后 <b class="num">'+x.implied.toFixed(2)+'%</b></span>';
+      }).join("")+'</div>';
+    }
+    h+='<div class="tiny muted" style="margin-top:7px;line-height:1.7">口径：'+esc(FP.src)+'　·　期货价 '+FP.futAt+
+       '　·　<b>不再引用 CME 官网数字（已封禁脚本抓取）</b>，改为同法自算，每次更新随行情变化</div>';
+  } else {
+    h+='<div class="tiny muted">'+e.fed.monthAgo+'</div>';
+  }
   h+='<div style="border-top:1px solid var(--line);margin-top:9px;padding-top:8px"><div class="tiny muted" style="margin-bottom:5px">概率变动原因</div>';
   e.fed.reasons.forEach(r=>{ h+='<div style="position:relative;padding-left:10px;font-size:11px;color:var(--text-2);line-height:1.6;margin-bottom:4px">· '+r+'</div>'; });
   h+='</div><div class="kpi-row" style="margin-top:6px">';
@@ -2716,6 +2795,42 @@ function viewEvents(){
   });
   h+='<div class="tiny muted" style="margin-top:4px">'+e.trump.note+'</div></div>';
   h+='</div>';
+
+  /* ---- 05 美联储讲话：主席 + 副主席 / 理事（滚动积累，新增标红，重点加粗）---- */
+  const FSp=(FD&&FD.speeches)?FD.speeches:[];
+  const fItem=function(x){
+    const toneCls = x.tone==="偏鹰" ? "red" : x.tone==="偏鸽" ? "green" : "";
+    return '<div class="fed-item'+(x.isNew?" isnew":"")+'">'+
+      '<div class="fed-h"><span class="num">'+esc(String(x.date).slice(5))+'</span>'+
+      '<span class="fed-who">'+esc(x.speaker)+'</span><span class="tag dash">'+esc(x.role)+'</span>'+
+      (toneCls?'<span class="tag '+toneCls+'">'+esc(x.tone)+'</span>':'<span class="tag">中性</span>')+
+      (x.isNew?'<span style="color:var(--up);font-weight:700">新增</span>':'')+'</div>'+
+      '<div class="fed-t"><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.title)+'</a></div>'+
+      '<div class="fed-s">'+x.snip+'</div>'+
+      '<div class="fed-r"><b>解读：</b>'+x.read+'</div>'+
+      '<div class="fed-i"><b>市场影响：</b>'+x.impact+'</div></div>';
+  };
+  const chairSp=FSp.filter(function(x){return x.role==="主席";});
+  const boardSp=FSp.filter(function(x){return x.role!=="主席";});
+  h+='<div class="sec" style="margin-top:18px">'+secHead("05","美联储讲话 · 主席 / 副主席 / 理事",
+      "讲话摘要 + 解读 + 市场影响 · 长期滚动积累，最新在前 · 只收理事会成员（地区联储主席不收录）· 关键句加粗",
+      "<span class='upd hot'>红=本轮新增</span>");
+  if(!FSp.length){
+    h+='<div class="card"><div class="empty">暂无讲话记录——抓取源为联储官网讲话页，下轮（每日 07:00 / 20:30）自动补齐</div></div></div>';
+  } else {
+    h+='<div class="card" style="padding:14px 16px;margin-bottom:12px">'+
+       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">主席 · 沃什（Kevin Warsh）</span>'+
+       '<span class="right tiny muted">共 '+chairSp.length+' 篇 · 最新在前</span></div>'+
+       (chairSp.length ? chairSp.slice(0,3).map(fItem).join("")
+          : '<div class="empty">窗口内无主席讲话（沃什最近一次为 8/28 Jackson Hole《In Our Time》）</div>')+
+       '</div>';
+    h+='<div class="card" style="padding:14px 16px">'+
+       '<div class="sec-head" style="margin:0 0 9px"><span class="sec-title" style="font-size:12px">副主席 / 理事 · 最新讲话</span>'+
+       '<span class="right tiny muted">共 '+boardSp.length+' 篇 · 表内向下滚动</span></div>'+
+       '<div class="fed-list">'+(boardSp.length?boardSp.map(fItem).join(""):'<div class="empty">暂无记录</div>')+'</div>'+
+       '<div class="tiny muted" style="margin-top:6px;line-height:1.7">摘要为<b>关键句抽取</b>、解读为<b>规则生成</b>（鹰鸽关键词计数 + 主题映射），不是人工撰写；原话与全文以联储官网链接为准。理事名单自动同步联储官网，人员变动无需改代码。</div>'+
+       '</div></div>';
+  }
 
   /* ---- 地缘滚动跟踪：APEC / 美伊谈判 / 俄乌局势（每日抓取，最新在前，新增标红）---- */
   const G=(typeof window!=="undefined"&&window.NEWS_DATA&&window.NEWS_DATA.geo)?window.NEWS_DATA.geo:null;

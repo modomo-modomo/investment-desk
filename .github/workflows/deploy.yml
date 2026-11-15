@@ -12,6 +12,7 @@ on:
       - "live-extra.js"
       - "live-news.js"
       - "track-news.js"
+      - "fed-news.js"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -38,7 +39,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          for f in live-data.js live-extra.js live-news.js track-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
             [ -f "$f" ] && cp "$f" _site/
           done
           echo "--- 产物 ---"
@@ -48,11 +49,11 @@ jobs:
       - name: 给数据文件加版本号（绕开 Pages CDN 的 10 分钟缓存）
         run: |
           V=$(date +%s)
-          for f in live-data.js live-extra.js live-news.js track-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
             sed -i "s|$f\"|$f?v=$V\"|g" _site/index.html
           done
           echo "--- 版本号已写入 ---"
-          grep -o 'live-[a-z]*\.js?v=[0-9]*\|track-news\.js?v=[0-9]*' _site/index.html
+          grep -o 'live-[a-z]*\.js?v=[0-9]*\|track-news\.js?v=[0-9]*\|fed-news\.js?v=[0-9]*' _site/index.html
 
       - name: 上传页面产物
         uses: actions/upload-pages-artifact@v3

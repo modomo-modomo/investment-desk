@@ -51,9 +51,13 @@ jobs:
         run: node sync-tracks.mjs
         continue-on-error: true
 
+      - name: 抓美联储（sync-fed.mjs：议息概率自算 + 主席/理事讲话）
+        run: node sync-fed.mjs
+        continue-on-error: true
+
       - name: 校验产物
         run: |
-          for f in live-data.js live-extra.js live-news.js track-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
             if [ ! -s "$f" ]; then echo "::error::$f 为空或缺失"; exit 1; fi
             node --check "$f" 2>/dev/null || node -e "new Function(require('fs').readFileSync('$f','utf8'))" || { echo "::error::$f 语法错误"; exit 1; }
             echo "✓ $f $(wc -c < $f) 字节"
@@ -65,10 +69,10 @@ jobs:
           git config user.email "desk-bot@users.noreply.github.com"
           # 滚动日志必须一起提交，否则“长期积累”每次都会从零开始：
           # highs-log（52 周新高）/ geo-log（APEC·美伊·俄乌）/ trump-log（川普语录）/ movers-log（盘前盘后异动留档）
-          for f in live-data.js live-extra.js live-news.js track-news.js cal-cache.json \
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js cal-cache.json \
                    highs-log.json geo-log.json trump-log.json movers-log.json gpu-rent.json \
                    earn-beat-log.json company-zh.json brief-log.json \
-                   track-news-log.json; do
+                   track-news-log.json fed-log.json; do
             [ -f "$f" ] && git add "$f" || true
           done
           if git diff --staged --quiet; then
@@ -82,17 +86,17 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp live-data.js live-extra.js live-news.js track-news.js _site/ 2>/dev/null || true
+          cp live-data.js live-extra.js live-news.js track-news.js fed-news.js _site/ 2>/dev/null || true
           ls -la _site
 
       - name: 给数据文件加版本号（绕开 Pages CDN 的 10 分钟缓存）
         run: |
           V=$(date +%s)
-          for f in live-data.js live-extra.js live-news.js track-news.js; do
+          for f in live-data.js live-extra.js live-news.js track-news.js fed-news.js; do
             sed -i "s|$f\"|$f?v=$V\"|g" _site/index.html
           done
           echo "--- 版本号已写入 ---"
-          grep -o 'live-[a-z]*\.js?v=[0-9]*\|track-news\.js?v=[0-9]*' _site/index.html
+          grep -o 'live-[a-z]*\.js?v=[0-9]*\|track-news\.js?v=[0-9]*\|fed-news\.js?v=[0-9]*' _site/index.html
 
       - name: 上传页面产物
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,198 @@
+window.FED_DATA = {
+ "meta": {
+  "syncedAt": "2026-11-15T04:32:42.910Z",
+  "board": [
+   {
+    "zh": "沃什",
+    "en": "Kevin Warsh",
+    "title": "主席"
+   },
+   {
+    "zh": "杰斐逊",
+    "en": "Philip N. Jefferson",
+    "title": "副主席"
+   },
+   {
+    "zh": "鲍曼",
+    "en": "Michelle W. Bowman",
+    "title": "监管副主席"
+   },
+   {
+    "zh": "巴尔",
+    "en": "Michael S. Barr",
+    "title": "理事"
+   },
+   {
+    "zh": "库克",
+    "en": "Lisa D. Cook",
+    "title": "理事"
+   },
+   {
+    "zh": "鲍威尔",
+    "en": "Jerome H. Powell",
+    "title": "理事"
+   },
+   {
+    "zh": "沃勒",
+    "en": "Christopher J. Waller",
+    "title": "理事"
+   }
+  ],
+  "probsSrc": "自算：EFFR 3.88%（纽约联储 2026-11-12）+ 30 天联邦基金期货 ZQZ26.CBT 及后续月份（Yahoo 行情）。算法同 CME FedWatch；CME 官网已封禁脚本抓取，故不引用其数字",
+  "note": "讲话摘要与解读为规则生成（关键句抽取 + 鹰鸽计数），非人工判断；原话以联储官网为准"
+ },
+ "probs": {
+  "meeting": "2026 年 12 月 8-9 日",
+  "decision": "12-10 03:00（北京时间，决议公布）",
+  "nextDate": "2026-12-09",
+  "probs": [
+   {
+    "label": "加息 25bp",
+    "p": 92.3,
+    "color": "#d2373a"
+   },
+   {
+    "label": "加息 50bp",
+    "p": 7.7,
+    "color": "#d2373a"
+   }
+  ],
+  "impliedAfter": 4.149,
+  "impliedMoveBp": 26.9,
+  "effr": 3.88,
+  "target": "3.75–4%",
+  "effrDate": "2026-11-12",
+  "futPx": 4.075000000000003,
+  "futSym": "ZQZ26.CBT",
+  "futAt": "2026-11-14 05:59",
+  "path": [
+   {
+    "d": "2027-01-27",
+    "implied": 4.34
+   },
+   {
+    "d": "2027-03-17",
+    "implied": 4.511
+   },
+   {
+    "d": "2027-04-28",
+    "implied": 4.605
+   }
+  ],
+  "src": "自算：EFFR 3.88%（纽约联储 2026-11-12）+ 30 天联邦基金期货 ZQZ26.CBT 及后续月份（Yahoo 行情）。算法同 CME FedWatch；CME 官网已封禁脚本抓取，故不引用其数字"
+ },
+ "speeches": [
+  {
+   "date": "2026-11-13",
+   "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261113a.htm",
+   "title": "New Technology, Old Questions: Productivity Puzzles and the Macroeconomy",
+   "speaker": "杰斐逊",
+   "en": "Philip N. Jefferson",
+   "role": "副主席",
+   "venue": "At the University of California, San Diego Economic Roundtable, San Diego, California",
+   "snip": "Next, I will turn to what evidence we have regarding the adoption of artificial intelligence (AI). 2 I will consider how widely these tools are being used, in which sectors, and what recent research tells us about their potential effects on <b>productivity</b>. Then, I will consider the implications of rapid technological change for the economy more broadly, including for aggregate supply and demand, for <b>inflation</b>, and…",
+   "tone": "偏鹰",
+   "read": "偏鹰：明确通胀仍高于目标，政策需要保持限制性；强调 AI/生产率是供给端变量，属结构性而非周期信号。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  },
+  {
+   "date": "2026-11-12",
+   "url": "https://www.federalreserve.gov/newsevents/speech/barr20261112a.htm",
+   "title": "American Inequality and the Future of AI",
+   "speaker": "巴尔",
+   "en": "Michael S. Barr",
+   "role": "理事",
+   "venue": "At Yale University, New Haven, Connecticut",
+   "snip": "Inequality is an aspect of every economy, and understanding the extent and evolution of inequality in the United States can help in forming a clear view of the economic outlook and how the economy is likely to react to new developments. Today, I will begin by summarizing the current state of economic inequality in the United States, assisted by new results from a long-running survey of households conducted by th…",
+   "tone": "偏鹰",
+   "read": "偏鹰：不排除进一步收紧；强调 AI/生产率是供给端变量，属结构性而非周期信号。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  },
+  {
+   "date": "2026-11-10",
+   "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261110a.htm",
+   "title": "The U.S. Economy and Considerations for Monetary Policy",
+   "speaker": "鲍曼",
+   "en": "Michelle W. Bowman",
+   "role": "监管副主席",
+   "venue": "At the C. Peter McColough Series on International Economics Council on Foreign Relations, Washington, D.C.",
+   "snip": "These outcomes suggest that the <b>policy rate</b> cuts toward the end of last year helped to address some <b>labor market</b> weakness. We are experiencing rapid technological change and ongoing geopolitical tensions, while <b>inflation</b> pressures have persisted for longer than I had hoped and have shown recent signs of broadening. While the labor market has improved more than I expected this year, our progress on lowering infla…",
+   "tone": "偏鹰",
+   "read": "偏鹰：明确通胀仍高于目标，政策需要保持限制性；不排除进一步收紧。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  },
+  {
+   "date": "2026-11-10",
+   "url": "https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm",
+   "title": "The Economic Outlook and Some Thoughts on Labor Market Dynamism",
+   "speaker": "沃勒",
+   "en": "Christopher J. Waller",
+   "role": "理事",
+   "venue": "At the Bank of England Watchers Conference King’s Business School and Money, Macro and Finance Society, London, United Kingdom",
+   "snip": "My subject today is the outlook for the U.S. economy and the implications for monetary policy. But <b>inflation</b> remains too high, so I will explain why I believe further tightening of monetary policy will be needed, sooner rather than later, to return inflation to a path that will reach 2 percent in the medium term. After that, I will ask some open-ended questions about the dynamism of the U.S. <b>labor market</b> that ar…",
+   "tone": "偏鹰",
+   "read": "偏鹰：明确通胀仍高于目标，政策需要保持限制性；不排除进一步收紧。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  },
+  {
+   "date": "2026-10-14",
+   "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm",
+   "title": "Supervisory Modernization After Silicon Valley Bank",
+   "speaker": "鲍曼",
+   "en": "Michelle W. Bowman",
+   "role": "监管副主席",
+   "venue": "At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand",
+   "snip": "Today, I will discuss three related aspects of supervisory modernization. First, I will describe some lessons learned from a newly released independent assessment of the failure of Silicon Valley Bank (SVB) about the importance of timely supervisory action. Second, I will discuss how the Federal Reserve is enhancing our supervisory effectiveness so that decisionmaking authority is clear and examiners are more ac…",
+   "tone": "偏鸽",
+   "read": "偏鸽：强调 AI/生产率是供给端变量，属结构性而非周期信号；反复强调不确定性，倾向以数据为准、不做前瞻承诺。",
+   "impact": "短端下行、曲线陡峭化，利好久期资产与黄金；成长股弹性大于价值，小盘与高杠杆板块受益",
+   "isNew": true
+  },
+  {
+   "date": "2026-10-08",
+   "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+   "title": "The Signaling Value of the Summary of Economic Projections",
+   "speaker": "沃勒",
+   "en": "Christopher J. Waller",
+   "role": "理事",
+   "venue": "At the Istanbul Economic Forum, Central Bank of the Republic of Türkiye, Istanbul, Türkiye",
+   "snip": "As you know, in September the Federal Open Market Committee (FOMC) voted to raise our <b>policy rate</b> 25 basis points to 3.75 percent to 4 percent after nine months during which we held it steady. When monetary policy changes in this fashion, one question that most people ask is, what comes next? I have mentioned that last month's increase in the <b>federal funds rate</b> came after nine months of holding it steady.",
+   "tone": "偏鹰",
+   "read": "偏鹰：明确通胀仍高于目标，政策需要保持限制性；把关税纳入通胀评估，供给端冲击可能延长紧缩时间。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  },
+  {
+   "date": "2026-10-06",
+   "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261006a.htm",
+   "title": "Modernizing the Regulatory and Supervisory Landscape",
+   "speaker": "鲍曼",
+   "en": "Michelle W. Bowman",
+   "role": "监管副主席",
+   "venue": "At the 2026 Community Banking Research Conference, sponsored by the Federal Reserve System, the Conference of State Bank Supervisors, and the Federal Deposit Insurance Corporation, St. Louis, Missouri",
+   "snip": "At the 2026 Community Banking Research Conference, sponsored by the Federal Reserve System, the Conference of State Bank Supervisors, and the Federal Deposit Insurance Corporation, St. It is good to be here with you this morning for the Community Banking Research Conference. 1 Today I will discuss the work we have under way to modernize the bank regulatory and supervision framework. Later this year, the Board wi…",
+   "tone": "偏鸽",
+   "read": "偏鸽：强调 AI/生产率是供给端变量，属结构性而非周期信号。",
+   "impact": "短端下行、曲线陡峭化，利好久期资产与黄金；成长股弹性大于价值，小盘与高杠杆板块受益",
+   "isNew": true
+  },
+  {
+   "date": "2026-10-01",
+   "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261001a.htm",
+   "title": "Modernizing Financial Regulation: Initial Observations from eSLR",
+   "speaker": "鲍曼",
+   "en": "Michelle W. Bowman",
+   "role": "监管副主席",
+   "venue": "At the Atlantic Council 2026 CEO & Senior Management Summit, Washington, D.C.",
+   "snip": "It is central to the transmission of monetary policy, the funding of the federal government, and the stability of the broader financial system. Today, I will discuss the enhanced supplementary leverage ratio, or \"eSLR,\" a capital requirement intended to operate as a backstop to risk-based capital requirements in the United States. So far this year, evidence shows that leverage ratio reforms have improved Treasur…",
+   "tone": "偏鹰",
+   "read": "偏鹰：不排除进一步收紧；提到资产负债表，缩表节奏影响准备金与流动性。",
+   "impact": "短端利率与美元有上行压力，2Y 最敏感；成长股与长久期资产估值受压制，AI 基建 / Neocloud 的融资成本抬升",
+   "isNew": true
+  }
+ ]
+};
