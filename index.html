@@ -173,6 +173,13 @@ table.tbl th.sortable:hover{color:var(--text);background:#eef3fb}
 table.tbl tr.grp td{background:#f7f9fc;font-size:10px;letter-spacing:1px;color:#94a0b0;text-transform:uppercase;padding:6px 12px;font-weight:600}
 .tk{font-weight:700;color:var(--text);letter-spacing:.2px;font-size:12.5px}
 .tk-sub{font-size:10.5px;color:var(--muted);margin-top:1px}
+/* 03 创新高合并跟踪表：列多、单行高度小，表头允许折行以压缩列宽 */
+table.tbl.tbl-hif thead th{white-space:normal;vertical-align:bottom;line-height:1.3;padding:7px 8px;letter-spacing:.2px}
+table.tbl.tbl-hif td{padding:7px 8px;vertical-align:middle}
+table.tbl.tbl-hif td .tk{font-size:12px}
+table.tbl.tbl-hif td .tk-sub{font-size:10px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+table.tbl.tbl-hif .tag{font-size:9.5px;padding:1px 5px}
+table.tbl.tbl-hif th.num{padding-right:8px}
 .read{font-size:11.5px;color:var(--text-2);line-height:1.62}
 
 .hero{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--line);border-radius:var(--radius);
@@ -3196,13 +3203,13 @@ function hiFollowBody(H){
     return c || String(b.lastD||"").localeCompare(String(a.lastD||"")) || (b.n||0)-(a.n||0);
   });
   const arrow=(k)=> st.sort.key===k ? (st.sort.dir>0?" ▾":" ▴") : "";
-  const thS=(k,label,w)=>'<th data-sort="'+k+'"'+(w?' style="width:'+w+'"':'')+' class="sortable" title="点击排序">'+label+arrow(k)+'</th>';
-  let h='<div class="card tbl-wrap" style="max-height:560px;overflow:auto"><table class="tbl"><thead><tr>'+
-    thS("firstD","首次新高日","92px")+'<th style="width:160px">标的</th>'+
-    thS("type","类型","84px")+thS("market","市场","52px")+thS("sec","板块","88px")+thS("track","赛道","120px")+
-    '<th class="num" style="width:74px">首日价</th><th class="num" style="width:74px">现价</th>'+
-    thS("chg","新高后累计涨跌幅","96px")+thS("n","新高次数","70px")+'<th style="width:92px">最新新高日</th>'+
-    '<th class="num" style="width:64px">5 日</th>'+thS("d20","20 日","66px")+thS("ytd","YTD","66px")+
+  const thS=(k,label,w,num)=>'<th data-sort="'+k+'"'+(w?' style="width:'+w+'"':'')+' class="sortable'+(num?' num':'')+'" title="点击排序">'+label+arrow(k)+'</th>';
+  let h='<div class="card tbl-wrap" style="max-height:660px;overflow:auto"><table class="tbl tbl-hif"><thead><tr>'+
+    thS("firstD","首次<br>新高日","76px")+'<th style="width:148px">标的</th>'+
+    thS("type","类型","74px")+thS("market","市场","46px")+thS("sec","板块","74px")+thS("track","赛道","86px")+
+    '<th class="num" style="width:62px">首日价</th><th class="num" style="width:62px">现价</th>'+
+    thS("chg","新高后累计<br>涨跌幅","76px",1)+thS("n","新高<br>次数","50px",1)+
+    thS("lastD","最新<br>新高日","76px",1)+thS("d5","5 日","56px",1)+thS("d20","20 日","60px",1)+thS("ytd","YTD","60px",1)+
     '</tr></thead><tbody>';
   if(!rows.length){
     h+='<tr><td colspan="14" class="empty">'+(follow.length?'当前筛选条件下无记录':'跟踪表自上线起积累：标的首次进入新高榜当天记下价格，之后每天用最新收盘对比——新高之后是延续还是回落，一目了然')+'</td></tr>';
@@ -3230,7 +3237,7 @@ function hiFollowBody(H){
     h+='<tr><td colspan="14" class="tiny muted" style="padding:8px 10px">共 '+rows.length+' 只（筛选后 / 全部 '+follow.length+'）· 新高后累计上涨 '+win+' 只 / 下跌 '+lose+' 只 · 新高次数 ≥2 的 '+multi+' 只　｜　「新高后累计涨跌幅」= 最新收盘 ÷ 首次进入新高榜当日收盘 − 1；「类型」取该标的<b>曾经创出过的最强新高</b>（出过历史新高就标 ATH）；5 日 / 20 日 / YTD 均为已结算收盘口径</td></tr>';
   }
   h+='</tbody></table></div>';
-  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px;line-height:1.8">合并口径：原来「滚动日志 + 新高跟踪」两张表合成一张——<b>每只标的一行</b>，「首次新高日 / 首日价」= 它第一次进入新高榜的那天和当天的收盘价，「新高次数 / 最新新高日」= 之后又创了几次新高、最近一次是哪天；点击表头可按 <b>首次新高日 · 类型 · 市场 · 板块 · 赛道 · 新高后累计涨跌幅 · 新高次数 · 20 日 · YTD</b> 升降序切换。挂 ATH 标的是「曾经创出历史新高」，比普通 52 周新高强一档。</div>';
+  h+='<div class="tiny muted" style="margin-top:5px;padding-left:2px;line-height:1.8">合并口径：原来「滚动日志 + 新高跟踪」两张表合成一张——<b>每只标的一行</b>，「首次新高日 / 首日价」= 它第一次进入新高榜的那天和当天的收盘价，「新高次数 / 最新新高日」= 之后又创了几次新高、最近一次是哪天；<b>除「标的 / 首日价 / 现价」外，其余 11 列点表头均可升降序切换</b>（首次新高日 · 类型 · 市场 · 板块 · 赛道 · 新高后累计涨跌幅 · 新高次数 · 最新新高日 · 5 日 · 20 日 · YTD）。挂 ATH 标的是「曾经创出历史新高」，比普通 52 周新高强一档。</div>';
   return h;
 }
 
