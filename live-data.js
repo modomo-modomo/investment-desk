@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-15T09:34:18.574Z",
+  "syncedAt": "2026-11-15T09:45:32.090Z",
   "source": "Yahoo Finance",
   "stockDate": "20261113",
   "indexDate": "20261113",
@@ -331,6 +331,97 @@ window.WIND_LIVE = {
    "mcap": 93890002944,
    "pre": null,
    "post": null
+  },
+  "HOOD.O": {
+   "name": "罗宾汉(ROBINHOOD)",
+   "date": "20261113",
+   "price": 77.86,
+   "prev": 81.35,
+   "chg": -4.29,
+   "d5": -3.77,
+   "d20": -25.13,
+   "ytd": -32.42,
+   "mcap": 70112247808,
+   "pre": null,
+   "post": -1.59
+  },
+  "SOFI.O": {
+   "name": "SOFI TECHNOLOGIES",
+   "date": "20261113",
+   "price": 15.42,
+   "prev": 15.63,
+   "chg": -1.34,
+   "d5": -4.87,
+   "d20": 2.19,
+   "ytd": -43.85,
+   "mcap": 20012699648,
+   "pre": null,
+   "post": -0.95
+  },
+  "ABCL.O": {
+   "name": "ABCELLERA BIOLOGICS",
+   "date": "20261113",
+   "price": 11.49,
+   "prev": 11.62,
+   "chg": -1.12,
+   "d5": -3.28,
+   "d20": -9.38,
+   "ytd": 234.99,
+   "mcap": 3752839424,
+   "pre": null,
+   "post": 0.26
+  },
+  "TWST.O": {
+   "name": "TWIST BIOSCIENCE",
+   "date": "20261113",
+   "price": 111.6,
+   "prev": 114.22,
+   "chg": -2.29,
+   "d5": -7.61,
+   "d20": -22.76,
+   "ytd": 244.55,
+   "mcap": 7399211008,
+   "pre": null,
+   "post": 0
+  },
+  "MRNA.O": {
+   "name": "MODERNA",
+   "date": "20261113",
+   "price": 223.37,
+   "prev": 231.35,
+   "chg": -3.45,
+   "d5": -12.12,
+   "d20": -5.55,
+   "ytd": 623.82,
+   "mcap": 90380181504,
+   "pre": null,
+   "post": -2.4
+  },
+  "LITE.O": {
+   "name": "LUMENTUM",
+   "date": "20261113",
+   "price": 596.62,
+   "prev": 624.65,
+   "chg": -4.49,
+   "d5": 10.77,
+   "d20": -31.39,
+   "ytd": 54.52,
+   "mcap": 54104432640,
+   "pre": null,
+   "post": -2.46
+  },
+  "AEHR.O": {
+   "name": "AEHR TEST SYSTEMS",
+   "date": "20261113",
+   "price": 56.98,
+   "prev": 61.04,
+   "chg": -6.65,
+   "d5": 6.37,
+   "d20": -17.67,
+   "ytd": 157.13,
+   "mcap": 1868647296,
+   "pre": null,
+   "post": -2.84
   }
  },
  "indices": {

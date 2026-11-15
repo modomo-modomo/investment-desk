@@ -1316,7 +1316,113 @@ const DATA = {
               {d:"10-29", src:"三季报", txt:"Q3 研发投入 1.81 亿 +61.24%，前三季 4.42 亿 +25.86%；研发费用率 47.17%"},
               {d:"09-20", src:"再融资", txt:"拟向特定对象发行募资不超 48.05 亿元，其中 31.81 亿投下一代高性能交换芯片（Scale-up/Scale-out、超节点、内存池化）"}],
      reports:[{d:"11-03", house:"（覆盖较少）", rating:"—", tp:"—", sum:"业绩说明会：12.8T/25.6T 已在客户处应用阶段；毛利率环比回升来自产品结构，非成本回落", chg:true}],
-     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；关注国产 GPU 集群互联的配套份额"}]}
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；关注国产 GPU 集群互联的配套份额"}]},
+
+    /* ---------------- 20261115(11) 新增 7 只（AMD 已在池中，不重复入池） ---------------- */
+    {t:"HOOD", n:"Robinhood", sec:"互联网券商 / 加密交易", cap:"$70B", px:"$77.86", mv:-4.3,
+     logic:"Q3 营收 14.24 亿美元 +12% 创纪录，但收入结构正在换引擎：<b>加密交易收入 1.20 亿、-55%</b>，<b>事件合约（预测市场）1.73 亿、+6 倍</b>，Gold 订阅 520 万 +34%、净入金 157 亿、平台资产 3960 亿。它更像「加密 beta + 预测市场期权」的组合，而不是券商 beta——这正是营收创纪录而 YTD 仍 -32% 的原因。",
+     kpi:[["Q3 营收","14.24 亿（+12%，纪录）"],["Q3 EPS","0.51（-16%）/ 调整后 0.60"],["Gold 用户","520 万（+34%）"],["净入金","157 亿美元"],["事件合约收入","1.73 亿（+6 倍）"],["加密收入","1.20 亿（-55%）"]],
+     val:"按 Q3 年化 EPS 约 2.0 美元计约 38x；加密收入占比下滑后估值锚从 PS 切回 PE，但事件合约的监管折价尚未被定价",
+     cat:"加密成交量 / 事件合约监管 / Gold 渗透",
+     risk:"加密交易量与币价高度相关（Q3 -55%）；预测市场面临州级博彩诉讼与 CFTC 规则；营销费用刚性；估值对成交量弹性极大。",
+     map:"（A 股无直接映射）东方财富 / 富途控股（同类互联网券商）",
+     earn:{next:"2027-02", status:"covered", note:"Q3 已于 2026-10-27 披露：营收 14.24 亿 +12%（纪录）、调整后 EPS 0.60（-3%）；下次为 2026Q4/全年业绩",
+       hist:[{d:"2026-10-27", res:"Q3 营收 14.24 亿 +12% 创纪录；EPS 0.51 -16%、调整后 0.60 -3%；加密收入 -55%、事件合约 +6 倍；Gold 520 万、净入金 157 亿", react:"−8.0%（盘后）"}]},
+     updates:[{d:"10-27", src:"Q3 财报", txt:"营收 14.24 亿美元 +12% 创纪录；EPS 0.51（-16%）、调整后 0.60（-3%）；盘后一度 -8%", key:true},
+              {d:"10-27", src:"Q3 财报", txt:"收入结构切换：加密交易 1.20 亿 -55%，事件合约 1.73 亿 +6 倍；Gold 订阅 520 万 +34%、净入金 157 亿、平台资产 3960 亿"},
+              {d:"11-10", src:"监管", txt:"预测市场（事件合约）在多州遭遇博彩牌照诉讼，CFTC 是否行使排他管辖权是 2027 年最大变量"}],
+     reports:[{d:"11-12", house:"（覆盖充分）", rating:"—", tp:"—", sum:"分歧集中在“加密收入下滑能否被事件合约与 Gold 订阅补上”，以及事件合约的监管可持续性；无人否认用户与资产端的增长", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在预测市场的州级诉讼与加密周期位置"}]},
+
+    {t:"SOFI", n:"SoFi Technologies", sec:"数字银行 / 消费金融", cap:"$20B", px:"$15.42", mv:-1.3,
+     logic:"Q3 GAAP 营收 13.85 亿 +44%、净利 2.41 亿 +73%、EPS 0.18——连续 12 个季度盈利，Rule of 40 得分 79。会员 1710 万 +35%、产品 2670 万 +44%、贷款发放 169 亿创纪录，存款占负债 90% 使存款成本比仓储融资低 145bp（年化省 7.45 亿利息）。全年指引上调至调整后营收 50.4 亿 / EPS 0.61，并首次给出 2027 年 64 亿 / EPS 0.90。",
+     kpi:[["Q3 营收","13.85 亿（+44%）"],["Q3 净利","2.41 亿（+73%）"],["会员 / 产品","1710 万 / 2670 万"],["贷款发放","169 亿（纪录）"],["净息差","6.14%（+16bp）"],["调整后 EBITDA","4.70 亿（+70%）"]],
+     val:"2026E EPS 0.61 → 约 25x；2027E 0.90 → 约 17x；对一家营收增速 27%、ROTCE 约 10% 的银行，折价来自「增长质量」而非增速",
+     cat:"Q4 财报 / 2027 指引兑现 / 银行牌照资本回报",
+     risk:"消费信贷违约周期（个人贷占比最高）；降息对净息差的再定价；科技平台与加密收入波动；YTD -44% 说明市场在给增长质量打折。",
+     map:"招商银行（零售） / 东方财富 / 中国平安（消费金融）",
+     earn:{next:"2027-01", status:"covered", note:"Q3 已于 2026-10-27 披露：GAAP 营收 13.85 亿 +44%、净利 2.41 亿 +73%、EPS 0.18；全年指引上调至调整后营收 50.4 亿 / EPS 0.61",
+       hist:[{d:"2026-10-27", res:"Q3 营收 13.85 亿 +44%、净利 2.41 亿 +73%；会员 1710 万 +35%、贷款发放 169 亿创纪录；上调全年指引并首次给出 2027 年 EPS 0.90", react:"—"}]},
+     updates:[{d:"10-27", src:"Q3 财报", txt:"GAAP 营收 13.85 亿 +44%、净利 2.41 亿 +73%、EPS 0.18；调整后 EBITDA 4.70 亿 +70%（利润率 34%）；净息差 6.14%", key:true},
+              {d:"10-27", src:"Q3 财报", txt:"会员 1710 万 +35%（单季净增 120 万创纪录）、产品 2670 万 +44%；贷款发放 169 亿（含平台业务 38 亿）；费用收入占比 42%"},
+              {d:"10-27", src:"指引", txt:"2026 上调至调整后营收 50.4 亿（+40%）/ 调整后 EBITDA 16.6 亿 / EPS 0.61；2027 首次指引 64 亿 / 22.4 亿 / EPS 0.90"}],
+     reports:[{d:"11-12", house:"（覆盖充分）", rating:"—", tp:"—", sum:"共识认为基本面强于股价：YTD -44% 主要来自金融科技板块整体 de-rating 与信贷周期担忧，而非业绩；争议点是个人贷不良的滞后暴露", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在消费信贷违约率与“什么时候给银行估值”"}]},
+
+    {t:"ABCL", n:"AbCellera Biologics", sec:"抗体平台 / 生物科技", cap:"$3.8B", px:"$11.49", mv:-1.1,
+     logic:"Q3 最大变化是 <b>ABCL635（更年期潮热 / VMS）II 期阳性</b>：中重度血管舒缩症状的频率与严重度显著下降、耐受性良好、睡眠与患者整体印象同步改善，2027 年进入后期开发，并扩展到乳腺癌/前列腺癌激素抑制导致的 VMS。同期增发 2 亿，可用流动性升至约 <b>8.9 亿美元</b>；ABCL575（OX40L）I 期达全部终点但公司不打算推进到 I 期之后——管线在收口，资源向 635 集中。",
+     kpi:[["Q3 营收","1060 万（+18.8%）"],["Q3 净亏","4080 万（去年 5710 万）"],["可用流动性","8.9 亿美元"],["合作在研项目","34 个（去年末 44）"],["临床分子权益","12 个"],["新增管线","992 / 385 / 646"]],
+     val:"收入以合作里程碑为主，PS 无意义；按管线 rNPV + 净现金定价（EV 约 30 亿美元），635 的 VMS 峰值销售是主要变量",
+     cat:"ABCL635 III 期启动 / 合作里程碑 / 386·688 IND",
+     risk:"ABCL635 仅 II 期数据，III 期失败即估值腰斩；合作项目从 44 降至 34，下游权益在收缩；仍处亏损、现金消耗约 4000 万/季。",
+     map:"（A 股无直接映射）药明生物 / 百奥赛图（抗体发现）",
+     earn:{next:"2027-02", status:"covered", note:"Q3 已于 2026-11-09 披露：营收 1060 万、净亏 4080 万（收窄）、可用流动性 8.9 亿；下次为 2026 年度业绩",
+       hist:[{d:"2026-11-09", res:"Q3 营收 1060 万 +18.8%、净亏 4080 万（去年同期 5710 万）；ABCL635 II 期 VMS 阳性；增发 2 亿、流动性 8.9 亿", react:"—"}]},
+     updates:[{d:"11-09", src:"Q3 财报", txt:"ABCL635 II 期顶线阳性：中重度 VMS 频率与严重度显著下降、耐受性良好、睡眠与 PGI-C 改善；2027 年启动更年期 VMS 后期开发", key:true},
+              {d:"11-09", src:"Q3 财报", txt:"完成 2 亿美元普通股 + 预付费权证发行，现金及有价证券 7.9 亿、含政府非稀释资金合计可用流动性 8.9 亿；Q3 经营现金流为正"},
+              {d:"11-09", src:"管线", txt:"ABCL575（OX40L）I 期达全部终点但不推进至 I 期后；新增 ABCL992（635 长效版）、ABCL385（肿瘤）、ABCL646（离子通道拮抗剂）；合作项目 34 个、临床分子权益 12 个"}],
+     reports:[{d:"11-12", house:"（中小型投行覆盖为主）", rating:"—", tp:"—", sum:"关注点从“平台型 CRO 折价”转向“自有管线能否跑出 III 期”；635 的 VMS 适应症被视为低风险高确定性资产", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 635 III 期设计与 VMS 市场（对标 fezolinetant）"}]},
+
+    {t:"TWST", n:"Twist Bioscience", sec:"合成生物学 / DNA 合成", cap:"$7.4B", px:"$111.60", mv:-2.3,
+     logic:"FY26Q4（截至 9/30）营收 1.266 亿 +28%，<b>连续 15 个季度环比增长</b>，调整后 EBITDA 首次转正（+220 万）。全年 4.594 亿 +22%、毛利率 52.4%。真正的增量是 <b>AI 制药客户</b>：FY26 相关收入 5910 万、+175%，FY27 指引内含 1 亿美元。公司同时宣布 FY27–28 约 1.5 亿美元 capex 扩产能与自动化——从「卖寡核苷酸」变成「卖 AI 设计出来的分子」。",
+     kpi:[["FY26 营收","4.594 亿（+22%）"],["Q4 营收","1.266 亿（+28%）"],["Q4 毛利率","53.1%（+1.8pct）"],["Q4 调整后 EBITDA","+220 万（首次转正）"],["AI 制药收入","5910 万（+175%）"],["FY27 指引","5.5–5.6 亿（+21%）"]],
+     val:"FY27 PS 约 13x；GAAP 仍亏（FY26 净亏 1.30 亿、EPS -2.08），定价靠「AI 制药订单增速 + EBITDA 转正」而非利润",
+     cat:"FY27Q1 财报 / AI 制药订单 / 产能扩张",
+     risk:"AI 制药订单集中度高、可预测性差（管理层称“有信心三位数增长”但指引只含 1 亿）；SG&A 仍高（FY26 3.01 亿）；扩产带来折旧前置；股价 20 日 -23%，波动极大。",
+     map:"（A 股无直接映射）金斯瑞生物科技 / 华大智造（合成生物产业链）",
+     earn:{next:"2027-02", status:"covered", note:"FY26Q4 已于 2026-11-12 披露：营收 1.266 亿 +28%、调整后 EBITDA 首次转正；FY27 指引 5.5–5.6 亿（+21%），FY27Q1 指引 1.30–1.32 亿（+26%）",
+       hist:[{d:"2026-11-12", res:"FY26Q4 营收 1.266 亿 +28%、毛利率 53.1%、调整后 EBITDA +220 万；FY26 全年 4.594 亿 +22%、现金 5.82 亿", react:"—"}]},
+     updates:[{d:"11-12", src:"FY26Q4 财报", txt:"Q4 营收 1.266 亿 +28%（连续 15 季环比增长）、毛利率 53.1%、调整后 EBITDA +220 万（首次转正）；FY26 营收 4.594 亿 +22%", key:true},
+              {d:"11-12", src:"指引", txt:"FY27 营收指引 5.5–5.6 亿（+21%），其中 AI 制药 1 亿；毛利率 52.5–53%；FY27Q1 指引 1.30–1.32 亿（+26%）；FY27–28 capex 约 1.5 亿美元"},
+              {d:"11-12", src:"经营", txt:"FY26 服务约 4100 家客户（去年 3800）、出货约 130 万个基因（去年 93.8 万）；加入 Lilly TuneLab 抗体表征服务、推出 Twist Express Screening 与 MRD Express"}],
+     reports:[{d:"11-13", house:"（覆盖充分）", rating:"—", tp:"—", sum:"共识上调收入但分歧在 AI 制药的可持续性：FY26 该块 +175%，管理层称 FY27 订单可三位数增长，但指引只保守计入 1 亿", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 AI 设计分子的合成需求是否是一次性脉冲"}]},
+
+    {t:"MRNA", n:"Moderna", sec:"疫苗 / mRNA 平台", cap:"$90B", px:"$223.37", mv:-3.5,
+     logic:"Q3 营收 13 亿 +29%、净利 1.62 亿（EPS 0.38）重回盈利，现金成本 10 亿、同比 -10%，年末现金指引 81–83 亿。呼吸道之外真正的估值锚是 <b>intismeran（个体化新抗原疗法）III 期阳性</b>——这是 mRNA 平台第一次在肿瘤辅助治疗上拿到统计学意义；同时 mFLUSIVA 获批成为第 5 个上市产品。YTD +624% 反映的是「从新冠后衰退」到「肿瘤疫苗平台」的范式切换。",
+     kpi:[["Q3 营收","13 亿（+29%）"],["Q3 净利","1.62 亿（EPS 0.38）"],["现金成本","10 亿（-10%）"],["年末现金指引","81–83 亿"],["上市产品","5 个（mFLUSIVA 获批）"],["全年增速指引","15–25%（上调）"]],
+     val:"营收增速指引上调至 15–25%，但 PS 远高于疫苗同业——溢价全部来自 intismeran 与肿瘤管线，属「平台期权定价」",
+     cat:"intismeran 监管路径 / mRNA-3927 PA 数据 / ASH 读出",
+     risk:"美国疫苗政策与接种率（呼吸道产品季节性放大）；intismeran 商业化产能与定价未验证；仍处现金消耗；YTD +624% 后对任何负面读出极度敏感。",
+     map:"（A 股无直接映射）沃森生物 / 智飞生物（疫苗） / 金斯瑞（CGT）",
+     earn:{next:"2027-02", status:"covered", note:"Q3 已于 2026-11-06 披露：营收 13 亿 +29%、净利 1.62 亿转盈；全年营收增速指引上调至 15–25%、年末现金 81–83 亿",
+       hist:[{d:"2026-11-06", res:"Q3 营收 13 亿 +29%、净利 1.62 亿（EPS 0.38）转盈；现金成本 10 亿 -10%；mFLUSIVA 获批为第 5 个产品；intismeran III 期阳性", react:"—"}]},
+     updates:[{d:"11-06", src:"Q3 财报", txt:"营收 13 亿 +29%、净利 1.62 亿（EPS 0.38）转盈；现金成本 10 亿 -10%；全年营收增速指引上调至 15–25%，年末现金 81–83 亿", key:true},
+              {d:"11-06", src:"管线", txt:"intismeran（个体化新抗原疗法）III 期达主要终点（黑色素瘤辅助治疗）；mRNA-3927（丙酸血症）关键数据年底；mRNA-2808 多发性骨髓瘤数据入选 ASH（12/12–15）"},
+              {d:"11-06", src:"产品", txt:"mFLUSIVA 获批，成为公司第 5 个上市产品；呼吸道联合疫苗与肿瘤管线并行推进"}],
+     reports:[{d:"11-10", house:"（覆盖充分）", rating:"—", tp:"—", sum:"卖方分歧最大的一只：多头按“肿瘤疫苗平台”给估值，空头按“呼吸道疫苗现金流折现”给 100 美元以下；intismeran 的监管路径是关键分水岭", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 intismeran 的 III 期统计学强度与商业化产能"}]},
+
+    {t:"LITE", n:"Lumentum", sec:"光模块 / 光器件", cap:"$54B", px:"$596.62", mv:-4.5,
+     logic:"FY27Q1（截至 9/26）营收 12.63 亿 <b>+136.5%</b>、non-GAAP 毛利率 53.2%、营业利润率 42.3%，Q2 指引 15.75–16.25 亿（环比再加约 3.5 亿，超过两年前公司全季收入）。泵浦激光与 OCS 是主力，本季拿下 <b>第二个 NPO/CPO 大单、采购承诺超 50 亿美元</b>。<b>但定价权已经不在基本面</b>：11/2 宣布 Marvell 以 4.5 股换 1 股全股票收购，隐含企业价值约 1150 亿美元——现价 = 4.5 × MRVL 股价，再打约 15% 折价。",
+     kpi:[["FY27Q1 营收","12.63 亿（+136.5%）"],["non-GAAP EPS","4.57"],["non-GAAP 毛利率","53.2%"],["营业利润率","42.3%"],["Q2 指引","15.75–16.25 亿"],["CPO 二单承诺",">50 亿美元"]],
+     val:"4.5 股 MRVL 换 1 股：换股价值约 705 美元（MRVL 156.76 × 4.5），现价 596.62 对应约 15% 折价——买 LITE 本质是买 MRVL + 承担交割风险（预计 2028H1 完成）",
+     cat:"MRVL 股价 / Q2 财报 / 并购审批与股东会",
+     risk:"固定换股比下股价完全跟随 MRVL，基本面改善无法独立兑现；并购需双方股东与多国反垄断批准（交割预计 2028H1）；CPO 路线若跳过可插拔方案将重塑客户结构；股价 20 日 -31%。",
+     map:"中际旭创 / 新易盛 / 天孚通信 / 光迅科技（光模块）；源杰科技（激光芯片）",
+     earn:{next:"2027-02", status:"covered", note:"FY27Q1 已于 2026-11-02 披露：营收 12.63 亿 +136.5%、non-GAAP EPS 4.57；Q2 指引 15.75–16.25 亿、EPS 5.90–6.20",
+       hist:[{d:"2026-11-02", res:"FY27Q1 营收 12.63 亿 +136.5%（环比 +25.5%）、non-GAAP 毛利率 53.2%、营业利润率 42.3%、EPS 4.57；同日宣布 Marvell 全股票收购", react:"—"}]},
+     updates:[{d:"11-02", src:"FY27Q1 财报", txt:"营收 12.63 亿美元 +136.5%、环比 +25.5%；non-GAAP 毛利率 53.2%（+13.8pct）、营业利润率 42.3%；non-GAAP EPS 4.57；现金 20 亿", key:true},
+              {d:"11-02", src:"订单", txt:"拿下第二个 NPO/CPO 大单，客户采购承诺超 50 亿美元；OCS 需求可见度显著提升，管理层称光交换有望成为数十亿美元年收入业务"},
+              {d:"11-02", src:"并购", txt:"Marvell 以全股票方式收购 Lumentum：每股 LITE 换 4.5 股 MRVL，隐含 EV 约 1150 亿美元（约 1132 美元/股，较 10/28 溢价 23.9%）；预计 2028H1 交割，年协同 >10 亿美元"}],
+     reports:[{d:"11-04", house:"（覆盖充分，但已被并购条款替代）", rating:"—", tp:"—", sum:"并购宣布后卖方目标价基本锚定换股价值（4.5 × MRVL）；研究重点从盈利预测转为「交割概率 + 价差」", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 CPO 对可插拔光模块的替代节奏与并购套利价差"}]},
+
+    {t:"AEHR", n:"Aehr Test Systems", sec:"测试设备 / 老化测试", cap:"$1.9B", px:"$56.98", mv:-6.7,
+     logic:"FY27Q1（截至 9/25）营收 3300 万 <b>+200%</b>、环比 +75%，GAAP 净利 720 万转盈；bookings 4670 万、book-to-bill 1.4，有效 backlog 1.093 亿（11/1）。两条腿同时起量：晶圆级（FOX-XP）跟着 AI 处理器客户扩产，封装级（Sonoma）月交付十余台给超大规模客户，且<b>第二个 AI 处理器已在 Sonoma 完成认证</b>，客户预计其量产规模将超过第一个。FY27 指引上调至 1.5 亿（+200%）。",
+     kpi:[["FY27Q1 营收","3300 万（+200%）"],["Q1 GAAP 净利","720 万（EPS 0.21）"],["Q1 bookings","4670 万（B/B 1.4）"],["有效 backlog","1.093 亿"],["Q1 毛利率","47.5%"],["FY27 指引","1.5 亿（+200%）"]],
+     val:"FY27 指引 1.5 亿、non-GAAP 净利率 ≥20% → 隐含 EPS 约 0.90、约 63x；小市值 + 订单可见度，估值靠“backlog 转化率”而非当期利润",
+     cat:"Sonoma 二客户爬坡 / 台湾 OSAT 装机 / backlog 转化",
+     risk:"客户高度集中（单一超大规模客户 + 单一 AI 处理器客户）；订单为承诺而非合同，可延期/取消；台湾地缘与关税；月交付节奏波动导致单季业绩剧烈摆动。",
+     map:"长川科技 / 华峰测控 / 精测电子（测试设备）；通富微电（OSAT 侧）",
+     earn:{next:"2027-02", status:"covered", note:"FY27Q1 已于 2026-11-02 披露：营收 3300 万 +200%、bookings 4670 万；FY27 指引上调至 1.5 亿（+200%）、non-GAAP 净利率 ≥20%",
+       hist:[{d:"2026-11-02", res:"FY27Q1 营收 3300 万 +200%、GAAP EPS 0.21 / non-GAAP 0.28、毛利率 47.5%；book-to-bill 1.4、有效 backlog 1.093 亿", react:"—"}]},
+     updates:[{d:"11-02", src:"FY27Q1 财报", txt:"营收 3300 万 +200%（环比 +75%）创纪录；GAAP 净利 720 万（EPS 0.21）、non-GAAP 940 万（EPS 0.28）；毛利率 47.5%；现金 1.051 亿", key:true},
+              {d:"11-02", src:"订单", txt:"bookings 4670 万、book-to-bill 约 1.4；backlog 1.009 亿、含季后订单的有效 backlog 1.093 亿；FY27 指引由 1.3–1.5 亿上调至 1.5 亿"},
+              {d:"11-02", src:"客户进展", txt:"Sonoma 月交付十余台支持超大规模客户首个 AI 处理器；该客户第二个 AI 处理器已完成 Sonoma 认证、预计量产后规模更大；另一家 AI 加速器/CPU 客户采购 FOX-XP 送台湾 OSAT 验证，2027 年初装机"}],
+     reports:[{d:"11-05", house:"（覆盖较少，中小型机构为主）", rating:"—", tp:"—", sum:"核心分歧是“第二个客户能否在 2027 转量产”：若台湾 OSAT 验证通过，backlog 与 FY28 指引会再上一台阶；反之单客户依赖无法解除", chg:true}],
+     kol:[{d:"11-15", handle:"（新入池）", view:"尚未接入固定 KOL 跟踪；X 讨论集中在 AI 芯片 burn-in 的测试时长与产能瓶颈"}]}
   ],
 
   strategy:{
@@ -1497,7 +1603,9 @@ const CODE_OF = {TSLA:"TSLA.O",META:"META.O",IREN:"IREN.O",NBIS:"NBIS.O",CRWV:"C
   /* 20261115(10)：港股 / A 股用 Wind 式原生代码；美股生物医药走 .O/.N */
   "2105.HK":"2105.HK","2359.HK":"2359.HK","0700.HK":"0700.HK",
   CMPS:"CMPS.O",LLY:"LLY.N",
-  "688825.SH":"688825.SH","002156.SZ":"002156.SZ","002436.SZ":"002436.SZ","300604.SZ":"300604.SZ","688702.SH":"688702.SH"};
+  "688825.SH":"688825.SH","002156.SZ":"002156.SZ","002436.SZ":"002436.SZ","300604.SZ":"300604.SZ","688702.SH":"688702.SH",
+  /* 20261115(11)：美股新增 7 只 */
+  HOOD:"HOOD.O",SOFI:"SOFI.O",ABCL:"ABCL.O",TWST:"TWST.O",MRNA:"MRNA.O",LITE:"LITE.O",AEHR:"AEHR.O"};
 
 /* 计价币种：港股 HK$、A 股 ¥，其余默认美元。行情、市值、抽屉头统一走这里，避免港股标价挂 $ */
 function curSym(t){
@@ -3432,7 +3540,9 @@ const STOCK_TRACK = {
   /* 20261115(10) */
   "2105.HK":"bio", "2359.HK":"bio", CMPS:"bio", LLY:"bio",
   "0700.HK":"app",
-  "688825.SH":"mem", "002156.SZ":"pkg", "002436.SZ":"pkg", "300604.SZ":"pkg", "688702.SH":"cpu"
+  "688825.SH":"mem", "002156.SZ":"pkg", "002436.SZ":"pkg", "300604.SZ":"pkg", "688702.SH":"cpu",
+  /* 20261115(11) */
+  HOOD:"fin", SOFI:"fin", LITE:"infra", ABCL:"bio", TWST:"bio", MRNA:"bio", AEHR:"pkg"
 };
 const TRACK_NAME = {
   app:"AI 应用", infra:"AI 基础设施 / 数据中心", pkg:"先进封测", cpu:"CPU",
@@ -3441,10 +3551,18 @@ const TRACK_NAME = {
 };
 const TRACK_SEQ = ["app","infra","pkg","cpu","mem","phy","edge","sec","fin","bio","other"];
 const trkOf = (s)=> STOCK_TRACK[s.t] || "other";
+/* 市场维度：按代码后缀判定，和计价币种同一套规则 */
+function mktOf(t){
+  const s=String(t||"");
+  if(/\.HK$/.test(s)) return "港股";
+  if(/\.(SH|SZ|SS)$/.test(s)) return "A 股";
+  return "美股";
+}
 
 /* ---------- 标的研究：单张可筛选排序表（20261115(5)） ----------
-   一行一只标的：行情八列 + 行业 / 赛道 + 策略建议 + 下一个催化；点击行进抽屉看基本面 */
-const STK_ST={trk:"全部", near:false, upd:false, sort:{key:"mv",dir:1}};
+   一行一只标的：行情八列 + 行业 / 赛道 + 策略建议 + 下一个催化；点击行进抽屉看基本面
+   20261115(11)：加 市场 / 策略建议 / 关键词 三个维度，与赛道、45 天催化、策略更新并列 */
+const STK_ST={trk:"全部", mkt:"全部", act:"全部", q:"", near:false, upd:false, sort:{key:"mv",dir:1}};
 
 /* 每只标的的策略建议（口径与投资策略 5-3 对齐）；upd=true 时表格内标红 */
 const STOCK_ADVICE={
@@ -3474,7 +3592,16 @@ const STOCK_ADVICE={
   "002156.SZ":{act:"增配", d:"11-15", upd:true, txt:"Q3 营收 88.4 亿 / 扣非 6.3 亿双创新高，AMD 数据中心 +97% 直接传导；2nm 与 CPO 是第二曲线——A 股映射里确定性最高的一只"},
   "002436.SZ":{act:"观察", d:"11-15", upd:true, txt:"Q3 归母 3.28 亿 +220%，CSP 基板与 mSAP 满产；但 2026 PE 约 100x 已计入 ABF 期权，ABF 未贡献利润前不追高"},
   "300604.SZ":{act:"增配", d:"11-15", upd:true, txt:"Q3 单季营收 24.8 亿、归母 8.0 亿 +82.7%、毛利率 56.3%，HBM4 测试是 2027 最确定的设备增量——封测扩产周期里议价力最强的一环"},
-  "688702.SH":{act:"观察", d:"11-15", upd:true, txt:"Q3 营收 4.67 亿 +44%，研发 +61% 导致转亏；12.8T/25.6T 是国产交换芯片唯一卡位、48 亿定增是弹药——亏损期用 PS 定价，不盯利润"}
+  "688702.SH":{act:"观察", d:"11-15", upd:true, txt:"Q3 营收 4.67 亿 +44%，研发 +61% 导致转亏；12.8T/25.6T 是国产交换芯片唯一卡位、48 亿定增是弹药——亏损期用 PS 定价，不盯利润"},
+
+  /* ---- 20261115(11) 新增 7 只 ---- */
+  HOOD:{act:"观察", d:"11-15", upd:true, txt:"营收创新纪录但加密收入 -55%，收入结构在换引擎；YTD -32% 说明市场按加密 beta 定价。事件合约的州级诉讼是 2027 最大变量——等监管明朗再谈仓位"},
+  SOFI:{act:"增配", d:"11-15", upd:true, txt:"Q3 营收 +44%、净利 +73%、会员 1710 万，2027 指引 EPS 0.90 对应约 17x；YTD -44% 是板块 de-rating 而非业绩走坏——这是池里最典型的「业绩与股价背离」，分批建仓"},
+  ABCL:{act:"观察", d:"11-15", upd:true, txt:"ABCL635 II 期 VMS 阳性 + 8.9 亿流动性，故事从平台折价变成管线溢价；但 III 期 2027 才启动、合作项目从 44 缩到 34——事件驱动，II 期的涨幅别追"},
+  TWST:{act:"减配", d:"11-15", upd:true, txt:"15 个季度环比增长、EBITDA 首次转正，基本面是好的；但 20 日 -23% 后 FY27 PS 仍约 13x，已把 AI 制药 1 亿收入提前定价——FY27Q1 兑现前减，不加"},
+  MRNA:{act:"持有", d:"11-15", upd:true, txt:"Q3 转盈 + 第 5 个产品获批 + intismeran III 期阳性，范式从「新冠后衰退」切到「肿瘤疫苗平台」；但 YTD +624% 已把成功提前定价——持有不加，等 ASH 与监管路径"},
+  LITE:{act:"观察", d:"11-15", upd:true, txt:"基本面（Q2 环比再加 3.5 亿、CPO 二单 >50 亿美元承诺）已被并购条款替代：现价 = 4.5×MRVL 再打 15% 折价。要这个敞口就买 MRVL，或做价差，别当成长股买"},
+  AEHR:{act:"增配", d:"11-15", upd:true, txt:"Q1 营收 +200%、B/B 1.4、有效 backlog 1.09 亿、FY27 指引 1.5 亿；第二个 AI 处理器已在 Sonoma 认证、台湾 OSAT 2027 初装机——AI 测试链里订单可见度最高的小市值"}
 };
 
 /* 催化日期归一化：完整日 / 月 / 半年 → 期间末日（毫秒），用于「下一个催化」与临近判断 */
@@ -3513,6 +3640,7 @@ function stkBody(){
   const actRank={"清仓":0,"减持":1,"减配":2,"观察":3,"持有":4,"增配":5,"不入池":0};
   let rows=DATA.stocks.map((s,i)=>({s:s,i:i}));
   if(st.trk!=="全部") rows=rows.filter(x=>trkOf(x.s)===st.trk);
+  if(st.mkt&&st.mkt!=="全部") rows=rows.filter(x=>mktOf(x.s.t)===st.mkt);
   rows.forEach(x=>{
     const s=x.s, l=s.live||{};
     x.price=l.price; x.chg=l.chg!=null?l.chg:s.mv;
@@ -3524,8 +3652,14 @@ function stkBody(){
     x.catDays=x.cat?((x.cat.e-Date.parse(today))/864e5):null;
     x.catNear=x.catDays!=null&&x.catDays>=-1&&x.catDays<=45;
   });
+  if(st.act&&st.act!=="全部") rows=rows.filter(x=>x.adv.act===st.act);
   if(st.near) rows=rows.filter(x=>x.catNear);
   if(st.upd) rows=rows.filter(x=>x.adv.upd);
+  const q=String(st.q||"").trim().toLowerCase();
+  if(q) rows=rows.filter(x=>{
+    const hay=[x.s.t,x.s.n,x.s.sec,TRACK_NAME[x.trk]||"",x.adv.act,x.adv.txt].join(" ").toLowerCase();
+    return hay.indexOf(q)>=0;
+  });
   /* dir=1 降序 / -1 升序；null 排最后 */
   rows.sort((a,b)=>{
     const k=st.sort.key;
@@ -3588,9 +3722,14 @@ function viewStocks(){
   let h=feedBar();
   const cntOther=DATA.stocks.filter(s=>trkOf(s)==="other").length;
   h+='<div class="sec">'+secHead("01","重点标的研究池",
-      DATA.stocks.length+" 只在册 · 单张可筛选排序表：行情 + 行业赛道 + 策略建议 + 催化剂 · 点击行看详情",
+      DATA.stocks.length+" 只在册 · 可按 市场 / 赛道 / 策略建议 / 关键词 筛选，12 列除标的与建议文本外均可点表头排序 · 点击行看详情",
       "<span class='upd'>标签手动设定</span>");
   h+='<div class="filters" id="stock-filters"></div>';
+  h+='<div style="display:flex;align-items:center;gap:8px;margin:-4px 0 12px;flex-wrap:wrap">'+
+     '<input id="stk-q" type="text" placeholder="搜索 代码 / 名称 / 行业 / 赛道 / 建议文本" value="" '+
+     'style="flex:0 0 300px;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-size:12px;outline:none">'+
+     '<span class="tiny muted" id="stk-cnt"></span>'+
+     '<button class="fchip" id="stk-reset" style="margin-left:auto">清空全部筛选</button></div>';
   if(added.length){
     h+='<div class="card" style="padding:12px 14px;margin-bottom:14px;border-style:dashed">'+
        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span class="tag violet">新入库 · 待完善</span>'+
@@ -3750,7 +3889,16 @@ const CATALYSTS={
   "002156.SZ":[["2026-11","AMD MI455X 出货爬坡（AMD Q4 指引约 170 亿美元 ±3%）"],["2026-12","42.2 亿定增募投项目投产进度（存储 / 汽车 / 晶圆级）"],["2027-01","2026 年度业绩预告"],["2027-03","2026 年报：2nm 工艺验证与 CPO 异构集成进展"],["2027-04","2027Q1：AMD「2027 营收增速 >80%」指引的订单传导"],["2027-06","存储封测（LPDDR 16DP / rNAND 64DP）客户导入"],["2027-08","2027 中报：毛利率能否站上 18%"],["2027H2","国产客户（PMIC / 电源管理）圆片级封装放量"]],
   "002436.SZ":[["2026-11","董事长提议的 4–5 亿元回购落地公告"],["2026-12","ABF 载板客户认证进展（尚未贡献利润）"],["2027-01","2026 年度业绩预告：Q4 单季利润"],["2027-03","2026 年报：FCBGA 产能利用率与折旧压力"],["2027-04","2027Q1：光模块 mSAP 基板订单（800G/1.6T）"],["2027-06","宜兴硅谷扭亏后的持续性验证"],["2027-08","2027 中报：ABF 是否开始贡献收入"],["2027H2","AI 服务器 PCB 样板/小批量的价格与产能"]],
   "300604.SZ":[["2026-11","HBM4 测试设备订单落地（存储厂验证进度）"],["2026-12","Q4 收入确认节奏（Q3 单季 24.8 亿为历史新高）"],["2027-01","2026 年度业绩预告"],["2027-03","2026 年报：SoC / 存储测试机结构占比"],["2027-04","2027Q1：封测厂资本开支（通富 / 长电 / 盛合晶微）"],["2027-06","STI / EXIS 海外子公司整合协同"],["2027-08","2027 中报：毛利率能否维持 55%+"],["2027H2","先进封装测试（2.5D/3D）设备验证与量产"]],
-  "688702.SH":[["2026-11","12.8T/25.6T（800G）交换芯片客户导入进展"],["2026-12","48.05 亿定增审核进展（31.81 亿投下一代高性能交换芯片）"],["2027-01","2026 年度业绩预告：亏损是否收窄"],["2027-03","2026 年报：研发费用率（当前 47%）与毛利率修复路径"],["2027-04","2027Q1：运营商 / 云厂商集采份额"],["2027-06","NPO 近封装光学原型验证转量产"],["2027-08","2027 中报：Scale-up / 超节点互联方案落地"],["2027H2","国产算力集群互联订单（国产 GPU 配套）"]]
+  "688702.SH":[["2026-11","12.8T/25.6T（800G）交换芯片客户导入进展"],["2026-12","48.05 亿定增审核进展（31.81 亿投下一代高性能交换芯片）"],["2027-01","2026 年度业绩预告：亏损是否收窄"],["2027-03","2026 年报：研发费用率（当前 47%）与毛利率修复路径"],["2027-04","2027Q1：运营商 / 云厂商集采份额"],["2027-06","NPO 近封装光学原型验证转量产"],["2027-08","2027 中报：Scale-up / 超节点互联方案落地"],["2027H2","国产算力集群互联订单（国产 GPU 配套）"]],
+
+  /* ---- 20261115(11) 新增 7 只催化表 ---- */
+  HOOD:[["2026-11-20","11 月美股日均成交额与散户成交占比（月度读数）"],["2026-12","11 月加密交易量与 BTC 现货 ETF 净流入"],["2026-12-10","11 月事件合约成交量与 CFTC 最新表态"],["2027-02","Q4/全年财报（加密收入占比、Gold 净增与费用率）"],["2027-03","2 月月度运营：APP 月活 / Gold 用户 / 净入金"],["2027H1","预测市场州级诉讼进展 / 新品类合约获批"],["2027H1","国际市场扩张（英国、欧盟券商与加密牌照）"],["2027H2","2027 全年指引与订阅收入占比（Gold 年费提价效果）"]],
+  SOFI:[["2026-11-20","10 月个人贷款发放与存款成本（证券化月度数据）"],["2026-12-05","11 月非农与消费信贷违约率（滞后指标）"],["2026-12-15","美联储议息：净息差与存款成本再定价"],["2027-01","Q4/全年财报（2027 指引 64 亿营收 / EPS 0.90 的兑现度）"],["2027-02","学生贷款重启还款后的逾期率读数"],["2027H1","银行牌照下的资本回报（回购 / 首次分红）"],["2027H1","科技平台（Galileo）与加密业务新签客户"],["2027H2","2030 年 1 亿产品目标的阶段性进度（当前 2670 万）"]],
+  ABCL:[["2026-12","ABCL635 III 期方案与 FDA 沟通（绝经期 VMS）"],["2026-12","ABCL386 / ABCL688 IND 递交窗口"],["2027-01","合作方里程碑：34 个下游权益项目的读出"],["2027-02","Q4/全年财报（现金消耗与 2027 研发预算）"],["2027H1","ABCL635 扩展至乳腺癌/前列腺癌治疗相关 VMS（试验启动）"],["2027H1","ABCL992（635 长效版）IND"],["2027H2","ABCL646（离子通道拮抗剂）IND-enabling 完成"],["2027H2","首个合作方里程碑 / 分成收入确认"]],
+  TWST:[["2026-12","11 月 NGS 订单与诊断客户采购（季度内跟踪）"],["2027-01","AI 制药客户 2027 年订单签约（指引 1 亿美元）"],["2027-02","FY27Q1 财报（指引 1.30–1.32 亿、+26%）"],["2027-03","产能扩张 capex 落地（FY27–28 约 1.5 亿美元）"],["2027H1","Twist MRD Express 与 Express Screening 抗体放量"],["2027H1","Lilly TuneLab 抗体表征服务订单转化"],["2027H2","FY27 中报：AI 制药收入是否超 1 亿"],["2027H2","合成 DNA 产能二期投产（毛利率能否守住 52.5%）"]],
+  MRNA:[["2026-11-20","ASH 摘要公布（mRNA-2808 多发性骨髓瘤）"],["2026-12","mRNA-3927（丙酸血症）关键数据读出"],["2026-12-12","ASH 年会 12/12–15：mRNA-2808 完整数据"],["2027-01","mFLUSIVA 上市后首季处方量"],["2027-02","Q4/全年财报（2027 营收指引与年末现金 81–83 亿）"],["2027H1","intismeran（个体化新抗原疗法）监管沟通 / BLA 路径"],["2027H1","流感-新冠联合疫苗 III 期启动"],["2027H2","intismeran 黑色素瘤辅助治疗上市申请递交"]],
+  LITE:[["2026-11-20","MRVL 股价（换股价值 = 4.5 × MRVL，当前折价约 15%）"],["2026-12","CPO/NPO 第二单 50 亿美元采购承诺的交付节奏"],["2027-02","FY27Q2 财报（指引 15.75–16.25 亿 / EPS 5.90–6.20）"],["2027-03","OCS（光路交换）订单与产能扩张"],["2027H1","S-4 生效与双方股东会（并购审批第一步）"],["2027H1","中国 / 欧盟反垄断审查（合并最大不确定性）"],["2027H2","FY28 指引与 10 亿美元协同的落地路径"],["2028H1","交易交割（预计 2028 上半年完成）"]],
+  AEHR:[["2026-12","Sonoma 第二个 AI 处理器的量产爬坡订单"],["2027-01","台湾 OSAT 的 FOX-XP 装机（计划 2027 年初）"],["2027-02","FY27Q2 财报（book-to-bill 与 backlog 转化）"],["2027-03","台湾客户高产量验证结论（是否进入量产）"],["2027-04","FY27Q3 财报（全年 1.5 亿指引兑现度）"],["2027H1","硅光 / SiC 新客户首单"],["2027H1","Sonoma 产能扩张（月交付十余台 → 二十台以上）"],["2027-07","FY27 全年业绩与 FY28 指引（第二个客户量产与否）"]]
 };
 
 /* ---------- 06 ---------- */
@@ -4419,8 +4567,18 @@ function route(){
   if(mod.id==="stocks"){
     const f=$("#stock-filters");
     const keys=["全部"].concat(TRACK_SEQ.filter(t=>DATA.stocks.some(s=>trkOf(s)===t)));
+    /* 市场 / 策略建议只在池内实际出现过的选项才渲染，避免空按钮 */
+    const mkts=["全部"].concat(["美股","港股","A 股"].filter(m=>DATA.stocks.some(s=>mktOf(s.t)===m)));
+    const actOrder=["增配","持有","观察","减配","减持","清仓"];
+    const acts=["全部"].concat(actOrder.filter(a=>DATA.stocks.some(s=>(STOCK_ADVICE[s.t]||{}).act===a)));
+    const cntOf=(fn)=>DATA.stocks.filter(fn).length;
     const drawStk=()=>{
       $("#stk-body").innerHTML=stkBody(); bindStk();
+      const c=$("#stk-cnt");
+      if(c){
+        const n=$("#stk-body").querySelectorAll("tr[data-i]").length;
+        c.textContent=n===DATA.stocks.length?("全部 "+n+" 只"):(n+" / "+DATA.stocks.length+" 只（已筛选）");
+      }
     };
     const bindStk=()=>{
       $("#stk-body").querySelectorAll("th[data-sort]").forEach((th)=>{
@@ -4434,18 +4592,48 @@ function route(){
         tr.onclick=()=>openStock(+tr.dataset.i);
       });
     };
+    const chip=(on,attr,label,extra)=>'<button class="fchip'+(on?' on':'')+'" '+attr+(extra||"")+'>'+label+'</button>';
     const drawChips=()=>{
-      f.innerHTML=keys.map((k)=>'<button class="fchip'+(STK_ST.trk===k?' on':'')+'" data-t="'+k+'">'+(k==="全部"?"全部赛道":TRACK_NAME[k])+'</button>').join("")+
-        '<button class="fchip'+(STK_ST.near?' on':'')+'" data-x="near">45 天内有催化</button>'+
-        '<button class="fchip'+(STK_ST.upd?' on':'')+'" data-x="upd">策略有更新</button>';
+      f.innerHTML=
+        '<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px">'+
+          '<span class="tiny muted" style="align-self:center;width:44px">市场</span>'+
+          mkts.map(k=>chip(STK_ST.mkt===k,'data-m="'+k+'"',k==="全部"?"全部市场":k+' <span class="tiny" style="opacity:.6">'+(k==="全部"?cntOf(()=>true):cntOf(s=>mktOf(s.t)===k))+'</span>')).join("")+
+        '</div>'+
+        '<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:6px">'+
+          '<span class="tiny muted" style="align-self:center;width:44px">赛道</span>'+
+          keys.map(k=>chip(STK_ST.trk===k,'data-t="'+k+'"',(k==="全部"?"全部赛道":TRACK_NAME[k])+' <span class="tiny" style="opacity:.6">'+(k==="全部"?cntOf(()=>true):cntOf(s=>trkOf(s)===k))+'</span>')).join("")+
+        '</div>'+
+        '<div style="display:flex;flex-wrap:wrap;gap:5px">'+
+          '<span class="tiny muted" style="align-self:center;width:44px">建议</span>'+
+          acts.map(k=>chip(STK_ST.act===k,'data-a="'+k+'"',k==="全部"?"全部建议":k+' <span class="tiny" style="opacity:.6">'+(k==="全部"?cntOf(()=>true):cntOf(s=>(STOCK_ADVICE[s.t]||{}).act===k))+'</span>')).join("")+
+          '<span style="width:10px"></span>'+
+          chip(STK_ST.near,'data-x="near"','45 天内有催化 <span class="tiny" style="opacity:.6">'+cntOf(s=>{const c=catNext(s.t);const d=c?((c.e-Date.parse(DATA.meta.date))/864e5):null;return d!=null&&d>=-1&&d<=45;})+'</span>')+
+          chip(STK_ST.upd,'data-x="upd"','策略有更新 <span class="tiny" style="opacity:.6">'+cntOf(s=>(STOCK_ADVICE[s.t]||{}).upd)+'</span>')+
+        '</div>';
       f.querySelectorAll(".fchip").forEach(b=>{
         b.onclick=()=>{
           if(b.dataset.x){ STK_ST[b.dataset.x]=!STK_ST[b.dataset.x]; }
+          else if(b.dataset.m!=null){ STK_ST.mkt=b.dataset.m; }
+          else if(b.dataset.a!=null){ STK_ST.act=b.dataset.a; }
           else STK_ST.trk=b.dataset.t;
           drawChips(); drawStk();
         };
       });
     };
+    const qi=$("#stk-q");
+    if(qi){
+      qi.value=STK_ST.q||"";
+      qi.oninput=()=>{ STK_ST.q=qi.value; drawStk(); };
+      qi.onkeydown=(e)=>{ if(e.key==="Escape"){ qi.value=""; STK_ST.q=""; drawStk(); } };
+    }
+    const rs=$("#stk-reset");
+    if(rs){
+      rs.onclick=()=>{
+        STK_ST.trk="全部"; STK_ST.mkt="全部"; STK_ST.act="全部"; STK_ST.q=""; STK_ST.near=false; STK_ST.upd=false;
+        if(qi) qi.value="";
+        drawChips(); drawStk();
+      };
+    }
     drawChips(); drawStk();
   }
 

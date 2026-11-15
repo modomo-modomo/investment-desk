@@ -47,6 +47,14 @@ const STOCKS = [
   ["002436.SZ", "002436.SZ", "兴森科技(SHENZHEN FASTPRINT)"],
   ["300604.SZ", "300604.SZ", "长川科技(HANGZHOU CHANGCHUAN)"],
   ["688702.SH", "688702.SS", "盛科通信(SUZHOU CENTEC)"],
+  /* 20261115(11)：美股 7 只新增（AMD 已在池中，不重复） */
+  ["HOOD.O", "HOOD", "罗宾汉(ROBINHOOD)"],
+  ["SOFI.O", "SOFI", "SOFI TECHNOLOGIES"],
+  ["ABCL.O", "ABCL", "ABCELLERA BIOLOGICS"],
+  ["TWST.O", "TWST", "TWIST BIOSCIENCE"],
+  ["MRNA.O", "MRNA", "MODERNA"],
+  ["LITE.O", "LITE", "LUMENTUM"],
+  ["AEHR.O", "AEHR", "AEHR TEST SYSTEMS"],
 ];
 
 const INDICES = [
