@@ -57,6 +57,16 @@ const STOCKS = [
   ["AEHR.O", "AEHR", "AEHR TEST SYSTEMS"],
   /* 20261115(12) */
   ["FROG.O", "FROG", "JFROG"],
+  /* 20261116(1)：物理 AI / 机器人链 A 股 9 只（创业板 301→SZ，沪市主板 603/605 与科创板 688→SS） */
+  ["301000.SZ", "301000.SZ", "肇民科技(ZHAOMIN TECH)"],
+  ["301413.SZ", "301413.SZ", "安培龙(AMPRON)"],
+  ["301550.SZ", "301550.SZ", "斯菱智驱(SILING)"],
+  ["301529.SZ", "301529.SZ", "福赛科技(FUSAI TECH)"],
+  ["605488.SH", "605488.SS", "福莱新材(FULAI NEW MATERIAL)"],
+  ["688507.SH", "688507.SS", "索辰科技(SUOCHEN TECH)"],
+  ["603626.SH", "603626.SS", "科森科技(KESEN)"],
+  ["603179.SH", "603179.SS", "新泉股份(XINQUAN)"],
+  ["603119.SH", "603119.SS", "浙江荣泰(ZHEJIANG RONGTAI)"],
 ];
 
 const INDICES = [
