@@ -584,7 +584,7 @@ tr.isnew td{background:#fffafa}
     </div>
     <div class="topbar-right">
       <span class="pill warn" id="feed-pill">行情未连接 · 示例数据</span>
-      <span class="pill"><b id="hdr-date">2026-11-11</b><span class="muted">周三 · 北京</span></span>
+      <span class="pill"><b id="hdr-date">2026-11-11</b><span class="muted" id="hdr-week">周四 · 北京</span></span>
       <button class="btn-ghost" id="btn-print">导出 / 打印</button>
     </div>
   </header>
@@ -1705,6 +1705,15 @@ function hydrate(L){
   FEED.lastSyncET = st.et;
   DATA.meta.syncedISO = L.meta.syncedAt;
   DATA.meta.dataAsOf = L.meta.stockDate;
+  /* 侧栏/顶栏的「数据基准日」跟随行情管道的最近已结算收盘，不再用手写 meta（20261115(14b)） */
+  const sd = L.meta.stockDate || L.meta.indexDate;
+  if (/^\d{8}$/.test(sd || "")) {
+    const iso = sd.slice(0, 4) + "-" + sd.slice(4, 6) + "-" + sd.slice(6, 8);
+    const wk = ["周日","周一","周二","周三","周四","周五","周六"][new Date(iso + "T12:00:00Z").getUTCDay()];
+    DATA.meta.date = iso;
+    DATA.meta.closeDate = iso;
+    DATA.meta.week = wk;
+  }
   DATA.meta.updatedPT = st.bj;
   DATA.meta.nextPT = nextSession();
 
@@ -5379,6 +5388,7 @@ if (YF) {
 $("#side-date").textContent=DATA.meta.date;
 $("#side-week").textContent=DATA.meta.week;
 $("#hdr-date").textContent=DATA.meta.date;
+$("#hdr-week").textContent=DATA.meta.week+" · 北京";
 $("#feed-state").textContent=FEED.connected?("Yahoo 已连接 · "+(FEED.lastSync||"已同步")):"Yahoo 未连接";
 $("#side-sync").textContent=(function(){
   if(!FEED.connected) return "尚未同步";
