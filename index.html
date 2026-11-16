@@ -4342,21 +4342,19 @@ function phCard(t,d){
   return '<div class="ph-card"><div class="t">'+t+'</div><div class="d">'+d+'</div>'+
     '<div class="skel"><i></i><i></i><i></i></div></div>';
 }
-/* ---------- 07 模拟组合（20261115(12)） ----------
-   建仓：2026-11-06 收盘价（用户指定口径），权重按给定比例，现金 20%
-   现价 / 当日涨跌走 live；组合净值 = Σ 建仓权重×(现价/建仓价) + 现金
-   基准同样以 11-06 收盘为基期，硬编码基期点位，避免「滚动 5 日」把基准窗口带跑 */
+/* ---------- 07 模拟组合（20261116(1) 修订） ----------
+   建仓：2026-11-06 收盘价（用户指定口径），权重按给定比例，现金 25%
+   兴森科技已移出组合（5% 转入现金）；净值序列按新口径重算 */
 const PF = {
   base:"2026-11-06",
-  cashW:20,
+  cashW:25,
   rows:[
     {t:"2105.HK",  w:20, px0:6.05},
     {t:"IREN",     w:15, px0:21.64},
     {t:"ONTO",     w:10, px0:173.28},
     {t:"META",     w:10, px0:610.15},
     {t:"TSLA",     w:10, px0:358.22},
-    {t:"CHKP",     w:10, px0:144.17},
-    {t:"002436.SZ", w:5, px0:25.65}
+    {t:"CHKP",     w:10, px0:144.17}
   ],
   bench:[
     {k:"SPX.GI", n:"标普 500", b:7376.86},
@@ -4415,7 +4413,7 @@ function pfRiskRules(){
     R(5,"现金缓冲",cashW.toFixed(1)+"%（"+PF.cashW+"% ÷ 净值 "+c.nav.toFixed(3)+"）",cashW,10,15,"down","10% / 15%","现金 <10% 先卖再加；<15% 停止一切加仓"),
     R(6,"组合累计收益",pct(c.ret*100,2)+"（起点 "+PF.base+"）",c.ret*100,-5,-2,"down","-5% / -2%","亏 5% 即降总仓位 10pct——这是纪律，不是预测"),
     R(7,"相对基准超额","vs 标普 "+(alpha==null?"—":(alpha>0?"+":"")+alpha.toFixed(2)+"pct")+" · vs 费半 "+(lagSox==null?"—":(lagSox>0?"+":"")+lagSox.toFixed(2)+"pct"),lagSox,-5,-2,"down","-5pct / -2pct","跑输费半但跑赢标普 = 选股没问题、赛道 beta 拖累，不必换股"),
-    R(8,"非美元资产敞口","2105.HK + 002436.SZ 合计 "+fxW.toFixed(1)+"%",fxW,30,25,"up","30% / 25%","港币/人民币敞口未套保，>30% 时新增仓位只用美元资产")
+    R(8,"非美元资产敞口","2105.HK（港币计价）"+fxW.toFixed(1)+"%",fxW,30,25,"up","30% / 25%","港币敞口未套保，>30% 时新增仓位只用美元资产；兴森移出组合后仅剩来凯一条非美元腿")
   ];
   return {rules:rules, nav:c.nav, ret:c.ret, alpha:alpha, cashW:cashW, maxW:maxRow.w1, maxT:maxRow.t};
 }
@@ -4778,8 +4776,8 @@ function viewPortfolio(){
      (spx&&spx.ret!=null?('，同期标普 '+pct(spx.ret*100,2)+'、费半 '+pct((c.bench.find(b=>b.n==="费城半导体")||{}).ret*100,2)):'')+
      '。<b>最大贡献</b> '+winner.t+' <span class="chg '+sgn(winner.contrib)+'">'+pct(winner.contrib,2)+'pct</span>'+
      '，<b>最大拖累</b> '+loser.t+' <span class="chg '+sgn(loser.contrib)+'">'+pct(loser.contrib,2)+'pct</span>。'+
-     '持仓 80% 集中在 AI 算力链（IREN / ONTO / META / TSLA）与两条独立腿（来凯医药、兴森科技），'+
-     '现金 20% 是这一轮高波动下的机动仓位——<b>不动权重，只看逻辑是否被破坏</b>。</div></div>';
+     '持仓 75%：AI 算力链 45%（IREN / ONTO / META / TSLA）+ 来凯医药 20% + 网安防守腿 CHKP 10%（兴森科技已按 20261116(1) 修订移出组合），'+
+     '现金 <b>25%</b> 是这一轮高波动下的机动仓位——<b>不动权重，只看逻辑是否被破坏</b>。</div></div>';
 
   /* 02 持仓饼图 */
   h+='<div class="sec">'+secHead("02","持仓结构","按当前权重（含现金）· 价格漂移后自动归一，不做再平衡",
@@ -4817,9 +4815,11 @@ function viewPortfolio(){
   h+='<tr style="font-weight:700"><td>现金</td><td class="num">'+PF.cashW+'%</td><td class="num">0.00</td><td class="tiny">缓冲</td></tr>';
   h+='</tbody></table><div class="tiny muted" style="margin-top:6px">贡献 = 建仓权重 × 期间收益（百分点）。AI 算力链（IREN / ONTO / META / TSLA）建仓合计 '+
      c.rows.filter(x=>["IREN","ONTO","META","TSLA"].indexOf(x.t)>=0).reduce((a,x)=>a+x.w0,0)+
-     '%，事件腿（来凯医药 + 兴森科技）合计 '+
-     c.rows.filter(x=>["2105.HK","002436.SZ"].indexOf(x.t)>=0).reduce((a,x)=>a+x.w0,0)+
-     '%，现金 '+PF.cashW+'%——组合本质是<b>一条 AI 主线 + 两条独立事件 + 缓冲</b>。</div></div>';
+     '%，独立事件腿（来凯医药）合计 '+
+     c.rows.filter(x=>x.t==="2105.HK").reduce((a,x)=>a+x.w0,0)+
+     '%，网安防守腿（CHKP）合计 '+
+     c.rows.filter(x=>x.t==="CHKP").reduce((a,x)=>a+x.w0,0)+
+     '%，现金 '+PF.cashW+'%——组合本质是<b>一条 AI 主线 + 一条独立事件 + 一条防守 + 更厚的现金缓冲</b>（兴森科技已按 20261116(1) 修订移出）。</div></div>';
   h+='</div>';
 
   /* 05 持仓明细 */
@@ -4831,7 +4831,7 @@ function viewPortfolio(){
   h+='<div class="sec">'+secHead("06","口径与纪律","固定建仓价 · 不随行情改动 · 便于回溯决策质量","<span class='upd'>只记录，不预测</span>");
   h+='<div class="card" style="padding:14px 16px"><div style="font-size:12px;line-height:1.95">'+
      '<b>1. 买入价口径：</b>全部持仓以 <b>2026-11-06 收盘价</b> 建仓（'+PF.rows.map(r=>r.t+" "+r.px0.toFixed(2)).join("；")+'），此后不再调整买入价，避免“摊薄成本”把判断失误藏起来。<br>'+
-     '<b>2. 权重口径：</b>建仓权重 20/15/10/10/10/10/5 + 现金 20；<b>当前权重</b>随价格漂移自动归一，不做再平衡——再平衡会被单列成交易记录。<br>'+
+     '<b>2. 权重口径：</b>建仓权重 20/15/10/10/10/10 + 现金 25（20261116(1) 修订：兴森科技 5% 移出、转入现金）；<b>当前权重</b>随价格漂移自动归一，不做再平衡——再平衡会被单列成交易记录。<br>'+
      '<b>3. 币种口径：</b>来凯医药按 <b>HK$</b>、兴森科技按 <b>¥</b>、其余按 <b>$</b> 计价；组合收益为各持仓<b>本币收益的加权</b>，未计汇率波动（人民币口径会额外受美元/港币影响）。<br>'+
      '<b>4. 基准口径：</b>标普 500 / 纳指 100 / 费半 / 恒指均取 11-06 收盘为基期，与组合同一起点，避免“基准窗口滚动”造成的假超额。<b>净值走势图里纳指 100 与恒生指数默认关闭，需要时手动勾选叠加</b>。<br>'+
      '<b>5. 净值口径：</b>净值 = Σ 建仓权重 ×（现价 / 买入价）+ 现金，逐日收盘后由 <code>sync-pf.mjs</code> 追加一个点，<b>历史点不回改</b>——回撤与超额都能回溯到具体哪一天。<br>'+
