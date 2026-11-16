@@ -1,6 +1,6 @@
 window.FED_DATA = {
  "meta": {
-  "syncedAt": "2026-11-16T15:39:55.859Z",
+  "syncedAt": "2026-11-16T23:43:18.725Z",
   "board": [
    {
     "zh": "沃什",
@@ -48,27 +48,27 @@ window.FED_DATA = {
   "probs": [
    {
     "label": "加息 25bp",
-    "p": 95.5,
+    "p": 97.5,
     "color": "#d2373a"
    },
    {
     "label": "加息 50bp",
-    "p": 4.5,
+    "p": 2.5,
     "color": "#d2373a"
    }
   ],
-  "impliedAfter": 4.141,
-  "impliedMoveBp": 26.1,
+  "impliedAfter": 4.136,
+  "impliedMoveBp": 25.6,
   "effr": 3.88,
   "target": "3.75–4%",
   "effrDate": "2026-11-13",
   "futPx": 4.064999999999998,
   "futSym": "ZQZ26.CBT",
-  "futAt": "2026-11-16 23:28",
+  "futAt": "2026-11-17 07:04",
   "path": [
    {
     "d": "2027-01-27",
-    "implied": 4.32
+    "implied": 4.315
    },
    {
     "d": "2027-03-17",
@@ -85,8 +85,8 @@ window.FED_DATA = {
   "tone": "继续收紧",
   "hawk": 4,
   "dove": 0,
-  "neutral": 0,
-  "total": 4,
+  "neutral": 1,
+  "total": 5,
   "topics": {
    "市场": 3,
    "通胀": 3,
@@ -94,9 +94,25 @@ window.FED_DATA = {
    "利率": 3
   },
   "agree": true,
-  "text": "最近一次记者会（2026-10-28）已维持不变 → 3.75–4.00%，近 200 天主席表态 偏鹰 4 / 中性 0 / 偏鸽 0 → 方向指向<b>继续收紧</b>；期货自算 2026 年 12 月 8-9 日最可能为<b>加息 25bp 95.5%</b>，<b>与表态同向</b>（口径一致，可作为基准情形）。"
+  "text": "最近一次记者会（2026-10-28）已维持不变 → 3.75–4.00%，近 200 天主席表态 偏鹰 4 / 中性 1 / 偏鸽 0 → 方向指向<b>继续收紧</b>；期货自算 2026 年 12 月 8-9 日最可能为<b>加息 25bp 97.5%</b>，<b>与表态同向</b>（口径一致，可作为基准情形）。"
  },
  "speeches": [
+  {
+   "date": "2026-11-16",
+   "url": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+   "title": "Opening Remarks",
+   "cnTitle": "开幕致辞",
+   "speaker": "沃什",
+   "en": "Kevin Warsh",
+   "role": "主席",
+   "venue": "At the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California",
+   "snip": "我还要感谢 Marc、Chad 和 Asha 领导我们的生产力和<b>就业</b>工作组。这些团体是拓宽我们思维的一种方式。 。 。邀请激烈的讨论，让我们比转瞬即逝的数据点或日常市场波动走得更远、更深入。然而，正如尼克·布鲁姆、查德·琼斯及其合著者所指出的那样，“研究生产力的下降幅度更大。” 2 结果：生产力...",
+   "snipEn": "I also want to thank Marc, Chad, and Asha for leading our Productivity and Jobs Task Force. These groups are a way of broadening our thinking . . . of inviting robust discussions that take us further and deeper than fleeting data points or daily market moves. Yet, as Nick Bloom, Chad Jones, and their coauthors have pointed out, \"Research productivity has fallen by an even larger amount.\" 2 The result: Productivi…",
+   "tone": "中性",
+   "read": "中性：强调 AI/生产率是供给端变量，属结构性而非周期信号；强调 AI/生产率是供给端变量，属结构性而非周期信号。",
+   "impact": "对定价影响有限，市场更看重随后公布的数据（CPI / 非农）而非表态本身",
+   "isNew": true
+  },
   {
    "date": "2026-10-28",
    "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",

@@ -1,22 +1,212 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-16T15:39:40.719Z",
+  "syncedAt": "2026-11-16T23:43:03.062Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 3000,
-  "total": 0,
-  "ok": 0,
+  "corpus": 3100,
+  "total": 11,
+  "ok": 10,
   "full": 0
  },
- "items": {},
+ "items": {
+  "MNTK": {
+   "symbol": "MNTK",
+   "name": "Montauk Renewables, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Montauk Renewables, Inc. Q3 2026 Earnings Call Summary",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/montauk-renewables-inc-q3-2026-215353365.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "GAME": {
+   "symbol": "GAME",
+   "name": "GameSquare Holdings, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "GameSquare Holdings Inc (GAME) (Q3 2026) Earnings Call Highlights: 77% Revenue Surge, Positive ...",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/gamesquare-holdings-inc-game-q3-230103276.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "IQ": {
+   "symbol": "IQ",
+   "name": "iQIYI, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "iQIYI (IQ) Q3 2026 Earnings Call Transcript",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/iqiyi-iq-q3-2026-earnings-211821744.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "CREX": {
+   "symbol": "CREX",
+   "name": "Creative Realities, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Creative Realities Inc (CREX) (Q3 2026) Earnings Call Highlights: Record Revenue Surge and ...",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/creative-realities-inc-crex-q3-210110606.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "BLDP": {
+   "symbol": "BLDP",
+   "name": "Ballard Power Systems, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Ballard Power Systems Inc (BLDP) Q3 2026 Earnings Call Highlights: Margin Gains and GeoPura ...",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/energy/articles/ballard-power-systems-inc-bldp-230052751.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "POET": {
+   "symbol": "POET",
+   "name": "POET Technologies Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "POET Technologies Stock Plunges After Q3 Earnings — CEO Targets 10-Fold Capacity Expansion",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/poet-technologies-stock-plunges-q3-160029029.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "HTHT": {
+   "symbol": "HTHT",
+   "name": "H World Group Limited",
+   "session": "pre",
+   "ok": true,
+   "headline": "H World Group Ltd (HTHT) (Q3 2026) Earnings Call Highlights: Revenue Up 11. ...",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/h-world-group-ltd-htht-190101638.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "TSN": {
+   "symbol": "TSN",
+   "name": "Tyson Foods, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Tyson Foods, Inc. Q4 2026 Earnings Call Summary",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tyson-foods-inc-q4-2026-215753085.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "TRNR": {
+   "symbol": "TRNR",
+   "name": "Interactive Strength Inc.",
+   "session": "pre",
+   "ok": false,
+   "headline": "",
+   "date": "",
+   "url": "",
+   "res": [],
+   "guide": [],
+   "src": "",
+   "matched": 0,
+   "kept": 0,
+   "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
+  },
+  "BIDU": {
+   "symbol": "BIDU",
+   "name": "Baidu, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Baidu Inc (BIDU) (Q3 2026) Earnings Call Highlights: AI Cloud Infra Surges 94% as General ...",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/technology/ai/articles/baidu-inc-bidu-q3-2026-210112124.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "BEKE": {
+   "symbol": "BEKE",
+   "name": "KE Holdings Inc",
+   "session": "pre",
+   "ok": true,
+   "headline": "KE Holdings (BEKE) Q3 2026 Earnings Call Transcript",
+   "date": "2026-11-16",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ke-holdings-beke-q3-2026-194433207.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  }
+ },
  "trump": {
   "items": [
+   {
+    "d": "2026-11-17",
+    "t": "11-17 07:27",
+    "o": "【特朗普：不介意黄仁勋重返英伟达】11月17日，据路透社报道，美国总统特朗普当地时间周一表示，他不反对黄仁勋重返英伟达担任首席执行官，并称不少人希望黄仁勋回归，这一想法“并不坏”。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-17",
+    "t": "11-17 01:16",
+    "o": "据报道，法院推翻特朗普针对外国留学生的时限规定。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-17",
+    "t": "11-17 00:08",
+    "o": "【事关黄仁勋 特朗普发声！段永平：不想急着逃】美国总统特朗普称，黄仁勋没有危害国家安全。他表示，黄仁勋重返英伟达并非坏事。段永平在社交媒体上回应英伟达近期风波时表示，尽管黄仁勋离职带来巨大影响，但英伟达的核心竞争力依然存在，自己目前并不打算卖出股票。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
    {
     "d": "2026-11-16",
     "t": "11-16 22:58",
     "o": "【特朗普：不介意黄仁勋重掌英伟达】11月16日，美国总统特朗普表示，不介意黄仁勋重新出任英伟达首席执行官，并称很多人希望黄仁勋回归，“这当然不是一个坏主意”。特朗普还表示，黄仁勋“吸取了深刻教训”。此前，美国财政部长贝森特曾呼吁英伟达进行“大幅调整”，并通过外部招聘寻找新任领导人",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-16",
@@ -24,7 +214,7 @@ window.NEWS_DATA = {
     "o": "美国总统特朗普表示，不考虑更换商务部长卢特尼克。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-16",
@@ -32,7 +222,7 @@ window.NEWS_DATA = {
     "o": "【特朗普：期待参加中俄美元首会晤】11月16日外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统<b>普京</b>、美国总统特朗普在深圳举行中俄美元首会晤。此前，特朗普对媒体表示，自己很期待参加中俄美元首会晤。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-16",
@@ -40,7 +230,7 @@ window.NEWS_DATA = {
     "o": "外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统<b>普京</b>、美国总统特朗普在深圳举行中俄美元首会晤。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
-    "isNew": false
+    "isNew": true
    },
    {
     "d": "2026-11-14",
@@ -81,44 +271,254 @@ window.NEWS_DATA = {
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
     "isNew": false
-   },
-   {
-    "d": "2026-11-14",
-    "t": "11-14 08:47",
-    "o": "【特朗普说美空管系统故障与网络攻击无关】据美国福克斯新闻频道13日报道，美国总统特朗普当天在接受该媒体记者采访时说，美国空管系统故障与网络攻击或<b>人工智能</b>无关，而是由老旧、破损的基础设施导致。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-14",
-    "t": "11-14 06:20",
-    "o": "【特朗普就全美停飞听取简报】美国东部时间11月13日下午，美国国土安全部长马克韦恩·马林就全国范围内的航班停飞表示，美国总统特朗普已听取简报。据美媒援引知情人士消息报道，美国联邦调查局认为，导致空中交通管制系统出现通信故障的并非网络攻击或犯罪行为，目前调查重点之一是此次故障是否由",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-14",
-    "t": "11-14 01:50",
-    "o": "特朗普将针对<b>石油</b>和化肥运输的航运豁免延长90天。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "能源价格表态短期扰动油价，供需才是定价主轴。",
-    "isNew": false
    }
   ],
-  "logCount": 26
+  "logCount": 30
  },
- "moversNews": {},
+ "moversNews": {
+  "GLAS": {
+   "ok": true,
+   "title": "Glass House Brands Q3 Net Loss Narrows, Revenue Increases",
+   "summary": "",
+   "t": "11-17 06:08",
+   "src": "MT Newswires（英文）",
+   "cause": false,
+   "en": true
+  },
+  "RCAT": {
+   "ok": true,
+   "title": "Red Cat Q3 2026 Earnings Call: Recap of $RCAT Earnings, Stock Forecast",
+   "summary": "",
+   "t": "11-17 07:29",
+   "src": "TheStreet（英文）",
+   "cause": false,
+   "en": true
+  },
+  "NGEN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "EMAT": {
+   "ok": true,
+   "title": "Evolution Metals & Technologies Corp. Reports Third Quarter 2026 Financial Results and Provides Corporate Update",
+   "summary": "",
+   "t": "11-17 05:38",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "SLS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TROO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BGIN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LCTX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SRTA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "OMER": {
+   "ok": true,
+   "title": "Omeros falls 10% despite revenue beat",
+   "summary": "",
+   "t": "11-17 05:50",
+   "src": "Investing.com（英文）",
+   "cause": false,
+   "en": true
+  },
+  "CMPX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "EGG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NSLR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SVRA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACM": {
+   "ok": true,
+   "title": "AECOM rises on earnings beat and strong guidance",
+   "summary": "",
+   "t": "11-17 05:46",
+   "src": "Investing.com（英文）",
+   "cause": false,
+   "en": true
+  },
+  "NKLR": {
+   "ok": true,
+   "title": "Terra Innovatum Reports Third Quarter 2026 Financial Results and Continued Progress Toward First Solo™ Reactor Deployment",
+   "summary": "",
+   "t": "11-17 06:30",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "RNAC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LOMA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FIRY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "USDE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NINE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DFH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AKBA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BUUU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "REA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NCMI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SITE": {
+   "ok": true,
+   "title": "SiteOne Landscape Supply jumps 7% on S&P SmallCap 600 inclusion",
+   "summary": "",
+   "t": "11-17 06:57",
+   "src": "Investing.com（英文）",
+   "cause": false,
+   "en": true
+  },
+  "ARQT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FXHO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LZM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PICS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SLSN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CPRI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VNCE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CDXS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INTC": {
+   "ok": true,
+   "title": "英伟达将其在英特尔的持股削减了25%",
+   "summary": "SEC文件显示，英伟达将其在英特尔的持股削减了25%，至1.611亿股；将其在SpaceX的持股增加了6.3%，至1.305亿股A类股。",
+   "t": "11-17 05:48",
+   "src": "东方财富 7×24",
+   "cause": false,
+   "mismatch": false,
+   "score": 0,
+   "cand": 1
+  },
+  "WLDN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SHAZ": {
+   "ok": true,
+   "title": "SharonAI falls as third quarter revenue misses estimates",
+   "summary": "",
+   "t": "11-17 06:06",
+   "src": "Investing.com（英文）",
+   "cause": false,
+   "en": true
+  },
+  "AREC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "COTY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SES": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PLG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  }
+ },
  "geo": {
   "items": [
    {
-    "t": "2026-11-16 23:30",
+    "t": "2026-11-17 06:57",
     "topic": "美伊谈判",
-    "o": "【伊朗称多艘油轮在霍尔木兹海峡触雷】伊朗伊斯兰革命卫队和伊朗海军11月16日称，多艘油轮在霍尔木兹海峡触雷。伊朗方面强调，“关闭导航系统且未经伊朗授权擅自进入限制区域或不安全海域，会使违规船只面临严重风险。”",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "o": "【伊朗军方：若美国不接受伊条件 霍尔木兹海峡将继续关闭】当地时间16日晚，伊朗军队发言人阿克拉米尼亚表示，如果美国不接受伊朗所设定的条件，霍尔木兹海峡将继续保持关闭状态。此外，即便他们接受了这些条件，外国军队在波斯湾和阿曼湾的存在也构成了对地区安全的威胁，这种局面必须终结，而霍尔木兹海峡将永远不会回到战前的状态。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "原油与地缘风险溢价",
     "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-17 06:18",
+    "topic": "俄乌局势",
+    "o": "【乌克兰首都基辅响起强烈爆炸声】当地时间16日23时30分左右，乌克兰首都基辅响起两轮强烈爆炸声。基辅此前刚刚拉响防空警报。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-17 01:00",
+    "topic": "美伊谈判",
+    "o": "【巴基斯坦陆军总参谋长会见伊朗外长 讨论双边关系及地区局势】当地时间16日，巴基斯坦陆军总参谋长穆尼尔在伊斯兰堡会见了到访的伊朗外长阿拉格齐。会晤期间，双方回顾了地区及国际局势的发展，并就拓展共同关心的双边关系议题进行了探讨。",
+    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "s",
     "isNew": true
    },
    {
@@ -128,52 +528,7 @@ window.NEWS_DATA = {
     "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 21:24",
-    "topic": "美伊谈判",
-    "o": "【伊朗军队称24小时内第三艘油轮在霍尔木兹海峡触雷起火】当地时间16日，伊朗军队海军表示，当天早些时候，一艘违反规定的油轮在霍尔木兹海峡以东海域航行，该船不仅偏离了获准航线，还关闭了导航系统。随后，该船触雷起火。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 20:01",
-    "topic": "俄乌局势",
-    "o": "乌克兰称袭击了俄罗斯伊尔斯基炼油厂。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 19:30",
-    "topic": "美伊谈判",
-    "o": "俄罗斯外长拉夫罗夫与伊朗外长阿拉格齐就中东局势进行了讨论。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 19:07",
-    "topic": "美伊谈判",
-    "o": "【伊朗战事死亡美军家属要求美军担责】当地时间11月15日晚，美国哥伦比亚广播公司（CBS）《60分钟》节目采访了美国对伊朗战事中死亡美军士兵的家属，以及曾遭伊朗打击的科威特美军基地士兵。这些美军士兵称，基地根本就没有针对空袭的防御措施，更没有足够的人力和设备应对大规模伤亡事件。死亡美军的家属表示，亲人之死是美军的责任，是军方有人作出了错误的决定。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 18:55",
-    "topic": "俄乌局势",
-    "o": "乌克兰军方称，袭击了俄罗斯亚速城的两处油库。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
+    "isNew": false
    },
    {
     "t": "2026-11-16 18:20",
@@ -182,16 +537,7 @@ window.NEWS_DATA = {
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 16:35",
-    "topic": "俄乌局势",
-    "o": "【俄称克里米亚大桥遭袭 多地遭大规模无人机袭击】据俄罗斯媒体16日报道，克里米亚大桥遭到袭击，交通预计受限至当日中午前后。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
+    "isNew": false
    },
    {
     "t": "2026-11-16 15:54",
@@ -200,16 +546,7 @@ window.NEWS_DATA = {
     "r": "制裁升级利空受影响供应链、利好替代环节；落地前是情绪波动，不提前建仓。",
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 15:28",
-    "topic": "APEC",
-    "o": "【澳大利亚对华蒸压加气混凝土产品启动双反调查】澳大利亚贸易救济委员会2026年11月16日发布第2026/153号公告称，应澳大利亚国内企业CSR Building Products Ltd提交的申请，对进口自中国的蒸压加气混凝土砌块或板材启动反倾销和反补贴调查。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "t",
-    "isNew": true
+    "isNew": false
    },
    {
     "t": "2026-11-16 15:17",
@@ -218,7 +555,7 @@ window.NEWS_DATA = {
     "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
     "imp": "中美关系 · 贸易与供应链",
     "lvl": "s",
-    "isNew": true
+    "isNew": false
    },
    {
     "t": "2026-11-16 15:16",
@@ -273,6 +610,51 @@ window.NEWS_DATA = {
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "t",
     "isNew": true
+   },
+   {
+    "t": "2026-11-16 12:35",
+    "topic": "APEC",
+    "o": "【李家超将前往深圳 出席亚太经合组织领导人非正式会议及相关活动】香港特区行政长官李家超明日（17日）启程前往深圳，出席亚太区经济合作组织（亚太经合组织）领导人非正式会议及相关活动。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 11:28",
+    "topic": "APEC",
+    "o": "【墨西哥总统抵达深圳】今天（11月16日）上午，墨西哥总统辛鲍姆乘飞机抵达深圳宝安国际机场。辛鲍姆总统将出席在深圳举行的亚太经合组织第三十三次领导人非正式会议。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 10:50",
+    "topic": "俄乌局势",
+    "o": "【泽连斯基再次呼吁解除对乌使用“星盾”限速】乌克兰总统泽连斯基15日重申，乌军目前使用美国“星盾”卫星通信系统仍受限制，影响对乌克兰能源基础设施的防御能力。他在社交媒体发帖说，乌军前线拦截无人机一旦飞行速度超过时速约160公里，就会失去与操控端的信号，难以拦截俄军无人机，乌方希望“这些限制能够解除”。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 09:36",
+    "topic": "APEC",
+    "o": "【李成钢会见美国大西洋理事会会长兼首席执行官坎普】据商务部消息，11月13日下午，中华人民共和国国际贸易谈判代表（正部长级）兼商务部副部长李成钢会见美国大西洋理事会会长兼首席执行官坎普，双方就中美经贸关系等议题进行交流。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-15 19:53",
+    "topic": "美伊谈判",
+    "o": "【伊朗：就霍尔木兹海峡航道与两个沿岸国家达成协议】据伊朗塔斯尼姆通讯社15日报道，伊朗议会国家安全与外交政策委员会发言人卡什卡维说，该委员会已完成霍尔木兹海峡相关方案的专业审议，就有关通行航道“与两个沿岸国家达成协议”。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "s",
+    "isNew": false
    }
   ],
   "logCount": 60
@@ -282,31 +664,32 @@ window.NEWS_DATA = {
    "d": "2026-11-16",
    "kind": "daily",
    "source": "auto",
-   "stance": "窄幅震荡（方向未选）",
-   "stanceNote": "美股 标普 0.00%、纳指 -1.95%、道指 0.00%；中国香港 恒生 —、中国内地 上证 —。VIX +11.2% 至 21.47；等权相对市值加权 20 日 +6.1%——中位数个股强于权重，跌的是大票不是全市场。",
+   "stance": "指数下跌、个股抗跌（结构性调整）",
+   "stanceNote": "美股 标普 -1.92%、纳指 -2.49%、道指 -1.41%；中国香港 恒生 +0.49%、中国内地 上证 -0.87%。VIX +18.7% 至 22.91；等权相对市值加权 20 日 +6.1%——中位数个股强于权重，跌的是大票不是全市场。",
    "conclusions": [
     [
-     "三大市场同日收盘：标普 0.0%、恒生 —、上证 —。",
-     "指数基本走平，纳指 -1.9% vs 道指 0.0%——成长端更弱，资金偏向价值/防御。"
+     "三大市场同日收盘：标普 -1.9%、恒生 +0.5%、上证 -0.9%。",
+     "指数收跌，纳指 -2.5% vs 道指 -1.4%——成长端更弱，资金偏向价值/防御。"
     ],
     [
-     "结构：等权 -0.3%（周） vs 市值加权 -1.1%，差 +0.8%。",
+     "结构：等权 -0.9%（周） vs 市值加权 -1.7%，差 +0.8%。",
      "本周个股表现好于指数，属于“权重拖累、广度改善”的组合，指数弱不代表持仓弱。"
     ],
     [
-     "跨资产：10Y 5.15%、美元指数 103.41、BTC $65,315。",
-     "VIX 21.47（+11.2%）——波动率抬升，分歧在放大；BTC 当日 +0.0%，风险偏好的边际信号偏正面。"
+     "跨资产：10Y 5.12%、美元指数 103.41、BTC $65,317。",
+     "VIX 22.91（+18.7%）——波动率抬升，分歧在放大；BTC 当日 +0.0%，风险偏好的边际信号偏正面。"
     ]
    ],
    "snapshot": {
-    "spx": 0,
-    "ndx": -1.95,
-    "hsi": null,
-    "sh": null,
-    "vix": 21.47,
-    "btc": 65315,
-    "us10y": 5.154
-   }
+    "spx": -1.92,
+    "ndx": -2.49,
+    "hsi": 0.49,
+    "sh": -0.87,
+    "vix": 22.91,
+    "btc": 65317,
+    "us10y": 5.121
+   },
+   "t": "2026-11-16T23:42:17.264Z"
   },
   {
    "d": "2026-11-13",

@@ -1,5 +1,21 @@
 [
  {
+  "date": "2026-11-16",
+  "url": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+  "title": "Opening Remarks",
+  "cnTitle": "开幕致辞",
+  "speaker": "沃什",
+  "en": "Kevin Warsh",
+  "role": "主席",
+  "venue": "At the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California",
+  "snip": "我还要感谢 Marc、Chad 和 Asha 领导我们的生产力和<b>就业</b>工作组。这些团体是拓宽我们思维的一种方式。 。 。邀请激烈的讨论，让我们比转瞬即逝的数据点或日常市场波动走得更远、更深入。然而，正如尼克·布鲁姆、查德·琼斯及其合著者所指出的那样，“研究生产力的下降幅度更大。” 2 结果：生产力...",
+  "snipEn": "I also want to thank Marc, Chad, and Asha for leading our Productivity and Jobs Task Force. These groups are a way of broadening our thinking . . . of inviting robust discussions that take us further and deeper than fleeting data points or daily market moves. Yet, as Nick Bloom, Chad Jones, and their coauthors have pointed out, \"Research productivity has fallen by an even larger amount.\" 2 The result: Productivi…",
+  "tone": "中性",
+  "read": "中性：强调 AI/生产率是供给端变量，属结构性而非周期信号；强调 AI/生产率是供给端变量，属结构性而非周期信号。",
+  "impact": "对定价影响有限，市场更看重随后公布的数据（CPI / 非农）而非表态本身",
+  "isNew": true
+ },
+ {
   "date": "2026-10-28",
   "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20261028.pdf",
   "kind": "presser",
