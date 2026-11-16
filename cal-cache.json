@@ -416,5 +416,54 @@
  "2026-11-14|time-after-hours": {
   "at": "2026-11-15T05:41:37.455Z",
   "symbols": []
+ },
+ "2026-11-16|time-pre-market": {
+  "at": "2026-11-16T15:37:13.304Z",
+  "symbols": [
+   "BIDU",
+   "TSN",
+   "BEKE",
+   "HTHT",
+   "ARMK",
+   "XPEV",
+   "BXDC",
+   "POET",
+   "IQ",
+   "BLDP",
+   "PERI",
+   "XTND",
+   "QVCG",
+   "POWW",
+   "NKLR",
+   "CYPH",
+   "TOYO",
+   "AIRJ",
+   "USDE",
+   "MNTK",
+   "NIU",
+   "SMID",
+   "VENU",
+   "VERI",
+   "LNZA",
+   "GAME",
+   "XTNT",
+   "EHLD",
+   "CREX",
+   "ELWT",
+   "CMCT",
+   "VIDA",
+   "CYCU",
+   "DTST",
+   "JAGX",
+   "TRNR",
+   "EDBL",
+   "CSAI",
+   "XXII",
+   "PDCC"
+  ]
+ },
+ "2026-11-13|time-after-hours": {
+  "at": "2026-11-16T15:37:15.327Z",
+  "symbols": []
  }
 }

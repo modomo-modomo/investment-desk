@@ -1,1096 +1,46 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-16T01:09:58.956Z",
+  "syncedAt": "2026-11-16T15:39:40.719Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 3200,
-  "total": 71,
-  "ok": 70,
-  "full": 2
+  "corpus": 3000,
+  "total": 0,
+  "ok": 0,
+  "full": 0
  },
- "items": {
-  "SLSN": {
-   "symbol": "SLSN",
-   "name": "Solesence, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Solesence (SLSN) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/solesence-slsn-q3-2026-earnings-143120394.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "VTSI": {
-   "symbol": "VTSI",
-   "name": "VirTra, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "VirTra Shares Jump After Q3 Swings to Profit",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/virtra-shares-jump-q3-swings-200253447.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SLND": {
-   "symbol": "SLND",
-   "name": "Southland Holdings, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Southland Holdings Inc (SLND) (Q3 2026) Earnings Call Highlights: Revenue Climbs 9. ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/southland-holdings-inc-slnd-q3-230144136.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SHIM": {
-   "symbol": "SHIM",
-   "name": "Shimmick Corporation",
-   "session": "post",
-   "ok": true,
-   "headline": "Shimmick (SHIM) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/shimmick-shim-q3-2026-earnings-064903719.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "NPCE": {
-   "symbol": "NPCE",
-   "name": "Neuropace, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "NeuroPace, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/neuropace-inc-q3-2026-earnings-133000906.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "KLC": {
-   "symbol": "KLC",
-   "name": "KinderCare Learning Companies, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "KinderCare Learning Companies, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/kindercare-learning-companies-inc-q3-133000165.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "LFMD": {
-   "symbol": "LFMD",
-   "name": "LifeMD, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "LifeMD (LFMD) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/lifemd-lfmd-q3-2026-earnings-152904479.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "NMAX": {
-   "symbol": "NMAX",
-   "name": "Newsmax, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Newsmax, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/media-advertising/articles/newsmax-inc-q3-2026-earnings-133000249.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SPCE": {
-   "symbol": "SPCE",
-   "name": "Virgin Galactic Holdings, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Is Virgin Galactic Holdings (SPCE) Undervalued As Earnings And A $250 Million Equity Plan Stir Doubts?",
-   "date": "2026-11-14",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/virgin-galactic-holdings-spce-undervalued-051704101.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "LFTO": {
-   "symbol": "LFTO",
-   "name": "Liftoff Mobile, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Liftoff Mobile shares surge 25% as AI advertising growth drives earnings beat",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/media-advertising/articles/liftoff-mobile-shares-surge-25-162700423.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "INUV": {
-   "symbol": "INUV",
-   "name": "Inuvo, Inc",
-   "session": "post",
-   "ok": true,
-   "headline": "Inuvo, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/inuvo-inc-q3-2026-earnings-133000624.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SRTS": {
-   "symbol": "SRTS",
-   "name": "Sensus Healthcare, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Sensus Healthcare, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/sensus-healthcare-inc-q3-2026-133000660.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "LVLU": {
-   "symbol": "LVLU",
-   "name": "Lulu's Fashion Lounge Holdings, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Lulus Fashion Lounge Holdings Inc (LVLU) (Q3 2026) Earnings Call Highlights: Margin Gains and ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/lulus-fashion-lounge-holdings-inc-050216351.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "VUZI": {
-   "symbol": "VUZI",
-   "name": "Vuzix Corporation",
-   "session": "post",
-   "ok": true,
-   "headline": "Vuzix Corporation Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/vuzix-corporation-q3-2026-earnings-133000516.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "HIT": {
-   "symbol": "HIT",
-   "name": "Health In Tech, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Health In Tech (HIT) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/health-tech-hit-q3-2026-161356779.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "XOS": {
-   "symbol": "XOS",
-   "name": "Xos, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Xos, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/xos-inc-q3-2026-earnings-133000000.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "VNRX": {
-   "symbol": "VNRX",
-   "name": "VolitionRX Limited",
-   "session": "post",
-   "ok": true,
-   "headline": "VolitionRX Ltd (VNRX) (Q3 2026) Earnings Call Highlights: Revenue Surges 157% as French ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/volitionrx-ltd-vnrx-q3-2026-230308390.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "INTZ": {
-   "symbol": "INTZ",
-   "name": "Intrusion Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Intrusion (INTZ) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/intrusion-intz-q3-2026-earnings-054351622.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "HAWK": {
-   "symbol": "HAWK",
-   "name": "HawkEye 360, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Update: HawkEye 360 Shares Rise After Q3 Revenue Beat",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/hawkeye-360-shares-rise-q3-203001601.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "HQI": {
-   "symbol": "HQI",
-   "name": "HireQuest, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "HireQuest, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/hirequest-inc-q3-2026-earnings-133000680.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CRIS": {
-   "symbol": "CRIS",
-   "name": "Curis, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Curis (CRIS) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/curis-cris-q3-2026-earnings-071314000.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "TNON": {
-   "symbol": "TNON",
-   "name": "Tenon Medical, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Tenon Medical (TNON) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/tenon-medical-tnon-q3-2026-154439971.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CDXS": {
-   "symbol": "CDXS",
-   "name": "Codexis, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Codexis, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/codexis-inc-q3-2026-earnings-133000280.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "REKR": {
-   "symbol": "REKR",
-   "name": "Rekor Systems, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Rekor Systems, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rekor-systems-inc-q3-2026-133000428.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SNAL": {
-   "symbol": "SNAL",
-   "name": "Snail, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Snail Inc (SNAL) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/snail-inc-snal-q3-2026-163009558.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "BSEM": {
-   "symbol": "BSEM",
-   "name": "BioStem Technologies, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "BioStem (BSEM) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/biostem-bsem-q3-2026-earnings-054351608.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "HTFL": {
-   "symbol": "HTFL",
-   "name": "Heartflow, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Heartflow, Inc. Common Stock Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/heartflow-inc-common-stock-q3-133000938.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SID": {
-   "symbol": "SID",
-   "name": "National Steel Company",
-   "session": "post",
-   "ok": true,
-   "headline": "National Steel Q3 Earnings Call Highlights",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/national-steel-q3-earnings-call-191515689.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 1,
-   "kept": 1,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "GCTS": {
-   "symbol": "GCTS",
-   "name": "GCT Semiconductor Holding, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "GCT Semiconductor Holding, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/gct-semiconductor-holding-inc-q3-133000140.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "PEW": {
-   "symbol": "PEW",
-   "name": "GrabAGun Digital Holdings Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Grabagun Digital Q3 Earnings Call Highlights",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/grabagun-digital-q3-earnings-call-091455320.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "MRLN": {
-   "symbol": "MRLN",
-   "name": "Merlin, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "What Merlin, Inc. Common Stock (MRLN) Said on Its Q3 Earnings Call",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/merlin-inc-common-stock-mrln-031424741.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "IDN": {
-   "symbol": "IDN",
-   "name": "Intellicheck, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Intellicheck (IDN) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/intellicheck-idn-q3-2026-earnings-055912618.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SKYX": {
-   "symbol": "SKYX",
-   "name": "SKYX Platforms Corp.",
-   "session": "post",
-   "ok": true,
-   "headline": "SKYX Platforms (SKYX) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/skyx-platforms-skyx-q3-2026-164810059.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "PRSO": {
-   "symbol": "PRSO",
-   "name": "Peraso Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Peraso Inc (PRSO) (Q3 2026) Earnings Call Highlights: Revenue Plunges to $0. ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/peraso-inc-prso-q3-2026-050244004.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "DFLI": {
-   "symbol": "DFLI",
-   "name": "Dragonfly Energy Holdings Corp",
-   "session": "post",
-   "ok": true,
-   "headline": "Dragonfly Energy (DFLI) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/dragonfly-energy-dfli-q3-2026-063139694.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "INV": {
-   "symbol": "INV",
-   "name": "Innventure, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Innventure (INV) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/innventure-inv-q3-2026-earnings-164810484.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 1,
-   "kept": 1,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "LFT": {
-   "symbol": "LFT",
-   "name": "Lument Finance Trust, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Lument Finance Trust Inc (LFT) (Q3 2026) Earnings Call Highlights: GAAP Loss, Dividend ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/lument-finance-trust-inc-lft-230318560.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "PAL": {
-   "symbol": "PAL",
-   "name": "Proficient Auto Logistics, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Proficient (PAL) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/proficient-pal-q3-2026-earnings-143120569.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "STN": {
-   "symbol": "STN",
-   "name": "Stantec Inc",
-   "session": "post",
-   "ok": true,
-   "headline": "Stantec Inc (STN) Q3 2026 Earnings Call Highlights: Strong Organic Growth and Raised Guidance ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/stantec-inc-stn-q3-2026-230401862.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ROC": {
-   "symbol": "ROC",
-   "name": "Rank One Computing Corporation",
-   "session": "post",
-   "ok": true,
-   "headline": "Rank One Computing (ROC) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/rank-one-computing-roc-q3-143120219.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "IZEA": {
-   "symbol": "IZEA",
-   "name": "IZEA Worldwide, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "IZEA Worldwide, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/izea-worldwide-inc-q3-2026-133000612.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ALMU": {
-   "symbol": "ALMU",
-   "name": "Aeluma, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Aeluma (ALMU) Q1 2027 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/aeluma-almu-q1-2027-earnings-164810470.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "TLPH": {
-   "symbol": "TLPH",
-   "name": "Talphera, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Talphera (TLPH) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/talphera-tlph-q3-2026-earnings-061514304.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "YSS": {
-   "symbol": "YSS",
-   "name": "York Space Systems Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "York Space (YSS) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/york-space-yss-q3-2026-144821667.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "BUDA": {
-   "symbol": "BUDA",
-   "name": "Buda Juice, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "BUDA Q3 Earnings Call Highlights",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/buda-q3-earnings-call-highlights-141436648.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "NU": {
-   "symbol": "NU",
-   "name": "Nu Holdings Ltd.",
-   "session": "post",
-   "ok": true,
-   "headline": "Nu Holdings (NU) Stock Rallies On Q3 Results As Profit Strength Counters Credit Risk",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/nu-holdings-nu-stock-rallies-231522054.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "NSTR": {
-   "symbol": "NSTR",
-   "name": "NorthStar Earth & Space Enterprises, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "NorthStar Earth & Space Q3 Swings to Income, Revenue Rises",
-   "date": "2026-11-12",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/northstar-earth-space-q3-swings-212014194.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CLLS": {
-   "symbol": "CLLS",
-   "name": "Cellectis S.A.",
-   "session": "post",
-   "ok": true,
-   "headline": "Cellectis SA (CLLS) (Q3 2026) Earnings Call Highlights: Strategic Shift to Gene Editing ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/cellectis-sa-clls-q3-2026-230355977.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "GUTS": {
-   "symbol": "GUTS",
-   "name": "Fractyl Health, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Fractyl Health, Inc. Common Stock Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/fractyl-health-inc-common-stock-133000740.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CBRS": {
-   "symbol": "CBRS",
-   "name": "Cerebras Systems Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Cerebras Systems第三财季核心营收为2.309亿美元 高于预估",
-   "date": "2026-11-13",
-   "url": "https://kuaixun.eastmoney.com/",
-   "res": [
-    "11月12日美股收盘后，AI芯片厂商Cerebras(CBRS.US)公布2026年第三季度财报，在AI推理需求拉动下，公司季度营收刷新历史纪录，同时上调全年业绩指引，四季度业绩展望大幅超出市场预期，盘后股价大涨超18%",
-    "【业绩超预期 美股AI芯片龙头盘后大涨超19%】美股盘后，晶圆级AI芯片龙头企业Cerebras Systems发布超预期的最新财报，Cerebras Systems股价盘后大涨超19%",
-    "Cerebras Systems盘后上涨12%，公司第三财季核心营收为2.309亿美元，高于预估"
-   ],
-   "guide": [
-    "毛利率为20%，远低于预估的35.7%"
-   ],
-   "src": "东方财富 7×24",
-   "matched": 4,
-   "kept": 4,
-   "note": ""
-  },
-  "PED": {
-   "symbol": "PED",
-   "name": "Pedevco Corp.",
-   "session": "post",
-   "ok": true,
-   "headline": "PEDEVCO (PED) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/pedevco-ped-q3-2026-earnings-163009108.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "TOMZ": {
-   "symbol": "TOMZ",
-   "name": "TOMI Environmental Solutions, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "TOMI Environmental Solutions, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/tomi-environmental-solutions-inc-q3-133000159.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "GEMI": {
-   "symbol": "GEMI",
-   "name": "Gemini Space Station, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Gemini Space Station第三财季营收为4090万美元 低于市场估计的4220万美元",
-   "date": "2026-11-13",
-   "url": "https://kuaixun.eastmoney.com/",
-   "res": [
-    "Gemini Space Station第三财季营收为4090万美元，低于市场估计的4220万美元"
-   ],
-   "guide": [],
-   "src": "东方财富 7×24",
-   "matched": 2,
-   "kept": 2,
-   "note": ""
-  },
-  "CTSO": {
-   "symbol": "CTSO",
-   "name": "Cytosorbents Corporation",
-   "session": "post",
-   "ok": true,
-   "headline": "Cytosorbents (CTSO) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/cytosorbents-ctso-q3-2026-earnings-065913402.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ANDG": {
-   "symbol": "ANDG",
-   "name": "Andersen Group Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Andersen (ANDG) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/andersen-andg-q3-2026-earnings-074614244.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ENHA": {
-   "symbol": "ENHA",
-   "name": "Enhanced Group Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Enhanced Group (ENHA) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/enhanced-group-enha-q3-2026-152904206.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CSCO": {
-   "symbol": "CSCO",
-   "name": "Cisco Systems, Inc.",
-   "session": "post",
-   "ok": true,
-   "headline": "Is Cisco Systems a Buy After Its Latest Earnings Report?",
-   "date": "2026-11-14",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/cisco-systems-buy-latest-earnings-082002821.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ACCV": {
-   "symbol": "ACCV",
-   "name": "Accelevation Holdings Corp.",
-   "session": "post",
-   "ok": true,
-   "headline": "Accelevation Q3 Earnings Call Highlights",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/accelevation-q3-earnings-call-highlights-161447163.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "SBC": {
-   "symbol": "SBC",
-   "name": "SBC Medical Group Holdings Incorporated",
-   "session": "pre",
-   "ok": true,
-   "headline": "SBC Medical Group Holdings Incorporated Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/sbc-medical-group-holdings-incorporated-220802469.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "RMIX": {
-   "symbol": "RMIX",
-   "name": "Suncrete, Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Suncrete (RMIX) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/suncrete-rmix-q3-2026-earnings-230426617.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "OWLT": {
-   "symbol": "OWLT",
-   "name": "Owlet, Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Owlet Inc (OWLT) Q3 2026 Earnings Call Highlights: Record Profitability Meets a Costly Safety Recall",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/owlet-inc-owlt-q3-2026-230302603.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "BFRI": {
-   "symbol": "BFRI",
-   "name": "Biofrontera Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Biofrontera Inc (BFRI) (Q3 2026) Earnings Call Highlights: Revenue Jumps 30% as FDA Approves ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/biofrontera-inc-bfri-q3-2026-230145582.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CNVS": {
-   "symbol": "CNVS",
-   "name": "Cineverse Corp.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Cineverse Corp (CNVS) (Q2 2027) Earnings Call Highlights: Revenue Doubles to $26 Million as ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/media-advertising/articles/cineverse-corp-cnvs-q2-2027-230325800.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "PAVM": {
-   "symbol": "PAVM",
-   "name": "PAVmed Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "PAVmed Inc (PAVM) (Q3 2026) Earnings Call Highlights: Medicare Win for Lucid's EsoGuard, Record ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/pavmed-inc-pavm-q3-2026-230251480.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "MIST": {
-   "symbol": "MIST",
-   "name": "Milestone Pharmaceuticals Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Milestone Pharmaceuticals Inc (MIST) (Q3 2026) Earnings Call Highlights: Cardamist Scripts Jump ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/healthcare/articles/milestone-pharmaceuticals-inc-mist-q3-230302098.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "CNTY": {
-   "symbol": "CNTY",
-   "name": "Century Casinos, Inc.",
-   "session": "pre",
-   "ok": false,
-   "headline": "",
-   "date": "",
-   "url": "",
-   "res": [],
-   "guide": [],
-   "src": "",
-   "matched": 0,
-   "kept": 0,
-   "note": "东财快讯未检索到该公司本次业绩（小市值公司覆盖有限）"
-  },
-  "MITQ": {
-   "symbol": "MITQ",
-   "name": "Moving iMage Technologies, Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Moving iMage Technologies, Inc. Q1 2027 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/moving-image-technologies-inc-q1-220052362.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "NDLS": {
-   "symbol": "NDLS",
-   "name": "Noodles & Company",
-   "session": "pre",
-   "ok": true,
-   "headline": "Noodles & Co (NDLS) (Q3 2026) Earnings Call Highlights: Eighth Straight Quarter of Positive ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/noodles-co-ndls-q3-2026-230309278.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "USAS": {
-   "symbol": "USAS",
-   "name": "Americas Gold and Silver Corporation",
-   "session": "pre",
-   "ok": true,
-   "headline": "Americas Gold And Silver Corp (USAS) Q3 2026 Earnings Call Highlights: Record Silver Production ...",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/commodities/articles/americas-gold-silver-corp-usas-230432076.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "ECC": {
-   "symbol": "ECC",
-   "name": "Eagle Point Credit Company",
-   "session": "pre",
-   "ok": true,
-   "headline": "Eagle Point Credit Company Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/eagle-point-credit-company-inc-214835985.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "KGEI": {
-   "symbol": "KGEI",
-   "name": "Kolibri Global Energy Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Kolibri Global (KGEI) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-13",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/kolibri-global-kgei-q3-2026-220442104.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  }
- },
+ "items": {},
  "trump": {
   "items": [
+   {
+    "d": "2026-11-16",
+    "t": "11-16 22:58",
+    "o": "【特朗普：不介意黄仁勋重掌英伟达】11月16日，美国总统特朗普表示，不介意黄仁勋重新出任英伟达首席执行官，并称很多人希望黄仁勋回归，“这当然不是一个坏主意”。特朗普还表示，黄仁勋“吸取了深刻教训”。此前，美国财政部长贝森特曾呼吁英伟达进行“大幅调整”，并通过外部招聘寻找新任领导人",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-16",
+    "t": "11-16 22:41",
+    "o": "美国总统特朗普表示，不考虑更换商务部长卢特尼克。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-16",
+    "t": "11-16 14:09",
+    "o": "【特朗普：期待参加中俄美元首会晤】11月16日外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统<b>普京</b>、美国总统特朗普在深圳举行中俄美元首会晤。此前，特朗普对媒体表示，自己很期待参加中俄美元首会晤。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": true
+   },
    {
     "d": "2026-11-16",
     "t": "11-16 09:00",
     "o": "外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统<b>普京</b>、美国总统特朗普在深圳举行中俄美元首会晤。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-14",
@@ -1155,411 +105,209 @@ window.NEWS_DATA = {
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "能源价格表态短期扰动油价，供需才是定价主轴。",
     "isNew": false
-   },
-   {
-    "d": "2026-11-13",
-    "t": "11-13 17:48",
-    "o": "【特朗普称应中东盟友请求延缓对<b>伊朗</b>行动】美国总统特朗普在一条12日发布的专访视频中称，他本可以“立即结束”伊朗战事，但应美国的中东盟友请求，他选择延缓对伊朗行动。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-13",
-    "t": "11-13 08:52",
-    "o": "【特朗普谈黄仁勋被罢免：太可怕了 刚给他颁完奖】北京时间11月13日，据CNBC报道，就在黄仁勋(Jensen Huang)辞去英伟达CEO几个小时后，美国总统特朗普接受了采访，对黄仁勋遭遇的“可怕事情”表示惋惜。黄仁勋是特朗普在美国企业界的亲密盟友。特朗普在接受保守派评论员休·",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-13",
-    "t": "11-13 07:28",
-    "o": "【黄仁勋辞职，临时接任人曝光；特朗普：建议库克接替黄仁勋；马斯克：招揽黄仁勋将是我的荣幸】据外媒报道，美国总统特朗普当地时间12日对英伟达下一任首席执行官提出了自己的推荐人选——蒂姆·库克。据报道，特朗普当地时间12日在社交媒体上发文称，在长期担任英伟达掌舵人的黄仁勋辞职后，苹果",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
    }
   ],
-  "logCount": 24
+  "logCount": 26
  },
- "moversNews": {
-  "ONEN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PMA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "BGIN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "HTZ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "KYTX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PUSA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "INTT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CLYM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CNCK": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "BRUN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ARAI": {
-   "ok": true,
-   "title": "Arrive AI: 3 Key Takeaways for Long-Term Investors",
-   "summary": "",
-   "t": "11-14 11:12",
-   "src": "Motley Fool（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CCLD": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SAR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "IPHA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GDYN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "EQ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "XLAB": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GSM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "POWL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TAC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "AEVA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CYPH": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "DUOT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SUPX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LBTYK": {
-   "ok": true,
-   "title": "Liberty Global (LBTY.A) Stock Looks Reasonable As Sales Support Comes Into Focus",
-   "summary": "",
-   "t": "11-14 04:06",
-   "src": "Simply Wall St.（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CNTN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SHMD": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NANO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RZLT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NUAI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TMQ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ABLV": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "USDE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "STTK": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GLSI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SSII": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ZURA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "JXG": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CRNT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "AEHL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FF": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ESP": {
-   "ok": true,
-   "title": "Espey Mfg. & Electronics Corp. reports first quarter results",
-   "summary": "",
-   "t": "11-14 05:05",
-   "src": "GlobeNewswire（英文）",
-   "cause": false,
-   "en": true
-  },
-  "ACRS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "KRMN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ORMP": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "VOGX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  }
- },
+ "moversNews": {},
  "geo": {
   "items": [
    {
-    "t": "2026-11-16 09:00",
-    "topic": "APEC",
-    "o": "外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统普京、美国总统特朗普在深圳举行中俄美元首会晤。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-16 05:06",
-    "topic": "APEC",
-    "o": "【爱尔兰提出欧盟碳市场改革折中方案 以推动分歧重重的谈判】爱尔兰在一份文件中提议，允许欧盟提前使用国际碳信用额度，并放宽免费排放配额规则，旨在为改革其旗舰气候政策的谈判注入动力。爱尔兰政府希望引入一个从2031-35年的试点阶段，在此期间，受欧盟碳排放交易体系（ETS）覆盖的企业，可使用高完整性的进",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": false
-   },
-   {
-    "t": "2026-11-15 19:53",
+    "t": "2026-11-16 23:30",
     "topic": "美伊谈判",
-    "o": "【伊朗：就霍尔木兹海峡航道与两个沿岸国家达成协议】据伊朗塔斯尼姆通讯社15日报道，伊朗议会国家安全与外交政策委员会发言人卡什卡维说，该委员会已完成霍尔木兹海峡相关方案的专业审议，就有关通行航道“与两个沿岸国家达成协议”。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "s",
-    "isNew": false
-   },
-   {
-    "t": "2026-11-15 19:14",
-    "topic": "美伊谈判",
-    "o": "【巴林称遭伊朗无人机袭击 伊朗称“回应美国侵略”】巴林国防军总司令部15日发表声明说，伊朗继续对巴林发动袭击，巴林防空系统当天拦截并摧毁多架伊朗无人机。伊朗外交部发言人巴加埃同日表示，伊朗打击在巴林的美军基地是“回应美国侵略”。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 18:56",
-    "topic": "美伊谈判",
-    "o": "【伊朗称法国指其网攻制冷系统没依据】针对法国指责伊朗应对近期法国超市制冷系统受到网络攻击“负有责任”，伊朗外交部发言人巴加埃今天（11月15日）表示，欧洲国家似乎已经养成了一种习惯，即在提出指控时，完全不觉得有必要提供任何证据或正当理由。",
+    "o": "【伊朗称多艘油轮在霍尔木兹海峡触雷】伊朗伊斯兰革命卫队和伊朗海军11月16日称，多艘油轮在霍尔木兹海峡触雷。伊朗方面强调，“关闭导航系统且未经伊朗授权擅自进入限制区域或不安全海域，会使违规船只面临严重风险。”",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-15 17:55",
-    "topic": "美伊谈判",
-    "o": "【伊朗发布打击巴林美军基地视频】伊朗伊斯兰革命卫队今天（11月15日）发布视频，伊朗无人机打击了位于巴林里法直升机基地的美军防空雷达。巴林国防军今天（11月15日）发布消息称，巴林防空系统当天拦截并摧毁了多个来自伊朗的空中目标。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 15:53",
-    "topic": "美伊谈判",
-    "o": "【伊朗一辆大巴倾覆致12人死亡】据伊朗伊斯兰共和国通讯社15日报道，伊朗伊拉姆省阿卜达南市14日发生大巴倾覆事故，已致12人死亡。报道援引当地司法部门消息说，涉事大巴当时载有一家石油天然气公司的员工。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 12:23",
-    "topic": "美伊谈判",
-    "o": "【伊朗革命卫队称打击巴林美军雷达设施】据伊朗媒体15日报道，伊朗伊斯兰革命卫队当天称打击了位于巴林里法的美军雷达设施。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 10:10",
-    "topic": "APEC",
-    "o": "【12位APEC经济体领导人将出席APEC工商领导人峰会】在15日举行的2026年APEC工商界活动专题新闻发布会上，中国贸促会副会长李庆霜介绍，作为APEC领导人会议周的重要组成部分，2026年APEC工商领导人峰会将于11月17日至18日在深圳前海国际会议中心举办，习近平主席和澳大利亚、加拿大、智利、中国香港、印度尼西亚、韩国、马来西亚、墨西哥、俄罗斯、泰国、越南APEC经济体领导人将出席峰会并发表演讲、致辞或参与专题研讨。",
-    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 07:54",
+    "t": "2026-11-16 23:24",
     "topic": "俄乌局势",
-    "o": "【俄称打击乌能源和交通基础设施 乌称击退俄军进攻】俄罗斯国防部14日通报称，过去一天，俄军控制了扎波罗热地区一处居民点，并对142处区域的乌军目标实施打击，打击目标包括：能源和交通基础设施、无人机生产车间及储存和发射场地、弹药仓库等。",
+    "o": "【俄称下轮俄美乌三方会谈仍在阿布扎比举行 时间待定】据央视新闻，当地时间16日，俄罗斯总统助理乌沙科夫称，下一轮乌克兰问题俄美乌三方会谈将继续在阿布扎比举行，时间待定。乌沙科夫称，当俄方收到欧洲关于乌克兰问题调解的建设性建议时，欧盟参与会谈的问题才会提上日程。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 21:24",
+    "topic": "美伊谈判",
+    "o": "【伊朗军队称24小时内第三艘油轮在霍尔木兹海峡触雷起火】当地时间16日，伊朗军队海军表示，当天早些时候，一艘违反规定的油轮在霍尔木兹海峡以东海域航行，该船不仅偏离了获准航线，还关闭了导航系统。随后，该船触雷起火。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 20:01",
+    "topic": "俄乌局势",
+    "o": "乌克兰称袭击了俄罗斯伊尔斯基炼油厂。",
     "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-15 07:46",
+    "t": "2026-11-16 19:30",
     "topic": "美伊谈判",
-    "o": "【联合国呼吁恢复霍尔木兹海峡化肥运输】联合国项目事务厅执行主任达席尔瓦14日表示，伊朗和美国应立即允许化肥运输通过霍尔木兹海峡，以缓解脆弱国家面临的危机。达席尔瓦表示，冲突前全球三分之一的化肥经霍尔木兹海峡运输，自今年美国和伊朗爆发冲突以来，全球化肥价格已上涨约30%。",
+    "o": "俄罗斯外长拉夫罗夫与伊朗外长阿拉格齐就中东局势进行了讨论。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-15 06:01",
+    "t": "2026-11-16 19:07",
     "topic": "美伊谈判",
-    "o": "【伊朗称霍尔木兹海峡以南2艘油轮触雷发生爆炸】当地时间15日凌晨，伊朗伊斯兰革命卫队海军表示，稍早前，两艘油轮在霍尔木兹海峡触碰了水雷，引发爆炸并导致火灾。革命卫队称，这两艘油轮当时存在违反相关规定行为，在关闭了导航系统和自动识别系统的情况下，试图秘密通过霍尔木兹海峡。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "o": "【伊朗战事死亡美军家属要求美军担责】当地时间11月15日晚，美国哥伦比亚广播公司（CBS）《60分钟》节目采访了美国对伊朗战事中死亡美军士兵的家属，以及曾遭伊朗打击的科威特美军基地士兵。这些美军士兵称，基地根本就没有针对空袭的防御措施，更没有足够的人力和设备应对大规模伤亡事件。死亡美军的家属表示，亲人之死是美军的责任，是军方有人作出了错误的决定。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "原油与地缘风险溢价",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-15 04:24",
-    "topic": "APEC",
-    "o": "【相距约1.7万公里 挡不住生意越做越大！红利从哪里来？】相距约1.7万公里的中国与秘鲁，因自贸协定升级议定书而越走越近。本月初，该议定书正式生效。一边是深圳糖果企业半天办结原产地证书，加快通关流程；另一边是秘鲁羊驼绒制品等特色产品加速进入中国市场。“一出一进”之间，通关更便利、关税更优惠，双边贸易额16年间增长近7倍。这样的自贸红利，正在更多APEC经济体之间持续释放。",
+    "t": "2026-11-16 18:55",
+    "topic": "俄乌局势",
+    "o": "乌克兰军方称，袭击了俄罗斯亚速城的两处油库。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 18:20",
+    "topic": "美伊谈判",
+    "o": "【遇害核科学家之子谈伊朗是否有核弹】被暗杀的伊朗高级核物理学家穆赫辛·法赫里扎德之子哈米德·法赫里扎德11月15日在德黑兰一所大学举办的会议上说，他曾经问父亲“伊朗是否有核弹”，他的父亲穆赫辛回答说，“我们所掌握的知识水平使得核弹看起来微不足道”。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 16:35",
+    "topic": "俄乌局势",
+    "o": "【俄称克里米亚大桥遭袭 多地遭大规模无人机袭击】据俄罗斯媒体16日报道，克里米亚大桥遭到袭击，交通预计受限至当日中午前后。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 15:54",
+    "topic": "俄乌局势",
+    "o": "爱尔兰外长称，最新一轮俄罗斯制裁方案将涉及113个制裁对象。",
     "r": "制裁升级利空受影响供应链、利好替代环节；落地前是情绪波动，不提前建仓。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-15 00:37",
-    "topic": "美伊谈判",
-    "o": "【中信建投：预计2027年实际利率进一步上行空间有限 金价有望震荡上行】中信建投发布黄金2027年投资展望称，2026年压制金价的核心矛盾来自实际利率上行，展望2027年，实际利率进一步上行空间有限，叠加本轮加息预期已被市场充分定价，同时全球央行持续购金将在金价回调阶段形成承接、构筑底部支撑，预期2027年金价有望震荡上行。风险方面，美伊地缘冲突推升油价，进而扰动通胀仍是2027年主要风险变量，但预期该因素对金价的冲击力度预计边际减弱。黄金股方面，2026年行业安全整治带来产量阶段性承压，2027年预计停产矿山陆续复产，产量有望迎来修复释放，当前板块估值安全边际充足，若金价中枢抬升，黄金板块有…",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-14 23:05",
-    "topic": "APEC",
-    "o": "【三个维度 解锁深圳的开放密码】11月18日至19日，亚太经合组织第三十三次领导人非正式会议将在中国深圳举行。今年是中国第三次担任APEC东道主，为什么这次会议的主办城市选择了深圳？深圳有何不同？一起去三个地方找答案。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-14 22:32",
-    "topic": "俄乌局势",
-    "o": "【乌克兰“星盾”又被限速 泽连斯基再批SpaceX】乌克兰总统泽连斯基周六加大了对SpaceX的批评，称该公司对其军用级“星盾”（Starshield）卫星终端实施的速度限制，会带来危险的政治后果，并削弱了乌克兰关键的防空能力。泽连斯基表示，在乌克兰境内被俄罗斯临时占领地区运行的“星盾”终端，过去五天里被限制在最高161公里/小时的速度，这阻碍了乌克兰的军事能力。泽连斯基称，乌克兰国防部已就这一问题与SpaceX公司进行了官方层面的交涉。“这些限制措施已经实施五天了。他们声称这是某种技术问题，但我们并不相信事实如此。”泽连斯基周六对记者表示。“如果在这方面施加限制，就等同于在一定程度上承认那些…",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "s",
     "isNew": true
    },
    {
-    "t": "2026-11-14 21:18",
+    "t": "2026-11-16 15:28",
+    "topic": "APEC",
+    "o": "【澳大利亚对华蒸压加气混凝土产品启动双反调查】澳大利亚贸易救济委员会2026年11月16日发布第2026/153号公告称，应澳大利亚国内企业CSR Building Products Ltd提交的申请，对进口自中国的蒸压加气混凝土砌块或板材启动反倾销和反补贴调查。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 15:17",
+    "topic": "APEC",
+    "o": "【中方计划在中俄美元首会晤中讨论什么问题？外交部：会及时发布消息】11月16日，外交部发言人毛宁主持例行记者会。日本广播协会（NHK）记者提问，关于中俄美三国元首会晤，美方表示会讨论核军控、伊朗局势等议题，请问中方计划在会谈中具体讨论哪些问题？此外，中方目前是否有与俄罗斯、日本等国的双边会谈安排？能否作进一步介绍？",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 15:16",
+    "topic": "APEC",
+    "o": "【外交部谈中俄美元首会晤：具有开创性意义】毛宁表示，这是中俄美三国元首历史上首次面对面会晤，将围绕维护世界和平、促进大国关系战略稳定深入交换意见，具有开创性意义。中俄美都是联合国创始会员国和安理会常任理事国。历史上三国曾并肩赢得世界反法西斯战争的胜利。当前形势下，三国肩负着合作应对全球性挑战、促进世界和平稳定的重要责任。中俄美加强沟通，管控分歧，稳定关系，符合三国利益，也是国际社会的期待，有利于稳定世界局势，推动对话合作。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 14:30",
+    "topic": "俄乌局势",
+    "o": "【克里米亚大桥遭袭 交通受限】当地时间16日，总台记者自俄罗斯方面获悉，克里米亚大桥遭袭，交通暂时受限。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 14:18",
     "topic": "美伊谈判",
-    "o": "伊朗副总统表示，伊朗寻求在核权利和霍尔木兹海峡主权问题上获得公正对待。",
+    "o": "【伊朗革命卫队称霍尔木兹海峡两艘油轮发生剧烈爆炸】当地时间16日，伊朗伊斯兰革命卫队海军表示，有两艘油轮在美军直接指挥和支援下，试图经由霍尔木兹海峡的一条“非法的南部航线”航行。这些船只在触雷后发生多次剧烈爆炸。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "原油与地缘风险溢价",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-14 20:36",
-    "topic": "美伊谈判",
-    "o": "【英国央行首席经济学家：明年或需进一步加息 伊朗冲突结束可能性极低】英国央行首席经济学家皮尔（HuwPill）在周六刊出的采访中表示，为抑制通胀，英国央行除了12月下次会议加息之外，2027年可能需要进一步加息。“我的观点是，我们将看到促使进一步加息的证据，”皮尔表示，“我们将采取必要措施，随着时间的推移将通胀率降回2%。”",
+    "t": "2026-11-16 14:09",
+    "topic": "APEC",
+    "o": "【特朗普：期待参加中俄美元首会晤】11月16日外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统普京、美国总统特朗普在深圳举行中俄美元首会晤。此前，特朗普对媒体表示，自己很期待参加中俄美元首会晤。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
+    "imp": "中美关系 · 贸易与供应链",
     "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 13:47",
+    "topic": "APEC",
+    "o": "【APEC工商咨询理事会全年共达成14项成果文件，创历年新高】今天（16日）上午，APEC工商咨询理事会第四次会议举行闭幕全体会议，这意味着2026年APEC工商咨询理事会议程基本结束。全年APEC工商咨询理事会共达成14项成果文件，创下历年新高。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-16 13:12",
+    "topic": "俄乌局势",
+    "o": "【欧盟拟提议以预算为担保向乌克兰提供450亿欧元贷款】欧盟委员会提议以欧盟共同预算的“剩余空间”为担保，在资本市场上举债筹集450亿欧元，向乌克兰提供贷款支持。乌克兰明年预计面临约700亿欧元的资金缺口。欧盟计划填补其中约三分之二的缺口（即这450亿欧元），并呼吁其他西方盟友分担剩余部分。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
     "isNew": true
    }
   ],
   "logCount": 60
  },
  "briefLog": [
+  {
+   "d": "2026-11-16",
+   "kind": "daily",
+   "source": "auto",
+   "stance": "窄幅震荡（方向未选）",
+   "stanceNote": "美股 标普 0.00%、纳指 -1.95%、道指 0.00%；中国香港 恒生 —、中国内地 上证 —。VIX +11.2% 至 21.47；等权相对市值加权 20 日 +6.1%——中位数个股强于权重，跌的是大票不是全市场。",
+   "conclusions": [
+    [
+     "三大市场同日收盘：标普 0.0%、恒生 —、上证 —。",
+     "指数基本走平，纳指 -1.9% vs 道指 0.0%——成长端更弱，资金偏向价值/防御。"
+    ],
+    [
+     "结构：等权 -0.3%（周） vs 市值加权 -1.1%，差 +0.8%。",
+     "本周个股表现好于指数，属于“权重拖累、广度改善”的组合，指数弱不代表持仓弱。"
+    ],
+    [
+     "跨资产：10Y 5.15%、美元指数 103.41、BTC $65,315。",
+     "VIX 21.47（+11.2%）——波动率抬升，分歧在放大；BTC 当日 +0.0%，风险偏好的边际信号偏正面。"
+    ]
+   ],
+   "snapshot": {
+    "spx": 0,
+    "ndx": -1.95,
+    "hsi": null,
+    "sh": null,
+    "vix": 21.47,
+    "btc": 65315,
+    "us10y": 5.154
+   }
+  },
   {
    "d": "2026-11-13",
    "kind": "daily",
