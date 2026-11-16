@@ -447,7 +447,9 @@ async function build(date, session, limit) {
     const dayChg = m.regularMarketChangePercent ?? null;
     /* 公布后涨幅：收盘后跑的场次用当日收盘涨跌（精确）；盘前/盘中场次用盘前价接力 */
     const mv = ET_HOUR >= 16 ? (dayChg ?? preChg) : (preChg ?? postChg ?? dayChg);
-    const gap = preChg ?? (session === "pre" ? gapFromLog(r.symbol, date) : null);
+    /* build() 传入的 session 是 Nasdaq 的 time-pre-market / time-after-hours，
+       不能用 "=== pre" 判（那就永远取不到 20:30 场次留档的盘前跳空） */
+    const gap = preChg ?? (/pre/i.test(session) ? gapFromLog(r.symbol, date) : null);
     cands.push({ r, m, mcap, tr: tier(mcap), prevClose, reg, preChg, postChg, dayChg, mv, gap });
   }
   const qualified = cands.filter((c) => c.mv != null && Math.abs(c.mv) >= threshold(c.tr))
