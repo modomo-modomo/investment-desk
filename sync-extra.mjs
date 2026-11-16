@@ -267,7 +267,8 @@ async function nextEarnings(symbol) {
 const CHECK = {
   TSLA: "TSLA", META: "META", IREN: "IREN", NBIS: "NBIS", CRWV: "CRWV", BE: "BE",
   AMD: "AMD", TSM: "TSM", TER: "TER", ONTO: "ONTO", NET: "NET", RBRK: "RBRK", OKTA: "OKTA", CHKP: "CHKP", SPCX: "SPCX",
-  /* 20261115(10)：美股生物医药（港股/A 股的 calendarEvents 不可靠——腾讯返回 11/18 而实际 11/13 已披露，故不纳入） */
+  /* 20261115(10)：美股生物医药（港股/A 股不纳入 nextEarn——日期口径与公告常有出入，以手写 earn 档案为准；
+     20261115(16) 更正：Yahoo 给腾讯返回的 11/18 是对的（Q3 确于 11/18 披露），此前"实际 11/13 已披露"的注释才是错的） */
   CMPS: "CMPS", LLY: "LLY",
   /* 20261115(11)：美股新增 7 只（AMD 已在列；财年错位与港股/A 股不纳入的理由同 (10)） */
   HOOD: "HOOD", SOFI: "SOFI", ABCL: "ABCL", TWST: "TWST", MRNA: "MRNA", LITE: "LITE", AEHR: "AEHR",
