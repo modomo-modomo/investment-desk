@@ -465,5 +465,38 @@
  "2026-11-13|time-after-hours": {
   "at": "2026-11-16T15:37:15.327Z",
   "symbols": []
+ },
+ "2026-11-17|time-pre-market": {
+  "at": "2026-11-17T13:44:30.651Z",
+  "symbols": [
+   "HD",
+   "DIS",
+   "VIK",
+   "JD",
+   "ESLT",
+   "AS",
+   "TME",
+   "KLAR",
+   "SR",
+   "GFF",
+   "MNSO",
+   "ENR",
+   "LUXE",
+   "WB",
+   "OPRA",
+   "OCSL",
+   "FUBO",
+   "SMWB",
+   "HUYA",
+   "ESEA",
+   "ONEW",
+   "AGPU",
+   "PTN",
+   "ONFO"
+  ]
+ },
+ "2026-11-16|time-after-hours": {
+  "at": "2026-11-17T13:44:32.681Z",
+  "symbols": []
  }
 }

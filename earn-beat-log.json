@@ -230,7 +230,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-16T23:42:16.710Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-16",
@@ -256,7 +256,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-16T23:42:16.776Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-16",
@@ -282,6 +282,6 @@
   "q": "2026Q4",
   "addedAt": "2026-11-16T23:42:16.844Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  }
 ]
