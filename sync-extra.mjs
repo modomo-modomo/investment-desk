@@ -385,8 +385,10 @@ async function cal(date, session) {
   }
   const keep = new Set(CALCACHE[key].symbols);
   /* 披露完成后 Nasdaq 会把历史日期的 time 清成 time-not-supplied，
-     只按 time 匹配会把命中率从 121 掉到个位数——缓存存在时退回「全量行 ∩ 缓存符号」 */
-  const pool = tagged.length >= keep.size ? tagged : fresh;
+     只按 time 匹配会把命中率从 121 掉到个位数——缓存存在时退回「全量行 ∩ 缓存符号」。
+     注意 pool 必须是 fresh（行对象数组）：tagged 只是字符串数组，取 .symbol 恒为 undefined。
+     （151fceb 引入的 ternary 在 tagged.length >= keep.size 时选了字符串数组，hit 恒 0） */
+  const pool = fresh;
   const hit = pool.filter((r) => keep.has(r.symbol));
   if (process.env.DBG) console.log(`  [dbg] ${key} fresh=${fresh.length} tagged=${tagged.length} keep=${keep.size} hit=${hit.length}`);
   return { rows: hit, total: keep.size, fromCache: tagged.length < keep.size };

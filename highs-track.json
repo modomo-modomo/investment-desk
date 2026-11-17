@@ -886,5 +886,29 @@
   "lastPx": 15.77,
   "n": 1,
   "everAth": false
+ },
+ "GHC": {
+  "sym": "GHC",
+  "name": "Graham",
+  "sec": "房地产",
+  "track": "其它",
+  "firstD": "2026-11-16",
+  "firstPx": 1288.78,
+  "lastD": "2026-11-16",
+  "lastPx": 1288.78,
+  "n": 1,
+  "everAth": true
+ },
+ "GRX": {
+  "sym": "GRX",
+  "name": "The Gabelli Healthcare & Wellness Trust Common Shares of Beneficial Interest",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-16",
+  "firstPx": 10.58,
+  "lastD": "2026-11-16",
+  "lastPx": 10.58,
+  "n": 1,
+  "everAth": false
  }
 }
