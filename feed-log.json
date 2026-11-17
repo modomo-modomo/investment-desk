@@ -1,10 +1,10 @@
 {
  "meta": {
   "updated": "2026-11-17",
-  "generated": "2026-11-17T13:49:43.907Z",
+  "generated": "2026-11-17T23:51:53.786Z",
   "newWindowDays": 7,
   "symbols": 42,
-  "items": 673
+  "items": 801
  },
  "items": {
   "TSLA.O": [
@@ -138,6 +138,138 @@
     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidias-800-billion-wipeout-raises-115710325.html?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "英伟达 8000 亿美元的损失给投资者带来了更大的问题",
+    "new": true
+   },
+   {
+    "id": "bn8595",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "What far cheaper AI compute in space could mean for Elon Musk",
+    "url": "https://finance.yahoo.com/video/what-far-cheaper-ai-compute-in-space-could-mean-for-elon-musk-162707073.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "太空中更便宜的人工智能计算对埃隆·马斯克意味着什么",
+    "new": true
+   },
+   {
+    "id": "qo16wp",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "3 Founder Led Stocks With Revenue Growth Up To 20%",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/3-founder-led-stocks-revenue-232311677.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "3家创始人领涨股票，收入增长高达20%",
+    "new": true
+   },
+   {
+    "id": "5pkez5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "NIO vs. Tesla: Which EV Stock Is a Better Buy for 2027?",
+    "url": "https://www.fool.com/coverage/better-buy/2026/11/17/nio-vs-tesla-which-ev-stock-is-a-better-buy-for-2027/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "NIO vs. Tesla：2027 年哪支电动汽车股票更值得买入？",
+    "new": true
+   },
+   {
+    "id": "wnmhze",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Fund Manager Lists Three Reasons He Still Won’t Buy Tesla Stock",
+    "url": "https://stocktwits.com/news-articles/markets/equity/fund-manager-lists-three-reasons-he-still-won-t-buy-tesla-stock/cNbOJB3R9hQ?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "基金经理列出了他仍然不会购买特斯拉股票的三个原因",
+    "new": true
+   },
+   {
+    "id": "wai8ck",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Tesla (TSLA) Is Spending €3 Billion To Expand Berlin Cybercab Production",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-tsla-spending-3-billion-201132630.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "特斯拉 (TSLA) 斥资 30 亿欧元扩大柏林 Cyber​​cab 生产",
+    "new": true
+   },
+   {
+    "id": "4nsc6x",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Tesla Plans $3.3 Billion German Factory Expansion for Cybercab Production",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-plans-3-3-billion-185703321.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "特斯拉计划斥资 33 亿美元扩建德国工厂以生产 Cyber​​cab",
+    "new": true
+   },
+   {
+    "id": "21cii",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Exchange Traded Concepts to Close and Liquidate The xETFs TSLA Daily Income ETF (NYSE: TYYY)",
+    "url": "https://finance.yahoo.com/markets/options/articles/exchange-traded-concepts-close-liquidate-184900140.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "交易所交易概念将关闭并清算 xETF TSLA 每日收入 ETF（纽约证券交易所代码：TYYY）",
+    "new": true
+   },
+   {
+    "id": "4s4irg",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Tesla Stocks Decrease 0.51% Even as Texas Robotaxi Authorizations Jump 21% in 18 Days",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-stocks-decrease-0-51-182744286.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "尽管德州 Robotaxi 授权在 18 天内猛增 21%，特斯拉股价仍下跌 0.51%",
+    "new": true
+   },
+   {
+    "id": "xc5vq",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Musk Says Owners’ Tesla Robotaxi Trials “May Start” Next Month. That’s a Threat to Uber",
+    "url": "https://www.tikr.com/blog/musk-says-owners-tesla-robotaxi-trials-may-start-next-month-thats-a-threat-to-uber?ref=yahoofinance&tlnk=yf-261117-pj3j3mgm&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "马斯克表示，特斯拉机器人出租车车主试验“可能会在下个月开始”。这对 Uber 来说是一个威胁",
+    "new": true
+   },
+   {
+    "id": "ni86g3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "‘That Math Is Obvious and Trivial’: Elon Musk Says Solar Will Supply 100% of Civilization’s Energy as SpaceX and Tesla Ramp Up Manufacturing",
+    "url": "https://finance.yahoo.com/energy/articles/math-obvious-trivial-elon-musk-163005317.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "“这个数学是显而易见且微不足道的”：埃隆·马斯克表示，随着 SpaceX 和特斯拉提高制造能力，太阳能将提供 100% 的文明能源",
+    "new": true
+   },
+   {
+    "id": "e7pax7",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Elon Musk Says Nvidia Needs Jensen Huang. Here’s What’s at Stake for Tesla and SpaceX.",
+    "url": "https://www.barchart.com/story/news/8878161/elon-musk-says-nvidia-needs-jensen-huang-heres-whats-at-stake-for-tesla-and-spacex?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "埃隆·马斯克表示 Nvidia 需要黄仁勋。这是特斯拉和 SpaceX 面临的利害关系。",
+    "new": true
+   },
+   {
+    "id": "45kvtk",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Inside Cathie Wood’s Portfolio: Every Move She Made in the Third Quarter",
+    "url": "https://www.tikr.com/blog/inside-cathie-woods-portfolio-every-move-she-made-in-the-third-quarter?ref=yahoofinance&tlnk=yf-261117-3xcphgx7&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "凯西·伍德 (Cathie Wood) 的投资组合内部：她在第三季度所做的一举一动",
     "new": true
    },
    {
@@ -649,6 +781,138 @@
     "new": true
    },
    {
+    "id": "dc9yyc",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AI Agents vs. Banks: Who Will Win? I'm Betting on Banks.",
+    "url": "https://www.fool.com/investing/2026/11/17/ai-agents-vs-banks-who-will-win-i-m-betting-on-banks/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "人工智能代理与银行：谁会赢？我押注于银行。",
+    "new": true
+   },
+   {
+    "id": "vxepmw",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Meta Platforms, Inc. (META): Strong Advertising Growth Supports Its Long-Term Investment Case",
+    "url": "https://finance.yahoo.com/technology/articles/meta-platforms-inc-meta-strong-202131281.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Meta Platforms, Inc. (META)：强劲的广告增长支持其长期投资案例",
+    "new": true
+   },
+   {
+    "id": "w5g491",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Aptos lifts its APT burn rate to 2.2 million tokens a year",
+    "url": "https://www.thestreet.com/crypto/innovation/aptos-lifts-its-apt-burn-rate-to-2-2-million-tokens-a-year?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Aptos 将其 APT 销毁率提高至每年 220 万个代币",
+    "new": true
+   },
+   {
+    "id": "rcq7t8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Bet Big on AI Stocks. Now They’re Getting Hit.",
+    "url": "https://finance.yahoo.com/m/302815a2-c453-3ac5-ad56-a00d836f551f/nvidia-bet-big-on-ai-stocks..html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达在人工智能股票上押注巨大。现在他们受到了打击。",
+    "new": true
+   },
+   {
+    "id": "lo4zb6",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Bill Ackman’s $14 billion bet beyond the Magnificent 7",
+    "url": "https://www.thestreet.com/investing/bill-ackman-sells-microsoft-buys-netflix-13f?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "比尔·阿克曼 (Bill Ackman) 在 Magnificent 7 之外下注 140 亿美元",
+    "new": true
+   },
+   {
+    "id": "x8k91p",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Risks Loom Over Nvidia’s Fast-Growing Data Center Segment",
+    "url": "https://finance.yahoo.com/m/83f1cc3d-b0e5-3317-8b68-71f036f8d0d0/risks-loom-over-nvidia%E2%80%99s.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达快速增长的数据中心领域面临风险",
+    "new": true
+   },
+   {
+    "id": "w4l9h0",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia's Complex Orbit",
+    "url": "https://finance.yahoo.com/m/f7117fc6-dd76-3db7-8200-9919f2f435e8/nvidia%27s-complex-orbit.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 的复杂轨道",
+    "new": true
+   },
+   {
+    "id": "4gwt0l",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "This Critical Energy Bill Is A Key Priority For The Lame Duck GOP Congress",
+    "url": "https://finance.yahoo.com/m/a711fc7e-a753-3657-a0e8-ef2d4e4aa2f5/this-critical-energy-bill-is.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "这项关键的能源法案是跛脚鸭共和党国会的首要任务",
+    "new": true
+   },
+   {
+    "id": "90sars",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "CORRECTION – Compute Desk raises $45M led by Lightspeed to build infrastructure for hedging compute",
+    "url": "https://finance.yahoo.com/technology/ai/articles/correction-compute-desk-raises-45m-192000434.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "更正 – Compute Desk 筹集了 4500 万美元，由 Lightspeed 领投，用于构建对冲计算基础设施",
+    "new": true
+   },
+   {
+    "id": "v44yv3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "An $11 Billion Fund Dumps These 2 Stocks",
+    "url": "https://www.tikr.com/blog/an-11-billion-fund-dumps-these-2-stocks?ref=yahoofinance&tlnk=yf-261117-7xqp882j&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "110 亿美元基金抛售这两只股票",
+    "new": true
+   },
+   {
+    "id": "m0ho4a",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Jim Simons’ Fund Just Dumped 99.7% of Its Nvidia, Which Had Been Its No. 1 Holding",
+    "url": "https://247wallst.com/investing/2026/11/17/jim-simons-fund-just-dumped-99-7-of-its-nvidia-which-had-been-its-no-1-holding/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "吉姆·西蒙斯 (Jim Simons) 的基金刚刚抛售了其第一大控股公司 Nvidia 99.7% 的股份",
+    "new": true
+   },
+   {
+    "id": "b1gagm",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Prediction: These 2 Stocks Will Be Worth More Than SpaceX 5 Years From Now",
+    "url": "https://www.fool.com/investing/2026/11/17/prediction-2-stocks-that-will-be-worth-more-than-s/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "预测：5年后这两只股票的价值将超过SpaceX",
+    "new": true
+   },
+   {
     "id": "kx3ra6",
     "d": "2026-11-16",
     "type": "news",
@@ -1069,6 +1333,39 @@
     "new": true
    },
    {
+    "id": "tbtwy7",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Hedge Fund That Lost 67% Makes New Bets on 3 Popular AI Stocks",
+    "url": "https://finance.yahoo.com/technology/ai/articles/hedge-fund-lost-67-makes-175058822.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "损失 67% 的对冲基金重新押注 3 只热门人工智能股票",
+    "new": true
+   },
+   {
+    "id": "3bho5y",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "IREN Nearly Tripled AI Cloud Revenue to $200 Million. Can It Be “Delivered, Financed, and Run at a Profit”?",
+    "url": "https://www.tikr.com/blog/iren-nearly-tripled-ai-cloud-revenue-to-200-million-can-it-be-delivered-financed-and-run-at-a-profit?ref=yahoofinance&tlnk=yf-261117-22r3c6fc&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "IREN 的 AI 云收入几乎增加了两倍，达到 2 亿美元。能否“交付、融资、盈利”？",
+    "new": true
+   },
+   {
+    "id": "iowxu5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Sam Altman Just Delivered a Warning to Investors Betting on Endless AI Growth",
+    "url": "https://247wallst.com/investing/2026/11/17/sam-altman-just-delivered-a-warning-to-investors-betting-on-endless-ai-growth/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Sam Altman 刚刚向押注人工智能无限增长的投资者发出警告",
+    "new": true
+   },
+   {
     "id": "3bzy4y",
     "d": "2026-11-16",
     "type": "news",
@@ -1376,6 +1673,105 @@
     "url": "https://247wallst.com/investing/2026/11/16/nebius-plans-to-spend-more-than-3-for-every-1-of-revenue-next-year-the-stock-has-lost-31-in-three-days/?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "Nebius 计划明年每 1 美元的收入支出超过 3 美元。该股三天内下跌31%",
+    "new": true
+   },
+   {
+    "id": "r0bpmi",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nebius Group Heads These 3 AI Stocks To Watch",
+    "url": "https://finance.yahoo.com/technology/ai/articles/nebius-group-heads-3-ai-201140311.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nebius Group 领衔这 3 只值得关注的人工智能股",
+    "new": true
+   },
+   {
+    "id": "gzzyu3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "3 Insider Backed Growth Stocks With At Least 40% Earnings Growth",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/3-insider-backed-growth-stocks-181023052.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "3只内部人士支持的成长型股票，盈利增长至少40%",
+    "new": true
+   },
+   {
+    "id": "tbtwy7",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Hedge Fund That Lost 67% Makes New Bets on 3 Popular AI Stocks",
+    "url": "https://finance.yahoo.com/technology/ai/articles/hedge-fund-lost-67-makes-175058822.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "损失 67% 的对冲基金重新押注 3 只热门人工智能股票",
+    "new": true
+   },
+   {
+    "id": "3piq3l",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Situational Awareness reports 3.4% Nebius stake, down from 5.6% in May filing",
+    "url": "https://blockspace.media/insight/situational-awareness-nebius-stake-declines/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Situation Awareness 报告称其持有 Nebius 股份 3.4%，低于 5 月份提交的文件中的 5.6%",
+    "new": true
+   },
+   {
+    "id": "vast3t",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "5 Highest Short Interest Large-Cap Tech Stocks Right Now",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/5-highest-short-interest-large-201542518.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "目前空头利息最高的 5 只大型科技股",
+    "new": true
+   },
+   {
+    "id": "p4096u",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Could Nvidia Stock Fall 50%? Follow The Cash",
+    "url": "https://www.trefis.com/stock/nvda/articles/625113/could-nvidia-stock-fall-50-follow-the-cash/2026-11-17?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 股价会下跌 50% 吗？跟随现金",
+    "new": true
+   },
+   {
+    "id": "6ux2dw",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Michael Burry Closed His Oracle Puts, but Oracle Is Still Down 38% This Year. What Will It Take to Get ORCL Stock Back to $200?",
+    "url": "https://247wallst.com/investing/2026/11/17/michael-burry-closed-his-oracle-puts-but-oracle-is-still-down-38-this-year-what-will-it-take-to-get-orcl-stock-back-to-200/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Michael Burry 平仓了他的 Oracle 看跌期权，但 Oracle 今年仍下跌 38%。怎样才能让 ORCL 股票回到 200 美元？",
+    "new": true
+   },
+   {
+    "id": "6t1n9o",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Sold a Quarter of Its Intel Stake",
+    "url": "https://finance.yahoo.com/m/72d9b9ec-3469-3cc9-ac67-6107dee522b2/nvidia-sold-a-quarter-of-its.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达出售了四分之一的英特尔股份",
+    "new": true
+   },
+   {
+    "id": "mv4m3n",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nebius Will Reach True Profitability Just Before CoreWeave But Here’s Who Grows Faster After That",
+    "url": "https://247wallst.com/investing/2026/11/17/nebius-will-reach-true-profitability-just-before-coreweave-but-heres-who-grows-faster-after-that/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nebius 将在 CoreWeave 之前实现真正的盈利，但之后谁的增长更快",
     "new": true
    },
    {
@@ -1774,6 +2170,138 @@
     "url": "https://finance.yahoo.com/technology/ai/articles/down-38-571-sales-growth-075657195.html?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "销售额增长 571%，下跌 38%：Nebius 27% 是否被低估？",
+    "new": true
+   },
+   {
+    "id": "qgkm90",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat",
+    "url": "https://finance.yahoo.com/markets/stocks/article/amd-broadcom-tsmc-stocks-rise-on-nvidia-earnings-coreweave-nebius-shares-also-rally-220159436.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "AMD、博通、CoreWeave 股价因英伟达盈利好于预期而上涨",
+    "new": true
+   },
+   {
+    "id": "w9ex6u",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "CoreWeave Ignited The Rally – Is It A Hot Stock Again?",
+    "url": "https://247wallst.com/videos/coreweave-ignited-the-rally-is-it-a-hot-stock-again/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "CoreWeave 引发反弹——它又是热门股票吗？",
+    "new": true
+   },
+   {
+    "id": "tdgz6t",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "CoreWeave Stock Is Down 70% From Its High. Could a Huge Rebound Come in 2027?",
+    "url": "https://www.fool.com/investing/2026/11/17/coreweave-stock-is-down-70-from-its-high-could-a-huge-rebound-come-in-2027/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "CoreWeave 股价较高位下跌 70%。 2027年能否出现大幅反弹？",
+    "new": true
+   },
+   {
+    "id": "w4l9h0",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia's Complex Orbit",
+    "url": "https://finance.yahoo.com/m/f7117fc6-dd76-3db7-8200-9919f2f435e8/nvidia%27s-complex-orbit.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 的复杂轨道",
+    "new": true
+   },
+   {
+    "id": "yy49zm",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "The 5 Best Stocks in Cathie Wood’s Portfolio",
+    "url": "https://www.tikr.com/blog/the-5-best-stocks-in-cathie-woods-portfolio?ref=yahoofinance&tlnk=yf-261117-6rppm4x6&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Cathie Wood 投资组合中最好的 5 只股票",
+    "new": true
+   },
+   {
+    "id": "2mo1tb",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Update: Market Chatter: Amazon, Google, Meta Lobbying Fails to Stop Trump From Pursuing China Data Center Curbs",
+    "url": "https://finance.yahoo.com/technology/articles/market-chatter-amazon-google-meta-172106872.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "更新：市场热议：亚马逊、谷歌、Meta 游说未能阻止特朗普实施中国数据中心限制",
+    "new": true
+   },
+   {
+    "id": "iowxu5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Sam Altman Just Delivered a Warning to Investors Betting on Endless AI Growth",
+    "url": "https://247wallst.com/investing/2026/11/17/sam-altman-just-delivered-a-warning-to-investors-betting-on-endless-ai-growth/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Sam Altman 刚刚向押注人工智能无限增长的投资者发出警告",
+    "new": true
+   },
+   {
+    "id": "w5pzq3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Cathie Wood Sold $84.8M of Nvidia Stock Ahead of Earnings. Here’s What She Bought Instead",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-sold-84-8m-221309705.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Cathie Wood 在财报发布前出售了价值 8480 万美元的 Nvidia 股票。这是她买的东西",
+    "new": true
+   },
+   {
+    "id": "tqr0r3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Earnings Boost Other Chip and AI Stocks",
+    "url": "https://finance.yahoo.com/m/8b12a732-4329-3c3e-95c3-e04f416a7ffa/earnings-boost-other-chip-and.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "盈利提振其他芯片和人工智能股票",
+    "new": true
+   },
+   {
+    "id": "ivtjft",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia’s Q3 earnings show its advantage as the bank of the AI boom",
+    "url": "https://finance.yahoo.com/video/nvidias-q3-earnings-show-its-advantage-as-the-bank-of-the-ai-boom-215423703.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达第三季度财报显示其作为人工智能热潮银行的优势",
+    "new": true
+   },
+   {
+    "id": "nuh0zy",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Revenue Doubles to $115.8 Billion, Forecasts $130 Billion in First Report Since Huang’s Exit",
+    "url": "https://www.cryptoprowl.com/releases/nvidia-revenue-doubles-to-1158-billion-forecasts-130-billion-in-first-report-since-huangs-exit-7954?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 营收翻倍至 1158 亿美元，黄仁勋离职后首份报告预测营收将达到 1300 亿美元",
+    "new": true
+   },
+   {
+    "id": "rcq7t8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Bet Big on AI Stocks. Now They’re Getting Hit.",
+    "url": "https://finance.yahoo.com/m/302815a2-c453-3ac5-ad56-a00d836f551f/nvidia-bet-big-on-ai-stocks..html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达在人工智能股票上押注巨大。现在他们受到了打击。",
     "new": true
    },
    {
@@ -2197,6 +2725,50 @@
     "new": true
    },
    {
+    "id": "bvzfcr",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Signal: Buy the Dip on Bloom Energy Stock",
+    "url": "https://finance.yahoo.com/markets/options/articles/signal-buy-dip-bloom-energy-190354452.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "信号：逢低买入 Bloom Energy 股票",
+    "new": true
+   },
+   {
+    "id": "p3t8j6",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "How Low Could Bloom Energy Stock Go From Here?",
+    "url": "https://www.trefis.com/stock/be/articles/625624/how-low-could-bloom-energy-stock-go-from-here/2026-11-17?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "布鲁姆能源股票接下来会跌到多低？",
+    "new": true
+   },
+   {
+    "id": "tbtwy7",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Hedge Fund That Lost 67% Makes New Bets on 3 Popular AI Stocks",
+    "url": "https://finance.yahoo.com/technology/ai/articles/hedge-fund-lost-67-makes-175058822.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "损失 67% 的对冲基金重新押注 3 只热门人工智能股票",
+    "new": true
+   },
+   {
+    "id": "nzmd24",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Leopold Aschenbrenner Dumps These 3 Stocks",
+    "url": "https://www.tikr.com/blog/leopold-aschenbrenner-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261117-cxgf9h92&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "利奥波德·阿申布伦纳 (Leopold Aschenbrenner) 抛售这三只股票",
+    "new": true
+   },
+   {
     "id": "c406zc",
     "d": "2026-11-16",
     "type": "news",
@@ -2504,6 +3076,138 @@
     "url": "https://finance.yahoo.com/m/d0e43f79-3efc-3027-a503-da56643aeae4/analysts-expect-4-s%26p-500.html?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "分析师预计明年将有 4 只标准普尔 500 指数股票的增长超过英伟达",
+    "new": true
+   },
+   {
+    "id": "qgkm90",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat",
+    "url": "https://finance.yahoo.com/markets/stocks/article/amd-broadcom-tsmc-stocks-rise-on-nvidia-earnings-coreweave-nebius-shares-also-rally-220159436.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "AMD、博通、CoreWeave 股价因英伟达盈利好于预期而上涨",
+    "new": true
+   },
+   {
+    "id": "73h3rn",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Billionaire David Tepper Grew His SpaceX Stake 17-Fold While Dumping AMD and Broadcom",
+    "url": "https://247wallst.com/investing/2026/11/17/billionaire-david-tepper-grew-his-spacex-stake-17-fold-while-dumping-amd-and-broadcom/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "亿万富翁大卫·泰珀 (David Tepper) 在抛售 AMD 和博通的同时，将其 SpaceX 股份增加了 17 倍",
+    "new": true
+   },
+   {
+    "id": "6cmcn5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "ASUS Showcases Full-Stack AI Infrastructure at SC26, Featuring Intel and AMD Platforms",
+    "url": "https://finance.yahoo.com/technology/ai/articles/asus-showcases-full-stack-ai-204300656.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "华硕在 SC26 上展示全栈 AI 基础设施，采用 Intel 和 AMD 平台",
+    "new": true
+   },
+   {
+    "id": "5epy9",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Prediction: These Will Be Nvidia’s and AMD’s Stock Prices by the End of 2027 (Hint: Only 1 Is a Buy).",
+    "url": "https://www.fool.com/investing/2026/11/17/prediction-these-will-be-nvidia-s-and-amd-s-stock-prices-by-the-end-of-2027-hint-only-1-is-a-buy/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "预测：到 2027 年底，Nvidia 和 AMD 的股价将是这些（提示：只有 1 只股票值得买入）。",
+    "new": true
+   },
+   {
+    "id": "ta9kan",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AMD Stocks Decrease 1.62% as New US Rule Requires Licenses for Five Chip Hubs",
+    "url": "https://finance.yahoo.com/technology/articles/amd-stocks-decrease-1-62-190241595.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "美国新规定要求五个芯片中心获得许可证，AMD 股价下跌 1.62%",
+    "new": true
+   },
+   {
+    "id": "5rt311",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Is AMD Stock a Buy Amid the Uncertainty Around Nvidia?",
+    "url": "https://www.fool.com/investing/2026/11/17/is-amd-stock-a-buy-amid-the-uncertainty-around-nvidia/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "在 Nvidia 的不确定性中，AMD 股票值得买入吗？",
+    "new": true
+   },
+   {
+    "id": "i8a7y3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "A $7.2 Billion Fund Dumps These 3 Stocks",
+    "url": "https://www.tikr.com/blog/a-7-2-billion-fund-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261117-536g3rmv&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "72 亿美元基金抛售这 3 只股票",
+    "new": true
+   },
+   {
+    "id": "m9quni",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AMD Stock Rises After Chip Deal Closes",
+    "url": "https://finance.yahoo.com/technology/ai/articles/amd-stock-rises-chip-deal-175746205.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "芯片交易结束后 AMD 股价上涨",
+    "new": true
+   },
+   {
+    "id": "jj3b11",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Rival Chipmakers Reportedly Chip Away At Nvidia Customers Since Jensen Huang’s Exit",
+    "url": "https://stocktwits.com/news-articles/markets/equity/rival-chipmakers-reportedly-chip-away-at-nvidia-customers-since-jensen-huang-s-exit/cNbORCNR9hE?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "据报道，自黄仁勋退出后，竞争对手芯片制造商不断蚕食 Nvidia 客户",
+    "new": true
+   },
+   {
+    "id": "tqr0r3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Earnings Boost Other Chip and AI Stocks",
+    "url": "https://finance.yahoo.com/m/8b12a732-4329-3c3e-95c3-e04f416a7ffa/earnings-boost-other-chip-and.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "盈利提振其他芯片和人工智能股票",
+    "new": true
+   },
+   {
+    "id": "ru4um6",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Dow Jones Futures Rise, Techs Jump As Nvidia Beats, Says This On Jensen Huang; Target, Anthropic IPO Ahead",
+    "url": "https://finance.yahoo.com/m/3b22ed8c-00c3-32f8-89f5-91bc21ccb366/dow-jones-futures-rise%2C-techs.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "道琼斯期货上涨，科技股上涨，英伟达击败黄仁勋； Target、Anthropic IPO 即将到来",
+    "new": true
+   },
+   {
+    "id": "smosz8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Is Only 17% of SMH. After Its Beat, the Chip ETF Jumped Almost as Much as Nvidia Did",
+    "url": "https://247wallst.com/investing/2026/11/17/nvidia-is-only-17-of-smh-after-its-beat-the-chip-etf-jumped-almost-as-much-as-nvidia-did/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 仅占 SMH 的 17%。击败之后，芯片 ETF 的涨幅几乎与 Nvidia 一样高",
     "new": true
    },
    {
@@ -2971,6 +3675,127 @@
     "new": true
    },
    {
+    "id": "qgkm90",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat",
+    "url": "https://finance.yahoo.com/markets/stocks/article/amd-broadcom-tsmc-stocks-rise-on-nvidia-earnings-coreweave-nebius-shares-also-rally-220159436.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "AMD、博通、CoreWeave 股价因英伟达盈利好于预期而上涨",
+    "new": true
+   },
+   {
+    "id": "g9a4y5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Surging AI Demand and Advanced Chipmaking Strengthens Taiwan Semiconductor Manufacturing Company Limited (TSM) Growth Outlook",
+    "url": "https://finance.yahoo.com/technology/ai/articles/surging-ai-demand-advanced-chipmaking-202155834.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "人工智能需求的激增和先进芯片制造增强了台积电 (TSM) 的增长前景",
+    "new": true
+   },
+   {
+    "id": "af6lhy",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "The 5 Best Stocks in George Soros’s Portfolio",
+    "url": "https://www.tikr.com/blog/the-5-best-stocks-in-george-soross-portfolio?ref=yahoofinance&tlnk=yf-261117-8999fh2f&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "乔治·索罗斯投资组合中最好的 5 只股票",
+    "new": true
+   },
+   {
+    "id": "5x7vz6",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "TSMC Stocks Fall 4.26% as New US Rule Tightens Checks on Chip Foundries",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/tsmc-stocks-fall-4-26-190103464.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "美国新规加强对芯片代工厂的检查，台积电股价下跌 4.26%",
+    "new": true
+   },
+   {
+    "id": "4knjyv",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Taiwan Semiconductor Manufacturing Company Limited (TSM) Pulled Back Amid Broader AI Buildout Correction",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-company-limited-154649598.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "台积电 (TSM) 在更广泛的人工智能建设调整中回调",
+    "new": true
+   },
+   {
+    "id": "ewrgso",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "TSMC Fell 7.7% in Two Days. Joseph Carlson Thinks Its Business Is More Durable Than Nvidia’s",
+    "url": "https://www.benzinga.com/markets/prediction-markets/26/11/63343723/tsmc-joseph-carlson?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "台积电两日跌7.7%。约瑟夫·卡尔森 (Joseph Carlson) 认为其业务比 Nvidia 更持久",
+    "new": true
+   },
+   {
+    "id": "870ffv",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Applied Materials vs. Taiwan Semiconductor Manufacturing: Which Tech Stock Is a Better Buy for 2027?",
+    "url": "https://www.fool.com/coverage/better-buy/2026/11/17/applied-materials-vs-taiwan-semiconductor-manufacturing-which-tech-stock-is-a-better-buy-for-2027/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "应用材料公司与台积电：2027 年哪只科技股更值得买入？",
+    "new": true
+   },
+   {
+    "id": "6irjg2",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "TSM Plans $500M Investment in Anthropic IPO: Will the Pivot Pay Off?",
+    "url": "https://finance.yahoo.com/technology/ai/articles/tsm-plans-500m-investment-anthropic-130100066.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "TSM 计划在 Anthropic IPO 上投资 5 亿美元：转型会带来回报吗？",
+    "new": true
+   },
+   {
+    "id": "smosz8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Is Only 17% of SMH. After Its Beat, the Chip ETF Jumped Almost as Much as Nvidia Did",
+    "url": "https://247wallst.com/investing/2026/11/17/nvidia-is-only-17-of-smh-after-its-beat-the-chip-etf-jumped-almost-as-much-as-nvidia-did/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 仅占 SMH 的 17%。击败之后，芯片 ETF 的涨幅几乎与 Nvidia 一样高",
+    "new": true
+   },
+   {
+    "id": "fe0epr",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "NVIDIA Expands Commitments With Supply Chain Partners to Support AI Infrastructure Buildout",
+    "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-expands-commitments-supply-chain-221800994.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "NVIDIA 扩大与供应链合作伙伴的承诺，支持 AI 基础设施建设",
+    "new": true
+   },
+   {
+    "id": "94m0sd",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Beyond NVIDIA & Anthropic: 3 Important Stock Catalysts to Watch Into December",
+    "url": "https://www.wallstreethorizon.com/blog/Beyond-NVIDIA--Anthropic-3-Important-Stock-Catalysts-to-Watch-Into-December?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "除了 NVIDIA 和 Anthropic：12 月份值得关注的 3 个重要股票催化剂",
+    "new": true
+   },
+   {
     "id": "bcuif5",
     "d": "2026-11-16",
     "type": "news",
@@ -3347,6 +4172,17 @@
     "zh": "泰瑞达股票：分析师估计和评级"
    },
    {
+    "id": "a3pzk5",
+    "d": "2026-11-13",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "The Chip Index Has Been Slashed, but These 3 Stocks Have a Path Back",
+    "url": "https://247wallst.com/investing/2026/11/13/the-chip-index-has-been-slashed-but-these-3-stocks-have-a-path-back/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "芯片指数大幅下调，但这3只股票仍有回头路",
+    "new": true
+   },
+   {
     "id": "vx2wwi",
     "d": "2026-11-12",
     "type": "news",
@@ -3637,6 +4473,17 @@
     "new": true
    },
    {
+    "id": "lysu4q",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Cathie Wood, Ken Fisher and 10 Other Big Funds Bought Cloudflare, While 9 Sold. Who’s Right?",
+    "url": "https://www.tikr.com/blog/cathie-wood-ken-fisher-and-10-other-big-funds-bought-cloudflare-while-9-sold-whos-right?ref=yahoofinance&tlnk=yf-261117-89787fjr&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Cathie Wood、Ken Fisher 和其他 10 家大型基金购买了 Cloudflare，同时出售了 9 家。谁是对的？",
+    "new": true
+   },
+   {
     "id": "hdgvqs",
     "d": "2026-11-14",
     "type": "news",
@@ -3782,6 +4629,17 @@
   ],
   "RBRK.N": [
    {
+    "id": "g3nh9s",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Rubrik Expected to Deliver a Beat-and-Raise Fiscal Q3, Oppenheimer Says",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/rubrik-expected-deliver-beat-raise-155900723.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "奥本海默表示，Rubrik 预计第三季度财报将大幅增长",
+    "new": true
+   },
+   {
     "id": "ewfgnm",
     "d": "2026-11-13",
     "type": "news",
@@ -3915,6 +4773,39 @@
    }
   ],
   "OKTA.O": [
+   {
+    "id": "xxgxpa",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Okta (OKTA) Dips More Than Broader Market: What You Should Know",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/okta-okta-dips-more-broader-215002964.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Okta (OKTA) 下跌幅度超过大盘：您应该知道什么",
+    "new": true
+   },
+   {
+    "id": "f0xxzo",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Global Student Account Provisioning Market 2026: Size, Trends and 2030 Forecast | Capitalize on 13.8% CAGR through AI and Cloud Security with Microsoft, Google, Okta, and Oracle",
+    "url": "https://finance.yahoo.com/technology/ai/articles/global-student-account-provisioning-market-143800543.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "2026 年全球学生账户配置市场：规模、趋势和 2030 年预测 |通过 Microsoft、Google、Okta 和 Oracle 的人工智能和云安全，实现 13.8% 的复合年增长率",
+    "new": true
+   },
+   {
+    "id": "rh5p5l",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Zscaler vs. Okta: Which Cloud Cybersecurity Stock Has the Edge?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/zscaler-vs-okta-cloud-cybersecurity-142600096.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Zscaler 与 Okta：哪只云网络安全股票具有优势？",
+    "new": true
+   },
    {
     "id": "e4cpoz",
     "d": "2026-11-13",
@@ -4313,6 +5204,138 @@
     "url": "https://www.axios.com/2026/11/17/valkryn-seed-a16z-autonomy-testing-drones#utm_source=yahoo_finance&utm_medium=partner&utm_campaign=subs-partner-yahoo-finance-AI?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "国防技术测试员 Valkryn 获得 1700 万美元奖金",
+    "new": true
+   },
+   {
+    "id": "hh1rap",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SpaceX is leasing $47 billion of Nvidia chips like a car — and lenders hold the title",
+    "url": "https://finance.yahoo.com/markets/article/spacex-is-leasing-47-billion-of-nvidia-chips-like-a-car--and-lenders-hold-the-title-192002200.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SpaceX 正在像租赁汽车一样租赁价值 470 亿美元的 Nvidia 芯片——贷款人拥有所有权",
+    "new": true
+   },
+   {
+    "id": "qh4ey3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia just sent a powerful signal to SpaceX stock investors",
+    "url": "https://www.thestreet.com/investing/stocks/nvidia-spacex-stake-q3-13f?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia刚刚向SpaceX股票投资者发出了强有力的信号",
+    "new": true
+   },
+   {
+    "id": "jq8ibg",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SpaceX Stock Adds $54 Billion Amid Viral AI in Space Discussions",
+    "url": "https://beincrypto.com/spacex-stock-adds-54-billion-ai-space/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "人工智能在太空讨论中掀起热潮，SpaceX 股价上涨 540 亿美元",
+    "new": true
+   },
+   {
+    "id": "4tsjmg",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "America Entering a ‘Mind-Blowing’ Beginning: Cathie Wood Hails SpaceX Starship ‘Chopsticks’ Catch",
+    "url": "https://finance.yahoo.com/technology/articles/america-entering-mind-blowing-beginning-223005246.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "美国进入“令人兴奋”的开端：Cathie Wood 称赞 SpaceX 星舰“筷子”捕获",
+    "new": true
+   },
+   {
+    "id": "fj021d",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SpaceX, Rivals Win $985 Million In Launch Awards. Cathie Wood, David Tepper Shift Space Holdings.",
+    "url": "https://finance.yahoo.com/m/0f8296b1-cd8f-3b1e-b4d0-f94bc09e49cc/spacex%2C-rivals-win-%24985.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SpaceX 及其竞争对手赢得了 9.85 亿美元的发射奖。凯西·伍德 (Cathie Wood)、大卫·泰珀 (David Tepper) Shift Space Holdings。",
+    "new": true
+   },
+   {
+    "id": "73h3rn",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Billionaire David Tepper Grew His SpaceX Stake 17-Fold While Dumping AMD and Broadcom",
+    "url": "https://247wallst.com/investing/2026/11/17/billionaire-david-tepper-grew-his-spacex-stake-17-fold-while-dumping-amd-and-broadcom/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "亿万富翁大卫·泰珀 (David Tepper) 在抛售 AMD 和博通的同时，将其 SpaceX 股份增加了 17 倍",
+    "new": true
+   },
+   {
+    "id": "ir6yee",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SpaceX Stock (SPCX) Could Crush Wall Street’s Estimates. Here’s Why",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-stock-spcx-could-crush-210700242.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SpaceX 股票 (SPCX) 可能会超出华尔街的预期。这就是为什么",
+    "new": true
+   },
+   {
+    "id": "zcox1s",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SpaceX “Off Balance Sheet” Debt for AI Chips Hits the Market This Week. Here’s Where Things Get Interesting",
+    "url": "https://www.tikr.com/blog/spacex-off-balance-sheet-debt-for-ai-chips-hits-the-market-this-week-heres-where-things-get-interesting?ref=yahoofinance&tlnk=yf-261117-gxghfqfw&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SpaceX 的人工智能芯片“表外”债务本周上市。这就是事情变得有趣的地方",
+    "new": true
+   },
+   {
+    "id": "bjx4s",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Prediction: SpaceX Stock Could Go Parabolic After Anthropic's IPO. Here's Why.",
+    "url": "https://www.fool.com/investing/2026/11/17/prediction-spacex-stock-could-go-parabolic-after-anthropic-s-ipo-here-s-why/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "预测：Anthropic 首次公开募股后 SpaceX 股价可能呈抛物线走势。这就是为什么。",
+    "new": true
+   },
+   {
+    "id": "3o5dau",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Sold a Quarter of Its Intel Shares and More Than Half Its Nokia Stake. SpaceX Is Now Its Biggest Investment",
+    "url": "https://247wallst.com/investing/2026/11/17/nvidia-sold-a-quarter-of-its-intel-shares-and-more-than-half-its-nokia-stake-spacex-is-now-its-biggest-investment/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达出售了四分之一的英特尔股份和一半以上的诺基亚股份。 SpaceX 现在是其最大的投资",
+    "new": true
+   },
+   {
+    "id": "w5pzq3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Cathie Wood Sold $84.8M of Nvidia Stock Ahead of Earnings. Here’s What She Bought Instead",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-sold-84-8m-221309705.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Cathie Wood 在财报发布前出售了价值 8480 万美元的 Nvidia 股票。这是她买的东西",
+    "new": true
+   },
+   {
+    "id": "91kiy5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Stock Market Today: Dow Dives, Nvidia Falls Amid This Jensen Huang Offer; Cyber Plays Mixed",
+    "url": "https://finance.yahoo.com/m/0c9330f2-68c3-38ef-9244-7dbdfd0853b7/stock-market-today%3A-dow.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "今日股市：道琼斯指数跳水，英伟达因黄仁勋的报价而下跌；网络游戏混合",
     "new": true
    },
    {
@@ -4927,6 +5950,17 @@
     "new": true
    },
    {
+    "id": "aq0h6o",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Launches Committe on Export Controls Amid Scrutiny",
+    "url": "https://finance.yahoo.com/m/9498d06d-449d-3830-9bb4-905bf68ecbc7/nvidia-launches-committe-on.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "英伟达在审查中成立出口管制委员会",
+    "new": true
+   },
+   {
     "id": "1r4645",
     "d": "2026-11-16",
     "type": "news",
@@ -5324,6 +6358,116 @@
     "url": "https://finance.yahoo.com/healthcare/articles/teladoc-health-expands-comprehensive-weight-133000556.html?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "Teladoc Health 通过 GLP-1 药物雇主缴费选项扩大综合体重护理计划",
+    "new": true
+   },
+   {
+    "id": "udr018",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Eli Lilly Is Up 39% in a Year. Barclays Sees Another 9%",
+    "url": "https://www.tikr.com/blog/eli-lilly-is-up-39-in-a-year-barclays-sees-another-9?ref=yahoofinance&tlnk=yf-261117-q55229h6&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "礼来公司 (Eli Lilly) 一年内股价上涨 39%。巴克莱预计还有 9%",
+    "new": true
+   },
+   {
+    "id": "cyz8so",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Eli Lilly vs. Novo Nordisk: Which GLP-1 Stock Is a Better Buy for 2027?",
+    "url": "https://www.fool.com/coverage/better-buy/2026/11/17/eli-lilly-vs-novo-nordisk-which-glp-1-stock-is-a-better-buy-for-2027/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "礼来 (Eli Lilly) 与诺和诺德 (Novo Nordisk)：2027 年哪支 GLP-1 股票更值得买入？",
+    "new": true
+   },
+   {
+    "id": "xjb9f8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Third-Party Vendor Linked to Eli Lilly Is Hit by Data Breach",
+    "url": "https://finance.yahoo.com/m/d3fa3df8-06d3-3d41-89a2-23c1584f133a/third-party-vendor-linked-to.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "与礼来公司相关的第三方供应商遭遇数据泄露",
+    "new": true
+   },
+   {
+    "id": "ri6e22",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Positive Trial Results Could Be A Big Moment For Eli Lilly Stock",
+    "url": "https://finance.yahoo.com/healthcare/articles/positive-trial-results-could-big-191144681.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "积极的试验结果可能对礼来公司股票来说是一个重要时刻",
+    "new": true
+   },
+   {
+    "id": "duj6vj",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Eli Lilly inks cancer pact worth up to $5.9bn with Stipple Bio",
+    "url": "https://www.pharmaceutical-technology.com/news/eli-lilly-inks-cancer-pact-worth-up-to-5-9bn-with-stipple-bio/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "礼来公司 (Eli Lilly) 与 Stipple Bio 签署价值高达 59 亿美元的癌症协议",
+    "new": true
+   },
+   {
+    "id": "pr6hcc",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Cathie Wood and 9 Other Big Funds Bought Eli Lilly Last Quarter, While 18 Sold. Who’s Right?",
+    "url": "https://www.tikr.com/blog/cathie-wood-and-9-other-big-funds-bought-eli-lilly-last-quarter-while-18-sold-whos-right?ref=yahoofinance&tlnk=yf-261117-rfg89qcm&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Cathie Wood 和其他 9 家大型基金上季度购买了礼来公司，同时出售了 18 家基金。谁是对的？",
+    "new": true
+   },
+   {
+    "id": "lznj5g",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "A $1.5 Billion Reason Why Eli Lilly Stock Is in Focus",
+    "url": "https://www.barchart.com/story/news/8874786/a-1-5-billion-reason-why-eli-lilly-stock-is-in-focus?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "礼来 (Eli Lilly) 股票价值 15 亿美元成为焦点",
+    "new": true
+   },
+   {
+    "id": "yhxx0j",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Was Eli Lilly Stock's 45% Run Visible Early?",
+    "url": "https://www.trefis.com/stock/lly/articles/625554/was-eli-lilly-stocks-45-run-visible-early/2026-11-17?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "礼来公司 (Eli Lilly) 股票 45% 的上涨是否很早就可见？",
+    "new": true
+   },
+   {
+    "id": "xs0jjh",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Coca-Cola Stock (KO) May Struggle to Repeat Its Strong 2026 Performance",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-stock-ko-may-213800936.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "可口可乐股票 (KO) 可能难以重现 2026 年的强劲表现",
+    "new": true
+   },
+   {
+    "id": "m36ute",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "3 Stocks in a Bull Rally Right Now",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/3-stocks-bull-rally-now-172100309.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "目前正处于牛市反弹的 3 只股票",
     "new": true
    },
    {
@@ -5863,6 +7007,83 @@
     "new": true
    },
    {
+    "id": "u4dqs9",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Stock Market Today, Nov. 17: Stocks Slide on AI Chip and Tech Pressures, Salesforce Plummets 9%",
+    "url": "https://www.fool.com/coverage/stock-market-today/2026/11/17/stock-market-today-nov-17-stocks-slide-on-ai-chip-and-tech-pressures-salesforce-plummets-9/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "今日股市，11 月 17 日：AI 芯片和技术压力导致股市下滑，Salesforce 暴跌 9%",
+    "new": true
+   },
+   {
+    "id": "3k6ef5",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Evercore ISI’s $100 Target Says Robinhood’s Selloff Went Too Far",
+    "url": "https://www.tikr.com/blog/evercore-isis-100-target-says-robinhoods-selloff-went-too-far?ref=yahoofinance&tlnk=yf-261117-mmp3h578&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Evercore ISI 的 100 美元目标称 Robinhood 的抛售太过分了",
+    "new": true
+   },
+   {
+    "id": "w1c3wp",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Why Did Robinhood Stock Fall Another 7%?",
+    "url": "https://www.trefis.com/stock/hood/articles/625796/why-did-robinhood-stock-fall-another-7/2026-11-17?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Robinhood 股价为何又下跌 7%？",
+    "new": true
+   },
+   {
+    "id": "nz79gf",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Strategy Sinks 6% as Bitcoin Slides; Saylor Says Cash Covers “3.4 Years of Interest and Dividends”",
+    "url": "https://www.tikr.com/blog/strategy-sinks-6-as-bitcoin-slides-saylor-says-cash-covers-3-4-years-of-interest-and-dividends?ref=yahoofinancedividend&tlnk=yf-261117-7r4g8j63&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "随着比特币下滑，策略下跌 6%； Saylor 表示现金可以支付“3.4 年的利息和股息”",
+    "new": true
+   },
+   {
+    "id": "n69nkx",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Chime Financial, Stock Of The Day, Eyes A Buy Point As Growth Ramps, Big Debut Looms",
+    "url": "https://finance.yahoo.com/m/17dca0b9-abeb-3c4b-820e-e165d5a02385/chime-financial%2C-stock-of-the.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Chime Financial，当日股票，随着增长的加速，着眼于买入点，首次亮相迫在眉睫",
+    "new": true
+   },
+   {
+    "id": "is4rbl",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Former Robinhood employee pleads guilty in insider trading case",
+    "url": "https://finance.yahoo.com/video/former-robinhood-employee-pleads-guilty-in-insider-trading-case-194732484.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "罗宾汉前员工在内幕交易案中认罪",
+    "new": true
+   },
+   {
+    "id": "zfkzl4",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Kalshi expands into stock trading with planned brokerage launch",
+    "url": "https://www.proactiveinvestors.com/companies/news/1101944/kalshi-expands-into-stock-trading-with-planned-brokerage-launch-1101944.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Kalshi 进军股票交易并计划推出经纪业务",
+    "new": true
+   },
+   {
     "id": "sm7807",
     "d": "2026-11-16",
     "type": "news",
@@ -6137,6 +7358,61 @@
     "url": "https://247wallst.com/investing/2026/11/16/as-bitcoin-plummets-trump-media-warns-it-may-have-to-sell-some-to-repay-noteholders-heres-why-nov-30-is-the-key-date-for-its-1-billion-in-notes/?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "随着比特币暴跌，特朗普媒体警告称，它可能不得不出售一些比特币来偿还票据持有人。这就是为什么 11 月 30 日是其发行 10 亿美元票据的关键日期",
+    "new": true
+   },
+   {
+    "id": "y1p4e2",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SoFi Says Its 2027 Plan Needs “No New Capital.” So Why Is Its Capital Ratio Falling?",
+    "url": "https://www.tikr.com/blog/sofi-says-its-2027-plan-needs-no-new-capital-so-why-is-its-capital-ratio-falling?ref=yahoofinance&tlnk=yf-261117-xr8q8qvw&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SoFi 表示其 2027 年计划“不需要新资本”。那么为什么其资本充足率会下降呢？",
+    "new": true
+   },
+   {
+    "id": "s0zlxx",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SoFi Technologies (SOFI) Dropped, What Is Behind the Latest Attention?",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-technologies-sofi-dropped-behind-151331674.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SoFi Technologies（SOFI）下跌，最新关注的背后是什么？",
+    "new": true
+   },
+   {
+    "id": "61o3zc",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "SoFi Technologies, Inc. (SOFI) is Attracting Investor Attention: Here is What You Should Know",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/sofi-technologies-inc-sofi-attracting-130005159.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "SoFi Technologies, Inc. (SOFI) 正在吸引投资者的关注：以下是您应该了解的内容",
+    "new": true
+   },
+   {
+    "id": "6hk0kb",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Could Bitcoin’s Market Value Reach $3 Trillion by 2030?",
+    "url": "https://247wallst.com/investing/cryptocurrency/2026/11/17/could-bitcoins-market-value-reach-3-trillion-by-2030/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "到 2030 年，比特币市值能否达到 3 万亿美元？",
+    "new": true
+   },
+   {
+    "id": "9uhkji",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Bitcoin’s 5-Year Outlook: Is It Worth Buying After This Crash?",
+    "url": "https://247wallst.com/investing/cryptocurrency/2026/11/17/bitcoins-5-year-outlook-is-it-worth-buying-after-this-crash/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "比特币的五年展望：这次崩盘后值得购买吗？",
     "new": true
    },
    {
@@ -6718,6 +7994,50 @@
     "new": true
    },
    {
+    "id": "h5o2ke",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "JPMorgan Still Sees Moderna Overvalued Despite Raising Its Target",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/jpmorgan-still-sees-moderna-overvalued-174522489.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "尽管提高了目标，摩根大通仍认为 Moderna 估值过高",
+    "new": true
+   },
+   {
+    "id": "c6dug4",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Moderna's INT Outlook Strengthens After Phase 3 Melanoma Data, Morgan Stanley Says",
+    "url": "https://finance.yahoo.com/healthcare/articles/moderna-apos-int-outlook-strengthens-162216732.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "摩根士丹利表示，Moderna 的 INT 前景在第三阶段黑色素瘤数据后增强",
+    "new": true
+   },
+   {
+    "id": "234zs0",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Drug and Gene Delivery Devices - Global Strategic Business Report 2026: Capitalize on 8.1% CAGR to Secure the $1.2 Billion Market by 2032 as AbbVie, Moderna, Pfizer and Novartis Accelerate",
+    "url": "https://finance.yahoo.com/healthcare/articles/drug-gene-delivery-devices-global-150200572.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "药物和基因输送设备 - 2026 年全球战略业务报告：随着艾伯维 (AbbVie)、Moderna、辉瑞 (Pfizer) 和诺华 (Novartis) 加速发展，到 2032 年，利用 8.1% 的复合年增长率确保 12 亿美元的市场",
+    "new": true
+   },
+   {
+    "id": "85jtn3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Biotechnology Market Companies 2027 Analysis: Amgen, Gilead, Regeneron, Vertex and Moderna Post Strong 2026 Results as Billion-Dollar Deals Reshape a Market Headed for USD 6.34 Trillion by 2035",
+    "url": "https://finance.yahoo.com/healthcare/articles/biotechnology-market-companies-2027-analysis-150000375.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "2027 年生物技术市场公司分析：安进 (Amgen)、吉利德 (Gilead)、再生元 (Regeneron)、福泰 (Vertex) 和 Moderna 公布 2026 年业绩强劲，数十亿美元的交易重塑市场，到 2035 年将达到 6.34 万亿美元",
+    "new": true
+   },
+   {
     "id": "20f1ne",
     "d": "2026-11-16",
     "type": "news",
@@ -6959,6 +8279,83 @@
     "url": "https://finance.yahoo.com/m/d0e43f79-3efc-3027-a503-da56643aeae4/analysts-expect-4-s%26p-500.html?.tsrc=rss",
     "first": "2026-11-17",
     "zh": "分析师预计明年将有 4 只标准普尔 500 指数股票的增长超过英伟达",
+    "new": true
+   },
+   {
+    "id": "a7yyz4",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Lumentum, Corning, and other optical-related stocks jump on Chinese import restrictions",
+    "url": "https://finance.yahoo.com/markets/stocks/article/optical-related-stocks-surge-on-import-restrictions-of-chinese-data-center-equipment-150444937.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Lumentum、康宁和其他光学相关股票因中国进口限制而上涨",
+    "new": true
+   },
+   {
+    "id": "rzxrzr",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Coherent Rises 3% as Trump Presses Ahead With Chinese Optics Ban Despite Big Tech Lobbying",
+    "url": "https://www.tikr.com/blog/coherent-rises-3-as-trump-presses-ahead-with-chinese-optics-ban-despite-big-tech-lobbying?ref=yahoofinance&tlnk=yf-261117-jmvfcr2f&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "特朗普不顾大型科技公司游说，继续推进中国光学禁令，相干公司股价上涨 3%",
+    "new": true
+   },
+   {
+    "id": "kp7ked",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Coherent Jumps 8%, Applied Optoelectronics Climbs 7% as U.S. Pushes Ahead With Curbs on Chinese Optical Gear; Lumentum Gains 4%",
+    "url": "https://247wallst.com/investing/2026/11/17/coherent-jumps-8-applied-optoelectronics-climbs-7-as-u-s-pushes-ahead-with-curbs-on-chinese-optical-gear-lumentum-gains-4/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "美国加大对中国光学设备的限制力度，相​​干公司股价上涨 8%，应用光电公司股价上涨 7%； Lumentum 上涨 4%",
+    "new": true
+   },
+   {
+    "id": "lacymx",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Coherent and Lumentum Shares Rise as US Advances Restrictions on Chinese Data Centre Equipment",
+    "url": "https://investorshub.advfn.com/market-news/article/40206/coherent-and-lumentum-shares-rise-as-us-advances-restrictions-on-chinese-data-centre-equipment?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "随着美国对中国数据中心设备实施限制，Coherent 和 Lumentum 股价上涨",
+    "new": true
+   },
+   {
+    "id": "i8a7y3",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "A $7.2 Billion Fund Dumps These 3 Stocks",
+    "url": "https://www.tikr.com/blog/a-7-2-billion-fund-dumps-these-3-stocks?ref=yahoofinance&tlnk=yf-261117-536g3rmv&.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "72 亿美元基金抛售这 3 只股票",
+    "new": true
+   },
+   {
+    "id": "5mkkl7",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "AXT Faces Supplier Switch Risk if US-China Tensions Flare",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/axt-faces-supplier-switch-risk-174559376.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "如果中美紧张局势加剧，AXT 将面临供应商转换风险",
+    "new": true
+   },
+   {
+    "id": "zaqjw8",
+    "d": "2026-11-17",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "Nvidia Isn’t the Whole AI Story. This Stock Could Prove It",
+    "url": "https://247wallst.com/investing/2026/11/17/nvidia-isnt-the-whole-ai-story-this-stock-could-prove-it/?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "Nvidia 并不是人工智能的全部。这只股票可以证明这一点",
     "new": true
    },
    {
@@ -7329,6 +8726,17 @@
     "new": true
    },
    {
+    "id": "49xf00",
+    "d": "2026-11-12",
+    "type": "news",
+    "src": "雅虎财经",
+    "title": "What iShares Russell 2000 (IWM) Sold: Glaukos Leads on Nov. 10",
+    "url": "https://finance.yahoo.com/markets/stocks/articles/ishares-russell-2000-iwm-sold-110501746.html?.tsrc=rss",
+    "first": "2026-11-17",
+    "zh": "iShares Russell 2000 (IWM) 卖出了什么：Glaukos 于 11 月 10 日领先",
+    "new": true
+   },
+   {
     "id": "zvovq",
     "d": "2026-11-10",
     "type": "news",
@@ -7639,6 +9047,37 @@
   "Adobe blocked from using 'Foundry' name for AI tools during trademark dispute - Reuters": "Adobe 在商标纠纷中被禁止使用“Foundry”名称来表示 AI 工具 - 路透中文网",
   "Semiconductor Sell-Off Slams TSMC Stock: What Investors Should Know": "半导体抛售重挫台积电股票：投资者应该知道什么",
   "Cathie Wood Adds Nvidia Stock Before Earnings While Selling Palantir": "Cathie Wood 在出售 Palantir 的同时在财报公布前增持了 Nvidia 股票",
-  "FDA rejects cancer drug invented in China in blow to Beijing’s biotech sector": "FDA拒绝中国发明的抗癌药物，对北京的生物技术行业造成打击"
+  "FDA rejects cancer drug invented in China in blow to Beijing’s biotech sector": "FDA拒绝中国发明的抗癌药物，对北京的生物技术行业造成打击",
+  "Nvidia’s Kress tells CNBC 'customers continue to be with us’ in exclusive interview: Live updates": "Nvidia 的克雷斯在独家采访中告诉 CNBC“客户继续与我们在一起”：实时更新",
+  "CNBC Digital Finance Forum recap: Wall Street's AI and crypto future": "CNBC 数字金融论坛回顾：华尔街的人工智能和加密货币未来",
+  "Nvidia chair says the board will not rehire Huang as CEO - Reuters": "英伟达董事长表示董事会不会重新聘请黄仁勋担任首席执行官 - 路透中文网",
+  "Instant view: Nvidia earnings beat estimates; attention turns to call - Reuters": "即时观点：英伟达盈利超出预期；注意力转向电话 - 路透社",
+  "PJM asks FERC to halve data center grid studies to 12 months": "PJM 要求 FERC 将数据中心电网研究时间减半至 12 个月",
+  "Huang pitches Nvidia comeback, WSJ reports SEC probing the chipmaker - Reuters": "黄仁勋呼吁英伟达卷土重来，《华尔街日报》报道美国证券交易委员会正在调查该芯片制造商 - 路透中文网",
+  "Former Nvidia CEO Jensen Huang can nominate two directors to company board, filings show - Reuters": "文件显示，英伟达前首席执行官黄仁勋可以提名两名董事进入公司董事会 - 路透中文网",
+  "Widespread outages hit banks, air travel, the NSA and Apple, disrupting seemingly everything": "大范围的停电袭击了银行、航空旅行、美国国家安全局和苹果公司，似乎破坏了一切",
+  "AMD, Broadcom, and TSMC stocks rise on Nvidia earnings beat": "AMD、博通和台积电股价因英伟达盈利好转而上涨",
+  "Databricks CEO: AGI Is Already Here, Why Companies Are Behind, and the Superintelligence Debate": "Databricks 首席执行官：AGI 已经到来、企业为何落后以及超级智能争论",
+  "SEC investigation an 'expected outcome' for Nvidia, says Deepwater's Gene Munster": "Deepwater 的 Gene Munster 表示，SEC 的调查是 Nvidia 的“预期结果”",
+  "Prediction: Nvidia Will Be “Forced to Implement Biometric” Kill Switches, Says Jason Calacanis": "预测：杰森·卡拉卡尼斯 (Jason Calacanis) 表示，Nvidia 将“被迫实施生物识别”终止开关",
+  "Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks": "Cathie Wood 的 ARK 出售 8500 万美元的 Nvidia 股票，购买 4000 万美元的加密货币股票",
+  "What Humanoid Robotics Means for Surface Finishing": "人形机器人对于表面精加工意味着什么",
+  "Cathie Wood Says AI Isn't Even in the First Inning Yet of Its Long-Term Technological Revolution, Pointing to Palantir's 123% U.S. Revenue Growth as Evidence the Market Is Underest": "Cathie Wood 表示人工智能还没有进入长期技术革命的第一局，并指出 Palantir 在美国的 123% 收入增长证明市场被低估",
+  "NC State’s Four-Foot Humanoid Robot Built to Collect Floor Eggs": "北卡罗来纳州立大学的四英尺人形机器人用于收集地板鸡蛋",
+  "Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI - Reuters": "微软推出编码和网络安全人工智能模型，与 Anthropic、OpenAI 较量 - 路透中文网",
+  "Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI": "微软推出编码、网络安全人工智能模型，与 Anthropic、OpenAI 较量",
+  "Salesforce falls 10% to reach multi-month low (CRM:NYSE)": "Salesforce 下跌 10% 触及数月低点 (CRM:NYSE)",
+  "Salesforce's Slack Gains Momentum: Can It Lift CRM's Growth Further?": "Salesforce 的 Slack 势头强劲：能否进一步提升 CRM 的增长？",
+  "Nvidia-backed Genesis AI raised $500 million for its humanoid robot at a $3.5 billion valuation": "Nvidia 支持的 Genesis AI 为其人形机器人筹集了 5 亿美元，估值为 35 亿美元",
+  "Cathie Wood Sold $85 Million of Nvidia the Day Before Earnings": "Cathie Wood 在财报发布前一天出售了 8500 万美元的 Nvidia 股票",
+  "Salesforce Sinks 9% as Software Slides Before Anthropic IPO: Investor Warns AI Companies Seek to “Destroy Salesforce Entirely”": "Anthropic IPO 前软件业绩下滑 Salesforce 股价下跌 9%：投资者警告人工智能公司寻求“彻底摧毁 Salesforce”",
+  "Boston Dynamics’ Atlas humanoid lands first non-automotive trial": "波士顿动力公司的 Atlas 人形机器人首次进行非汽车试验",
+  "Joseph Carlson Eyes TSMC Over NVDA After 7.7% Drop in 2 Days - Taiwan Semiconductor (NYSE:TSM)": "约瑟夫·卡尔森 (Joseph Carlson) 在两天内股价下跌 7.7% 后，将目光转向台积电 (TSMC)，而非 NVDA - 台湾半导体 (NYSE:TSM)",
+  "Can Palantir Stock Double From Here?": "Palantir 股票能否从现在翻倍？",
+  "French robot maker Genesis raises $500 million at $3.5 billion valuation - Reuters": "法国机器人制造商 Genesis 融资 5 亿美元，估值 35 亿美元 - 路透中文网",
+  "ServiceNow Stock’s (NOW) Historic Sell-Off May Have Gone Too Far": "ServiceNow 股票的历史性抛售可能已经太过分了",
+  "$10,000 in SoFi Stock: What Could It Be Worth by 2030": "10,000 美元的 SoFi 股票：到 2030 年它值多少钱",
+  "What TSMC Doubters Got Wrong": "台积电怀疑者错在哪里",
+  "AMD Desktop CPU Share Falls to 29.9% as Intel Regains Ground in Q3": "随着英特尔第三季度收复失地，AMD 台式机 CPU 份额下降至 29.9%"
  }
 }
