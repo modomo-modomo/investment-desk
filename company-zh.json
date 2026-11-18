@@ -3844,5 +3844,725 @@
   "desc": "Riot Platforms, Inc. 及其子公司在美国作为一家比特币挖矿公司运营。它分为两个部分：比特币挖矿和工程。该公司在其设施中为比特币挖矿和数据中心服务提供全面且关键的基础设施。钍",
   "en": "Riot Platforms, Inc., together with its subsidiaries, operates as a Bitcoin mining company in the United States. It operates in two segments, Bitcoin Mining and",
   "at": "2026-11-18T13:49:01.112Z"
+ },
+ "QTRX": {
+  "ind": "医疗器械",
+  "desc": "Quanterix Corporation 是一家生命科学公司，业务遍及北美、欧洲、中东、非洲和亚太地区。公司提供HD-X仪器，蛋白质检测平台；和 SR-X 仪器，使研究人员能够在更广泛的应用中应用 Simoa 检测",
+  "en": "Quanterix Corporation, a life sciences company in North America, Europe, the Middle East, Africa, and the Asia Pacific regions. The company offers HD-X instrume",
+  "at": "2026-11-18T23:48:36.463Z"
+ },
+ "HY": {
+  "ind": "农用和重型工程机械",
+  "desc": "海斯特-耶鲁公司通过其子公司在全球范围内提供叉车、属具、零部件、车队管理服务以及技术和能源解决方案。该公司生产框架、桅杆和变速箱等部件；并组装叉车。它主要营销其产品",
+  "en": "Hyster-Yale, Inc., through its subsidiaries, provides lift trucks, attachments, parts, fleet management services, and technology and energy solutions worldwide.",
+  "at": "2026-11-18T23:48:38.111Z"
+ },
+ "GLBE": {
+  "ind": "网络零售",
+  "desc": "Global-E Online Ltd. 及其子公司在以色列、英国、美国和国际上提供直接面向消费者的跨境电子商务平台。其平台使国际购物者能够在线购买，商家能够在全球范围内进行销售。公司简介",
+  "en": "Global-E Online Ltd., together with its subsidiaries, provides direct-to-consumer cross-border e-commerce platform in Israel, the United Kingdom, the United Sta",
+  "at": "2026-11-18T23:48:41.073Z"
+ },
+ "RGNX": {
+  "ind": "生物技术",
+  "desc": "REGENXBIO Inc. 是一家临床阶段的生物技术公司，在美国提供基因疗法，将功能基因传递给有遗传缺陷的细胞。其基因治疗候选产品基于 NAV 技术平台，这是一种专有的腺相关病毒基因传递平台。这",
+  "en": "REGENXBIO Inc., a clinical-stage biotechnology company, provides gene therapies that deliver functional genes to cells with genetic defects in the United States",
+  "at": "2026-11-18T23:48:41.932Z"
+ },
+ "FTH": {
+  "ind": "生物技术",
+  "desc": "Faeth Therapeutics, Inc. 是一家临床阶段生物技术公司，致力于癌症患者治疗方法的发现和开发。该公司提供 PIKTOR，这是一种正在研究的 PI3K/AKT/mTOR 通路多节点抑制剂，正在开发用于子",
+  "en": "Faeth Therapeutics, Inc., a clinical-stage biotechnology company, engages in the discovery and development of therapeutics for cancer patients. The company offe",
+  "at": "2026-11-18T23:48:42.458Z"
+ },
+ "ECVT": {
+  "ind": "特种化学品",
+  "desc": "Ecovyst Inc. 在美国和国际上提供原始和再生硫酸产品和服务。它为炼油厂采矿、水处理和工业应用的烷基化物生产提供端到端物流。该公司前身为PQ Group Holdings",
+  "en": "Ecovyst Inc. offers virgin and regenerated sulfuric acid products and services in the United States and internationally. It offers end-to-end logistics for prod",
+  "at": "2026-11-18T23:48:43.513Z"
+ },
+ "BLSH": {
+  "ind": "软件 - 基础设施",
+  "desc": "Bullish，一个位于美国提供市场基础设施和信息服务的全球数字资产平台。该公司运营 Bullish Exchange，这是一家数字资产现货和衍生品交易所，它将中央限价订单簿匹配引擎与自动化做市相结合，以促进",
+  "en": "Bullish, a global digital asset platform that provides market infrastructure and information services in United States. The company operates Bullish Exchange, a",
+  "at": "2026-11-18T23:48:44.798Z"
+ },
+ "BORR": {
+  "ind": "石油和天然气钻探",
+  "desc": "Borr Drilling Limited 是一家近海浅水钻井承包商，为美洲、东南亚、西非、中东、北非和欧洲的石油和天然气行业提供服务。它拥有、承包和运营在浅水区域作业的自升式钻井平台，例如普罗旺斯",
+  "en": "Borr Drilling Limited operates as an offshore shallow-water drilling contractor to the oil and gas industry in the Americas, Southeast Asia, West Africa, the Mi",
+  "at": "2026-11-18T23:48:46.347Z"
+ },
+ "RLGT": {
+  "ind": "综合货运及物流",
+  "desc": "Radiant Logistics, Inc. 是一家第三方物流公司，在美国、加拿大和墨西哥提供技术支持的全球运输和增值物流服务。公司提供国内、国际空运、海运代理、货运经纪服务",
+  "en": "Radiant Logistics, Inc., operates as a third-party logistics company, provides technology-enabled global transportation and value-added logistics services in th",
+  "at": "2026-11-18T23:48:47.036Z"
+ },
+ "KRNT": {
+  "ind": "特种工业机械",
+  "desc": "康丽数码有限公司 (Kornit Digital Ltd.) 为美国、欧洲、中东、非洲、亚太地区和国际上印花纺织行业的时装、服装和家居装饰领域开发、设计和销售数字印花解决方案。其解决方案包括数字印刷系统、",
+  "en": "Kornit Digital Ltd. develops, designs, and markets digital printing solutions for the fashion, apparel, and home decor segments of printed textile industry in t",
+  "at": "2026-11-18T23:48:48.013Z"
+ },
+ "IAM": {
+  "ind": "生物技术",
+  "desc": "Iambic Therapeutics, Inc. 是一家生物技术公司，通过其人工智能发现平台开发治疗药物，优化美国和国际上的目标产品概况和候选药物。它提供的产品包括 IAM-1363，一种选择性 HER2 抑制剂； I",
+  "en": "Iambic Therapeutics, Inc. operates as a biotechnology company that develops therapeutics from its AI discovery platform that optimizes target product profiles a",
+  "at": "2026-11-18T23:48:49.118Z"
+ },
+ "EP": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "帝国石油公司从事美国石油和天然气利益的优化和开发。该公司在新墨西哥州、北达科他州、蒙大拿州、德克萨斯州和路易斯安那州经营房产。该公司前身为Americomm Resources Corporation，后更名为Empir",
+  "en": "Empire Petroleum Corporation engages in the optimization and development of oil and gas interests in the United States. It operates properties in New Mexico, No",
+  "at": "2026-11-18T23:48:50.054Z"
+ },
+ "VANI": {
+  "ind": "生物技术",
+  "desc": "Vivani Medical, Inc. 是一家临床阶段的生物制药公司，致力于开发治​​疗慢性疾病的微型皮下药物植入物。该公司利用其 NanoPortal 植入技术来开发药物植入候选药物，并可能将其商业化，无论是单独的还",
+  "en": "Vivani Medical, Inc., a clinical-stage biopharmaceutical company, engages in the development of miniaturized and subdermal drug implants that treat chronic dise",
+  "at": "2026-11-18T23:48:50.909Z"
+ },
+ "NEOG": {
+  "ind": "医疗器械",
+  "desc": "Neogen Corporation 在美国和国际上开发、制造和销售各种食品和动物安全产品和服务。它通过食品安全和动物安全部门运营。该公司提供诊断测试套件和补充产品来检测危险",
+  "en": "Neogen Corporation develops, manufactures, and markets various products and services for food and animal safety in the United States and internationally. It ope",
+  "at": "2026-11-18T23:48:51.553Z"
+ },
+ "BRBI": {
+  "ind": "资本市场",
+  "desc": "BRBI BR Partners S.A. 通过其子公司作为一家投资银行运营，在巴西提供投资银行、资本市场、资金销售和结构、投资和财富管理服务。该公司为并购提供财务和战略咨询服务",
+  "en": "BRBI BR Partners S.A., through its subsidiaries, operates as an investment bank that provides investment banking, capital market, treasury sales and structuring",
+  "at": "2026-11-18T23:48:53.127Z"
+ },
+ "PRMB": {
+  "ind": "饮料 - 非酒精类",
+  "desc": "Primo Brands Corporation 在北美作为一家品牌饮料公司运营。它提供瓶装水解决方案和水过滤服务；优质矿泉水和苏打水、纯净水、自助补充饮用水、调味和强化饮料、饮水机和过滤器",
+  "en": "Primo Brands Corporation operates as a branded beverage company in North America. It offers bottle water solutions and water filtration services; and premium sp",
+  "at": "2026-11-18T23:48:55.443Z"
+ },
+ "FATE": {
+  "ind": "生物技术",
+  "desc": "Fate Therapeutics, Inc. 是一家临床阶段的生物制药公司，在美国和国际上开发针对癌症和免疫疾病的程序化细胞免疫疗法。该公司的嵌合抗原受体（CAR）靶向NK和T细胞候选产品包括FT836，它是i",
+  "en": "Fate Therapeutics, Inc., a clinical-stage biopharmaceutical company, develops programmed cellular immunotherapies for cancer and immune disorders in the United ",
+  "at": "2026-11-18T23:48:56.329Z"
+ },
+ "TFSL": {
+  "ind": "银行 - 区域",
+  "desc": "TFS Financial Corporation 通过其子公司在美国提供零售消费者银行服务。该公司提供存款产品，包括储蓄、货币市场、支票、个人退休和其他合格计划账户以及存款证。它还 p",
+  "en": "TFS Financial Corporation, through its subsidiaries, provides retail consumer banking services in the United States. The company offers deposit products, includ",
+  "at": "2026-11-18T23:48:58.016Z"
+ },
+ "HEI": {
+  "ind": "航空航天与国防",
+  "desc": "HEICO Corporation 在美国和国际上提供航空航天、国防和电子相关产品和服务。其飞行支持集团部门提供喷气发动机和飞机部件更换零件；保温毯及配件；可再生/可重复使用的绝缘系统",
+  "en": "HEICO Corporation provides aerospace, defense, and electronic related products and services in the United States and internationally. Its Flight Support Group s",
+  "at": "2026-11-18T23:48:59.220Z"
+ },
+ "NERV": {
+  "ind": "生物技术",
+  "desc": "Minerva Neurosciences, Inc. 是一家临床阶段的生物制药公司，专注于治疗中枢神经系统疾病的候选产品的开发和商业化。其主要候选产品是罗哌立酮，该药物正处于治疗 o 的 3 期验证性试验中。",
+  "en": "Minerva Neurosciences, Inc., a clinical-stage biopharmaceutical company, focuses on the development and commercialization of product candidates for the treatmen",
+  "at": "2026-11-18T23:49:00.452Z"
+ },
+ "YSWY": {
+  "ind": "杂货店",
+  "desc": "Yesway, Inc. 在美国拥有并经营便利店。该公司的商店提供包装烘焙食品、瓶装水、咸味零食、袋装糖果、肉干、薯片、牛奶、面包、鸡蛋、包装饮料、肉类零食、巧克力和坚果。它还提供餐饮服务，包括油炸食品",
+  "en": "Yesway, Inc. owns and operates convenience stores in the United States. The company's store offers packaged bakery items, bottled water, salty snacks, bagged ca",
+  "at": "2026-11-18T23:49:01.746Z"
+ },
+ "TJX": {
+  "ind": "服装零售",
+  "desc": "TJX Companies, Inc. 及其子公司在全球范围内经营折扣服装和家居时装零售商。该公司通过四个部门运营：Marmaxx、HomeGoods、TJX Canada 和 TJX International。该公司",
+  "en": "The TJX Companies, Inc., together with its subsidiaries, operates as an off-price apparel and home fashions retailer worldwide. It operates through four segment",
+  "at": "2026-11-18T23:49:03.144Z"
+ },
+ "CATX": {
+  "ind": "医疗器械",
+  "desc": "Perspective Therapeutics, Inc. 是一家放射性药物开发公司，在美国开发和商业化用于治疗癌症的精准靶向 α 疗法 (TAT)。它发现并开发了其初始候选药物 VMT-a-NET，该药物正处于针对患",
+  "en": "Perspective Therapeutics, Inc., a radiopharmaceutical development company, develops and commercializes precision targeted alpha therapies (TAT) to treat cancer ",
+  "at": "2026-11-18T23:49:03.656Z"
+ },
+ "CMRC": {
+  "ind": "软件 - 应用程序",
+  "desc": "Commerce.com, Inc. 在美国、欧洲、中东、非洲、亚太地区和国际上提供人工智能驱动的商业生态系统。该公司的软件即服务平台使商家能够在各个领域协调复杂的数字商务体验",
+  "en": "Commerce.com, Inc. provides artificial intelligence-driven commerce ecosystem in the United States, Europe, the Middle East, Africa, the Asia Pacific, and inter",
+  "at": "2026-11-18T23:49:04.771Z"
+ },
+ "ALHC": {
+  "ind": "医疗保健计划",
+  "desc": "Alignment Healthcare, Inc. 为美国老年人运营一个以消费者为中心的医疗保健平台。它通过其 Medicare Advantage 计划提供定制的医疗保健体验，以满足老年人的需求。 Alignment",
+  "en": "Alignment Healthcare, Inc. operates a consumer-centric healthcare platform for seniors in the United States. It delivers customized healthcare experience to mee",
+  "at": "2026-11-18T23:49:06.770Z"
+ },
+ "HQL": {
+  "ind": "资产管理",
+  "desc": "Abrdn Life Sciences Investors 是由 abrdn Inc. 发起和管理的封闭式股票共同基金。该基金投资于全球公共股票市场。它寻求投资生命科学领域公司的股票，包括生物技术、制药、诊断、",
+  "en": "Abrdn Life Sciences Investors is a closed-ended equity mutual fund launched and managed by abrdn Inc. The fund invests in public equity markets across the globe",
+  "at": "2026-11-18T23:49:07.616Z"
+ },
+ "LOW": {
+  "ind": "家居装修零售",
+  "desc": "Lowe's Companies, Inc. 及其子公司在美国和加拿大作为家居装修零售商运营。它提供一系列用于建筑、维护、修理、改造和装饰的产品。该公司还提供家居装修产品，如电器、SE",
+  "en": "Lowe's Companies, Inc., together with its subsidiaries, operates as a home improvement retailer in the United States and Canada. It provides a line of products ",
+  "at": "2026-11-18T23:49:09.257Z"
+ },
+ "AYA": {
+  "ind": "银",
+  "desc": "Aya Gold & Silver Inc. 及其子公司在摩洛哥从事贵金属项目的勘探、评估和开发。该公司主要勘探金银矿床。其旗舰项目持有位于阿加德以东的Zgounder地产100%权益",
+  "en": "Aya Gold & Silver Inc., together with its subsidiaries, engages in the exploration, evaluation, and development of precious metals projects in Morocco. The comp",
+  "at": "2026-11-18T23:49:09.950Z"
+ },
+ "HYMC": {
+  "ind": "金子",
+  "desc": "海克罗夫特矿业控股公司及其子公司在美国作为一家金银勘探和开发公司运营。其财产 Hycroft 矿包括 25 项专利权，覆盖面积约 1,855 英亩，以及 3,249 项非专利矿脉和砂矿权。",
+  "en": "Hycroft Mining Holding Corporation, together with its subsidiaries, operates as a gold and silver exploration and development company in the United States. Its ",
+  "at": "2026-11-18T23:49:11.032Z"
+ },
+ "ORIC": {
+  "ind": "生物技术",
+  "desc": "ORIC Pharmaceuticals, Inc. 是一家临床阶段的生物制药公司，在美国致力于发现和开发对抗癌症耐药机制的疗法。其临床阶段候选产品包括enozertinib（原名ORIC-114），一种脑渗透剂",
+  "en": "ORIC Pharmaceuticals, Inc., a clinical-stage biopharmaceutical company, engages in the discovery and development of therapies to counter the resistance mechanis",
+  "at": "2026-11-18T23:49:12.138Z"
+ },
+ "NFGC": {
+  "ind": "金子",
+  "desc": "New Found Gold Corp. 是一家矿产勘探公司，在加拿大纽芬兰省和拉布拉多省从事矿产鉴定、评估、收购和勘探业务。该公司主要勘探金矿。持有金钟道项目100%权益",
+  "en": "New Found Gold Corp., a mineral exploration company, engages in the identification, evaluation, acquisition, and exploration of mineral properties in the Provin",
+  "at": "2026-11-18T23:49:13.336Z"
+ },
+ "JJSF": {
+  "ind": "包装食品",
+  "desc": "强生休闲食品公司 (J&J Snack Foods Corp.) 为美国、墨西哥和加拿大的食品服务和零售超市行业生产、营销和分销营养休闲食品和饮料。该公司通过三个部门运营：食品服务部门、零售超市部门和冷冻饮料部门。它o",
+  "en": "J&J Snack Foods Corp. manufactures, markets, and distributes nutritional snack food and beverages to the food service and retail supermarket industries in the U",
+  "at": "2026-11-18T23:49:14.907Z"
+ },
+ "PPTA": {
+  "ind": "其他贵金属和采矿业",
+  "desc": "Perpetua Resources Corp. 是一家处于开发阶段的公司，从事美国矿业资产的收购业务。该公司勘探金、银和锑矿床。其主要矿产项目是 100% 拥有的辉锑矿金矿项目，其中包括 1,674 个未获得专利的矿脉",
+  "en": "Perpetua Resources Corp., a development-stage company, engages in the acquisition of mining properties in the United States. The company explores gold, silver, ",
+  "at": "2026-11-18T23:49:15.714Z"
+ },
+ "TRX": {
+  "ind": "金子",
+  "desc": "TRX Gold Corporation 在坦桑尼亚从事矿产勘探、开发和生产。其旗舰项目是坦桑尼亚的Buckreef金矿项目。该公司前身为坦桑尼亚黄金公司，于2022年5月更名为TRX黄金公司。",
+  "en": "TRX Gold Corporation engages in the exploration, development, and production of mineral property in Tanzania. Its flagship project is the Buckreef Gold Project ",
+  "at": "2026-11-18T23:49:16.755Z"
+ },
+ "TTWO": {
+  "ind": "电子游戏和多媒体",
+  "desc": "Take-Two Interactive Software, Inc. 为全球消费者开发、发布和营销互动娱乐解决方案。该公司以 Grand Theft Auto、LA Noire、Max Payne、Midnight C",
+  "en": "Take-Two Interactive Software, Inc. develops, publishes, and markets interactive entertainment solutions for consumers worldwide. The company develops and publi",
+  "at": "2026-11-18T23:49:17.898Z"
+ },
+ "LOAR": {
+  "ind": "航空航天与国防",
+  "desc": "Loar Holdings Inc. 通过其子公司在美国和国际上设计、制造和销售飞机的航空航天和国防部件以及航空航天和国防系统。提供机身部件、结构部件、航空电子设备、复合材料、制动系统部件",
+  "en": "Loar Holdings Inc., through its subsidiaries, designs, manufactures, and sells aerospace and defense components for aircraft, and aerospace and defense systems ",
+  "at": "2026-11-18T23:49:18.987Z"
+ },
+ "EVEX": {
+  "ind": "航空航天与国防",
+  "desc": "Eve Holding, Inc. 及其子公司在美国开发城市空中交通解决方案。参与电动垂直起降飞行器（eVTOL）的设计和生产；提供 eVTOL 服务和支持服务，包括材料、维护、",
+  "en": "Eve Holding, Inc., together with its subsidiaries, develops urban air mobility solutions in the United States. It is involved in the design and production of el",
+  "at": "2026-11-18T23:49:20.384Z"
+ },
+ "EGO": {
+  "ind": "金子",
+  "desc": "埃尔多拉多黄金公司及其子公司主要在土耳其、加拿大和希腊从事矿产开采、勘探、开发和销售。主要生产黄金，以及银、铅和锌。该公司持有 Kisladag 和 Efemç 100% 的权益",
+  "en": "Eldorado Gold Corporation, together with its subsidiaries, engages in the mining, exploration, development, and sale of mineral products primarily in Turkey, Ca",
+  "at": "2026-11-18T23:49:22.172Z"
+ },
+ "ZIM": {
+  "ind": "海运",
+  "desc": "以星综合航运服务有限公司（ZIM Integrated Shipping Services Ltd.）及其子公司在以色列和国际范围内提供集装箱运输及相关服务。该公司为各类客户（包括最终用户、集运商和货运公司）提供门到门和",
+  "en": "ZIM Integrated Shipping Services Ltd., together with its subsidiaries, provides container shipping and related services in Israel and internationally. The compa",
+  "at": "2026-11-18T23:49:23.207Z"
+ },
+ "SBSW": {
+  "ind": "其他贵金属和采矿业",
+  "desc": "Sibanye Stillwater Limited 及其子公司在南非、美国、欧洲和澳大利亚作为一家贵金属采矿公司运营。该公司生产铂族金属（PGM）、铂、钯、铑、钌、铱、金、锂、锌、镍、铜",
+  "en": "Sibanye Stillwater Limited, together with its subsidiaries, operates as a precious metals mining company in South Africa, the United States, Europe, and Austral",
+  "at": "2026-11-18T23:49:25.075Z"
+ },
+ "ACIW": {
+  "ind": "软件 - 基础设施",
+  "desc": "ACI Worldwide, Inc. 开发、营销、安装和支持软件产品和服务，以促进美国和全球的电子支付。它通过支付软件和账单部门运营。该公司提供 ACI Acquiring，这是一种处理信用卡、借记卡和借记卡的解决方案",
+  "en": "ACI Worldwide, Inc. develops, markets, installs, and supports software products and services for facilitating electronic payments in the United States and world",
+  "at": "2026-11-18T23:49:25.603Z"
+ },
+ "DDD": {
+  "ind": "电脑硬件",
+  "desc": "3D Systems Corporation 在北美和南美、欧洲、中东、非洲、亚太地区和大洋洲提供 3D 打印和数字制造解决方案。该公司通过两个部门运营：医疗保健解决方案部门和工业解决方案部门。它提供 3D 打印技术，",
+  "en": "3D Systems Corporation provides 3D printing and digital manufacturing solutions in North and South America, Europe, the Middle East, Africa, the Asia Pacific, a",
+  "at": "2026-11-18T23:49:27.131Z"
+ },
+ "SSRM": {
+  "ind": "金子",
+  "desc": "SSR Mining Inc. 及其子公司在美国、土耳其、加拿大和阿根廷从事贵金属资源的收购、勘探和开发。该公司勘探金锭、铜、银、铅和锌矿床。它持有以下权益：",
+  "en": "SSR Mining Inc., together with its subsidiaries, engages in the acquisition, exploration, and development of precious metal resource properties in the United St",
+  "at": "2026-11-18T23:49:28.123Z"
+ },
+ "GAU": {
+  "ind": "金子",
+  "desc": "Galiano Gold Inc. 是一家金矿开采公司。它拥有Asanko金矿90%的权益，该金矿由位于西非加纳共和国阿曼西西区Asankrangwa金矿带的Nkran、Esaase、Abore和Miradani Nor",
+  "en": "Galiano Gold Inc. operates as a gold mining company. It owns a 90% interest in the Asanko Gold Mine consists of the Nkran, Esaase, Abore, and Miradani North ope",
+  "at": "2026-11-18T23:49:29.318Z"
+ },
+ "TGB": {
+  "ind": "铜",
+  "desc": "Trekor Metals Limited 是一家矿业公司，收购并开发矿产。它勘探铜、钼、金、铌和银矿床。公司主要资产包括100%拥有的位于不列颠哥伦比亚省中南部的直布罗陀矿；和佛罗伦萨铜矿项目",
+  "en": "Trekor Metals Limited, a mining company, acquires and develops mineral properties. It explores for copper, molybdenum, gold, niobium, and silver deposits. The c",
+  "at": "2026-11-18T23:49:30.181Z"
+ },
+ "PSNY": {
+  "ind": "汽车制造商",
+  "desc": "Polestar Automotive Holding UK PLC 在欧洲、北美、亚太地区、中东和国际范围内从事电池电动汽车的研发、营销、商业化和销售。该公司提供纯电动汽车，包括 Polestar 2 (PS2)；",
+  "en": "Polestar Automotive Holding UK PLC engages in the research and development, marketing, commercialization, and sale of battery electric vehicles in Europe, North",
+  "at": "2026-11-18T23:49:31.017Z"
+ },
+ "HBM": {
+  "ind": "铜",
+  "desc": "Hudbay Minerals Inc. 是一家多元化矿业公司，专注于北美和南美矿产的勘探、开发、运营和优化。主要勘探含铜、金、锌、钼精矿和银的铜精矿。它拥有100%的权益",
+  "en": "Hudbay Minerals Inc., a diversified mining company, focuses on the exploration, development, operation, and optimization of properties in North and South Americ",
+  "at": "2026-11-18T23:49:32.263Z"
+ },
+ "AG": {
+  "ind": "银",
+  "desc": "First Majestic Silver Corp. 在北美从事矿产收购、勘探、开发和生产。该公司勘探银矿和金矿。其项目包括占地约 71,867 公顷的圣迪马斯银/金矿，位于",
+  "en": "First Majestic Silver Corp. engages in the acquisition, exploration, development, and production of mineral properties in North America. The company explores fo",
+  "at": "2026-11-18T23:49:32.963Z"
+ },
+ "ELE": {
+  "ind": "金子",
+  "desc": "Elemental Royal Corporation 从事贵金属和贱金属特许权使用费的收购和生成。它还涉及勘探特许权使用费和特许权使用费生成资产。该公司持有金、银、铜和贵金属项目的特许权使用费。此外，它还在北",
+  "en": "Elemental Royalty Corporation engages in the acquisition and generation of precious and base metal royalties. It is also involved in exploration royalties and r",
+  "at": "2026-11-18T23:49:33.467Z"
+ },
+ "CTGO": {
+  "ind": "金子",
+  "desc": "Contango Silver & Gold Inc. 在阿拉斯加和不列颠哥伦比亚省金三角从事黄金及伴生矿物的勘探、开发和生产。它主要专注于勘探金银矿床。该公司原名为 Contango Ore, Inc.，后更名为",
+  "en": "Contango Silver & Gold Inc. engages in the exploration, development, and production of gold and associated minerals in Alaska and the Golden Triangle in British",
+  "at": "2026-11-18T23:49:34.232Z"
+ },
+ "TECK": {
+  "ind": "铜",
+  "desc": "泰克资源有限公司在亚洲、美洲和欧洲从事矿产研究、勘探、开发、加工、冶炼、精炼和回收。它通过铜和锌部门运营。该公司提供铜、锌和铅精矿以及精炼锌",
+  "en": "Teck Resources Limited engages in research, exploration, development, processing, smelting, refining, and reclamation of mineral properties in Asia, the America",
+  "at": "2026-11-18T23:49:35.256Z"
+ },
+ "SCCO": {
+  "ind": "铜",
+  "desc": "南方铜业公司在墨西哥、美国、秘鲁、巴西、智利和其他美洲国家从事铜及其他矿产的开采、勘探、冶炼和精炼。该公司从事铜矿石的开采、铣削和浮选，生产铜和钼合金。",
+  "en": "Southern Copper Corporation engages in mining, exploring, smelting, and refining copper and other minerals in Mexico, the United States, Peru, Brazil, Chile, an",
+  "at": "2026-11-18T23:49:36.075Z"
+ },
+ "LAES": {
+  "ind": "半导体",
+  "desc": "SEALSQ Corp 及其子公司在北美、欧洲、中东、非洲、亚太地区和拉丁美洲设计、开发和销售半导体。它提供半导体，例如 VaultIC 安全元件、抗量子 RISC-V 安全芯片、安全 ARM 平台、",
+  "en": "SEALSQ Corp, together with its subsidiaries, designs, develops, and markets semiconductors in North America, Europe, the Middle East, Africa, the Asia Pacific, ",
+  "at": "2026-11-18T23:49:36.880Z"
+ },
+ "SPRY": {
+  "ind": "生物技术",
+  "desc": "ARS Pharmaceuticals, Inc. 是一家生物制药公司，在美国和国际上开发和商业化严重过敏反应的治疗方法。该公司参与开发neffy，一种无针鼻内输送肾上腺素的药物，用于紧急治疗",
+  "en": "ARS Pharmaceuticals, Inc., a biopharmaceutical company, develops and commercializes treatments for severe allergic reactions in the United States and internatio",
+  "at": "2026-11-18T23:49:37.509Z"
+ },
+ "WGS": {
+  "ind": "诊断与研究",
+  "desc": "GeneDx Holdings Corp. 是一家基因组学公司，提供基因检测服务。该公司主要提供儿科和罕见疾病诊断，重点是全外显子组和基因组测序以及数据和信息服务。它还为下一代 seq 开发基于人工智能的平台",
+  "en": "GeneDx Holdings Corp., a genomics company, provides genetic testing services. The company primarily offers pediatric and rare disease diagnostics with a focus o",
+  "at": "2026-11-18T23:49:38.583Z"
+ },
+ "SQM": {
+  "ind": "特种化学品",
+  "desc": "Sociedad Química y Minera de Chile S.A. 在智利、拉丁美洲、加勒比地区、欧洲、北美、亚洲和国际上生产和销售特种植物营养素、碘及其衍生物。它提供硝酸钾、硝酸钠、特种混合物和其他特种肥料",
+  "en": "Sociedad Química y Minera de Chile S.A. produces and sells specialty plant nutrients, and iodine and its derivatives in Chile, Latin America, the Caribbean, Eur",
+  "at": "2026-11-18T23:49:40.104Z"
+ },
+ "DC": {
+  "ind": "金子",
+  "desc": "Dakota Gold Corp. 在美国从事矿产收购、勘探和开发业务。该公司主要勘探金矿。该公司成立于 2017 年，总部位于南达科他州利德。",
+  "en": "Dakota Gold Corp. engages in the acquisition, exploration, and development of mineral properties in the United States. The company primarily explores for gold d",
+  "at": "2026-11-18T23:49:41.014Z"
+ },
+ "JBI": {
+  "ind": "建筑产品和设备",
+  "desc": "Janus International Group, Inc. 在北美和国际上制造和供应交钥匙自助仓储、商业和工业建筑解决方案。该公司提供卷帘门和平开门、走廊系统、可重新定位存储单元以及设施和门自动化技术",
+  "en": "Janus International Group, Inc. manufactures and supplies turn-key self-storage, commercial, and industrial building solutions in North America and internationa",
+  "at": "2026-11-18T23:49:41.816Z"
+ },
+ "THM": {
+  "ind": "金子",
+  "desc": "International Tower Hill Mines Ltd. 是一家处于开发阶段的公司，从事矿产的收购、勘探和开发。它持有位于阿拉斯加费尔班克斯西北部的Livengood金矿项目100%权益，该项目占地约19,",
+  "en": "International Tower Hill Mines Ltd., a development stage company, engages in the acquisition, exploration, and development of mineral properties. It holds 100% ",
+  "at": "2026-11-18T23:49:42.985Z"
+ },
+ "DOX": {
+  "ind": "软件 - 基础设施",
+  "desc": "Amdocs Limited 通过其子公司向全球通信、娱乐、媒体和其他服务提供商提供软件和服务。它设计、开发、运营、实施、支持和营销开放式模块化云产品。该公司还提供 CES25，一种电信原生、",
+  "en": "Amdocs Limited, through its subsidiaries, provides software and services to communications, entertainment, media, and other service providers worldwide. It desi",
+  "at": "2026-11-18T23:49:43.909Z"
+ },
+ "RCT": {
+  "ind": "软件 - 应用程序",
+  "desc": "RedCloud Holdings plc 主要在阿根廷、英国、巴西、尼日利亚、南非和国际上运营基于云的企业对企业开放商务平台。该公司开发并运营 RedAI 基础设施和相关产品，以促进交易",
+  "en": "RedCloud Holdings plc operates a cloud-based business-to-business open commerce platform primarily in Argentina, the United Kingdom, Brazil, Nigeria, South Afri",
+  "at": "2026-11-18T23:49:44.858Z"
+ },
+ "VLN": {
+  "ind": "半导体",
+  "desc": "Valens Semiconductor Ltd. 及其子公司为音视频和汽车行业提供半导体产品。它通过跨行业业务和汽车部门运营。该公司提供 HDBaseT 技术，可同时传输超高",
+  "en": "Valens Semiconductor Ltd., together with its subsidiaries, provides semiconductor products for the audio-video and automotive industries. It operates through th",
+  "at": "2026-11-18T23:49:45.350Z"
+ },
+ "FCX": {
+  "ind": "铜",
+  "desc": "Freeport-McMoRan Inc. 在北美、南美和印度尼西亚从事矿产开采。该公司主要勘探铜、金、钼、银和其他金属。其资产包括印度尼西亚的格拉斯伯格矿区；莫伦奇、巴格达、萨福德、谢里塔、",
+  "en": "Freeport-McMoRan Inc. engages in the mining of mineral properties in North America, South America, and Indonesia. The company primarily explores for copper, gol",
+  "at": "2026-11-18T23:49:46.277Z"
+ },
+ "VMET": {
+  "ind": "其他贵金属和采矿业",
+  "desc": "Versamet Royalties Corporation 作为金属特许权使用费和流媒体公司运营，从事收购和管理秘鲁、美国、非洲和加拿大金属和采矿业务及项目的特许权使用费、流媒体和其他类似权益。它探索银、金、铜、",
+  "en": "Versamet Royalties Corporation operates as metals royalty and streaming company, engages in the acquiring and managing royalties, streams, and other similar int",
+  "at": "2026-11-18T23:49:47.409Z"
+ },
+ "LND": {
+  "ind": "农产品",
+  "desc": "BrasilAgro - Companhia Brasileira de Propriedades Agrícolas 在巴西、巴拉圭和玻利维亚从事农业地产的收购、开发、勘探和销售。它通过六个部门运营：房地产、谷物、甘蔗",
+  "en": "BrasilAgro - Companhia Brasileira de Propriedades Agrícolas engages in the acquisition, development, exploration, and sale of agricultural properties in Brazil,",
+  "at": "2026-11-18T23:49:49.485Z"
+ },
+ "HSLV": {
+  "ind": "银",
+  "desc": "Highlander Silver Corp. 从事秘鲁矿产的收购、勘探和评估业务。它勘探金矿和银矿。该公司持有秘鲁圣路易斯项目100%权益，该项目占地230平方公里。它还对La Es持有兴趣",
+  "en": "Highlander Silver Corp. engages in acquisition, exploration, and evaluation of mineral properties in Peru. It explores gold and silver deposits. The company hol",
+  "at": "2026-11-18T23:49:50.717Z"
+ },
+ "INGM": {
+  "ind": "信息技术服务",
+  "desc": "英迈国际控股公司通过其子公司在北美、欧洲、中东、非洲、亚太地区和拉丁美洲分销信息技术 (IT) 产品、云和其他服务。该公司提供客户端和端点解决方案，包括桌面个人",
+  "en": "Ingram Micro Holding Corporation, through its subsidiaries, distributes information technology (IT) products, cloud, and other services in North America, Europe",
+  "at": "2026-11-18T23:49:52.225Z"
+ },
+ "NRGV": {
+  "ind": "电气设备及零件",
+  "desc": "Energy Vault Holdings, Inc. 在美国、瑞士、英国、北美、澳大利亚和国际上开发和部署公用事业规模的能源存储解决方案。该公司提供B-Vault，一种用于短期储能的电化学电池储能解决方案",
+  "en": "Energy Vault Holdings, Inc. develops and deploys utility-scale energy storage solutions in the United States, Switzerland, United Kingdom, North America, Austra",
+  "at": "2026-11-18T23:49:53.535Z"
+ },
+ "TXT": {
+  "ind": "航空航天与国防",
+  "desc": "德事隆公司在全球范围内开展飞机、国防、工业和金融业务。其业务分为六个部门：德事隆航空部门、贝尔部门、德事隆系统部门、工业部门、德事隆电子航空部门和金融部门。德事隆航空部门制造、销售公务机、涡轮螺旋桨飞机并提供服务",
+  "en": "Textron Inc. operates in the aircraft, defense, industrial, and finance businesses worldwide. It operates in six segments: Textron Aviation, Bell, Textron Syste",
+  "at": "2026-11-18T23:49:54.607Z"
+ },
+ "AAUC": {
+  "ind": "金子",
+  "desc": "联合黄金公司及其子公司在非洲作为金矿开采公司运营。它主要勘探金矿和银矿。该公司的旗舰项目是位于马里共和国的 Sadiola 金矿项目，拥有 2 个采矿许可证。该公司前身为知",
+  "en": "Allied Gold Corporation, together with its subsidiaries, operates as gold mining company in Africa. It primarily explores gold and silver deposits. The company'",
+  "at": "2026-11-18T23:49:55.514Z"
+ },
+ "CAMT": {
+  "ind": "半导体设备",
+  "desc": "Camtek Ltd. 及其子公司在美国、中国、韩国、欧洲和亚太地区开发、制造和销售半导体行业的检验和计量设备。该公司提供 Hawk，一个专为先进封装设计的平台； Eagle G5 增强型",
+  "en": "Camtek Ltd., together with its subsidiaries, develops, manufactures, and sells inspection and metrology equipment for semiconductor industry in the United State",
+  "at": "2026-11-18T23:49:56.223Z"
+ },
+ "ERO": {
+  "ind": "铜",
+  "desc": "Ero Copper Corp. 在巴西从事采矿项目的勘探、开发和生产。其旗舰资产包括 Caraíba 业务，包括位于巴西巴伊亚州的铜精矿的生产和销售，以及作为副产品生产和销售的黄金和白银。",
+  "en": "Ero Copper Corp. engages in the exploration, development, and production of mining projects in Brazil. Its flagship asset includes Caraíba operations that compr",
+  "at": "2026-11-18T23:49:57.568Z"
+ },
+ "EXK": {
+  "ind": "银",
+  "desc": "Endeavor Silver Corp. 是一家银矿开采公司，在墨西哥、智利、秘鲁和美国从事矿产收购、勘探、开发、提取、加工、精炼和复垦业务。它主要勘探金银矿床以及贵金属，因为我们",
+  "en": "Endeavour Silver Corp., a silver mining company, engages in the acquisition, exploration, development, extraction, processing, refining, and reclamation of mine",
+  "at": "2026-11-18T23:49:58.444Z"
+ },
+ "SABR": {
+  "ind": "软件 - 基础设施",
+  "desc": "Sabre Corporation 及其子公司是一家软件和技术公司，为美国、欧洲、亚太地区和国际旅游业提供服务。它提供 Sabre Mosaic 市场，这是一个企业对企业旅行市场，为企业提供旅行解决方案。",
+  "en": "Sabre Corporation, together with its subsidiaries, operates as a software and technology company for the travel industry in the United States, Europe, Asia-Paci",
+  "at": "2026-11-18T23:49:59.437Z"
+ },
+ "CDE": {
+  "ind": "金子",
+  "desc": "Coeur Mining, Inc. 在美国、加拿大和墨西哥经营黄金和白银生产商。该公司通过 Palmarejo、Rochester、Kensington、Wharf、Silvertip 和 Las Chispas 部门",
+  "en": "Coeur Mining, Inc. operates as a gold and silver producer in the United States, Canada, and Mexico. The company operates through Palmarejo, Rochester, Kensingto",
+  "at": "2026-11-18T23:50:00.676Z"
+ },
+ "HMY": {
+  "ind": "金子",
+  "desc": "Harmony Gold Mining Company Limited 在南非、巴布亚新几内亚和澳大利亚从事矿产品的勘探、开采、加工和销售。该公司勘探金、铀、银和铜矿床。它持有位于新南威尔士州CSA铜矿的权益，",
+  "en": "Harmony Gold Mining Company Limited engages in the exploration, extraction, processing, and sale of mineral products in South Africa, Papua New Guinea, and Aust",
+  "at": "2026-11-18T23:50:01.280Z"
+ },
+ "GORO": {
+  "ind": "金子",
+  "desc": "Goldgroup Mining Inc. 是一家采矿和金属公司，专注于墨西哥的黄金生产和勘探。该公司持有位于索诺拉州旧金山项目100%的权益。它还拥有生产 Cerro Prieto 堆浸金矿的 100% 权益，该矿位于",
+  "en": "Goldgroup Mining Inc. operates as a mining and metals company that focuses on gold production and exploration in Mexico. The company holds a 100% interest in th",
+  "at": "2026-11-18T23:50:01.897Z"
+ },
+ "LQDA": {
+  "ind": "药品制造商 - 特种药品和非专利药品",
+  "desc": "Liquidia Corporation 是一家生物制药公司，在美国开发、制造和商业化用于罕见心肺疾病的各种产品。该公司的主要候选产品包括 YUTREPIA，一种曲前列环素的吸入干粉制剂，用于治疗肺结核",
+  "en": "Liquidia Corporation, a biopharmaceutical company, develops, manufactures, and commercializes various products for rare cardiopulmonary diseases in the United S",
+  "at": "2026-11-18T23:50:03.308Z"
+ },
+ "OR": {
+  "ind": "金子",
+  "desc": "OR Royalties Inc. 在加拿大和国际上收购并管理贵金属和其他特许权使用费、资源和其他权益。它还拥有承购权；特许权使用费/流融资；以及参与未来各种项目的特许权使用费/流融资的独家权利。公司'",
+  "en": "OR Royalties Inc. acquires and manages precious metal and other royalties, streams, and other interests in Canada and internationally. It also owns options on o",
+  "at": "2026-11-18T23:50:03.917Z"
+ },
+ "HL": {
+  "ind": "其他贵金属和采矿业",
+  "desc": "Hecla Mining Company 及其子公司在美国、加拿大、日本、韩国、中国和国际上提供贵金属和贱金属。该公司开采银、金、铅和锌精矿，以及用于定制冶炼厂的含银和金碳材料，",
+  "en": "Hecla Mining Company, together with its subsidiaries, provides precious and base metals in the United States, Canada, Japan, Korea, China, and internationally. ",
+  "at": "2026-11-18T23:50:04.275Z"
+ },
+ "BTG": {
+  "ind": "金子",
+  "desc": "B2Gold Corp. 在加拿大作为一家黄金生产商公司运营。该公司在马里经营 Fekola 矿；菲律宾的马斯巴特矿；纳米比亚的奥奇科托矿；加拿大鹅矿。它还拥有哥伦比亚Gramalote黄金项目100%的权益。此外，公司",
+  "en": "B2Gold Corp. operates as a gold producer company in Canada. The company operates the Fekola Mine in Mali; the Masbate Mine in the Philippines; the Otjikoto Mine",
+  "at": "2026-11-18T23:50:05.198Z"
+ },
+ "NG": {
+  "ind": "金子",
+  "desc": "NovaGold Resources Inc. 从事金矿开采行业，专注于美国金矿的勘探和开发。该公司的主要资产拥有 Donlin Gold 项目 60% 的权益，该项目由 493 个采矿权组成，占地约 29,000 公顷",
+  "en": "NovaGold Resources Inc. operates in the gold mining industry, focusing on the exploration and development of gold mineral properties in the United States. The c",
+  "at": "2026-11-18T23:50:06.044Z"
+ },
+ "FLUT": {
+  "ind": "赌博",
+  "desc": "Flutter Entertainment plc 在美国、英国、爱尔兰、澳大利亚、意大利和国际上运营一家体育博彩和游戏公司。它提供体育博彩； iGaming 产品，例如二十一点、轮盘赌、老虎机、扑克和拉米纸牌，以及彩票",
+  "en": "Flutter Entertainment plc operates as a sports betting and gaming company in the United States, the United Kingdom, Ireland, Australia, Italy, and international",
+  "at": "2026-11-18T23:50:06.998Z"
+ },
+ "ROST": {
+  "ind": "服装零售",
+  "desc": "Ross Stores, Inc. 及其子公司在美国以 Ross Dress for Less 和 dd's DISCOUNTS 品牌经营折扣零售服装和家居时尚商店。该公司为整个家庭提供设计师服装、配饰、鞋类和家居时尚产",
+  "en": "Ross Stores, Inc., together with its subsidiaries, operates off-price retail apparel and home fashion stores under the Ross Dress for Less and dd's DISCOUNTS br",
+  "at": "2026-11-18T23:50:07.901Z"
+ },
+ "AUGO": {
+  "ind": "金子",
+  "desc": "Aura Minerals Inc.是一家黄金和铜生产公司，专注于美洲黄金和贱金属项目的开发和运营。它通过 Minosa 矿、Apoena 矿、Aranzazu 矿、Almas 矿、Borborema 矿和 Serra ",
+  "en": "Aura Minerals Inc., a gold and copper production company, focuses on the development and operation of gold and base metal projects in the Americas. It operates ",
+  "at": "2026-11-18T23:50:09.355Z"
+ },
+ "BFLY": {
+  "ind": "医疗器械",
+  "desc": "Butterfly Network, Inc. 在美国和国际上开发、制造和商业化超声成像解决方案。该公司提供 Butterfly iQ+ 和 iQ3 超声设备，可以在与临床工作流程集成的单个手持式探头上执行全身成像，",
+  "en": "Butterfly Network, Inc. develops, manufactures, and commercializes ultrasound imaging solutions in the United States and internationally. The company offers But",
+  "at": "2026-11-18T23:50:10.019Z"
+ },
+ "WPM": {
+  "ind": "金子",
+  "desc": "惠顿贵金属公司 (Wheaton Precious Metals Corp.) 是一家贵金属流媒体公司。它在加拿大、美国、墨西哥、葡萄牙、瑞典、英国、阿根廷、智利、巴西、秘鲁、厄瓜多尔、哥伦比亚、科特迪瓦、埃塞俄比亚、",
+  "en": "Wheaton Precious Metals Corp. operates as a precious metal streaming company. It explores for gold, silver, palladium, platinum, and cobalt deposits in Canada, ",
+  "at": "2026-11-18T23:50:10.905Z"
+ },
+ "VZLA": {
+  "ind": "其他工业金属和采矿",
+  "desc": "Vizsla Silver Corp. 在加拿大和墨西哥从事矿产收购、勘探和开发。该公司勘探银矿和金矿。拥有位于锡那罗亚州南部康考迪亚市的Panuco West项目和Sierra Madre Occidental Phy",
+  "en": "Vizsla Silver Corp. engages in the acquisition, exploration, and development of mineral properties in Canada and Mexico. The company explores for silver and gol",
+  "at": "2026-11-18T23:50:12.150Z"
+ },
+ "CNMD": {
+  "ind": "医疗器械",
+  "desc": "CONMED Corporation 是一家医疗技术公司，开发、制造和销售外科手术器械和设备。该公司提供骨科手术产品，包括 BioBrace、带有 Y 结一体式软组织固定系统的 TruShot、Y 结全缝合锚和 Agro",
+  "en": "CONMED Corporation, a medical technology company, develops, manufactures, and sells devices and equipment for surgical procedures. The company offers orthopedic",
+  "at": "2026-11-18T23:50:12.552Z"
+ },
+ "OPTU": {
+  "ind": "电信服务",
+  "desc": "Optimum Communications, Inc. 及其子公司在美国、加拿大、波多黎各和维尔京群岛以 Optimum 品牌提供宽带通信和视频服务。它为住宅和商业客户提供宽带、视频、电话和移动服务",
+  "en": "Optimum Communications, Inc., together with its subsidiaries, provides broadband communications and video services under the Optimum brand in the United States,",
+  "at": "2026-11-18T23:50:14.451Z"
+ },
+ "RGLD": {
+  "ind": "金子",
+  "desc": "Royal Gold, Inc. 及其子公司收购并管理北美、南美和中美、欧洲、中东、非洲和澳大利亚太平洋地区的贵金属流、特许权使用费和相关权益。它通过收购和管理流权益来运作",
+  "en": "Royal Gold, Inc., together with its subsidiaries, acquires and manages precious metal streams, royalties, and related interests in North America, South and Cent",
+  "at": "2026-11-18T23:50:15.330Z"
+ },
+ "RXRX": {
+  "ind": "生物技术",
+  "desc": "Recursion Pharmaceuticals, Inc. 是一家临床阶段的生物技术公司，通过整合生物学、化学、自动化、数据科学和工程领域的技术创新，致力于解码生物学和化学，以实现美国和英国药物发现的工业化",
+  "en": "Recursion Pharmaceuticals, Inc., a clinical-stage biotechnology company, engages in the decoding biology and chemistry by integrating technological innovations ",
+  "at": "2026-11-18T23:50:16.691Z"
+ },
+ "SMMT": {
+  "ind": "生物技术",
+  "desc": "Summit Therapeutics Inc. 是一家生物制药公司，专注于患者、医生、护理人员和社会友好型药物疗法的发现、开发和商业化。其主要开发候选药物是 ivonescimab，这是一种通过阻断 PD-1 进行免疫",
+  "en": "Summit Therapeutics Inc., a biopharmaceutical company, focuses on discovery, development, and commercialization of patient, physician, caregiver, and societal f",
+  "at": "2026-11-18T23:50:17.536Z"
+ },
+ "AU": {
+  "ind": "金子",
+  "desc": "AngloGold Ashanti plc 是一家在非洲、澳大利亚和美洲运营的黄金开采公司。它勘探黄金以及副产品，包括银和硫酸。该公司的旗舰资产包括 100% 拥有的位于 Geita 维多利亚湖金矿区的 Geita 矿。",
+  "en": "AngloGold Ashanti plc operates as a gold mining company in Africa, Australia, and the Americas. It explores for gold, as well as by-products, including silver a",
+  "at": "2026-11-18T23:50:18.428Z"
+ },
+ "IAG": {
+  "ind": "金子",
+  "desc": "IAMGOLD Corporation 通过其子公司在加拿大和布基纳法索经营黄金生产商和开发商业务。该公司的旗舰项目包括占地596公顷的Côté Gold项目，位于安大略省东北部萨德伯里区切斯特镇和杨镇区。 IAMGOL",
+  "en": "IAMGOLD Corporation, through its subsidiaries, operates as a gold producer and developer in Canada and Burkina Faso. The company's flagship project includes Côt",
+  "at": "2026-11-18T23:50:19.295Z"
+ },
+ "LUMN": {
+  "ind": "电信服务",
+  "desc": "Lumen Technologies, Inc. 是一家网络公司，为美国和国际上的企业和大众客户提供集成产品和服务。该公司分为两个部门：商业部门和大众市场部门。它提供暗光纤和管道、边缘云、互联网协议 (IP)、语音",
+  "en": "Lumen Technologies, Inc., a networking company, provides integrated products and services to business and mass customers in the United States and internationall",
+  "at": "2026-11-18T23:50:20.323Z"
+ },
+ "CGAU": {
+  "ind": "金子",
+  "desc": "Centerra Gold Inc. 在北美、土耳其和国际上从事金矿和铜矿的运营、开发、勘探和收购。该公司还拥有并经营一个钼业务部门，其中包括一个冶金加工厂和两个初级钼生产厂",
+  "en": "Centerra Gold Inc. engages in the operation, development, exploration, and acquisition of gold and copper properties in North America, Turkey, and international",
+  "at": "2026-11-18T23:50:21.753Z"
+ },
+ "CBOE": {
+  "ind": "财务数据和证券交易所",
+  "desc": "Cboe Global Markets, Inc. 通过其子公司，作为衍生品和证券交易网络运营，在美国和国际上提供交易、清算和投资解决方案。它通过五个部门运营：期权、北美股票、欧洲和亚太地区",
+  "en": "Cboe Global Markets, Inc., through its subsidiaries, operates as a derivatives and securities exchange network that delivers trading, clearing, and investment s",
+  "at": "2026-11-18T23:50:23.242Z"
+ },
+ "ARQ": {
+  "ind": "污染与处理控制",
+  "desc": "Arq, Inc. 是一家环境技术公司，在美国和加拿大从事基于活性炭的消耗性空气、水和土壤处理解决方案的销售。其产品包括颗粒活性炭、粉末活性炭、胶体炭产品；和添加剂",
+  "en": "Arq, Inc., an environmental technology company, engages in the sale of consumable air, water, and soil treatment solutions based on activated carbon in the Unit",
+  "at": "2026-11-18T23:50:25.469Z"
+ },
+ "CLVT": {
+  "ind": "信息技术服务",
+  "desc": "Clarivate Plc 在美洲、中东、非洲、欧洲和亚太地区提供信息服务。它通过三个部门运营：学术界与政府部门、知识产权部门以及生命科学与医疗保健部门。该公司提供科学和学术研究解决方案；网络的",
+  "en": "Clarivate Plc provides information services in the Americas, the Middle East, Africa, Europe, and the Asia Pacific. It operates through three segments: Academia",
+  "at": "2026-11-18T23:50:26.106Z"
+ },
+ "PLBY": {
+  "ind": "服装制造",
+  "desc": "花花公子公司是一家在美国、澳大利亚、中国、英国和国际上运营的娱乐和休闲公司。该公司通过两个部门运营：直接面向消费者部门和许可部门。它提供性健康产品，如内衣、卧室配件、亲密用品",
+  "en": "Playboy, Inc. operates as a pleasure and leisure company in the United States, Australia, China, the United Kingdom, and internationally. The company operates t",
+  "at": "2026-11-18T23:50:27.519Z"
+ },
+ "BTGO": {
+  "ind": "资本市场",
+  "desc": "Bitgo Holdings, Inc. 是一家在美国和国际上运营的数字资产基础设施公司。该公司为投资者、建设者和数字资产生态系统的其他参与者提供自助钱包、合格托管、流动性和优质服务以及基础设施即服务",
+  "en": "Bitgo Holdings, Inc. operates as a digital asset infrastructure company in the United States and internationally. The company offers self-custody wallet, qualif",
+  "at": "2026-11-18T23:50:27.989Z"
+ },
+ "REI": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "Ring Energy, Inc.是一家独立的石油和天然气公司，从事石油和天然气资产的收购、勘探、开发和生产。该公司在安德鲁斯、盖恩斯、克兰、埃克托、温克勒等地拥有 74,717 英亩净开发土地和 4,366 净未开发土",
+  "en": "Ring Energy, Inc., an independent oil and natural gas company, engages in the acquisition, exploration, development, and production of oil and natural gas prope",
+  "at": "2026-11-18T23:50:29.394Z"
+ },
+ "ARIS": {
+  "ind": "金子",
+  "desc": "Aris Mining Corporation 及其子公司在加拿大、哥伦比亚和圭亚那从事黄金矿产的收购、勘探、开发和运营。它还勘探银矿和铜矿。 Aris Mining Corporation 前身为 GCM Mining",
+  "en": "Aris Mining Corporation, together with its subsidiaries, engages in the acquisition, exploration, development, and operation of gold properties in Canada, Colom",
+  "at": "2026-11-18T23:50:29.952Z"
+ },
+ "GNT": {
+  "ind": "资产管理",
+  "desc": "GAMCO Natural Resources, Gold & Income Trust 是 GAMCO Investors, Inc. 推出的封闭式股票共同基金。该基金由 Gabelli Funds, LLC 管理。它",
+  "en": "GAMCO Natural Resources, Gold & Income Trust is a closed-ended equity mutual fund launched by GAMCO Investors, Inc. The fund is managed by Gabelli Funds, LLC. I",
+  "at": "2026-11-18T23:50:31.136Z"
+ },
+ "BMMX": {
+  "ind": "其他工业金属和采矿",
+  "desc": "Black Mammoth Metals Corporation 是一家自然资源公司，在美国从事资源资产的收购和勘探。它主要勘探黄金和白银。其持有爱达荷州中部布兰科溪矿产 100% 的权益；并持有100%国际",
+  "en": "Black Mammoth Metals Corporation, a natural resource company, engages in the acquisition and exploration of resource properties in the United States. It primari",
+  "at": "2026-11-18T23:50:32.035Z"
+ },
+ "MTA": {
+  "ind": "其他贵金属和采矿业",
+  "desc": "Metalla Royal & Streaming Ltd. 是一家贵金属特许权使用费和流媒体公司，在加拿大从事黄金、白银、铜特许权使用费、流媒体和相关生产权益的收购和管理。该公司在澳大利亚、巴西、墨西哥和美国开展业务。",
+  "en": "Metalla Royalty & Streaming Ltd., a precious metals royalty and streaming company, engages in the acquisition and management of gold, silver, copper royalties, ",
+  "at": "2026-11-18T23:50:33.119Z"
+ },
+ "QTTB": {
+  "ind": "生物技术",
+  "desc": "Q32 Bio Inc.是一家临床阶段的生物技术公司，开发新型生物制剂，以恢复斑秃以及由病理性免疫功能障碍引起的其他自身免疫性和炎症性疾病患者的健康免疫平衡。该公司正在开发 Bempikibart (ADX-914)，这",
+  "en": "Q32 Bio Inc., a clinical-stage biotechnology company, develops novel biologics to restore healthy immune balance in patients with alopecia areata and other auto",
+  "at": "2026-11-18T23:50:33.918Z"
+ },
+ "AMPX": {
+  "ind": "电气设备及零件",
+  "desc": "Amprius Technologies, Inc. 开发、制造和销售用于移动应用的锂离子电池。该公司在SiCore和SiMaxx产品平台下提供硅阳极锂离子电池。其电池主要用于现有和新兴的航空应用，",
+  "en": "Amprius Technologies, Inc. develops, manufactures, and markets lithium-ion batteries for mobility applications. The company provides silicon anode lithium-ion b",
+  "at": "2026-11-18T23:50:35.022Z"
+ },
+ "CSIQ": {
+  "ind": "太阳的",
+  "desc": "阿特斯阳光电力有限公司及其子公司在亚洲、美国、欧洲和国际上提供太阳能和电池储能产品及解决方案。它通过两个部门运营：制造部门和循环能源部门。制造部门专注于制造",
+  "en": "Canadian Solar Inc., together with its subsidiaries, provides solar energy and battery energy storage products and solutions in Asia, the United States, Europe,",
+  "at": "2026-11-18T23:50:35.839Z"
+ },
+ "PRDO": {
+  "ind": "教育与培训服务",
+  "desc": "Perdoceo Education Corporation 在美国通过在线、校园和混合学习项目提供高等教育。它通过三个部门运营：科罗拉多技术大学 (CTU)、美国洲际大学系统 (AIUS) 和圣奥古斯大学",
+  "en": "Perdoceo Education Corporation provides postsecondary education through online, campus-based, and blended learning programs in the United States. It operates th",
+  "at": "2026-11-18T23:50:37.023Z"
+ },
+ "VRRM": {
+  "ind": "信息技术服务",
+  "desc": "Verra Mobility Corporation 在美国、澳大利亚、欧洲和加拿大提供智能移动技术解决方案。它通过三个部门运营：商业服务部门、政府解决方案部门和停车解决方案部门。商业服务部门提供自动收费和违规管理",
+  "en": "Verra Mobility Corporation provides smart mobility technology solutions in the United States, Australia, Europe, and Canada. It operates through three segments:",
+  "at": "2026-11-18T23:50:37.347Z"
+ },
+ "IMUX": {
+  "ind": "生物技术",
+  "desc": "Immunic, Inc. 是一家生物技术公司，在美国和德国开发一系列选择性口服免疫疗法，用于治疗慢性炎症和自身免疫性疾病。其主导开发项目为IMU-838，目前处于临床3期和临床2期开发阶段",
+  "en": "Immunic, Inc., a biotechnology company, develops a pipeline of selective oral immunology therapies for the treatment of chronic inflammatory and autoimmune dise",
+  "at": "2026-11-18T23:50:38.085Z"
+ },
+ "NEM": {
+  "ind": "金子",
+  "desc": "纽蒙特公司是一家黄金生产商。它还勘探铜、银、铅、锌和其他金属。它在美国、巴布亚新几内亚、澳大利亚、加纳、苏里南、阿根廷、多米尼加共和国、智利、秘鲁、厄瓜多尔、墨西哥和加拿大拥有业务和/或资产。公司",
+  "en": "Newmont Corporation operates as a gold producer. It also explores for copper, silver, lead, zinc, and other metals. It has operations and/or assets in the Unite",
+  "at": "2026-11-18T23:50:39.154Z"
+ },
+ "ACHR": {
+  "ind": "航空航天与国防",
+  "desc": "Archer Aviation Inc. 及其子公司为美国和国际商业和国防部门设计和开发飞机及相关技术和服务。该公司为城市空中出租车运营提供电动垂直起降（eVTOL）飞机",
+  "en": "Archer Aviation Inc., together with its subsidiaries, designs and develops aircraft and related technologies and services for commercial and defense sectors in ",
+  "at": "2026-11-18T23:50:40.186Z"
+ },
+ "ASML": {
+  "ind": "半导体设备",
+  "desc": "ASML Holding N.V. 为先进半导体设备系统的开发、生产、营销、销售、升级和服务提供光刻解决方案。该公司提供光刻、计量和检测系统。它还提供极紫外光刻系统；和d",
+  "en": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment",
+  "at": "2026-11-18T23:50:41.010Z"
+ },
+ "ALNT": {
+  "ind": "电子元件",
+  "desc": "Allient Inc. 及其子公司为美国、加拿大、南美、欧洲和亚太地区的各个行业设计、制造和销售精密和专业控制的运动组件和系统。该公司提供各种产品和解决方案，包括",
+  "en": "Allient Inc., together with its subsidiaries, designs, manufactures, and sells precision and specialty-controlled motion components and systems for various indu",
+  "at": "2026-11-18T23:50:41.534Z"
+ },
+ "MU": {
+  "ind": "半导体",
+  "desc": "美光科技公司在美国、台湾、中国大陆、其他亚太国家、日本、欧洲和国际上提供半导体内存和存储产品。它通过云存储业务部、核心数据中心业务部、移动和客户端业务部运营",
+  "en": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific c",
+  "at": "2026-11-18T23:50:42.634Z"
+ },
+ "P": {
+  "ind": "电脑硬件",
+  "desc": "Everpure, Inc. 在美国和国际上提供数据存储和管理技术、产品和服务。其 Purity 软件在其产品之间共享，并提供企业级数据服务，例如始终在线的数据缩减、数据保护和加密。",
+  "en": "Everpure, Inc. provides data storage and management technologies, products, and services in the United States and internationally. Its Purity software is shared",
+  "at": "2026-11-18T23:50:43.401Z"
+ },
+ "MSTR": {
+  "ind": "软件 - 应用程序",
+  "desc": "Strategy Inc 及其子公司作为一家比特币财务公司在美国、欧洲、中东、非洲和国际上运营。它通过提供一系列证券（包括股票和固定收益）为投资者提供不同程度的比特币经济风险。",
+  "en": "Strategy Inc, together with its subsidiaries, operates as a bitcoin treasury company in the United States, Europe, the Middle East, Africa, and internationally.",
+  "at": "2026-11-18T23:50:44.721Z"
  }
 }
