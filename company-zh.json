@@ -3124,5 +3124,725 @@
   "desc": "Nextpower Inc. 为美国和国际上的公用事业规模发电厂提供太阳能和能源技术解决方案。它提供跟踪解决方案，包括 NX Horizo​​n，一种太阳能跟踪解决方案； NX Horizo​​n-XTR，一款地形跟踪跟",
   "en": "Nextpower Inc. provides solar and energy technology solutions for utility-scale power plants in the United States and internationally. It offers tracking soluti",
   "at": "2026-11-17T23:49:00.134Z"
+ },
+ "ARDT": {
+  "ind": "医疗设施",
+  "desc": "Ardent Health, Inc. 拥有并经营一个在美国提供医疗保健服务的医院和诊所网络。该公司提供普通和专业服务，包括内科、普通外科、心脏病学、肿瘤学、骨科、妇女服务、神经病学、泌尿科、",
+  "en": "Ardent Health, Inc. owns and operates a network of hospitals and clinics that provides healthcare services in the United States. The company offers general and ",
+  "at": "2026-11-18T13:47:12.534Z"
+ },
+ "CUE": {
+  "ind": "生物技术",
+  "desc": "Cue Biopharma, Inc. 是一家临床阶段的治疗公司，专注于开发针对免疫性疾病的各种疗法。该公司的主要资产是 CUE-221，这是一种具有双重作用机制的抗 IgE 抗体，目前正处于过敏性疾病的二期开发阶段。它",
+  "en": "Cue Biopharma, Inc., a clinical-stage therapeutics company, focuses on developing various therapies for immunological disorders. The company's lead asset is CUE",
+  "at": "2026-11-18T13:47:13.535Z"
+ },
+ "FDMT": {
+  "ind": "生物技术",
+  "desc": "4D Molecular Therapeutics, Inc. 是一家后期生物技术公司，通过其位于荷兰和美国的专有合成载体发现平台 Therapeutic Vector Evolution 从事腺相关病毒载体的开发。该公",
+  "en": "4D Molecular Therapeutics, Inc., a late-stage biotechnology company, engages in the development of adeno-associated virus vectors from its proprietary synthetic",
+  "at": "2026-11-18T13:47:14.655Z"
+ },
+ "IIIV": {
+  "ind": "软件 - 基础设施",
+  "desc": "i3 Verticals, Inc. 为美国和加拿大的公共部门实体提供企业软件和服务解决方案。该公司为动态流程提供数字解决方案，以在法庭系统内规划、协调、评估、记录和提供最新信息；电子归档和重新",
+  "en": "i3 Verticals, Inc. provides enterprise software and services solutions to public sector entities in the United States and Canada. The company offers digital sol",
+  "at": "2026-11-18T13:47:16.228Z"
+ },
+ "NBIS": {
+  "ind": "互联网内容和信息",
+  "desc": "Nebius Group N.V.是一家科技公司，致力于构建全栈基础设施，服务于美国、英国和国际上的全球人工智能行业。 Nebius为AI构建全栈基础设施，包括大规模GPU集群、云平台、",
+  "en": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdo",
+  "at": "2026-11-18T13:47:17.774Z"
+ },
+ "BAP": {
+  "ind": "银行 - 区域",
+  "desc": "Credicorp Ltd. 及其子公司在秘鲁、百慕大、哥伦比亚、玻利维亚、巴拿马、智利、美国、开曼群岛和墨西哥提供各种银行服务和产品。它通过全能银行业务运营；保险、医疗服务和养老金；小额信贷；和在",
+  "en": "Credicorp Ltd., together with its subsidiaries, provides various banking services and products in Peru, Bermuda, Colombia, Bolivia, Panama, Chile, the United St",
+  "at": "2026-11-18T13:47:19.127Z"
+ },
+ "APLD": {
+  "ind": "信息技术服务",
+  "desc": "Applied Digital Corporation 为北美的高性能计算 (HPC) 和人工智能行业设计、开发和运营数字基础设施解决方案。它通过以下方式运营：数据中心托管和 HPC 托管业务。该公司提供充满活力的基础设",
+  "en": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence ind",
+  "at": "2026-11-18T13:47:21.286Z"
+ },
+ "ITG": {
+  "ind": "工程建筑",
+  "desc": "ITG, Inc. 为美国的数字和其他公用事业基础设施行业提供服务。它提供技术支持的端到端服务，支持宽带网络的规划、设计、建设、运营、维护和扩展。公司提供工程",
+  "en": "ITG, Inc. provides services to the digital and other utility infrastructure industries in the United States. It delivers technology-enabled, end-to-end services",
+  "at": "2026-11-18T13:47:22.181Z"
+ },
+ "IREN": {
+  "ind": "资本市场",
+  "desc": "IREN Limited 在澳大利亚和加拿大作为垂直整合的人工智能云服务平台运营。它开发、拥有和运营数据中心，包括相关土地、电网连接和变电站，以及建筑物和冷却。该公司还拥有并运营计算层、su",
+  "en": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the",
+  "at": "2026-11-18T13:47:23.121Z"
+ },
+ "AIP": {
+  "ind": "半导体",
+  "desc": "Arteris, Inc. 及其子公司在美国、美洲其他地区、中国、韩国、亚太地区其他地区、欧洲和中东提供半导体系统知识产权 (IP) 解决方案。它管理系统中的片上通信和 IP 块部署",
+  "en": "Arteris, Inc., together with its subsidiaries, provides semiconductor system intellectual property (IP) solutions in the United States, rest of the Americas, Ch",
+  "at": "2026-11-18T13:47:24.223Z"
+ },
+ "PEPG": {
+  "ind": "生物技术",
+  "desc": "PepGen Inc. 是一家临床阶段生物技术公司，在美国开发用于治疗严重神经肌肉和神经系统疾病的寡核苷酸疗法。该公司从事EDO肽缀合PMO PGN-EDODM1的开发，目前处于2期临床试验阶段",
+  "en": "PepGen Inc., a clinical-stage biotechnology company, develops oligonucleotide therapeutics for the treatment of severe neuromuscular and neurologic diseases in ",
+  "at": "2026-11-18T13:47:25.177Z"
+ },
+ "AEHR": {
+  "ind": "半导体设备",
+  "desc": "Aehr Test Systems, Inc. 在美国、亚洲、欧洲和中东提供晶圆级、单片化和封装级测试、老化和半导体器件的测试解决方案。该公司提供 FOX-XP 和 FOX-NP 系统，它们是全晶圆接触和单片化芯片/模块",
+  "en": "Aehr Test Systems, Inc. provides test solutions for testing, burn-in, and semiconductor devices at wafer level, singulated die, and package level in the United ",
+  "at": "2026-11-18T13:47:25.747Z"
+ },
+ "CRWV": {
+  "ind": "软件 - 基础设施",
+  "desc": "CoreWeave, Inc. 是一家云基础设施技术公司，业务遍及美国、丹麦、中东和亚太地区。该公司提供 CoreWeave 云平台，该平台包含专有软件和云服务，可提供管理复杂的应用程序所需的自动化和效率。",
+  "en": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States, Denmark, Middle East and Asia Pacific. The company offers CoreWeave ",
+  "at": "2026-11-18T13:47:26.360Z"
+ },
+ "WULF": {
+  "ind": "资本市场",
+  "desc": "TeraWulf Inc. 及其子公司在美国拥有、开发和运营数字基础设施。它还开发和运营用于比特币挖矿和高性能计算工作负载的比特币挖矿设施，利用清洁、经济高效且可靠的能源。公司",
+  "en": "TeraWulf Inc., together with its subsidiaries, owns, develops, operates digital infrastructure in the United States. It also develops and operates bitcoin minin",
+  "at": "2026-11-18T13:47:27.291Z"
+ },
+ "MXL": {
+  "ind": "半导体",
+  "desc": "MaxLinear, Inc. 在美国、亚洲、欧洲和国际上提供通信片上系统解决方案。其产品集成了高速通信系统的各个部分，包括射频、高性能模拟、混合信号、数字信号处理、安全",
+  "en": "MaxLinear, Inc. provides communications systems-on-chip solutions in the United States, Asia, Europe, and internationally. Its products integrate various portio",
+  "at": "2026-11-18T13:47:28.262Z"
+ },
+ "HTLM": {
+  "ind": "专业零售",
+  "desc": "HomesToLife Ltd. 是一家在亚太地区、欧洲和北美运营的家居家具公司。它通过三个部门运营：零售、出口销售和皮革贸易部门。该公司通过其零售店向最终消费者销售软垫家具及相关家居产品。",
+  "en": "HomesToLife Ltd. operates as a home furniture company in Asia Pacific, Europe, and North America. It operates through three segments: Retail, Export sales, and ",
+  "at": "2026-11-18T13:47:29.261Z"
+ },
+ "ACDC": {
+  "ind": "石油和天然气设备与服务",
+  "desc": "ProFrac Holding Corp. 在美国是一家以技术为重点的能源服务控股公司。该公司通过四个部门运营：增产服务部门、支撑剂生产部门、制造部门和 Flotek Industries, Inc.。该公司提供水力压裂",
+  "en": "ProFrac Holding Corp. operates as a technology-focused energy services holding company in the United States. It operates through four segments: Stimulation Serv",
+  "at": "2026-11-18T13:47:30.193Z"
+ },
+ "NVTS": {
+  "ind": "半导体",
+  "desc": "纳维半导体公司在美国、欧洲、中国、亚洲其他地区和国际上设计、开发和销售功率半导体。该公司提供氮化镓功率集成电路、碳化硅功率器件、硅系统控制器和数字隔离器",
+  "en": "Navitas Semiconductor Corporation designs, develops, and markets power semiconductors in the United States, Europe, China, rest of Asia, and internationally. Th",
+  "at": "2026-11-18T13:47:31.282Z"
+ },
+ "PENG": {
+  "ind": "信息技术服务",
+  "desc": "Penguin Solutions, Inc. 是一家人工智能工厂平台公司，为美国、中国、欧洲、墨西哥和国际上的企业、主权人工智能计划和 Neocloud 提供商设计、构建、部署和管理数据中心。其全栈AI工厂平台结合基础",
+  "en": "Penguin Solutions, Inc., an AI factory platform company, designs, builds, deploys, and manages data centers for enterprises, sovereign AI initiatives, and neocl",
+  "at": "2026-11-18T13:47:31.980Z"
+ },
+ "AMKR": {
+  "ind": "半导体设备",
+  "desc": "Amkor Technology, Inc. 在美国、日本、欧洲和亚太地区提供外包半导体封装和测试服务。它提供交钥匙封装和测试服务，包括半导体晶圆凸点、晶圆探针、晶圆背面研磨、封装设计、封装、老化、系统",
+  "en": "Amkor Technology, Inc. provides outsourced semiconductor packaging and test services in the United States, Japan, Europe, and the Asia Pacific. It offers turnke",
+  "at": "2026-11-18T13:47:32.659Z"
+ },
+ "CORZ": {
+  "ind": "软件 - 基础设施",
+  "desc": "Core Scientific, Inc. 在美国提供高密度托管服务和数字资产挖掘基础设施。它通过三个部门运营：主机托管、数字资产自挖矿和数字资产托管挖矿。公司提供空间、电力、冷却、设施运营",
+  "en": "Core Scientific, Inc. provides infrastructure for high-density colocation services and digital asset mining in the United States. It operates through three segm",
+  "at": "2026-11-18T13:47:33.191Z"
+ },
+ "BTDR": {
+  "ind": "软件 - 应用程序",
+  "desc": "Bitdeer Technologies Group 作为一家区块链和高性能计算 (HPC) 技术公司，在新加坡、美国、不丹、挪威、芬兰、埃塞俄比亚、加拿大和国际上运营。公司提供算力共享解决方案，包括云算力和分算力",
+  "en": "Bitdeer Technologies Group operates as a technology company for blockchain and high-performance computing (HPC) in Singapore, the United States, Bhutan, Norway,",
+  "at": "2026-11-18T13:47:34.210Z"
+ },
+ "RXT": {
+  "ind": "软件 - 基础设施",
+  "desc": "Rackspace Technology, Inc. 在美国、英国和国际上运营一家混合云和人工智能解决方案公司。它通过两个部门运营：公共云和私有云。该公司提供编程基础设施，包括硬件和",
+  "en": "Rackspace Technology, Inc. operates as a hybrid cloud and artificial intelligence solutions company in the United States, the United Kingdom, and internationall",
+  "at": "2026-11-18T13:47:34.846Z"
+ },
+ "QMCO": {
+  "ind": "电脑硬件",
+  "desc": "Quantum Corporation 为美洲、欧洲、中东、非洲和亚太地区的非结构化数据提供数据管理解决方案。该公司提供主要存储软件和系统，包括用于视频编辑、后期制作、",
+  "en": "Quantum Corporation provides data management solutions for unstructured data in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. The company",
+  "at": "2026-11-18T13:47:35.838Z"
+ },
+ "DFDV": {
+  "ind": "资产管理",
+  "desc": "DeFi Development Corp. 专注于围绕 Solana (SOL) 建立其金库。 SOL 是一个区块链基础设施平台。该公司通过两个部门运营：数字资产金库部门和房地产平台部门。数字资产资金部门执行并管理其资",
+  "en": "DeFi Development Corp. focuses on building its treasury around Solana (SOL). SOL is a blockchain infrastructure platform. The company operates through two segme",
+  "at": "2026-11-18T13:47:36.666Z"
+ },
+ "SMTC": {
+  "ind": "半导体",
+  "desc": "Semtech Corporation 在亚太地区、北美和欧洲提供半导体、物联网系统和云连接服务解决方案。该公司分为三个业务部门：信号完整性、模拟混合信号和无线以及物联网系统和连接。它提供",
+  "en": "Semtech Corporation provides semiconductor, Internet of Things systems, and cloud connectivity service solutions in the Asia- Pacific, North America, and Europe",
+  "at": "2026-11-18T13:47:37.376Z"
+ },
+ "PYPD": {
+  "ind": "生物技术",
+  "desc": "PolyPid Ltd. 是一家生物制药公司，利用其专有的聚合物脂质封装基质 (PLEX) 技术开发靶向、局部给药和缓释疗法，以满足未满足的医疗需求。其主要候选产品是 D-PLEX100，目前正处于关键的 3 期临床试验",
+  "en": "PolyPid Ltd., a biopharmaceutical company, developing targeted, locally administered, and prolonged-release therapeutics using its proprietary polymer-lipid enc",
+  "at": "2026-11-18T13:47:37.933Z"
+ },
+ "HUT": {
+  "ind": "资本市场",
+  "desc": "Hut 8 Corp. 及其子公司作为能源基础设施平台运营，大规模集成电力、数字基础设施和计算，为美国和加拿大的能源密集型用例提供动力。它通过电力、数字基础设施、计算和其他部门运作",
+  "en": "Hut 8 Corp., together with its subsidiaries, operates as an energy infrastructure platform that integrates power, digital infrastructure, and compute at scale t",
+  "at": "2026-11-18T13:47:39.023Z"
+ },
+ "QBTS": {
+  "ind": "电脑硬件",
+  "desc": "D-Wave Quantum Inc. 在全球范围内从事量子计算系统、软件和服务的开发和交付。提供Advantage和Advantage 2量子计算机； Ocean，一套开源工具； Leap量子云服务，一种基于云的服务，",
+  "en": "D-Wave Quantum Inc. engages in the development and delivery of quantum computing systems, software, and services worldwide. It provides Advantage and Advantage ",
+  "at": "2026-11-18T13:47:39.530Z"
+ },
+ "BE": {
+  "ind": "电气设备及零件",
+  "desc": "Bloom Energy Corporation 设计、制造、销售和安装用于美国和国际现场发电的固体氧化物燃料电池系统。它提供 Bloom Energy Server，这是一个用于转换燃料（例如天然气、沼气、氢气或它们的",
+  "en": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internat",
+  "at": "2026-11-18T13:47:39.980Z"
+ },
+ "MKSI": {
+  "ind": "科学技术仪器",
+  "desc": "MKS Inc. 为美国、中国、韩国、日本、台湾、新加坡和国际上的半导体制造、电子和封装以及特种工业应用提供基础技术解决方案。该公司通过真空解决方案部门 (VSD) 运营，",
+  "en": "MKS Inc. provides foundational technology solutions to semiconductor manufacturing, electronics and packaging, and specialty industrial applications in the Unit",
+  "at": "2026-11-18T13:47:41.478Z"
+ },
+ "STUB": {
+  "ind": "互联网内容和信息",
+  "desc": "StubHub Holdings, Inc. 运营全球现场活动门票的票务市场。它通过 StubHub 和 viagogo 品牌的网站和移动应用程序购买和销售现场活动和体验的门票。该公司前身为 Pugnacious End",
+  "en": "StubHub Holdings, Inc. operates ticketing marketplace for live event tickets worldwide. It buys and sells tickets to live events and experiences through website",
+  "at": "2026-11-18T13:47:41.893Z"
+ },
+ "BNC": {
+  "ind": "农用和重型工程机械",
+  "desc": "BNB Standard Corporation 在美国和加拿大作为数字资产财务公司运营。它通过两个部门运营：BNB 资金管理部门和零售与工业部门。该公司建立并管理 BNB 的企业金库，以提供机构级的区块链投资机会",
+  "en": "BNB Standard Corporation operates as the digital asset treasury company in the United States and Canada. It operates through two segments: BNB Treasury Manageme",
+  "at": "2026-11-18T13:47:42.466Z"
+ },
+ "ASTS": {
+  "ind": "通讯设备",
+  "desc": "AST SpaceMobile, Inc. 及其子公司在美国设计和开发蓝鸟卫星星座。该公司在太空提供蜂窝宽带网络，可通过智能手机直接访问，用于商业用途和其他应用，以及政府",
+  "en": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides ",
+  "at": "2026-11-18T13:47:43.459Z"
+ },
+ "ENTG": {
+  "ind": "半导体设备",
+  "desc": "Entegris, Inc. 为北美、台湾、韩国、日本、中国、欧洲和东南亚的半导体和其他高科技行业提供先进材料和工艺解决方案。它分为两个部门：材料解决方案（MS）和高级纯度解决方案（APS）。这",
+  "en": "Entegris, Inc. provides advanced materials and process solutions for the semiconductor and other high-technology industries in North America, Taiwan, South Kore",
+  "at": "2026-11-18T13:47:43.915Z"
+ },
+ "AXTI": {
+  "ind": "半导体设备",
+  "desc": "AXT, Inc. 设计、开发、制造和分销化合物和单元素半导体衬底。该公司提供磷化铟，用于使用光/激光器的数据中心连接、数据中心的高速数据传输、5G 通信、光纤激光器和探测器",
+  "en": "AXT, Inc. designs, develops, manufactures, and distributes compound and single element semiconductor substrates. The company provides indium phosphide for use i",
+  "at": "2026-11-18T13:47:45.192Z"
+ },
+ "DOCN": {
+  "ind": "软件 - 基础设施",
+  "desc": "DigitalOcean Holdings, Inc. 通过其子公司在北美、欧洲、亚洲和国际上运营代理推理云平台。该公司为不断发展的科技公司提供人工智能和数字原生企业构建、运行和扩展智能应用程序的服务。也关掉了",
+  "en": "DigitalOcean Holdings, Inc., through its subsidiaries, operates an agentic inference cloud platform in North America, Europe, Asia, and internationally. The com",
+  "at": "2026-11-18T13:47:46.129Z"
+ },
+ "WOLF": {
+  "ind": "半导体",
+  "desc": "Wolfspeed, Inc. 是一家半导体公司，专注于欧洲、香港、新加坡、中国、亚太其他地区、日本、美国和国际电力应用的碳化硅材料和器件。该公司提供碳化硅和氮化镓（GaN）材料，包括",
+  "en": "Wolfspeed, Inc., a semiconductor company, focuses on silicon carbide materials and devices for power applications in Europe, Hong Kong, Singapore, China, rest o",
+  "at": "2026-11-18T13:47:46.760Z"
+ },
+ "LPTH": {
+  "ind": "电子元件",
+  "desc": "LightPath Technologies, Inc. 在美国、英国、以色列、中国、欧洲其他地区、亚洲其他地区和国际范围内设计、开发、制造和分销光学系统和组件。它提供光学元件、组件和子系统，包括精密模制",
+  "en": "LightPath Technologies, Inc. designs, develops, manufactures, and distributes optical systems and assemblies in the United States, the United Kingdom, Israel, C",
+  "at": "2026-11-18T13:47:48.399Z"
+ },
+ "COHU": {
+  "ind": "半导体设备",
+  "desc": "Cohu, Inc. 通过其子公司在美国、台湾、中国、马来西亚、菲律宾、新加坡和国际上提供半导体测试设备和服务。它提供测试和检验计量自动化系统、微机电系统测试模块、测试设备",
+  "en": "Cohu, Inc., through its subsidiaries, provides semiconductor test equipment and services in the United States, Taiwan, China, Malaysia, the Philippines, Singapo",
+  "at": "2026-11-18T13:47:49.099Z"
+ },
+ "ENVX": {
+  "ind": "电气设备及零件",
+  "desc": "Enovix Corporation 在美国和国际上设计、开发和制造锂离子电池。它为可穿戴设备和物联网、智能手机、计算、电动汽车和原始设备制造商提供服务。公司成立于2006年，总部位于美国加利福尼亚州弗里蒙特",
+  "en": "Enovix Corporation designs, develops, and manufactures lithium-ion battery cells in the United States and internationally. It serves wearables and IoT, smartpho",
+  "at": "2026-11-18T13:47:49.647Z"
+ },
+ "SATL": {
+  "ind": "航空航天与国防",
+  "desc": "Satellogic Inc. 是一家垂直整合的地球观测公司，业务遍及欧洲、亚太地区、亚洲、北美和南美。该公司设计、制造和运营卫星系统，提供决策级见解；地理空间数据通过其平台来识别c",
+  "en": "Satellogic Inc. operates as a vertically integrated earth observation company in Europe, the Asia Pacific, Asia, North America, and South America. The company d",
+  "at": "2026-11-18T13:47:51.320Z"
+ },
+ "ABR": {
+  "ind": "房地产投资信托基金 - 抵押贷款",
+  "desc": "Arbor Realty Trust, Inc. 投资于美国多户住宅、单户租赁和商业房地产市场的多元化结构性金融资产组合。它分为两个部门：结构化业务和代理业务。公司投资桥梁和夹层",
+  "en": "Arbor Realty Trust, Inc. invests in a diversified portfolio of structured finance assets in the multifamily, single-family rental, and commercial real estate ma",
+  "at": "2026-11-18T13:47:53.219Z"
+ },
+ "TSM": {
+  "ind": "半导体",
+  "desc": "台积电及其子公司在台湾、中国大陆、欧洲、中东、非洲、日本、美国和国际上制造、封装、测试和销售集成电路和其他半导体器件。提供各种晶圆",
+  "en": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semic",
+  "at": "2026-11-18T13:47:54.258Z"
+ },
+ "DELL": {
+  "ind": "电脑硬件",
+  "desc": "Dell Technologies Inc. 在美洲、欧洲、中东、亚洲和国际范围内设计、开发、制造、营销、销售和支持各种全面的集成解决方案、产品和服务。该公司通过基础设施解决方案集团 (ISG) 和 Clien 运营",
+  "en": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in t",
+  "at": "2026-11-18T13:47:54.806Z"
+ },
+ "SECZ": {
+  "ind": "软件 - 应用程序",
+  "desc": "Securitize Corp. 提供了一个用于代币化和管理数字资产证券的平台。它提供代币化、基金管理和数字资产报告等各种解决方案。该公司与 Socios.com 建立了战略合作伙伴关系，开发受监管的代币化股票发行投资",
+  "en": "Securitize Corp. provides a platform for tokenizing and managing digital asset securities. It provides various solutions such as tokenization, fund administrati",
+  "at": "2026-11-18T13:47:55.172Z"
+ },
+ "CLS": {
+  "ind": "电子元件",
+  "desc": "Celestica Inc. 及其子公司在亚洲、北美和国际范围内提供供应链解决方案。它通过两个部门运营：先进技术解决方案部门以及连接和云解决方案部门。公司提供一系列产品制造及相关供应服务",
+  "en": "Celestica Inc., together with its subsidiaries, provides supply chain solutions in Asia, North America, and internationally. It operates through two segments, A",
+  "at": "2026-11-18T13:47:55.541Z"
+ },
+ "VRT": {
+  "ind": "电气设备及零件",
+  "desc": "Vertiv Holdings Co 为美洲、亚太地区、欧洲、中东和非洲的数据中心、通信网络以及商业和工业环境设计、制造和提供关键数字基础设施技术和生命周期服务。公司提供",
+  "en": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication netw",
+  "at": "2026-11-18T13:47:56.611Z"
+ },
+ "VSH": {
+  "ind": "电子元件",
+  "desc": "Vishay Intertechnology, Inc. 在美国、德国、欧洲其他地区、以色列和亚洲生产和销售分立半导体和无源电子元件。该公司通过六个部门运营：金属氧化物半导体场效应晶体管 (MOSFET)、二极管、光电子",
+  "en": "Vishay Intertechnology, Inc. manufactures and sells discrete semiconductors and passive electronic components in the United States, Germany, rest of Europe, Isr",
+  "at": "2026-11-18T13:47:56.955Z"
+ },
+ "ZBIO": {
+  "ind": "生物技术",
+  "desc": "Zenas BioPharma, Inc. 是一家临床阶段的生物制药公司，致力于基于变革性免疫学的疗法的开发和商业化。其主要候选产品是 obexelimab，这是一种双功能单克隆抗体，旨在结合 CD19 和 Fc?RII",
+  "en": "Zenas BioPharma, Inc., a clinical-stage biopharma company, engages in the development and commercialization of transformative immunology-based therapies. Its le",
+  "at": "2026-11-18T13:47:58.008Z"
+ },
+ "CTMX": {
+  "ind": "生物技术",
+  "desc": "CytomX Therapeutics, Inc. 是一家专注于肿瘤学的生物制药公司，专注于开发旨在治疗肿瘤微环境的有效生物制剂。该公司利用条件激活平台技术进行肿瘤生物制剂的研究和开发，包括验证",
+  "en": "CytomX Therapeutics, Inc. operates as an oncology-focused biopharmaceutical company that focuses on developing potent biologics designed to treat tumor microenv",
+  "at": "2026-11-18T13:47:59.277Z"
+ },
+ "STX": {
+  "ind": "电脑硬件",
+  "desc": "Seagate Technology Holdings plc 在新加坡、美国、荷兰和国际上提供数据存储解决方案。该公司提供外部和内部硬盘驱动器；外部和内部固态硬盘 (SSD)；企业级硬盘和 SSD；数据存储系统",
+  "en": "Seagate Technology Holdings plc engages in providing data storage solutions in Singapore, the United States, the Netherlands, and internationally. The company o",
+  "at": "2026-11-18T13:48:00.546Z"
+ },
+ "CAPR": {
+  "ind": "生物技术",
+  "desc": "Capricor Therapeutics, Inc. 是一家临床阶段的生物技术公司，致力于开发基于转化细胞和外泌体的疗法，用于治疗美国杜氏肌营养不良症 (DMD) 和其他医疗需求未得到满足的疾病。其主要候选产品是 De",
+  "en": "Capricor Therapeutics, Inc., a clinical-stage biotechnology company, engages in the development of transformative cell and exosome-based therapeutics for treati",
+  "at": "2026-11-18T13:48:01.438Z"
+ },
+ "INOD": {
+  "ind": "信息技术服务",
+  "desc": "Innodata Inc. 作为一家数据工程公司在美国、英国、荷兰、加拿大、德国、比利时和国际上运营。该公司通过三个部门运营：数字数据解决方案部门 (DDS)、Synodex 部门和 Agility 部门。 DDS部门从",
+  "en": "Innodata Inc. operates as a data engineering company in the United States, the United Kingdom, the Netherlands, Canada, Germany, Belgium, and internationally. T",
+  "at": "2026-11-18T13:48:02.010Z"
+ },
+ "CLSK": {
+  "ind": "资本市场",
+  "desc": "CleanSpark, Inc. 是一家在美洲运营的比特币挖矿公司。该公司拥有、租赁和运营数据中心和电力资产。它的基础设施支持比特币这种数字商品。该公司原名 Stratean Inc.，并于 11 月更名为 CleanS",
+  "en": "CleanSpark, Inc. operates as a bitcoin mining company in the Americas. The company owns, leases, and operates data centers and power assets. Its infrastructure ",
+  "at": "2026-11-18T13:48:02.514Z"
+ },
+ "ATEC": {
+  "ind": "医疗器械",
+  "desc": "Alphatec Holdings, Inc. 是一家医疗技术公司，在美国和国际上设计、开发和推进脊柱疾病手术治疗技术。该公司生产和销售植入物、仪器、成像设备和备件。它提供阿尔法I",
+  "en": "Alphatec Holdings, Inc., a medical technology company, designs, develops, and advances technologies for the surgical treatment of spinal disorders in the United",
+  "at": "2026-11-18T13:48:03.139Z"
+ },
+ "UCTT": {
+  "ind": "半导体设备",
+  "desc": "Ultra Clean Holdings, Inc. 为美国和国际半导体行业开发和供应关键子系统、组件和零件以及清洁和分析服务。该公司提供开发、设计、零部件采购和清洁的外包解决方案",
+  "en": "Ultra Clean Holdings, Inc. develops and supplies critical subsystems, components and parts, and cleaning and analytical services for the semiconductor industry ",
+  "at": "2026-11-18T13:48:04.288Z"
+ },
+ "PYXS": {
+  "ind": "生物技术",
+  "desc": "Pyxis Oncology, Inc. 是一家临床阶段公司，致力于开发治​​疗实体瘤的疗法。其领先的抗体药物偶联物 (ADC) 产品候选者是 PYX-201，这是一种由人免疫球蛋白 G1 (IgG1) 组成的研究型新型",
+  "en": "Pyxis Oncology, Inc., a clinical stage company, engages in the development of therapeutics to treat solid tumors. Its lead antibody-drug conjugates (ADC) produc",
+  "at": "2026-11-18T13:48:05.199Z"
+ },
+ "LASR": {
+  "ind": "半导体",
+  "desc": "nLIGHT, Inc. 从事航空航天和国防、工业和微加工应用领域的半导体和光纤激光器的设计、开发、制造和销售。它通过两个部门运营：激光产品部门和高级开发部门。该公司提供半导体激光器",
+  "en": "nLIGHT, Inc. engages in the design, development, manufacture, and sale of semiconductor and fiber lasers for aerospace and defense, industrial, and microfabrica",
+  "at": "2026-11-18T13:48:06.189Z"
+ },
+ "DLB": {
+  "ind": "专业商业服务",
+  "desc": "杜比实验室 (Dolby Laboratories, Inc.) 致力于为美国和国际电视、广播和现场娱乐行业设计和制造音频、成像、辅助功能以及其他硬件和软件解决方案。该公司开发并授权其音频技术，",
+  "en": "Dolby Laboratories, Inc. engages in the design and manufacture of audio, imaging, accessibility, and other hardware and software solutions for television, broad",
+  "at": "2026-11-18T13:48:06.961Z"
+ },
+ "FRMI": {
+  "ind": "房地产投资信托基金 - 专业",
+  "desc": "Fermi Inc. 开发下一代私人电网，提供千兆瓦级的高度冗余电力，以支持下一代智能和人工智能计算。该公司将尖端技术与经过验证的世界级多学科领导者阵容相结合，合计 25 G",
+  "en": "Fermi Inc. develops next-generation private electric grids that deliver highly redundant power at gigawatt scale to support next-generation intelligence and AI ",
+  "at": "2026-11-18T13:48:07.584Z"
+ },
+ "SITM": {
+  "ind": "半导体",
+  "desc": "SiTime Corporation 在香港、台湾、美国、新加坡和国际上从事硅计时系统解决方案的设计、开发和销售。提供各种类型的振荡器，以及时钟集成电路、谐振器和同步软件供使用",
+  "en": "SiTime Corporation engages in the design, development, and sale of silicon timing systems solutions in Hong Kong, Taiwan, the United States, Singapore, and inte",
+  "at": "2026-11-18T13:48:08.052Z"
+ },
+ "IONQ": {
+  "ind": "电脑硬件",
+  "desc": "IonQ, Inc. 在美国、瑞士和国际上开发量子计算系统。它出售各种量子位容量的量子计算机的使用权。该公司还通过亚马逊网络服务（AWS）、Braket、微软等云平台访问其量子计算机",
+  "en": "IonQ, Inc. develops quantum computing systems in the United States, Switzerland, and Internationally. It sells access to quantum computers of various qubit capa",
+  "at": "2026-11-18T13:48:08.463Z"
+ },
+ "GRND": {
+  "ind": "软件 - 应用程序",
+  "desc": "Grindr Inc. 为全球女同性恋、男同性恋、双性恋、跨性别者和酷儿 (LGBTQ) 社区运营一款社交网络和约会应用程序。它管理和运营 Grindr 平台，这是一个社交网络平台，服务和满足同性恋、双性恋和性探索成人的",
+  "en": "Grindr Inc. operates a social networking and dating application for the lesbian, gay, bisexual, transgender, and queer (LGBTQ) communities worldwide. It manages",
+  "at": "2026-11-18T13:48:09.730Z"
+ },
+ "NVT": {
+  "ind": "电气设备及零件",
+  "desc": "nVent Electric plc 在美国、欧洲、中东、印度、非洲、亚太地区和国际范围内设计、制造、营销、安装和服务电气连接和保护解决方案。它分为两个部分：系统保护和电气连接。比较",
+  "en": "nVent Electric plc designs, manufactures, markets, installs, and services electrical connection and protection solutions in the America, Europe, the Middle East",
+  "at": "2026-11-18T13:48:10.923Z"
+ },
+ "OGI": {
+  "ind": "药品制造商 - 特种药品和非专利药品",
+  "desc": "Organigram Global Inc. 在加拿大从事大麻及大麻衍生产品的生产和销售。它提供医用大麻产品，包括全花、碎花、预卷、注入预卷、电子烟、饮料、软糖和浓缩物；和成人使用休闲大麻联合国",
+  "en": "Organigram Global Inc. engages in the production and sale of cannabis and cannabis-derived products in Canada. It offers medical cannabis products, including wh",
+  "at": "2026-11-18T13:48:12.343Z"
+ },
+ "WYFI": {
+  "ind": "信息技术服务",
+  "desc": "WhiteFiber, Inc. 提供人工智能 (AI) 基础设施解决方案。它通过两个部门运营：云服务和托管服务。该公司设计、开发和运营数据中心。它还提供托管、托管和基于云的高性能计算 (HPC) 服务",
+  "en": "WhiteFiber, Inc. provides artificial intelligence (AI) infrastructure solutions. It operates through two segments, cloud services and colocation services. The c",
+  "at": "2026-11-18T13:48:12.800Z"
+ },
+ "HPE": {
+  "ind": "通讯设备",
+  "desc": "惠普企业公司及其子公司在美国、美洲、欧洲、中东、非洲、亚太地区、日本和国际上开发智能解决方案。它分为五个部分：服务器、混合云、网络、金融服务、",
+  "en": "Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, ",
+  "at": "2026-11-18T13:48:13.453Z"
+ },
+ "DNA": {
+  "ind": "生物技术",
+  "desc": "Ginkgo Bioworks Holdings, Inc. 及其子公司在美国开发了一个细胞工程平台。它通过细胞工程和生物安全部门运营。公司提供细胞工程研发解决方案以及细胞工程工具",
+  "en": "Ginkgo Bioworks Holdings, Inc., together with its subsidiaries, develops a platform for cell engineering in the United States. It operates through the Cell Engi",
+  "at": "2026-11-18T13:48:13.875Z"
+ },
+ "ABTC": {
+  "ind": "资本市场",
+  "desc": "American Bitcoin Corp.是一家比特币积累平台公司，专注于打造比特币基础设施平台。该公司从事专用集成电路矿机的运营，以开采比特币和战略积累比特币储备。这",
+  "en": "American Bitcoin Corp., a Bitcoin accumulation platform company, focuses on building a Bitcoin infrastructure platform. The company is engaged in the operation ",
+  "at": "2026-11-18T13:48:14.236Z"
+ },
+ "KEEL": {
+  "ind": "信息技术服务",
+  "desc": "Keel Infrastructure Corp. 在北美、加拿大和美国运营数字和能源基础设施，重点关注高性能计算 (HPC) 和人工智能 (AI) 工作负载。它主要拥有并运营装有计算机的数据中心，以验证网络上的交易",
+  "en": "Keel Infrastructure Corp. operates digital and energy infrastructure with focus on high-performance computing (HPC) and artificial intelligence (AI) workloads i",
+  "at": "2026-11-18T13:48:15.248Z"
+ },
+ "RGTI": {
+  "ind": "电脑硬件",
+  "desc": "Rigetti Computer, Inc. 通过其子公司在美国、英国、欧洲其他地区、亚洲和国际上建造和运营量子计算机和超导量子处理器。该公司提供量子处理单元 (QPU) 和量子计算系统，以实现",
+  "en": "Rigetti Computing, Inc., through its subsidiaries, builds and operates quantum computers and the superconducting quantum processors the United States, the Unite",
+  "at": "2026-11-18T13:48:16.380Z"
+ },
+ "OPEN": {
+  "ind": "房地产服务",
+  "desc": "Opendoor Technologies Inc. 在美国运营一个住宅房地产交易数字平台。它通过在线电子商务平台买卖房屋。该公司还将房屋转售给购房者。此外，它还提供房地产经纪、产权保险和结算服务",
+  "en": "Opendoor Technologies Inc. operates a digital platform for residential real estate transactions in the United States. It buys and sells homes through online e-c",
+  "at": "2026-11-18T13:48:18.201Z"
+ },
+ "USAR": {
+  "ind": "其他工业金属和采矿",
+  "desc": "USA Rare Earth, Inc. 在美国、欧洲和亚洲从事稀土和其他关键矿物的开采、加工和供应。主要勘探钕、镝、铽、钇、镓、铪、镨、钐、氧化物和其他关键矿物。公司",
+  "en": "USA Rare Earth, Inc. engages in mining, processing, and supplying rare earths and other critical minerals in the United States, Europe, and Asia. It primarily e",
+  "at": "2026-11-18T13:48:19.677Z"
+ },
+ "ASST": {
+  "ind": "资产管理",
+  "desc": "Strive, Inc. 是一家私营投资管理公司。它主要为投资公司提供服务。该公司是一家大型咨询公司，是一家投资公司的投资顾问，为投资公司提供投资组合管理。该公司投资于交易所交易基金。",
+  "en": "Strive, Inc. is a privately owned investment manager. It primarily provides its services to investment companies. The firm is a large advisory firm, an investme",
+  "at": "2026-11-18T13:48:20.204Z"
+ },
+ "OUST": {
+  "ind": "电子元件",
+  "desc": "Ouster, Inc. 致力于为美洲、亚太地区、欧洲、中东和非洲的汽车、工业、机器人和智能基础设施行业生产和销售激光雷达传感器套件。该公司提供外部传感器 (OS) 产品线，包括可提供",
+  "en": "Ouster, Inc. engages in the production and sale of lidar sensor kits for the automotive, industrial, robotics, and smart infrastructure industries in the Americ",
+  "at": "2026-11-18T13:48:21.134Z"
+ },
+ "QSI": {
+  "ind": "医疗器械",
+  "desc": "Quantum-Si 公司是一家生命科学公司，开发应用于蛋白质组学的专有、通用、单分子检测平台，以实现下一代蛋白质测序 (NGPS)。该公司提供 Platinum 和 Platinum Pro NGPS 仪器，用于单分子",
+  "en": "Quantum-Si incorporated, a life sciences company, develops proprietary, universal, and single-molecule detection platform applied to proteomics to enable next-g",
+  "at": "2026-11-18T13:48:22.518Z"
+ },
+ "RDW": {
+  "ind": "航空航天与国防",
+  "desc": "Redwire Corporation 为美国、欧洲和国际上的政府和商业客户提供关键的空间解决方案和空间基础设施。它分为太空和国防技术两个部门。该公司提供传感器和航空电子系统，包括星跟踪器和卫星",
+  "en": "Redwire Corporation provides critical space solutions and space infrastructure for government and commercial customers in the United States, Europe, and interna",
+  "at": "2026-11-18T13:48:23.207Z"
+ },
+ "NTHI": {
+  "ind": "生物技术",
+  "desc": "NeOnc Technologies Holdings, Inc. 是一家临床阶段的生物制药公司，专注于开发颅内恶性肿瘤的治疗方法。其主要候选产品包括 NEO100，一种纯化形式的 Preillyl Acid，处于 II",
+  "en": "NeOnc Technologies Holdings, Inc., a clinical-stage biopharmaceutical company, focuses on developing treatments for intracranial malignancies. Its lead product ",
+  "at": "2026-11-18T13:48:23.653Z"
+ },
+ "MARA": {
+  "ind": "资本市场",
+  "desc": "MARA Holdings, Inc. 是一家能源和数字基础设施公司，业务遍及北美、中东、欧洲和拉丁美洲。该公司利用比特币挖矿和人工智能计算将多余的能源和未充分利用的电力货币化，优化整个运营商的电力管理",
+  "en": "MARA Holdings, Inc. operates as an energy and digital infrastructure company in North America, the Middle East, Europe, and Latin America. The company leverages",
+  "at": "2026-11-18T13:48:24.209Z"
+ },
+ "SNDK": {
+  "ind": "电脑硬件",
+  "desc": "Sandisk Corporation 在美洲、欧洲、中东、非洲、亚洲和国际上开发、制造和销售使用 NAND 闪存技术的数据存储设备和解决方案。该公司为台式机和笔记本电脑、游戏机和机顶盒提供固态硬盘；",
+  "en": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, A",
+  "at": "2026-11-18T13:48:25.225Z"
+ },
+ "ALTI": {
+  "ind": "资产管理",
+  "desc": "AlTi Global, Inc. 在法国、香港、意大利、葡萄牙、新加坡、瑞士、英国、美国和国际上提供财富和资产管理服务。该公司提供全权投资管理和非全权投资建议",
+  "en": "AlTi Global, Inc. provides wealth and asset management services in France, Hong Kong, Italy, Portugal, Singapore, Switzerland, the United Kingdom, the United St",
+  "at": "2026-11-18T13:48:26.263Z"
+ },
+ "SMCI": {
+  "ind": "电脑硬件",
+  "desc": "Super Micro Computer, Inc. 及其子公司在美国、亚洲、欧洲和国际上开发和销售基于模块化和开放标准架构的服务器和存储解决方案。该公司提供液冷和风冷人工智能服务器，用于使用 i 进行训练和推理。",
+  "en": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in t",
+  "at": "2026-11-18T13:48:27.174Z"
+ },
+ "SABS": {
+  "ind": "生物技术",
+  "desc": "SAB Biotherapeutics, Inc. 是一家临床阶段的生物制药公司，专注于开发人类多克隆免疫治疗抗体，以解决美国的免疫系统疾病和传染病问题。其主要候选产品是 SAB-142，一种潜在的疾病缓解药物",
+  "en": "SAB Biotherapeutics, Inc., a clinical-stage biopharmaceutical company, focuses on the development of human polyclonal immunotherapeutic antibodies to address im",
+  "at": "2026-11-18T13:48:27.969Z"
+ },
+ "QNT": {
+  "ind": "软件 - 应用程序",
+  "desc": "Quantinuum Inc. 在美国和国际上制造和开发量子计算硬件和软件。该公司开发量子计算平台，提供解决方案，如硬件平台、开发者工具、应用程序库和针对解决方案的知识产权",
+  "en": "Quantinuum Inc. manufactures and develops quantum computing hardware and software in United States and Internationally. The company develops a quantum computing",
+  "at": "2026-11-18T13:48:29.163Z"
+ },
+ "CCOI": {
+  "ind": "电信服务",
+  "desc": "Cogent Communications Holdings, Inc. 通过其子公司在北美、南美、欧洲、大洋洲和非洲提供高速互联网接入、专用网络和数据中心托管空间服务。它为律师事务所、金融机构提供互联网接入和专用网络服",
+  "en": "Cogent Communications Holdings, Inc., through its subsidiaries, provides high-speed Internet access, private network, and data center colocation space services ",
+  "at": "2026-11-18T13:48:30.105Z"
+ },
+ "NRIX": {
+  "ind": "生物技术",
+  "desc": "Nurix Therapeutics, Inc. 是一家临床阶段生物制药公司，专注于用于治疗癌症、炎症和其他疾病的小分子和抗体疗法的发现、开发和商业化。该公司开发了 NX-5948，一种口服生物可利用的 B",
+  "en": "Nurix Therapeutics, Inc., a clinical stage biopharmaceutical company, focuses on the discovery, development, and commercialization of small molecule and antibod",
+  "at": "2026-11-18T13:48:31.355Z"
+ },
+ "LWLG": {
+  "ind": "特种化学品",
+  "desc": "Lightwave Logic, Inc. 专注于美国和国际数据通信和其他光子应用的电光聚合物材料的开发和商业化。该公司销售用于集成到硅光子学中的电光（EO）聚合物材料和",
+  "en": "Lightwave Logic, Inc. focuses on the development and commercialization of electro-optic polymer materials for data communications and other photonic application",
+  "at": "2026-11-18T13:48:32.228Z"
+ },
+ "GSIT": {
+  "ind": "半导体",
+  "desc": "GSI Technology, Inc. 为美国、中国、新加坡、德国、荷兰和国际上的网络、工业、测试设备、医疗、航空航天和军事客户设计、开发和销售半导体存储器解决方案。它提供关联处理单元产品",
+  "en": "GSI Technology, Inc. designs, develops, and markets semiconductor memory solutions for networking, industrial, test equipment, medical, aerospace, and military ",
+  "at": "2026-11-18T13:48:33.401Z"
+ },
+ "FISN": {
+  "ind": "特种工业机械",
+  "desc": "Deep Fission, Inc. 开发并部署放置在地下深处用于发电的小型模块化核反应堆。该公司提供小型模块化核反应堆，专为一英里深度的地下安装而设计，提供无碳能源和容量解决方案。它提供 SC",
+  "en": "Deep Fission, Inc. develops and deploys small modular nuclear reactors placed deep underground to generate electricity. The company provides small modular nucle",
+  "at": "2026-11-18T13:48:35.320Z"
+ },
+ "TSSI": {
+  "ind": "信息技术服务",
+  "desc": "TSS, Inc. 在美国从事最终用户和企业系统的规划、设计、部署、维护和更新。该公司通过三个部门运营：采购部门、设施管理部门和系统集成部门。该公司提供IT设备部署服务，包括",
+  "en": "TSS, Inc. engages in the planning, design, deployment, maintenance, and refresh of end-user and enterprise systems in the United States. The company operates th",
+  "at": "2026-11-18T13:48:35.607Z"
+ },
+ "XNDU": {
+  "ind": "软件 - 基础设施",
+  "desc": "Xanadu Quantum Technologies Limited 开发并提供光子量子计算技术以及相关软件解决方案和应用程序，包括基于云的量子计算机访问以及用于量子编程和模拟的工具。该公司提供光子量子计算的访问",
+  "en": "Xanadu Quantum Technologies Limited develops and provides photonic quantum computing technology and related software solutions and applications, including cloud",
+  "at": "2026-11-18T13:48:36.402Z"
+ },
+ "RMBS": {
+  "ind": "半导体",
+  "desc": "Rambus Inc. 在美国、韩国、新加坡和国际上生产和销售半导体产品。它提供的内存接口芯片包括DDR5内存接口芯片，其中包括寄存器时钟驱动器、多路复用寄存器时钟驱动器、多路复用数据缓冲器、",
+  "en": "Rambus Inc. manufactures and sells semiconductor products in the United States, South Korea, Singapore, and internationally. It offers memory interface chips co",
+  "at": "2026-11-18T13:48:37.658Z"
+ },
+ "FLNC": {
+  "ind": "电气设备及零件",
+  "desc": "Fluence Energy, Inc. 通过其子公司为美洲、亚太地区、欧洲、中东和非洲的可再生能源和存储应用提供能源存储和优化软件。它销售具有集成硬件、软件和数字智能的储能产品",
+  "en": "Fluence Energy, Inc., through its subsidiaries, provides energy storage and optimization software for renewables and storage applications in the Americas, the A",
+  "at": "2026-11-18T13:48:39.473Z"
+ },
+ "FLEX": {
+  "ind": "电子元件",
+  "desc": "Flex Ltd. 为美洲、亚洲和欧洲的数据中心、通信、企业、消费、汽车、医疗保健、工业和电力行业提供技术创新、供应链和制造解决方案。该公司通过三个部门运营： Integrated Technology Sol",
+  "en": "Flex Ltd. provides technology innovation, supply chain, and manufacturing solutions to data center, communications, enterprise, consumer, automotive, healthcare",
+  "at": "2026-11-18T13:48:39.885Z"
+ },
+ "RNTZ": {
+  "ind": "电脑硬件",
+  "desc": "Rantizo 在美国开发和部署基于无人机的精确喷洒、播种和监测应用技术。该公司提供用于农业应用的无人机，包括农作物喷洒、空中播种和田间监测。它还提供基于无人机的溶胶",
+  "en": "Rantizo develops and deploys drone-based technologies for precision spraying, seeding, and monitoring applications in the United States. The company offers dron",
+  "at": "2026-11-18T13:48:40.319Z"
+ },
+ "SAIQ": {
+  "ind": "航空航天与国防",
+  "desc": "WISeSat.Space Holdings Corp. 是瑞士一家专注于物联网应用安全卫星通信的空间技术公司。它与Kaynes Space Technology Private Limited建立战略合作，为卫星制造商",
+  "en": "WISeSat.Space Holdings Corp. is a space technology company focused on secure satellite communications for internet of things applications in Switzerland. It has",
+  "at": "2026-11-18T13:48:40.789Z"
+ },
+ "OSS": {
+  "ind": "电脑硬件",
+  "desc": "One Stop Systems, Inc. 设计、制造和销售坚固耐用的高性能计算、高速交换结构和存储系统，用于美国和国际上的人工智能和机器学习、传感器处理、传感器融合和自治的边缘应用。钍",
+  "en": "One Stop Systems, Inc. designs, manufactures, and markets rugged high-performance compute, high speed switch fabrics, and storage systems for edge applications ",
+  "at": "2026-11-18T13:48:41.750Z"
+ },
+ "BLZE": {
+  "ind": "软件 - 基础设施",
+  "desc": "Backblaze, Inc. 是一个云存储平台，为美国、英国、加拿大和国际上的企业和消费者提供存储、使用和保护数据的云服务。该公司通过基于商品硬件构建的网络规模软件基础设施提供云服务",
+  "en": "Backblaze, Inc., a cloud storage platform, provides businesses and consumers cloud services to store, use, and protect data in the United States, the United Kin",
+  "at": "2026-11-18T13:48:42.771Z"
+ },
+ "INDI": {
+  "ind": "半导体",
+  "desc": "indie Semiconductor, Inc. 为高级驾驶辅助系统、自动驾驶汽车、联网汽车、用户体验和电气化应用提供汽车半导体和软件解决方案。它设计、开发、制造和销售集成电路。公司也关了",
+  "en": "indie Semiconductor, Inc. provides automotive semiconductors and software solutions for advanced driver assistance systems, autonomous vehicles, connected car, ",
+  "at": "2026-11-18T13:48:43.450Z"
+ },
+ "VELO": {
+  "ind": "电脑硬件",
+  "desc": "Velo3D, Inc. 在美洲、欧洲和国际上生产和销售金属增材三维打印机。其打印机能够生产太空火箭、喷气发动机、燃料输送系统和其他金属部件的部件。该公司还提供 Flow，一种专有软件",
+  "en": "Velo3D, Inc. produces and sells metal additive three-dimensional printers in the Americas, Europe, and internationally. Its printers enable the production of co",
+  "at": "2026-11-18T13:48:44.051Z"
+ },
+ "CEVA": {
+  "ind": "半导体",
+  "desc": "CEVA, Inc. 为美国、欧洲、中东、亚太地区和国际上的半导体和原始设备制造商公司提供芯片和软件知识产权 (IP) 解决方案。该公司提供 PentaG-RAN，这是一种用于实施的硬件和软件 IP",
+  "en": "CEVA, Inc. provides silicon and software intellectual property (IP) solutions to semiconductor and original equipment manufacturer companies in the United State",
+  "at": "2026-11-18T13:48:45.789Z"
+ },
+ "RBRK": {
+  "ind": "软件 - 基础设施",
+  "desc": "Rubrik, Inc. 为全球个人和企业提供数据安全解决方案。公司提供企业数据保护、非结构化数据保护、云数据保护、SaaS数据保护解决方案、身份提供商服务保护；数据威胁分析；数据安全保护",
+  "en": "Rubrik, Inc. provides data security solutions to individuals and businesses worldwide. The company offers enterprise data protection, unstructured data protecti",
+  "at": "2026-11-18T13:48:46.470Z"
+ },
+ "RKLB": {
+  "ind": "航空航天与国防",
+  "desc": "Rocket Lab Corporation 是一家航天公司，在美国、加拿大、日本和国际上提供发射服务和航天系统解决方案。该公司通过发射服务和空间系统部门运营。该公司提供发射服务、航天器设计服务、航天器",
+  "en": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The comp",
+  "at": "2026-11-18T13:48:47.079Z"
+ },
+ "TER": {
+  "ind": "半导体设备",
+  "desc": "Teradyne, Inc. 在美国、亚太地区、欧洲、中东和非洲从事自动化测试系统和机器人产品的设计、开发、制造和销售。该公司通过半导体测试、机器人和其他部门运营。半导体测试部分",
+  "en": "Teradyne, Inc. engages in the design, development, manufacture, and sale of automated test systems and robotics products in the United States, Asia Pacific, Eur",
+  "at": "2026-11-18T13:48:48.116Z"
+ },
+ "SB": {
+  "ind": "海运",
+  "desc": "Safe Bulkers, Inc. 及其子公司在国际范围内提供海运干散货运输服务。该公司拥有并经营一支干散货船队，用于运输煤炭、谷物和铁矿石等散装货物。其船队由 45 艘船舶组成，其中包括 8 艘巴拿马型船",
+  "en": "Safe Bulkers, Inc., together with its subsidiaries, provides marine drybulk transportation services internationally. The company owns and operates a fleet of dr",
+  "at": "2026-11-18T13:48:49.384Z"
+ },
+ "IDR": {
+  "ind": "金子",
+  "desc": "爱达荷战略资源公司是一家资源型公司，在爱达荷州北部从事金、银和贱金属矿产资源的勘探、开发和开采。该公司原名新泽西矿业公司，后更名为爱达荷战略资源公司。",
+  "en": "Idaho Strategic Resources, Inc., a resource-based company, engages in the exploration, development, and extraction of gold, silver, and base metal mineral resou",
+  "at": "2026-11-18T13:48:49.999Z"
+ },
+ "VIAV": {
+  "ind": "通讯设备",
+  "desc": "Viavi Solutions Inc. 致力于为美洲、亚太地区、欧洲、中东和非洲的军事、航空航天、铁路和急救人员通信提供测试和测量以及光学技术。该公司分为两个部门：网络部门和服务部门",
+  "en": "Viavi Solutions Inc. engages in the provision of test and measurement and optical technologies for military, aerospace, railway and first responder communicatio",
+  "at": "2026-11-18T13:48:50.636Z"
+ },
+ "WDC": {
+  "ind": "电脑硬件",
+  "desc": "西部数据公司在美国、亚洲、欧洲、中东和非洲从事基于硬盘驱动器 (HDD) 技术的数据存储设备和解决方案的开发、制造和销售。该公司提供内部 HDD、数据中心驱动器、数据中心平台、",
+  "en": "Western Digital Corporation engages in the development, manufacture, and sale of data storage devices and solutions based on hard disk drive (HDD) technology in",
+  "at": "2026-11-18T13:48:51.116Z"
+ },
+ "NTSK": {
+  "ind": "软件 - 基础设施",
+  "desc": "Netskope, Inc. 是一家网络安全公司，为全球大中型企业提供安全、网络和分析解决方案。该公司开发了 Netskope One 平台，这是一个用于保护和加速企业数字交互的云原生平台。它的平台",
+  "en": "Netskope, Inc., a cybersecurity company, provides security, networking, and analytics solutions to largest enterprises to mid-sized companies worldwide. The com",
+  "at": "2026-11-18T13:48:52.117Z"
+ },
+ "INFQ": {
+  "ind": "软件 - 基础设施",
+  "desc": "Infleqtion, Inc. 在美国、欧洲和亚洲从事量子技术产品的开发和商业化。它为量子计算、网络、传感和安全提供中性原子解决方案。该公司提供量子传感、量子计算和软件；曲",
+  "en": "Infleqtion, Inc. engages in the development and commercialization of quantum technology products in the United States, Europe, and Asia. It delivers neutral ato",
+  "at": "2026-11-18T13:48:52.681Z"
+ },
+ "FCEL": {
+  "ind": "电气设备及零件",
+  "desc": "FuelCell Energy, Inc.是一家清洁能源科技公司，从事清洁发电用高温燃料电池的设计、开发、生产、建设、运营和服务。涉及提供碳酸盐燃料电池技术；和商业化",
+  "en": "FuelCell Energy, Inc., a clean energy technology company, engages in the design, development, production, construction, operation, and servicing of high tempera",
+  "at": "2026-11-18T13:48:53.899Z"
+ },
+ "FIX": {
+  "ind": "工程建筑",
+  "desc": "Comfort Systems USA, Inc. 及其子公司为美国机电服务行业提供机电安装、翻新、维护、修理和更换服务。该公司通过两个部门运营：机械部门和电子部门",
+  "en": "Comfort Systems USA, Inc., together with its subsidiaries, provides mechanical and electrical installation, renovation, maintenance, repair, and replacement ser",
+  "at": "2026-11-18T13:48:54.561Z"
+ },
+ "ANET": {
+  "ind": "电脑硬件",
+  "desc": "Arista Networks, Inc. 致力于开发、营销和销售数据驱动的客户端到云网络解决方案，适用于美洲、欧洲、中东、非洲和亚太地区的人工智能、数据中心、园区和路由环境。其云网络解决方案包括 Extensibl",
+  "en": "Arista Networks, Inc. engages in the development, marketing, and sale of data-driven, client to cloud networking solutions for AI, data center, campus, and rout",
+  "at": "2026-11-18T13:48:55.047Z"
+ },
+ "NVDA": {
+  "ind": "半导体",
+  "desc": "NVIDIA Corporation 在美国、台湾、中国、香港、欧洲和国际上作为数据中心规模的人工智能基础设施公司运营。它通过计算和网络以及图形部门运营。计算和网络部分提供数据中心加速计算和n",
+  "en": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It ope",
+  "at": "2026-11-18T13:48:56.178Z"
+ },
+ "KLAC": {
+  "ind": "半导体设备",
+  "desc": "KLA Corporation 及其子公司为晶圆、掩模版/掩模、化学品/材料、集成电路 (IC)、封装 IC 和印刷电路板的制造提供工艺控制和工艺支持解决方案。它通过三个部门运营：半导体工艺控制部门",
+  "en": "KLA Corporation, together with its subsidiaries, provides process control and process-enabling solutions for manufacturing wafers, reticles/masks, chemicals/mat",
+  "at": "2026-11-18T13:48:56.657Z"
+ },
+ "STM": {
+  "ind": "半导体",
+  "desc": "意法半导体及其子公司在欧洲、中东、非洲、美洲和亚太地区设计、开发、制造和销售半导体产品。该公司通过 Analog products、MEMS 和传感器集团 (AM&S) 运营；电源和分立产品",
+  "en": "STMicroelectronics N.V., together with its subsidiaries, designs, develops, manufactures, and sells semiconductor products in Europe, the Middle East, Africa, t",
+  "at": "2026-11-18T13:48:57.716Z"
+ },
+ "ALGM": {
+  "ind": "半导体",
+  "desc": "Allegro MicroSystems, Inc. 及其子公司设计、开发、制造和销售传感器集成电路 (IC) 和专用电源 IC，用于复杂机电或电源转换系统的传感、运动控制和电源管理功能。其产品",
+  "en": "Allegro MicroSystems, Inc., together with its subsidiaries, designs, develops, manufactures, and markets sensor integrated circuits (ICs) and application-specif",
+  "at": "2026-11-18T13:48:59.355Z"
+ },
+ "ORCL": {
+  "ind": "软件 - 基础设施",
+  "desc": "Oracle 公司提供在全球范围内构建、运行和支持企业信息技术框架的产品和服务。其Oracle云软件即服务产品包括各种云软件应用程序，包括Oracle Fusion云企业资源规划ERP、Oracle Fus",
+  "en": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as",
+  "at": "2026-11-18T13:49:00.673Z"
+ },
+ "RIOT": {
+  "ind": "资本市场",
+  "desc": "Riot Platforms, Inc. 及其子公司在美国作为一家比特币挖矿公司运营。它分为两个部分：比特币挖矿和工程。该公司在其设施中为比特币挖矿和数据中心服务提供全面且关键的基础设施。钍",
+  "en": "Riot Platforms, Inc., together with its subsidiaries, operates as a Bitcoin mining company in the United States. It operates in two segments, Bitcoin Mining and",
+  "at": "2026-11-18T13:49:01.112Z"
  }
 }

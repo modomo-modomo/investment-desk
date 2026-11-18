@@ -308,7 +308,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.226Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -334,7 +334,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.277Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -362,7 +362,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.325Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -388,7 +388,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.373Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -414,7 +414,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.431Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -440,7 +440,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.491Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -466,7 +466,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.570Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-17",
@@ -492,6 +492,6 @@
   "q": "2026Q4",
   "addedAt": "2026-11-17T23:50:16.615Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  }
 ]

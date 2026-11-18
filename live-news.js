@@ -1,21 +1,21 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-17T23:51:41.696Z",
+  "syncedAt": "2026-11-18T13:53:06.038Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 1900,
-  "total": 12,
-  "ok": 12,
-  "full": 0
+  "corpus": 1100,
+  "total": 11,
+  "ok": 11,
+  "full": 1
  },
  "items": {
-  "ONFO": {
-   "symbol": "ONFO",
-   "name": "Onfolio Holdings Inc.",
-   "session": "pre",
+  "SQM": {
+   "symbol": "SQM",
+   "name": "Sociedad Quimica y Minera S.A.",
+   "session": "post",
    "ok": true,
-   "headline": "Onfolio Holdings Inc (ONFO) (Q3 2026) Earnings Call Highlights: Debt Wiped Out, Equity ...",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/onfolio-holdings-inc-onfo-q3-210038165.html",
+   "headline": "Chile’s SQM Q3 profit triples on lithium price surge, but warns of lower Q4 prices",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/commodities/articles/chile-sqm-q3-profit-triples-021934711.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -23,14 +23,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "ONEW": {
-   "symbol": "ONEW",
-   "name": "OneWater Marine Inc.",
+  "JMIA": {
+   "symbol": "JMIA",
+   "name": "Jumia Technologies AG",
    "session": "pre",
    "ok": true,
-   "headline": "OneWater Marine Inc (ONEW) (Q4 2026) Earnings Call Highlights: Outperforming a Soft Market with ...",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/onewater-marine-inc-onew-q4-210128416.html",
+   "headline": "Jumia Reports Third Quarter 2026 Results",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/jumia-reports-third-quarter-2026-120000311.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -38,14 +38,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "SMWB": {
-   "symbol": "SMWB",
-   "name": "Similarweb Ltd.",
+  "BRBR": {
+   "symbol": "BRBR",
+   "name": "BellRing Brands, Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "Similarweb Ltd (SMWB) (Q3 2026) Earnings Call Highlights: Record Profitability and AI-Driven ...",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/technology/ai/articles/similarweb-ltd-smwb-q3-2026-210122442.html",
+   "headline": "BellRing Brands' Fiscal Q4 Adjusted Earnings Fall, Net Sales Rise; Issues Fiscal 2027 Outlook",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bellring-brands-apos-fiscal-q4-122422746.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -53,14 +53,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "ENR": {
-   "symbol": "ENR",
-   "name": "Energizer Holdings, Inc.",
+  "ICCM": {
+   "symbol": "ICCM",
+   "name": "IceCure Medical Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "Energizer Holdings (ENR) Could Be 71% Undervalued After Results And New Guidance",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/energizer-holdings-enr-could-71-231911187.html",
+   "headline": "IceCure Reports Financial & Operational Results for the Nine Months Ended September 30, 2026: 83% Year-Over-Year Growth in U.S. Sales and Major Growth in U.S. Commercial Reach to 21 States",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/healthcare/articles/icecure-reports-financial-operational-results-132500801.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -68,14 +68,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "PTN": {
-   "symbol": "PTN",
-   "name": "Palatin Technologies, Inc.",
+  "GLBE": {
+   "symbol": "GLBE",
+   "name": "Global-E Online Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "Palatin Technologies Inc (PTN) (Q1 2027) Earnings Call Highlights: Advancing Next-Generation ...",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/healthcare/articles/palatin-technologies-inc-ptn-q1-230054661.html",
+   "headline": "Global-e Online Q3 Adjusted Earnings, Revenue Rise; Adjusts 2026 Revenue Outlook",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/global-e-online-q3-adjusted-113837363.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -83,14 +83,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "LUXE": {
-   "symbol": "LUXE",
-   "name": "LuxExperience B.V.",
+  "KRNT": {
+   "symbol": "KRNT",
+   "name": "Kornit Digital Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "LuxExperience B.V. Q1 2027 Earnings Call Summary",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/luxexperience-b-v-q1-2027-215633629.html",
+   "headline": "Kornit Digital: Q3 Earnings Snapshot",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kornit-digital-q3-earnings-snapshot-121311498.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -98,14 +98,31 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "MNSO": {
-   "symbol": "MNSO",
-   "name": "MINISO Group Holding Limited",
+  "KNDI": {
+   "symbol": "KNDI",
+   "name": "Kandi Technologies Group, Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "Miniso Q3 Adjusted Earnings Fall, Revenue Rises",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/miniso-q3-adjusted-earnings-fall-090058877.html",
+   "headline": "康迪科技前三季度营收增长38.5%实现扭亏",
+   "date": "2026-11-18",
+   "url": "https://kuaixun.eastmoney.com/",
+   "res": [
+    "报告期内，公司实现营业收入8210万美元，同比增长38.5%，并实现扭亏为盈，净利润560万美元"
+   ],
+   "guide": [],
+   "src": "东方财富 7×24",
+   "matched": 1,
+   "kept": 1,
+   "note": ""
+  },
+  "BLSH": {
+   "symbol": "BLSH",
+   "name": "Bullish",
+   "session": "pre",
+   "ok": true,
+   "headline": "Bullish Q3 Earnings, Revenue Rise; Updates 2026 Revenue Outlook",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/bullish-q3-earnings-revenue-rise-120603146.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -113,14 +130,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "JD": {
-   "symbol": "JD",
-   "name": "JD.com, Inc.",
+  "LOW": {
+   "symbol": "LOW",
+   "name": "Lowe's Companies, Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "JD.com earnings analysis: questions answered and next catalysts",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/jd-com-earnings-analysis-questions-205122566.html",
+   "headline": "US Equity Futures Mostly Higher Pre-Bell as Nvidia Posts Higher-Than-Expected Financial Results",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-mostly-higher-131047125.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -128,14 +145,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "TME": {
-   "symbol": "TME",
-   "name": "Tencent Music Entertainment Group",
+  "ZIM": {
+   "symbol": "ZIM",
+   "name": "ZIM Integrated Shipping Services Ltd.",
    "session": "pre",
    "ok": true,
-   "headline": "Tencent Music (TME) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/tencent-music-tme-q3-2026-213000727.html",
+   "headline": "ZIM Integrated Shipping Services Q3 Earnings, Revenue Rise",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zim-integrated-shipping-services-q3-121755258.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -143,44 +160,14 @@ window.NEWS_DATA = {
    "kept": 0,
    "note": "仅取到新闻标题，正文待补"
   },
-  "ESLT": {
-   "symbol": "ESLT",
-   "name": "Elbit Systems Ltd.",
+  "TJX": {
+   "symbol": "TJX",
+   "name": "TJX Companies, Inc. (The)",
    "session": "pre",
    "ok": true,
-   "headline": "Elbit (ESLT) Q3 2026 Earnings Call Transcript",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/elbit-eslt-q3-2026-earnings-224810296.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "VIK": {
-   "symbol": "VIK",
-   "name": "Viking Holdings Ltd",
-   "session": "pre",
-   "ok": true,
-   "headline": "Viking Holdings Ltd Q3 2026 Earnings Call Summary",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/viking-holdings-ltd-q3-2026-215023724.html",
-   "res": [],
-   "guide": [],
-   "src": "Yahoo 新闻标题（仅标题）",
-   "matched": 0,
-   "kept": 0,
-   "note": "仅取到新闻标题，正文待补"
-  },
-  "AS": {
-   "symbol": "AS",
-   "name": "Amer Sports, Inc.",
-   "session": "pre",
-   "ok": true,
-   "headline": "Amer Sports, Inc. Q3 2026 Earnings Call Summary",
-   "date": "2026-11-17",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/amer-sports-inc-q3-2026-215038140.html",
+   "headline": "TJX Fiscal Q3 Adjusted Earnings, Net Sales Rise; Lifts Lower End of Fiscal 2027 Adjusted EPS Guidance",
+   "date": "2026-11-18",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tjx-fiscal-q3-adjusted-earnings-130553703.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -193,11 +180,51 @@ window.NEWS_DATA = {
   "items": [
    {
     "d": "2026-11-18",
+    "t": "11-18 18:48",
+    "o": "克里姆林宫称<b>普京</b>与特朗普将讨论当前问题及<b>乌克兰</b>局势。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-18",
+    "t": "11-18 17:52",
+    "o": "【习近平迎接美国总统特朗普】11月18日下午，国家主席习近平在深圳宝安国际机场迎接来华出席亚太经合组织领导人非正式会议的美国总统特朗普。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-18",
+    "t": "11-18 17:37",
+    "o": "克里姆林宫表示，俄罗斯总统<b>普京</b>与美国总统特朗普将进行多次对话。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-18",
+    "t": "11-18 16:41",
+    "o": "【美国总统特朗普抵达深圳】11月18日下午，美国总统特朗普乘专机抵达深圳，出席亚太经合组织第三十三次领导人非正式会议。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-18",
+    "t": "11-18 16:24",
+    "o": "【美国总统特朗普将抵达深圳】11月18日下午，美国总统特朗普乘专机将抵达深圳，出席亚太经合组织第三十三次领导人非正式会议。",
+    "src": "东方财富 7×24（转载 X / 财经媒体）",
+    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
+    "isNew": true
+   },
+   {
+    "d": "2026-11-18",
     "t": "11-18 01:54",
     "o": "在空管故障后，特朗普寻求500亿美元用于空域升级。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-18",
@@ -205,7 +232,7 @@ window.NEWS_DATA = {
     "o": "【Kalshi撤下与“特朗普提及”相关的预测市场】Kalshi应美国商品期货交易委员会（CFTC）的要求，撤下了与“特朗普提及”相关的预测市场。",
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": true
+    "isNew": false
    },
    {
     "d": "2026-11-17",
@@ -222,110 +249,24 @@ window.NEWS_DATA = {
     "src": "东方财富 7×24（转载 X / 财经媒体）",
     "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
     "isNew": false
-   },
-   {
-    "d": "2026-11-17",
-    "t": "11-17 13:22",
-    "o": "【特朗普：每次涉及华裔美女，他们都说是“间谍”，我认为黄仁勋没有涉及“间谍”】当地时间11月16日，美国总统特朗普在接受媒体采访时，再次谈及黄仁勋一事。特朗普表示，每次此类事件涉及华裔女性，都会被美国情报机构描述为“间谍”。特朗普同时表示，黄仁勋恢复原职，“不是个坏主意”，很多人",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-17",
-    "t": "11-17 12:54",
-    "o": "【是否会将美商务部长解职？特朗普回应：“不，他干得非常好”】美国商务部长卢特尼克近来卷入争议，甚至有人断言他将被解职，但是美国总统特朗普16日否认了相关说法。据美国《政治报》11月16日报道，当被问及是否有意更换卢特尼克时，特朗普对记者表示，他没有计划解雇商务部长卢特尼克。“不，",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-17",
-    "t": "11-17 07:27",
-    "o": "【特朗普：不介意黄仁勋重返英伟达】11月17日，据路透社报道，美国总统特朗普当地时间周一表示，他不反对黄仁勋重返英伟达担任首席执行官，并称不少人希望黄仁勋回归，这一想法“并不坏”。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-17",
-    "t": "11-17 01:16",
-    "o": "据报道，法院推翻特朗普针对外国留学生的时限规定。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-17",
-    "t": "11-17 00:08",
-    "o": "【事关黄仁勋 特朗普发声！段永平：不想急着逃】美国总统特朗普称，黄仁勋没有危害国家安全。他表示，黄仁勋重返英伟达并非坏事。段永平在社交媒体上回应英伟达近期风波时表示，尽管黄仁勋离职带来巨大影响，但英伟达的核心竞争力依然存在，自己目前并不打算卖出股票。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-16",
-    "t": "11-16 22:58",
-    "o": "【特朗普：不介意黄仁勋重掌英伟达】11月16日，美国总统特朗普表示，不介意黄仁勋重新出任英伟达首席执行官，并称很多人希望黄仁勋回归，“这当然不是一个坏主意”。特朗普还表示，黄仁勋“吸取了深刻教训”。此前，美国财政部长贝森特曾呼吁英伟达进行“大幅调整”，并通过外部招聘寻找新任领导人",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-16",
-    "t": "11-16 22:41",
-    "o": "美国总统特朗普表示，不考虑更换商务部长卢特尼克。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-16",
-    "t": "11-16 14:09",
-    "o": "【特朗普：期待参加中俄美元首会晤】11月16日外交部发言人宣布：11月19日，国家主席习近平将同俄罗斯总统<b>普京</b>、美国总统特朗普在深圳举行中俄美元首会晤。此前，特朗普对媒体表示，自己很期待参加中俄美元首会晤。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "地缘表态缺乏可执行细节时，对能源只有短期扰动，不作为交易依据。",
-    "isNew": false
    }
   ],
-  "logCount": 35
+  "logCount": 40
  },
  "moversNews": {
   "ARDT": {
-   "ok": true,
-   "title": "Ardent Health stock tumbles on 7M share secondary offering",
-   "summary": "",
-   "t": "11-18 06:20",
-   "src": "Investing.com（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CUE": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "GMM": {
+  "IPHA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SLS": {
-   "ok": true,
-   "title": "Sellas Life Sciences stock falls on $150M stock offering",
-   "summary": "",
-   "t": "11-18 06:17",
-   "src": "Investing.com（英文）",
-   "cause": false,
-   "en": true
-  },
-  "ZSQR": {
+  "QTRX": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "ARQQ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FDMT": {
+  "HY": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
@@ -333,94 +274,101 @@ window.NEWS_DATA = {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "NBIS": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股AI云服务公司走弱 甲骨文跌超3%，11-16 22:34）"
-  },
-  "SSII": {
+  "CNTN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "BAP": {
+  "RGNX": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "APLD": {
+  "FTH": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "RBBN": {
+  "HTLM": {
+   "ok": true,
+   "title": "HomesToLife Completes Secondary Listing on the Mainboard of the Singapore Exchange",
+   "summary": "",
+   "t": "11-17 17:30",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "ECVT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ITG": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "AAOI": {
    "ok": true,
-   "title": "美股光通信板块盘初走高",
-   "summary": "截至发稿，Applied Optoelectronics涨超4%，Coherent涨超5%，Lumentum涨超3%，康宁、迈威尔涨超2%。",
-   "t": "11-17 22:38",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": true,
-   "score": -1,
-   "cand": 1
-  },
-  "ITG": {
-   "ok": true,
-   "title": "ITG Insider Bought Shares Worth $505,800, According to a Recent SEC Filing",
+   "title": "Coherent Jumps 8%, Applied Optoelectronics Climbs 7% as U.S. Pushes Ahead With Curbs on Chinese Optical Gear; Lumentum Gains 4%",
    "summary": "",
-   "t": "11-18 06:05",
-   "src": "MT Newswires（英文）",
+   "t": "11-17 22:17",
+   "src": "24/7 Wall St.（英文）",
    "cause": false,
    "en": true
   },
-  "IREN": {
+  "BORR": {
    "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股加密货币概念股走低 Coinbase跌超5%，11-16 22:40）"
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "AIP": {
+  "RLGT": {
    "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：欧科亿：拟定增募资不超9.5亿元 用于AIPCB钻针用超细硬质合金棒材研发项目等，11-17 18:31）"
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ANGX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "IAM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "EP": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VANI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "PEPG": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "CIFR": {
+  "NEOG": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "AEHR": {
+  "BRBI": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "CRWV": {
-   "ok": true,
-   "title": "美股AI新云（Neocloud）公司CoreWeave、Nebius盘后均涨超5%",
-   "summary": "美股AI新云（Neocloud）公司CoreWeave、Nebius盘后均涨超5%。消息面上，英伟达称新云协议总额达320亿美元。",
-   "t": "11-18 05:41",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": false,
-   "score": 2,
-   "cand": 1
-  },
-  "EOSE": {
+  "PRMB": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "WULF": {
+  "CNCK": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "BRUN": {
+  "DEFT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SHAZ": {
+  "FATE": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "FWDI": {
+  "TFSL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HEI": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
@@ -428,549 +376,23 @@ window.NEWS_DATA = {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "MXL": {
-   "ok": true,
-   "title": "MaxLinear, Inc. Announces Upcoming Financial Conference Participation",
-   "summary": "",
-   "t": "11-18 05:35",
-   "src": "Business Wire（英文）",
-   "cause": false,
-   "en": true
-  },
-  "IPHA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "HTLM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ACDC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NVTS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TTMI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PENG": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：迈威尔与Penguin Solutions合作开发AI数据中心内存扩展技术，11-16 22:11）"
-  },
-  "AMKR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CORZ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FORM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TROO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "BTDR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RXT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "QMCO": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：巴拿马将就重启矿山与First Quantum启动谈判，11-17 07:16）"
-  },
-  "DFDV": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "STRL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SMTC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PYPD": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PED": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "HUT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "QBTS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ALAB": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "COHR": {
-   "ok": true,
-   "title": "美股光通信板块盘初走高",
-   "summary": "截至发稿，Applied Optoelectronics涨超4%，Coherent涨超5%，Lumentum涨超3%，康宁、迈威尔涨超2%。",
-   "t": "11-17 22:38",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": false,
-   "score": 3,
-   "cand": 2
-  },
-  "BE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "MKSI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "STUB": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FPS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "BNC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GMEX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ASTS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ENTG": {
-   "ok": true,
-   "title": "Learn Why The Bull Case For Entegris (ENTG) Could Change Following Earnings Estimate Upgrades",
-   "summary": "",
-   "t": "11-18 07:17",
-   "src": "Simply Wall St.（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CRDO": {
-   "ok": true,
-   "title": "Credo, Marvell settle intellectual property battle over data center cable tech",
-   "summary": "",
-   "t": "11-18 06:36",
-   "src": "Investing.com（英文）",
-   "cause": false,
-   "en": true
-  },
-  "AXTI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "DOCN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "WOLF": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "MXCT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LPTH": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "COHU": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ENVX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "DGXX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SATL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ABR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TSM": {
-   "ok": true,
-   "title": "美股芯片股再度普跌：美光跌5.5% 台积电跌超4%",
-   "summary": "美股AI硬件股多数下跌，费城半导体指数跌1.90%，英伟达跌3.13%，台积电跌4.06%，美光科技跌5.47%，SK海力士跌2.54%，AMD跌2.63%，英特尔跌3.71%，阿斯麦跌2.60%，闪迪跌5.32%，迈威尔科技跌1.29%。博通逆势涨0.15%，Arm涨1.36%，Coherent涨1.03%。三倍做多半导体ETF（SOX",
-   "t": "11-17 23:44",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": false,
-   "score": 0,
-   "cand": 4
-  },
-  "DELL": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：戴尔股价盘后上涨5%，11-18 06:50）"
-  },
-  "SECZ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GLXY": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CLS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "VRT": {
-   "ok": true,
-   "title": "Caterpillar vs. Vertiv: Which Industrials Stock Is a Better Buy for 2027?",
-   "summary": "",
-   "t": "11-18 05:50",
-   "src": "Motley Fool（英文）",
-   "cause": false,
-   "en": true
-  },
-  "VSH": {
-   "ok": true,
-   "title": "Vishay Intertechnology Declares Quarterly Dividend",
-   "summary": "",
-   "t": "11-18 05:15",
-   "src": "GlobeNewswire（英文）",
-   "cause": false,
-   "en": true
-  },
-  "ZBIO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CTMX": {
-   "ok": true,
-   "title": "CytomX Therapeutics to Receive $5 Million Milestone Payment From Regeneron Collaboration",
-   "summary": "",
-   "t": "11-18 06:02",
-   "src": "MT Newswires（英文）",
-   "cause": false,
-   "en": true
-  },
-  "STX": {
-   "ok": true,
-   "title": "Seagate to Participate in Upcoming Investor Events",
-   "summary": "",
-   "t": "11-18 05:05",
-   "src": "Business Wire（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CURI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NUAI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CAPR": {
-   "ok": true,
-   "title": "‘Pharma Bro’ Shkreli Calls SLS Results ‘Sketch,’ Compares Leukemia Vaccine Data To Capricor’s Deramiocel",
-   "summary": "",
-   "t": "11-18 04:53",
-   "src": "Stocktwits（英文）",
-   "cause": false,
-   "en": true
-  },
-  "LITE": {
-   "ok": true,
-   "title": "英伟达财报带动美股AI硬件板块盘后走高",
-   "summary": "当地时间11月17日，英伟达财报带动美股AI硬件板块盘后走高，SK海力士、泰瑞达涨近2%，闪迪涨超2%，Lumentum涨超3%。",
-   "t": "11-18 05:50",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": false,
-   "score": 2,
-   "cand": 1
-  },
-  "INOD": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CLSK": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SLNH": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ATEC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "UCTT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PYXS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LASR": {
-   "ok": true,
-   "title": "Is nLIGHT (LASR) Still Below Fair Value On Future Cash Flow?",
-   "summary": "",
-   "t": "11-18 07:24",
-   "src": "Simply Wall St.（英文）",
-   "cause": false,
-   "en": true
-  },
-  "DLB": {
-   "ok": true,
-   "title": "Dolby Labs falls on weak first quarter guidance",
-   "summary": "",
-   "t": "11-18 06:02",
-   "src": "Investing.com（英文）",
-   "cause": false,
-   "en": true
-  },
-  "FRMI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SITM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RYDE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "IONQ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GRND": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NVT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LCTX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "OGI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "WYFI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "HPE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "DNA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ABTC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "KEEL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RGTI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TSEM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "OPEN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "USAR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ASST": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "OUST": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CYPH": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "QSI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GEMI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RDW": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NTHI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "USDE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "MARA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ONTO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SNDK": {
-   "ok": true,
-   "title": "‘How Could You Not?’ Says Investor About Sandisk Stock",
-   "summary": "",
-   "t": "11-18 05:56",
-   "src": "TipRanks（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CIEN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ALTI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SMCI": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美国服务器制造商股价盘前下跌，11-16 17:33）"
-  },
-  "SABS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CRML": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "QNT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "MRVL": {
-   "ok": true,
-   "title": "Credo, Marvell settle intellectual property battle over data center cable tech",
-   "summary": "",
-   "t": "11-18 06:36",
-   "src": "Investing.com（英文）",
-   "cause": false,
-   "en": true
-  },
-  "CCOI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CBRS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NRIX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "URG": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LWLG": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "AKBA": {
-   "ok": true,
-   "title": "Akebia Therapeutics Granted New Patent for Vafseo",
-   "summary": "",
-   "t": "11-18 06:13",
-   "src": "MT Newswires（英文）",
-   "cause": false,
-   "en": true
-  },
-  "GSIT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NEOV": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "PCT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FISN": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TSSI": {
+  "BLDP": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "XNDU": {
+  "NERV": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "RMBS": {
+  "YSWY": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "FLNC": {
+  "STDN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "FLEX": {
+  "ABLV": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
@@ -978,339 +400,546 @@ window.NEWS_DATA = {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SAIQ": {
+  "BRUN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "OSS": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：港股开盘：恒生科技指数涨0.41% 恒生指数涨0.3%，11-16 09:21）"
-  },
-  "ALOY": {
+  "NSTR": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "BLZE": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "INDI": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "VELO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "AIBZ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GCTS": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SWMR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "CEVA": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RBRK": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "BKKT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "EROC": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RKLB": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "TER": {
+  "STUB": {
    "ok": true,
-   "title": "英伟达财报带动美股AI硬件板块盘后走高",
-   "summary": "当地时间11月17日，英伟达财报带动美股AI硬件板块盘后走高，SK海力士、泰瑞达涨近2%，闪迪涨超2%，Lumentum涨超3%。",
-   "t": "11-18 05:50",
-   "src": "东方财富 7×24",
-   "cause": false,
-   "mismatch": false,
-   "score": 2,
-   "cand": 1
-  },
-  "MRAM": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "SB": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "VICR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "IDR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "VIAV": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "WDC": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：苹果智能眼镜瞄准WWDC 2027：Siri成核心交互入口，11-16 08:34）"
-  },
-  "NTSK": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "OPTX": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "INFQ": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "NXT": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "RR": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FCEL": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "FIX": {
-   "ok": true,
-   "title": "Comfort Systems USA stock gains on expanded buyback program",
+   "title": "From Screens to Stands: StubHub Reveals The Internet Trends That Took Over Live Events in 2026",
    "summary": "",
-   "t": "11-18 06:55",
-   "src": "Investing.com（英文）",
+   "t": "11-17 21:00",
+   "src": "Business Wire（英文）",
    "cause": false,
    "en": true
   },
-  "FN": {
+  "BGIN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "ANET": {
+  "QSI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NTHI": {
    "ok": true,
-   "title": "Arista Networks (ANET) Is Quietly Breaking One of NVIDIA’s Biggest Advantages",
+   "title": "NeOnc Reports Additional Partial Response in Phase 2a Study of Intranasal NEO100",
    "summary": "",
-   "t": "11-18 06:51",
-   "src": "Insider Monkey（英文）",
+   "t": "11-17 22:05",
+   "src": "Stocktwits（英文）",
    "cause": false,
    "en": true
   },
-  "NVDA": {
+  "CTMX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "QNC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CATX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FISN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SHMD": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CMRC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NVA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "WULF": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LTRX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SBC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ALHC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SVRA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TNDM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ERAS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HQL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AEHR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AYA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HYMC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ORIC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MUX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PENG": {
    "ok": true,
-   "title": "亚马逊CEO：英伟达长期以来一直是极其重要的合作伙伴 在可预见的未来也将一直如此",
-   "summary": "亚马逊CEO在Semafor活动上就英伟达相关风波表示，英伟达长期以来一直是极其重要的合作伙伴，并且在可预见的未来也将一直如此。",
-   "t": "11-18 01:20",
-   "src": "东方财富 7×24",
-   "cause": true,
-   "mismatch": false,
-   "score": 4,
-   "cand": 20
+   "title": "Penguin Solutions Expands ComputeAI Portfolio with NVIDIA Vera Rubin NVL72 Rack-Scale Systems",
+   "summary": "",
+   "t": "11-17 22:05",
+   "src": "Business Wire（英文）",
+   "cause": false,
+   "en": true
   },
-  "KLAC": {
+  "CMPX": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "STM": {
+  "NFGC": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "ALGM": {
+  "AKBA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "ORCL": {
+  "APLD": {
    "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股AI云服务公司走弱 甲骨文跌超3%，11-16 22:34）"
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PPTA": {
+   "ok": true,
+   "title": "Perpetua Resources Evaluates Up to $55.5 Million in Funding for US Tungsten Supply",
+   "summary": "",
+   "t": "11-17 19:28",
+   "src": "MT Newswires（英文）",
+   "cause": false,
+   "en": true
+  },
+  "RYDE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TRX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TTWO": {
+   "ok": true,
+   "title": "Could A GTA VI That Meets Guidance Hurt Take-Two Stock?",
+   "summary": "",
+   "t": "11-17 19:29",
+   "src": "Trefis（英文）",
+   "cause": false,
+   "en": true
+  },
+  "EOSE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "URG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LOAR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NBIS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "IREN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CAPR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GENB": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "EVEX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CIFR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LPTH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MXL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "EGO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SBSW": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACIW": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DDD": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SCZM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SSRM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CORZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GAU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NVTS": {
+   "ok": true,
+   "title": "Navitas Sinks 18% in a Week as Nvidia’s CEO Exit Rattles Its AI Pitch: “Poised to Triple”",
+   "summary": "",
+   "t": "11-17 16:02",
+   "src": "TIKR（英文）",
+   "cause": false,
+   "en": true
+  },
+  "TGB": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PSNY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "COHR": {
+   "ok": true,
+   "title": "Coherent Jumps 8%, Applied Optoelectronics Climbs 7% as U.S. Pushes Ahead With Curbs on Chinese Optical Gear; Lumentum Gains 4%",
+   "summary": "",
+   "t": "11-17 22:17",
+   "src": "24/7 Wall St.（英文）",
+   "cause": false,
+   "en": true
+  },
+  "HBM": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：三星：HBM4E正由一家主要合作伙伴进行评估 进展极为顺利，11-18 14:53）"
+  },
+  "AG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ELE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CTGO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TECK": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SCCO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LAES": {
+   "ok": true,
+   "title": "SEALSQ’s Quantum Sovereign Vertical Stack Integrates Miraex Technology,Connecting Quantum Processors, Networks and Space",
+   "summary": "",
+   "t": "11-17 22:15",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "TTMI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SPRY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CRWV": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股算力云概念股盘前普涨，11-18 17:03）"
+  },
+  "SHAZ": {
+   "ok": true,
+   "title": "B. Riley Adjusts Price Target on SharonAI to $78 From $124, Keeps Buy Rating",
+   "summary": "",
+   "t": "11-17 20:41",
+   "src": "MT Newswires（英文）",
+   "cause": false,
+   "en": true
+  },
+  "WGS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SQM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "JBI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "THM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   }
  },
  "geo": {
   "items": [
    {
-    "t": "2026-11-18 06:56",
-    "topic": "美伊谈判",
-    "o": "【伊朗称又一油轮在霍尔木兹海峡触碰水雷】当地时间17日21时许，伊朗伊斯兰革命卫队海军表示，当天又有一艘油轮在霍尔木兹海峡沿未经授权的航线航行时，触碰水雷并引发火灾。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 04:09",
-    "topic": "美伊谈判",
-    "o": "【美军袭击伊朗格什姆岛导弹设施】当地时间11月17日，据美国“阿克西奥斯新闻网（Axios）”等多家媒体援引美国军方官员消息报道，美军战机当天早些时候“袭击了伊朗伊斯兰革命卫队位于伊朗南部格什姆岛的导弹发射点”，以回应革命卫队“针对美方人员和装备的行动”。伊朗霍尔木兹甘省政府随即证实，美军对该省格什姆岛发动袭击，但“未对当地住宅区、商业区或基础设施造成损害，当地局势处于可控状态，所有救援、服务及行政部门均已进入全面戒备状态”。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 03:21",
-    "topic": "美伊谈判",
-    "o": "据报道，伊朗方面正“认真寻求”通过外交途径结束僵局。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 01:56",
+    "t": "2026-11-18 20:35",
     "topic": "APEC",
-    "o": "【俄罗斯总统普京抵达深圳】11月18日凌晨，俄罗斯总统普京乘专机抵达深圳，将出席11月18日至19日举行的亚太经合组织第三十三次领导人非正式会议。",
+    "o": "【惠誉：AI基础设施投资仍在扩大 竞争从模型能力延伸至生态】11月18日消息，在“惠誉看中国”媒体交流会上，惠誉评级亚太区信用评论与研究高级董事胡旸瑞表示，中美AI产业正在形成各具特点的发展路径，竞争重点也由模型能力逐步延伸至算力、部署效率、应用生态和商业化能力。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 01:15",
-    "topic": "美伊谈判",
-    "o": "美国众议院民主党领袖Jeffries表示，将在新一届国会初期推动结束伊朗战争。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-18 01:12",
+    "t": "2026-11-18 19:29",
     "topic": "俄乌局势",
-    "o": "【德国芬兰总统表示欧洲必须参与乌克兰危机谈判】德国总统施泰因迈尔和芬兰总统斯图布17日表示，涉及乌克兰未来的谈判关乎安全保障，不能没有欧洲的参与。施泰因迈尔当天同来访的芬兰总统斯图布共同出席记者会时说，此前在阿联酋首都阿布扎比举行的会谈推动了乌克兰危机谈判进程，预计未来数周还将举行进一步会谈。欧洲只接受由欧洲亲自参与谈判达成的安全保障。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 00:52",
-    "topic": "APEC",
-    "o": "【韩国总统李在明抵达深圳 将出席APEC领导人非正式会议】11月18日凌晨，韩国总统李在明乘机抵达深圳，将出席亚太经合组织第三十三次领导人非正式会议。",
+    "o": "【俄原子能集团总经理：北方海路货运量首次突破4000万吨 创下新纪录】俄罗斯国家原子能集团公司总经理利哈乔夫表示，北方海路货运量前天首次突破4000万吨，创下新纪录。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-18 00:31",
-    "topic": "APEC",
-    "o": "【马来西亚总理安瓦尔抵达深圳】11月18日凌晨，马来西亚总理安瓦尔乘机抵达深圳，他将出席亚太经合组织第三十三次领导人非正式会议，以及APEC工商领导人峰会。对于即将在深圳举行的领导人非正式会议，马来西亚方面表示，将继续同中国以及其他APEC成员经济体开展建设性合作，推动会议取得更多基于共识的务实成果。",
-    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
-    "imp": "中美关系 · 贸易与供应链",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 23:47",
-    "topic": "美伊谈判",
-    "o": "据伊朗方面消息，美国袭击了格什姆，未造成人员伤亡。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
+    "imp": "能源/军工/欧洲风险偏好",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-17 22:48",
+    "t": "2026-11-18 18:48",
     "topic": "APEC",
-    "o": "【花旗安立承：全球贸易并未萎缩 相当大部分增长来自APEC经济体】在2026年APEC工商领导人峰会上，花旗国际业务总裁安立承表示，尽管外界普遍认为全球经济正趋向碎片化，但全球商业活动依然保持强劲。“在当前全球环境下，许多人认为全球贸易正在萎缩，但事实恰恰相反。全球贸易规模持续约占全球GDP的60%，而其中相当大部分的增长来自APEC经济体。”他援引花旗数据统计称，今年上半年花旗处理的全球支付交易量增长40%；其中，与科技板块相关的支付交易在全球增长50%，在亚洲则增长60%。",
+    "o": "【2026年APEC工商领导人峰会发布深圳倡议】《2026年亚太经合组织工商领导人峰会深圳倡议》18日对外发布，呼吁深化开放型区域经济、以技术创新驱动包容增长、畅通区域一体化动脉、携手实现共同繁荣。这是APEC工商领导人峰会创办30年来首次以倡议形式发布成果文件。",
     "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
     "imp": "中美关系 · 贸易与供应链",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-17 21:50",
-    "topic": "美伊谈判",
-    "o": "据伊朗方面消息，伊朗海军称，第三艘油轮在霍尔木兹海峡以东触雷后起火。",
+    "t": "2026-11-18 18:48",
+    "topic": "俄乌局势",
+    "o": "克里姆林宫称普京与特朗普将讨论当前问题及乌克兰局势。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
+    "imp": "能源/军工/欧洲风险偏好",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-17 21:39",
+    "t": "2026-11-18 18:40",
     "topic": "APEC",
-    "o": "【雷军APEC谈AI：下一步是走进物理世界 小米机器人已完成连续8小时作业】在雷军看来，具身智能是AI走进物理世界的重要方向。他介绍，小米机器人研发已持续约6年，近期具身智能机器人在小米汽车工厂“实习”，已能完成8小时作业任务，期间两次自主充电。他认为，具身智能机器人将成为巨大的产业机会，“它的想象力应该会超过汽车产业”。",
+    "o": "【蓝箭航天披露新突破】在APEC财经之夜现场，蓝箭航天空间科技股份有限公司副总裁张静茹披露朱雀三号回收发动机试车新进展：朱雀三号遥二运载火箭回收的一子级9台液氧甲烷发动机，经过分解、检查、维修和重新装配，已全部完成地面验收和试车。",
+    "r": "财报类信息以公司公告为准：日期与数字先和「标的研究·业绩强制跟踪」核对，快讯口径与公告冲突时以公告为准，不据此交易。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 18:08",
+    "topic": "APEC",
+    "o": "【韩国总统李在明：不能在贸易壁垒前停止开放】韩国总统李在明18日在2026年亚太经合组织（APEC）工商领导人峰会上说，不能在日益高筑的贸易壁垒面前停止开放，要将人工智能革命成果扩大至惠及所有人的创新，并为构建稳定的产业基础和供应链加强合作。最紧要的任务是通过扩大APEC区域内贸易和投资，拓展企业新的增长机会。",
+    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 17:52",
+    "topic": "APEC",
+    "o": "【习近平迎接美国总统特朗普】11月18日下午，国家主席习近平在深圳宝安国际机场迎接来华出席亚太经合组织领导人非正式会议的美国总统特朗普。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 17:37",
+    "topic": "俄乌局势",
+    "o": "克里姆林宫表示，俄罗斯总统普京与美国总统特朗普将进行多次对话。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 16:47",
+    "topic": "APEC",
+    "o": "【华东医药：全资子公司HDM4002注射液获临床试验批准】华东医药(000963.SZ)公告称，公司全资子公司中美华东收到国家药品监督管理局核准签发的《药物临床试验批准通知书》，由中美华东申报的HDM4002注射液临床试验申请获得批准。该药物为治疗用生物制品1类新药，适应症为治疗具有疾病进展风险的原发性免疫球蛋白A肾病成人患者。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
     "imp": "中美关系 · 贸易与供应链",
     "lvl": "t",
     "isNew": true
    },
    {
-    "t": "2026-11-17 17:27",
-    "topic": "美伊谈判",
-    "o": "伊朗海军称周二又有一艘油轮在霍尔木兹海峡触雷。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 17:03",
-    "topic": "俄乌局势",
-    "o": "【俄国防部：俄军一夜击落超1400架乌无人机】俄罗斯国防部17日通报说，自16日20时至17日8时，俄防空部队在俄罗斯别尔哥罗德州、布良斯克州、莫斯科地区等多地及亚速海和黑海上空共击落1441架乌克兰固定翼无人机。据俄新社统计，这是俄军一夜间击落乌克兰固定翼无人机数量的最高纪录。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 17:00",
-    "topic": "俄乌局势",
-    "o": "俄罗斯称下一轮乌克兰问题会谈还没有具体日期。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 16:45",
-    "topic": "俄乌局势",
-    "o": "俄罗斯方面表示，目前尚未就继续举行乌克兰问题谈判达成共识。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 16:20",
-    "topic": "俄乌局势",
-    "o": "俄罗斯调查委员会称，克里米亚大桥在11月16日和17日遭到乌克兰无人机袭击后受损。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-17 15:45",
+    "t": "2026-11-18 16:41",
     "topic": "APEC",
-    "o": "【雷军现身APEC会议现场】2026年APEC工商领导人峰会今日在深圳举办。下午2点半左右，雷军现身会议现场。据悉，雷军将参与主题为“探索亚太数字经济合作新路径”的专题研讨。",
+    "o": "【美国总统特朗普抵达深圳】11月18日下午，美国总统特朗普乘专机抵达深圳，出席亚太经合组织第三十三次领导人非正式会议。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 16:24",
+    "topic": "APEC",
+    "o": "【美国总统特朗普将抵达深圳】11月18日下午，美国总统特朗普乘专机将抵达深圳，出席亚太经合组织第三十三次领导人非正式会议。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 16:20",
+    "topic": "APEC",
+    "o": "【习近平会见俄罗斯总统普京】11月18日，国家主席习近平在深圳会见来华出席亚太经合组织领导人非正式会议的俄罗斯总统普京。",
     "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
     "imp": "中美关系 · 贸易与供应链",
     "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 15:23",
+    "topic": "APEC",
+    "o": "【英伟达临时CEO称将不再向中国出货H200芯片 外交部：中方已多次阐明在美国输华芯片问题上的原则立场】11月18日，外交部发言人郭嘉昆主持例行记者会。法新社记者提问，英伟达的临时CEO称，将不再向中国出货H200芯片，中方对此有何评论？郭嘉昆表示，中方此前已经多次阐明在美国输华芯片问题上的原则立场。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 15:16",
+    "topic": "APEC",
+    "o": "【外交部：中俄美三国元首将就事关全球和平的重要问题深入交换意见】11月18日，外交部发言人郭嘉昆主持例行记者会。有记者就中俄美元首会晤提问。郭嘉昆表示，中方此前已经介绍了中俄美元首深圳会晤的有关安排，三国元首将就事关全球和平的重要问题深入交换意见，我们会及时发布会晤的相关消息，请大家保持关注。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 14:39",
+    "topic": "APEC",
+    "o": "【习近平会见韩国总统李在明】习近平指出，中韩是友好近邻和战略合作伙伴。两国国情不同，但为人民谋福祉的目标是相通的。明年是中韩建交35周年，双方应以此为契机，总结经验、规划未来，推动中韩关系稳健发展，更好造福两国人民。双方要坚持战略自主，维护好两国关系政治基础，巩固好、发展好中韩关系。两国政党、政府、立法机构可以加强治国理政经验交流，增进相互理解，促进共同发展。中韩实质性完成了自贸协定第二阶段谈判，有助于巩固互利共赢良好局面。双方要用好用足这一制度性安排，加强宏观政策协调，培育人工智能等新兴科技产业合作生态，共享发展机遇。中方愿同韩方一道，持续促进两国人员往来，循序渐进开展健康有益的文化交流。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 14:38",
+    "topic": "APEC",
+    "o": "【惠誉：AI基础设施投资仍在扩大 商业化与投资回报待验证】11月18日，惠誉评级亚太区信用评论与研究高级董事胡旸瑞表示，中美AI产业正在形成各具特点的发展路径，竞争重点也由模型能力逐步延伸至算力、部署效率、应用生态和商业化能力。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 13:00",
+    "topic": "APEC",
+    "o": "【“你要什么部件，提供什么部件” 董明珠在APEC向优必选提出合作意向 称目前格力自动化生产线上的机器人均由公司自主完成】11月17日，在深圳举行的2026年亚太经合组织（APEC）工商领导人峰会上，董明珠向同台的优必选科技创始人、董事会主席周剑主动提出合作意向“你要什么部件，提供什么部件”，希望为人形机器人提供相关零部件。",
+    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-18 12:53",
+    "topic": "APEC",
+    "o": "【国雄资本：重点布局半导体算力、人形机器人等赛道】2026年APEC工商领导人峰会期间，国雄资本董事长姚尚坤表示，AI产业增长重心正向底层硬件与实体落地转移，算力硬件、物理AI是两大高潜力赛道。在投资方向上，国雄资本重点布局半导体算力、人形机器人等领域。",
+    "r": "峰会声明逐条核对：有具体承诺才计入基本面，措辞性共识不评分。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
     "isNew": true
    }
   ],
   "logCount": 60
  },
  "briefLog": [
+  {
+   "d": "2026-11-18",
+   "kind": "daily",
+   "source": "auto",
+   "stance": "指数下跌、个股抗跌（结构性调整）",
+   "stanceNote": "美股 标普 -1.03%、纳指 -0.74%、道指 -1.64%；中国香港 恒生 -0.91%、中国内地 上证 +0.09%。VIX -4.2% 至 24.39；等权相对市值加权 20 日 +4.7%——中位数个股强于权重，跌的是大票不是全市场。",
+   "conclusions": [
+    [
+     "三大市场同日收盘：标普 -1.0%、恒生 -0.9%、上证 +0.1%。",
+     "指数收跌，纳指 -0.7% vs 道指 -1.6%——成长端更强，风险偏好在修复。"
+    ],
+    [
+     "结构：等权 -2.3%（周） vs 市值加权 -2.3%，差 +0.0%。",
+     "本周个股表现好于指数，属于“权重拖累、广度改善”的组合，指数弱不代表持仓弱。"
+    ],
+    [
+     "跨资产：10Y 5.10%、美元指数 103.48、BTC $64,873。",
+     "VIX 24.39（-4.2%）——波动率回落，避险需求下降；BTC 当日 -0.0%，加密走弱，风险偏好边际收缩。"
+    ]
+   ],
+   "snapshot": {
+    "spx": -1.03,
+    "ndx": -0.74,
+    "hsi": -0.91,
+    "sh": 0.09,
+    "vix": 24.39,
+    "btc": 64873,
+    "us10y": 5.103
+   }
+  },
   {
    "d": "2026-11-17",
    "kind": "daily",

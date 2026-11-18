@@ -1,8 +1,8 @@
 window.TRACK_NEWS = {
  "meta": {
-  "syncedAt": "2026-11-17T23:51:52.960Z",
-  "total": 227,
-  "fresh": 35,
+  "syncedAt": "2026-11-18T13:53:18.638Z",
+  "total": 251,
+  "fresh": 27,
   "window": 21,
   "sources": {
    "futu": {
@@ -20,19 +20,19 @@ window.TRACK_NEWS = {
    "media": {
     "ok": 2,
     "fail": 1,
-    "n": 49,
+    "n": 56,
     "label": "财经媒体"
    },
    "search": {
     "ok": 9,
     "fail": 0,
-    "n": 61,
+    "n": 62,
     "label": "赛道检索"
    },
    "kol": {
     "ok": 1,
     "fail": 0,
-    "n": 24,
+    "n": 23,
     "label": "KOL 观点"
    },
    "x": {
@@ -44,25 +44,256 @@ window.TRACK_NEWS = {
    }
   },
   "byKind": {
-   "media": 153,
-   "pod": 14,
-   "kol": 19,
+   "media": 174,
+   "pod": 15,
+   "kol": 21,
    "futu": 41
   },
   "byTrack": {
-   "infra": 55,
-   "app": 30,
+   "infra": 62,
+   "phy": 36,
+   "app": 35,
+   "pkg": 28,
+   "bio": 19,
+   "fin": 25,
    "edge": 14,
-   "pkg": 25,
-   "phy": 30,
    "sec": 13,
-   "cpu": 19,
-   "fin": 23,
-   "bio": 18
+   "cpu": 19
   },
   "note": "富途个股资讯（聚合中文财经媒体）+ 播客（All-In/Stratechery/Sharp Tech/No Priors/Acquired/硅谷101）+ 财经媒体（CNBC/Seeking Alpha/Reuters）+ 赛道关键词检索 + KOL 观点（媒体转述）"
  },
  "items": [
+  {
+   "t": "2026-11-18 21:48",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Nvidia’s Kress faces a divided workforce as some employees push for Huang’s return",
+   "url": "https://www.cnbc.com/2026/11/18/nvidia-kress-jensen-huang-return.html",
+   "snip": "Nvidia's interim CEO Colette Kress calmed investors. Now she has to calm employees.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 21:42",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "Robotics Tomorrow",
+   "title": "Making the Case for Programmable Infrastructure in Humanoid Robotics",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSnh0ZkxQUndjXzVuaXBXVl84dEliSkhTZjc1X09kWnI5RmJfVlZCaTJmWFl1MlNEQ3BJb2ZRQ0tuT1ltSUFpa2lwc0pVUVIxeE9VNk1lWXhfNVZLRlktRzRvVnBYUHl4WnNVS1lVQ19kVjhKbXBlV2t2ODZjU1cyVWUzUHRNQWZJaUdjbGlxRTIxcWZRQkNER0lheW9uZXhWV3M0ZDVhVjl1RFEtTEdWNXZqeTZCcG1sRGw4UUt5Q0Y?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 21:30",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Nvidia earnings spark rally in shares and neoclouds despite Huang scandal",
+   "url": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html",
+   "snip": "The chip giant's earnings come at a tumultuous time for the company.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 21:15",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk",
+   "url": "https://www.cnbc.com/2026/11/18/nvidia-us-ai-chip-export-controls-data-centers-.html",
+   "snip": "The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, threatening to slow a build-out fueled heavily on Chinese demand.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 21:05",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Nvidia's numbers and Anthropic anticipation drive Nasdaq futures up",
+   "url": "https://www.cnbc.com/2026/11/18/nvidias-numbers-and-anthropic-anticipation-drive-nasdaq-futures-up.html",
+   "snip": "Big market moments for the tech sector bring back the bulls",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 20:26",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "Gasgoo",
+   "title": "151 Humanoid Robots Successfully Challenge Guinness World Record",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQnN6dHpmY1lkVS1jS1V6dlc2TXhzWXM4N3RQcEJKUU0zOWNFMTFIUlJtcGRZalpGbTlYM1AwbTNtRGtmWUN6a0FmaVRaX19kbW56c0h4V1FGeUt1ZjUtUWkzNW5kRWY1U28ydkZVdDJyMHE2TUFMVU1pTlROVkhwWU83LW96RGFrZ2lvVmtKTWRiZjV0QWEwWXcyZldhODhYUzJXVm1Jd0FIa0tVOWItdUVyS2xJMEFfMzhBVkRRdGhLUkVD?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 20:11",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "Gasgoo",
+   "title": "Must the \"big brain\" and \"little brain\" of a humanoid robot be separated?",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSFo0M0FQRDVUMktJbEFwaHhJMFZzbm9PMlRvNllLNjhscGhBSXNzNFRPUkZqWjE2Q0RQbE1FUi0wcXNhcDFpWmJxRk9VVjcwQTZfSFljQUN5QlROWFJOcXN2ODJjNkVaVXpBYmh0Z2E5VDNXb3V4UzBwemNIeFZwZl9HYVMzVU5XX19aRVRFdEk1ZW55Tm52RUd4YXVZbUxSRTAwY21hQ1Jwd01SR1VRTlQwZUxiSlJnRkpKbjRLc2RFZTBydkNIVDRR?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 20:10",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Nasdaq futures rise as Nvidia forecast eases AI concerns ahead of Anthropic pricing - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLUw0WGdCZWFQMDBna01NRTEzWEQxbHlSU2RHS2FFX0dIdDc5Si1kQjdzRVFpSTRLeThVQ1V5NG01UG1HSGtJNFZOYjI0OHpIbHRvWjdNOFNjZWhhYzFTWVJJVklORUV4YmJoOWhjd1Nhc1hULXVVYncyUmZUQjJwMFh4RGJsSFhhcjlwc2NpVUhNUEdfQXdsekQ1c3AzZVlZcUdSN3ZlTDJUQ3g4WjRlNHhydEJ2OVJTeHpj?oc=5",
+   "snip": "Nasdaq futures rise as Nvidia forecast eases AI concerns ahead of Anthropic pricing Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 20:08",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Nvidia stops shipping US-approved AI chips to China - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQc0dHN3dEWU8xaElLV21veDdXMWI3eUpBYWNYV2ZXSWZTUkJLX3dELUNmeEZhSGtlczFEMWFjXzZMTWhNRUJrZnlHT0VqN0ZYcXZwQ1dXTzJLSnJCREtWZXhQWVlQY20waTh4WlVZNmVTemVLM1l4UXNrbUJDd3p4OUhweklHT2F2SDRXTXpiWTRab3dIalpnQjVJNmc?oc=5",
+   "snip": "Nvidia stops shipping US-approved AI chips to China Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 19:30",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "TechCrunch",
+   "title": "India’s Humyn Labs raises $47M to feed U.S. robotics companies the data they need",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNzBfSHFXbmNhSlhJUVNRcUdnQV91UWR1aXl0eEp4UktiVnU2SGluYzBIcW5kNTlRNlhaUDB6TmhlQ01kYVVPcnZoR0VwRTJWdEtmTFN6UVVFRjBjd1hMRnhISF8xR2l3TlR6NTRTTmhqbUt3OTdmSWdOb0k4Z2d4NktKY0FlTlVRUTV3T3pUSThIalJWX1htRGw5Y2VCc1dTU1V1czNVUXJ0S2hDVzM1VGk2R0t5SU5NWFlCa29ZUjNZMDg?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 19:23",
+   "d": "2026-11-18",
+   "track": "app",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "As Meta bets big on Muse AI agent, early safety mishaps surface - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNYzFCWVhTaXRGa0xoLTRJUUVKTjNaYXZzU2FhbHYxR2tyallCbFJsUFM1U21lbXN0UVN2U3FfZnlsWWdGWERVTWRBdmhHVmZaS0Z3X0REWFhvaXhQYXpoNHRlTG0wbHp0WHd5b3N3dnpOYnJONWE4bWVXdEJObHFqZTFYd2szQ3p1SU5LV1JxODNpSVpoWnZTdXVWRDJTSUl0MTRvQnotcjJrUUE?oc=5",
+   "snip": "As Meta bets big on Muse AI agent, early safety mishaps surface Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 19:00",
+   "d": "2026-11-18",
+   "track": "app",
+   "kind": "pod",
+   "src": "Stratechery",
+   "title": "Nvidia Earnings; Office Convergence; OS Wars, AI Edition",
+   "url": "https://stratechery.com/2026/nvidia-earnings-office-convergence-os-wars-ai-edition/",
+   "snip": "Nvidia's earnings were boring, and also a statement as to why Jensen Huang probably isn't coming back; then, Microsoft and Anthropic ship dueling operating system updates",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 18:14",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "The Economist",
+   "title": "Get ready for humanoid robots, says He Xiaopeng",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxORFdoX3dJb1NvYXpIc01lQ2xEeTJyM0hqLS1nWVB0N1gzWGNyVUVQbVVQUHc4WnZqZFU0ZlpHVFJURi01UHVyd2VYVzdTUS1NWmpqUGF3RlIxVkMwU080dEx4R3ZyZFU1dEVvUlJRUWxrYTlhT1dDazQyN29LSXF2bWxVai1mZURDVnBEcEx1dXVGRjAwNWVwU1U4WW9pdFRp?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 18:00",
+   "d": "2026-11-18",
+   "track": "phy",
+   "kind": "media",
+   "src": "The Economist",
+   "title": "Humanoid robots will become a common sight in China",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaTZYeE42NENweFp3SGdqUXk2am9WY3JiYnlHT0NkTnhJaXRCOXBqdEo3ZV8tNW1wbnRidjg1ekNoTU9qOFpRUVBhbXFCcWRlQy1GSmI2aHFra0dGRlNUTWczSDRCdkwyeXdJYlBqMTJnQlZuX1NXc3pZSXh2U0JsY1RYeHdXS1h6ZEpBcDVRR3l0WUFzbE9McnU2Nm5EdmhUVnVtWWs1Yw?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 17:22",
+   "d": "2026-11-18",
+   "track": "app",
+   "kind": "media",
+   "src": "The Globe and Mail",
+   "title": "DLocal, Salesforce, HubSpot, Cloudflare, and ServiceNow shares are falling, what you need to know",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOYXBRV3drdnh4VUlPcEhnSXVRZ3NZdThBMDlUODdoZ3JzLWFfQTd4OVNQRkphQzc2VTV5YnplNjRwV0VMcXpnZjRTNUx3cGV2RzZzQWZBbEJTNzB1UnRLcTVPWDNRYmNuMXFPQl9PdXNWejc4ekVCNDl0TVNFYXl0R0ZMTmVncjhXUTZ3OTdEckIycEQ1aDhkeTI4dHVxSG1ROGFDQ2J2ZWJYTG9VS2xxQk9fcXVIZVg1SDlKWjkxTGUwUkRRdWY1ZDY2SDYzREJnTFZ6RlpIcmF2RXdWdWo4TFlwWGNsLXZ5djRHbUZMY3N3VUktWHdnaWFyMC1MX3FDLTJManhiQ25fUQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 17:20",
+   "d": "2026-11-18",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "AMD, Broadcom, CoreWeave stocks rise on Nvidia earnings beat",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPajBIQVJwYUNFRGNGRE43Zm9HQlVqZUp2X0l4OThSWGk1R0JfbHdWLW9MQWNib0otSzBya3YybmJPOXlwSjRrRi14QmkxWklOV1JsZEhpc1BDNkphOUdPTmVZT0ZiZUhfXzNNNmZWM21oY04weVJNY2VfOU1TRHJERElfYllUWVNJMHdkS291b2ZuQTlhSGpqZXVaeks4cF82bjZfVlJyWUJRWS13X3RCNkxlMVRob2JnNUNPMWdUT05xX1prUjF6NURIZ3JoNjhaM1EwT3BMRXVwb09zTGNZTA?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 16:00",
+   "d": "2026-11-18",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "ARKK: Nvidia Is Not Cathie Wood’s Biggest Bet (BATS:ARKK)",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWUJxQ1FDeTdWdlpJdnpOVjBsVWtFMWs3eFdVLWFYczczcVVuNVNXOGxZZmlCOTh5d3JDQ1V0Q0c0ZENEbTZkcnFfR0FxM09Qbzh2SGpRd3YxVnpFbDM4ZDNneFZ0ZWhfUlZYUldqNklBQnN0Zjd2bmNIeDdHOHB2a0xoenNsVEhHY0dRbQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 15:43",
+   "d": "2026-11-18",
+   "track": "bio",
+   "kind": "media",
+   "src": "WSJ",
+   "title": "GSK Gets FDA Approval for New Lung-Cancer Drug",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOU1pFbjgyNlNyS3RWaVNTYVVUZnZHWUNlS1p2TXpudFNBVS12bEtURkoyT1RESmZTVlF3UUFCRVpranEzQ3BYLVctbGlVREZZR1c3UUduQXZKREVrZ3FKRUNEWER4TkhqWjFmVlNnMHZwcEpMOTMwdENoZXZ1OEFPQWZhbHRSaFJpUUZ6cEpIdjBQLTA?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 15:38",
+   "d": "2026-11-18",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Seeking Alpha",
+   "title": "TSMC: The Biggest Loser From The Nvidia Debacle (Rating Downgrade)",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPczhDUGRPMWt3bGpnUW5tYjdNVGM2OG1nRWplX3J4aWxkSFpydTFjbW1PS0dITDdFanE2UFFQTEpsbGh3N0dPQnRHM1J3UkhERmNhQVFaTG1jNmdiQzVGLXo2WTF4TXJvVDc1a2N2NTlSZGFfbE9ZZExVYkxFUDMwbFk4eVdQZE5yX3dwZGwxMF8?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 14:18",
+   "d": "2026-11-18",
+   "track": "app",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "JPMorgan is working on AI agent transactions that don’t involve humans",
+   "url": "https://www.cnbc.com/2026/11/18/jpmorgan-hyundai-card-ai-agents-payments.html",
+   "snip": "JPMorgan and Hyundai Card are looking to expand the use of AI agents in financial transactions.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-18 09:25",
+   "d": "2026-11-18",
+   "track": "fin",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "SoFi Is Targeting 100 Million Products by 2030. Here’s What $10,000 Invested Today Could Be Worth if It Gets There.",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPN05HV3BUR0tpa3N5d1lyWXNxOHVWWW9sQW05SFJQQzdFUF93ajJSU3ZMM281VkVHanhDakZwWXVhVVRCb2Nwb3l6Mzd5Mlp6U05BNVgydF9hVU4tb0FjSGJzTnZnRjVIYXZtRW1vTjBtMFI1bFZZNXhWOC1RM2VHeVZpaHUtaGZpNkllT1ZUVlp5STFRWnBURG43cFlIV2RVN2c?oc=5",
+   "snip": "",
+   "isNew": true
+  },
   {
    "t": "2026-11-18 07:49",
    "d": "2026-11-18",
@@ -72,7 +303,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia’s Kress tells CNBC 'customers continue to be with us’ in exclusive interview: Live updates",
    "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
    "snip": "Nvidia released fiscal third-quarter 2027 results on Tuesday, with its earnings call scheduled for 5 p.m. ET.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 07:25",
@@ -83,7 +314,7 @@ window.TRACK_NEWS = {
    "title": "CNBC Digital Finance Forum recap: Wall Street's AI and crypto future",
    "url": "https://www.cnbc.com/2026/11/17/digital-finance-forum-2026-live-updates.html",
    "snip": "CNBC's Digital Finance Forum featured insights from Wall Street leaders on AI agents, cryptocurrency, tokenization and the future of payments.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:28",
@@ -94,7 +325,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia chair says the board will not rehire Huang as CEO - Reuters",
    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUzY1ZVJpMEF5SkVrMm5oVXBaUE9FNFVkUTNxQllsbHo0YXpJMnZQc0Zjc2c2Z2FjRTNYdHAxdi1ZaEFJZkFIRUxqaVNHWUpTZTdydVZtejBWd2Rqa2llYVJDR2MwdjFORHhPSkc0WXAxbml3NWdiTkx5bW9FbE9xdUl1Y1paSnZMcG1OM3RSSHV1TGhHWl92dEpGenJGTXpSbXV3OVRfQzdHTXNqX1NXRzVaY1NGdEFwOTNWSm5R?oc=5",
    "snip": "Nvidia chair says the board will not rehire Huang as CEO Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:27",
@@ -105,7 +336,7 @@ window.TRACK_NEWS = {
    "title": "Instant view: Nvidia earnings beat estimates; attention turns to call - Reuters",
    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaWVjeHRTNkRreHFmNVBsYkdQeFJjc1htLXA4enJfTEV5clpxOHZRRGdGZXNkZGFzY2FPWUtTMkdCSGZYZXFHMmE5OVFzUDJuc2ZjRGJybkF2MG1pTkxhMFBRam5wdjFNdG5sRGJaaEN5bE1keENqTkJGb2lPeFJQM2Y2NDAtQ3JvSG9pRXExTFpwSE9iandZTFMtcEEtX21xUXM0?oc=5",
    "snip": "Instant view: Nvidia earnings beat estimates; attention turns to call Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:26",
@@ -116,7 +347,7 @@ window.TRACK_NEWS = {
    "title": "PJM asks FERC to halve data center grid studies to 12 months",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOLXZ1VG1UNXF3Rlk1d0tTckN3aFNTNm50VEhaYkVpeGlZZGVibTlkbU5KOWJBcDF5Tkp0WkNqenIybHhlblhNR2RaLUk5R1M3Y2ZmSFZUQl9qbGt2eW84dV90aEhNelJqeUN1UDdpdEN2dXN4azlZakdsVnB4SkIyOEl3STZOZU9CRDhieVVlV2dxUQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:23",
@@ -127,7 +358,7 @@ window.TRACK_NEWS = {
    "title": "Huang pitches Nvidia comeback, WSJ reports SEC probing the chipmaker - Reuters",
    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTTFHVE42V3FIZzBXbWhKLVR3bWRrZ3dRWGpCRm45dlktYkpveDBveW1IRFc1aDltUERHLURBUFdSUW5KMVVaZ2w2NGRuQVhmZmtyb2ZpUGZuZncyVXR3cFYxX2FUcmFyQVRBSHVnbWFsVFFTQ1lPS0lTdmZUMDktbTBUbndQdzhxc2JnWVctSF96QXdVb2JUeUpqYURha25FMEZhU3VqbWFTZDA0Q3lqanRUaGdMQ2M?oc=5",
    "snip": "Huang pitches Nvidia comeback, WSJ reports SEC probing the chipmaker Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:04",
@@ -138,7 +369,7 @@ window.TRACK_NEWS = {
    "title": "Former Nvidia CEO Jensen Huang can nominate two directors to company board, filings show - Reuters",
    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOcU1vUDEzelNFZ3BKMUQ1S2tLakNtTUVHOVBsWktncFlmOFpkY1lHQ280MlVlLUh0MGpzM3A0MHJZNmR2NzhJeURvLTdiZ0VPWi1xT0o5a3laQW5YbnFmQmZJRjhuOTdRcm1JWGctdEhMd05qUmtNUXZFMi1JUXN5UGhadkJ6UnZ6NnNoQ21rSzBKMmFFNERlTE9NdVFEeXc5eHdjcFBScGdqYmV0bEtiYnYyekgyaGRXVnBLcGhJUWdoMnZKYWFhSzd5Y1hma1hi?oc=5",
    "snip": "Former Nvidia CEO Jensen Huang can nominate two directors to company board, filings show Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:03",
@@ -149,7 +380,7 @@ window.TRACK_NEWS = {
    "title": "Widespread outages hit banks, air travel, the NSA and Apple, disrupting seemingly everything",
    "url": "https://www.cnbc.com/2026/11/17/apple-microsoft-faa-jpmorgan-outages.html",
    "snip": "Major outages showcase the risks of interconnected tech in the age of AI.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 06:01",
@@ -159,6 +390,17 @@ window.TRACK_NEWS = {
    "src": "Yahoo Finance",
    "title": "AMD, Broadcom, and TSMC stocks rise on Nvidia earnings beat",
    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPajBIQVJwYUNFRGNGRE43Zm9HQlVqZUp2X0l4OThSWGk1R0JfbHdWLW9MQWNib0otSzBya3YybmJPOXlwSjRrRi14QmkxWklOV1JsZEhpc1BDNkphOUdPTmVZT0ZiZUhfXzNNNmZWM21oY04weVJNY2VfOU1TRHJERElfYllUWVNJMHdkS291b2ZuQTlhSGpqZXVaeks4cF82bjZfVlJyWUJRWS13X3RCNkxlMVRob2JnNUNPMWdUT05xX1prUjF6NURIZ3JoNjhaM1EwT3BMRXVwb09zTGNZTA?oc=5",
+   "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-18 05:45",
+   "d": "2026-11-18",
+   "track": "app",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Salesforce (CRM) Declines More Than Market: Some Information for Investors",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWWhZaHJWVlpTMDZWNlFqQlpXbE83aG16X0VoYzVGYkpNM1RiVWpQNzcyYkJ2bENLWVYyU0hoS2ZDUzI1OUpjSVB5bmJVUmlLamJLbUE0NjBXRkZ0SktUcEI3VEpCall3Z1FIU1FhR2pPbzQ1MHR3VFNZTGtqcXh1ZGRsMEJhZ1lEVWtKSHRzMFJNdVdTWlltd3dhT0g0Z2J0bEE?oc=5",
    "snip": "",
    "isNew": true
   },
@@ -171,7 +413,7 @@ window.TRACK_NEWS = {
    "title": "Databricks CEO: AGI Is Already Here, Why Companies Are Behind, and the Superintelligence Debate",
    "url": "https://allinchamathjason.libsyn.com/databricks-ceo-agi-is-already-here-why-companies-are-behind-and-the-superintelligence-debate",
    "snip": "(0:00) Ali Ghodsi joins the show: Databricks' early bets on cloud, AI, and open source (8:50) Is AGI Already Here? Why Enterprise AI Is Falling Behind (22:04) Live Demo: ",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 05:43",
@@ -182,7 +424,7 @@ window.TRACK_NEWS = {
    "title": "SEC investigation an 'expected outcome' for Nvidia, says Deepwater's Gene Munster",
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOSy1TVzJ0UVVQdkxXUlBPN3dCNEFMcnZrbW1VeUN2djlRNWloZk91QmdnMkVGNDJCcUk4V3Y3SU9rdUZNcUpqdEhZV1VyYmtsTnl2SWJ5OFVFQ3UxRF9YOHF6eXdfVWMtajZkcFVNb2d4dHhhZXlJQ2Z0eE5nZWs4SW1ZQ2F2XzFOZXE4ZXNzczdJOGh6VF9xQkhnVm0yVzBzWnFZdzN2b1pSZ1liZVNmRTBtaF93SlZPZGtZUw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 05:10",
@@ -193,7 +435,7 @@ window.TRACK_NEWS = {
    "title": "Prediction: Nvidia Will Be “Forced to Implement Biometric” Kill Switches, Says Jason Calacanis",
    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNHdjdl9qZF93b3JYNlQzLWZabW45Q0s3dTVHUkpUYXgtM2dEUkl3RnQzeFBtWlJ3Mm5NN3BoeGZUMk5qZ0pJTjBZdWkzZkxXU2NaQjVSRUt3Wlc4TnhJdmtWbllkSUJlV2VSRUREeWhZa2w4SEhyZTVxc0syVS1zck1NUmFaZXZyb1B1SVhjMVJMQVlXSXZFNEVBRTNoRksyV3VQXzFNdXIzTldIREE?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 03:46",
@@ -204,7 +446,7 @@ window.TRACK_NEWS = {
    "title": "Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOWpDTDBNZFAwZzFlbE90VUwxc3gweWhXMm9Xa2JCaDNwOVNtRTV3TEtUT2VaME1nZVViRjJ6Wkd3eE5BaUVrR0xIV21hU0NuYTVjSFIxcWpYVW5TVXdhcjZmQzY5a1RZZXZSdjB4c1lVcEVNS0tESWU2QXBzZ2JWdzdUUWRMd2hEdTUzUA?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 03:35",
@@ -215,7 +457,7 @@ window.TRACK_NEWS = {
    "title": "What Humanoid Robotics Means for Surface Finishing",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQUERrd2hKZXJLbHUyMGYzTlNIODRteC1VLXFDQW55T0RHTXIwNFZFLUU2dzhmbVRBbldWTFlyZF91M2NlOEV0RFk0TUplMW9SX2VHOTB2ZGJ6b29sb2dJMWszT0Nza1pZVzl1V1pNREZMbjFQOHVhQUtydzJodDdnSEw0UFhtOXVsakJyWg?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 03:01",
@@ -226,7 +468,7 @@ window.TRACK_NEWS = {
    "title": "Cathie Wood Says AI Isn't Even in the First Inning Yet of Its Long-Term Technological Revolution, Pointing to Palantir's 123% U.S. Revenue Growth as Evidence the Market Is Underest",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1wbGhrSjBCc1hpLXladW5VekN3NTNXUm9zaUotZzNmMkRGQkZzS1UtYTdiUmhqNmJEaldSdFYwQTBkX3I4aWI3ZEE4X01sdkRjS3Rpa2V1TTR5X3JPZENtaS1tTERfQmttb0xaX3U3Y2RIOFg5YnVJ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 02:44",
@@ -237,7 +479,7 @@ window.TRACK_NEWS = {
    "title": "NC State’s Four-Foot Humanoid Robot Built to Collect Floor Eggs",
    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaXlNSXlJOGxaeFFjN2FxMEVlakpTTnNTYVNqWW0wbEtmdERHVUZnRHc0eVIwWEFUUmd6azVVVE5xYnhHWU1yYzdrWGZNU0hiYzRoejF2TmxLMkJpSFpUcGhndUNxeFA2WEhpMWt2amNlSTdRdzRtbko0dkJ3ZGx2MC11eWdRZ052ek9PVElB?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 02:18",
@@ -248,7 +490,7 @@ window.TRACK_NEWS = {
    "title": "Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI - Reuters",
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQ05INXRWaGd0ZFhsSkZWMjBZeFNJYU1JOEhkRG9PT1V5SUl6YTNNMzFWblJXZVdjVHJzZW5raFlUbzlHMTNHemFUVWZab28xS0M3RzkyN2c2Ukl6VUR4SUF6RFRpVjRieGRFUWJGZUNsMzkyR1B0bnlxSFFQMHpFT2JCQ09KM0FMcUZWXzlZaEVmanRiMmtuOGxGQnNKbDZkM0hJVGpwNURRN0daX29GX2tHZ0pIU3NrRk5JbVVpZ1d1WGN0cHc?oc=5",
    "snip": "Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 02:18",
@@ -259,7 +501,7 @@ window.TRACK_NEWS = {
    "title": "Microsoft unveils AI models for coding, cybersecurity as it takes on Anthropic, OpenAI",
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQ05INXRWaGd0ZFhsSkZWMjBZeFNJYU1JOEhkRG9PT1V5SUl6YTNNMzFWblJXZVdjVHJzZW5raFlUbzlHMTNHemFUVWZab28xS0M3RzkyN2c2Ukl6VUR4SUF6RFRpVjRieGRFUWJGZUNsMzkyR1B0bnlxSFFQMHpFT2JCQ09KM0FMcUZWXzlZaEVmanRiMmtuOGxGQnNKbDZkM0hJVGpwNURRN0daX29GX2tHZ0pIU3NrRk5JbVVpZ1d1WGN0cHc?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 01:16",
@@ -270,7 +512,7 @@ window.TRACK_NEWS = {
    "title": "Salesforce falls 10% to reach multi-month low (CRM:NYSE)",
    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNkx1bU1DcE1EV19yWndkVVFLci1qVlR2TU1pU3pGSGN3WWdlWWVIR2ZWcmxCbkhaLTFiZzFMUnhfUG1KSUxGbTFuYUg2WUhLeFVHTnRQbDlrbTd4UG43dDZDR2xpQUpLby1kMFFfZFdSOHY5S05uOHV3OWR3QWVFakJUV3VyNDAwLVE?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 00:55",
@@ -281,7 +523,7 @@ window.TRACK_NEWS = {
    "title": "Salesforce's Slack Gains Momentum: Can It Lift CRM's Growth Further?",
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQVXpSb0lpN3hnTWxzVHBad2trZUY1djY4V09rRDl5bDNFcUxfbXdSUkFsWExhOVhmcFBSenI5eE93WkJncEZRekw0dWliR3N0RnFKWUNWdlVKdWJFVUpEdG80bFNiQ1NKTlYxbEU2YVJmdzVWMFRPbDhGVUZyLTRHMDVRdmk1SFlMYVNzZTZYM1Fia0M2LUpuVHdHNUtza0ZsaXl3Z2Z3YjJUU05WUUl1emttY3YxTThfUHlzcFpfcw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 00:25",
@@ -292,7 +534,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia-backed Genesis AI raised $500 million for its humanoid robot at a $3.5 billion valuation",
    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE84MFd6V2FEVkxJbTNsaklrRGdtWUtvT25adDRWN2NhM3BxZ0xNUkg4ZG9TUDlVa1dNWnJFdk5Rbkt6NHUxaXAxSFJtanJ4MG5FbGVRX1d6dklRNGprVlBlQlFFUG5LcldwdmRidVo5N1FvVnMxcm1FZQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 00:08",
@@ -303,7 +545,7 @@ window.TRACK_NEWS = {
    "title": "Cathie Wood Sold $85 Million of Nvidia the Day Before Earnings",
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWxKOUhrUWExOUFUS0l5WUN6bjY4c0hUalh3bmxyVGtrLVlmWmRRTGg0c085cUwtVUFqSHd3V2pMdFBYSlRhM01JVkRSNDVUeUFLU0tPSXBITVE3Wmk2NzZhYzJHakxhQWV2WHBDVmptWEplOXduOU9oVjVWRUpwZDRNYU5NSnB2azRhNzlJYTZIV05UekUw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 23:49",
@@ -314,7 +556,7 @@ window.TRACK_NEWS = {
    "title": "Salesforce Sinks 9% as Software Slides Before Anthropic IPO: Investor Warns AI Companies Seek to “Destroy Salesforce Entirely”",
    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOczdVa0RiVGJfdkNBQXdVakRSTDVTdkhpVExrS3FicjZBeXBHX3BXTTF5TWdzUWRFNndIZVgwX01MYkF2clpZZU5JWXF4SkJ2dXI2RmhIdjF1Q3ExU3pIU0ZIbmpkU05VdWVrTU1kSzR2NnVLd0FJZlNzOHQ4dWpGSjg4TndBYVRTc3VNOG9LYS1lWU1Cblk1QTRSYVI4c2l3?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 23:32",
@@ -324,6 +566,17 @@ window.TRACK_NEWS = {
    "src": "The Robot Report",
    "title": "Boston Dynamics’ Atlas humanoid lands first non-automotive trial",
    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOTRNdjY3dzFkQlVNeXdNSXpjMTM4UGRxYUJWaHN5dng2Qkk1ZHkwZWNVMmhWSlFBVi1HMzdkQ3RYdzlOVVRKRkpqdlZuU1VTWGxVNmlCSHdrWWtHcnRBYVdsTzItYUpSQWQxTGtUTkMweFdUZEJzQUM4LUtXTU1Zd1pXV1RWRXRJMWtRY0wzWlJOQUJaNktKempERQ?oc=5",
+   "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-17 23:02",
+   "d": "2026-11-17",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "TSMC Fell 7.7% in Two Days. Joseph Carlson Thinks Its Business Is More Durable Than Nvidia’s",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNzJQZ0VDb2cxMzVVaTJNNV9uWG12aUVDaUtIdFc5dHhlaGs2MXV5ZjJNaS02ak9DVUZnM1BzcjVJeFhkTTNMcENydDJhY09QUU9Ub0Z1LXVtVmVPLVJ5UVdEYnV3Vm5WaXpBRHFfdWU1a0FIaHhkd1FDb1VxXzF1TlZBSzkyWUo1M0E?oc=5",
    "snip": "",
    "isNew": true
   },
@@ -336,6 +589,17 @@ window.TRACK_NEWS = {
    "title": "Joseph Carlson Eyes TSMC Over NVDA After 7.7% Drop in 2 Days - Taiwan Semiconductor (NYSE:TSM)",
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOc1NIa2Q0a0VLLU1HWVViaUpIWkdhREpSTlB4UVc1SWZLVV9sdC14WGhRMTc0NlZmOVJ5OHJLOV9Wd0ZHX1JQWG1LQWRKVUpPaUNIcm5NbUZ2OE5iR0tIbF85UUlkbVRGNTF2RkpZYVRobVdDWS01dDBidThIM2liYV9XRlpMMHJsdXBXZC03WQ?oc=5",
    "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-17 22:38",
+   "d": "2026-11-17",
+   "track": "fin",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "Cathie Wood’s ARK Invest Sells $85 Million of Nvidia, Adds Block, Circle and Coinbase",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTklJQ09wV0lwVzllaDFhcHNkdXVMWm8wajBtVFFMYmM2U2xDMmtXd05tX3FWM0dpSldjdVhmaG9iblJTMnUydjl1SVFWQkFFa1R4eDlKcGRiNlhVM0lsZWdrdmlnVHpDV1BWZzlwU3FTdGFVdWwyWm1zaHlVSnYtajF6ZHhBdTR4R19XeXRNTDZ0dlIyR3E2Nw?oc=5",
+   "snip": "",
    "isNew": true
   },
   {
@@ -347,7 +611,7 @@ window.TRACK_NEWS = {
    "title": "Can Palantir Stock Double From Here?",
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQSTlfdnFvREpmVzBaVmFvMWx5ZnB3R0k1SElnTWVqclZReGg2dW9FNUNHQ2pmbXFRRDNtVmU3RjhXZHdBWTNocDl0UkpJZF9FdmhueVNldmJsNTczZXpPNGQwUEJaTkE3NFVpSUQ2QW5yM3ViWDlyUDR3cmUyOE00ZV9YS2xOeWdETDdtRkJnYw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 22:04",
@@ -358,7 +622,7 @@ window.TRACK_NEWS = {
    "title": "French robot maker Genesis raises $500 million at $3.5 billion valuation - Reuters",
    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQlJMSlpCWFVKaDFXTDB6M1FBSnBqLUs4U3AzNXVTdXpNOHA2Z2hVVHVFdlNzUlNSNEhaMDlQUmcyUlhCcEN6ci1WUjU1MC1OV1NfYXhTQmFRQmo4U0FZWUxPSFdqNG9ubmptX1hVeVUtMDhVVlJGWkRVaXZydnBrMkNZS3pJRjFER1hFN2c2N3ZHNi1VVFFNVDVqY1dOS3M4NXBEOTdlSW9xczVtcE95bEdWbDBhNUxZZWYw?oc=5",
    "snip": "French robot maker Genesis raises $500 million at $3.5 billion valuation Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 21:47",
@@ -688,7 +952,7 @@ window.TRACK_NEWS = {
    "title": "ServiceNow Stock’s (NOW) Historic Sell-Off May Have Gone Too Far",
    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSkJ4ZlVpd0ZfaFREekJ1OENBWFM2RkFhWU9qOFJJNmRUVVJWbGdYNmxJOTlNbEY2NkhrUzNkZkRkaGhfaFNmdUVCSm5EYmFmYUprS0pqQkF5R3hDMUgxejEzRjZ0LWI5WUV0MDNPM19oWndMRkYzS2NmOWhTS0h0cWkyX2J1WjZOaUhhR2FUVFdrb1RuaV96cHFWUDNkaHM4?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 05:21",
@@ -842,7 +1106,7 @@ window.TRACK_NEWS = {
    "title": "$10,000 in SoFi Stock: What Could It Be Worth by 2030",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPMFpKLWhyZXRfV0ZfTFBOV3BBSjFXWGw1a0JXeHplMWJBMngwSEpGUUxWZkdLaXlmbVpycVpRdkZkWHkySnRuWVozTUJWTEtTSnhLS0hOMmtfcHYwc0xfMmh0eThSb0ExOExCSXZiNEtJR0Fkd1pNb0c3V21YUTVuNjVqcWdPR1BMUGIyemwyeWY2QQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 00:08",
@@ -1238,7 +1502,7 @@ window.TRACK_NEWS = {
    "title": "What TSMC Doubters Got Wrong",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOa3Q0OUdTRGNaR1RLZUFMZDQ0V3BtYk9JUU14RHFQMXRJY0ZubHdhczlRbkJXbzctNlByTVdUOTI3OUpFS1QtNUdncVBmcXVoLTBzY1N0Q1hDWEs5dE82N0l5Nk1DY09rdWJESS1iZ0dDcFdTQ0V1QVhJbGRrcTFYYmJmT2ZZZnYwODVZeVNCYVF3Zw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-16 03:19",
@@ -1810,7 +2074,7 @@ window.TRACK_NEWS = {
    "title": "AMD Desktop CPU Share Falls to 29.9% as Intel Regains Ground in Q3",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9BTDJuSkpna1F4b2pyT0RaRmZJb2lRZGxHUjNGaU1teVp2N2hXaUFfdDZGSUU5eVVuOWwzNFQya1lnOUoyYUFtNldGemU4a1RjNjgzWi1Kc1FkMWp0UzV3UGpyaWZORmo3VlBoZ1FQbkhZMXB2TG1NRW9rR0d6dw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-14 16:11",
