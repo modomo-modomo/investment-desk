@@ -1,8 +1,8 @@
 window.TRACK_NEWS = {
  "meta": {
-  "syncedAt": "2026-11-18T23:53:16.497Z",
-  "total": 278,
-  "fresh": 29,
+  "syncedAt": "2026-11-19T13:52:37.714Z",
+  "total": 309,
+  "fresh": 33,
   "window": 21,
   "sources": {
    "futu": {
@@ -14,25 +14,25 @@ window.TRACK_NEWS = {
    "pod": {
     "ok": 6,
     "fail": 0,
-    "n": 22,
+    "n": 24,
     "label": "播客"
    },
    "media": {
     "ok": 3,
     "fail": 0,
-    "n": 57,
+    "n": 52,
     "label": "财经媒体"
    },
    "search": {
     "ok": 9,
     "fail": 0,
-    "n": 61,
+    "n": 73,
     "label": "赛道检索"
    },
    "kol": {
     "ok": 1,
     "fail": 0,
-    "n": 18,
+    "n": 26,
     "label": "KOL 观点"
    },
    "x": {
@@ -44,25 +44,300 @@ window.TRACK_NEWS = {
    }
   },
   "byKind": {
-   "media": 198,
-   "kol": 24,
-   "pod": 15,
+   "media": 223,
+   "kol": 28,
+   "pod": 17,
    "futu": 41
   },
   "byTrack": {
-   "infra": 70,
-   "app": 41,
-   "phy": 41,
-   "cpu": 21,
-   "sec": 16,
-   "pkg": 30,
-   "fin": 26,
-   "bio": 19,
-   "edge": 14
+   "cpu": 24,
+   "infra": 77,
+   "edge": 15,
+   "phy": 47,
+   "app": 45,
+   "pkg": 34,
+   "sec": 20,
+   "fin": 28,
+   "bio": 19
   },
   "note": "富途个股资讯（聚合中文财经媒体）+ 播客（All-In/Stratechery/Sharp Tech/No Priors/Acquired/硅谷101）+ 财经媒体（CNBC/Seeking Alpha/Reuters）+ 赛道关键词检索 + KOL 观点（媒体转述）"
  },
  "items": [
+  {
+   "t": "2026-11-19 21:43",
+   "d": "2026-11-19",
+   "track": "cpu",
+   "kind": "media",
+   "src": "Seeking Alpha",
+   "title": "VivoSim Labs surges 82% premarket on seven-figure pharma deal",
+   "url": "https://seekingalpha.com/news/4674699-vivosim-labs-surges-82-premarket-on-seven-figure-pharma-deal?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 21:40",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Gavin Baker（媒体转述）",
+   "title": "Gavin Baker: Why Nvidia Needs Jensen Huang Back as CEO｜Sourcery",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFA3M1E1RGRsbjBGRWNJWnBJRDhkY3o3OTB1dTlKSGdiRW00UFBCeVNzLU43OG9WUUhOay1NWXFmRzlFQjhrQ0dDNjFqWDktMThOMTJuVUpQWHlrSWpQTXVB?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 21:32",
+   "d": "2026-11-19",
+   "track": "edge",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Dutch privacy watchdog AP advises consumers not to purchase smart glasses",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOWDJfS2RxQlRiZmpGR0xZQmVpdkZqdVR0bzdyRTVFZUctUnFsWUN6cXZlZ2hlSmpVUW0wUnpwOHUtMjBzZGtzVjhhRW13M09vUTJIRG00QXFiMGxMNW1wbDRuZzFlZDUtTldXWlpLWExPajd5Rzc1OWpDN01PVzBPd1BWVG1taWtUamc0Zzh5b1djTFY1cER0SnNsU0NXZ242YmhKUGVRU2JWelVsN3FYT3k1VjlheFlHY2YyNGp2Z2RwbjNJTDF6bQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 21:16",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "Gasgoo",
+   "title": "Gasgoo Daily: Pony.ai Q3 Revenue Rises 75.2%; Horizon Robotics Unveils LoFT; Black Sesame Technologies Opens Embodied AI Headquarters",
+   "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQRTYtdGNwZnYtTGlldTZ1aGVaQ1BtYWlkU0ZQWE1ramdnSEJBakhOWk8xWkFYUGEzYng1NEpZNXhUY3dHX3JyM3JhZlNUUlliU0pEa29kckxUZ01hVE02ZWhDZ2tLRkhEMlpjUDVMQW54Uk9aWGQ5aENDUWlJVjlPWGpUSkM2NHh1eXZhY0FuOW1MaHM2eGRvRF92aDZDTm1iTlotcU1WNWZFRjdydWFJbVpGb3lXVEFsX2I2REFTSF9oekttOTVyZGFxd1g1VWlvRi1VZ0sxS2ZqN0xyRFhES0RjV0tSV2c5UG9wd1lmVWdaaGR6T0gtUlM1b0c3b3MzclhlUzViTXhab3lZQ0w4RFVKdGxVWEdv?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 21:03",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "The Business Journals",
+   "title": "S.F. humanoid robotics startup wants to build ATVs — if it can survive the year",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNkxnMEZHa2pjU0tiM05kbHpUcEdQQS1UcUdqdUdZQkZkYS03LUtSdmZfanNnTEVTUGlOalhhWlpLNzdpNVhBN1lZX0lfaGk4Q3owV3ZCQVFHSVhjRjQ3aVJjclN5cWZUY3p6T1dSd1VYeExSMzJlS0RsdEdzWVNpTmRxOGlpWEN6YkVjU2V0a0RQWmNySXJxUA?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 20:06",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "Gasgoo",
+   "title": "Black Sesame Technologies Establishes Embodied AI Headquarters in Shenzhen to Accelerate Robot Commercialization",
+   "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxPSEpiZUVWc1BIZFI2X3JCY3MzWkwwbXFtNFhmMkVpRWhhSmVYTnZIc291ZTBSbm9TT1VJQ2Z1TmYtY1VKU2dtZTlvSDJOb0JYM0hkc1JSSnRBUUNIZGtPUEswYjZjai1rUlNPZmFXaDBhRWN4MVgwcGhDVjVMU2lJUEVOS1ZBMWJrMGJEVnR3T0JGdGhfX2FEN1ROcFoxc1JkR19xRWItWG91QzdEbWdnd1o0bWU5TDFoeGdVbWFpYXdJYUdBNE1wUDNUMldsOUdLU1JZelZYcWhpSnFXTDN2M2JCSVdUMkxZdUI4dTlLLVJDNFNPaG1HOUxkSTJVU0FIbW14Mg?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 20:00",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "media",
+   "src": "Bloomberg.com",
+   "title": "Can US Data Centers Ditch the Grid and Supply Their Own Power?",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeUlFUlRBZ0VwZjFSN2oyR2t6Ny1LcWlycjJjTW5oWWI0eVBuX3dBVDRpdHVndjBuZEJSMFpZSkhvSzczUWZhb2hZV0MtanNBS0w2a0stNHIwSGtrNTFNWGFRVW1kV3hUekFmanRVZWlxQXVlUDB4QnZSNGxvdXducURWS0MwVFJQQnZzNmlQVEJjaWd6LTNmX2xfZFVUU0s4Z3dHSVZPM1JhV004Y3V4RERSdllfaVBLYVVZM2YxMVQ3QQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:44",
+   "d": "2026-11-19",
+   "track": "app",
+   "kind": "pod",
+   "src": "No Priors",
+   "title": "Superintelligence Needs the Physical World with CEO and Co-Founder of Arda Bob McGrew",
+   "url": "",
+   "snip": "Is the AI singularity actually coming? Bob McGrew, former Chief Research Officer at OpenAI, argues that superintelligence won’t arrive without changes in the physical wor",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:34",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Data center electricity use could double by 2030, IEA says",
+   "url": "https://www.cnbc.com/2026/11/19/data-center-electricity-demand-iea.html",
+   "snip": "Global electricity use by data centers could double by 2030 as the AI boom adds pressure to power grids across the world, according to the IEA.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:32",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "media",
+   "src": "Data Centre Magazine",
+   "title": "Vertiv ATLAS Lab Tests AI Power and Cooling for NVIDIA",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOelVZcmN6VGs5ZzJEVE5MMWN3clhsSDM1NUNlaTdTVFdBckFTczZzOTVha1FFQXVOWjJzTTVScmVaYTFBZElfZkRhVzhZbkl0N0lmUWhVSl9XOU9SU0hLUFVka016ZWJWVmhDazVHUGNWVTJxNXVHQWJiQ2xtVXZXcmJDNXRoZmZIcnM3QmZHaWRnbFJp?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:27",
+   "d": "2026-11-19",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "TSMC Stock Falls 5% on China Chip Pause: What Is at Risk?",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPT1dSTHNDSG9SanRhV1A1RFg2TXJyb2ktV2l1OFFFTGhvR3VKYVFUZ3pzVkpPTmlNVTNuaVA4TDk0dVl5LXdqcUZ1V2s4MHdwck5xSnBjTC10Ykl0ZHZxelMxb194Tlpod2pLbUlvdDljV2V3WU1RZXdlRkxhdHZCbENEbXVBYi1qQ3haY2lRYzN1ZVU?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:26",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Jim Cramer says Nvidia has a new problem — and it has nothing to do with earnings",
+   "url": "https://www.cnbc.com/2026/11/18/nvidia-cramer-anthropic-ipo-ceo.html",
+   "snip": "CNBC's Jim Cramer warned that Anthropic's highly anticipated IPO presents another headwind for Nvidia.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:23",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "36Kr",
+   "title": "MIIT Unveils 5 Humanoid Robot Industry Standards | Intelligent Capability Classification & Training Site Construction Standards Explained",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9ndkN4M2RVdFZmdXRhRWZvZzhNMlNZQk56bElCVFJyWE1PMU8xZ04tOFN3VERseVhPT0lpTWFGVHlQZUdIRW9lbHIyLU1WMVQzdkc4?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:14",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Why Is Intuitive Surgical (ISRG) At The Center Of The Robotics Boom?",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNlM1eFVHd2JZQ2taWXNjSm1tZXlCLXp2V2FYUVExcXM0UktHakxsbG1Hcng1dGNBM1pQTG4taTBxNF9ZY0t1WnVVQ2sxRXE4MmZxbllSa0NGNDUyTTlGcGwyYXNFT0d5LXhzdVg4eTVyYU1DME5yM1JBSFhMelE2R2E2U2d0emNlLUNzWkhlSHRrYWlWZUM5ZVMwTQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:00",
+   "d": "2026-11-19",
+   "track": "app",
+   "kind": "pod",
+   "src": "Stratechery",
+   "title": "An Interview With Eric Seufert About Agentic Commerce",
+   "url": "https://stratechery.com/2026/an-interview-with-eric-seufert-about-agentic-commerce/",
+   "snip": "An interview with Eric Seufert about agentic commerce, including why he thinks ads will be the answer, and why I want retailers who cater to agents.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 19:00",
+   "d": "2026-11-19",
+   "track": "phy",
+   "kind": "media",
+   "src": "Business Insider",
+   "title": "AI-powered delivery robots are ready to take over. They have to navigate rowdy pedestrians and walk signals first.",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQX3haRzNVbU1VSllzTEVkRXUtUW82aG5odXBYeUxpaWREeGVWOXY1emtxLTVYN2FQV3pkRno4SkhzbkJKYVVzalhyWjRRdUlGOWluRk1BX1R0VHVPZldqWFY3YUZUX1gwS1ZLeFJXRmE5ZTI1UzZ3VnBQRHZlN0c1UXU1eU1jRkZRbzRJczEwTU0xM0ZiaFNoY2lQWXo?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 18:27",
+   "d": "2026-11-19",
+   "track": "sec",
+   "kind": "media",
+   "src": "Barron's",
+   "title": "Palo Alto Networks Stock Rises After Earnings Beat",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLXFmbU9PMVIwRnE2T0lYVDZKc0hwRkp0NjFwNjVFZ09YTWNVWGVNdmVBREpVYm50LTJhM0M3ekJPSG5kYWI2czdYRmszTmJlZE83d3BrTFBBVjllby1vU1l1VnNDdWliMHVZQXFuU0Y3VW5QajVxdnVpUUJ6SWRiNVVhUURuMW9f?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 18:21",
+   "d": "2026-11-19",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Financial Times",
+   "title": "TSMC and Samsung suspend some chip shipments to Chinese customers",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVmdYLWxyejBmNWE2ZmVSbk93M0w2ajJMbzZvWE54bG5QU2JqYzNqYUhobnJVX1h6bkcyT0JZX1VLMHNYZG4tM0Q4Vmd3dGJIRG9yS2dYcjIyLVpvV3RwUHFpRXU2cU51dXdWTTBRcy1wNHBJZEYtYURQcVhOTXlZRU5nLW8?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 16:50",
+   "d": "2026-11-19",
+   "track": "cpu",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "Cathie Wood Doubles Down On ‘Highest Conviction Names’ Nvidia, Tesla and AMD As Cyclical Tech Stocks Get",
+   "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPUjBicjdDRGw2LTZ0VnJYMEhJSERDYmtxbnhlRnRvQlhtVWphRVNJNUY4VjNZcEVWeVhwVFhFdFBOZmZRLW5TNjZLVUZRcHpwRGNPYW9qVV94QWxzNDE4TGx2dzROb3hRZDh3RGdILV9NcWh0ZmxramlzWFN1dnBWeHZSdzZfZHpzaU5Ub3JqX0ZaSmFhaVJSYXltZnRsODRycXY3UVFJUl9iUWRVdDVqMmk2dV9xRkRVVFZJdzBMcVUwV2xMcDY3bzQwSlVKbHduTE1IY2VPS1dqc1JKekpta0RzanVrME5nZEgxWXhhRkR4Yk9RWTg5MmJjb2JRMGhBQWtSSzVkY2xhYWlMdTdaNGM1amEtQQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 15:37",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "Why Did Cathie Wood Sell Nvidia Before Earnings and Buy Crypto Stocks?",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBROFo5X3lzZXh4cFpvejEzQllBdmQyNVZxY3p6QU9mWHVEM3hKUVg1MUtSWVJHUTZwd1RyVXJ2UXdwdGsxX1NibF9tX0NaRnBhYUVUQmd0QV9ONjYyVlNPMzdINWg4WURGNkE?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 15:37",
+   "d": "2026-11-19",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Dan Ives（媒体转述）",
+   "title": "Dan Ives Stays Bullish on Nvidia Despite Slide: Is the Chip Bigger Than Huang?",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBhWHd2UHV2Z0I0MWc0cDNrcmlZUy1qS2E3TUJ6X3QtTW1XRDJFd0J3QmpMQk5QQzg3cFRHWEhUbUZIcFFvRGlacF90N3JzQnVTd3dZWVJqMTMwbkZPUEJpNzRBU2lvVndwMUNMbGFOUmdNWHQ3alBj?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 11:33",
+   "d": "2026-11-19",
+   "track": "sec",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "CrowdStrike (CRWD) is Getting Investor Attention — Here’s Why",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVTVCNEc0TTRzbzN0UEdRLWI4Q0ZwVjJJekNqV1ZmemtJSS03c041MGR1d2djdTJNdmVxNGZwdVpibGFxTFk0bkt6Y0oyem9YNUdxNXRTS0V6ZldLR21IQVVBaE9BN0FUd2Y3N2djMnZWaUFfTDNSY29DWHJsY3ptZXU2T1pnbkk4NWlmaF9IdzVfbHlKNzJ6WEE2Z3JBZXZjbjFJZ29uWFNFbG1k?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 09:29",
+   "d": "2026-11-19",
+   "track": "sec",
+   "kind": "media",
+   "src": "CNBC",
+   "title": "Palo Alto stock surges as all signs point to how important cybersecurity is in the AI age",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNX2lEMXYwYkViWXYwVVRPVlI4VEFMbmxHejFIYUlQQzlxMF8ybUtuVkdMVjhCSU9Kbl8xTUd6QUdVNV95VEJLS3FXZldEVXQ5R3dBcm45QVliZHMtdU5yQ1h1X2JlZTNzc2txZndCeEY2UVE5Y0ZYTmduRlJQeHROd2pGWDc5elZSNUtPbEt1VTB0MFFWcXJEaWREWm51Nm42THBHS0pqOGVTNnVfOS1UZzNvYWdvQndMM0RzLU0xaw?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 09:05",
+   "d": "2026-11-19",
+   "track": "cpu",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Intel signs first external customer for advanced 18A chips",
+   "url": "https://www.cnbc.com/2026/11/18/intel-first-18a-foundry-customer.html",
+   "snip": "Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-19 08:18",
+   "d": "2026-11-19",
+   "track": "app",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong",
+   "url": "https://www.cnbc.com/2026/11/18/microsoft-put-the-ai-threat-to-software-behind-it-then-came-the-outage.html",
+   "snip": "Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+   "isNew": true
+  },
   {
    "t": "2026-11-19 07:45",
    "d": "2026-11-19",
@@ -72,7 +347,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia interim CEO Kress tells employees ‘let’s move forward’ at first all-hands meeting since Jensen Huang exit",
    "url": "https://www.cnbc.com/2026/11/18/nvidia-interim-ceo-kress-addresses-staff-after-jensen-huang-exit-.html",
    "snip": "Nvidia's interim CEO Colette Kress urges staff forward and offers pay raises after Jensen Huang exit.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 07:39",
@@ -83,7 +358,7 @@ window.TRACK_NEWS = {
    "title": "Microsoft had rallied back to record highs. Then came the election and Outlook outage",
    "url": "https://www.cnbc.com/2026/11/18/microsoft-put-the-ai-threat-to-software-behind-it-then-came-the-outage.html",
    "snip": "Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 07:28",
@@ -94,7 +369,7 @@ window.TRACK_NEWS = {
    "title": "'Business as usual': Nvidia's Kress passes first test as board slams door on Huang - Reuters",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPU1hUb0ZMNTdVdlRaU3NVMXlUODNRZmhzZjVNRFVocktEWXJ4ZkF5eTVmVXBQcXRMOWFpdHZMQ2hxeUE1OER5TkpmRTlLV0JBdGV5RWVDVTl2TWtZamNmMXBTV2Y4eTVXdFpBdmZNSlFtZklNQnBLWHNDU251eElyd191OGs4ajktX2NvRVpNQ1M1cDNEU0ZzYnpWMmpnQ1E1d3NuUzhMSXZfdEowVWN6QWZldW0?oc=5",
    "snip": "'Business as usual': Nvidia's Kress passes first test as board slams door on Huang Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 07:27",
@@ -105,7 +380,7 @@ window.TRACK_NEWS = {
    "title": "China races to bring humanoid robots into homes, workplaces",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNzZlYkREUDdfM2tHNktFX2J3VXFqMmRZbU0tYWlyRF9MOGVaaXZFV2VMUm5QZEJqVnBoOUdMczlnS282RzZMc3ZyUTg2bDctbFZTVk01aFBUV0RYTnA1ZzhFdEVLbldWbTFhdzdBWndXNjU5NnJ3LVYyOEl0V1c5WG80dXBaeEZHNmRTS0FFY0tUSlliOVJpamNFcXc0UlNmdXVhbExfVlZ5R2tEMHZCX1Y1ak1Ldw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 07:23",
@@ -116,7 +391,7 @@ window.TRACK_NEWS = {
    "title": "Democrats probe whether Lutnick helped Cantor Fitzgerald avoid Nvidia-linked losses - Reuters",
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxONTZfWHVZQkZBSHhzWl9pY3ZMUk9HQVhEUmtmckJNcVBYUXFHQ2ZDZF9XUkpESEF2bjM1cjh3S2R6T3N4cG8xeDJCS0NOQ1JLMDRRcFZvUjl0X3YzREVxM1RheFRESF9QekdKTnpFRC1oaW51Mkwwb0w1REYwSngzRjh1VXA1ZVJick5SczdmTjltWExrV0JEeXRVUmVpbDhEQ0lORlAzWGpWaG50UWJFOGpValMzd09jZGhQNQ?oc=5",
    "snip": "Democrats probe whether Lutnick helped Cantor Fitzgerald avoid Nvidia-linked losses Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 07:13",
@@ -127,7 +402,7 @@ window.TRACK_NEWS = {
    "title": "US lawmakers seek Microsoft briefing on reported AI deal talks with ByteDance - Reuters",
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNdEpRTFc4Q3Nsa085U2xoZldyY1BXSmlhSy0yT00tRzF4eU5QekdiUENlSTQyajA0eU5PVWl0MUpoejlXdXJMVVFPbHRVaGFlZmxoWFA5SHN5VXBpWHJvLUFLMjZISk96bVRuWWs0V3NSblpmWTM3VVZNQ3VHQVNpQTNUOFM5VzdwZ0ZOcHlFX3hmcEJ5ZDhRVXlCS0dCZEwxbXZ3Z09zVjB4N1FGMHo4Qkc4WWEwTG5LdHNWbk14NA?oc=5",
    "snip": "US lawmakers seek Microsoft briefing on reported AI deal talks with ByteDance Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 06:55",
@@ -138,7 +413,7 @@ window.TRACK_NEWS = {
    "title": "Harmonic Drive Systems Inc. GAAP EPS of ¥31.54, revenue of ¥36.12B",
    "url": "https://seekingalpha.com/news/4674486-harmonic-drive-systems-inc-gaap-eps-of-3154-revenue-of-3612b?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 06:25",
@@ -149,7 +424,7 @@ window.TRACK_NEWS = {
    "title": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings",
    "url": "https://www.cnbc.com/2026/11/18/palo-alto-networks-panw-q1-2027-earnings-.html",
    "snip": "Palo Alto Networks has been steadily acquiring companies to capitalize on demand for cyber tools to fight AI.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 06:23",
@@ -160,7 +435,7 @@ window.TRACK_NEWS = {
    "title": "Palo Alto raises annual forecast, signs $4.5 billion deal for Applied Compute - Reuters",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZW5sQ0s3NEtGMUtHWHpjajhUZjB3WW1PcGNIOF9IdktwUTVFbVh6V2VsMVFsWFRBMlE5VmtyUXlPMUtfZlk2UU4zbGxoZ19ocThmVjNudnNUWFhNR3BlT0V5dUxuYVk5VXUyT2EwZHI3QmtTS1N1ejVTV005UmNvdV93MjVEVDBkQldGU3E2bTBzVHpUbWZNY2wtbWx6TzA?oc=5",
    "snip": "Palo Alto raises annual forecast, signs $4.5 billion deal for Applied Compute Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 06:19",
@@ -171,7 +446,7 @@ window.TRACK_NEWS = {
    "title": "Palo Alto Networks Shares Rise After Earnings Beat",
    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQLXFmbU9PMVIwRnE2T0lYVDZKc0hwRkp0NjFwNjVFZ09YTWNVWGVNdmVBREpVYm50LTJhM0M3ekJPSG5kYWI2czdYRmszTmJlZE83d3BrTFBBVjllby1vU1l1VnNDdWliMHVZQXFuU0Y3VW5QajVxdnVpUUJ6SWRiNVVhUURuMW9f?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 06:17",
@@ -182,7 +457,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia retreats as strong outlook fails to dispel uncertainty - Reuters",
    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNlVnb2FaQlk2WUUtQ3dtaUlBRF9oSnFadkhYVUNwSzRKdnFQNENDUmgyMXBFV1NKaDhUcXJYTGF3Z21LM1F0OEZMVTJZU0lhWHlhOHBCb0t5WVRmMVRMU1ZCRTlJRUpYRlFCZ3RBYVV4WlF0Nms2Q1NvbkVjU0p5NVVQbmFrdzdfZmdLdVgxZnZBUkRGbkpZMTNR?oc=5",
    "snip": "Nvidia retreats as strong outlook fails to dispel uncertainty Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 05:46",
@@ -193,6 +468,17 @@ window.TRACK_NEWS = {
    "title": "Wall Street ends mixed after Nvidia earnings, Fed minutes - Reuters",
    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNLUw0WGdCZWFQMDBna01NRTEzWEQxbHlSU2RHS2FFX0dIdDc5Si1kQjdzRVFpSTRLeThVQ1V5NG01UG1HSGtJNFZOYjI0OHpIbHRvWjdNOFNjZWhhYzFTWVJJVklORUV4YmJoOWhjd1Nhc1hULXVVYncyUmZUQjJwMFh4RGJsSFhhcjlwc2NpVUhNUEdfQXdsekQ1c3AzZVlZcUdSN3ZlTDJUQ3g4WjRlNHhydEJ2OVJTeHpj?oc=5",
    "snip": "Wall Street ends mixed after Nvidia earnings, Fed minutes Reuters",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-19 05:44",
+   "d": "2026-11-19",
+   "track": "app",
+   "kind": "media",
+   "src": "scanx.trade",
+   "title": "ServiceNow shares rise 9% on Salesforce earnings beat and AI momentum",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTmcwSDRUa0ZwVTA5SHljSWl5Z1RRZ0I2Tk9XR0ktZmJxN2FaaDBkVGRfbEY2cjdPZ0t4UVBzZFZyZy1MRkZnQ0s2WE5OMGIwRXJuckdCVG0tRDVrZWlseHhfOUlJMW5IUmlLcF9wTXhLdUxnM3RlUkp2T2s2S1U4bGNIeXFwMk9KZ3pWa0Jjc29OUWZVU2ZzSE1IcWJBeHE4MjZwNHJtMWlrZG5oY1R2alFERQ?oc=5",
+   "snip": "",
    "isNew": true
   },
   {
@@ -204,6 +490,17 @@ window.TRACK_NEWS = {
    "title": "Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren",
    "url": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html",
    "snip": "Nvidia's earnings come at a tumultuous time for the company.",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-19 05:00",
+   "d": "2026-11-19",
+   "track": "sec",
+   "kind": "media",
+   "src": "WSJ",
+   "title": "Exclusive | Palo Alto Networks to Buy AI-Startup Applied Compute for $4.5 Billion",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNYzJMRVRpMDh6UlVrLWNaa0JYTmZhMkUxWWdweFJuWDdJZWE2NmVsSFczcFMwT3FVYzRxVV93TXlrSVhfWDBnRTBsSTNRcjMxUF9KMnp5UVNYOTRKSlJPa0tRMC1Mc2FTN3I4RGpZRVJxZ3FCOUVkaEZkQTlDUzNpZ1V2VS1UOXZRdEkyODVCMTJuMC1pSWd2QnN1Skw1eTFWS0Z3dzd1enk?oc=5",
+   "snip": "",
    "isNew": true
   },
   {
@@ -215,7 +512,7 @@ window.TRACK_NEWS = {
    "title": "Humanoid Robots Aren't the Future of Manufacturing AI",
    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPQm1UNUt5Y2lDQl9JSmE0U0hndW5OeXVBNVNVNUZBQWN6RzVRTEdjbnVuVEZBd1dHRnNZSnJiSkJYSUFrQlNNRkoxek5mMUVST1ZVUlpFUXVYdjFyaUlzNFhZeTRIMmk2MVBpM21oaVJ2N3F1dmxQTndxTFNPQWp1T2RVdVVlRzZRZUxIQk1YMnJuRjNEeG80Rk5aYWxhMDhEN3pENGNwdXN6XzB0UHdkNm5ObnUwUG5ldDFVSjFONEhrNkktRHc?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 03:20",
@@ -226,7 +523,7 @@ window.TRACK_NEWS = {
    "title": "Agility Robotics Opened at $11.26 and Dropped to $6. Here’s the Price Where I’d Buy the First Humanoid Robot Stock.",
    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQQVJQWWVKcy1acUtaMVZqbm5WYmFJRmViTVJVNGVzdWlfWUxNZ2RCRHV5aGtaVU5RVjE4SGZ2a0pLTERRdjFuNl9SNEM0ZXZuc1BJaGthNDZYYTBrMTBvMk9xSHdUTXdqeTFNczVIMzBNdXJkVWFRdnF2cEhnMU52SmlrWlNYV2QteHlJcS1ERkJGc2VEOVF0SWNJczNaQ2t3OTRhUjZEM1Nya0NHa2pYZGE3alAyNE1yeTB1a2hHZkNFMGRMYVNrblh5NnNNWm9HVC1BR1FOOUd5dFB5WWVxaEwwYw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 03:17",
@@ -237,6 +534,17 @@ window.TRACK_NEWS = {
    "title": "Vance scraps schedule to address tech outages as Trump admin insists incidents aren't linked",
    "url": "https://www.cnbc.com/2026/11/18/trump-tech-outages-nsa-faa-microsoft.html",
    "snip": "Recent disruptions include a nationwide ground stop, Microsoft Outlook outage and a reported blackout of the National Security Agency's communications network.",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-19 03:00",
+   "d": "2026-11-19",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "NVIDIA's Leadership Woes: Buy TSMC & ASML Despite Supply-Chain Risks?",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQRV9UTzlRTE9ka29VM2RXcUhrcV9VSzhmUTdNT1dVcm9hS00tZVdkRjRha2puRmphMm9LV05PMURkR3VsZ2h2WHdwRkNLSmV2bk42bnZpRkh0UDRMc0hqZ2hJMjJRaERrZVQ3X2U4QnZ6cm1VbWMzRmtVUG5aeDNMS1dsOU9zbGZESC1EaUdGb3ZhRy12cEpJdzNuRVRxUQ?oc=5",
+   "snip": "",
    "isNew": true
   },
   {
@@ -248,7 +556,7 @@ window.TRACK_NEWS = {
    "title": "Microsoft Becomes The First Announced Intel EMIB Customer For Its Azure Custom Silicon, Also Locks In Multi-Year Xeon Capacity That Includes Next-Gen Diamond Rapids",
    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNMFR2TEdnZ0VuOGY3MGxCaGptc1lDZkhXYll2RDY2dndOQ0pvckZjZkFhZnZuLTJrNUNlSXpKbHJtakZONlRUZWtUeFJwRXFfQzFrb0l2SDcyZU40alAyTDE2NFRWY0N5M05CdFU2dlJZTVlyZjV6b2JhODlCNVVwY2t1N2FBZl9UZi1TbXpTNVVyOU3SAZgBQVVfeXFMTTlXXzVoR21fUEVtemdsand6anhTOVU2cWJsdG1fWmc3Zy1QR1V2dWJHOUpmcjFNX2FOVU96YmdxRDZkYnV1c3h3VHljS0lhQWhiNzM2UnhDNm9WYlNPdHRRZmxjTGlOQnJUQzBncWtoY2FGODJIOUxUZHhVRzRHc1FVc2N5LWR4YmMyM016UzVvNlFsR1ZreW8?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 02:06",
@@ -259,7 +567,7 @@ window.TRACK_NEWS = {
    "title": "Salesforce Stock Price Forecast — CRM ($194.62) $225 Upside Target on Anthropic IPO",
    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPM0FkU1ppWWE5ZUJrdmN5MnBJZ1FMZGpjU09WLWkwZjBPRVphNG42MV9HSWxtcnltODJLVEFkMVAyY1VLdW8xTGdxSGRiamw5RHhsMjYtSERSVG9nblJuZFFSRWRVUzN4X0JJcl9UXzZHb3N0U3lQclJtdlVQTWZnMndVZFNwbjV4V3Zr?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 00:53",
@@ -270,7 +578,7 @@ window.TRACK_NEWS = {
    "title": "Dan Ives Says Nvidia’s Guidance ‘Speaks Volumes’ After Jensen Huang Exit: ‘Demand Did Not Leave With Him’",
    "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQS3FwSm8yeUtWZHdaejdjenRrSEN4b284bVRVNU5BTzlGWXhrNEdMNDlFeTlyQkZveGx2RVFVaVM3Y2ZiVE5HWXJTUzlmOGpZWndISENMVnVWV0NPWEFUa2dyVzVMTDlobUJDejFJS25DcW85eGZkek9JdjRHSDJkWFhQYXl3RUZXZ1o2NmhxMHBGb0lkdjZOYVdkYTBuOVkzREtMVW90LVRQTXdnMVp0c3BQbnlwdnFmazMwa0hCVDdsRTZ4ODA2WVl4ZFN3NmZQWVJVRzFlbTdRS3FaaEhhcXJmOFdfSWFzWHp6ZmZGbWVtRGZUbmRFVW5yQ3NUQTEtVFhlNg?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 23:42",
@@ -281,7 +589,7 @@ window.TRACK_NEWS = {
    "title": "Inside China's relentless race to develop humanoid robot helpers and get them into our homes",
    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBsbDNBSmdHVW5nSnZoZ1VxNlQzeHlLWi1tN1NST3RNbktzZUdVRURjWVZ4OGZRZkxUTm5mQ2d1c1VpTWU5c3J3VlBJMHZXaFYxVk9vNThlTDFKR2J1eC1KOEpNY2NidVVqVW1EQlUtUUJlMGJBNGhTa0FaamI3N0E?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 23:12",
@@ -292,7 +600,7 @@ window.TRACK_NEWS = {
    "title": "AMD, Broadcom, CoreWeave stocks mixed on Nvidia Q3 earnings beat",
    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPajBIQVJwYUNFRGNGRE43Zm9HQlVqZUp2X0l4OThSWGk1R0JfbHdWLW9MQWNib0otSzBya3YybmJPOXlwSjRrRi14QmkxWklOV1JsZEhpc1BDNkphOUdPTmVZT0ZiZUhfXzNNNmZWM21oY04weVJNY2VfOU1TRHJERElfYllUWVNJMHdkS291b2ZuQTlhSGpqZXVaeks4cF82bjZfVlJyWUJRWS13X3RCNkxlMVRob2JnNUNPMWdUT05xX1prUjF6NURIZ3JoNjhaM1EwT3BMRXVwb09zTGNZTA?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 22:57",
@@ -303,7 +611,7 @@ window.TRACK_NEWS = {
    "title": "Dan Ives: Nvidia, Palantir and 5 AI picks for 2027",
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOc0dSY2ZwUzdzajZzcFdhV3F3cDlTSHNrUGE0QXhmZ0s3eFBWUTlDSU5OY096c3FfR3pDS0lwaWZ1eHhvdVIyQVF2cHk1aUpSN1ZWMnVUZnUxb3V3NU90MTlvMXljMDFzbXhWU3VMX05sa2ZvajRpN2pYVi0xSFI2UFJTTjk5OVYweFNDYUpEby1veFZqZ0E?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 22:27",
@@ -314,7 +622,7 @@ window.TRACK_NEWS = {
    "title": "Gavin Baker: Nvidia's board has time to get the succession right — and Jensen should get a second chance",
    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVC12NnRKZTRIczBMM0l0aHBpcjZKdHlfeUxBT2o0Si13UnlHcjdIb0diWENuaWZqODhhNjVDTThzNFpKSHlIZGhVeHo2ZWlpcEtiay1jZWdhaXJ0M285VHktQTh5a1BYSk9EWWF4eW40X01DVmF5bm94ZVlQdlljRUZqbEJFQXl5QWduRmVrLTIzcnpkMFVIb3FQUlNNdUdDeUdkay1TYmdITTBFS2hiSjVNSGxST252MGhPUmp3MDJWdmJhM21EWkNnb0lmbmxn?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 21:58",
@@ -325,7 +633,7 @@ window.TRACK_NEWS = {
    "title": "An Eric Trump-backed startup unveils a powerful new humanoid robot—and won't rule out arming it",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOay05N1JJSXFwUk1VakFZM3ZXRVVsSkEyWVhiSlVoUmt2b2c5bzJCcEx5cGE3WU5qbktYemF5WVBPZFlsMTd0NmJCM3ZNSnhBYndUblI1SHBvNTdNR0d0ZWNzS0xJOVNTS0hFZ3NoY05ialAwUHdLdlozNU5XbDl4ek05VlV4UWJQRDdvTw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 21:48",
@@ -348,6 +656,17 @@ window.TRACK_NEWS = {
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQSnh0ZkxQUndjXzVuaXBXVl84dEliSkhTZjc1X09kWnI5RmJfVlZCaTJmWFl1MlNEQ3BJb2ZRQ0tuT1ltSUFpa2lwc0pVUVIxeE9VNk1lWXhfNVZLRlktRzRvVnBYUHl4WnNVS1lVQ19kVjhKbXBlV2t2ODZjU1cyVWUzUHRNQWZJaUdjbGlxRTIxcWZRQkNER0lheW9uZXhWV3M0ZDVhVjl1RFEtTEdWNXZqeTZCcG1sRGw4UUt5Q0Y?oc=5",
    "snip": "",
    "isNew": false
+  },
+  {
+   "t": "2026-11-18 21:37",
+   "d": "2026-11-18",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "TSMC Is Reportedly Setting Credit Limits for AI Customers",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYjlVak5WVjlfMV9PdG5rb1ZWZGxFcTBUY0NNTXFyYThnb013Ui1NSk9OWGlNSkNKNVc4T2RpbXl5Q2toZjBfeVVzWC11Y043SGdBeWhKZnQ5TnBoYjVoMUVNSDJLZHN3NVRwaUtWV1pVcGdpRzZrOEpaY3RNM1hkaU1ZQ2lkazBETzc3SkJkUnFTakt0T2Y3RGNpZEFIbHdLQW1B?oc=5",
+   "snip": "",
+   "isNew": true
   },
   {
    "t": "2026-11-18 21:30",
@@ -380,7 +699,7 @@ window.TRACK_NEWS = {
    "title": "Should You Buy Coinbase Stock Now Or Wait?",
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPN2l1c29JbE1lWm9rNEYzLXEtaDdXZWlYLVdScGZMZkY1MVMxbkp4X3RvSXU0VjlNaHp3WV9hV2dLRHZCUnQ0M0R4ekEwSTJpUTg0d2pnR05SdXY0UnZLSnEyS0tqMmcxdE91OGwxTVZ2TlFTdVp2T1EzeTg3YUhLWnNpREswMUNZcDB4d3J0SS1FYW5raVF3?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 21:05",
@@ -402,7 +721,7 @@ window.TRACK_NEWS = {
    "title": "ServiceNow, Inc. (NOW) Is a Trending Stock: Facts to Know Before Betting on It",
    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQNUpGMnRkUTkydEtiQW9pYW9vX2V1UmZsdDkwVjFEZGx0eUZ3cnJINWtxaVp4VHZhbG5HeHBubmlvbi1hWWQ5ZEJxOVFraHp2b0UzSnhSR05mdmhkZ2dKUDBNYVdfbmhOY1NqOGNEaVhJX0VsQXYyOEFtS2dJR0FwWm1RSk13V045T0luVm50NEQ3Y3h4VEdkZEdmSnJpT0E?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 20:26",
@@ -878,6 +1197,17 @@ window.TRACK_NEWS = {
    "isNew": false
   },
   {
+   "t": "2026-11-17 22:40",
+   "d": "2026-11-17",
+   "track": "fin",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "What Sent Coinbase Stock Down 6%?",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNQnJnVXQ0dm04RmE2cFZWUXdiZEJxOHNEUGF4Y3JzdEpWZGlSWDZSdzFISlBEM0Z2dW9veTNOXzRPUE5ULUFvV0E0ajhQN0JLUk1heW8wemg3MWVEV1NYbGJPdklzNUdXWkFQdGgtSm42QTJHMWtuMXNCWDhnZXN6VlpqRGxpX1BKNnpyQWlTUlJfbXFhWWc?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
    "t": "2026-11-17 22:38",
    "d": "2026-11-17",
    "track": "fin",
@@ -1106,7 +1436,7 @@ window.TRACK_NEWS = {
    "title": "PODCAST: Where the artificial intelligence boom goes next - Reuters",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVEZIcEhfemdqeHAyVmpEVnRwenVHTDBPRFEtNXlCWDBOZ1YxcGtwZ25USkFKSnk0bFRIZkUwQmozLVctZ2pwQmQ2OG9iNng4eUpSblJPUEtwUllCei1nTk5QZ3dDRE1xOUtvMjY2MUFEeE5rV3hzYUdrMGNQUGdVcHdMMHN0OGNySThPaWp4cmM2WURmU0FNVzBkeWZuUy1uSWVCaA?oc=5",
    "snip": "PODCAST: Where the artificial intelligence boom goes next Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-17 11:23",
@@ -2559,6 +2889,17 @@ window.TRACK_NEWS = {
    "url": "https://news.futunn.com/flash/1004496155/soros-fund-management-llc-reports-share-stake-of-11385-shares?futusource=news_stock_stockpagenews_news&ns_stock_id=203134&report_id=1004496155&report_type=stock&src=43&stock_news_tab=news",
    "snip": "",
    "isNew": false
+  },
+  {
+   "t": "2026-11-14 04:07",
+   "d": "2026-11-14",
+   "track": "fin",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Goldman Sachs (GS) Backs $270 Million Stablecoin Push With Project Faro",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQbTMzQjhlUzJlakJGa0tmTFVJNWJBSHlpbFVyOHd1ZjU0SkNwandHSTVVZ01TY3RMZjBDaFI4MHNqcFJYSndyQlVzTW04bk01VTNHMGlVTVBsSlVCSHE3U2p3TXZCMGhTTmxpYndNaTRoemcyOUhwbVVUeTB4QWV3Tk04Z3ROVm5qdm4wTTBPOFRiNjltanc?oc=5",
+   "snip": "",
+   "isNew": true
   },
   {
    "t": "2026-11-14 03:38",

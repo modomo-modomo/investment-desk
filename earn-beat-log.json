@@ -518,7 +518,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-18T23:52:25.088Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-18",
@@ -544,7 +544,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-18T23:52:25.158Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-18",
@@ -570,7 +570,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-18T23:52:25.227Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-18",
@@ -596,7 +596,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-18T23:52:25.291Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-18",
@@ -621,6 +621,32 @@
   "guide": null,
   "q": "2026Q4",
   "addedAt": "2026-11-18T23:52:25.356Z",
+  "zhDone": true,
+  "isNew": false
+ },
+ {
+  "d": "2026-11-19",
+  "sess": "pre",
+  "sym": "WSM",
+  "name": "Williams-Sonoma",
+  "size": "大市值",
+  "cut": 3,
+  "chg": null,
+  "at": null,
+  "px": null,
+  "mcap": 29450682400,
+  "capPx": 260.09,
+  "mcapAt": null,
+  "epsAct": 2.84,
+  "epsEst": 2.06,
+  "surp": 37.9,
+  "rev": 1959757000,
+  "net": 338109000,
+  "sec": "专业零售",
+  "desc": "Williams-Sonoma, Inc. 是一家全渠道专业零售商，为美国国内和国际市场提供各种产品。该公司提供烹饪、餐饮和娱乐产品，如炊具、工具、电器、餐具、桌面和酒吧、户外、家具和图书馆。",
+  "guide": null,
+  "q": "2026Q4",
+  "addedAt": "2026-11-19T13:50:33.127Z",
   "zhDone": true,
   "isNew": true
  }

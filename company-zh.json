@@ -4564,5 +4564,593 @@
   "desc": "Strategy Inc 及其子公司作为一家比特币财务公司在美国、欧洲、中东、非洲和国际上运营。它通过提供一系列证券（包括股票和固定收益）为投资者提供不同程度的比特币经济风险。",
   "en": "Strategy Inc, together with its subsidiaries, operates as a bitcoin treasury company in the United States, Europe, the Middle East, Africa, and internationally.",
   "at": "2026-11-18T23:50:44.721Z"
+ },
+ "TGT": {
+  "ind": "折扣店",
+  "desc": "塔吉特公司在美国经营百货零售商业务。它提供女士、男士、年轻人、儿童、幼儿和婴儿服装，以及珠宝、配饰和鞋子；和美容产品，例如皮肤和沐浴护理、化妆品、护发、口腔护理、除臭剂和",
+  "en": "Target Corporation operates as a general merchandise retailer in the United States. It offers apparel for women, men, young adults, kids, toddlers, and babies, ",
+  "at": "2026-11-19T13:47:44.946Z"
+ },
+ "MAGN": {
+  "ind": "家居及个人产品",
+  "desc": "Magnera Corporation 在全球生产和销售无纺布及相关产品。其产品主要销往以消费者为导向的终端市场，例如医疗保健和个人护理。该公司提供个人护理和消费者解决方案产品以及产品组件，包括医疗",
+  "en": "Magnera Corporation manufactures and sells non-woven and related products worldwide. It sells its products primarily into consumer-oriented end markets, such as",
+  "at": "2026-11-19T13:47:45.516Z"
+ },
+ "TOYO": {
+  "ind": "太阳的",
+  "desc": "东洋株式会社在亚洲和美国从事硅片和硅片的上游生产、太阳能电池的中游生产、光伏（PV）模块的下游生产以及太阳能电力供应链的其他阶段。它设计、制造和销售太阳能电池、组件、",
+  "en": "TOYO Co., Ltd. engages in the upstream production of wafer and silicon, midstream production of solar cell, downstream production of photovoltaic (PV) modules, ",
+  "at": "2026-11-19T13:47:45.894Z"
+ },
+ "METC": {
+  "ind": "焦煤",
+  "desc": "Ramaco Resources, Inc. 从事冶金煤的开发、运营和销售。该公司的开发组合包括位于西弗吉尼亚州南部、占地约 20,200 英亩的 Elk Creek 项目； Berwind 地产占地约",
+  "en": "Ramaco Resources, Inc. engages in the development, operation, and sale of metallurgical coal. The company's development portfolio includes the Elk Creek project",
+  "at": "2026-11-19T13:47:46.633Z"
+ },
+ "IE": {
+  "ind": "铜",
+  "desc": "艾芬豪电气公司在美国、加拿大和中国从事矿产勘探和开发。主要勘探铜、金、银、镍、钴、铂族元素矿床。该公司的旗舰项目是圣克鲁斯项目，一个铜矿勘探项目",
+  "en": "Ivanhoe Electric Inc. engages in exploration and development of minerals in the United States, Canada, and China. It primarily explores copper, gold, silver, ni",
+  "at": "2026-11-19T13:47:47.254Z"
+ },
+ "AHG": {
+  "ind": "医疗配送",
+  "desc": "阿克索健康集团及其子公司在中华人民共和国运营社交电子商务移动平台。其运营的小白买买App是一个社交电子商务移动平台，提供食品和饮料产品、酒类、化妆品、时尚服饰、娱乐、",
+  "en": "Akso Health Group, together with its subsidiaries, operates a social e-commerce mobile platform in the People's Republic of China. It operates Xiaobai Maimai Ap",
+  "at": "2026-11-19T13:47:48.648Z"
+ },
+ "OPAL": {
+  "ind": "工程建筑",
+  "desc": "OPAL Fuels Inc. 及其子公司从事可再生天然气 (RNG) 的生产和分销，用作全美重型和中型卡车车队的车辆燃料。它通过三个部门运营：RNG 燃料部门、加油站服务部门和可再生能源部门",
+  "en": "OPAL Fuels Inc. together with its subsidiaries, engages in the production and distribution of renewable natural gas (RNG) for use as a vehicle fuel for heavy an",
+  "at": "2026-11-19T13:47:48.921Z"
+ },
+ "SNEX": {
+  "ind": "资本市场",
+  "desc": "StoneX Group Inc. 作为一个全球金融服务网络运营，将公司、组织、交易者和投资者与美国、欧洲、南美、中东、亚洲和国际市场生态系统连接起来。该公司通过四个部门运营：商业部门、研究所部门",
+  "en": "StoneX Group Inc. operates as a global financial services network that connects companies, organizations, traders, and investors to a market ecosystem in the Un",
+  "at": "2026-11-19T13:47:50.308Z"
+ },
+ "UTI": {
+  "ind": "教育与培训服务",
+  "desc": "环球技术学院 (Universal Technical Institute, Inc.) 在美国提供交通、技术贸易和医疗保健教育项目。它分为两个部门：UTI 部门和 Concorde 部门。该公司提供证书、文凭或学位课程",
+  "en": "Universal Technical Institute, Inc. provides transportation, skilled trades, and healthcare education programs in the United States. It operates in two segments",
+  "at": "2026-11-19T13:47:51.159Z"
+ },
+ "TRON": {
+  "ind": "闲暇",
+  "desc": "Tron Inc. 设计、制造并向美国、中国、日本和欧洲的主题公园和娱乐场所销售玩具和纪念品。该公司提供一系列产品，包括玩偶、毛绒玩具、配饰、服装和家居用品。它为内容提供商和消费者提供服务。的c",
+  "en": "Tron Inc. designs, manufactures, and sells toys and souvenirs to theme parks and entertainment venues in the United States, China, Japan, and Europe. The compan",
+  "at": "2026-11-19T13:47:51.586Z"
+ },
+ "MFI": {
+  "ind": "软件 - 应用程序",
+  "desc": "mF International Limited 通过互联网或软件即服务平台在香港、中国大陆和东南亚提供金融交易解决方案。该公司提供移动财经交易平台，一种交易解决方案；客户关系管理系统（CRM），以促进",
+  "en": "mF International Limited provides financial trading solutions through the internet or software-as-a-service platforms in Hong Kong, Mainland China, and Southeas",
+  "at": "2026-11-19T13:47:52.600Z"
+ },
+ "ITRG": {
+  "ind": "金子",
+  "desc": "Integra Resources Corp. 是一家贵金属生产商，从事美国西部大盆地矿产的勘探和开发。它勘探金矿和银矿。该公司的旗舰项目包括 DeLamar 项目，其中包括 790 个非专利矿脉、",
+  "en": "Integra Resources Corp., a precious metals producer, engages in the exploration and development of mineral properties in the Great Basin of the Western United S",
+  "at": "2026-11-19T13:47:53.116Z"
+ },
+ "CRGY": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "Crescent Energy Company 在美国从事原油、天然气和液化天然气的勘探和生产。该公司的业务主要集中在伊格尔福特盆地、二叠纪盆地和尤因塔盆地。它拥有美国石油和天然气盆地的矿产和特许权权益。克里",
+  "en": "Crescent Energy Company engages in the exploration and production of crude oil, natural gas, and natural gas liquids in the United States. The company's activit",
+  "at": "2026-11-19T13:47:53.484Z"
+ },
+ "NAK": {
+  "ind": "其他工业金属和采矿",
+  "desc": "Northern Dynasty Minerals Ltd. 在美国从事矿产收购、勘探和开发业务。主要勘探铜、金、钼、银和铼矿床。公司持有Pebble铜金钼银铼项目100%权益",
+  "en": "Northern Dynasty Minerals Ltd. engages in the acquisition, exploration, and development of mineral properties in the United States. It primarily explores copper",
+  "at": "2026-11-19T13:47:53.856Z"
+ },
+ "ATER": {
+  "ind": "家具、固定装置和电器",
+  "desc": "Aterian, Inc. 及其子公司作为一家消费品公司在北美、智利、哥伦比亚、阿根廷和国际上运营。该公司在 Squa 旗下提供家用和厨房电器、厨具、空气质量电器、健康和美容产品以及精油。",
+  "en": "Aterian, Inc., together with its subsidiaries, operates as a consumer products company in North America, Chile, Colombia, Argentina, and internationally. The co",
+  "at": "2026-11-19T13:47:54.821Z"
+ },
+ "LINE": {
+  "ind": "房地产投资信托基金 - 工业",
+  "desc": "Lineage, Inc. 是全球最大的全球温控仓库 REIT，其网络由 498 个战略位置设施组成，总面积约 8700 万平方英尺，容量约 31 亿立方英尺，遍布北美、欧洲和亚太地区国家。",
+  "en": "Lineage, Inc. is the world's largest global temperature-controlled warehouse REIT with a network of 498 strategically located facilities totaling approximately ",
+  "at": "2026-11-19T13:47:55.427Z"
+ },
+ "IRLA": {
+  "ind": "生物技术",
+  "desc": "IRulya Therapeutics Inc. 是一家生物技术公司，专注于为患有衰弱和罕见疾病的患者获取、开发和商业化治疗方法。该公司的主要候选资产包括 eDSP，该药物正处于治疗罕见儿科神经退行性疾病的第三阶段",
+  "en": "IRulya Therapeutics Inc., a biotechnology company, focuses on acquiring, developing, and commercializing therapeutics for patients with debilitating and rare di",
+  "at": "2026-11-19T13:47:55.961Z"
+ },
+ "OKTA": {
+  "ind": "软件 - 基础设施",
+  "desc": "Okta, Inc. 在美国和国际上作为身份合作伙伴运营。它提供单点登录功能，可以从任何设备安全地访问云和本地应用程序；自适应 MFA，为组织的云、移动和 Web 应用程序提供基于风险的安全层； API访问",
+  "en": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applicat",
+  "at": "2026-11-19T13:47:56.341Z"
+ },
+ "ABX": {
+  "ind": "保险 - 人寿",
+  "desc": "Abacus Global Management, Inc. 在美国、卢森堡和国际上作为另类资产管理公司和做市商运营。该公司分为三个部门：资产管理部门、生活解决方案部门和技术服务部门。资产管理部门提供资产管理",
+  "en": "Abacus Global Management, Inc. operates as an alternative asset manager and market maker in the United States, Luxembourg, and internationally. The company oper",
+  "at": "2026-11-19T13:47:57.192Z"
+ },
+ "IOND": {
+  "ind": "资本市场",
+  "desc": "Ionic Digital Inc. 是一家数字基础设施解决方案和加密货币挖矿公司。它将数字基础设施资产租赁给超大规模企业、企业客户和其他企业，用于高性能计算和人工智能云基础设施。离子数字公司",
+  "en": "Ionic Digital Inc. operates as a digital infrastructure solutions and cryptocurrency mining company. It leases digital infrastructure assets to hyperscalers, en",
+  "at": "2026-11-19T13:47:58.011Z"
+ },
+ "TRIP": {
+  "ind": "旅游服务",
+  "desc": "Tripadvisor, Inc. 是一家在线旅游公司，在全球范围内提供旅游指导产品和服务。该公司通过三个部门运营：体验部门、酒店及其他部门以及 TheFork 部门。体验部门运营一家在线旅行社，提供旅游、活动和景点服务",
+  "en": "Tripadvisor, Inc., an online travel company, engages in the provision of travel guidance products and services worldwide. The company operates through three seg",
+  "at": "2026-11-19T13:47:59.189Z"
+ },
+ "BTBT": {
+  "ind": "资本市场",
+  "desc": "Bit Digital, Inc. 及其子公司从事机构级以太坊资金和质押业务。该公司设计和运营提供托管和托管服务的数据中心；以及用于人工智能训练和推理工作负载的云解决方案。也有涉及",
+  "en": "Bit Digital, Inc., together with its subsidiaries, engages in the institutional grade ethereum treasury and staking business. The company designs and operates d",
+  "at": "2026-11-19T13:47:59.913Z"
+ },
+ "PACB": {
+  "ind": "医疗器械",
+  "desc": "Pacific Biosciences of California, Inc. 设计、开发和制造测序解决方案来解决复杂的遗传问题。公司提供测序系统；消耗品，包括单分子实时（SMRT）技术；长读长测序；以及各种试剂盒",
+  "en": "Pacific Biosciences of California, Inc. designs, develops, and manufactures sequencing solutions to resolve genetically complex problems. The company provides s",
+  "at": "2026-11-19T13:48:00.675Z"
+ },
+ "GPRO": {
+  "ind": "消费电子产品",
+  "desc": "GoPro, Inc. 在美洲、欧洲、中东、非洲和亚太地区提供相机、可安装和可穿戴配件以及订阅和服务。它提供 HERO13 Black、HERO12 Black、LIT HERO、HERO、MAX2 和 MAX 名称的摄",
+  "en": "GoPro, Inc. provides cameras, mountable and wearable accessories, and subscription and services in the Americas, Europe, the Middle East, Africa, and the Asia P",
+  "at": "2026-11-19T13:48:01.445Z"
+ },
+ "CNQ": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "加拿大自然资源有限公司在加拿大西部、英国北海地区和非洲近海从事原油、天然气和液化天然气 (NGL) 的收购、勘探、开发、生产、营销和销售。该公司提供合成原油",
+  "en": "Canadian Natural Resources Limited engages in the acquisition, exploration, development, production, marketing, and sale of crude oil, natural gas, and natural ",
+  "at": "2026-11-19T13:48:01.852Z"
+ },
+ "SANA": {
+  "ind": "生物技术",
+  "desc": "Sana Biotechnology, Inc. 是一家生物技术公司，在美国专注于利用工程细胞作为药物。它为治疗需求未得到满足的各种治疗领域开发离体和体内细胞工程平台，包括1型糖尿病、B细胞介导的自身免疫性疾病",
+  "en": "Sana Biotechnology, Inc., a biotechnology company, focuses on utilizing engineered cells as medicines in the United States. It develops ex vivo and in vivo cell",
+  "at": "2026-11-19T13:48:02.284Z"
+ },
+ "CRDL": {
+  "ind": "药品制造商 - 特种药品和非专利药品",
+  "desc": "Cardiol Therapeutics Inc. 是一家临床阶段的生命科学公司，专注于开发用于治疗心脏病的抗纤维化和抗炎疗法。其主要候选产品是 CardiolRx，该产品正处于多国、随机、双盲和安慰剂试验的 III 期",
+  "en": "Cardiol Therapeutics Inc., a clinical-stage life sciences company, focuses on the development of anti-fibrotic and anti-inflammatory therapies for the treatment",
+  "at": "2026-11-19T13:48:03.175Z"
+ },
+ "ASAN": {
+  "ind": "软件 - 应用程序",
+  "desc": "Asana, Inc. 及其子公司为美国和国际上的个人、团队领导和高管运营一个工作管理软件平台。公司提供工作管理产品； Asana Work Graph，一种专有的映射数据模型； AI 队友，协作",
+  "en": "Asana, Inc., together with its subsidiaries, operates a work management software platform for individuals, team leads, and executives in the United States and i",
+  "at": "2026-11-19T13:48:04.115Z"
+ },
+ "OSPN": {
+  "ind": "软件 - 基础设施",
+  "desc": "OneSpan Inc. 及其子公司为美洲、欧洲、中东、非洲和亚太地区提供安全、身份验证、身份、电子签名和数字工作流程产品的数字解决方案。它通过网络安全和数字协议运作",
+  "en": "OneSpan Inc., together with its subsidiaries, provides digital solutions for security, authentication, identity, electronic signature, and digital workflow prod",
+  "at": "2026-11-19T13:48:04.657Z"
+ },
+ "CPA": {
+  "ind": "航空公司",
+  "desc": "Copa Holdings, S.A. 通过其子公司在北美、南美、中美洲和加勒比地区提供航空客运、货物和邮件运输服务。截至 2025 年 12 月 31 日，其机队拥有 125 架飞机。公司始建于1947年，是一家以",
+  "en": "Copa Holdings, S.A., through its subsidiaries, provides airline passenger, and cargo and mail transportation services in North America, South America, Central A",
+  "at": "2026-11-19T13:48:05.012Z"
+ },
+ "NAGE": {
+  "ind": "包装食品",
+  "desc": "Niagen Bioscience, Inc. 是一家生物科学公司，致力于开发健康老龄化产品。该公司通过消费产品运营；原料;和制药领域。它提供含有其专有成分的成品膳食补充剂产品，直接供消费者使用",
+  "en": "Niagen Bioscience, Inc. operates as a bioscience company engages in developing healthy aging products. The company operates through Consumer products; Ingredien",
+  "at": "2026-11-19T13:48:05.581Z"
+ },
+ "TPB": {
+  "ind": "烟草",
+  "desc": "Turning Point Brands, Inc. 及其子公司在美国和加拿大制造、营销和分销品牌消费品。该公司通过两个部门运营：Zig-Zag Products 和 Stoker's Products。其 Zig-Za",
+  "en": "Turning Point Brands, Inc., together with its subsidiaries, manufactures, markets, and distributes branded consumer products in the United States and Canada. Th",
+  "at": "2026-11-19T13:48:06.056Z"
+ },
+ "MKL": {
+  "ind": "保险 - 财产与意外伤害",
+  "desc": "Markel Group Inc. 在美国、英国、百慕大、德国、欧盟其他国家、加拿大和亚太地区从事保险业务。它通过马克尔保险、工业、金融、消费者和其他部门进行运营。该公司提供一般和专业",
+  "en": "Markel Group Inc. engages in the insurance business in the United States, the United Kingdom, Bermuda, Germany, rest of the European Union, Canada, and the Asia",
+  "at": "2026-11-19T13:48:06.915Z"
+ },
+ "USBC": {
+  "ind": "科学技术仪器",
+  "desc": "USBC, Inc. 及其子公司在美国从事数字金融技术业务。该公司开发变革性金融服务，包括数字资产、银行解决方案和非侵入性健康监测研究。它服务于零售用户、金融科技合作伙伴",
+  "en": "USBC, Inc., together with its subsidiaries, operates in digital financial technologies business in United States. The company develops transformative financial ",
+  "at": "2026-11-19T13:48:07.882Z"
+ },
+ "NET": {
+  "ind": "软件 - 基础设施",
+  "desc": "Cloudflare, Inc. 作为云服务提供商运营，为全球企业提供一系列服务。该公司提供基于云的安全解决方案，以保护一系列平台组合的安全，包括公共云和私有云、本地、软件即服务应用程序、",
+  "en": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security so",
+  "at": "2026-11-19T13:48:08.661Z"
+ },
+ "AMD": {
+  "ind": "半导体",
+  "desc": "Advanced Micro Devices, Inc. 作为一家国际半导体公司运营。它分为三个部分：数据中心、客户端和游戏以及嵌入式。该公司提供人工智能 (AI) 加速器、微处理器和图形处理单元 (GPU) 作为独立设",
+  "en": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. T",
+  "at": "2026-11-19T13:48:09.432Z"
+ },
+ "GLW": {
+  "ind": "电子元件",
+  "desc": "康宁公司在美国、加拿大、墨西哥、日本、台湾、中国、韩国、德国和国际上经营光通信、显示器、特种材料、汽车和生命科学业务。公司提供光纤、光缆；及硬件设备",
+  "en": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Me",
+  "at": "2026-11-19T13:48:10.695Z"
+ },
+ "LRCX": {
+  "ind": "半导体设备",
+  "desc": "Lam Research Corporation 设计、制造、销售、翻新和服务用于美国、中国、韩国、台湾、日本、东南亚和欧洲集成电路制造的半导体加工设备。该公司提供 ALTUS 系统来沉积保形或",
+  "en": "Lam Research Corporation designs, manufactures, markets, refurbishes, and services semiconductor processing equipment used in the fabrication of integrated circ",
+  "at": "2026-11-19T13:48:11.186Z"
+ },
+ "UEC": {
+  "ind": "铀",
+  "desc": "Uranium Energy Corp. 及其子公司在美国、加拿大和巴拉圭共和国从事铀和钛精矿的勘探、预提取、提取和加工业务。其主要项目位于怀俄明州和德克萨斯州的Unit",
+  "en": "Uranium Energy Corp., together with its subsidiaries, engages in the exploration, pre-extraction, extraction, and processing of uranium and titanium concentrate",
+  "at": "2026-11-19T13:48:11.713Z"
+ },
+ "HUMA": {
+  "ind": "生物技术",
+  "desc": "Humacyte, Inc. 及其子公司致力于开发和制造现成的、可植入的、生物工程人体组织，用于治疗多个治疗领域的一系列解剖部位的疾病和病症。该公司利用其专有的",
+  "en": "Humacyte, Inc., together with its subsidiaries, engages in the development and manufacture of off-the-shelf, implantable, and bioengineered human tissues for th",
+  "at": "2026-11-19T13:48:12.200Z"
+ },
+ "LPG": {
+  "ind": "石油和天然气中游",
+  "desc": "Dorian LPG Ltd. 及其子公司通过其液化石油气油轮在全球范围内从事液化石油气运输。它拥有并经营二十八艘超大型天然气运输船。 Dorian LPG Ltd. 成立于 2013 年，总部位于康涅狄格州斯坦福德。",
+  "en": "Dorian LPG Ltd., together with its subsidiaries, engages in the transportation of liquefied petroleum gas through its LPG tankers worldwide. It owns and operate",
+  "at": "2026-11-19T13:48:12.506Z"
+ },
+ "HNST": {
+  "ind": "家居及个人产品",
+  "desc": "The Honest Company, Inc. 是一家个人护理公司，为婴儿和成人提供个人护理产品。它提供湿巾、个人护理、尿布和美容产品。此外，它还通过零售商和网站以及第三方电子商务网站销售其产品。 The Honest",
+  "en": "The Honest Company, Inc. a personal care company, provides personal care products for babies and adults. It offers wipes, personal care, diapers, and beauty pro",
+  "at": "2026-11-19T13:48:12.834Z"
+ },
+ "EU": {
+  "ind": "铀",
+  "desc": "enCore Energy Corp. 及其子公司在美国从事铀资源资产的收购、勘探、开发和开采。该公司总部位于德克萨斯州达拉斯。",
+  "en": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the ",
+  "at": "2026-11-19T13:48:13.389Z"
+ },
+ "AII": {
+  "ind": "保险 - 财产与意外伤害",
+  "desc": "American Integrity Insurance Group, Inc. 及其子公司在美国作为一家保险公司运营。该公司为单户房主和公寓业主提供个人住宅财产保险，并为空置住宅和投资专业人士提供保险。",
+  "en": "American Integrity Insurance Group, Inc., together with its subsidiaries, operates as an insurance company in the United States. The company offers personal res",
+  "at": "2026-11-19T13:48:13.887Z"
+ },
+ "MPWR": {
+  "ind": "半导体",
+  "desc": "Monolithic Power Systems, Inc. 在中国、台湾、韩国、东南亚、欧洲、美国、日本和国际上提供基于半导体的电力电子解决方案。该公司提供直流 (DC) 至 DC 解决方案，用于转换和控制一系列电力范",
+  "en": "Monolithic Power Systems, Inc. provides semiconductor-based power electronics solutions in China, Taiwan, South Korea, Southeast Asia, Europe, the United States",
+  "at": "2026-11-19T13:48:14.335Z"
+ },
+ "ON": {
+  "ind": "半导体",
+  "desc": "安森美半导体公司在香港、新加坡、英国、美国和国际上提供智能传感和电源解决方案。它通过三个部门运营：电源解决方案部门、模拟和混合信号部门以及智能传感部门。电源解决方案",
+  "en": "ON Semiconductor Corporation provides intelligent sensing and power solutions in Hong Kong, Singapore, the United Kingdom, the United States, and internationall",
+  "at": "2026-11-19T13:48:15.165Z"
+ },
+ "LUNR": {
+  "ind": "航空航天与国防",
+  "desc": "Intuitive Machines, Inc. 在美国作为一家空间基础设施和服务公司运营。该公司提供有效载荷（如卫星、科学仪器和货物）到太空各个目的地的运输和交付、拼车交付、",
+  "en": "Intuitive Machines, Inc. operates as a space infrastructure and services company in the United States. The company provides delivery services for the transporta",
+  "at": "2026-11-19T13:48:15.645Z"
+ },
+ "WSO": {
+  "ind": "产业分布",
+  "desc": "Watsco, Inc. 及其子公司在美国、加拿大、拉丁美洲和加勒比地区从事空调、供暖和制冷设备以及相关零部件和用品的分销业务。它分配设备，包括住宅管道式和无管道式空气",
+  "en": "Watsco, Inc., together with its subsidiaries, engages in the distribution of air conditioning, heating, and refrigeration equipment, and related parts and suppl",
+  "at": "2026-11-19T13:48:16.306Z"
+ },
+ "FROG": {
+  "ind": "软件 - 应用程序",
+  "desc": "JFrog Ltd. 在美国、以色列、印度和国际上提供软件供应链平台。该公司提供 JFrog Artifactory，这是一个软件包存储库，允许团队和组织存储、更新和管理软件包； JFrog Curation 充当外部监",
+  "en": "JFrog Ltd. provides software supply chain platform in the United States, Israel, India, and internationally. The company offers JFrog Artifactory, a package rep",
+  "at": "2026-11-19T13:48:16.675Z"
+ },
+ "JOBY": {
+  "ind": "机场和航空服务",
+  "desc": "Joby Aviation, Inc. 是一家空中机动公司，在美国、日本、欧洲和国际上从事电动垂直起降飞机的研究、开发、测试、制造和销售。该公司通过直升机或固定翼飞机提供旅客运输便利",
+  "en": "Joby Aviation, Inc., an air mobility company, engages in research, develop, test, manufacture, and sale of electric vertical takeoff and landing aircraft in the",
+  "at": "2026-11-19T13:48:17.559Z"
+ },
+ "ONDS": {
+  "ind": "通讯设备",
+  "desc": "Ondas Inc. 在美国和国际上提供私人无线、无人机和自动化数据解决方案。它通过 Ondas Networks 和 Ondas Autonomous Systems 部门运营。该公司提供反无人机系统 (CUAS) 和",
+  "en": "Ondas Inc. provides private wireless, drone, and automated data solutions in the United States and internationally. It operates through the Ondas Networks and O",
+  "at": "2026-11-19T13:48:17.826Z"
+ },
+ "KDK": {
+  "ind": "软件 - 基础设施",
+  "desc": "Kodiak AI, Inc.从事自动驾驶汽车技术及相关服务的开发。它提供 Kodiak Driver，这是一种虚拟驱动程序，它将先进的人工智能驱动软件与模块化且与车辆无关的硬件相结合，旨在帮助满足客户需求。公司还提供监",
+  "en": "Kodiak AI, Inc. engages in the development of autonomous vehicle technology and related services. It offers Kodiak Driver, a virtual driver that combines advanc",
+  "at": "2026-11-19T13:48:18.367Z"
+ },
+ "PRAA": {
+  "ind": "信用服务",
+  "desc": "PRA Group, Inc. 是一家金融服务公司，在美国、欧洲、英国、南美、加拿大和澳大利亚从事不良贷款组合的购买、催收和管理业务。该公司从选择不追求的信贷发起人那里购买贷款",
+  "en": "PRA Group, Inc., a financial services company, engages in the purchase, collection, and management of nonperforming loan portfolios in the United States, Europe",
+  "at": "2026-11-19T13:48:19.819Z"
+ },
+ "SBET": {
+  "ind": "资本市场",
+  "desc": "Sharplink, Inc. 在美国和国际上从事数字资产资金业务。该公司作为机构级以太坊金库平台运营。它分为两个部分：以太坊（ETH）资金管理和联盟营销。 ETH 资金管理部门",
+  "en": "Sharplink, Inc. engages in the digital asset treasury business in the United States and internationally. The company operates as an institutional-grade Ethereum",
+  "at": "2026-11-19T13:48:20.204Z"
+ },
+ "VECO": {
+  "ind": "半导体设备",
+  "desc": "Veeco Instruments Inc., together with its subsidiaries, develops, manufactures, sells, and supports semiconduc",
+  "en": "Veeco Instruments Inc., together with its subsidiaries, develops, manufactures, sells, and supports semiconductor and thin film process equipment primarily to m",
+  "at": "2026-11-19T13:48:21.854Z"
+ },
+ "QS": {
+  "ind": "汽车配件",
+  "desc": "QuantumScape Corporation 及其子公司在美国开发用于电动汽车和其他应用的固态锂金属电池技术。该公司成立于2010年，总部位于加利福尼亚州圣何塞。",
+  "en": "QuantumScape Corporation, together with its subsidiaries, develops solid-state lithium-metal battery technology for electric vehicles and other applications in ",
+  "at": "2026-11-19T13:48:22.547Z"
+ },
+ "TMS": {
+  "ind": "金融集团",
+  "desc": "Teamshares Inc. 没有重大业务。它打算与一个或多个企业进行合并、联合、股份交换、资产收购、股份购买、重组或类似的业务合并。该公司成立于2019年，总部位于纽约州纽约市。",
+  "en": "Teamshares Inc. does not have significant operations. It intend to effect a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganizat",
+  "at": "2026-11-19T13:48:23.169Z"
+ },
+ "AEIS": {
+  "ind": "电气设备及零件",
+  "desc": "Advanced Energy Industries, Inc. 在美国、亚洲、欧洲和国际上提供精密功率转换、测量和控制解决方案。该公司的等离子体电源产品提供的解决方案可实现半导体和薄膜等离子体工艺（例如干法等）的创新",
+  "en": "Advanced Energy Industries, Inc. provides precision power conversion, measurement, and control solutions in the United States, Asia, Europe, and internationally",
+  "at": "2026-11-19T13:48:23.887Z"
+ },
+ "BBAI": {
+  "ind": "信息技术服务",
+  "desc": "BigBear.ai Holdings, Inc. 为国家安全、供应链管理和数字身份市场提供人工智能驱动的决策智能解决方案。它提供供应链和物流解决方案，例如大规模数据合并，它提供了运营支持的视图",
+  "en": "BigBear.ai Holdings, Inc. provides artificial intelligence-powered decision intelligence solutions for national security, supply chain management, and digital i",
+  "at": "2026-11-19T13:48:24.784Z"
+ },
+ "BMNR": {
+  "ind": "资本市场",
+  "desc": "Bitmine Immersion Technologies, Inc. 是一家在美国运营的数字资产技术公司。该公司专注于收购、持有和管理数字资产，以及提供关键的区块链基础设施服务；以及以太坊和比特币挖矿和托管活动。我",
+  "en": "Bitmine Immersion Technologies, Inc. operates as a digital asset technology company in the United States. The company focuses on acquiring, holding and managing",
+  "at": "2026-11-19T13:48:25.198Z"
+ },
+ "AUNA": {
+  "ind": "医疗设施",
+  "desc": "Auna S.A. 是一家医疗服务提供商，在墨西哥、秘鲁和哥伦比亚经营医院和诊所。该公司提供预付费医疗保健；牙科和视力保险；和肿瘤学计划。它还出售药品。 Auna S.A. 成立于 1989 年，总部位于卢森堡卢森堡。",
+  "en": "Auna S.A., a healthcare service provider, operates hospitals and clinics in Mexico, Peru, and Colombia. The company provides prepaid healthcare; dental and visi",
+  "at": "2026-11-19T13:48:25.632Z"
+ },
+ "CRCL": {
+  "ind": "资本市场",
+  "desc": "Circle Internet Group, Inc. 是稳定币和区块链应用程序的平台、网络和市场基础设施。该公司提供各种平台，包括 Arc 区块链和开发者基础设施，这是一个开放的第一层区块链网络，专门为带来现实世界经济",
+  "en": "Circle Internet Group, Inc. operates as a platform, network, and market infrastructure for stablecoin and blockchain applications. The company provides various ",
+  "at": "2026-11-19T13:48:26.093Z"
+ },
+ "OKLO": {
+  "ind": "公用事业 - 独立电力生产商",
+  "desc": "Oklo Inc. 开发裂变发电厂，为美国客户大规模提供能源。该公司提供 Aurora Powerhouse，设计发电量为 15 至 75 兆瓦。它还正在将核燃料回收和燃料制造技术商业化",
+  "en": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to",
+  "at": "2026-11-19T13:48:26.629Z"
+ },
+ "ARRY": {
+  "ind": "太阳的",
+  "desc": "Array Technologies, Inc. 在美国、西班牙、巴西、澳大利亚和国际上从事太阳能跟踪技术产品的制造和销售。它通过两个部分进行运营：Array Legacy Operations 和 STI Operat",
+  "en": "Array Technologies, Inc. engages in the manufacture and sale of solar tracking technology products in the United States, Spain, Brazil, Australia, and internati",
+  "at": "2026-11-19T13:48:27.196Z"
+ },
+ "LEU": {
+  "ind": "铀",
+  "desc": "Centrus Energy Corp. 为美国、日本、荷兰和国际上的核电工业供应核燃料组件。该公司通过两个部门运营：低浓铀部门 (LEU) 和技术解决方案部门。 LEU 部门销售独立工作单元 (SWU) com",
+  "en": "Centrus Energy Corp. supplies nuclear fuel components for the nuclear power industry in the United States, Japan, the Netherlands, and internationally. The comp",
+  "at": "2026-11-19T13:48:27.701Z"
+ },
+ "SLDP": {
+  "ind": "汽车配件",
+  "desc": "Solid Power, Inc. 是一家研发阶段公司，为美国电动汽车市场开发固态电池技术。它从事硫化物基固体电解质的开发。该公司成立于 2011 年，总部位于科罗拉多州路易斯维尔",
+  "en": "Solid Power, Inc., a research and development-stage company, develops solid-state battery technologies for the electric vehicles markets in the United States. I",
+  "at": "2026-11-19T13:48:28.097Z"
+ },
+ "VSAT": {
+  "ind": "通讯设备",
+  "desc": "Viasat, Inc. 在美国和国际范围内提供宽带和通信产品及服务。它分为通信服务部门和通信服务部门。以及国防和先进技术。它提供基于卫星的宽带和窄带通信解决方案；乙",
+  "en": "Viasat, Inc. engages in the provision of broadband and communications products and services in the United States and internationally. It operates in segments, C",
+  "at": "2026-11-19T13:48:28.458Z"
+ },
+ "FUFU": {
+  "ind": "资本市场",
+  "desc": "BitFuFu Inc. 及其子公司在北美、亚洲、非洲、大洋洲、欧洲和国际上提供数字资产挖矿解决方案。该公司为机构客户和个人数字资产爱好者提供云挖矿和矿机托管服务。它还提供",
+  "en": "BitFuFu Inc., together with its subsidiaries, provides digital asset mining solutions in North America, Asia, Africa, Oceania, Europe, and internationally. The ",
+  "at": "2026-11-19T13:48:29.805Z"
+ },
+ "UMC": {
+  "ind": "半导体",
+  "desc": "联华电子公司在台湾、中国大陆、香港、日本、韩国、美国、欧洲和国际上经营半导体晶圆代工厂业务。它生产和销售集成电路。公司提供电路设计；掩模工具；晶圆制造；和组装和",
+  "en": "United Microelectronics Corporation operates as a semiconductor wafer foundry in Taiwan, China, Hong Kong, Japan, Korea, the United States, Europe, and internat",
+  "at": "2026-11-19T13:48:30.314Z"
+ },
+ "AIOT": {
+  "ind": "软件 - 应用程序",
+  "desc": "PowerFleet, Inc. 提供人工智能物联网 (AIoT) 解决方案，用于管理北美、以色列、非洲、欧洲、中东、澳大利亚和国际上的高价值企业和中端市场资产。它提供统一解决方案组合，其中包括统一平台，使",
+  "en": "PowerFleet, Inc. provides artificial intelligence-of-things (AIoT) solutions for managing high-value enterprise and mid-market assets in North America, Israel, ",
+  "at": "2026-11-19T13:48:31.091Z"
+ },
+ "IVA": {
+  "ind": "生物技术",
+  "desc": "Inventiva S.A.是一家临床阶段的生物制药公司，专注于开发口服小分子疗法，用于治疗法国和国际上代谢功能障碍相关的脂肪性肝炎（MASH）和其他疾病。它开发了 Lanifibranor，一种新型过氧化物酶体增殖剂",
+  "en": "Inventiva S.A., a clinical-stage biopharmaceutical company, focuses on the development of oral small molecule therapies for the treatment of metabolic dysfuncti",
+  "at": "2026-11-19T13:48:31.820Z"
+ },
+ "PSIX": {
+  "ind": "特种工业机械",
+  "desc": "Power Solutions International, Inc. 在美国、北美其他地区、环太平洋地区、欧洲和国际范围内设计、工程、制造、营销和销售发动机和动力系统。该公司提供与燃油系统部件集成的基本发动机缸体，以及",
+  "en": "Power Solutions International, Inc. designs, engineers, manufactures, markets, and sells engines and power systems in the United States, the rest of North Ameri",
+  "at": "2026-11-19T13:48:32.331Z"
+ },
+ "LDI": {
+  "ind": "抵押贷款金融",
+  "desc": "LoanDepot, Inc. 在美国从事住宅抵押贷款的发放、融资、销售和服务。该公司提供符合机构规定的传统优质巨额贷款、联邦援助住宅抵押贷款、房屋净值信贷额度和封闭式第二留置权。它还",
+  "en": "loanDepot, Inc. engages in originating, financing, selling, and servicing residential mortgage loans in the United States. The company offers conventional agenc",
+  "at": "2026-11-19T13:48:33.234Z"
+ },
+ "IPGP": {
+  "ind": "半导体设备",
+  "desc": "IPG Photonics Corporation 开发、制造和销售光纤激光器、光纤放大器、二极管激光器以及用于材料加工、医疗和先进应用的激光系统。该公司提供激光产品，包括绿光和紫外混合光纤固态激光器",
+  "en": "IPG Photonics Corporation develops, manufactures, and sells fiber lasers, fiber amplifiers, diode lasers, and laser-based systems used in materials processing, ",
+  "at": "2026-11-19T13:48:33.656Z"
+ },
+ "IMC": {
+  "ind": "其他工业金属和采矿",
+  "desc": "IMC Rare Earths Ltd 在巴西从事矿产勘探和开发。它主要勘探稀土元素的离子吸附粘土矿床。该公司的旗舰项目是 Itarantim 项目，拥有 27 个采矿勘探许可证，覆盖约 100 公顷土地。",
+  "en": "IMC Rare Earths Ltd engages in exploration and development of mineral properties in Brazil. It primarily explores ionic adsorption clay deposits of rare earth e",
+  "at": "2026-11-19T13:48:34.049Z"
+ },
+ "HLF": {
+  "ind": "包装食品",
+  "desc": "康宝莱有限公司及其子公司在北美、墨西哥、南美洲和中美洲、欧洲、中东、非洲、中国和亚太地区提供健康和保健产品。它提供体重管理产品，包括代餐、蛋白质奶昔、混合饮料、体重管理",
+  "en": "Herbalife Ltd., together with its subsidiaries, provides health and wellness products in North America, Mexico, South and Central America, Europe, the Middle Ea",
+  "at": "2026-11-19T13:48:34.550Z"
+ },
+ "CCJ": {
+  "ind": "铀",
+  "desc": "Cameco Corporation 为美洲、欧洲和亚洲的发电提供铀。它分为三个部门：铀部门、燃料服务部门和西屋公司。铀部门从事铀精矿的勘探、开采、研磨、购买和销售。其燃料S",
+  "en": "Cameco Corporation provides uranium for the generation of electricity in the Americas, Europe, and Asia. It operates in three segments: Uranium, Fuel Services, ",
+  "at": "2026-11-19T13:48:34.857Z"
+ },
+ "CD": {
+  "ind": "资本市场",
+  "desc": "畅思数字控股有限公司在北美、大中华区、东南亚、香港、新加坡、马来西亚和美国提供金融和咨询服务。公司提供企业重组、资本市场等行业咨询和咨询服务",
+  "en": "Chaince Digital Holdings Inc. engages in providing financial and advisory services in the North America, Greater China, Southeast Asia, Hong Kong, Singapore, Ma",
+  "at": "2026-11-19T13:48:35.325Z"
+ },
+ "WMT": {
+  "ind": "折扣店",
+  "desc": "沃尔玛公司在全球范围内从事零售和批发商店及俱乐部、电子商务网站和移动应用程序的运营。该公司通过三个部门运营：沃尔玛美国分部、沃尔玛国际分部和山姆会员店美国分部。",
+  "en": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates thro",
+  "at": "2026-11-19T13:48:35.878Z"
+ },
+ "BABA": {
+  "ind": "网络零售",
+  "desc": "阿里巴巴集团控股有限公司通过其子公司提供技术基础设施和营销覆盖范围，以帮助中华人民共和国和国际上的商家、品牌、零售商和其他企业。它通过阿里巴巴中国电子商务集团、阿里巴巴国际集团运营",
+  "en": "Alibaba Group Holding Limited, through its subsidiaries, provides technology infrastructure and marketing reach to help merchants, brands, retailers, and other ",
+  "at": "2026-11-19T13:48:36.639Z"
+ },
+ "PDD": {
+  "ind": "网络零售",
+  "desc": "PDD Holdings Inc.是一家拥有并经营一系列业务的跨国商业集团。公司运营拼多多平台，提供丰富的产品品类和互动购物体验； Temu，一个在线平台，使商家能够简化他们的制造",
+  "en": "PDD Holdings Inc., a multinational commerce group that owns and operates a portfolio of businesses. The company operates Pinduoduo platform, which provides vari",
+  "at": "2026-11-19T13:48:37.076Z"
+ },
+ "NTES": {
+  "ind": "电子游戏和多媒体",
+  "desc": "网易公司在中国和国际上从事网络游戏、音乐流媒体、在线智能学习服务和互联网内容服务业务。该公司通过游戏和相关增值服务进行运营；有道；网易云音乐；和创新业务及其他",
+  "en": "NetEase, Inc. engages in online games, music streaming, online intelligent learning services, and internet content services businesses in China and internationa",
+  "at": "2026-11-19T13:48:37.932Z"
+ },
+ "WSM": {
+  "ind": "专业零售",
+  "desc": "Williams-Sonoma, Inc. 是一家全渠道专业零售商，为美国国内和国际市场提供各种产品。该公司提供烹饪、餐饮和娱乐产品，如炊具、工具、电器、餐具、桌面和酒吧、户外、家具和图书馆。",
+  "en": "Williams-Sonoma, Inc. operates as an omni-channel specialty retailer of various products for home the United States and internationally. The company provides co",
+  "at": "2026-11-19T13:48:38.460Z"
+ },
+ "WMG": {
+  "ind": "娱乐",
+  "desc": "华纳音乐集团公司是一家音乐娱乐公司，在美国、英国、德国和国际上运营。它通过录制音乐和音乐出版部门运营。该公司致力于唱片艺术家以及相关领域的发现和发展。",
+  "en": "Warner Music Group Corp. operates as a music entertainment company in the United States, the United Kingdom, Germany, and internationally. It operates through R",
+  "at": "2026-11-19T13:48:38.808Z"
+ },
+ "FUTU": {
+  "ind": "资本市场",
+  "desc": "富途控股有限公司在香港及国际上提供数字化证券经纪及理财产品分销服务。它提供在线金融服务，包括证券和衍生品交易经纪、保证金融资和基金分销服务。",
+  "en": "Futu Holdings Limited engages in the provision of digitalized securities brokerage and wealth management product distribution service in Hong Kong and internati",
+  "at": "2026-11-19T13:48:39.400Z"
+ },
+ "YMM": {
+  "ind": "软件 - 应用程序",
+  "desc": "满卡车联盟有限公司及其子公司运营一个数字货运平台，将托运人与卡车司机联系起来，以方便在中华人民共和国和香港的不同距离范围、货物重量和类型的运输。本公司提供货运配对服务",
+  "en": "Full Truck Alliance Co. Ltd., together with its subsidiaries, operates a digital freight platform that connects shippers with truckers to facilitate shipments a",
+  "at": "2026-11-19T13:48:40.913Z"
+ },
+ "ROAD": {
+  "ind": "工程建筑",
+  "desc": "Construction Partners, Inc. 是一家民用基础设施公司，在阿拉巴马州、佛罗里达州、佐治亚州、北卡罗来纳州、俄克拉荷马州、南卡罗来纳州、田纳西州和德克萨斯州建造和维护道路。该公司为公共和私人基础设施",
+  "en": "Construction Partners, Inc., a civil infrastructure company, constructs and maintains roadways in Alabama, Florida, Georgia, North Carolina, Oklahoma, South Car",
+  "at": "2026-11-19T13:48:41.574Z"
+ },
+ "VVV": {
+  "ind": "汽车和卡车经销商",
+  "desc": "Valvoline Inc. 通过其位于美国和加拿大的零售店提供汽车预防性维护。公司提供换油服务；电池、灯泡和雨刮器更换；轮胎换位；及其他维修服务。它还经营和特许经营服务中心和零售店",
+  "en": "Valvoline Inc. provides automotive preventive maintenance through its retail stores in the United States and Canada. The company offers oil changes; battery, bu",
+  "at": "2026-11-19T13:48:42.425Z"
+ },
+ "MANU": {
+  "ind": "娱乐",
+  "desc": "曼彻斯特联队及其子公司在英国运营着一支职业运动队。该公司与国际和地区公司建立营销和赞助关系，以实现其品牌的商业化。它还营销和销售运动服装、训练服",
+  "en": "Manchester United plc, together with its subsidiaries, operates a professional sports team in the United Kingdom. The company is involved in marketing and spons",
+  "at": "2026-11-19T13:48:42.760Z"
+ },
+ "BBWI": {
+  "ind": "专业零售",
+  "desc": "Bath & Body Works, Inc. 是一家个人护理和家居香氛产品的专业零售商。该公司提供身体和家用香水，包括 3 芯蜡烛、家用香薰机、香氛喷雾、淡香精、沐浴露、洗手液、润肤露和润肤霜，以及",
+  "en": "Bath & Body Works, Inc. operates as a specialty retailer of personal care and home fragrance products. The company offers body and home fragrances, including 3-",
+  "at": "2026-11-19T13:48:43.466Z"
+ },
+ "MMS": {
+  "ind": "专业商业服务",
+  "desc": "Maximus, Inc. 是一家在全球范围内提供政府服务的提供商。该公司通过三个部门运营：美国联邦服务部门、美国服务部门和美国境外部门。美国联邦服务部门提供业务流程服务、资格和注册、外展和其他服务",
+  "en": "Maximus, Inc. operates as a provider of government services worldwide. The company operates through three segments: U.S. Federal Services, U.S. Services, and Ou",
+  "at": "2026-11-19T13:48:43.983Z"
+ },
+ "DAO": {
+  "ind": "教育与培训服务",
+  "desc": "有道有限公司是一家互联网技术公司，在中华人民共和国提供内容、社区、通信和商业领域的在线服务。它通过三个部门运营：学习服务、智能设备和在线营销服务。学习服务部门",
+  "en": "Youdao, Inc., an internet technology company, provides online services in the fields of content, community, communication, and commerce in the People's Republic",
+  "at": "2026-11-19T13:48:46.728Z"
+ },
+ "LQDT": {
+  "ind": "网络零售",
+  "desc": "Liquidity Services, Inc. 在美国和国际上从事提供电子商务市场、自主拍卖列表工具和增值服务。该公司通过四个部门运营：GovDeals、零售供应链集团 (RSCG)、资本资产集团 (CAG)、",
+  "en": "Liquidity Services, Inc. engages in the provision of e-commerce marketplaces, self-directed auction listing tools, and value-added services in the United States",
+  "at": "2026-11-19T13:48:47.392Z"
+ },
+ "TEN": {
+  "ind": "石油和天然气中游",
+  "desc": "Tsakos Energy Navigation Limited 及其子公司在希腊和国际上提供海运原油和石油产品运输服务。该公司拥有并经营各种船舶，包括 VLCC、苏伊士型油轮、阿芙拉型油轮、巴拿马型油轮、灵便型油轮、M",
+  "en": "Tsakos Energy Navigation Limited, together with its subsidiaries, provides seaborne crude oil and petroleum product transportation services in Greece and intern",
+  "at": "2026-11-19T13:48:48.006Z"
+ },
+ "RERE": {
+  "ind": "网络零售",
+  "desc": "ATRenew Inc. 及其子公司通过其在线平台和其他渠道在中华人民共和国销售二手消费电子产品。它为第三方商家提供通过其平台销售产品的服务。 ATRenew Inc.前身为爱回收",
+  "en": "ATRenew Inc., together with its subsidiaries, sell pre-owned consumer electronics through its online platforms and other channels in the People's Republic of Ch",
+  "at": "2026-11-19T13:48:48.569Z"
+ },
+ "ARBE": {
+  "ind": "科学技术仪器",
+  "desc": "Arbe Robotics Ltd. 是一家半导体公司，为瑞典、美国、中国、香港和德国的零部件或系统、自动地面车辆以及商用和工业车辆供应商提供 4D 成像雷达解决方案。它提供雷达芯片组，包括发射器 (Tx)、雷达",
+  "en": "Arbe Robotics Ltd., a semiconductor company, provides 4D imaging radar solutions to suppliers of parts or systems, autonomous ground vehicles, and commercial an",
+  "at": "2026-11-19T13:48:49.184Z"
+ },
+ "EVAX": {
+  "ind": "生物技术",
+  "desc": "Evaxion A/S 是一家临床阶段生物技术公司，开发人工智能驱动的免疫疫苗。公司开发的EVX-01用于治疗晚期黑色素瘤，正在进行全球多中心2期临床试验； EVX-03，基于DNA的癌症疫苗，用于治疗实体瘤；",
+  "en": "Evaxion A/S, a clinical-stage biotech company, develops artificial intelligence-powered immunology vaccines. The company develops EVX-01, which is in phase 2 gl",
+  "at": "2026-11-19T13:48:49.514Z"
+ },
+ "EVGN": {
+  "ind": "生物技术",
+  "desc": "Evogene Ltd. 及其子公司作为一家计算生物学公司在以色列、美国、欧洲和非洲运营。它通过三个部门运营：农业、人类健康和工业应用。该公司从事农业活动，包括种子生产",
+  "en": "Evogene Ltd., together with its subsidiaries, operates as a computational biology company in Israel, the United States, Europe, and Africa. It operates through ",
+  "at": "2026-11-19T13:48:49.839Z"
  }
 }

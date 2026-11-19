@@ -1,6 +1,6 @@
 window.FED_DATA = {
  "meta": {
-  "syncedAt": "2026-11-18T23:53:17.871Z",
+  "syncedAt": "2026-11-19T13:52:38.531Z",
   "board": [
    {
     "zh": "沃什",
@@ -62,9 +62,9 @@ window.FED_DATA = {
   "effr": 3.88,
   "target": "3.75–4%",
   "effrDate": "2026-11-17",
-  "futPx": 4.075000000000003,
+  "futPx": 4.079999999999998,
   "futSym": "ZQZ26.CBT",
-  "futAt": "2026-11-19 07:18",
+  "futAt": "2026-11-19 21:31",
   "path": [
    {
     "d": "2027-01-27",
@@ -76,7 +76,7 @@ window.FED_DATA = {
    },
    {
     "d": "2027-04-28",
-    "implied": 4.575
+    "implied": 4.58
    }
   ],
   "src": "自算：EFFR 3.88%（纽约联储 2026-11-17）+ 30 天联邦基金期货 ZQZ26.CBT 及后续月份（Yahoo 行情）。算法同 CME FedWatch；CME 官网已封禁脚本抓取，故不引用其数字"
