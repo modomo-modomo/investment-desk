@@ -531,7 +531,7 @@
   ]
  },
  "2026-11-19|time-pre-market": {
-  "at": "2026-11-19T13:47:42.316Z",
+  "at": "2026-11-20T01:36:04.632Z",
   "symbols": [
    "WMT",
    "BABA",
@@ -543,21 +543,19 @@
    "YMM",
    "ROAD",
    "VVV",
-   "MANU",
    "BBWI",
    "MMS",
-   "DAO",
    "LQDT",
    "TEN",
    "RERE",
    "MAGN",
-   "ARBE",
+   "SPWR",
    "EVAX",
    "EVGN"
   ]
  },
  "2026-11-18|time-after-hours": {
-  "at": "2026-11-19T13:47:44.341Z",
+  "at": "2026-11-20T01:36:05.721Z",
   "symbols": []
  }
 }
