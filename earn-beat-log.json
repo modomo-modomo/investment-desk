@@ -632,12 +632,12 @@
   "name": "PDD",
   "size": "大市值",
   "cut": 3,
-  "chg": null,
-  "at": null,
-  "px": null,
+  "chg": 11.04,
+  "at": "2026-11-19",
+  "px": 86,
   "mcap": 110242054000,
   "capPx": 86,
-  "mcapAt": null,
+  "mcapAt": 110242054000,
   "epsAct": 19.33,
   "epsEst": 18.349,
   "surp": 5.3,
@@ -649,7 +649,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-20T01:40:18.034Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-19",
@@ -658,12 +658,12 @@
   "name": "Futu",
   "size": "大市值",
   "cut": 3,
-  "chg": null,
-  "at": null,
-  "px": null,
+  "chg": 4.84,
+  "at": "2026-11-19",
+  "px": 87.21,
   "mcap": 11659143200,
   "capPx": 87.21,
-  "mcapAt": null,
+  "mcapAt": 11659143200,
   "epsAct": 26.64,
   "epsEst": 25.851,
   "surp": 3.1,
@@ -675,7 +675,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-20T01:40:18.633Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-19",
@@ -684,12 +684,12 @@
   "name": "Full Truck Alliance",
   "size": "中型",
   "cut": 5,
-  "chg": null,
-  "at": null,
-  "px": null,
+  "chg": 8.11,
+  "at": "2026-11-19",
+  "px": 9.06,
   "mcap": 8694621200,
   "capPx": 9.06,
-  "mcapAt": null,
+  "mcapAt": 8694621200,
   "epsAct": 1.36,
   "epsEst": 1.263,
   "surp": 7.7,
@@ -701,7 +701,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-20T01:40:19.152Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-19",
@@ -710,12 +710,12 @@
   "name": "Valvoline",
   "size": "中型",
   "cut": 5,
-  "chg": null,
-  "at": null,
-  "px": null,
+  "chg": 10.4,
+  "at": "2026-11-19",
+  "px": 36.84,
   "mcap": 4257558780,
   "capPx": 36.84,
-  "mcapAt": null,
+  "mcapAt": 4257558780,
   "epsAct": 0.42,
   "epsEst": 0.423,
   "surp": -0.6,
@@ -727,6 +727,6 @@
   "q": "2026Q4",
   "addedAt": "2026-11-20T01:40:20.731Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  }
 ]
