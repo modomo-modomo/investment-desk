@@ -728,5 +728,31 @@
   "addedAt": "2026-11-20T01:40:20.731Z",
   "zhDone": true,
   "isNew": false
+ },
+ {
+  "d": "2026-11-19",
+  "sess": "post",
+  "sym": "GAP",
+  "name": "Gap, (The)",
+  "size": "中型",
+  "cut": 5,
+  "chg": 11.44,
+  "at": "2026-11-20",
+  "px": 20.94,
+  "mcap": 6969199600,
+  "capPx": 20.94,
+  "mcapAt": 6969199778,
+  "epsAct": 0.82,
+  "epsEst": 0.78,
+  "surp": 5.1,
+  "rev": 4011000000,
+  "net": 311000000,
+  "sec": "服装零售",
+  "desc": "The Gap, Inc. 作为一家服装零售公司在美国、加拿大、日本、台湾和国际上运营。该公司以 Old Navy、Gap、Banana Republic 和 Athleta 品牌为男士、女士和儿童提供服装、配饰和个人护",
+  "guide": null,
+  "q": "2026Q4",
+  "addedAt": "2026-11-20T23:38:38.143Z",
+  "zhDone": true,
+  "isNew": true
  }
 ]

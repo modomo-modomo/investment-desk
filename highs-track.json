@@ -66,9 +66,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 34.39,
-  "lastD": "2026-11-12",
-  "lastPx": 34.39,
-  "n": 1,
+  "lastD": "2026-11-20",
+  "lastPx": 35.47,
+  "n": 2,
   "everAth": true
  },
  "ADP": {
@@ -762,9 +762,9 @@
   "track": "其它",
   "firstD": "2026-11-13",
   "firstPx": 202.3,
-  "lastD": "2026-11-13",
-  "lastPx": 202.81,
-  "n": 1,
+  "lastD": "2026-11-20",
+  "lastPx": 205.64,
+  "n": 2,
   "everAth": false
  },
  "XHR": {
@@ -1050,9 +1050,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 28.29,
-  "lastD": "2026-11-18",
-  "lastPx": 28.29,
-  "n": 1,
+  "lastD": "2026-11-20",
+  "lastPx": 28.56,
+  "n": 2,
   "everAth": false
  },
  "JJSF": {
@@ -1098,9 +1098,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 52.85,
-  "lastD": "2026-11-18",
-  "lastPx": 52.85,
-  "n": 1,
+  "lastD": "2026-11-20",
+  "lastPx": 52.82,
+  "n": 2,
   "everAth": false
  },
  "REF": {
@@ -1148,6 +1148,102 @@
   "firstPx": 14.8,
   "lastD": "2026-11-18",
   "lastPx": 14.8,
+  "n": 1,
+  "everAth": false
+ },
+ "WRB": {
+  "sym": "WRB",
+  "name": "W.R. Berkley",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 78.31,
+  "lastD": "2026-11-20",
+  "lastPx": 78.31,
+  "n": 1,
+  "everAth": true
+ },
+ "RLI": {
+  "sym": "RLI",
+  "name": "RLI (DE)",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 71.54,
+  "lastD": "2026-11-20",
+  "lastPx": 71.54,
+  "n": 1,
+  "everAth": false
+ },
+ "IPAR": {
+  "sym": "IPAR",
+  "name": "Interparfums",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 137.42,
+  "lastD": "2026-11-20",
+  "lastPx": 137.42,
+  "n": 1,
+  "everAth": false
+ },
+ "PLMR": {
+  "sym": "PLMR",
+  "name": "Palomar",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 163.59,
+  "lastD": "2026-11-20",
+  "lastPx": 163.59,
+  "n": 1,
+  "everAth": false
+ },
+ "EXPO": {
+  "sym": "EXPO",
+  "name": "Exponent",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 89.16,
+  "lastD": "2026-11-20",
+  "lastPx": 89.16,
+  "n": 1,
+  "everAth": false
+ },
+ "SKWD": {
+  "sym": "SKWD",
+  "name": "Skyward Specialty Insurance",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 64.43,
+  "lastD": "2026-11-20",
+  "lastPx": 64.43,
+  "n": 1,
+  "everAth": true
+ },
+ "DGICB": {
+  "sym": "DGICB",
+  "name": "Donegal",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 34.99,
+  "lastD": "2026-11-20",
+  "lastPx": 34.99,
+  "n": 1,
+  "everAth": true
+ },
+ "JXG": {
+  "sym": "JXG",
+  "name": "JX Luxventure",
+  "sec": "工业",
+  "track": "其它",
+  "firstD": "2026-11-20",
+  "firstPx": 14.54,
+  "lastD": "2026-11-20",
+  "lastPx": 14.54,
   "n": 1,
   "everAth": false
  }
