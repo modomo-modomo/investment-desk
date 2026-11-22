@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-20T23:34:41.949Z",
+  "syncedAt": "2026-11-22T07:18:08.093Z",
   "source": "Yahoo Finance",
   "stockDate": "20261120",
   "indexDate": "20261120",
@@ -18,7 +18,7 @@ window.WIND_LIVE = {
    "ytd": -21.06,
    "mcap": 1366942810112,
    "pre": null,
-   "post": 1.6
+   "post": 1.52
   },
   "META.O": {
    "name": "脸书(META PLATFORMS)",
@@ -31,7 +31,7 @@ window.WIND_LIVE = {
    "ytd": -13.77,
    "mcap": 1433642336256,
    "pre": null,
-   "post": 1.54
+   "post": 1.19
   },
   "IREN.O": {
    "name": "IREN",
@@ -57,7 +57,7 @@ window.WIND_LIVE = {
    "ytd": -9.61,
    "mcap": 23815892992,
    "pre": null,
-   "post": 4.54
+   "post": 3.96
   },
   "CRWV.O": {
    "name": "COREWEAVE",
@@ -70,7 +70,7 @@ window.WIND_LIVE = {
    "ytd": -50.19,
    "mcap": 21972525056,
    "pre": null,
-   "post": 4.66
+   "post": 3.36
   },
   "BE.N": {
    "name": "BLOOM ENERGY",
@@ -83,7 +83,7 @@ window.WIND_LIVE = {
    "ytd": 44.28,
    "mcap": 42098556928,
    "pre": null,
-   "post": 2.64
+   "post": 2.22
   },
   "AMD.O": {
    "name": "超威半导体(AMD)",
@@ -96,7 +96,7 @@ window.WIND_LIVE = {
    "ytd": 89.91,
    "mcap": 702393286656,
    "pre": null,
-   "post": 3.07
+   "post": 3.53
   },
   "TSM.N": {
    "name": "台积电(TAIWAN SEMICONDUCTOR MANUFACTURING)",
@@ -109,20 +109,20 @@ window.WIND_LIVE = {
    "ytd": -0.28,
    "mcap": 1652980711424,
    "pre": null,
-   "post": 3.29
+   "post": 3.1
   },
   "TER.O": {
    "name": "泰瑞达(TERADYNE)",
    "date": "20261120",
-   "price": 204.77,
+   "price": 204.78,
    "prev": 227.43,
    "chg": -9.96,
    "d5": -17.94,
-   "d20": -33.68,
+   "d20": -33.67,
    "ytd": -1.34,
    "mcap": 31970445312,
    "pre": null,
-   "post": 4
+   "post": 3.52
   },
   "ONTO.N": {
    "name": "ONTO INNOVATION",
@@ -135,7 +135,7 @@ window.WIND_LIVE = {
    "ytd": 2.59,
    "mcap": 8352189440,
    "pre": null,
-   "post": 5.12
+   "post": 2.86
   },
   "NET.N": {
    "name": "CLOUDFLARE",
@@ -148,7 +148,7 @@ window.WIND_LIVE = {
    "ytd": 40.27,
    "mcap": 98543534080,
    "pre": null,
-   "post": 2.27
+   "post": 1.83
   },
   "RBRK.N": {
    "name": "RUBRIK",
@@ -161,7 +161,7 @@ window.WIND_LIVE = {
    "ytd": 41.42,
    "mcap": 21968082944,
    "pre": null,
-   "post": 3.44
+   "post": 2.88
   },
   "OKTA.O": {
    "name": "OKTA",
@@ -174,7 +174,7 @@ window.WIND_LIVE = {
    "ytd": 128.91,
    "mcap": 33471215616,
    "pre": null,
-   "post": 3.68
+   "post": 2.89
   },
   "CHKP.O": {
    "name": "CHECK POINT SOFTWARE TECHNOLOGIES",
@@ -200,7 +200,7 @@ window.WIND_LIVE = {
    "ytd": -20.6,
    "mcap": 1735524220928,
    "pre": null,
-   "post": 1.7
+   "post": 1.38
   },
   "2105.HK": {
    "name": "来凯医药(LAEKNA)",
@@ -252,7 +252,7 @@ window.WIND_LIVE = {
    "ytd": 22.9,
    "mcap": 1140768384,
    "pre": null,
-   "post": 0.87
+   "post": 1.86
   },
   "LLY.N": {
    "name": "礼来(ELI LILLY)",
@@ -265,7 +265,7 @@ window.WIND_LIVE = {
    "ytd": 24.69,
    "mcap": 1199931523072,
    "pre": null,
-   "post": -0.11
+   "post": 0.07
   },
   "688825.SH": {
    "name": "长鑫科技(CXMT)",
@@ -343,7 +343,7 @@ window.WIND_LIVE = {
    "ytd": -46.04,
    "mcap": 55983542272,
    "pre": null,
-   "post": 2.99
+   "post": 3.27
   },
   "SOFI.O": {
    "name": "SOFI TECHNOLOGIES",
@@ -356,7 +356,7 @@ window.WIND_LIVE = {
    "ytd": -54.55,
    "mcap": 16197047296,
    "pre": null,
-   "post": 2.89
+   "post": 2.18
   },
   "ABCL.O": {
    "name": "ABCELLERA BIOLOGICS",
@@ -369,7 +369,7 @@ window.WIND_LIVE = {
    "ytd": 182.51,
    "mcap": 3164927232,
    "pre": null,
-   "post": 0.62
+   "post": 0.41
   },
   "TWST.O": {
    "name": "TWIST BIOSCIENCE",
@@ -382,7 +382,7 @@ window.WIND_LIVE = {
    "ytd": 218.99,
    "mcap": 7044221952,
    "pre": null,
-   "post": 0.06
+   "post": 1.64
   },
   "MRNA.O": {
    "name": "MODERNA",
@@ -395,7 +395,7 @@ window.WIND_LIVE = {
    "ytd": 531.89,
    "mcap": 78901084160,
    "pre": null,
-   "post": 2.17
+   "post": 2.21
   },
   "LITE.O": {
    "name": "LUMENTUM",
@@ -408,7 +408,7 @@ window.WIND_LIVE = {
    "ytd": 19.28,
    "mcap": 41764028416,
    "pre": null,
-   "post": 3.12
+   "post": 2.51
   },
   "AEHR.O": {
    "name": "AEHR TEST SYSTEMS",
@@ -421,7 +421,7 @@ window.WIND_LIVE = {
    "ytd": 79.78,
    "mcap": 1306544512,
    "pre": null,
-   "post": 4.84
+   "post": 3.87
   },
   "FROG.O": {
    "name": "JFROG",
@@ -434,7 +434,7 @@ window.WIND_LIVE = {
    "ytd": 69.49,
    "mcap": 12582511616,
    "pre": null,
-   "post": 0.75
+   "post": 1.44
   },
   "301000.SZ": {
    "name": "肇民科技(ZHAOMIN TECH)",
@@ -631,8 +631,8 @@ window.WIND_LIVE = {
    "level": 56436.65,
    "prev": 59444.21,
    "chg": -5.06,
-   "d5": -7.21,
-   "d20": -11.92,
+   "d5": -7.7,
+   "d20": -12.67,
    "amount": null
   },
   "KS11.GI": {
@@ -641,8 +641,8 @@ window.WIND_LIVE = {
    "level": 4869.96,
    "prev": 5137.89,
    "chg": -5.21,
-   "d5": -8.85,
-   "d20": -15.09,
+   "d5": -7.95,
+   "d20": -12,
    "amount": null
   },
   "GDAXI.GI": {
@@ -651,16 +651,16 @@ window.WIND_LIVE = {
    "level": 24802.78,
    "prev": 25463.81,
    "chg": -2.6,
-   "d5": -7.36,
-   "d20": -3.28,
+   "d5": -7.28,
+   "d20": -2.24,
    "amount": null
   },
   "FTSE.GI": {
    "name": "英国富时100",
    "date": "20261120",
    "level": 10346.34,
-   "prev": 10452.7,
-   "chg": -1.02,
+   "prev": 10346.3,
+   "chg": 0,
    "d5": -5.1,
    "d20": -3.53,
    "amount": null
@@ -671,8 +671,148 @@ window.WIND_LIVE = {
    "level": 5941.95,
    "prev": 6113.86,
    "chg": -2.81,
-   "d5": -7.14,
-   "d20": -4.28,
+   "d5": -6.97,
+   "d20": -2.38,
+   "amount": null
+  },
+  "HSI.HI": {
+   "name": "恒生指数",
+   "date": "20261120",
+   "level": 22410.8,
+   "prev": 22841.62,
+   "chg": -1.89,
+   "d5": -5.19,
+   "d20": -2.28,
+   "amount": null
+  },
+  "HSTECH.HI": {
+   "name": "恒生科技指数",
+   "date": "20261120",
+   "level": 3511.14,
+   "prev": 3649.14,
+   "chg": -3.78,
+   "d5": -7.92,
+   "d20": -7.45,
+   "amount": null
+  },
+  "HSHCI.HI": {
+   "name": "恒生医疗保健",
+   "date": "20261120",
+   "level": 3215.75,
+   "prev": 3376.4,
+   "chg": -4.76,
+   "d5": -9.65,
+   "d20": -7,
+   "amount": null
+  },
+  "HSHKI.HI": {
+   "name": "恒生港股通",
+   "date": "20261120",
+   "level": 3224.8,
+   "prev": 3290.96,
+   "chg": -2.01,
+   "d5": -5.9,
+   "d20": -4.13,
+   "amount": null
+  },
+  "HSSCHKY.HI": {
+   "name": "恒生港股通高股息率",
+   "date": "20261120",
+   "level": 2671.4,
+   "prev": 2702.93,
+   "chg": -1.17,
+   "d5": -1.88,
+   "d20": 3.08,
+   "amount": null
+  },
+  "000001.SH": {
+   "name": "上证指数",
+   "date": "20261120",
+   "level": 3533.79,
+   "prev": 3577.62,
+   "chg": -1.23,
+   "d5": -2.77,
+   "d20": -3.4,
+   "amount": null
+  },
+  "000688.SH": {
+   "name": "科创50",
+   "date": "20261120",
+   "level": 1231.09,
+   "prev": 1270.78,
+   "chg": -3.12,
+   "d5": -3.8,
+   "d20": -5.73,
+   "amount": null
+  },
+  "000698.SH": {
+   "name": "科创100",
+   "date": "20261120",
+   "level": 1220.18,
+   "prev": 1299.81,
+   "chg": -6.13,
+   "d5": -13.79,
+   "d20": -18.26,
+   "amount": null
+  },
+  "399006.SZ": {
+   "name": "创业板指",
+   "date": "20261120",
+   "level": 2212.13,
+   "prev": 2293.34,
+   "chg": -3.54,
+   "d5": -8.82,
+   "d20": -14.16,
+   "amount": null
+  },
+  "000300.SH": {
+   "name": "沪深300",
+   "date": "20261120",
+   "level": 3954.57,
+   "prev": 3984.84,
+   "chg": -0.76,
+   "d5": -1.54,
+   "d20": -2.02,
+   "amount": null
+  },
+  "000905.SH": {
+   "name": "中证500",
+   "date": "20261120",
+   "level": 6006.08,
+   "prev": 6251.96,
+   "chg": -3.93,
+   "d5": -7.11,
+   "d20": -9.75,
+   "amount": null
+  },
+  "000852.SH": {
+   "name": "中证1000",
+   "date": "20261120",
+   "level": 5648.63,
+   "prev": 5938.9,
+   "chg": -4.89,
+   "d5": -11.15,
+   "d20": -14.13,
+   "amount": null
+  },
+  "932000.SH": {
+   "name": "中证2000",
+   "date": "20261120",
+   "level": 2351.93,
+   "prev": 2485.11,
+   "chg": -5.36,
+   "d5": -13.68,
+   "d20": -16.14,
+   "amount": null
+  },
+  "BSE50.BJ": {
+   "name": "北证50",
+   "date": "20261120",
+   "level": 759.9,
+   "prev": 798.64,
+   "chg": -4.85,
+   "d5": -13.29,
+   "d20": -21.4,
    "amount": null
   }
  },
@@ -693,10 +833,10 @@ window.WIND_LIVE = {
    "name": "美元指数",
    "unit": "1973年3月=100",
    "date": "20261120",
-   "value": 103.895,
-   "d1": 0,
-   "d5": 0.47,
-   "d20": 2.25,
+   "value": 103.807,
+   "d1": -0.09,
+   "d5": 0.38,
+   "d20": 2.16,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -706,7 +846,7 @@ window.WIND_LIVE = {
    "unit": "美元/金衡盎司",
    "date": "20261120",
    "value": 3685.5,
-   "d1": 4.14,
+   "d1": 4.84,
    "d5": -5.17,
    "d20": -9.23,
    "dbp1": null,
@@ -718,7 +858,7 @@ window.WIND_LIVE = {
    "unit": "美元/金衡盎司",
    "date": "20261120",
    "value": 44.359,
-   "d1": 7.98,
+   "d1": 8.01,
    "d5": -9.53,
    "d20": -19,
    "dbp1": null,
@@ -730,7 +870,7 @@ window.WIND_LIVE = {
    "unit": "美元/吨",
    "date": "20261120",
    "value": 12419.74,
-   "d1": 3.08,
+   "d1": 2.71,
    "d5": -7.34,
    "d20": -11.46,
    "dbp1": null,
@@ -742,7 +882,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261120",
    "value": 82.44,
-   "d1": -1.41,
+   "d1": -1.16,
    "d5": -6.91,
    "d20": -17.12,
    "dbp1": null,
@@ -754,7 +894,7 @@ window.WIND_LIVE = {
    "unit": "美元/桶",
    "date": "20261120",
    "value": 89.44,
-   "d1": -0.48,
+   "d1": -0.57,
    "d5": -6.68,
    "d20": -20.97,
    "dbp1": null,
