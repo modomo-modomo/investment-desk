@@ -15,7 +15,7 @@ import { writeFileSync, readFileSync, existsSync } from "node:fs";
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 /* 日期按美东时区自动推算，云端定时运行不需要人工传入。
  * 北京 20:30 → 美东当天 07:30：pre=今天、post=昨天（完整）
- * 北京 07:00 → 美东当天 18:00：pre=今天（可回填收盘）、post=昨天 */
+ * 北京 07:30 → 美东当天 18:30：pre=今天（可回填收盘）、post=昨天 */
 const etDate = (off = 0) =>
   new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date(Date.now() + off * 86400e3));
 /* 周末回退：周六/周日运行时 Nasdaq 日历是空的（周六盘前=无、周日凌晨=无），
@@ -404,7 +404,7 @@ function tier(mcap) {
    大市值 ≥100 亿美元 → 3%；中市值 20–100 亿 → 5%；小市值 <20 亿 → 8% */
 function threshold(t) { return t === "大市值" ? 3 : t === "中市值" ? 5 : 8; }
 
-/* 盘前跳空回查：20:30 那场把「盘前跳空」留档在 movers-log，07:00 回填收盘时用它补 */
+/* 盘前跳空回查：20:30 那场把「盘前跳空」留档在 movers-log，次日 07:30 回填收盘时用它补 */
 let MVGAP = null;
 function gapFromLog(sym, date) {
   if (!MVGAP) { try { MVGAP = JSON.parse(readFileSync("movers-log.json", "utf8")); } catch { MVGAP = []; } }
@@ -525,7 +525,7 @@ for (const sym of Object.values(CHECK)) {
 let crosscheck = null;
 /* 双端点校验：live-data.js 的收盘价来自 chart v8，live-extra.js 的现价来自 quote v7。
  * 两者是 Yahoo 的两个独立接口，一致即说明抓取链路没出错。
- * 只在「市场已收盘」的窗口跑（美东 ≥16:00 或 <9:00，对应 07:00/20:30 两场定时）；
+ * 只在「市场已收盘」的窗口跑（美东 ≥16:00 或 <9:00，对应 07:30 / 20:30 两场定时）；
  * 盘中昨收基准没换挡，跑出来全是假阳性，直接跳过。 */
 try {
   if (existsSync("live-data.js") && (ET_HOUR >= 16 || ET_HOUR < 9)) {
@@ -604,7 +604,7 @@ try {
 /* -------- 创新高检测 + 滚动日志（52周新高 / 历史新高 / 三大市场指数） -------- */
 const etToday = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(new Date());
 /* 新高记录必须记在「交易日」上，不是「运行日」上：
-   11-13 07:00 那次跑的是 11-12 的收盘，记成 11-13 会让日志整体错位一天。 */
+   11-13 07:30 那次跑的是 11-12 的收盘，记成 11-13 会让日志整体错位一天。 */
 let usCloseDate = etToday;
 try {
   const g = (await chart("^GSPC", "5d")).rows;
@@ -949,14 +949,14 @@ const movers = {
 
 /* ---------- 盘前/盘后异动滚动留档 ----------
    问题：Yahoo 只在「当前场次」给 preMarket/postMarket 涨跌，窗口一过就没了。
-   20:30 那次抓的是当日盘前、07:00 那次抓的是前一日盘后，任何一次补跑都可能错过一整个场次。
+   20:30 那次抓的是当日盘前、次日 07:30 那次抓的是前一日盘后，任何一次补跑都可能错过一整个场次。
    做法：每个场次抓到时非空就写一条 movers-log.json，页面从这个档案里取「最近一次有效场次」。 */
 let mvLog = [];
 try { mvLog = JSON.parse(readFileSync("movers-log.json", "utf8")); } catch {}
 const mvState = movers.state;
 const sessionNow = /PRE/i.test(mvState) ? "pre" : (/POST/i.test(mvState) ? "post" : "");
 
-/* 回填：20:30 留档的盘前场次只有跳空；当日 16:00 收盘后（07:00 场）把收盘涨幅/收盘价补进留档，
+/* 回填：20:30 留档的盘前场次只有跳空；当日 16:00 收盘后（次日 07:30 场）把收盘涨幅/收盘价补进留档，
    页面「开盘跳空→收盘」列才有第二个数字。 */
 try {
   const preEntry = (mvLog || []).find((x) => x.session === "pre" && x.date === etToday && (x.rows || []).some((r) => r.closeChg == null));
@@ -1194,7 +1194,7 @@ try {
    纳入标准：财报公布后「对应场次收盘」涨幅——大市值 >3% / 中型 >5% / 小型 >8%
    · 盘前公布：公布当日收盘涨幅（相对前一交易日收盘）
    · 盘后公布：次日收盘涨幅（相对公布日收盘）
-   涨幅统一用日线收盘自己算（不依赖 quote 的当日涨跌，避免 07:00/20:30 场次错位）；
+   涨幅统一用日线收盘自己算（不依赖 quote 的当日涨跌，避免 07:30 / 20:30 场次错位）；
    次日还没收盘的先记 pending，下一轮补齐。 */
 const BEAT_CUT = (mcap) => (mcap >= 10e9 ? 3 : mcap >= 2e9 ? 5 : 8);
 const BEAT_SIZE = (mcap) => (mcap >= 10e9 ? "大市值" : mcap >= 2e9 ? "中型" : "小型");

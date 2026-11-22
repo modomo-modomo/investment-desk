@@ -218,7 +218,7 @@ function settle(rows, q, cashIndex = false) {
   /* 现金指数（标普/纳指/道指/费半…）常规时段收盘后 regularMarketPrice 即为官方收盘价，
      即使 marketState 仍为 POST（16:00–20:00 ET 盘后）也不能回退到 previousClose，
      否则会把上一交易日收盘当成"最新收盘"，涨跌符号随之反向。
-     北京 07:00 场次（美东 18:00）恰好落在 POST 段，必踩此坑。
+     北京 07:30 场次（美东 18:30）恰好落在 POST 段，必踩此坑。
      期货/外汇 24h 报价仍需避开进行中的 session，保持原逻辑。 */
   const live = !cashIndex &&
     (q.marketState === "REGULAR" || q.marketState === "PRE" || q.marketState === "POST");

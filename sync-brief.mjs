@@ -8,8 +8,9 @@
  *           （sync-news 会把 brief-log 透传进 live-news.js，喂给页面）
  *
  * 触发规则（按北京时间）：
- *   daily       每次 07:00 场：若最新收盘日还没有存档，自动补一条（会话写过就不动）
- *   weekly      周六 07:00（= 周五收盘后）：本周核心结论 + 下周策略展望
+ *   daily       每次 07:30 场（周二–周六）：若最新收盘日还没有存档，自动补一条（会话写过就不动）
+ *   weekly      仅周六 07:30 场（= 周五收盘后，本周结束 / 下周初始的切换点）：
+ *               本周核心结论 + 下周策略展望；其余场次不重写这两块
  *   month-draft 每月 25 日：本月核心结论 + 下月展望 初稿
  *   month-final 月末最后一个交易日收盘后（新月第一场）：上月终稿
  */
@@ -133,7 +134,7 @@ function dailyAuto() {
   return { stance, stanceNote: note, conclusions: list };
 }
 
-/* ---------- 周报（周六 07:00） ---------- */
+/* ---------- 周报（仅周六 07:30 场） ---------- */
 function weekStartOf(dateStr) {
   const d = parse(dateStr);
   const dow = d.getUTCDay();           /* 0=周日 */
@@ -365,14 +366,14 @@ let changed = 0;
   } else LOG("  当日已有会话定稿：daily " + CLOSE);
 }
 
-/* 2) 周报：周六 07:00（北京时间），归档到本周最后一个交易日 */
+/* 2) 周报：仅周六 07:30 场（北京时间），归档到本周最后一个交易日；其余场次一律跳过 */
 if (BJ.dow === 6 && BJ.hh <= 10) {
   const cur = LOGS.find((x) => x.kind === "weekly" && x.d === CLOSE);
   if (!cur || cur.source !== "manual") {
     const w = weeklyAuto(CLOSE);
     if (upsert({ d: CLOSE, kind: "weekly", source: "auto", ...w, snapshot: snap })) { changed++; LOG("  生成周报：weekly " + CLOSE + "（" + w.period + "）"); }
   } else LOG("  本周周报已是会话定稿：weekly " + CLOSE);
-} else LOG("  非周六上午，跳过周报");
+} else LOG("  非周六 07:30 场：跳过周报（本周结论 / 下周展望不在其余场次重写）");
 
 /* 3) 月度初稿：每月 25 日 */
 if (BJ.d === 25) {

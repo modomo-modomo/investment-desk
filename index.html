@@ -567,8 +567,8 @@ tr.isnew td{background:#fffafa}
   <div class="side-foot">
     <b>数据源</b>　<span id="feed-state" style="color:#c0392b">Yahoo 未连接</span><br>
     <span id="side-sync" style="color:#8fa3b3"></span><br>
-    更新节奏 <b>每个交易日两次</b>：20:30 / 次日 07:00<br>
-    <span style="color:#b6bfcc">行情/财报为实时抓取，资讯类待接源</span>
+    更新节奏 <b>周一–周五 20:30</b>（盘前）/ <b>周二–周六 07:30</b>（盘后）<br>
+    <span style="color:#b6bfcc">周六 07:30 为周度切换点：本周结论 / 下周展望 / 事件窗口一并切换</span>
   </div>
 </aside>
 <div class="mask" id="mask"></div>
@@ -933,51 +933,73 @@ const DATA = {
   ],
 
   events:{
-    week:{ label:"本周 11/09 - 11/15 · 人工核对 11-12", today:"11-11", days:[
-      {dow:"周一", date:"11-09", items:[
-        {t:"09:30", ev:"中国 10 月 CPI/PPI 已公布：CPI 同比 +0.7%、核心 +0.8%；PPI 同比 +5.7%，比上月扩大 0.7pct，煤炭 +36.6%、油气 +35%", imp:"m"}]},
-      {dow:"周二", date:"11-10", items:[
-        {t:"21:30", ev:"美国 10 月 CPI 已公布：环比 0.4%（预期 0.3%）、核心 0.3%（预期 0.2%）双超预期；因去年 10 月政府停摆，<b>本期无官方同比</b>", imp:"h"},
-        {t:"22:00", ev:"美国 10 月 NFIB 小企业信心指数", imp:"l"},
-        {t:"盘后", ev:"CRWV / PBR / MRCY / RGTI / FLY 等盘后财报（当日共 84 家）", imp:"h"}]},
-      {dow:"周三", date:"11-11", items:[
-        {t:"全天", ev:"美国退伍军人节：债市休市，股市正常", imp:"m"},
-        {t:"20:30", ev:"盘前：ONON、鸿海（2317.TW）", imp:"l"},
-        {t:"—", ev:"EIA 原油库存因假期推迟至周四 23:30", imp:"l"}]},
-      {dow:"周四", date:"11-12", items:[
-        {t:"22:00", ev:"联储票委讲话（跟进 CPI 后的政策表态）", imp:"m"},
-        {t:"盘前", ev:"NBIS 财报 — 毛利率指引是关键", imp:"h"},
-        {t:"盘后", ev:"AMAT 财报（16:30 ET 电话会）— 半导体设备订单与中国区收入", imp:"h"}]},
-      {dow:"周五", date:"11-13", items:[
-        {t:"21:30", ev:"美国 10 月 PPI", imp:"m"},
-        {t:"23:00", ev:"密歇根大学消费者信心初值 / 通胀预期", imp:"m"}]},
-      {dow:"周六", date:"11-14", items:[{t:"—", ev:"APEC 工商领导人峰会筹备会议", imp:"l"}]},
-      {dow:"周日", date:"11-15", items:[{t:"—", ev:"G20 财长与央行行长会议（视频）", imp:"l"}]}
+    /* 周次窗口（20261122）：以「周一日期」为 key，页面按北京时间自动选取——
+       周六 07:30 之前：本周 = 本周一~周日，下周 = 下周一~周日；
+       周六 07:30 起（含周日）：本周 = 下周一~下周日，下周 = 再下一周。
+       周六 07:30 场是本周结束 / 下周初始的切换点，数据按周滚动补录；
+       未录入的周如实显示「预排待录入」，不补编事件。 */
+    weeks:[
+      {start:"2026-11-16", note:"已核对 11-19", days:[
+        {dow:"周一", date:"11-16", items:[
+          {t:"09:30", ev:"中国 10 月社零 / 规模以上工业增加值 / 固定资产投资", imp:"m"},
+          {t:"21:30", ev:"美国 11 月纽约联储制造业指数", imp:"l"}]},
+        {dow:"周二", date:"11-17", items:[
+          {t:"21:30", ev:"美国 10 月进口物价指数", imp:"l"},
+          {t:"22:15", ev:"美国 10 月工业产出", imp:"m"},
+          {t:"盘前", ev:"家得宝 HD 财报（美国消费与地产链风向标）", imp:"m"}]},
+        {dow:"周三", date:"11-18", items:[
+          {t:"盘后", ev:"<b>腾讯 0700.HK Q3 业绩（港股盘后）</b> — capex 口径、游戏与广告增速、微信 AI 进展", imp:"h"},
+          {t:"盘前", ev:"沃尔玛 WMT 财报 — 低收入消费的体温计", imp:"h"},
+          {t:"21:30", ev:"美国 10 月新屋开工 / 营建许可", imp:"m"},
+          {t:"23:30", ev:"EIA 原油库存", imp:"l"}]},
+        {dow:"周四", date:"11-19", items:[
+          {t:"21:30", ev:"美国初请失业金人数", imp:"m"},
+          {t:"23:00", ev:"费城联储制造业指数", imp:"l"},
+          {t:"盘后", ev:"<b>NVIDIA 财报（Q3 FY2027）</b> — 本季最重要单一事件，看 Rubin 出货与数据中心毛利率", imp:"h"}]},
+        {dow:"周五", date:"11-20", items:[
+          {t:"21:30", ev:"美国 10 月零售销售（延后发布）", imp:"h"},
+          {t:"23:00", ev:"成屋销售 / 密歇根消费者信心终值（含通胀预期）", imp:"m"}]},
+        {dow:"周六", date:"11-21", items:[{t:"—", ev:"无重大安排", imp:"l"}]},
+        {dow:"周日", date:"11-22", items:[{t:"—", ev:"无重大安排", imp:"l"}]}
+      ]},
+      {start:"2026-11-23", note:"预排（以官方日历为准）", days:[
+        {dow:"周一", date:"11-23", items:[
+          {t:"17:00", ev:"欧元区 11 月制造业 / 服务业 PMI 初值", imp:"l"},
+          {t:"22:45", ev:"美国 11 月 Markit 制造业 / 服务业 PMI 初值", imp:"m"}]},
+        {dow:"周二", date:"11-24", items:[
+          {t:"23:00", ev:"美国 11 月谘商会消费者信心指数", imp:"m"},
+          {t:"23:00", ev:"美国 10 月成屋签约销售指数", imp:"l"}]},
+        {dow:"周三", date:"11-25", items:[
+          {t:"21:30", ev:"美国 10 月 PCE 物价指数（排期待官方确认，以 BEA 日历为准）", imp:"h"},
+          {t:"21:30", ev:"美国 Q3 GDP 修正值", imp:"m"},
+          {t:"23:30", ev:"EIA 原油库存（因感恩节提前至周三）", imp:"l"}]},
+        {dow:"周四", date:"11-26", items:[
+          {t:"全天", ev:"<b>感恩节：美股、美债全天休市</b>，无经济数据", imp:"h"}]},
+        {dow:"周五", date:"11-27", items:[
+          {t:"13:00 ET", ev:"<b>黑色星期五：美股提前至 13:00（美东，北京次日 02:00）收盘</b>，美债 14:00 提前收盘；无重要数据", imp:"m"}]},
+        {dow:"周六", date:"11-28", items:[{t:"—", ev:"无重大安排", imp:"l"}]},
+        {dow:"周日", date:"11-29", items:[{t:"—", ev:"无重大安排", imp:"l"}]}
+      ]},
+      {start:"2026-11-30", note:"预排（以官方日历为准）", days:[
+        {dow:"周一", date:"11-30", items:[
+          {t:"09:30", ev:"中国 11 月官方制造业 / 非制造业 PMI", imp:"m"},
+          {t:"22:45", ev:"美国 11 月芝加哥 PMI", imp:"l"}]},
+        {dow:"周二", date:"12-01", items:[
+          {t:"18:00", ev:"欧元区 11 月 CPI 初值", imp:"m"},
+          {t:"23:00", ev:"美国 11 月 ISM 制造业 PMI", imp:"m"}]},
+        {dow:"周三", date:"12-02", items:[
+          {t:"21:15", ev:"美国 11 月 ADP 就业人数", imp:"m"},
+          {t:"次日 03:00", ev:"美联储褐皮书（地区经济状况调查）", imp:"l"}]},
+        {dow:"周四", date:"12-03", items:[
+          {t:"21:30", ev:"美国初请失业金人数", imp:"m"},
+          {t:"23:00", ev:"美国 11 月 ISM 服务业 PMI", imp:"m"}]},
+        {dow:"周五", date:"12-04", items:[
+          {t:"21:30", ev:"<b>美国 11 月非农就业 / 失业率</b>（排期待确认，以 BLS 日历为准）", imp:"h"},
+          {t:"23:00", ev:"美国 11 月密歇根消费者信心初值（含通胀预期）", imp:"m"}]},
+        {dow:"周六", date:"12-05", items:[{t:"—", ev:"无重大安排", imp:"l"}]},
+        {dow:"周日", date:"12-06", items:[{t:"—", ev:"无重大安排", imp:"l"}]}
+      ]}
     ],
-    nextLabel:"下周 11/16 - 11/22 · 预排（以官方日历为准）",
-    nextDays:[
-      {dow:"周一", date:"11-16", items:[
-        {t:"09:30", ev:"中国 10 月社零 / 规模以上工业增加值 / 固定资产投资", imp:"m"},
-        {t:"21:30", ev:"美国 11 月纽约联储制造业指数", imp:"l"}]},
-      {dow:"周二", date:"11-17", items:[
-        {t:"21:30", ev:"美国 10 月进口物价指数", imp:"l"},
-        {t:"22:15", ev:"美国 10 月工业产出", imp:"m"},
-        {t:"盘前", ev:"家得宝 HD 财报（美国消费与地产链风向标）", imp:"m"}]},
-      {dow:"周三", date:"11-18", items:[
-        {t:"盘后", ev:"<b>腾讯 0700.HK Q3 业绩（港股盘后）</b> — capex 口径、游戏与广告增速、微信 AI 进展", imp:"h"},
-        {t:"盘前", ev:"沃尔玛 WMT 财报 — 低收入消费的体温计", imp:"h"},
-        {t:"21:30", ev:"美国 10 月新屋开工 / 营建许可", imp:"m"},
-        {t:"23:30", ev:"EIA 原油库存", imp:"l"}]},
-      {dow:"周四", date:"11-19", items:[
-        {t:"21:30", ev:"美国初请失业金人数", imp:"m"},
-        {t:"23:00", ev:"费城联储制造业指数", imp:"l"},
-        {t:"盘后", ev:"<b>NVIDIA 财报（Q3 FY2027）</b> — 本季最重要单一事件，看 Rubin 出货与数据中心毛利率", imp:"h"}]},
-      {dow:"周五", date:"11-20", items:[
-        {t:"21:30", ev:"美国 10 月零售销售（延后发布）", imp:"h"},
-        {t:"23:00", ev:"成屋销售 / 密歇根消费者信心终值（含通胀预期）", imp:"m"}]},
-      {dow:"周六", date:"11-21", items:[{t:"—", ev:"无重大安排", imp:"l"}]},
-      {dow:"周日", date:"11-22", items:[{t:"—", ev:"无重大安排", imp:"l"}]}
-    ]},
     month:[
       {d:"11-18", ev:"腾讯 0700.HK Q3 业绩（港股盘后）— capex 与微信 AI 是关键读数", tag:"个股", imp:"h"},
       {d:"11-18", ev:"沃尔玛 WMT 财报（消费风向标）", tag:"个股", imp:"m"},
@@ -1778,15 +1800,15 @@ function nextSession(){
   const wd=new Date(bjDate+"T12:00:00").getDay();
   const f=(o)=>+new Intl.DateTimeFormat("en",{timeZone:"Asia/Shanghai",hourCycle:"h23",hour12:false,...o}).format(new Date());
   const cur=f({hour:"numeric"})*60+f({minute:"numeric"});
-  if(wd===0||wd===6) return "周一 07:00";
-  if(cur<7*60) return "今日 07:00";
-  if(cur<20*60+30) return "今日 20:30";
-  return wd===5?"周一 07:00":"明日 07:00";
+  /* 场次（20261122）：盘前 周一–周五 20:30；盘后 周二–周六 07:30 */
+  if(wd>=1&&wd<=5) return cur<20*60+30?"今日 20:30":"明日 07:30";
+  if(wd===6) return cur<7*60+30?"今日 07:30":"周一 20:30";
+  return "周一 20:30";
 }
 const asOfFmt=(s)=>s&&s.length===8?s.slice(4,6)+"-"+s.slice(6,8):(s||"—");
 
 /* ---- 上一场是否漏跑：数据比“本应到位的时刻”还旧，就在首页顶部示警 ----
-   交易日两场：北京 07:00 与 20:30。GRACE 用来容忍 GitHub 定时任务的实际延迟。 */
+   两场（20261122）：盘前 周一–周五 20:30；盘后 周二–周六 07:30。GRACE 用来容忍 GitHub 定时任务的实际延迟。 */
 function staleGuard(iso){
   if(!iso) return null;
   const now=Date.now();
@@ -1803,11 +1825,11 @@ function staleGuard(iso){
   const isWD=dow>=1&&dow<=5;
   let last,label;
   if(isWD&&cur>=20*60+30){ last=mk(0,20,30);  label="今日 20:30"; }
-  else if(isWD&&cur>=7*60){ last=mk(0,7,0);   label="今日 07:00"; }
-  else if(dow===1){         last=mk(-3,20,30); label="上周五 20:30"; }
-  else if(isWD){            last=mk(-1,20,30); label="昨日 20:30"; }
+  else if(dow>=2&&dow<=6&&cur>=7*60+30){ last=mk(0,7,30); label="今日 07:30"; }
+  else if(dow===1){         last=mk(-2,7,30);  label="周六 07:30"; }   /* 周一 20:30 前，上一场是周六盘后 */
+  else if(dow>=2&&dow<=5){  last=mk(-1,20,30); label="昨日 20:30"; }
   else if(dow===6){         last=mk(-1,20,30); label="周五 20:30"; }
-  else{                     last=mk(-2,20,30); label="周五 20:30"; }
+  else{                     last=mk(-1,7,30);  label="周六 07:30"; }   /* 周日 */
   const synced=new Date(iso).getTime();
   const lagH=(last.getTime()-synced)/36e5;   /* >0 表示数据比上一场还旧 */
   const ageH=(now-synced)/36e5;
@@ -2106,7 +2128,7 @@ function hydrateExtra(Y){
 
   /* 5. 当日财报：盘前 / 盘后 */
   const E=Y.earnings||{};
-  b.pre = { updated:FEED.lastSync, next:"次日 07:00 回填收盘", date:E.preDate||"",
+  b.pre = { updated:FEED.lastSync, next:"次日 07:30 回填收盘", date:E.preDate||"",
     total:E.preTotal||0, hit:E.preHit||0, cached:!!E.preCached,
     rows:(E.pre||[]).map(r=>earnRow(r,"pre")) };
   b.post = { updated:FEED.lastSync, next:"", date:E.postDate||"",
@@ -2353,8 +2375,8 @@ function feedBar(){
       +'　·　下一场更新 <b>'+(m.nextPT||"—")+'</b>';
   const line2 = warn
     ? '定时抓取可能延迟或失败，页面显示的仍是上一场的数值。<a href="'+ACT+'" target="_blank" rel="noopener">到 Actions 手动触发一次</a>。'
-      +'更新节奏：每个交易日 20:30 与次日 07:00 各抓一次，一次同步刷新全站。'
-    : '更新节奏：每个交易日 <b>20:30</b> 与次日 <b>07:00</b> 各抓一次。<b>一次同步会刷新全站所有模块</b>，两场所见数值只差在抓取时点的行情与业绩新鲜度，不存在“20:30 只更盘前、07:00 只更盘后”的分区。· 数据源 Yahoo Finance';
+      +'更新节奏：周一–周五 20:30（盘前）与周二–周六 07:30（盘后）各抓一次，一次同步刷新全站；周六 07:30 同时做周度切换。'
+    : '更新节奏：<b>周一–周五 20:30</b>（盘前）与 <b>周二–周六 07:30</b>（盘后）各抓一次。<b>一次同步会刷新全站所有模块</b>，两场所见数值只差在抓取时点的行情与业绩新鲜度，不存在“20:30 只更盘前、07:30 只更盘后”的分区；<b>周六 07:30 兼作周度切换点</b>（本周核心结论 / 下周策略展望 / 事件窗口切到下周）。· 数据源 Yahoo Finance';
   return '<div class="feedbar '+(warn?"warn":"ok")+'"><span class="ic">'+(warn?"!":"✓")+'</span><span>'
     + line1
     +'<span class="tiny" style="display:block;margin-top:2px;'+(warn?"color:#8a5a12":"color:#5c8f74")+'">'+line2+'</span>'
@@ -2562,10 +2584,10 @@ function viewBrief(){
      '<div class="gauge"><span style="width:'+s.fng.v+'%;background:linear-gradient(90deg,#0d8a5f,#8fbf3f,#e8a33d,#d2373a)"></span></div>'+
      '<div class="gscale"><span>'+s.fng.scale[0]+'</span><span>更新 '+s.fng.at+'</span><span>'+s.fng.scale[4]+'</span></div><div class="comp">';
   s.comps.forEach(c=>{ h+='<div class="comp-row"><span>'+c[0]+'</span><span class="bar"><i style="width:'+c[1]+'%"></i></span><span class="n num">'+c[1]+'</span></div>'; });
-  h+='</div><div class="tiny muted" style="margin-top:6px">更新节奏：<b>周二–周六 07:00</b>（美股收盘后）与 <b>周一–周五 20:30</b>（美股盘前），每次全站同批刷新</div></div>';
+  h+='</div><div class="tiny muted" style="margin-top:6px">更新节奏：<b>周二–周六 07:30</b>（美股收盘后）与 <b>周一–周五 20:30</b>（美股盘前），每次全站同批刷新；<b>周六 07:30 为周度切换点</b>（本周核心结论 + 下周策略展望）</div></div>';
   h+='</div></div>';
 
-  /* ---- 01b 本周核心结论（周六 07:00 场生成；一周内有效） ---- */
+  /* ---- 01b 本周核心结论（仅周六 07:30 场生成/更新；一周内有效，其余场次不重写） ---- */
   const lastWeek=BL.find(x=>x.kind==="weekly");
   if(lastWeek){
     const age=(Date.parse(String(hDate)+"T00:00:00Z")-Date.parse(String(lastWeek.d)+"T00:00:00Z"))/864e5;
@@ -2576,7 +2598,7 @@ function viewBrief(){
          '<b style="font-size:12.5px">'+esc(lastWeek.period||lastWeek.d)+'</b>'+
          '<span class="tiny muted">'+esc(lastWeek.stance||"")+'</span>'+
          '<span class="tiny muted" style="margin-left:auto">'+(lastWeek.conclusions||[]).length+' 条结论 · '+(lastWeek.outlook||[]).length+' 条展望'+
-         (lastWeek.source==="manual"?" · 会话定稿":" · 脚本生成")+'</span></summary>'+
+         (lastWeek.source==="manual"?" · 会话定稿":" · 脚本生成")+' · <b>仅周六 07:30 场更新</b></span></summary>'+
          '<div style="margin-top:9px;border-top:1px solid var(--line);padding-top:9px">'+
          (lastWeek.stanceNote?'<div class="stance">'+lastWeek.stanceNote+'</div>':'')+
          '<ol class="concl">'+(lastWeek.conclusions||[]).map(c=>'<li><b>'+c[0]+'</b> '+c[1]+'</li>').join('')+'</ol>'+
@@ -2602,9 +2624,9 @@ function viewBrief(){
   h+='<div class="sec">'+secHead("02","核心结论存档 · 复盘用",
       "每日 + 每周 + 每月留档 · 日存档滚动保留 200 天，周/月长期保留",
       "<span class='upd'>"+BL.length+" 条</span>");
-  h+='<div class="tiny muted" style="margin:0 0 8px;padding-left:2px;line-height:1.8">写入节奏：<b>日</b>——每个交易日 07:00（美股收盘后）；<b>周</b>——周六 07:00（周五收盘后，含下周策略展望）；<b>月</b>——每月 25 日出初稿、月末最后交易日收盘后出终稿。存档原样保留、不改写，方便日后对照当时的数据与判断复盘。</div>';
+  h+='<div class="tiny muted" style="margin:0 0 8px;padding-left:2px;line-height:1.8">写入节奏：<b>日</b>——周二–周六 07:30（美股收盘后）；<b>周</b>——<b>周六 07:30</b>（本周收盘后，出本周核心结论 + 下周策略展望；<b>其余场次不重写这两块</b>）；<b>月</b>——每月 25 日出初稿、月末最后交易日收盘后出终稿。存档原样保留、不改写，方便日后对照当时的数据与判断复盘。</div>';
   if(!BL.length){
-    h+='<div class="card" style="padding:12px 14px"><span class="tiny muted">暂无存档——07:00 场会把当日核心结论写入 brief-log.json，逐日积累。</span></div>';
+    h+='<div class="card" style="padding:12px 14px"><span class="tiny muted">暂无存档——07:30 场会把当日核心结论写入 brief-log.json，逐日积累。</span></div>';
   } else {
     h+='<div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 9px">'+
        ['all','daily','weekly','month'].map((k,i)=>'<span class="tag" data-blf style="cursor:pointer;font-weight:'+(k==="all"?"700":"400")+'" onclick="window.__blFilter(\''+k+'\',this)">'+
@@ -2757,7 +2779,7 @@ function viewBrief(){
   /* ---- 06 盘后：①业绩/异动 ②非财报异动 ---- */
   h+='<div class="sec">'+secHead("06","盘后",
       "场次 "+asOfFmt(postDay)+" 16:00–20:00 美东（北京次日 05:00–09:00）· ① 盘后业绩 / 异动 · ② 非财报驱动异动 · 按披露场次分，非更新批次",
-      "<span class='upd'>计划 07:00</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
+      "<span class='upd'>计划 07:30</span><span class='upd hot'>本次同步 <b>"+(FEED.lastSync||"—")+"</b></span>");
   h+='<div class="sec-head" style="margin:0 0 6px"><span class="sec-title" style="font-size:11px">① 盘后公司业绩（全市场披露 · 公布后涨幅达到门槛入表：大 &gt;3% / 中 &gt;5% / 小 &gt;8%）</span></div>';
   h+=earnTable(b.post,"post");
   h+=earnMvTbl((DATA.earnMvPost||[]).filter(x=>!postSymSet.has(x.t)),"盘后");
@@ -2766,11 +2788,11 @@ function viewBrief(){
     h+='<div class="card" style="padding:11px 14px;margin-top:8px;font-size:11.5px;line-height:1.75;color:#8a5a12;background:#fffbf0;border-color:#f0dfb8">'+
        '<b>本场盘后窗口未留档。</b>Yahoo 的 <b>盘后涨跌只在盘后时段（美东 16:00–20:00）内返回</b>，窗口一过就切到下一场次的盘前字段。'+
        '本次为<b>补跑</b>（北京时间晚间），11-12 的盘后已经结束，所以这里取不到数——<b>不是页面丢了数据</b>。'+
-       '从下一场 07:00 起，抓取脚本会把每场结果写入 <b>movers-log.json 滚动留档</b>，错过窗口也能从这里取回最近一次有效场次，并在标题上标「取自滚动留档」。'+
+       '从下一场 07:30 起，抓取脚本会把每场结果写入 <b>movers-log.json 滚动留档</b>，错过窗口也能从这里取回最近一次有效场次，并在标题上标「取自滚动留档」。'+
        '</div>';
   }
   h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.7">'+
-     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（<b>该场次全部披露公司，不设家数上限</b>），按「公布后股价涨幅达到市值门槛」入表（大 &gt;3% / 中 &gt;5% / 小 &gt;8%），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:00 的同步脚本回填；⑤<b>业绩要点/指引</b>取 <b>东方财富 7×24 快讯</b> 中该公司披露同期的表述（营收/EPS 之外还包括指引与管理层关键表述），覆盖不到的小市值公司留空待补；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥1 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（市值 ≥1 亿美元的普通股；再往下的仙股剔除）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 同样按市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）入表；原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>「原因未知」</b>，<b>不做推测性归因</b>。</div></div>';
+     '<b>抓取口径</b>：①公司名单来自 Nasdaq 财报日历（<b>该场次全部披露公司，不设家数上限</b>），按「公布后股价涨幅达到市值门槛」入表（大 &gt;3% / 中 &gt;5% / 小 &gt;8%），只收当日/前一交易日对应场次的披露，<b>不放隔日条目</b>；②一致预期、去年同期取同日历行；③实际 EPS 与超预期幅度取 Yahoo earningsHistory（与盘前/盘后股价方向一致；Nasdaq 的 eps 字段与 Yahoo 大面积不一致，未采用）；④盘前/盘后价格取 Yahoo 实时报价，开盘跳空与收盘涨跌由次日 07:30 的同步脚本回填；⑤<b>业绩要点/指引</b>取 <b>东方财富 7×24 快讯</b> 中该公司披露同期的表述（营收/EPS 之外还包括指引与管理层关键表述），覆盖不到的小市值公司留空待补；⑥<b>盘前/盘后异动</b>为<b>全市场扫描</b>——Nasdaq 全清单约 7000 只，按市值 ≥1 亿美元截断到 <b>'+((DATA.moversUniverse)||"—")+'</b> 只、实际取到报价 <b>'+((DATA.moversPool)||"—")+'</b> 只（市值 ≥1 亿美元的普通股；再往下的仙股剔除）。分两类：<b>财报/指引驱动</b>（与当日该场次全部披露名单交叉确认，见 ① 详表与 ①b）与<b>非财报驱动</b>（见 ②）；② 同样按市值门槛（大 &gt;3% / 中 &gt;5% / 小 &gt;8%）入表；原因按<b>本场次时间窗口</b>匹配东财 7×24 快讯，窗口外旧闻不采用，匹配不到即标<b>「原因未知」</b>，<b>不做推测性归因</b>。</div></div>';
 
   h+='<div class="sec">'+secHead("07","美股重要研报","宏观策略 · 行业 · 重要个股 · 长期滚动积累",
       "<span class='upd'>"+b.research.length+" 篇累计</span><span class='upd hot'>红色 = 本轮新增</span>");
@@ -2792,7 +2814,7 @@ function viewBrief(){
     h+='</div></div>';
   });
   h+='</div>';
-  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">排序：<b>按日期倒序</b>，最新在最前；<b>红色 = 本轮（本次 07:00 场）新增</b>，重点表述用<b>黑体</b>。原则：只保留可核对出处的机构观点（机构 + 日期 + 核心结论），<b>旧条目不删、只追加</b>，便于回看观点如何演变；目标价只在原文披露时给出，不代机构外推。</div></div>';
+  h+='<div class="tiny muted" style="margin-top:6px;padding-left:2px;line-height:1.75">排序：<b>按日期倒序</b>，最新在最前；<b>红色 = 本轮（本次 07:30 场）新增</b>，重点表述用<b>黑体</b>。原则：只保留可核对出处的机构观点（机构 + 日期 + 核心结论），<b>旧条目不删、只追加</b>，便于回看观点如何演变；目标价只在原文披露时给出，不代机构外推。</div></div>';
 
   /* ---- 08 本季度业绩超预期股票存档 ---- */
   h+=ebSection();
@@ -2827,7 +2849,7 @@ function ebInner(){
   const E=DATA.earnBeat;
   const QS=(E&&E.quarters)||[];
   if(!QS.length || !QS.some(q=>q.rows&&q.rows.length)){
-    return '<div class="card" style="padding:12px 14px"><span class="tiny muted">存档自本次更新起开始积累：财报公布后达到门槛（大市值 &gt;3% / 中型 &gt;5% / 小型 &gt;8%）的股票会自动建档，按自然季度归档；下一轮 07:00 之后这里会出现第一批记录。</span></div>';
+    return '<div class="card" style="padding:12px 14px"><span class="tiny muted">存档自本次更新起开始积累：财报公布后达到门槛（大市值 &gt;3% / 中型 &gt;5% / 小型 &gt;8%）的股票会自动建档，按自然季度归档；下一轮 07:30 之后这里会出现第一批记录。</span></div>';
   }
   if(!EB_ST.q || !QS.some(q=>q.q===EB_ST.q)) EB_ST.q=QS[0].q;
   const cur=QS.find(q=>q.q===EB_ST.q)||QS[0];
@@ -3046,10 +3068,10 @@ function trackNewsSec(t){
   const TN=(typeof window!=="undefined"&&window.TRACK_NEWS)?window.TRACK_NEWS:null;
   if(!TN||!TN.items) return "";
   const rows=(TN.items||[]).filter(x=>x.track===t.id);
-  const head="富途个股资讯 / 播客 / 财经媒体 / KOL 观点 · 近 21 天滚动积累，最新在上 · 每日 07:00 与 20:30 两轮自动更新";
+  const head="富途个股资讯 / 播客 / 财经媒体 / KOL 观点 · 近 21 天滚动积累，最新在上 · 周二–周六 07:30 与 周一–周五 20:30 两轮自动更新";
   if(!rows.length){
     return "<div class='sec' style='margin-top:18px'>"+secHead("02","赛道资讯 · "+t.name,head,"")+
-      "<div class='card'><div class='empty'>本赛道本轮暂无抓取记录，下一轮（每日 07:00 / 20:30）会自动补齐</div></div></div>";
+      "<div class='card'><div class='empty'>本赛道本轮暂无抓取记录，下一轮（07:30 / 20:30）会自动补齐</div></div></div>";
   }
   const cnt={}; rows.forEach(x=>{ cnt[x.kind]=(cnt[x.kind]||0)+1; });
   const order=["futu","pod","media","kol","x"].filter(k=>cnt[k]);
@@ -3199,14 +3221,36 @@ function viewEvents(){
         return '<div class="cal-ev">'+impDot(it.imp)+'<span class="t">'+it.t+'</span><span class="x">'+it.ev+'</span></div>';
       }).join("")+'</div>';
   };
-  h+='<div class="sec">'+secHead("01","事件日历 · 本周 + 下周",e.week.label+"　|　"+e.week.nextLabel+" · 精确到时间与影响等级",
+  /* 周次窗口：北京时间每周六 07:30 切换（20261122）
+     —— 周六 07:30 之前：本周 = 本周一~周日；周六 07:30 起与周日：本周 = 下周一~下周日 */
+  const weekAnchor=(function(){
+    const p=Object.fromEntries(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+    const base=new Date(p.year+"-"+p.month+"-"+p.day+"T00:00:00Z");
+    const dow=base.getUTCDay(), cur=(+p.hour)*60+(+p.minute);   /* 0=周日 */
+    let mon=new Date(base.getTime()+((dow===0?-6:1-dow))*864e5); /* 本周一 */
+    if(dow===0||(dow===6&&cur>=7*60+30)) mon=new Date(mon.getTime()+7*864e5); /* 周六 07:30 起切到下周 */
+    return mon.toISOString().slice(0,10);
+  })();
+  const addD=(s,n)=>new Date(Date.parse(s+"T00:00:00Z")+n*864e5).toISOString().slice(0,10);
+  const mmdd=(s)=>s.slice(5).replace("-","/");
+  const wkInfo=function(start){
+    const w=(e.weeks||[]).find(x=>x.start===start);
+    const end=addD(start,6);
+    return {start:start, range:mmdd(start)+" - "+mmdd(end), note:(w&&w.note)||"", days:(w&&w.days)||[], missing:!w};
+  };
+  const wkA=wkInfo(weekAnchor), wkB=wkInfo(addD(weekAnchor,7));
+  const wkCol=function(w,next,label){
+    const head='<div class="cal-glabel">'+label+' · '+w.range+(w.note?' · '+esc(w.note):'')+'</div>';
+    if(w.missing) return '<div class="cal-grp'+(next?" next":"")+'">'+head+
+      '<div class="tiny muted" style="padding:9px 14px 12px;max-width:330px;line-height:1.75">该周预排尚未录入——周六 07:30 场按官方日历补录后显示。<b>不补编事件</b>。</div></div>';
+    return '<div class="cal-grp'+(next?" next":"")+'">'+head+'<div class="cal-gdays">'+w.days.map(dayCell).join("")+'</div></div>';
+  };
+  h+='<div class="sec">'+secHead("01","事件日历 · 本周 + 下周","本周 "+wkA.range+"　|　下周 "+wkB.range+" · 每周六 07:30 切周",
       "<span class='upd'>红=高 黄=中 灰=低</span>");
   h+='<div class="card" style="padding:8px 0 0"><div class="cal-wrap"><div class="cal-strip">'+
-     '<div class="cal-grp"><div class="cal-glabel">本周 · '+e.week.label.replace(/^本周\s*/,"")+'</div><div class="cal-gdays">'+
-     e.week.days.map(dayCell).join("")+'</div></div>'+
-     '<div class="cal-grp next"><div class="cal-glabel">下周 · '+(e.week.nextLabel||"").replace(/^下周\s*/,"").replace(/·.*$/,"")+'</div><div class="cal-gdays">'+
-     (e.week.nextDays||[]).map(dayCell).join("")+'</div></div>'+
-     '</div></div><div class="cal-hint">← 下方滚轴左右拖动，或按住 Shift+滚轮，可查看下周全部 7 天 →　本周为已核对日历，下周为预排（随官方确认滚动修订）</div></div></div>';
+     wkCol(wkA,false,"本周")+
+     wkCol(wkB,true,"下周")+
+     '</div></div><div class="cal-hint">← 下方滚轴左右拖动，或按住 Shift+滚轮，可查看下周全部 7 天 →　<b>每周六 07:30（本周收盘后）切换到下周窗口</b>：原「下周」升为「本周」，并补入新的「下周」预排；预排随官方确认滚动修订</div></div></div>';
 
   h+='<div class="grid g2">';
   [["02","当月重要事件",e.month],["03","未来三个月",e.quarter]].forEach(g=>{
@@ -3433,7 +3477,7 @@ function viewMovers(){
          '<span class="tiny muted" style="font-size:8.5px;white-space:nowrap;line-height:1">'+x.d.slice(5)+'</span></div>').join('')+
        '</div></div>';
   } else {
-    h+='<div class="card" style="padding:11px 14px;margin-bottom:10px"><span class="tiny muted">新高数量走势：目前只有 '+(H&&H.daily?H.daily.length:0)+' 个交易日记录，从第 2 个交易日起自动画图（脚本每日 07:00 累积）。</span></div>';
+    h+='<div class="card" style="padding:11px 14px;margin-bottom:10px"><span class="tiny muted">新高数量走势：目前只有 '+(H&&H.daily?H.daily.length:0)+' 个交易日记录，从第 2 个交易日起自动画图（脚本每日 07:30 累积）。</span></div>';
   }
   /* 合并表：筛选 chips + 表格（渲染与交互见 hiFollowBody / 模块初始化） */
   h+='<div class="filters" id="hif-filters"></div>';
