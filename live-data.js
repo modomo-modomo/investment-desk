@@ -1,10 +1,10 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-22T07:18:08.093Z",
+  "syncedAt": "2026-11-23T01:11:14.733Z",
   "source": "Yahoo Finance",
   "stockDate": "20261120",
-  "indexDate": "20261120",
-  "crossDate": "20261120"
+  "indexDate": "20261122",
+  "crossDate": "20261122"
  },
  "stocks": {
   "TSLA.O": {
@@ -637,12 +637,12 @@ window.WIND_LIVE = {
   },
   "KS11.GI": {
    "name": "韩国综合指数",
-   "date": "20261120",
-   "level": 4869.96,
-   "prev": 5137.89,
-   "chg": -5.21,
-   "d5": -7.95,
-   "d20": -12,
+   "date": "20261122",
+   "level": 4683.05,
+   "prev": 4869.96,
+   "chg": -3.84,
+   "d5": -8.18,
+   "d20": -15.63,
    "amount": null
   },
   "GDAXI.GI": {
@@ -832,11 +832,11 @@ window.WIND_LIVE = {
   "DXY": {
    "name": "美元指数",
    "unit": "1973年3月=100",
-   "date": "20261120",
+   "date": "20261122",
    "value": 103.807,
    "d1": -0.09,
-   "d5": 0.38,
-   "d20": 2.16,
+   "d5": 0.25,
+   "d20": 1.96,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -844,11 +844,11 @@ window.WIND_LIVE = {
   "GOLD": {
    "name": "COMEX黄金(近月)",
    "unit": "美元/金衡盎司",
-   "date": "20261120",
-   "value": 3685.5,
-   "d1": 4.84,
-   "d5": -5.17,
-   "d20": -9.23,
+   "date": "20261122",
+   "value": 3515.4,
+   "d1": -4.62,
+   "d5": -8.76,
+   "d20": -12.29,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -856,11 +856,11 @@ window.WIND_LIVE = {
   "SILVER": {
    "name": "COMEX白银(近月)",
    "unit": "美元/金衡盎司",
-   "date": "20261120",
-   "value": 44.359,
-   "d1": 8.01,
-   "d5": -9.53,
-   "d20": -19,
+   "date": "20261122",
+   "value": 41.07,
+   "d1": -7.33,
+   "d5": -12.22,
+   "d20": -23.54,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -868,11 +868,11 @@ window.WIND_LIVE = {
   "COPPER": {
    "name": "COMEX铜(近月，折美元/吨)",
    "unit": "美元/吨",
-   "date": "20261120",
-   "value": 12419.74,
-   "d1": 2.71,
-   "d5": -7.34,
-   "d20": -11.46,
+   "date": "20261122",
+   "value": 12092.35,
+   "d1": 0.15,
+   "d5": -8.55,
+   "d20": -15.3,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -880,11 +880,11 @@ window.WIND_LIVE = {
   "WTI": {
    "name": "WTI原油(近月)",
    "unit": "美元/桶",
-   "date": "20261120",
-   "value": 82.44,
-   "d1": -1.16,
-   "d5": -6.91,
-   "d20": -17.12,
+   "date": "20261122",
+   "value": 83.41,
+   "d1": -0.68,
+   "d5": -2.69,
+   "d20": -19.23,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null
@@ -892,11 +892,11 @@ window.WIND_LIVE = {
   "BRENT": {
    "name": "布伦特原油(近月)",
    "unit": "美元/桶",
-   "date": "20261120",
-   "value": 89.44,
-   "d1": -0.57,
-   "d5": -6.68,
-   "d20": -20.97,
+   "date": "20261122",
+   "value": 89.95,
+   "d1": -2.83,
+   "d5": -2.69,
+   "d20": -22.94,
    "dbp1": null,
    "dbp5": null,
    "dbp20": null

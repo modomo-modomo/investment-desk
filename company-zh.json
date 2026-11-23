@@ -5554,5 +5554,377 @@
   "desc": "Grandstand Limited 为北美、英国、爱尔兰、欧洲其他地区和国际博彩业提供营销和体育数据服务。该公司为 iGaming 和社交赌场产品提供数字营销以及消费者和企业数据订阅服务",
   "en": "Grandstand Limited provides marketing and sports data services for the gambling industry in North America, the United Kingdom, Ireland, rest of Europe, and inte",
   "at": "2026-11-20T23:36:03.368Z"
+ },
+ "DGICB": {
+  "ind": "保险 - 财产与意外伤害",
+  "desc": "Donegal Group Inc. 是一家保险控股公司，提供商业和个人财产及伤亡保险。它通过三个部门运营：投资职能部门、商业保险部门和个人保险部门。该公司为bo提供免责保护",
+  "en": "Donegal Group Inc., an insurance holding company, provides commercial and personal lines of property and casualty coverages. It operates through three segments:",
+  "at": "2026-11-23T01:11:40.492Z"
+ },
+ "SFIX": {
+  "ind": "服装零售",
+  "desc": "Stitch Fix, Inc. 在美国从事服装和配饰供应业务。该公司提供女装、男装、童装、小号、孕妇装和大号服装，以及鞋子和配饰。它还通过其网站和移动应用程序提供个人造型服务。康帕",
+  "en": "Stitch Fix, Inc. engages in the provision of clothing and accessories in the United States. The company offers women's, men's, kids, petite, maternity, and plus",
+  "at": "2026-11-23T01:11:41.603Z"
+ },
+ "SVCO": {
+  "ind": "软件 - 应用程序",
+  "desc": "Silvaco Group, Inc. 在美国和国际上提供技术计算机辅助设计 (TCAD) 软件、电子设计自动化 (EDA) 软件和半导体知识产权 (SIP) 解决方案。公司的TCAD软件用于半导体行业建模和运算",
+  "en": "Silvaco Group, Inc. provides technology computer aided design (TCAD) software, electronic design automation (EDA) software, and semiconductor intellectual prope",
+  "at": "2026-11-23T01:11:43.829Z"
+ },
+ "CSQ": {
+  "ind": "资产管理",
+  "desc": "Calamos 战略总回报基金是 Calamos Investments LLC 推出的封闭式平衡共同基金。该基金由 Calamos Advisors LLC 管理。它投资于美国的公共股权和固定收益市场。该基金寻求投资于",
+  "en": "Calamos Strategic Total Return Fund is a closed ended balanced mutual fund launched by Calamos Investments LLC. The fund is managed by Calamos Advisors LLC. It ",
+  "at": "2026-11-23T01:11:45.036Z"
+ },
+ "SPIR": {
+  "ind": "专业商业服务",
+  "desc": "Spire Global, Inc. 在美洲、欧洲、中东、非洲和亚太地区提供基于订阅的数据、见解、预测分析和相关的基于项目的服务。该公司提供太空侦察服务，为国防、情报、",
+  "en": "Spire Global, Inc. provides subscription-based data, insights, predictive analytics, and related project-based services in the Americas, Europe, the Middle East",
+  "at": "2026-11-23T01:11:47.031Z"
+ },
+ "KYMR": {
+  "ind": "生物技术",
+  "desc": "Kymera Therapeutics, Inc. 是一家临床阶段的生物制药公司，专注于发现和开发小分子疗法，通过利用人体自身的天然蛋白质降解系统选择性地降解致病蛋白质。它致力于开发KT-621，一种口服STAT6 d",
+  "en": "Kymera Therapeutics, Inc., a clinical-stage biopharmaceutical company, focuses on discovering and developing small molecule therapeutics that selectively degrad",
+  "at": "2026-11-23T01:11:48.161Z"
+ },
+ "PSQL": {
+  "ind": "电脑硬件",
+  "desc": "Pasqal Holding SA 开发中性原子量子计算机并提供全栈量子计算平台。该公司设计和制造基于中性原子技术的量子处理器，并将其与高性能计算环境集成，用于混合量子计算应用。",
+  "en": "Pasqal Holding SA develops neutral-atom quantum computers and provides a full-stack quantum computing platform. The company designs and manufactures quantum pro",
+  "at": "2026-11-23T01:11:49.863Z"
+ },
+ "AZ": {
+  "ind": "软件 - 应用程序",
+  "desc": "A2Z Cust2Mate Solutions Corp. 是一家科技公司，专注于为以色列和国际杂货店和超市开发和商业化零售智能购物车解决方案。它通过精密金属零件、先进工程和智能推车部门运营。康帕",
+  "en": "A2Z Cust2Mate Solutions Corp., a technology company, focuses on the development and commercialization of retail smart cart solutions for grocery stores and supe",
+  "at": "2026-11-23T01:11:50.901Z"
+ },
+ "IVVD": {
+  "ind": "生物技术",
+  "desc": "Invivyd, Inc. 及其子公司在美国从事预防和治疗病毒传染病的抗体疗法的研究、开发、商业化和销售。该公司提供 Pemivibart，一种半衰期延长的研究性单克隆抗体",
+  "en": "Invivyd, Inc., together with its subsidiaries, engages in the research, development, commercialization, and sale of antibody therapies for the prevention and tr",
+  "at": "2026-11-23T01:11:53.139Z"
+ },
+ "XTND": {
+  "ind": "电脑硬件",
+  "desc": "Xtend AI Robotics, Inc. 设计和开发用于国防、国土安全和商业安全应用的人工智能驱动的机器人和自主系统。公司核心平台XOS（XTEND Operating System）将自主平台、AI、运营商打通为",
+  "en": "Xtend AI Robotics, Inc. designs and develops artificial intelligence-powered robotics and autonomous systems for defense, homeland security, and commercial secu",
+  "at": "2026-11-23T01:11:54.468Z"
+ },
+ "IRTC": {
+  "ind": "医疗器械",
+  "desc": "iRhythm Holdings, Inc. 是一家数字医疗保健公司，在美国从事基于设备的技术的设计、开发和商业化，该技术提供动态心脏监测服务以诊断心律失常。该公司提供 Zio 动态心脏监测服务，",
+  "en": "iRhythm Holdings, Inc., a digital healthcare company, engages in the design, development, and commercialization of device-based technology that provides ambulat",
+  "at": "2026-11-23T01:11:55.696Z"
+ },
+ "SVIA": {
+  "ind": "资本市场",
+  "desc": "Silvia, Inc. 设计、开发和运营人工智能驱动的个人 CFO 平台，帮助投资者实时管理、监控和分析其财务状况。该公司的平台提供个人财务管理工具、投资组合跟踪、投资分析、税务分析和人工智能-",
+  "en": "Silvia, Inc. designs, develops, and operates an AI-powered personal CFO platform that helps investors manage, monitor, and analyze their financial positions in ",
+  "at": "2026-11-23T01:11:57.079Z"
+ },
+ "HBNB": {
+  "ind": "房地产服务",
+  "desc": "Hotel101 Global Holdings Corp. 在全球范围内运营道具科技酒店平台。参与各酒店建设阶段单位的预售；以及来自日常酒店运营的长期经常性收入。该公司总部位于新加坡新加坡。环球101酒店",
+  "en": "Hotel101 Global Holdings Corp. operates prop-tech hospitality platform internationally. It is involved in the pre-sales of units from each hotel's construction ",
+  "at": "2026-11-23T01:11:58.846Z"
+ },
+ "HIPO": {
+  "ind": "保险 - 财产与意外伤害",
+  "desc": "Hippo Holdings Inc. 及其子公司主要向美国的个人和企业客户提供财产和伤亡保险产品。该公司通过自有和合作伙伴管理总代理 (MGA) 提供多运营商平台，作为获得许可的 i",
+  "en": "Hippo Holdings Inc., together with its subsidiaries, provides property and casualty insurance products to individuals and business customers primarily in the Un",
+  "at": "2026-11-23T01:12:00.884Z"
+ },
+ "HTGC": {
+  "ind": "资产管理",
+  "desc": "Hercules Capital, Inc. 是一家业务开发公司。该公司专门为处于从中期风险到扩张阶段各个发展阶段的私人风险资本支持的公司提供私募股权、风险债务和成长资本，包括精选的上市公司",
+  "en": "Hercules Capital, Inc. is a business development company. The firm specializing in providing private equity, venture debt, and growth capital to privately held ",
+  "at": "2026-11-23T01:12:02.759Z"
+ },
+ "EVLV": {
+  "ind": "安全与保护服务",
+  "desc": "Evolv Technologies Holdings, Inc. 在美国和国际上开发、制造、营销和销售安全检查产品和特定服务。它提供 Evolv Express，旨在检测非结构中的枪支、简易爆炸装置和大型战术刀具。",
+  "en": "Evolv Technologies Holdings, Inc. develops, manufactures, markets, and sells security screening products and specific services in the United States and internat",
+  "at": "2026-11-23T01:12:04.569Z"
+ },
+ "BIPC": {
+  "ind": "公用事业 - 受监管的天然气",
+  "desc": "布鲁克菲尔德基础设施公司及其子公司在巴西、英国和国际上拥有并经营公用事业投资。它还从事受监管的天然气和电力业务；以及受监管的天然气传输系统的运行。公司经营",
+  "en": "Brookfield Infrastructure Corporation, together with its subsidiaries, owns and operates utility investments in Brazil, the United Kingdom, and internationally.",
+  "at": "2026-11-23T01:12:06.301Z"
+ },
+ "LFST": {
+  "ind": "医疗设施",
+  "desc": "LifeStance Health Group, Inc. 通过其子公司为美国的儿童、青少年、成人和老年人提供门诊心理健康服务。该公司为患者提供多学科的心理健康服务、精神病学评估和治疗、心理学",
+  "en": "LifeStance Health Group, Inc., through its subsidiaries, provides outpatient mental health services to children, adolescents, adults, and geriatrics in the Unit",
+  "at": "2026-11-23T01:12:07.836Z"
+ },
+ "RSKD": {
+  "ind": "软件 - 应用程序",
+  "desc": "Riskified Ltd. 与其子公司一起开发并提供电子商务风险智能平台，使在线商家能够与美国、欧洲、中东、非洲、亚太地区和美洲的消费者建立信任关系。它提供退款瓜尔豆",
+  "en": "Riskified Ltd., together with its subsidiaries, develops and offers an e-commerce risk intelligent platform that allows online merchants to create trusted relat",
+  "at": "2026-11-23T01:12:10.316Z"
+ },
+ "CCCC": {
+  "ind": "生物技术",
+  "desc": "C4 Therapeutics, Inc. 是一家临床阶段的生物制药公司，开发新的治疗候选药物来降解致病蛋白质。其主要候选产品是西西多胺，这是一种口服生物可利用的单药，针对 IKZF1 和 IKZF3 或 IKZF1/3",
+  "en": "C4 Therapeutics, Inc., a clinical-stage biopharmaceutical company, develops novel therapeutic candidates to degrade disease-causing proteins. Its lead product c",
+  "at": "2026-11-23T01:12:11.914Z"
+ },
+ "CRC": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "加州资源公司在美国作为一家独立的能源和碳管理公司运营。该公司经营两个部门：石油和天然气部门以及碳管理部门。它勘探、开发和生产原油、凝析油、液化天然气和天然气",
+  "en": "California Resources Corporation operates as an independent energy and carbon management company in the United States. The company operates in two segments, Oil",
+  "at": "2026-11-23T01:12:13.476Z"
+ },
+ "FMBM": {
+  "ind": "银行 - 区域",
+  "desc": "F & M Bank Corp. 作为 Farmers & Merchants Bank 的银行控股公司运营，为弗吉尼亚州的消费者和企业提供金融产品和服务。该公司提供商业和个人活期和定期存款账户、储蓄账户、货币市场账户、",
+  "en": "F & M Bank Corp. operates as the bank holding company for Farmers & Merchants Bank that provides financial products and services to consumers and businesses in ",
+  "at": "2026-11-23T01:12:15.048Z"
+ },
+ "HIMS": {
+  "ind": "药品制造商 - 特种药品和非专利药品",
+  "desc": "Hims & Hers Health, Inc. 是一个消费者至上的健康和保健平台，将消费者与美国、英国、加拿大、德国、爱尔兰共和国、法国、西班牙、澳大利亚和国际上的持证医疗保健专业人士联系起来。公司提供一系列",
+  "en": "Hims & Hers Health, Inc. operates as a consumer-first health and wellness platform that connects consumers to licensed healthcare professionals in the United St",
+  "at": "2026-11-23T01:12:17.091Z"
+ },
+ "SNDL": {
+  "ind": "饮料 - 酿酒厂和酿酒厂",
+  "desc": "SNDL Inc. 从事加拿大和国际成人使用市场的大麻产品的生产、分销和销售。它通过四个部门运营：酒类零售、大麻零售、大麻运营和投资。公司主要从事种植、销售、",
+  "en": "SNDL Inc. engages in the production, distribution, and sale of cannabis products for the adult-use market in Canada and internationally. It operates through fou",
+  "at": "2026-11-23T01:12:18.773Z"
+ },
+ "CABA": {
+  "ind": "生物技术",
+  "desc": "Cabaletta Bio, Inc. 是一家临床阶段的生物技术公司，专注于为自身免疫性疾病患者发现和开发工程 T 细胞疗法。该公司的主要候选产品是 resecabtagene autoleucel，一种包含 4-1BB",
+  "en": "Cabaletta Bio, Inc., a clinical-stage biotechnology company, focuses on the discovery and development of engineered T cell therapies for patients with autoimmun",
+  "at": "2026-11-23T01:12:20.807Z"
+ },
+ "TROX": {
+  "ind": "化学品",
+  "desc": "Tronox Holdings plc 在北美、南美洲和中美洲、欧洲、中东、非洲和亚太地区作为 TiO2 颜料制造商运营。公司经营含钛矿砂矿；并从事选矿和冶炼业务。它提供 TiO2 颜料；你",
+  "en": "Tronox Holdings plc operates as a manufacturer of TiO2 pigment in North America, South and Central America, Europe, the Middle East, Africa, and the Asia Pacifi",
+  "at": "2026-11-23T01:12:22.834Z"
+ },
+ "AVEX": {
+  "ind": "航空航天与国防",
+  "desc": "AEVEX Corp. 是一家国防技术承包商，也是美国无人机系统 (UAS) 主导战略任务的推动者。该公司分为两个部门：战术系统部门和全球解决方案部门。战术系统设计和制造经过战斗考验的、自主的、模块化的和",
+  "en": "AEVEX Corp. operates as a defense technology contractor and enabler of the U.S. Unmanned Aerial Systems (UAS) dominance strategy mission. The company operates i",
+  "at": "2026-11-23T01:12:24.476Z"
+ },
+ "HBAN": {
+  "ind": "银行 - 区域",
+  "desc": "Huntington Bancshares Incorporated 是亨廷顿国家银行的银行控股公司，提供商业、消费者和抵押银行服务。它为消费者和企业客户提供金融产品和服务，包括存款、贷款、支付、抵押贷款等。",
+  "en": "Huntington Bancshares Incorporated operates as the bank holding company for The Huntington National Bank that provides commercial, consumer, and mortgage bankin",
+  "at": "2026-11-23T01:12:26.584Z"
+ },
+ "RPD": {
+  "ind": "软件 - 基础设施",
+  "desc": "Rapid7, Inc. 以 Rapid7、Nexpose 和 Metasploit 品牌提供网络安全软件和服务。它提供Rapid7 Agent，这是一种基于软件的代理，用于跨本地和云环境的资产，以集中和监控公司平台上的",
+  "en": "Rapid7, Inc. provides cybersecurity software and services under the Rapid7, Nexpose, and Metasploit brand names. It offers Rapid7 Agent, a software-based agent ",
+  "at": "2026-11-23T01:12:29.679Z"
+ },
+ "DEC": {
+  "ind": "油气一体化",
+  "desc": "多元化能源公司是一家独立能源公司，主要在美国阿巴拉契亚和中部地区从事天然气、石油和液体的生产、运输和营销。它还在 Bossier 和 Haynesville 页岩地层以及 Cotton V 作业",
+  "en": "Diversified Energy Company, an independent energy company, engages in the production, transportation and marketing of natural gas, oil, and liquids primarily in",
+  "at": "2026-11-23T01:12:31.256Z"
+ },
+ "HIVE": {
+  "ind": "资本市场",
+  "desc": "HIVE Digital Technologies Ltd. 是一家科技公司，在百慕大、巴拉圭、瑞典和加拿大建设和运营由绿色能源供电的数据中心。该公司经营数字货币的开采和销售以及性能计算托管。它还提供基础设施解决方案，例",
+  "en": "HIVE Digital Technologies Ltd., a technology company, builds and operates data centers powered by green energy in Bermuda, Paraguay, Sweden, and Canada. The Com",
+  "at": "2026-11-23T01:12:32.801Z"
+ },
+ "MITT": {
+  "ind": "房地产投资信托基金 - 抵押贷款",
+  "desc": "TPG Mortgage Investment Trust, Inc. 在美国作为住宅抵押房地产投资信托公司运营。其投资组合包括住宅投资，例如非机构贷款、符合机构资格的贷款、房屋净值贷款、再贷款和不良贷款以及非机构住宅",
+  "en": "TPG Mortgage Investment Trust, Inc. operates as a residential mortgage real estate investment trust in the United States. Its investment portfolio comprises res",
+  "at": "2026-11-23T01:12:35.416Z"
+ },
+ "PANL": {
+  "ind": "海运",
+  "desc": "Pangea Logistics Solutions Ltd. 及其子公司为全球工业客户提供海运干散货物流和运输服务。提供谷物、煤炭、铁矿石、生铁、热压块铁、铝土矿等各种干散货的运输服务",
+  "en": "Pangaea Logistics Solutions Ltd., together with its subsidiaries, provides seaborne dry bulk logistics and transportation services to industrial customers world",
+  "at": "2026-11-23T01:12:37.698Z"
+ },
+ "EZPW": {
+  "ind": "信用服务",
+  "desc": "EZCORP, Inc. 在美国、墨西哥、其他拉丁美洲和加勒比地区提供典当服务。它通过三个部门运营：美国典当部门、拉丁美洲典当部门和 SMG 部门。该公司出售因典当活动而没收的二手抵押品或从客户处购买的商品。它",
+  "en": "EZCORP, Inc. provides pawn services in the United States, Mexico, other Latin America, and the Caribbean. It operates through three segments: U.S. Pawn, Latin A",
+  "at": "2026-11-23T01:12:39.026Z"
+ },
+ "RH": {
+  "ind": "专业零售",
+  "desc": "RH 及其子公司在美国、加拿大、英国、德国、比利时和西班牙的家居市场上作为零售商和生活方式品牌运营。该公司经营三个部门：RH 部门、自来水部门和房地产部门。它提供各种商品",
+  "en": "RH, together with its subsidiaries, operates as a retailer and lifestyle brand in the home furnishings market in the United States, Canada, the United Kingdom, ",
+  "at": "2026-11-23T01:12:41.224Z"
+ },
+ "AOUT": {
+  "ind": "闲暇",
+  "desc": "American Outdoor Brands, Inc. 为美国和国际上的户外运动爱好者提供户外产品和配件。提供射击运动配件产品，包括休息架、跳马及其他相关配件；户外生活方式产品，例如优质运动",
+  "en": "American Outdoor Brands, Inc. provides outdoor products and accessories for rugged outdoor enthusiasts in the United States and internationally. It provides sho",
+  "at": "2026-11-23T01:12:42.243Z"
+ },
+ "GUER": {
+  "ind": "半导体",
+  "desc": "Guerrilla RF, Inc. 是一家无晶圆厂半导体公司，为美国服务欠缺市场的客户提供射频 (RF) 解决方案。该公司从事无线基础设施单片微波集成电路的设计、制造、应用和销售",
+  "en": "Guerrilla RF, Inc., a fabless semiconductor company, provides radio frequency (RF) solutions to customers in underserved markets in the United States. The compa",
+  "at": "2026-11-23T01:12:42.942Z"
+ },
+ "PL": {
+  "ind": "航空航天与国防",
+  "desc": "Planet Labs PBC 从事卫星星座的设计、建造和发射，旨在通过美国和国际在线平台向客户提供高节奏的地理空间数据。该公司提供 SuperDove 卫星来创建一个",
+  "en": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delive",
+  "at": "2026-11-23T01:12:44.197Z"
+ },
+ "FHTX": {
+  "ind": "生物技术",
+  "desc": "Foghorn Therapeutics Inc. 是一家临床阶段的生物制药公司，在美国致力于发现和开发针对染色质监管系统内基因决定依赖性的药物。该公司使用其专有的基因流量控制平台来识别",
+  "en": "Foghorn Therapeutics Inc., a clinical-stage biopharmaceutical company, engages in the discovery and development of medicines targeting genetically determined de",
+  "at": "2026-11-23T01:12:45.594Z"
+ },
+ "IMAX": {
+  "ind": "娱乐",
+  "desc": "IMAX Corporation 及其子公司作为一个娱乐和活动技术平台在美国、加拿大、大中华区、亚洲其他地区、西欧、拉丁美洲和国际上运营。它通过内容解决方案运营；和技术产品和服务",
+  "en": "IMAX Corporation, together with its subsidiaries, operates as a technology platform for entertainment and events in the United States, Canada, Greater China, re",
+  "at": "2026-11-23T01:12:46.793Z"
+ },
+ "SOUN": {
+  "ind": "软件 - 应用程序",
+  "desc": "SoundHound AI, Inc. 提供独立的语音人工智能 (AI) 解决方案，使汽车、电视、物联网和客户服务行业的企业能够为美国、韩国、法国、日本、德国和国际客户提供对话体验。时间",
+  "en": "SoundHound AI, Inc. provides independent voice artificial intelligence (AI) solutions that enables businesses across the automotive, TV, IoT, and customer servi",
+  "at": "2026-11-23T01:12:47.834Z"
+ },
+ "TRDA": {
+  "ind": "生物技术",
+  "desc": "Entrada Therapeutics, Inc. 是一家临床阶段的生物制药公司，旨在通过开发一类新的药物来改变患者的生活，这些药物可以作用于长期以来被认为难以接近的细胞内靶点。该公司的内体逃逸载体，候选治疗药物",
+  "en": "Entrada Therapeutics, Inc., is a clinical-stage biopharmaceutical company aiming to transform the lives of patients by establishing a new class of medicines tha",
+  "at": "2026-11-23T01:12:49.906Z"
+ },
+ "SERV": {
+  "ind": "综合货运及物流",
+  "desc": "Serve Robotics Inc. 设计、开发和运营低排放机器人，为美国公共和商业场所的人们提供食品配送活动服务。它建造自动驾驶送货机器人。 Serve Robotics Inc. 成立于 2017 年，总部位于加利",
+  "en": "Serve Robotics Inc. designs, develops, and operates low-emission robots that serve people in public and commercial spaces for food delivery activity in the Unit",
+  "at": "2026-11-23T01:12:51.440Z"
+ },
+ "XE": {
+  "ind": "特种工业机械",
+  "desc": "X-Energy, Inc. 设计和开发核反应堆技术。该公司生产核燃料。它提供设计用于产生 80 兆瓦电力或 200 兆瓦热输出（热量）的 Xe-100 反应堆以及反应堆燃料 TRISO-X。公司成立于20年",
+  "en": "X-Energy, Inc. designs and develops nuclear reactor technology. The company manufactures nuclear fuels. It provides the Xe-100 reactor that is designed to gener",
+  "at": "2026-11-23T01:12:52.634Z"
+ },
+ "WRN": {
+  "ind": "其他工业金属和采矿",
+  "desc": "西部铜金公司是一家勘探阶段公司，在加拿大从事矿产勘探和开发。它勘探金、铜、银和钼矿床。其主要财产是位于加拿大育空地区的赌场矿产。公司是",
+  "en": "Western Copper and Gold Corporation, an exploration stage company, engages in the exploration and development of mineral properties in Canada. It explores for g",
+  "at": "2026-11-23T01:12:54.056Z"
+ },
+ "AVAV": {
+  "ind": "航空航天与国防",
+  "desc": "AeroVironment, Inc. 是一家国防技术提供商，为美国和国际上的政府机构和企业设计、开发、生产、交付和支持一系列机器人系统及相关服务。该公司分为两个部门：自主系统部门；和S",
+  "en": "AeroVironment, Inc., a defense technology provider, designs, develops, produces, delivers, and supports a portfolio of robotic systems and related services for ",
+  "at": "2026-11-23T01:12:55.286Z"
+ },
+ "FLY": {
+  "ind": "航空航天与国防",
+  "desc": "Firefly Aerospace Inc. 是一家太空和国防技术公司，为美国国家安全、政府和商业客户提供任务解决方案。该公司提供集成的发射和空间服务技术，致力于实现发射、运输和",
+  "en": "Firefly Aerospace Inc. operates as a space and defense technology company and provides mission solutions for national security, government, and commercial custo",
+  "at": "2026-11-23T01:12:56.547Z"
+ },
+ "AMSC": {
+  "ind": "特种工业机械",
+  "desc": "美国超导公司及其子公司在全球范围内提供兆瓦级电力弹性解决方案。该公司通过两个部门运营：电网部门和风能部门。电网部门提供的产品和服务使电力公用事业、工业设施、",
+  "en": "American Superconductor Corporation, together with its subsidiaries, provides megawatt-scale power resiliency solutions worldwide. The company operates through ",
+  "at": "2026-11-23T01:12:57.498Z"
+ },
+ "BKSY": {
+  "ind": "专业商业服务",
+  "desc": "BlackSky Technology Inc. 是一家在美国和国际上运营的太空技术公司。该公司提供天基智能和人工智能（AI）服务、任务解决方案以及由云计算和托管服务组成的先进技术项目",
+  "en": "BlackSky Technology Inc. operates as a space-based technology company in the United States and internationally. The company offers space-based intelligence and ",
+  "at": "2026-11-23T01:12:58.442Z"
+ },
+ "ENPH": {
+  "ind": "太阳的",
+  "desc": "Enphase Energy, Inc. 及其子公司为美国和国际太阳能光伏行业设计、开发、制造和销售家庭能源解决方案。该公司提供基于半导体的微型逆变器，可在单个太阳能模块上转换能量",
+  "en": "Enphase Energy, Inc., together with its subsidiaries, designs, develops, manufactures, and sells home energy solutions for the solar photovoltaic industry in th",
+  "at": "2026-11-23T01:12:59.443Z"
+ },
+ "LCID": {
+  "ind": "汽车制造商",
+  "desc": "Lucid Group, Inc. 是一家科技公司，设计、开发、制造和销售电动汽车 (EV)、EV 动力总成和电池系统。该公司提供 Lucid Air 轿车和 Lucid Gravity SUV。它还为 Lucid 车辆",
+  "en": "Lucid Group, Inc., a technology company, designs, develops, manufactures, and sells electric vehicles (EV), EV powertrains, and battery systems. The company pro",
+  "at": "2026-11-23T01:13:00.730Z"
+ },
+ "KMX": {
+  "ind": "汽车和卡车经销商",
+  "desc": "CarMax, Inc. 通过其子公司在美国经营二手车及相关产品的零售商。该公司分为两个部门：CarMax 销售运营部门和 CarMax 汽车金融部门。 CarMax 销售运营部门为客户提供一系列品牌和型号的二手车",
+  "en": "CarMax, Inc., through its subsidiaries, operates as a retailer of used vehicles and related products in the United States. The company operates in two segments:",
+  "at": "2026-11-23T01:13:02.005Z"
+ },
+ "ULTA": {
+  "ind": "专业零售",
+  "desc": "Ulta Beauty, Inc. 是一家专业美容零售商，在美国、墨西哥和科威特开展业务。该公司通过其提供品牌和自有品牌美容产品，包括化妆品、香水、护发、护肤、沐浴和身体产品、专业美发产品和沙龙造型工具",
+  "en": "Ulta Beauty, Inc. operates as a specialty beauty retailer in the United States, Mexico, and Kuwait. The company offers branded and private label beauty products",
+  "at": "2026-11-23T01:13:03.425Z"
+ },
+ "AMRX": {
+  "ind": "药品制造商 - 特种药品和非专利药品",
+  "desc": "Amneal Pharmaceuticals, Inc. 是一家全球生物制药公司，在美国、印度、爱尔兰和国际上开发、制造、营销和分销仿制药、注射剂、生物仿制药和专业品牌药品。该公司通过三个部门运营：",
+  "en": "Amneal Pharmaceuticals, Inc., a global biopharmaceutical company, develops, manufactures, markets, and distributes generics, injectables, biosimilars, and speci",
+  "at": "2026-11-23T01:13:04.051Z"
+ },
+ "LAC": {
+  "ind": "其他工业金属和采矿",
+  "desc": "Lithium Americas Corp. 是一家资源和材料公司，专注于在美国和加拿大开发、建设和运营锂矿床和化学加工设施。该公司的旗舰资产是位于洪堡伯爵麦克德米特火山口的 Thacker Pass 项目",
+  "en": "Lithium Americas Corp., a resource and materials company, focuses on developing, building, and operating of lithium deposits and chemical processing facilities ",
+  "at": "2026-11-23T01:13:05.242Z"
+ },
+ "MCHP": {
+  "ind": "半导体",
+  "desc": "Microchip Technology Incorporated 在美洲、欧洲和亚洲开发、制造和销售智能、互联和安全的嵌入式控制解决方案。它分为两个部门：半导体产品部门和技术许可部门。该公司提供通用8位、16位、32位",
+  "en": "Microchip Technology Incorporated develops, manufactures, and sells smart, connected, and secure embedded control solutions in the Americas, Europe, and Asia. I",
+  "at": "2026-11-23T01:13:06.321Z"
+ },
+ "FSLR": {
+  "ind": "太阳的",
+  "desc": "First Solar, Inc. 是一家太阳能技术公司，在美国、法国、印度、智利和国际上提供光伏 (PV) 太阳能解决方案。该公司采用薄膜半导体技术制造和销售光伏太阳能组件，提供传统的晶体硅",
+  "en": "First Solar, Inc., a solar technology company, provides photovoltaic (PV) solar energy solutions in the United States, France, India, Chile, and internationally",
+  "at": "2026-11-23T01:13:07.670Z"
+ },
+ "FTAI": {
+  "ind": "航空航天与国防",
+  "desc": "FTAI Aviation Ltd. 拥有、收购和销售用于全球货物和人员运输的航空设备。该公司分为航空租赁和航空航天产品两个部门。航空租赁部门拥有、租赁、管理和销售飞机和飞机发动机。截至12月31日，",
+  "en": "FTAI Aviation Ltd. owns, acquires, and sells aviation equipment for the transportation of goods and people worldwide. It operates in two segments, Aviation Leas",
+  "at": "2026-11-23T01:13:09.021Z"
+ },
+ "ADC": {
+  "ind": "房地产投资信托基金 - 零售",
+  "desc": "Agree Realty Corporation 是一家公开交易的房地产投资信托公司。该公司正在通过收购和开发净租赁给行业领先的全渠道零售租户的物业来重新思考零售业。截至 2026 年 9 月 30 日，该公司拥有并经营",
+  "en": "Agree Realty Corporation is a publicly traded real estate investment trust. The Firm is Rethinking Retail through the acquisition and development of properties ",
+  "at": "2026-11-23T01:13:10.395Z"
+ },
+ "IRD": {
+  "ind": "生物技术",
+  "desc": "Opus Genetics, Inc. 是一家临床阶段的生物制药公司，开发基因疗法以恢复遗传性视网膜疾病 (IRD) 患者的视力并防止失明，并开发针对其他眼科疾病的其他类型的疗法。它开发了 OPGx-LCA5，一种早发性",
+  "en": "Opus Genetics, Inc., a clinical-stage biopharmaceutical company, develops gene therapies to restore vision and prevent blindness in patients with inherited reti",
+  "at": "2026-11-23T01:13:11.973Z"
+ },
+ "ALTO": {
+  "ind": "特种化学品",
+  "desc": "Alto Ingredients, Inc. 在美国生产、分销和销售特种酒精、可再生燃料和基本成分。该公司分为三个部门：营销和分销部门、北京校园制作部门和西部制作部门。它提供用于口腔的特种酒精",
+  "en": "Alto Ingredients, Inc. produces, distributes, and markets specialty alcohols, renewable fuel, and essential ingredients in the United States. The company operat",
+  "at": "2026-11-23T01:13:13.224Z"
+ },
+ "UUUU": {
+  "ind": "铀",
+  "desc": "Energy Fuels Inc. 及其子公司在美国从事铀矿产的勘探、回收、再循环、勘探、运营、开发、许可、评估和销售。它通过三个部门运营：铀部门、稀土部门和 HMS 部门。它生产和销售",
+  "en": "Energy Fuels Inc., together with its subsidiaries, engages in the exploration, recovery, recycling, exploration, operation, development, permitting, evaluation,",
+  "at": "2026-11-23T01:13:14.585Z"
  }
 }
