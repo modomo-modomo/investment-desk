@@ -1,14 +1,14 @@
 window.TRACK_NEWS = {
  "meta": {
-  "syncedAt": "2026-11-23T13:58:52.252Z",
-  "total": 492,
-  "fresh": 42,
+  "syncedAt": "2026-11-24T00:19:38.802Z",
+  "total": 522,
+  "fresh": 32,
   "window": 21,
   "sources": {
    "futu": {
-    "ok": 1,
-    "fail": 36,
-    "n": 3,
+    "ok": 0,
+    "fail": 37,
+    "n": 0,
     "label": "富途个股资讯"
    },
    "pod": {
@@ -20,19 +20,19 @@ window.TRACK_NEWS = {
    "media": {
     "ok": 3,
     "fail": 0,
-    "n": 25,
+    "n": 46,
     "label": "财经媒体"
    },
    "search": {
     "ok": 9,
     "fail": 0,
-    "n": 69,
+    "n": 65,
     "label": "赛道检索"
    },
    "kol": {
     "ok": 1,
     "fail": 0,
-    "n": 25,
+    "n": 24,
     "label": "KOL 观点"
    },
    "x": {
@@ -44,25 +44,278 @@ window.TRACK_NEWS = {
    }
   },
   "byKind": {
-   "media": 346,
-   "kol": 42,
+   "kol": 46,
+   "media": 372,
    "pod": 17,
    "futu": 87
   },
   "byTrack": {
-   "infra": 117,
-   "sec": 39,
-   "phy": 78,
-   "app": 62,
-   "cpu": 51,
-   "pkg": 52,
-   "fin": 39,
-   "bio": 29,
+   "infra": 127,
+   "sec": 42,
+   "phy": 84,
+   "app": 64,
+   "cpu": 55,
+   "pkg": 54,
+   "fin": 41,
+   "bio": 30,
    "edge": 25
   },
   "note": "富途个股资讯（聚合中文财经媒体）+ 播客（All-In/Stratechery/Sharp Tech/No Priors/Acquired/硅谷101）+ 财经媒体（CNBC/Seeking Alpha/Reuters）+ 赛道关键词检索 + KOL 观点（媒体转述）"
  },
  "items": [
+  {
+   "t": "2026-11-24 08:07",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "Cathie Wood Swapped Nvidia for SpaceX Over the Risk of \"Losing Jensen.\" Now Jensen's Back",
+   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOUFRxaDFZWUpYMHZ2ZXo4UzJFTHBJcXN6M1NDOFZTVXFaWEYzYjByQ0M3SWpJcFFNczVZTEMtNXNtVlBrVnZOY3JCZUxkckIwdF9SaXBxMXlFRXhGUVdiaVNhT19LWExDUlVvVnVTc2MtYms3dWFUWHk0a1VtbEFiLXhlMVBpQzluUDlpbTJlRzJWQUhvQW03X0k1N1FCcjFUSHd3cjFQOTRJNk9GN3RDcjBFQ3ozNWl6MzZ1dC16M2pDMnRpUnlkeA?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 08:02",
+   "d": "2026-11-24",
+   "track": "sec",
+   "kind": "media",
+   "src": "Seeking Alpha",
+   "title": "CrowdStrike expects $1B revenue synergies and $500M cost synergies from proposed Zscaler deal, while guiding FY 2027 net new ARR to $1.459B-$1.463B",
+   "url": "https://seekingalpha.com/news/4675951-crowdstrike-expects-1b-revenue-synergies-and-500m-cost-synergies-from-proposed-zscaler-deal?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 07:56",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "finance.biggo.com",
+   "title": "China's humanoid robot stocks draw over 10 billion yuan in a single day as four-ministry policy lands and mass production accelerates",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5sRjR1dFljbWxLM3BtV0ZYbHl5ME5PQzFhMm10NG9wSkIySHMxdTQ1QjRQMWdWNlFKLVVtZnJhTktrLWdORjBzVU1hajBCeHVUZjBVRG9YMEhPX3hFZWo4OTFubDFQa2Y2di1TQk9MeG05bWUyMVE?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 07:50",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "What Jensen Huang’s return means for Nvidia’s Colette Kress",
+   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-returns-colette-kress-cfo.html",
+   "snip": "Kress steered the company through billions in AI financing deals and during Huang's sudden departure. Now she's back to full-time CFO.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 07:28",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Employees at Eric Trump-backed robot startup lose health benefits as company's cash crunch deepens",
+   "url": "https://www.cnbc.com/2026/11/22/foundation-future-industries-health-benefits-payroll-base-group.html",
+   "snip": "Foundation is pursuing an emergency bridge loan and has been in talks with VC firms as it waits for a $150 million investment from South Korea's Base Group.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 07:14",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
+   "url": "https://www.cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html",
+   "snip": "CNBC's Jim Cramer said Jensen Huang's return as Nvidia CEO could help revive the chipmaker's battered stock.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 07:13",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Jensen Huang cheered by Nvidia employees after return, pledges to be a better CEO",
+   "url": "https://www.cnbc.com/2026/11/23/jensen-huang-nvidia-ceo-return.html",
+   "snip": "Nvidia's Jensen Huang admitted to an affair in a note to employees on Nov. 8 and resigned as CEO on Nov. 12.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:46",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Cathie Wood（媒体转述）",
+   "title": "Plot Twist: Cathie Wood Sold Nvidia Over “Losing Jensen.” Nvidia Just Rehired Him, but Her Other Worry Remains",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNcG0wX29jTmE5ZUhCNmRGVElKQXI3SGxOcHctUUlMN085U1UwWktPcHk4UmNqa2RKOXpCcmJOa090Y0NTSmVGTkpCZVVVWHFwdnhjUEpQMmxkbFpDa21ZTW5leGhGeEF2WW1iTzJKN2NJRFFwLUNOU3lGRjVOWG1CRWZ1eUl2V2Z3a284SnplaE0zWTV0Q21KU25NeXFPeG5OT1NPQlJLaWMtOE5kdkNkdEhoOHhmaEZ5VDZmSll6TzN4LTRPaFY0TjdDOA?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:43",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "Robotics & Automation Ne",
+   "title": "Figure AI patents wearable system for teaching humanoid robots through human movement",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxObzNaWjAtc25MTHotS2xSekVYSDVURlRjeDYxbURiR0J2alNIdldRNUR6TzNrNW1VZ1ltbnZGX3VHRzVfdEhZc2d1cGg4MllaMVJNVFRoTFJPUGltZ2dBLXY0UFpheVlSeTRtUHJIWWowbFNZd3JxdWxyTGxiUDVIdWZSWUx2R21HbWIxeVFpeVNWbzBLQnN5TVVnamlJTXhoQ0YtTzJjeXVHX0VKZjBaeGdXOS1GaUhmNDFJeFBoUWQ4S3NnSG45U3ZzMk4zN08zeFdRdF9NZHNlQQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:30",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "US lawmakers criticize Nvidia decision to reinstate Huang as CEO - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQY290QTRyd09iaGNpaWpuNmlnOHQ2MVZSMm43Q29tS05BSE00ekxCeF9DZ013THRtUzVsTUItS2FIa1R6UzdOQ2FlOFlscXRLVUdfNkhLNS1JZ0FNNTZuOEgxdVVhN2JnaDBYdVFJQXBhSUNxeFBnR0V2XzZLTzZBaEh4NVUxLWRhZjJHOGR5NGVZOXpjWGZjaVFWR0NobElUaUE?oc=5",
+   "snip": "US lawmakers criticize Nvidia decision to reinstate Huang as CEO Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:12",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Ubtech Robotics (SEHK:9880) Stock May Still Look Expensive On Sales Alone",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUmlxampCTHAyaTFXajdNSlFIaEpqVEpySDBFOFdoZjl3QVRQY3I5T1duT2lYaXdXMm1WYmZVOFVaR1p0UzRmdE1NX2k4a1JSMHpPaGQwUVhlcFB4M1p1WjYxcXR4eWl5QVJRS2pKSDd0LXY4Ql9LNEFuR1VvT0hoQzU4SFJQTEFET2dEWlhfNVdxTkEwdWc0dV9zeS0?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:07",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "COMMENTARY: TRADING DAY Market euphoria as Huang returns to Nvidia - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQaWxfZ0U4bk9qMWhWTEFrVXUxWTdneGlOaDJaQ0lya0JPMFkxbmZEbW91Q0xTSjFQS3lpWmpuVC0yMTc3TlZIdURWSmQzcTBxY1BhOTYtUDFKSXhZMHZ6QUxwOU9aaHhOUDF5NzFEOUpvVWtjcVgyLVpkMDU3Wm1fZ2JHVzBENm9OVEdPWVg1Zi1tNDVOOU1WaFZFMWJvSjBoWFZkOEF3?oc=5",
+   "snip": "COMMENTARY: TRADING DAY Market euphoria as Huang returns to Nvidia Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 06:00",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Eric Trump-backed robotics startup told all workers their health insurance is gone — ‘extremely unfortunate’ situation",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPZk1iQ1BCdE5PZkdEaTZnY21qRjlXNTc4TTQya2lXdmJ6c2lpa1Z5ZUNBTWNpT1VhbEtmTnZEUUVEMnZnT1Vpc1FHa3dPSERYck9zWXJPQ3pQRHRXTlBhNUNBQ3hDM3hBNmJsUHl2MVN2VnZyTmVfdHAtTHg3d3FTR0FpSGhEdVZnblFaTTVza0pUZlBxSUUxck1zbw?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 05:53",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "Exclusive CNBC Transcript: See how Trump 'made the deal' to reinstate Huang as Nvidia CEO",
+   "url": "https://www.cnbc.com/2026/11/23/trump-nvidia-jensen-huang-reinstatement-cnbc-interview-transcript.html",
+   "snip": "Read CNBC’s exclusive interview with President Donald Trump on how he “made the deal” to reinstate Jensen Huang as Nvidia CEO.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 05:45",
+   "d": "2026-11-24",
+   "track": "app",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "Salesforce (CRM) Ascends But Remains Behind Market: Some Facts to Note",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNNkNWQmNDZkt2aGNIbDdDOERYS3dJMzFPUDM1MXdfNkllcFpiYmVjaU02OUMtb3JLZVlBejFoRlZpN3RRT2VRTmlTSUtKcTk4bF9hcDhkOExRSll6RkFNdzRLVmpET2ZmcmMzWUo0bWkwdkZqWDhGTlRqOUpaazhxVHc3Mmk5YnY0YjZ6TkJCVEUtX055aWtFQWthdkZuSVZDdGk2Qg?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 05:09",
+   "d": "2026-11-24",
+   "track": "cpu",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Zelenskiy says intelligence shows Russia planning new strikes on Ukraine - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUEtCdFptTFlUZFVRQTdNbV9MZTBUM1AwRXFBVlptR2RoZ0h4S1RVUEgtVTJLSzhTTVBVZVRSU1YxMlhVQzBNZEh2MmM1UlI2MUNLQ3kzN2JpY1I5dERzQlBoc1hHel9QaU9qOWltdEdScE96OHJfUXVkX1ZLaXpJVDdDSUoxX0ZkMXBVMUFwaTUtMzlYQUVPSUgxLWZSQ0pXSzZmUExIWERRNi10X1JFaw?oc=5",
+   "snip": "Zelenskiy says intelligence shows Russia planning new strikes on Ukraine Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 05:04",
+   "d": "2026-11-24",
+   "track": "sec",
+   "kind": "media",
+   "src": "CNBC 科技",
+   "title": "CrowdStrike to buy Zscaler in $44 billion deal as AI supercharges cyberattacks",
+   "url": "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html",
+   "snip": "CrowdStrike and competitors have shelled out billions to ramp up defenses in the wake of AI cyberattacks.",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 04:50",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Gavin Baker（媒体转述）",
+   "title": "Gavin Baker: “At Least Three Companies” Want to Replace Nvidia as AI’s Central Bank. Good News for CoreWeave",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQRGN1VDRHTWkzTmFrQnpkQkxKVnY4T1hadnZLUVY1M3U0TG9GcEhMSXZSMGJVZE5kOERUWm96cnZ1SHhSa0EzUjZYeDRxc2wtTTE0ODg4aHFRbW4zRHFldWVQbnp3dS0xOHpTU0hnV1NZWnBiY2VkWC1La2hpdE9RVjZCUVRzZ2Q4bEZ3cVR2NUprQ1lsa2FyLWRQRGJyREZaSzQxdjVPbEpmci1XSUE2eTg1OTRYTXJaZ2RLZlJVRTFvQmcyck1hRkhDS2RxR0dkVV84WlIxYTRaNVEtU1RZal9HdlBzVFd0NWNjQWNmRUxuR2h3dlFMd3ZoTTBXSEE?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 01:44",
+   "d": "2026-11-24",
+   "track": "infra",
+   "kind": "kol",
+   "src": "Brad Gerstner（媒体转述）",
+   "title": "Altimeter's Brad Gerstner reacts to Jensen Huang's reinstatement as Nvidia CEO",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOREU5QS1DX3JnMlQwVEFkbTl5TE93alBGcXJVNzZNeFBRcVNoMGRyY2hLNlA1RkFONFVIa0Fuc2pxaEtnbWhFSEdZSUdtZDFjM0FyVE80MGIxaXpYZ3R6UUxWbzZDOExHZk0waVFpQTRkOVI5V0FqTXFJUzByN2xwb0dyb3FuVkIzaVktanIxQzV3Q3JjZkRCNXBXM3gzbDhlNk9GanBlSy1rTU9XSDBQTW1lY0FuRTBtUmIw?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 01:43",
+   "d": "2026-11-24",
+   "track": "phy",
+   "kind": "media",
+   "src": "Daily Sabah",
+   "title": "Türkiye launches call for domestic humanoid robot development | Daily Sabah",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQNVNneHVwMnY4clNOUHI5aHZFZ0h5SVdmcmVwOS1UMksxY2Z5MDdQSjBWZ3hzRWZULS1vUmhOODBaRFVZNHdWa3F6VktwZVEzLUJueng1Y0VMQjF2YXNkbVNCVXdCd2Z2dUVBNU52WEFTeVlMVEEtblZtVGRjQmJ6dG85RkdiQk9UZEFXVEtveDBKTXhGMDc5QzVmS3dHOWNhb0xMR9IBqgFBVV95cUxOQzQ1MVNvODFtbEU2Mk0xTWhFQ0xQT3Z5Q0E5REJpeVNKLVp3Y3JCaENaSXJFN0lIYjJVSjlkYVd0SHlfZlVlLTFoaUR6bDlRWjVPVlhtdl9QM2Nhb01rdFdrelJEMkZTMzdqTFUwN1pVdmdFeXVXbE1vZEhqcHBkdWowcFNkbVh6eUhLZUJDbmdYMWpoM3BZczhvQ21HZ0ZSTDhVSjFGQTd0UQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 00:56",
+   "d": "2026-11-24",
+   "track": "cpu",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Rene Haas to remain CEO of chipmaker Arm through 2033 amid Nvidia top job chatter - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTEVKTTZyVDYxTGdWYlI3bzFQSU9zSGhiaXpERE5MWHRYSVhZcDhZRDBpekhuODdWYlZCTFJmU1NDYWVzRlpMR2JWZ21xcUMzSmhkX2RoYnhPSmtJRDdqMGRyczN5UElOQV9BdUt5NDItbzlEb29RNmR0eFRWd1V5bkcwUXQ0NG5lWjRkUkw0Y0VRaUV0UXF6V1V4ZkRhdS02X1UtWkRpejVlT2M?oc=5",
+   "snip": "Rene Haas to remain CEO of chipmaker Arm through 2033 amid Nvidia top job chatter Reuters",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 00:38",
+   "d": "2026-11-24",
+   "track": "app",
+   "kind": "media",
+   "src": "Seeking Alpha",
+   "title": "Salesforce: I See Limited Downside Prior To Q3 Earnings, Stock's Quality Still Solid (CRM)",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPYnMwMDczWFVaT1pfRFZ2NHZGNVFjYlhYcE5IeG44dWpZeDdiN3pIWThGOHFFLTN6ZThnZHVUYmpjNXFNSXlpUENrR0h3N1VqNnRGOGgzcldWYVhTUDZYM2lUSmZwRTRYVzJnTW9vNVRGS3ZmaVhmTENIMm1GREQ2UzdXbGtXcV9hRE1HQXNhNllaaGxlbTl0V2RtYVpFcVBtaFFpamJBM3dnTEhBd2paVXV0czF3UQ?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
+   "t": "2026-11-24 00:33",
+   "d": "2026-11-24",
+   "track": "sec",
+   "kind": "media",
+   "src": "AP News",
+   "title": "CrowdStrike to acquire Zscaler in a $44 billion deal that would create a cybersecurity giant",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQekFodWNTV2dTaVZ6VDJScmUybjJ3QXRURFJjeVNtQVBmOEJkYUZTNnFlMnNKalRWdFdXOWVwTjg1TFU3THJIOU9hSXNtSXZCczVaT0xDYnNKUEJUYXFXbVpTUkhTNWRFb3VIa1RDcHdOMzB4ZVV4cTZ6STBQZ2RWLWNPT2U1RGRHYjIxNEZ1QlFXQXZJMDhJeHdDLUFUc2tSUjJoejc1dGhzTWtkUS1Hb3V1V1hKbXplV3J2Zw?oc=5",
+   "snip": "",
+   "isNew": true
+  },
   {
    "t": "2026-11-23 21:58",
    "d": "2026-11-23",
@@ -72,7 +325,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia reinstates Jensen Huang as CEO",
    "url": "https://seekingalpha.com/news/4675565-nvidia-reinstates-jensen-huang-as-ceo?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:58",
@@ -83,7 +336,7 @@ window.TRACK_NEWS = {
    "title": "Cogent Communications to sell three data centers for $35M cash",
    "url": "https://seekingalpha.com/news/4675564-cogent-communications-to-sell-three-data-centers-for-35m-cash?utm_source=feed_news_all&utm_medium=referral&feed_item_type=news",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:34",
@@ -94,7 +347,7 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike is spending $43.9 billion to buy Zscaler in a huge cybersecurity deal as tech outages spread",
    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPa0MwNl9mNFFvX25LUERTZmpPSG5BY0tHRFpxRW1KTWRnTWpzNnUzemU3OG5kS2pYdlVIZ3F2UDczXzh3OWlkQWo5c1NSWnJDUFVrNWhYRXlXSkM2TW9VdUpiYkNqdkxqc1BqcU9ndTRDNHY5WE1JZzBDMEFkRnhDd0JLcFVUTXppeGFMTGkwUVRYMXp3bjlucm5VZUJNZTVhVDlHdW9Xd1dTSUQxbjBKbm80NnpXRVlabzYzcFpLd19YV3RvWTV1NnY5eExkaDhWT0s1OVJ6QVNrOHhjZTNGd1l3Rkx1QzFHU0hja2dobER4cXZa?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:31",
@@ -105,7 +358,7 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike snaps up Zscaler in $44 billion deal as cyber threats mount",
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcUdmOUFLaEppLU9uMl80V2x1RTg4YWg3VUc5cWZsVzNfUWJBN2pFY3BhTndKanI0U2gzZHMzZVdpeWlkVkdBMkxGZkEtNFYyYmhteTQ5MHM0NnhkN2lfVk1WcDRxZDluQzVXNll2OWhodnVmaG9qNm15SWdweEM4YmxSWXVKd21mNW9uWW82MHUyWlJLTEE?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:30",
@@ -116,7 +369,7 @@ window.TRACK_NEWS = {
    "title": "The jagged frontier gets a body",
    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNUHloQWlNODlsR3dpZ3FWb2l4SzRfWEhHVVhSV2p5MjJrZWV5WE42dXp1U19IVlVjdFdCYWZBbWVqUW5tU2RGMVB2VXd2X2JzanJ0ZEoyT0dWcnlmNHp5YTlId0M4VnFpOVF5QTZoRmoxZEVadDR5aXNORGhxNjE2ZlM4VjMyTDh3TEZNeHpYQUk3ZEVzQmlWejZqNFI?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:11",
@@ -127,7 +380,7 @@ window.TRACK_NEWS = {
    "title": "Nvidia shares rise in premarket trading while Anthropic is flat after major tech sell-off",
    "url": "https://www.cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
    "snip": "The Nasdaq slid 10% last week in its worst week since the early days of Covid in 2020.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 21:06",
@@ -138,7 +391,7 @@ window.TRACK_NEWS = {
    "title": "REK 2.1: Humanoid robots show off kicks, falls, and blade clashes",
    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFB0d0lLdUZNUGVzcDR3UHZEVmdFd0VMcmRYQTlOWHJnWkZ4UUdlTEtLWndvNElVbWJBTXV6dl9sMmN2UHNLek5WOGM3UU5nNTZzUk8wWElWeFkxTU5tSlFQbFAwclFKSjhqU3gzS0lWbXk2TkVQXzNnY2wyaw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 20:54",
@@ -149,7 +402,7 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike Reaches $44 Billion Cyber Deal for Zscaler",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUkFJTko4elVPRkJqM1J5WWo1LXpSVFBaVEZ4UDRvb0g5Rkl3bGZ4emltR2dwd3B1TGlSTE9pUFlfeEZ0U3pVdnRKS3ZrNXVhckJLS0VxOFRFOXJKWFBqYXZjbFVJQUJodjd2VnRiZGJGMVAtdEtMT1ZvSmRMNkVtMmo5QTdOOUZhQ01pTXhRUjFGQXc3Yzc1aU5SOE5KWmw2enJzRmo1Z3lDdDNwdS1MUVNn?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 20:53",
@@ -160,7 +413,7 @@ window.TRACK_NEWS = {
    "title": "Salesforce in focus as Citi lowers price target on 'sluggish' checks ahead of earnings (CRM:NYSE)",
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNUVNyeDhZUHVVNVlId3otRDRSak5GVjlxWW1OWXBtUlUyc05JTGtKSnNQV1hKRlJyOGxja3A0aDhac2oyaWxDUXNzaHJJMzBIWjRUWHJCdl96Vll4T1JEbEdVTEJGQlNYT3M0eF91SDcxMlI4bGkxVGhuREcxYkRSVEJGWlgzLVNieW8zMkRDQlI3dmgySXdDbE1oNDlsX0ZJblNXeHhyQWJVMlZSZFE5UDAtcWViSmdSb1hmekxfVQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 20:30",
@@ -170,6 +423,17 @@ window.TRACK_NEWS = {
    "src": "Bloomberg.com",
    "title": "These Humanoid Robots Will Bring Clarity to All the Hype",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdVdhMFgyeXVBTS1iazh4d3NHLTZOOTliRTUxQmJSOV9oWVlWNmpOMndYcE5raFZ6WGg3MTloUHJFSTBOSDE4MnhkbmU2RTdEQmJpVFNRYUttUkcxTUd0TFhxbTJPSHpYazlQa0oyeFdlWHJkQUsyWkcwWHQ4a3hKWTJ0eU80c0N6YXRSUUVKX1U5Xzh2UHUxc1oyME5UYjN4cVBQSVluenRvQkRuT3hzMTZacjdPdw?oc=5",
+   "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-23 20:14",
+   "d": "2026-11-23",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "TSMC Falls Less, But Nvidia Comes Back First",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZWxzaUFWaENKbUhNQW1MRFFQeWNLbnppWGdMX2xaU2hCc0QtYlJCbEpjTGJXLXYtN08xM0JVWVdQZTI0MHRzU3ZMZlRLUW5VbGNFY2N5dW5zSDF5MDZsNTFDOU1WbG9jRVItSG5BVkhXMmVmVFRHNS01bjg4ZGNjVlBFUGptRVY4bzhOd01oSmNHZU96VHVLaA?oc=5",
    "snip": "",
    "isNew": true
   },
@@ -182,7 +446,7 @@ window.TRACK_NEWS = {
    "title": "Cathie Wood's Ark invest weekly update: trims Nvidia by $107M, boosts SpaceX stake by $74M",
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNal9xbEJVNWRJaGNXR293cGxxYUw5c1NlbVRuTktqVnVKZWZ3Ykc0YlotUGtSMzI3cHNYakFJWDJfWDRzM0I4MVRBa1ZvbWFaRzZxb3dLdXdyLThDZTg2TGV0ejAwbnpMcU1xU0t6Q1dJa3VUSGdBM0d6WG15YzdNYWsxRGVvY010ajlHbWtTNHQyOTZMSTdDVGlDMGFneUQwYlRpQnh1VTN6aVlrQ2JsNGNLTi1fbE1jU1dlQVFWZE0?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 20:09",
@@ -193,7 +457,7 @@ window.TRACK_NEWS = {
    "title": "3 Funds With Electric Utility Exposure As Data Center Power Outruns The Grid",
    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPQnp2MHJ1UUtIVkRpWGJEUS1vdWNCQTRNN1hYNEJnWVMtWFlsNG40aGtQNGE2RWR1cnF1SEFSX2lqWGwtUnlYX0N4STNmajQxSThYck5fRVQ4aVU5OWZCSVJFNjRCRXZySVNYWlBQQ0tlUC02SnRhNmVaallPNzVDaVdsSXJmTWdMYXFoNzFYcktzbXU2?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 19:50",
@@ -204,7 +468,7 @@ window.TRACK_NEWS = {
    "title": "How Nvidia’s billion-dollar turnaround in China is threatened by Huang’s exit - Reuters",
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMzBhLWJfeFVoaXlNajJPVmVaNHl3bFFPR3lveEhDV3dlNXU3MTNlcm1MNVp0OGM5MmtvcmVxVHg2SXBCZ0U1WkdBX0NGYmNZR1NrUXI2MVZFdXQtQnlhUXN6bm9SRGJOSnYxb1QzRklGZWd1bm9tdnlSNnVGLUpLWllkZFB2MVF0UXd3T3NDbWRUQUtmVzZkUml4cXJjdmhXVXFkYWdLZ3o4TGI0T2tIZG5KMHZlSWpSczNIVg?oc=5",
    "snip": "How Nvidia’s billion-dollar turnaround in China is threatened by Huang’s exit Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 19:36",
@@ -215,6 +479,17 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike to Buy Zscaler in $44 Billion Stock Swap",
    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQc25MX1dwRE9Lc3haUV91TTdFS3ZhT2VUTXgxTHNPdWpmQXowdE1OVHJWMC16YjFFRTRldy1xWWxvRUpNT3JwenpwZTFvd3ZHSVB3SmtPQU9IT2JjSC1BSTZ6aVdCRHhWZzVHaHNiWEZsYXExR2xiZFRaX1VZMHJscktPVHpzeWZSRGJOZ1JOUXV3bV9tRDVmMUZNR2pvdw?oc=5",
    "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-23 19:35",
+   "d": "2026-11-23",
+   "track": "cpu",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "France's Macron earmarks €350 million for civil aviation research - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMFZiNUNuMDZsQ09fb29ZTkNJTlg4R0hoNmtxVFowSkMxX1R3aHVieFplNDdKdGc2SXAxUXgyQ2VpVlAzR0NOeXlkazNQek9FeV8tbEE0ZDh2NUgyc0pGNlJEQm5HRHFEbE1LR2UzUllPZFlrTmdQeUdNR0RXeUR1b0dRNV9VbkNkak1EYXlTMVpRdUliYjlZYnlGZnZVdjFZYUg1NE5JdERrcWFRcU5QS1ZPR1M3bWFQejFELVNZbw?oc=5",
+   "snip": "France's Macron earmarks €350 million for civil aviation research Reuters",
    "isNew": true
   },
   {
@@ -226,7 +501,7 @@ window.TRACK_NEWS = {
    "title": "Turkey's Humanoid Robot Push: Minister Kacır Announces Grants Covering Half of Project Budgets",
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1LbEdFckp2MW95UjIxWEhUV1lQLTBtbEo1Nkk2enJrX05BMzVGS2ZwMDJnb3hkSm5wNjNJZDZPeEx6cXZRUzVyeGp4SXBtRDFGT21uM1U1c0hseHBsZUVCbGxoY2dlWHFrd3VKbG5PbG1pQXN1SVE?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 19:25",
@@ -237,7 +512,7 @@ window.TRACK_NEWS = {
    "title": "Faraday Future Robotics Subsidiary Approved as Supplier to California Schools, Expands Education Partnerships",
    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZEtyZVFDTVNsRUowMlY2bEp6Z2NFMXVwdlR5elk3VVZmLThLb1hRalRXajRXRmlzQWJScGwzQ3RPbTdJb1F0NnFGZURKdzRONUdKZ3g4cFhLbEg2V1J5QUUtYTlkMEM4LXVMbDgwUElSMldGR1ItU1pkVGNpMWNIQXFBUXFQMUwzUEpVMTZBU05JWWUyVVcyUUNFaS1LdzRQUFkyb2pyZw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 19:07",
@@ -248,7 +523,7 @@ window.TRACK_NEWS = {
    "title": "Unitree Robotics shares surge 20% as humanoid robot companies rally on policy support, investor optimism",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5TUF9GRFY1aXF4NThEc3NhX0o0UGJVNkVyd29Wblh6Sk1taHRqM1daQTZwUkI0YUdPM0hJRUNhT0xIcTAxb2dXYkJaTF9BN0NuQzBjM2lVeVhaTS1yZWMwM2V3?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 19:02",
@@ -259,7 +534,7 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike to buy Zscaler in $44bn deal as cyber threats mount",
    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNaXRqYWdBS2lmTXl0cGRSN0lSa1JjMTBKNzlLSktkUXBQaW9idWU1b3hSc0kwUExtMV9SODYzSHU4REJWakg5cDc3X01jU2ctMUdRV0w1eHRBUXh0NjlQUDB6MXVwb09lVUZZdUNBNEhpLWw2V2hPSXF1QlAteEpFSEQ2bFU?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 18:43",
@@ -270,6 +545,17 @@ window.TRACK_NEWS = {
    "title": "CrowdStrike bets on network security with $43.9 billion Zscaler deal",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1KVmh5Uk5GblJVQzZRb3JCZGhFa3JLN0xKbkc2VHQ0OHp4U2trWnRsUkQwLUg5ajdpdklIYzhqYTZCZmdjZTNYYlpmRE0xc2FSYXBKMEJFVk5wejdtcVZBRjBlSkNycEV2UlZSZWhiMkTSAXZBVV95cUxNczNzVEFCOG93Tkx3VWVMUmtFZ0tERUpudXZtcGdnaTZBdUVsM21PRy1yVmtValJIWXNQdGtmM2cwbnBVYVdYSTcweDhUcHRGd3hfdXhMUllTc1J3MFlUVlZoNjZOTklMWmRWdVItY0thaXN0LUR3?oc=5",
    "snip": "",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-23 18:40",
+   "d": "2026-11-23",
+   "track": "cpu",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "Bangladesh garment makers eye 15% wage hike, far short of workers' demand - Reuters",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNbWRqN3A4bmFFYmF4WU9WOHBFQXVBdkJGT2ZqdF9SWVltZjFBVnp0dXFOVUxiQkExMm5BdEVNXzBDZ1FTcDJqN0ZoU0ZDSVpnX0RSTW93TVhja1Nrb1kzSkdHTVdVaFZVMDdfbHR0dlFjUHg0RXJUVzFfeEFBUDVaYUI4eW1LS2tQQ0JRNzdfTHdQUlVYOXdxWDRQTHBiMllVN2JBTWd3c0pUdzZROUhVc0dKODVxYkNzWnNyMGpZVVJrMmJh?oc=5",
+   "snip": "Bangladesh garment makers eye 15% wage hike, far short of workers' demand Reuters",
    "isNew": true
   },
   {
@@ -281,7 +567,7 @@ window.TRACK_NEWS = {
    "title": "US data center firm Vertiv tests Nvidia AI infrastructure",
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNMmJBZGx3OW4xejloSENqSG1XUUF5WTZpbmpMWVhhbTFybDg3N3N0M29Xek9pSWljY2V1dnRTRVhZRDQ1ZjZvcGVZaUxpTHZ2cXFGOWJMMDVhVnlIcW1Pa0d6cDFZbzBITVlqa1NoclhOZHNGTGR1WHVhc19ZWEJiak8yTm5lMFgtanpPNE9mNA?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 15:48",
@@ -292,6 +578,17 @@ window.TRACK_NEWS = {
    "title": "Armenia proposes new constitution in step towards peace with Azerbaijan - Reuters",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMnFNZ215bUttRTh2UEY1bi1MRVBoLTFEelJfb1FsSHR3VDZkNXFyUGRsanFlUHpGckJDbktHM3BEekl6bVhoYXFrNF85ZmhaZU9mU0c3SEJNemtkbHRvNG9idzVyMDNZOGY1WG5ibVFtZl8tOGJfNTlub1ZWTzJVZVQ1ZGpod3VxV0Y3eHdfejdBYlpjeFJwX29WLVFQTGJTX2xxdWpVWm1xazdHWWhZ?oc=5",
    "snip": "Armenia proposes new constitution in step towards peace with Azerbaijan Reuters",
+   "isNew": false
+  },
+  {
+   "t": "2026-11-23 15:00",
+   "d": "2026-11-23",
+   "track": "fin",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "COMMENTARY: Fintech poised to redraw the global investment map",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQnVXZURhNnVmZzN6MWVUdWNmY0xWT0Q5WnV4NG1CTmllNGJ6OHdzSWhxMHZTWnZHbTFsYkQzd0Mxd25MdlRsWHhSWWFyZEFwOF9KcXRvbktTRlQ2YW0zb1pTTGQwcllNeno1T21lZzVFSjVfVTZGVFBPd002NTlJVEhuZGJSWmhRdGlpcVVPVzZpRkt3U2FNU2JWNzExSl9DS3JGVXdiLUFiYkdIc2IxYWhDVUpWRVFOSFpXUWdLakpHOVk?oc=5",
+   "snip": "",
    "isNew": true
   },
   {
@@ -303,7 +600,7 @@ window.TRACK_NEWS = {
    "title": "ASE, SPIL to overtake Amkor in 2027 as server CPUs shift beyond TSMC CoWoS",
    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRl80Mk55RGlhbzd0QWo2bTdwZE5HYm1WY3FQUzEtdGR4dUdVc1VpdU9Ud1dIbktlZkdkbU54ZFkzVkRKZURLT2xPYXVTS1pQWGx5X245UnNwcnJoR0plVHFseDN5aVRmM0xuQi10WHNhb3JYMW9hRU5ER2JJLTJ4SDlRTGlocTQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 09:50",
@@ -314,7 +611,7 @@ window.TRACK_NEWS = {
    "title": "Microsoft, Google turn to Intel EMIB as CSPs seek alternatives to TSMC CoWoS",
    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxONElwbFRYeVpObXcxUHg2cTdHWEpSWWxIV2JlR0l3c1NTVXJScnh4OWZFSzZBWUl6aDlvYjQyXzg3TTZ3Q0RSbXNlVnloNENwTUdiX29pV2xMLU5WZl9kMmh3d0U4NGNkQm12TmFPSHd6MmNQNHBfSGFwOVoydlBLRzJDdDA3RTk2RHlZeg?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 08:28",
@@ -325,7 +622,7 @@ window.TRACK_NEWS = {
    "title": "Changzhou Microintelligence seeks up to $74.62 million in revived Hong Kong IPO - Reuters",
    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcmZyWE82TzlYOEw5T2NrdWNXVXRGRG8xb1oyVnBQNzc5V1Aydy1CRjNpX0VYZVhlbHFXTGVvV3NTOGdNajRPVTRVREpTanMxVnMxNEdXM0p2TzN1TzRYV3RDMkFZM2l3N2NTZ2lNV2cyN2hJaDJicFk4RnNYRnZUaDlWU2lVbGhuS2JNdDhpQkh1U0dHWjhaSGp5U1dFV2psd3piRjRxb2hObTJpN2x0U2kxOU14LVZwQnc?oc=5",
    "snip": "Changzhou Microintelligence seeks up to $74.62 million in revived Hong Kong IPO Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 07:24",
@@ -336,7 +633,7 @@ window.TRACK_NEWS = {
    "title": "Upstart Is Yesterday's News. Is This Fintech Stock the Better Buy?",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQXk5XzlmX3U1V1c3QjBtekJ1ZkFXV3lVMERzcUdJVEV6M3hiYnJqMExUX0lpLWJQekN6cHlwaWEyYThkSy1KNnhVbllYRWVBdTROYlJucjZheGI3ZngtQ1l3aFBoRnl5akFpc05MMDA3cmNMSUYxaVUzMkg0ZklZdkxqRXBfUFB3bGZMS1V5MC1XM3B2cWFnZ1cwbENaNWZLNmhWRw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 07:09",
@@ -347,7 +644,7 @@ window.TRACK_NEWS = {
    "title": "OpenAI scientist proposes industry AI limits tied to model intelligence metric - Reuters",
    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPa0ZQb0xtalJ5djRmZmkwQnhmdDBlMEtncDUtUEJsUFBtWmptbkdVQ3c5QjY2TzhKN0NFT2ZzYnZmenQxY1lrUWFFYjJsdS1KazdRUkJINEJRemQ1alh6TGtnNW1nRE92bTF3RW9FMTIyODB3UmpBaW5oSzFDWDFVT3FXdjZDVzQ0TVNVd29nQzZvY3ByWVpBLUlhRVg0bFZiRHUxVjhqclptLUMycDJlYVBsQXQ4a28tRnFnbQ?oc=5",
    "snip": "OpenAI scientist proposes industry AI limits tied to model intelligence metric Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 07:00",
@@ -358,7 +655,7 @@ window.TRACK_NEWS = {
    "title": "E259｜机械神教与反人性策略：华尔街量化巨头的AI之路",
    "url": "https://sv101.fireside.fm/273",
    "snip": "华尔街最低调、最赚钱的那一批量化交易巨头，也是这一轮AI浪潮里囤算力、抢人才、投资AI实验室最凶猛的那一批。 他们不靠市场趋势赚钱，而是靠波动和速度在毫秒间争夺价差。和大家印象中西装革履的金融人士并不一样，这些公司里的人可能是一群数学家、物理学家，他们把市场当成一个纯粹的客观的自然现象来研究，寻找其中的规律。他们信奉“肉身苦弱，机械飞升”",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 05:49",
@@ -369,7 +666,7 @@ window.TRACK_NEWS = {
    "title": "Palantir Technologies Inc. (PLTR) stock price, news, quote and history",
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBOMzJqZUpoV3lfTHY5bjlISjBvLVhQUU9URk1xdFRSMDRUUnRkU1A4U2tIc19wUHJtd3YwX1pucGVsak8zUmNkVWZYY3gyX0lQOWc?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 02:14",
@@ -380,7 +677,7 @@ window.TRACK_NEWS = {
    "title": "US intelligence chief predicts more tech outages as systems undergo upgrades - Reuters",
    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQX1ZQQTFqN0xpOERieUhlT0puQ0pnQnNnRnQtaW8yb3VGWkFvM3hGeTA3QlBrR1VCNUhjS21TQ1JISlNWMG5mdlc3NVVmOUZ0LWZrMTB4R3h4YlpIVnJObWVQcmhLUDFiRnhCY1c1RTE5NzhwQzIwTXQ3MkxfN1hQSU9ZbkVidFZCWE1PWWxHMWgtem5ZSzBoOU1oYUVuZ0NEOW00V0Jlb1pEUVdrNUF3blEtSEw4dkpsYU9ya0w0N3UxTmRE?oc=5",
    "snip": "US intelligence chief predicts more tech outages as systems undergo upgrades Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 01:14",
@@ -391,7 +688,7 @@ window.TRACK_NEWS = {
    "title": "Director of National Intelligence Jay Clayton warns Americans of 'bumps in the road' after tech outages",
    "url": "https://www.cnbc.com/2026/11/22/jay-clayton-tech-outages-faa-microsoft-thanksgiving.html",
    "snip": "Clayton’s warning comes ahead of Thanksgiving travel, after separate outages disrupted air travel, Microsoft 365 and some bank transactions.",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 00:36",
@@ -402,7 +699,7 @@ window.TRACK_NEWS = {
    "title": "Army invokes emergency powers to detonate lead in Iowa, bypass court order - Reuters",
    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWktPQlhDQmZja2RjS09vdFlCdkFtTjVHVE1xRHVMeDBVNkFiVWlrMVdlQXl2SjRsekFabUxiV05Ud0RlR1M3aVhDcVlNNURCYnVFZXBaT1RDTmNQb3ViblpuQVNGdUVwQmlad1dWc2pYaWtpeXZCQVBnalZaT1M5RTcwUzdXZndua3JNdGpHOERNczk0NExoLXRIMUttMlRXRVdTSjNmWFR6dUJVSVVlOEhVNXpHakZfVzNiY1QybVFmeXFCamYtMg?oc=5",
    "snip": "Army invokes emergency powers to detonate lead in Iowa, bypass court order Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-23 00:07",
@@ -413,7 +710,7 @@ window.TRACK_NEWS = {
    "title": "German army starts testing kamikaze drones and AI targeting tool in Lithuania - Reuters",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOaEZNb1cwZkRsWmFUN0Nkc0dfTGt4SUVDaXNCSHphV2VrQTBXYnQzTWN2Z0tkOEdiUnRyRnJqX2NST1pmYXJrYVFUQ204QllMNFRtelc0cEtUZy1MWlFMeXRfemNPS0pGQU1veHZyMU1XTWdJNE5pcWstLXUtZ0d4QXRMVzAzZFJKNzlteEZlWUVRbHpIeTJyanFWSlJVMlY4R0NOODNIN1RSLWJDdnQyM25KcDNNbDRvMHZkT1Nfenl6SUl2YUoxalBLT1RqQQ?oc=5",
    "snip": "German army starts testing kamikaze drones and AI targeting tool in Lithuania Reuters",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-22 21:00",
@@ -424,7 +721,7 @@ window.TRACK_NEWS = {
    "title": "Pizza chains are under pressure. GLP-1 use is only one part of the problem",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE13N011dHVFTHhsU2ZqdlhIUktCVTk0QWt6LW5VVkhMUUQ4Qy0xS3ZUdE0yMGx1MXFRNFFkX3Z2MC05aVJoM1lpUEh5SmtZVWdOSGhtOTlfZWM2dklSQm5lb2VuaE9ETDJmR3dqZ21BMWM0Yk1hSmVj0gF8QVVfeXFMT01JWkJ2cWpNUHRTRWpDQ215eGpvNC01TTlnYnV5bzlsNzhYTzBWMWw3MWpVUnNESEhLZXdKc3k2dDcyZHhsUVE2clk3N3ZsUkVCOGFtVnJjN1JIelFKMC1za1dIcGZVb3RtekZBVEpBU0tYM05NMTFpeUtuNw?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-22 19:06",
@@ -435,7 +732,7 @@ window.TRACK_NEWS = {
    "title": "Stanley Druckenmiller and 16 Other Big Funds Bought Palantir Last Quarter, While 6 Sold. Who’s Right?",
    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNcllEdXg0c1M5c003aDZ0NkU0NmtlVWdyeVBFMVRLS2hzU3I3N1ZOY1dzV3pfR3pVRWF4R1FlSXlOWnVwOWlUMjBGbi1JUU9jTWwyWUdDVFpyeWVUcnU5a1EyUGRCVDFSbEFEVkVHNFpOZDQ0Y2hmeUF2ZHJtTlJrdHZUMHhobHhfWThCVmZrOFhGTzl3b3lFR2xhUHMtcDVy?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-22 15:12",
@@ -457,7 +754,7 @@ window.TRACK_NEWS = {
    "title": "Chamath Palihapitiya Praises Jensen Huang As ‘Biblically Good,’ But Warns Bringing Him Back At Nvidia Could Put ‘Everybody’ At Risk",
    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNV3VQR2hqMFJuUXBjZ2kxN2plRF80VUZnYTl0Vk5CM3EwZDM0aWhzWkJBeDZFLXpJX1R1NEhWOHBDekREUWtEelBfeUNZUUUzVlQ1WnFvSEhnVG9kVHZEWVhuMGwxVjBKQXFCaEhmV0tNRG9ncngyNnhGVUtXbjVKeHJqZGR6R1owQnVidGVaZm1kbjh4Z21sbmV0VVNJT1J3SU1lOEttTmItUQ?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-22 14:49",
@@ -1348,7 +1645,7 @@ window.TRACK_NEWS = {
    "title": "H.C. Wainwright维持福泰制药(VRTX.US)买入评级，维持目标价641美元",
    "url": "https://news.futunn.com/post/1005191218/hc-wainwright-maintains-vertex-pharmaceuticals-vrtxus-with-buy-rating-maintains?futusource=news_stock_stockpagenews_news&ns_stock_id=206501&report_id=1005191218&report_type=stock&src=43&stock_news_tab=news",
    "snip": "H.C. Wainwright分析师Ananda Ghosh维持$Vertex Pharmaceuticals(VRTX.US)$买入评级，维持目标价641美元。根据TipRanks数据显示，该分析师近一年总胜率为35.6%，总平均回报率为3.7%。提示: TipRanks为独立第三方，提供金融分析师的分析数据，并计算",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-20 20:17",
@@ -1382,6 +1679,17 @@ window.TRACK_NEWS = {
    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQV1VHOTlUSTlCVmhEY0dIdi11T2tlc2xPMG16MHhDWkl0SnlBVFl0cHNiZlVPaEtNRERzYXJGa28yUG9DSVZobFBicGFwcXBUWG1icU1RSzYtRUpNV3V4YU1uNkVkNGtQN0tJOVpTMExic1VCMWIxMzhUZm5ISjN4eWJoRFBmSzhZM0x0YlJIRjBJYWJsNlF5WUMxN3NsUE9pWndFLVhTcG1saUE?oc=5",
    "snip": "JPMorgan, Visa, Mastercard say third-party vendors targeted in cyberattack Reuters",
    "isNew": false
+  },
+  {
+   "t": "2026-11-20 20:03",
+   "d": "2026-11-20",
+   "track": "bio",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "NEWSLETTER: GLP-1 drugs tied to heart improvements in patients with obesity and heart failure",
+   "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOTWxKU3Y0c0o3VkZOOXBaVWZnd0paUEQ5dlREY0ZFbjRGTHNtU0laeVhQRE9hdVowbzhNMWZ3NEhmNlIyYVR0NzdEbkF1d2tYand2Z3NTcGc5VlBjNVRWMmxzd1Vqc1psakZxS1BmUDJrSEhCcVVuaWFpczBTdU9aQVVfT3RnV1pPQVFtNVp1N0hSVVl2SGoxUFhwM042S19UNWpCa0xzbHk4VE5ocXMwZGY2ak1ublZfYVJtdkFHd1hGN0RjWmYzWnNyQU1vWTVhRWRCS082QnFVLXc?oc=5",
+   "snip": "",
+   "isNew": true
   },
   {
    "t": "2026-11-20 20:00",
@@ -1733,7 +2041,7 @@ window.TRACK_NEWS = {
    "title": "SoFi Stock Hits 52-Week Low: What's Going On?",
    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZ1ZsMlpOX3BHdncyUUtFV2trQ3VIaE9jREhmZG1Sa3JlcmZLcVI5aUJrSGNONDRIRmg4Z1VJaHJyZ0N1RzExajB3RndjSFR5TmRobExvV2VpazlrTE5NSzBPVVN6YnpMZnVVZFVSeXJ2cm50Q0o3WDNnUlFzUGlySVU1ZFJuZ3lHNU5TNEN1SFF6NkZYZEVNSC10Uktya0ZpTEZqTlJR?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-20 03:12",
@@ -2077,6 +2385,17 @@ window.TRACK_NEWS = {
    "isNew": false
   },
   {
+   "t": "2026-11-19 20:48",
+   "d": "2026-11-19",
+   "track": "pkg",
+   "kind": "media",
+   "src": "Reuters",
+   "title": "TSMC tightens China AI chip curbs as new US rules close manufacturing loophole, sources say",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNc1pDUGRULVJNeGdkT21ERVNzMEl6RHJKTEtLRWFFQjFpYjdxWU5NMmM3Zl8zUzlHQUd3UzJlNE1UV2tlZnZFTEZrNnRKSWU1Y1lkSU1ISmF6U1JGNWNEeUJETVpHNDI5QTEwMWJTTmRraUgyaDR2RUJ1UlRadVJZMW9MUTZCeXdpZHRZRWl1X1VIZ0xBbllSWEUxMGxmdmllVFgxbmxuTmljOFFBTUkyUGR2NDRfTmM0Rm5xcXFxaHk?oc=5",
+   "snip": "",
+   "isNew": true
+  },
+  {
    "t": "2026-11-19 20:45",
    "d": "2026-11-19",
    "track": "bio",
@@ -2096,7 +2415,7 @@ window.TRACK_NEWS = {
    "title": "Stablecoin Market Loses Billions: Where Is Crypto’s Liquidity Going?",
    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcm1GY1o3bVFJbFBrYWZqR0VDMHRHVmplOXIyLWFZeXVkREtJRTBVQWF1R09UTUstdUVGOGxzLWhQWEtWTFBPVW9RWC02ekVFZmpReE1nZlc5OXdKVlgySzhnZjVxY3ZmQUEzT1dSVXlxRDdXUlBtRUF4Q2IwTldIRl9YVVRMcnVveEZYcEF4SHNvYWpCVEFtNzdRdUhqZ08yR0V5QUpn?oc=5",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-19 20:25",
@@ -2690,7 +3009,7 @@ window.TRACK_NEWS = {
    "title": "加皇资本市场维持福泰制药(VRTX.US)买入评级，维持目标价600美元",
    "url": "https://news.futunn.com/post/1004911367/rbc-capital-maintains-vertex-pharmaceuticals-vrtxus-with-buy-rating-maintains?futusource=news_stock_stockpagenews_news&ns_stock_id=206501&report_id=1004911367&report_type=stock&src=43&stock_news_tab=news",
    "snip": "加皇资本市场分析师Brian Abrahams维持$Vertex Pharmaceuticals(VRTX.US)$买入评级，维持目标价600美元。根据TipRanks数据显示，该分析师近一年总胜率为47.9%，总平均回报率为7.4%。提示: TipRanks为独立第三方，提供金融分析师的分析数据，并计算分析师推荐的平",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 21:30",
@@ -2855,7 +3174,7 @@ window.TRACK_NEWS = {
    "title": "快讯 | Genomics Ltd.宣布延长与福泰制药的战略性药物发现合作",
    "url": "https://news.futunn.com/flash/1004887256/genomics-ltd-announces-extension-of-strategic-drug-discovery-collaboration-with?futusource=news_stock_stockpagenews_news&ns_stock_id=206501&report_id=1004887256&report_type=stock&src=43&stock_news_tab=news",
    "snip": "",
-   "isNew": true
+   "isNew": false
   },
   {
    "t": "2026-11-18 17:22",
@@ -3208,6 +3527,17 @@ window.TRACK_NEWS = {
    "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOTRNdjY3dzFkQlVNeXdNSXpjMTM4UGRxYUJWaHN5dng2Qkk1ZHkwZWNVMmhWSlFBVi1HMzdkQ3RYdzlOVVRKRkpqdlZuU1VTWGxVNmlCSHdrWWtHcnRBYVdsTzItYUpSQWQxTGtUTkMweFdUZEJzQUM4LUtXTU1Zd1pXV1RWRXRJMWtRY0wzWlJOQUJaNktKempERQ?oc=5",
    "snip": "",
    "isNew": false
+  },
+  {
+   "t": "2026-11-17 23:13",
+   "d": "2026-11-17",
+   "track": "fin",
+   "kind": "media",
+   "src": "Yahoo Finance",
+   "title": "SoFi Technologies (SOFI) Dropped, What Is Behind the Latest Attention?",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWm9EQ1djLWhGa2NaSEtoczlGcGo1VF9IV2xveWY0NkNQS2tiUGdoZFRVT3hrOWxvX0J5azNCTHVYbHlHZUFWTzIxdzN0ZFNfUmJuZWthcUYzWW52elFlaGVPS0RfY3Q2ODdtbDFoNXRjWVB0ak9wd09ITXB0VjQ0cm9FT1lheEt1ZTl1NTVlUDJzOXROQ3BnanhIaXRLMUtmeV94ag?oc=5",
+   "snip": "",
+   "isNew": true
   },
   {
    "t": "2026-11-17 23:02",
