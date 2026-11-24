@@ -126,9 +126,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 215.71,
-  "lastD": "2026-11-13",
-  "lastPx": 218.03,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 220,
+  "n": 3,
   "everAth": false
  },
  "TEVA": {
@@ -162,9 +162,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 68.97,
-  "lastD": "2026-11-12",
-  "lastPx": 68.97,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 71.31,
+  "n": 2,
   "everAth": true
  },
  "CBOE": {
@@ -186,9 +186,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 372.32,
-  "lastD": "2026-11-12",
-  "lastPx": 372.32,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 376.11,
+  "n": 2,
   "everAth": true
  },
  "VLTO": {
@@ -210,9 +210,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 259.65,
-  "lastD": "2026-11-23",
-  "lastPx": 263.12,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 265.61,
+  "n": 3,
   "everAth": true
  },
  "TW": {
@@ -414,9 +414,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 153.15,
-  "lastD": "2026-11-18",
-  "lastPx": 165.85,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 166.96,
+  "n": 3,
   "everAth": false
  },
  "BRZE": {
@@ -474,9 +474,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 71.64,
-  "lastD": "2026-11-18",
-  "lastPx": 76.36,
-  "n": 3,
+  "lastD": "2026-11-24",
+  "lastPx": 77.94,
+  "n": 4,
   "everAth": false
  },
  "SPNT": {
@@ -498,9 +498,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 16.65,
-  "lastD": "2026-11-23",
-  "lastPx": 17.52,
-  "n": 3,
+  "lastD": "2026-11-24",
+  "lastPx": 17.69,
+  "n": 4,
   "everAth": false
  },
  "TRMK": {
@@ -642,9 +642,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 10.29,
-  "lastD": "2026-11-23",
-  "lastPx": 10.97,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 10.98,
+  "n": 3,
   "everAth": false
  },
  "CMTV": {
@@ -678,9 +678,9 @@
   "track": "其它",
   "firstD": "2026-11-13",
   "firstPx": 50.01,
-  "lastD": "2026-11-13",
-  "lastPx": 49.87,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 50.59,
+  "n": 2,
   "everAth": true
  },
  "MGNI": {
@@ -702,9 +702,9 @@
   "track": "其它",
   "firstD": "2026-11-13",
   "firstPx": 23.66,
-  "lastD": "2026-11-18",
-  "lastPx": 25.87,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 25.55,
+  "n": 3,
   "everAth": false
  },
  "PUBM": {
@@ -762,9 +762,9 @@
   "track": "其它",
   "firstD": "2026-11-13",
   "firstPx": 202.3,
-  "lastD": "2026-11-20",
-  "lastPx": 205.64,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 207.05,
+  "n": 3,
   "everAth": false
  },
  "XHR": {
@@ -870,9 +870,9 @@
   "track": "生物医药",
   "firstD": "2026-11-13",
   "firstPx": 111.19,
-  "lastD": "2026-11-13",
-  "lastPx": 111.19,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 114.68,
+  "n": 2,
   "everAth": false
  },
  "DDI": {
@@ -930,9 +930,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 239.22,
-  "lastD": "2026-11-18",
-  "lastPx": 239.22,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 240.2,
+  "n": 2,
   "everAth": true
  },
  "SAIL": {
@@ -1074,9 +1074,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 74.34,
-  "lastD": "2026-11-23",
-  "lastPx": 74.82,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 75.19,
+  "n": 3,
   "everAth": false
  },
  "UPBD": {
@@ -1086,9 +1086,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 26.38,
-  "lastD": "2026-11-23",
-  "lastPx": 26.6,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 26.98,
+  "n": 3,
   "everAth": false
  },
  "HZO": {
@@ -1134,9 +1134,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 2.7,
-  "lastD": "2026-11-18",
-  "lastPx": 2.7,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 2.88,
+  "n": 2,
   "everAth": false
  },
  "SGC": {
@@ -1182,9 +1182,9 @@
   "track": "其它",
   "firstD": "2026-11-20",
   "firstPx": 137.42,
-  "lastD": "2026-11-23",
-  "lastPx": 136.39,
-  "n": 2,
+  "lastD": "2026-11-24",
+  "lastPx": 140.53,
+  "n": 3,
   "everAth": false
  },
  "PLMR": {
@@ -1194,9 +1194,9 @@
   "track": "其它",
   "firstD": "2026-11-20",
   "firstPx": 163.59,
-  "lastD": "2026-11-20",
-  "lastPx": 163.59,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 167.67,
+  "n": 2,
   "everAth": false
  },
  "EXPO": {
@@ -1206,9 +1206,9 @@
   "track": "其它",
   "firstD": "2026-11-20",
   "firstPx": 89.16,
-  "lastD": "2026-11-20",
-  "lastPx": 89.16,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 91.04,
+  "n": 2,
   "everAth": false
  },
  "SKWD": {
@@ -1218,9 +1218,9 @@
   "track": "其它",
   "firstD": "2026-11-20",
   "firstPx": 64.43,
-  "lastD": "2026-11-20",
-  "lastPx": 64.43,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 64.91,
+  "n": 2,
   "everAth": true
  },
  "DGICB": {
@@ -1254,9 +1254,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 45.55,
-  "lastD": "2026-11-23",
-  "lastPx": 45.55,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 45.92,
+  "n": 2,
   "everAth": true
  },
  "CBLL": {
@@ -1266,9 +1266,9 @@
   "track": "生物医药",
   "firstD": "2026-11-23",
   "firstPx": 29.29,
-  "lastD": "2026-11-23",
-  "lastPx": 29.29,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 29.94,
+  "n": 2,
   "everAth": false
  },
  "CODI": {
@@ -1290,9 +1290,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 6.45,
-  "lastD": "2026-11-23",
-  "lastPx": 6.45,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 6.59,
+  "n": 2,
   "everAth": false
  },
  "INN": {
@@ -1302,9 +1302,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 7.5,
-  "lastD": "2026-11-23",
-  "lastPx": 7.5,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 7.34,
+  "n": 2,
   "everAth": false
  },
  "KNSA": {
@@ -1314,9 +1314,9 @@
   "track": "生物医药",
   "firstD": "2026-11-23",
   "firstPx": 98.69,
-  "lastD": "2026-11-23",
-  "lastPx": 98.69,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 102.72,
+  "n": 2,
   "everAth": true
  },
  "MSGR": {
@@ -1326,9 +1326,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 267.07,
-  "lastD": "2026-11-23",
-  "lastPx": 267.07,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 284.39,
+  "n": 2,
   "everAth": true
  },
  "PAYO": {
@@ -1350,9 +1350,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 104.54,
-  "lastD": "2026-11-23",
+  "lastD": "2026-11-24",
   "lastPx": 104.54,
-  "n": 1,
+  "n": 2,
   "everAth": true
  },
  "TECH": {
@@ -1374,9 +1374,9 @@
   "track": "其它",
   "firstD": "2026-11-23",
   "firstPx": 80.85,
-  "lastD": "2026-11-23",
-  "lastPx": 80.85,
-  "n": 1,
+  "lastD": "2026-11-24",
+  "lastPx": 81.91,
+  "n": 2,
   "everAth": true
  },
  "ULCC": {
@@ -1388,6 +1388,342 @@
   "firstPx": 8.58,
   "lastD": "2026-11-23",
   "lastPx": 8.58,
+  "n": 1,
+  "everAth": false
+ },
+ "GILD": {
+  "sym": "GILD",
+  "name": "Gilead Sciences",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 178.29,
+  "lastD": "2026-11-24",
+  "lastPx": 178.29,
+  "n": 1,
+  "everAth": true
+ },
+ "SNY": {
+  "sym": "SNY",
+  "name": "Sanofi ADS",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 51.9,
+  "lastD": "2026-11-24",
+  "lastPx": 51.9,
+  "n": 1,
+  "everAth": false
+ },
+ "TGT": {
+  "sym": "TGT",
+  "name": "Target",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 176.06,
+  "lastD": "2026-11-24",
+  "lastPx": 176.06,
+  "n": 1,
+  "everAth": false
+ },
+ "A": {
+  "sym": "A",
+  "name": "Agilent Technologies",
+  "sec": "工业",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 183.52,
+  "lastD": "2026-11-24",
+  "lastPx": 183.52,
+  "n": 1,
+  "everAth": true
+ },
+ "BIIB": {
+  "sym": "BIIB",
+  "name": "Biogen",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 269.11,
+  "lastD": "2026-11-24",
+  "lastPx": 269.11,
+  "n": 1,
+  "everAth": false
+ },
+ "SN": {
+  "sym": "SN",
+  "name": "SharkNinja",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 228.93,
+  "lastD": "2026-11-24",
+  "lastPx": 228.93,
+  "n": 1,
+  "everAth": true
+ },
+ "ROIV": {
+  "sym": "ROIV",
+  "name": "Roivant Sciences Common Shares",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 42.34,
+  "lastD": "2026-11-24",
+  "lastPx": 42.34,
+  "n": 1,
+  "everAth": true
+ },
+ "DLTR": {
+  "sym": "DLTR",
+  "name": "Dollar Tree",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 154.65,
+  "lastD": "2026-11-24",
+  "lastPx": 154.65,
+  "n": 1,
+  "everAth": false
+ },
+ "GKOS": {
+  "sym": "GKOS",
+  "name": "Glaukos",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 256.98,
+  "lastD": "2026-11-24",
+  "lastPx": 256.98,
+  "n": 1,
+  "everAth": true
+ },
+ "AHR": {
+  "sym": "AHR",
+  "name": "American Healthcare REIT",
+  "sec": "房地产",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 59.75,
+  "lastD": "2026-11-24",
+  "lastPx": 59.75,
+  "n": 1,
+  "everAth": true
+ },
+ "JAN": {
+  "sym": "JAN",
+  "name": "Janus Living -1",
+  "sec": "房地产",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 33.11,
+  "lastD": "2026-11-24",
+  "lastPx": 33.11,
+  "n": 1,
+  "everAth": true
+ },
+ "TGTX": {
+  "sym": "TGTX",
+  "name": "TG Therapeutics",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 70.13,
+  "lastD": "2026-11-24",
+  "lastPx": 70.13,
+  "n": 1,
+  "everAth": false
+ },
+ "CHE": {
+  "sym": "CHE",
+  "name": "Chemed",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 563.29,
+  "lastD": "2026-11-24",
+  "lastPx": 563.29,
+  "n": 1,
+  "everAth": false
+ },
+ "EXLS": {
+  "sym": "EXLS",
+  "name": "ExlService",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 43.84,
+  "lastD": "2026-11-24",
+  "lastPx": 43.84,
+  "n": 1,
+  "everAth": false
+ },
+ "ARX": {
+  "sym": "ARX",
+  "name": "Accelerant Common Shares",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 19.92,
+  "lastD": "2026-11-24",
+  "lastPx": 19.92,
+  "n": 1,
+  "everAth": false
+ },
+ "BANF": {
+  "sym": "BANF",
+  "name": "BancFirst",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 122.75,
+  "lastD": "2026-11-24",
+  "lastPx": 122.75,
+  "n": 1,
+  "everAth": false
+ },
+ "VRDN": {
+  "sym": "VRDN",
+  "name": "Viridian Therapeutics",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 35.7,
+  "lastD": "2026-11-24",
+  "lastPx": 35.7,
+  "n": 1,
+  "everAth": false
+ },
+ "NATL": {
+  "sym": "NATL",
+  "name": "NCR Atleos",
+  "sec": "Miscellaneous",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 48.7,
+  "lastD": "2026-11-24",
+  "lastPx": 48.7,
+  "n": 1,
+  "everAth": true
+ },
+ "AXGN": {
+  "sym": "AXGN",
+  "name": "Axogen",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 59.83,
+  "lastD": "2026-11-24",
+  "lastPx": 59.83,
+  "n": 1,
+  "everAth": true
+ },
+ "GRDN": {
+  "sym": "GRDN",
+  "name": "Guardian Pharmacy Services",
+  "sec": "必需消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 50.62,
+  "lastD": "2026-11-24",
+  "lastPx": 50.62,
+  "n": 1,
+  "everAth": true
+ },
+ "VCEL": {
+  "sym": "VCEL",
+  "name": "Vericel",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 61.18,
+  "lastD": "2026-11-24",
+  "lastPx": 61.18,
+  "n": 1,
+  "everAth": false
+ },
+ "PRCH": {
+  "sym": "PRCH",
+  "name": "Porch",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 22.02,
+  "lastD": "2026-11-24",
+  "lastPx": 22.02,
+  "n": 1,
+  "everAth": false
+ },
+ "TGLS": {
+  "sym": "TGLS",
+  "name": "Tecnoglass",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 55.48,
+  "lastD": "2026-11-24",
+  "lastPx": 55.48,
+  "n": 1,
+  "everAth": false
+ },
+ "CRAI": {
+  "sym": "CRAI",
+  "name": "CRA International",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 224.42,
+  "lastD": "2026-11-24",
+  "lastPx": 224.42,
+  "n": 1,
+  "everAth": true
+ },
+ "SLN": {
+  "sym": "SLN",
+  "name": "Silence Therapeutics American Depository Share",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 20,
+  "lastD": "2026-11-24",
+  "lastPx": 20,
+  "n": 1,
+  "everAth": false
+ },
+ "GDYN": {
+  "sym": "GDYN",
+  "name": "Grid Dynamics",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 13.88,
+  "lastD": "2026-11-24",
+  "lastPx": 13.88,
+  "n": 1,
+  "everAth": false
+ },
+ "TLS": {
+  "sym": "TLS",
+  "name": "Telos",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-24",
+  "firstPx": 7.87,
+  "lastD": "2026-11-24",
+  "lastPx": 7.87,
+  "n": 1,
+  "everAth": false
+ },
+ "PLX": {
+  "sym": "PLX",
+  "name": "Protalix BioTherapeutics (DE)",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-24",
+  "firstPx": 3.17,
+  "lastD": "2026-11-24",
+  "lastPx": 3.17,
   "n": 1,
   "everAth": false
  }
