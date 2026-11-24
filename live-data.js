@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-24T00:15:12.296Z",
+  "syncedAt": "2026-11-24T00:58:21.703Z",
   "source": "Yahoo Finance",
   "stockDate": "20261123",
   "indexDate": "20261123",
@@ -18,7 +18,7 @@ window.WIND_LIVE = {
    "ytd": -12.01,
    "mcap": 1523630080000,
    "pre": null,
-   "post": 0.09
+   "post": 0.7
   },
   "META.O": {
    "name": "脸书(META PLATFORMS)",
@@ -31,7 +31,7 @@ window.WIND_LIVE = {
    "ytd": -8.12,
    "mcap": 1527609688064,
    "pre": null,
-   "post": 0.11
+   "post": 0.38
   },
   "IREN.O": {
    "name": "IREN",
@@ -44,7 +44,7 @@ window.WIND_LIVE = {
    "ytd": -65.71,
    "mcap": 6212592128,
    "pre": null,
-   "post": 1.43
+   "post": 2.32
   },
   "NBIS.O": {
    "name": "NEBIUS",
@@ -57,7 +57,7 @@ window.WIND_LIVE = {
    "ytd": 8.73,
    "mcap": 28645855232,
    "pre": null,
-   "post": 0.87
+   "post": 2.77
   },
   "CRWV.O": {
    "name": "COREWEAVE",
@@ -70,7 +70,7 @@ window.WIND_LIVE = {
    "ytd": -39.07,
    "mcap": 26877556736,
    "pre": null,
-   "post": 0.37
+   "post": 1.14
   },
   "BE.N": {
    "name": "BLOOM ENERGY",
@@ -83,7 +83,7 @@ window.WIND_LIVE = {
    "ytd": 70.38,
    "mcap": 49714671616,
    "pre": null,
-   "post": 0.74
+   "post": 2.08
   },
   "AMD.O": {
    "name": "超威半导体(AMD)",
@@ -96,7 +96,7 @@ window.WIND_LIVE = {
    "ytd": 102.92,
    "mcap": 750506016768,
    "pre": null,
-   "post": -0.87
+   "post": -0.54
   },
   "TSM.N": {
    "name": "台积电(TAIWAN SEMICONDUCTOR MANUFACTURING)",
@@ -109,7 +109,7 @@ window.WIND_LIVE = {
    "ytd": 13.76,
    "mcap": 1885801545728,
    "pre": null,
-   "post": 1.29
+   "post": 1.69
   },
   "TER.O": {
    "name": "泰瑞达(TERADYNE)",
@@ -122,7 +122,7 @@ window.WIND_LIVE = {
    "ytd": 12.5,
    "mcap": 36456689664,
    "pre": null,
-   "post": -0.37
+   "post": -1.36
   },
   "ONTO.N": {
    "name": "ONTO INNOVATION",
@@ -148,7 +148,7 @@ window.WIND_LIVE = {
    "ytd": 48.52,
    "mcap": 104338743296,
    "pre": null,
-   "post": 0.32
+   "post": 0.81
   },
   "RBRK.N": {
    "name": "RUBRIK",
@@ -161,7 +161,7 @@ window.WIND_LIVE = {
    "ytd": 50.62,
    "mcap": 23396532224,
    "pre": null,
-   "post": -0.41
+   "post": 0.55
   },
   "OKTA.O": {
    "name": "OKTA",
@@ -187,7 +187,7 @@ window.WIND_LIVE = {
    "ytd": -12.03,
    "mcap": 16259525632,
    "pre": null,
-   "post": 0.35
+   "post": 0.47
   },
   "SPCX.O": {
    "name": "SPACE EXPLORATION TECHNOLOGIES",
@@ -200,7 +200,7 @@ window.WIND_LIVE = {
    "ytd": -17.15,
    "mcap": 1811034931200,
    "pre": null,
-   "post": 0.5
+   "post": 1.04
   },
   "2105.HK": {
    "name": "来凯医药(LAEKNA)",
@@ -265,7 +265,7 @@ window.WIND_LIVE = {
    "ytd": 26.31,
    "mcap": 1215510609920,
    "pre": null,
-   "post": 0.42
+   "post": 0.45
   },
   "688825.SH": {
    "name": "长鑫科技(CXMT)",
@@ -343,7 +343,7 @@ window.WIND_LIVE = {
    "ytd": -41.52,
    "mcap": 60666097664,
    "pre": null,
-   "post": 0.28
+   "post": 1.05
   },
   "SOFI.O": {
    "name": "SOFI TECHNOLOGIES",
@@ -356,7 +356,7 @@ window.WIND_LIVE = {
    "ytd": -52.33,
    "mcap": 16988730368,
    "pre": null,
-   "post": 0.29
+   "post": 0.62
   },
   "ABCL.O": {
    "name": "ABCELLERA BIOLOGICS",
@@ -395,7 +395,7 @@ window.WIND_LIVE = {
    "ytd": 587.23,
    "mcap": 85812011008,
    "pre": null,
-   "post": 0.17
+   "post": 0.71
   },
   "LITE.O": {
    "name": "LUMENTUM",
@@ -408,7 +408,7 @@ window.WIND_LIVE = {
    "ytd": 40.99,
    "mcap": 49367052288,
    "pre": null,
-   "post": -0.16
+   "post": 0.67
   },
   "AEHR.O": {
    "name": "AEHR TEST SYSTEMS",
@@ -421,7 +421,7 @@ window.WIND_LIVE = {
    "ytd": 118.91,
    "mcap": 1590875264,
    "pre": null,
-   "post": 0.39
+   "post": 1.01
   },
   "FROG.O": {
    "name": "JFROG",
@@ -627,22 +627,22 @@ window.WIND_LIVE = {
   },
   "N225.GI": {
    "name": "日经225",
-   "date": "20261120",
-   "level": 56436.65,
-   "prev": 59444.21,
-   "chg": -5.06,
-   "d5": -7.7,
-   "d20": -12.67,
+   "date": "20261123",
+   "level": 58559.21,
+   "prev": 56436.65,
+   "chg": 3.76,
+   "d5": -1.85,
+   "d20": -6.91,
    "amount": null
   },
   "KS11.GI": {
    "name": "韩国综合指数",
    "date": "20261123",
-   "level": 4708.54,
+   "level": 4956.18,
    "prev": 4869.96,
-   "chg": -3.31,
-   "d5": -11,
-   "d20": -14.91,
+   "chg": 1.77,
+   "d5": -2.83,
+   "d20": -10.7,
    "amount": null
   },
   "GDAXI.GI": {
@@ -673,6 +673,146 @@ window.WIND_LIVE = {
    "chg": 2.23,
    "d5": -4.89,
    "d20": -0.21,
+   "amount": null
+  },
+  "HSI.HI": {
+   "name": "恒生指数",
+   "date": "20261123",
+   "level": 22383.74,
+   "prev": 22410.8,
+   "chg": -0.12,
+   "d5": -5.77,
+   "d20": -3.07,
+   "amount": null
+  },
+  "HSTECH.HI": {
+   "name": "恒生科技指数",
+   "date": "20261123",
+   "level": 3508,
+   "prev": 3511.14,
+   "chg": -0.09,
+   "d5": -7.72,
+   "d20": -9.39,
+   "amount": null
+  },
+  "HSHCI.HI": {
+   "name": "恒生医疗保健",
+   "date": "20261123",
+   "level": 3285.02,
+   "prev": 3215.75,
+   "chg": 2.15,
+   "d5": -6.05,
+   "d20": -6.17,
+   "amount": null
+  },
+  "HSHKI.HI": {
+   "name": "恒生港股通",
+   "date": "20261123",
+   "level": 3223.59,
+   "prev": 3224.8,
+   "chg": -0.04,
+   "d5": -6.08,
+   "d20": -4.85,
+   "amount": null
+  },
+  "HSSCHKY.HI": {
+   "name": "恒生港股通高股息率",
+   "date": "20261123",
+   "level": 2656.51,
+   "prev": 2671.4,
+   "chg": -0.56,
+   "d5": -3.16,
+   "d20": 2.16,
+   "amount": null
+  },
+  "000001.SH": {
+   "name": "上证指数",
+   "date": "20261123",
+   "level": 3538.95,
+   "prev": 3533.79,
+   "chg": 0.15,
+   "d5": -1.77,
+   "d20": -4.11,
+   "amount": null
+  },
+  "000688.SH": {
+   "name": "科创50",
+   "date": "20261123",
+   "level": 1227.89,
+   "prev": 1231.09,
+   "chg": -0.26,
+   "d5": 1.17,
+   "d20": -8.74,
+   "amount": null
+  },
+  "000698.SH": {
+   "name": "科创100",
+   "date": "20261123",
+   "level": 1273.3,
+   "prev": 1220.18,
+   "chg": 4.35,
+   "d5": -4.43,
+   "d20": -17.69,
+   "amount": null
+  },
+  "399006.SZ": {
+   "name": "创业板指",
+   "date": "20261123",
+   "level": 2280.2,
+   "prev": 2212.13,
+   "chg": 3.08,
+   "d5": -1.72,
+   "d20": -15.05,
+   "amount": null
+  },
+  "000300.SH": {
+   "name": "沪深300",
+   "date": "20261123",
+   "level": 3958.29,
+   "prev": 3954.57,
+   "chg": 0.09,
+   "d5": -0.54,
+   "d20": -3.58,
+   "amount": null
+  },
+  "000905.SH": {
+   "name": "中证500",
+   "date": "20261123",
+   "level": 6128.99,
+   "prev": 6006.08,
+   "chg": 2.05,
+   "d5": -2.67,
+   "d20": -10.06,
+   "amount": null
+  },
+  "000852.SH": {
+   "name": "中证1000",
+   "date": "20261123",
+   "level": 5812.32,
+   "prev": 5648.63,
+   "chg": 2.9,
+   "d5": -5.71,
+   "d20": -13.69,
+   "amount": null
+  },
+  "932000.SH": {
+   "name": "中证2000",
+   "date": "20261123",
+   "level": 2443.92,
+   "prev": 2351.93,
+   "chg": 3.91,
+   "d5": -7.32,
+   "d20": -14.44,
+   "amount": null
+  },
+  "BSE50.BJ": {
+   "name": "北证50",
+   "date": "20261123",
+   "level": 795.38,
+   "prev": 759.9,
+   "chg": 4.67,
+   "d5": -4.92,
+   "d20": -19.24,
    "amount": null
   }
  },

@@ -210,9 +210,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 259.65,
-  "lastD": "2026-11-12",
-  "lastPx": 259.65,
-  "n": 1,
+  "lastD": "2026-11-23",
+  "lastPx": 263.12,
+  "n": 2,
   "everAth": true
  },
  "TW": {
@@ -498,9 +498,9 @@
   "track": "生物医药",
   "firstD": "2026-11-12",
   "firstPx": 16.65,
-  "lastD": "2026-11-18",
-  "lastPx": 16.99,
-  "n": 2,
+  "lastD": "2026-11-23",
+  "lastPx": 17.52,
+  "n": 3,
   "everAth": false
  },
  "TRMK": {
@@ -642,9 +642,9 @@
   "track": "其它",
   "firstD": "2026-11-12",
   "firstPx": 10.29,
-  "lastD": "2026-11-12",
-  "lastPx": 10.29,
-  "n": 1,
+  "lastD": "2026-11-23",
+  "lastPx": 10.97,
+  "n": 2,
   "everAth": false
  },
  "CMTV": {
@@ -1050,9 +1050,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 28.29,
-  "lastD": "2026-11-20",
-  "lastPx": 28.56,
-  "n": 2,
+  "lastD": "2026-11-23",
+  "lastPx": 28.97,
+  "n": 3,
   "everAth": false
  },
  "JJSF": {
@@ -1074,9 +1074,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 74.34,
-  "lastD": "2026-11-18",
-  "lastPx": 74.34,
-  "n": 1,
+  "lastD": "2026-11-23",
+  "lastPx": 74.82,
+  "n": 2,
   "everAth": false
  },
  "UPBD": {
@@ -1086,9 +1086,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 26.38,
-  "lastD": "2026-11-18",
-  "lastPx": 26.38,
-  "n": 1,
+  "lastD": "2026-11-23",
+  "lastPx": 26.6,
+  "n": 2,
   "everAth": false
  },
  "HZO": {
@@ -1098,9 +1098,9 @@
   "track": "其它",
   "firstD": "2026-11-18",
   "firstPx": 52.85,
-  "lastD": "2026-11-20",
-  "lastPx": 52.82,
-  "n": 2,
+  "lastD": "2026-11-23",
+  "lastPx": 52.96,
+  "n": 3,
   "everAth": false
  },
  "REF": {
@@ -1182,9 +1182,9 @@
   "track": "其它",
   "firstD": "2026-11-20",
   "firstPx": 137.42,
-  "lastD": "2026-11-20",
-  "lastPx": 137.42,
-  "n": 1,
+  "lastD": "2026-11-23",
+  "lastPx": 136.39,
+  "n": 2,
   "everAth": false
  },
  "PLMR": {
@@ -1244,6 +1244,150 @@
   "firstPx": 14.54,
   "lastD": "2026-11-20",
   "lastPx": 14.54,
+  "n": 1,
+  "everAth": false
+ },
+ "BOX": {
+  "sym": "BOX",
+  "name": "Box",
+  "sec": "科技",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 45.55,
+  "lastD": "2026-11-23",
+  "lastPx": 45.55,
+  "n": 1,
+  "everAth": true
+ },
+ "CBLL": {
+  "sym": "CBLL",
+  "name": "CeriBell",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-23",
+  "firstPx": 29.29,
+  "lastD": "2026-11-23",
+  "lastPx": 29.29,
+  "n": 1,
+  "everAth": false
+ },
+ "CODI": {
+  "sym": "CODI",
+  "name": "D/B/A Compass Diversified Shares of Beneficial Interest",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 13.46,
+  "lastD": "2026-11-23",
+  "lastPx": 13.46,
+  "n": 1,
+  "everAth": false
+ },
+ "CTKB": {
+  "sym": "CTKB",
+  "name": "Cytek Biosciences",
+  "sec": "医疗",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 6.45,
+  "lastD": "2026-11-23",
+  "lastPx": 6.45,
+  "n": 1,
+  "everAth": false
+ },
+ "INN": {
+  "sym": "INN",
+  "name": "Summit Hotel Properties",
+  "sec": "房地产",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 7.5,
+  "lastD": "2026-11-23",
+  "lastPx": 7.5,
+  "n": 1,
+  "everAth": false
+ },
+ "KNSA": {
+  "sym": "KNSA",
+  "name": "Kiniksa Pharmaceuticals International",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-23",
+  "firstPx": 98.69,
+  "lastD": "2026-11-23",
+  "lastPx": 98.69,
+  "n": 1,
+  "everAth": true
+ },
+ "MSGR": {
+  "sym": "MSGR",
+  "name": "MSG Rangers",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 267.07,
+  "lastD": "2026-11-23",
+  "lastPx": 267.07,
+  "n": 1,
+  "everAth": true
+ },
+ "PAYO": {
+  "sym": "PAYO",
+  "name": "Payoneer Global",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 7.23,
+  "lastD": "2026-11-23",
+  "lastPx": 7.23,
+  "n": 1,
+  "everAth": false
+ },
+ "SAFT": {
+  "sym": "SAFT",
+  "name": "Safety Insurance",
+  "sec": "金融",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 104.54,
+  "lastD": "2026-11-23",
+  "lastPx": 104.54,
+  "n": 1,
+  "everAth": true
+ },
+ "TECH": {
+  "sym": "TECH",
+  "name": "Bio-Techne",
+  "sec": "医疗",
+  "track": "生物医药",
+  "firstD": "2026-11-23",
+  "firstPx": 72.8,
+  "lastD": "2026-11-23",
+  "lastPx": 72.8,
+  "n": 1,
+  "everAth": false
+ },
+ "TNL": {
+  "sym": "TNL",
+  "name": "Travel Leisure Common Stock",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 80.85,
+  "lastD": "2026-11-23",
+  "lastPx": 80.85,
+  "n": 1,
+  "everAth": true
+ },
+ "ULCC": {
+  "sym": "ULCC",
+  "name": "Frontier",
+  "sec": "可选消费",
+  "track": "其它",
+  "firstD": "2026-11-23",
+  "firstPx": 8.58,
+  "lastD": "2026-11-23",
+  "lastPx": 8.58,
   "n": 1,
   "everAth": false
  }
