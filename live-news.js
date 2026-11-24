@@ -1,21 +1,186 @@
 window.NEWS_DATA = {
  "meta": {
-  "syncedAt": "2026-11-24T01:15:27.990Z",
+  "syncedAt": "2026-11-24T13:53:56.132Z",
   "source": "东方财富 7×24 / Yahoo 标题",
-  "corpus": 3100,
-  "total": 1,
-  "ok": 1,
+  "corpus": 100,
+  "total": 12,
+  "ok": 12,
   "full": 0
  },
  "items": {
-  "VNET": {
-   "symbol": "VNET",
-   "name": "VNET Group, Inc.",
+  "ZH": {
+   "symbol": "ZH",
+   "name": "Zhihu Inc.",
    "session": "pre",
    "ok": true,
-   "headline": "VNET Group Inc (VNET) (Q3 2026) Earnings Call Highlights: Wholesale Surge and 922 MW Order ...",
-   "date": "2026-11-23",
-   "url": "https://finance.yahoo.com/markets/stocks/articles/vnet-group-inc-vnet-q3-190030348.html",
+   "headline": "Zhihu Q3 Earnings Call Highlights",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/zhihu-q3-earnings-call-highlights-131304006.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "DKS": {
+   "symbol": "DKS",
+   "name": "Dick's Sporting Goods Inc",
+   "session": "pre",
+   "ok": true,
+   "headline": "Dick’s Sporting Goods shares soar as strong profit beat prompts guidance upgrade",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dick-sporting-goods-shares-soar-123923959.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "ANF": {
+   "symbol": "ANF",
+   "name": "Abercrombie & Fitch Company",
+   "session": "pre",
+   "ok": true,
+   "headline": "Abercrombie & Fitch Fiscal Q3 Earnings, Net Sales Increase; Fiscal 2027 EPS Guidance Lifted",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/abercrombie-fitch-fiscal-q3-earnings-131351546.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "TIGR": {
+   "symbol": "TIGR",
+   "name": "UP Fintech Holding Limited",
+   "session": "pre",
+   "ok": true,
+   "headline": "UP Fintech Holding Limited Reports Unaudited Third Quarter 2026 Financial Results",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/fintech-holding-limited-reports-unaudited-080000842.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "KC": {
+   "symbol": "KC",
+   "name": "Kingsoft Cloud Holdings Limited",
+   "session": "pre",
+   "ok": true,
+   "headline": "Kingsoft Cloud Fiscal Q3 Loss Widens, Revenue Rises",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kingsoft-cloud-fiscal-q3-loss-110447768.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "DLTR": {
+   "symbol": "DLTR",
+   "name": "Dollar Tree, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Dollar Tree stock jumps on earnings beat and raised outlook",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dollar-tree-stock-jumps-earnings-121709851.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "CMBT": {
+   "symbol": "CMBT",
+   "name": "CMB.TECH NV",
+   "session": "pre",
+   "ok": true,
+   "headline": "Cmb.Tech Q3 Earnings, Revenue Rise",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cmb-tech-q3-earnings-revenue-085713621.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "DY": {
+   "symbol": "DY",
+   "name": "Dycom Industries, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Dycom Industries Fiscal Q3 Adjusted Earnings, Revenue Rise; Buyback Authorized",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/dycom-industries-fiscal-q3-adjusted-123324253.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "MMED": {
+   "symbol": "MMED",
+   "name": "MiniMed Group, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "MiniMed Swings to Fiscal Q2 Profit as Revenue Advances",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/healthcare/articles/minimed-swings-fiscal-q2-profit-120741692.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "SJM": {
+   "symbol": "SJM",
+   "name": "The J.M. Smucker Company ",
+   "session": "pre",
+   "ok": true,
+   "headline": "J.M. Smucker Fiscal Q2 Adjusted Earnings Rise, Sales Fall; Raises Fiscal 2027 Adjusted EPS Outlook",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/j-m-smucker-fiscal-q2-121625023.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "MDT": {
+   "symbol": "MDT",
+   "name": "Medtronic plc",
+   "session": "pre",
+   "ok": true,
+   "headline": "Medtronic (MDT) Nears Q2 Results After Hugo Clearance, Is It Still A Bargain?",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/healthcare/articles/medtronic-mdt-nears-q2-results-131109436.html",
+   "res": [],
+   "guide": [],
+   "src": "Yahoo 新闻标题（仅标题）",
+   "matched": 0,
+   "kept": 0,
+   "note": "仅取到新闻标题，正文待补"
+  },
+  "BURL": {
+   "symbol": "BURL",
+   "name": "Burlington Stores, Inc.",
+   "session": "pre",
+   "ok": true,
+   "headline": "Burlington Stores shares rise despite earnings miss",
+   "date": "2026-11-24",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/burlington-stores-shares-rise-despite-123804775.html",
    "res": [],
    "guide": [],
    "src": "Yahoo 新闻标题（仅标题）",
@@ -25,150 +190,120 @@ window.NEWS_DATA = {
   }
  },
  "trump": {
-  "items": [
-   {
-    "d": "2026-11-24",
-    "t": "11-24 09:10",
-    "o": "【美媒起底黄仁勋复职内幕：特朗普史无前例的干预？】北京时间11月24日，英伟达公司董事会周一突然改变态度，出人意料地宣布恢复黄仁勋(Jensen Huang)的CEO职务。《纽约时报》、彭博社等美国媒体披露了背后的内幕。据两名知情人士透露，在特朗普启动了持续数日的幕后斡旋，为英伟",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": true
-   },
-   {
-    "d": "2026-11-24",
-    "t": "11-24 07:47",
-    "o": "【特朗普推动黄仁勋回归 所持英伟达股票价值最高上涨1亿元】北京时间11月24日，据《金融时报》报道，当地时间周一，随着黄仁勋意外被恢复英伟达CEO职务的消息传出，英伟达股价飙升。美国总统特朗普持有的英伟达股票价值最高上涨1500万美元(约合1亿元人民币)。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-24",
-    "t": "11-24 02:41",
-    "o": "【特朗普亲口承认：是我促成了“黄仁勋的回归”】美国总统特朗普表示，他曾直接与英伟达董事会沟通，敦促董事会让黄仁勋重新出任公司CEO。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 23:25",
-    "o": "美国总统特朗普表示，目前不担心<b>人工智能</b>泡沫。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "AI 相关表态利好本土算力与电力投资，同时是出口管制进一步收紧的信号。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 22:44",
-    "o": "【特朗普称美国政府没有证据表明黄仁勋有不合法行为】美国总统特朗普23日在社交媒体发文说，英伟达董事会让黄仁勋重新担任首席执行官一职是“正确且恰当的决定”。他表示，美国政府没有理由认为黄仁勋回归英伟达会对国家安全构成任何风险。美国司法部长已确认，美国政府没有证据表明其有任何不合法行",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 22:16",
-    "o": "【特朗普评价让黄仁勋复职的决定“正确且恰当”】美国总统特朗普23日在社交媒体发文说，英伟达董事会让黄仁勋重新担任首席执行官一职是“正确且恰当的决定”。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 22:12",
-    "o": "【特朗普：祝贺黄仁勋恢复职位】美国总统特朗普：英伟达董事会作出了让黄仁勋重回首席执行官一职的正确、恰当的决定。国家需要黄仁勋掌舵英伟达，以保障这家公司取得成功、蓬勃发展，同时助力美国经济走向繁荣。美国政府没有理由认为黄仁勋回归英伟达会带来任何国家安全风险。美国司法部长已经证实，美",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 15:27",
-    "o": "【特朗普称只想向<b>中国</b>出售相对落后的<b>芯片</b> 外交部回应】11月23日，外交部发言人郭嘉昆主持例行记者会。路透社记者提问，美国总统特朗普称，美国只想向中国出售相对落后的芯片，并称美国政府正就此与中方进行讨论，中方对此有何回应？中方是否正与美方讨论购买此类芯片？",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "半导体关税/出口表态直接冲击设备与代工对华收入占比，落地前对板块是情绪扰动而非基本面变化。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 12:57",
-    "o": "【特朗普返美后记者会：利率、<b>伊朗</b>、数据中心、黄仁勋全都聊】11月23日路透社报道，刚结束亚洲为期四天的访问，美国总统特朗普周五在白宫召开备受瞩目的记者会，原本应该要藉此机会向美国民众宣传此次出访成果。特朗普一开讲，先是称赞由卡塔尔打造的新“空军一号”的速度，接着感叹新冠疫苗推出时",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 11:10",
-    "o": "【特朗普：希望英伟达董事会重新聘用黄仁勋】美国总统特朗普当地时间11月22日在社交平台Truth Social上发文称，希望英伟达董事会重新聘用黄仁勋，这对英伟达、对美国而言都将是最优选择。",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 10:52",
-    "o": "【特朗普妻子给20岁小儿子建议：约会时要小心谨慎 世界充满危险】据美媒当地时间11月21日报道，美国第一夫人梅拉尼娅在她的新纪录片中表示，自己透露了给20岁儿子巴伦·特朗普的恋爱建议。她提醒称外面的世界充满危险，约会时要小心谨慎。据媒体报道，2025年，一位消息人士告诉媒体，巴伦",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   },
-   {
-    "d": "2026-11-23",
-    "t": "11-23 10:38",
-    "o": "【特朗普：美股狂跌6万亿美元100%怪民主党 如不迅速改变 情况会越来越坏】北京时间23日凌晨，美国总统特朗普在社交媒体上发帖称，“自民主党在11月3日那场相当奇怪的‘胜利’以来，市场已下跌超过6万亿美元。仅纳斯达克就下跌了20%。这100%是因为民主党‘糟糕’，因为他们奉行反增",
-    "src": "东方财富 7×24（转载 X / 财经媒体）",
-    "r": "情绪类表态，暂无具体政策动作，观察后续是否落地。",
-    "isNew": false
-   }
-  ],
+  "items": [],
   "logCount": 86
  },
  "moversNews": {
   "GMEX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SHOE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FLNC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RZAI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INSM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RDIB": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HPE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TLSI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INN": {
    "ok": true,
-   "title": "GMEX Robotics Corporation Announces Share Consolidation",
+   "title": "SUMMIT HOTEL PROPERTIES PUBLISHES 2026 CORPORATE RESPONSIBILITY REPORT",
    "summary": "",
-   "t": "11-24 05:45",
+   "t": "11-23 21:30",
+   "src": "PR Newswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "MRAM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SMTC": {
+   "ok": true,
+   "title": "Semtech Announces Participation at Upcoming Investor Conference",
+   "summary": "",
+   "t": "11-23 22:00",
+   "src": "Business Wire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "ALTO": {
+   "ok": true,
+   "title": "Zacks.com featured highlights include Stride, Tapestry, HeartBeam, QuantumScape and Alto Ingredients",
+   "summary": "",
+   "t": "11-23 20:15",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "OPTU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LIF": {
+   "ok": true,
+   "title": "Life360 Announces Board Transition",
+   "summary": "",
+   "t": "11-23 22:15",
    "src": "GlobeNewswire（英文）",
    "cause": false,
    "en": true
   },
-  "FLNC": {
+  "BVN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TII": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VTEX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ITG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BTDR": {
    "ok": true,
-   "title": "Fluence Energy Swings to Q4 Loss, Revenue Falls; Shares Rise After Hours",
+   "title": "B. Riley Cuts Price Target on Bitdeer Technologies Group to $12 From $19, Keeps Buy Rating",
    "summary": "",
-   "t": "11-24 06:16",
+   "t": "11-23 20:47",
    "src": "MT Newswires（英文）",
    "cause": false,
    "en": true
   },
-  "ALTG": {
+  "EVLV": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SION": {
+  "BRUN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "PRLD": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "AVAH": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "ALTO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "GLOO": {
-   "ok": false,
-   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
-  },
-  "LOAR": {
+  "CNL": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
@@ -176,214 +311,842 @@ window.NEWS_DATA = {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "AGCC": {
+  "SWVL": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "WTFC": {
+  "DELL": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "TDG": {
+  "NEXA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "HPE": {
+  "NAK": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SNY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ETR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GDS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "UCTT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FCF": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VIAV": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MXL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "KLIC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AURA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MU": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股芯片股盘前跌幅扩大 美光科技、英特尔跌超6%，11-24 18:47）"
+  },
+  "USDE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GRRR": {
    "ok": true,
-   "title": "慧与科技（HPE）获授权追加50亿美元用于股票回购",
-   "summary": "慧与科技（HPE）获授权追加50亿美元用于股票回购。",
-   "t": "11-24 05:06",
-   "src": "东方财富 7×24",
-   "cause": true,
-   "mismatch": false,
-   "score": 4,
-   "cand": 3
-  },
-  "A": {
-   "ok": true,
-   "title": "Agilent Technologies Stock Jumps on Higher Demand for Its Lab Devices",
+   "title": "Gorilla Technology Chairman and CEO Jay Chandan Awarded 2026 Nobel Sustainability Trust Medal for Outstanding Contribution to AI for Public Good",
    "summary": "",
-   "t": "11-24 07:03",
-   "src": "Barrons.com（英文）",
+   "t": "11-23 21:00",
+   "src": "TMX Newsfile（英文）",
    "cause": false,
    "en": true
   },
-  "USFD": {
+  "AIBZ": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "RYDE": {
+  "PSNY": {
+   "ok": true,
+   "title": "Polestar Sets the Date for Reporting Select Results for the Third Quarter and Nine Months of 2026",
+   "summary": "",
+   "t": "11-23 20:00",
+   "src": "Business Wire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "FORM": {
+   "ok": true,
+   "title": "AMAT vs. FORM: Which Stock Has the Edge as HBM Demand Grows?",
+   "summary": "",
+   "t": "11-23 21:45",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "RC": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "PXED": {
+  "PNNT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "QNC": {
+  "BLZE": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SVM": {
+  "VICR": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "CRCT": {
+  "AMKR": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "BRAI": {
+  "VSH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AEHR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SNDK": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ALGM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACMR": {
+   "ok": true,
+   "title": "ACMR Rides on Strong Operating Margin Growth: Will it Sustain?",
+   "summary": "",
+   "t": "11-23 21:17",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "INDI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INTC": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股芯片股盘前跌幅扩大 美光科技、英特尔跌超6%，11-24 18:47）"
+  },
+  "AXTI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DIOD": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LWLG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AEIS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AMH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AMTM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "COHU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PRE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FATE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "A": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CRDO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TTMI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AREC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LPTH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ZBRA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VANI": {
+   "ok": true,
+   "title": "Vivani Medical Publishes FAQ on Positive SLIM-1 Results for Its Investigational Semaglutide Implant",
+   "summary": "",
+   "t": "11-23 21:30",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
+  },
+  "TECK": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FCX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "KEEL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SYM": {
+   "ok": true,
+   "title": "Is Symbotic's Substantial Backlog a Signal for Long-Term Growth?",
+   "summary": "",
+   "t": "11-23 21:31",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "CYPH": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NVTS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GFUZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LITE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NUAI": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
   "CENT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "OUST": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SILC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AUC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PENG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "POET": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DC": {
    "ok": true,
-   "title": "Central Garden & Pet Q4 Earnings Call Highlights",
+   "title": "Dakota Gold Announces Date for Webcast Conference Call to Review the Richmond Hill Pre-Feasibility Study Results",
    "summary": "",
-   "t": "11-24 08:12",
-   "src": "MarketBeat（英文）",
+   "t": "11-23 19:30",
+   "src": "TMX Newsfile（英文）",
    "cause": false,
    "en": true
   },
-  "EGG": {
-   "ok": false,
-   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：ABB将以22.2亿美元的股权价值收购ZIEHL-ABEGG，11-23 14:05）"
-  },
-  "AMRC": {
+  "LAB": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CEVA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MOD": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MRVL": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TER": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TXN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CRWV": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ERO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HIVE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACIU": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ALTG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SITM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RMBS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ALAB": {
+   "ok": true,
+   "title": "What Sent Astera Labs Stock Lower?",
+   "summary": "",
+   "t": "11-23 19:48",
+   "src": "Trefis（英文）",
+   "cause": false,
+   "en": true
+  },
+  "AMD": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：美股芯片股盘前跌幅扩大 美光科技、英特尔跌超6%，11-24 18:47）"
+  },
+  "VGZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "WDC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "LRCX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CMPX": {
+   "ok": true,
+   "title": "Compass Therapeutics to Participate in the 38th Annual Piper Sandler Healthcare Conference",
+   "summary": "",
+   "t": "11-23 21:00",
+   "src": "GlobeNewswire（英文）",
+   "cause": false,
+   "en": true
   },
   "IIM": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "IVVD": {
+  "PPG": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "AMTM": {
+  "MIR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AMAT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NVDA": {
+   "ok": false,
+   "note": "原因未知（本场次窗口内未检索到对应消息；最近相关：约克维尔将英伟达公司目标价从225美元上调至250美元，11-24 19:20）"
+  },
+  "GFS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PHR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SMCI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "QNT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "STM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SCCO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MCHB": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NBIS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INFQ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HBM": {
    "ok": true,
-   "title": "Amentum surges on earnings beat and buyback program",
+   "title": "JPMorgan Initiates Coverage on Hudbay Minerals With Overweight Rating, CA$44 Price Target",
    "summary": "",
-   "t": "11-24 06:37",
-   "src": "Investing.com（英文）",
+   "t": "11-23 20:20",
+   "src": "MT Newswires（英文）",
    "cause": false,
    "en": true
   },
-  "CABA": {
+  "VRT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "NWN": {
+  "MARA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "TGLS": {
+  "ACRS": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "CVGI": {
+  "MTSI": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "LCNB": {
+  "ZION": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ANT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "POWI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "IREN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "QMCO": {
    "ok": true,
-   "title": "LCNB stock rises on 500,000 share buyback authorization",
+   "title": "Down 34.9% in 4 Weeks, Here's Why Quantum Corp. (QMCO) Looks Ripe for a Turnaround",
    "summary": "",
-   "t": "11-24 07:01",
-   "src": "Investing.com（英文）",
+   "t": "11-23 21:35",
+   "src": "Zacks（英文）",
    "cause": false,
    "en": true
   },
-  "IVA": {
+  "REF": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RMIX": {
    "ok": true,
-   "title": "Inventiva Reports Unaudited 2026 Third Quarter Financial Results¹",
+   "title": "Suncrete (RMIX) Stock Fair Value Moves Lower As Analysts Weigh Demand And Margin Risks",
    "summary": "",
-   "t": "11-24 05:05",
+   "t": "11-23 19:11",
+   "src": "Simply Wall St.（英文）",
+   "cause": false,
+   "en": true
+  },
+  "KYMR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "HUT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "KLAC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SABS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BELFA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BSP": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RGTI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "P": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DMAC": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CORZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SHAZ": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "FLEX": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACLS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NEXT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "SEI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "WYFI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "BW": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CAMT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "INTR": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "CHPT": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "MCHP": {
+   "ok": true,
+   "title": "Cantor Fitzgerald Adjusts Price Target on Microchip Technology to $80 From $100",
+   "summary": "",
+   "t": "11-23 19:46",
+   "src": "MT Newswires（英文）",
+   "cause": false,
+   "en": true
+  },
+  "ENTG": {
+   "ok": true,
+   "title": "Mizuho Adjusts Price Target on Entegris to $175 From $190, Keeps Outperform Rating",
+   "summary": "",
+   "t": "11-23 19:00",
+   "src": "MT Newswires（英文）",
+   "cause": false,
+   "en": true
+  },
+  "PLAB": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "OSS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "RZLV": {
+   "ok": true,
+   "title": "Rezolve Ai Expands in Industrial Commerce as Flowtech Search Demand Surges 185%",
+   "summary": "",
+   "t": "11-23 21:00",
    "src": "GlobeNewswire（英文）",
    "cause": false,
    "en": true
   },
-  "GOW": {
+  "COHR": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SMTC": {
+  "TSEM": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "ACRE": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "GLW": {
    "ok": true,
-   "title": "Chipmaker Semtech Delivers Beat-And-Raise Report, But Stock Drops",
+   "title": "Mizuho Adjusts Price Target on Corning to $145 From $180, Keeps Outperform Rating",
    "summary": "",
-   "t": "11-24 07:02",
-   "src": "Investor's Business Daily（英文）",
+   "t": "11-23 19:02",
+   "src": "MT Newswires（英文）",
    "cause": false,
    "en": true
   },
-  "NNBR": {
+  "BELFB": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "CMTG": {
+  "CLSK": {
+   "ok": true,
+   "title": "What's in the Offing for CleanSpark Stock This Earnings Season?",
+   "summary": "",
+   "t": "11-23 21:06",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "MPWR": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "RGC": {
+  "NVMI": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SES": {
+  "PYXS": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "STLD": {
+  "ALXO": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SOC": {
+  "FRSH": {
+   "ok": true,
+   "title": "FRSH's Record $73.9M Cash Flow: Can the Momentum Continue in 2027?",
+   "summary": "",
+   "t": "11-23 20:31",
+   "src": "Zacks（英文）",
+   "cause": false,
+   "en": true
+  },
+  "SRTA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "NRGV": {
+  "YEXT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "KSS": {
+  "APLD": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "TROO": {
+  "DOCN": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "BLND": {
+  "FCEL": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SKYA": {
+  "ON": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "SSYS": {
+  "BTBT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "AMPY": {
+  "PZZA": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "LVWR": {
+  "TLYS": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "EH": {
+  "SLG": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   },
-  "LAR": {
+  "MKSI": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "KN": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "NEWP": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PGY": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "VECO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "Q": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "PAGS": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "TXG": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AEVA": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "AVGO": {
+   "ok": false,
+   "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
+  },
+  "DUOT": {
    "ok": false,
    "note": "原因未知（东财快讯与 Yahoo 新闻均未检索到本场次窗口内的消息，需人工核对公告）"
   }
  },
  "geo": {
   "items": [
+   {
+    "t": "2026-11-24 20:32",
+    "topic": "APEC",
+    "o": "【启元Q1、T1获中美欧三项机器人认证】11月24日，北京商报记者获悉，启元机器人旗下启元Q1、启元T1两款产品近日通过中国CR（中国机器人认证）、欧盟CE、美国UL三项产品认证。企业方面称，其中UL 3300认证系全球首张颁发给人形机器人的该类证书。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "中美关系 · 贸易与供应链",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 19:59",
+    "topic": "美伊谈判",
+    "o": "【伊朗称当天第四艘油轮在霍尔木兹海峡触雷爆炸】当地时间11月24日，伊朗伊斯兰革命卫队海军表示，当日清晨，一艘油轮在霍尔木兹海峡内违规航行，结果触雷爆炸。这是当日伊朗伊斯兰革命卫队宣布的第四艘在该海峡触雷的油轮。卫队表示，在此事件发生后，经由卫队海军发出无线电警告，另外两艘违规航行油轮被迫掉头，返回波斯湾方向。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 19:58",
+    "topic": "俄乌局势",
+    "o": "【俄方称下一轮乌克兰问题谈判日期未定】俄罗斯总统新闻秘书佩斯科夫11月24日表示，下一轮乌克兰问题谈判的日期尚未确定，但各方认为谈判将继续进行。他还表示，欧洲方面坚持认为谈判应以四方形式举行，但俄方还不清楚欧洲方面参与能给和平调解进程带来什么额外贡献。",
+    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "s",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 19:37",
+    "topic": "美伊谈判",
+    "o": "【伊朗军队总司令：将进一步收紧霍尔木兹海峡封锁】据伊朗方面24日消息，伊朗伊斯兰共和国军队总司令哈塔米当天表示，在伊朗提出的七项条件得到落实之前，伊方不仅不会开放霍尔木兹海峡，还将进一步收紧对海峡的封锁。",
+    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 19:00",
+    "topic": "美伊谈判",
+    "o": "伊朗革命卫队称周二霍尔木兹海峡又有一艘油轮触雷。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "原油与地缘风险溢价",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 18:52",
+    "topic": "俄乌局势",
+    "o": "【华为、荣耀等将亮相今年高交会】记者获悉，今年高交会将以“创新引领变革，合作链接全球”为主题，展会综合总面积40万平方米，设置国之重器重大装备、科技巨头产业链、算力、人工智能、机器人等22个展区，参展单位包括航天科技、中国电子、中国稀土、中国中车、中广核、中国石化、中国海油等央企，以及华为、宁德时代、宇树科技、荣耀等产业链龙头企业，同时，将有俄罗斯、韩国、新加坡等20多个国家组团参展。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
+   {
+    "t": "2026-11-24 18:44",
+    "topic": "俄乌局势",
+    "o": "乌克兰总统泽连斯基证实乌克兰在芬兰湾击中俄罗斯船只。",
+    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
+    "imp": "能源/军工/欧洲风险偏好",
+    "lvl": "t",
+    "isNew": true
+   },
    {
     "t": "2026-11-24 08:29",
     "topic": "俄乌局势",
@@ -397,15 +1160,6 @@ window.NEWS_DATA = {
     "t": "2026-11-24 07:33",
     "topic": "俄乌局势",
     "o": "【默茨：与俄罗斯谈判 欧洲准备好了】德国总理默茨11月23日在柏林表示，欧洲已做好与俄罗斯谈判的准备，乌克兰问题顾问级别的和平谈判近期可能在阿联酋首都阿布扎比再次举行，由乌克兰、俄罗斯、欧洲和美国参加。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "s",
-    "isNew": false
-   },
-   {
-    "t": "2026-11-24 06:45",
-    "topic": "俄乌局势",
-    "o": "【德国总理：欧洲已做好准备与俄罗斯谈判】德国总理默茨23日在柏林表示，欧洲已做好与俄罗斯谈判的准备，乌克兰问题顾问级别的和平谈判近期可能在阿联酋首都阿布扎比再次举行，由乌克兰、俄罗斯、欧洲和美国参加。",
     "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
     "imp": "能源/军工/欧洲风险偏好",
     "lvl": "s",
@@ -439,117 +1193,48 @@ window.NEWS_DATA = {
     "isNew": false
    },
    {
-    "t": "2026-11-23 11:05",
+    "t": "2026-11-22 20:50",
     "topic": "美伊谈判",
-    "o": "【Bernstein：未来三年石油市场将转为供应过剩】Bernstein称，随着供应增长超过需求，未来三年全球石油市场将再次出现供应过剩，布伦特原油均价2027年料降至每桶80美元，2028年降至75美元。NeilBeveridge等分析师在11月23日的一份报告中写道，今年美伊战争期间出现了约130万桶/日的供应缺口，主要通过经合组织和中国减少战略石油储备得以弥补。",
+    "o": "伊朗外长阿拉格齐表示，美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议。",
     "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-23 10:19",
-    "topic": "俄乌局势",
-    "o": "【俄军舰在利比亚遭无人快艇袭击爆炸】综合利比亚与俄罗斯媒体11月22日报道，停泊在利比亚班加西的俄罗斯“水星”号护卫舰当天遭到多艘无人快艇袭击，袭击导致“水星”号护卫舰爆炸起火，部分来袭快艇被拦截。消息人士表示，这些无人快艇上安装了星链系统装置，目前技术人员正在研究和分析被截获快艇的导航系统。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-23 03:05",
-    "topic": "美伊谈判",
-    "o": "【内塔尼亚胡被曝正考虑单独对伊朗动武】当地时间22日，据以色列方面消息，以色列看守政府总理内塔尼亚胡正考虑在未经美国批准的情况下单独对伊朗发动袭击。以军军事情报局在近日一场闭门会议中警告，此举可能引发多条战线同时爆发冲突。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
     "imp": "原油与地缘风险溢价",
     "lvl": "s",
     "isNew": false
-   },
-   {
-    "t": "2026-11-21 15:56",
-    "topic": "美伊谈判",
-    "o": "【伊朗外长：伊方仍愿通过外交途径解决与美国的争端】据《伊朗报》21日报道，伊朗外交部长阿拉格齐近日在接受该报专访时表示，伊朗仍希望通过外交途径解决与美国之间的争端。只要伊朗的要求在谈判中得到满足，“霍尔木兹海峡就会开放”。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 15:34",
-    "topic": "美伊谈判",
-    "o": "【伊朗外交部长：浓缩铀不会被运出伊朗境外】伊朗外交部长阿拉格齐当地时间今天（11月21日）在社交媒体发文表示，伊斯兰堡谅解备忘录已经失去了实际意义，伊朗提出的两日计划或许将为达成协议铺平道路。",
-    "r": "谈判类表态先按「预期扰动」处理：有文本协议才算拐点，口头善意不改变仓位。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 12:19",
-    "topic": "美伊谈判",
-    "o": "【黄金跌破3550美元！分析师：或承压至明年】专家认为，对于贵金属市场而言，后续核心变量仍是中东局势。若美伊、红海方向持续扰动，黄金大概率承压至明年中旬。不过过程中仍存在不确定性。2027年民主党正式接管国会后，特朗普施政可能受阻，这将会给多头留出一定发挥空间。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 11:35",
-    "topic": "俄乌局势",
-    "o": "【俄称乌克兰加入北约完全不可接受】据俄新社报道，俄罗斯外交部副部长里亚布科夫11月20日表示，乌克兰加入北约对俄方而言“完全不可接受”，为乌方谋求“准成员国”地位或寻找某种“创造性解决方案”也不会被俄方接受。里亚布科夫表示，鉴于欧盟“日益咄咄逼人”的姿态、鲜明的反俄路线以及持续军事化，俄方认为，欧盟与北约之间“没有多大差别”。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 11:04",
-    "topic": "美伊谈判",
-    "o": "【美财长称仍居住在军事基地】美国财政部长贝森特20日称，他依然面临来自伊朗方面的安全“威胁”，因此目前仍居住在军事基地里。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 11:01",
-    "topic": "美伊谈判",
-    "o": "【伊朗称击落第58架美军“死神”无人机】伊朗伊斯兰革命卫队公共关系部门11月21日在社交媒体上说，一架美军MQ-9型“死神”无人机当天在霍尔木兹海峡上空被伊斯兰革命卫队新型防空系统拦截并击落。这是伊方击落的第58架美军“死神”无人机。根据所搭载的传感器和武器不同类型，一架MQ-9型“死神”无人机的造价在3000万美元至5000万美元之间。",
-    "r": "军事行动抬高短期风险溢价，油价与黄金最先反应；未升级到封锁级事件通常 3-5 个交易日回吐。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 10:18",
-    "topic": "美伊谈判",
-    "o": "【美总统特使与卡塔尔高官讨论美伊斡旋工作】当地时间20日获悉，两位知情人士表示，美国总统特朗普特使威特科夫和特朗普的女婿库什纳19日在柏林与卡塔尔高级官员举行会晤，就美国与伊朗之间的斡旋工作进行讨论。卡塔尔首相兼外交大臣穆罕默德及其特使出席。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "原油与地缘风险溢价",
-    "lvl": "s",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 09:42",
-    "topic": "俄乌局势",
-    "o": "【俄称爱沙尼亚关闭与俄边境口岸是制造新的“铁幕”】俄罗斯外交部发言人扎哈罗娃11月20日表示，爱沙尼亚决定从12月1日起关闭与俄罗斯之间边境口岸的决定将对爱沙尼亚经济和社会造成负面后果。她还说，爱沙尼亚此举是在制造新的“铁幕”，俄方将采取必要的政治和外交措施来确保本国利益不受损害。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
-   },
-   {
-    "t": "2026-11-21 09:36",
-    "topic": "俄乌局势",
-    "o": "【丹麦驱逐俄罗斯武官，俄表示将“适当回应”】丹麦外交大臣拉斯穆森11月20日宣布，丹麦决定驱逐俄罗斯驻丹麦国防武官，要求其在7日内离境。俄外交部当天表示，俄将对丹麦驱逐其武官一事“作出适当回应”。",
-    "r": "地缘表态，暂无具体动作，观察后续是否落地。",
-    "imp": "能源/军工/欧洲风险偏好",
-    "lvl": "t",
-    "isNew": true
    }
   ],
   "logCount": 60
  },
  "briefLog": [
+  {
+   "d": "2026-11-24",
+   "kind": "daily",
+   "source": "auto",
+   "stance": "普涨（权重与广度同向）",
+   "stanceNote": "美股 标普 +4.73%、纳指 +6.51%、道指 +3.01%；中国香港 恒生 —、中国内地 上证 +0.27%。VIX +12.7% 至 30.00；等权相对市值加权 20 日 +3.6%——中位数个股强于权重，跌的是大票不是全市场。",
+   "conclusions": [
+    [
+     "三大市场同日收盘：标普 +4.7%、恒生 —、上证 +0.3%。",
+     "指数收涨，纳指 +6.5% vs 道指 +3.0%——成长端更强，风险偏好在修复。"
+    ],
+    [
+     "结构：等权 -2.8%（周） vs 市值加权 -2.4%，差 -0.4%。",
+     "本周指数强于个股，涨幅集中在少数权重，广度没有跟上——这种结构下追高指数性价比低。"
+    ],
+    [
+     "跨资产：10Y 4.92%、美元指数 104.32、BTC $61,196。",
+     "VIX 30.00（+12.7%）——波动率抬升，分歧在放大；BTC 当日 -0.0%，加密走弱，风险偏好边际收缩。"
+    ]
+   ],
+   "snapshot": {
+    "spx": 4.73,
+    "ndx": 6.51,
+    "hsi": null,
+    "sh": 0.27,
+    "vix": 30,
+    "btc": 61196,
+    "us10y": 4.918
+   }
+  },
   {
    "d": "2026-11-23",
    "kind": "daily",
@@ -587,51 +1272,6 @@ window.NEWS_DATA = {
      "11-20（周五）盘后 <b>0 家</b>披露（Nasdaq 日历为空），无 EPS 与次日接力可报；11-19 盘后批次（GAP/INTU 等 9 家）的 11-20 接力已在上一场结算。11-23 盘前 2 家、命中 1 家：<b>VNET EPS -0.29 vs 预期 -0.22（miss 30.4%）</b>，股价仍 <b>+16.51%</b>（2.54），IDC/算力叙事盖过业绩。11-23 盘后 87 只异动中 64% 上涨、中位数 +3.45%：<b>FLNC +17.4%</b>（Q4 转亏但被买）、TDG +7.4%、WTFC +7.5%；<b>HPE -6.9%</b>、USFD -6.5%——AI 基建与消费两条线分歧。观察点：VIX 能否跌破 25、费半能否站稳 20 日线、黄仁勋复职后的战略与对华芯片口径（特朗普称只卖「相对落后」的芯片）。"
     ]
    ]
-  },
-  {
-   "d": "2026-11-20",
-   "kind": "daily",
-   "source": "manual",
-   "stance": "去杠杆式崩塌：标普 -3.70%、费半 -10.73%，VIX +26% 至 35.89，黄金同跌 -4.62%",
-   "stanceNote": "11-20 标普 <b>-3.70%</b>（6,910.39）、纳指综 <b>-5.28%</b>（22,617.73）、纳指 100 -5.61%、道指 <b>-1.93%</b>（48,147.33）、罗素 2000 -2.76%、费半 <b>-10.73%</b>（8,408.59），VIX <b>+26.2%</b> 至 <b>35.89</b>（5 日 +86%、20 日 +88.6%）。11 板块<b>仅必需消费 +0.67% 收红</b>，信息技术 <b>-7.27%</b> 垫底、工业 -3.09%。AMD <b>-13.25%</b>（424.39）、IREN -17.97%（20 日 -53.7%）、NBIS -16.11%、CRWV -12.02%。<b>黄金 -4.62%</b>（3,515.4）、白银 -7.33%、铜 -2.66%，只有美债涨（10Y -14bp 至 4.912%）——<b>无差别抛售、现金为王</b>；量能 <b>120%</b> 20 日均量（放量下跌）。全球同步：日经 -5.06%、韩国 -3.84%、DAX -2.60%、恒生 -1.89%、上证 -1.23%。盘后 227 只异动中 88% 反弹、中位数 +3.62%。",
-   "conclusions": [
-    [
-     "<b>周五定调：五连阴的加速段，标普 -3.70%、纳指 -5.28%、费半 -10.73%。</b>",
-     "标普 <b>-3.70%</b>（6,910.39）、纳指综 <b>-5.28%</b>（22,617.73）、纳指 100 -5.61%（25,028.98）、道指 <b>-1.93%</b>（48,147.33）、罗素 2000 -2.76%、费半 <b>-10.73%</b>（8,408.59）。VIX <b>+26.2%</b> 至 <b>35.89</b>，5 日 +86%、20 日 +88.6%。连续第 5 根阴线且跌幅逐日扩大（-1.92 → -1.03 → -0.23 → -2.02 → <b>-3.70</b>），周线标普 <b>-8.61%</b>、费半 <b>-17.13%</b>。全球同步：日经 <b>-5.06%</b>、韩国 -3.84%、DAX -2.60%、恒生 -1.89%、上证 -1.23%——这是<b>全球性风险资产重定价</b>，不是美股的独立事件。"
-    ],
-    [
-     "<b>关键修正：这不是避险，是去杠杆——黄金 -4.62%、白银 -7.33%、铜 -2.66%，只有美债涨。</b>",
-     "上一场（11-21）因期货结算未完成，把黄金误读为 +4.14%；本轮全量结算后修正为<b>黄金 -4.62%</b>（3,515.4）、白银 <b>-7.33%</b>（41.07）、铜 -2.66%，BTC 同步 -5.0%（58,799）。另一端美债走强：10Y <b>-14bp 至 4.912%</b>（周 -24.2bp），美元指数 103.81 微跌。<b>股跌、商品跌、加密跌，只有国债涨</b>——这是抵押品被抛售换现金的流动性挤压，不是「避险买国债」的教科书式 risk-off；也正因为如此，周五没有板块能躲，连防御股也被卖。"
-    ],
-    [
-     "<b>震中仍是 AI 算力：AMD -13.25%、TSM -9.48%，算力租赁链第三个崩塌周。</b>",
-     "AMD <b>-13.25%</b>（424.39，20 日 -16.45%），TSM <b>-9.48%</b>（318.71）、ONTO -13.15%、BE -15.30%、LITE -13.94%、TER -9.96%；META -5.93%、TSLA -7.64%。算力租赁：IREN <b>-17.97%</b>（11.82，20 日 <b>-53.67%</b>）、NBIS <b>-16.11%</b>（20 日 -48.92%）、CRWV <b>-12.02%</b>（20 日 -28.94%）。板块印证：信息技术 <b>-7.27%</b>（周 -12.49%）垫底，工业 -3.09%、可选消费 -2.95%、通信 -2.66%；仅必需消费 <b>+0.67%</b> 收红，医疗 -0.12%、能源 -0.62%、公用事业 -0.74% 抗跌。<b>连软件也没躲</b>（OKTA、RBRK 均跌 6% 以上）。"
-    ],
-    [
-     "<b>量能修正：周五是 120% 放量下跌，不是「缩量卖压衰竭」。</b>",
-     "上一场读到 47.3 亿股（20 日均量的 85%）属盘中未结算残量；本轮完整结算为 <b>66.8 亿股 / 20 日均量 120.1%</b>。<b>放量下跌意味着卖压仍在释放而非衰竭</b>，直接推翻了「等量能萎缩再抄底」的判断，也说明周五低点缺乏承接。等权 RSP 5 日 -6.20% vs SPY -8.56%（<b>+2.35pp</b>）、20 日 +5.03pp 不变：跌的依然是权重，中位数个股跌幅小于指数。"
-    ],
-    [
-     "<b>财报接力：11-19 盘后 9 家、11-20 盘前 2 家，beat 也照杀。</b>",
-     "11-19 盘后（EPS 全部披露）：GAP 0.82 vs 0.78（+5.1%）→ 次日 <b>+11.44%</b>，唯一正接力；INTU 2.91 vs 2.65（+9.9%）→ <b>-12.77%</b>、KEYS 3.61 vs 3.38（+6.8%）→ -7.07%、ESE 2.67（+2.8%）→ -5.62%、BULL 0.106 vs 0.065（+62.6%）→ -9.19%；miss 端 GRSD 0.10 vs 0.11 → <b>-43.45%</b>、GEOS -0.56 → -31.42%、EARN 0.17 → -22.47%、GRRR -0.41 vs -0.22 → -16.32%。11-20 盘前 2 家：BJ 1.74 vs 1.26（<b>+38.5%</b>）→ <b>-5.35%</b>、WRD -1.04 vs -0.99（-5.5%）→ -8.58%。<b>指数 -3.7% 的环境里，业绩不是定价变量，beta 才是。</b>盘前表「开盘跳空→收盘」gap 列仍为 null（Yahoo 已不供 preMarketPrice），dayChg 2/2 已回填。"
-    ],
-    [
-     "<b>新高只剩防御：本轮复现 11 只（52 周 7 / 历史 4），赛道连续 3 天全是「其它」。</b>",
-     "全市场 <b>3,697 只</b>扫描，当日新高 <b>11 只</b>（52 周 7 / 历史新高 4，占 <b>0.30%</b>）；并入日志的 11-20 记录为 <b>12 只</b>（周六场次扫到的 JXG 仍在日志内），占比 0.32%。结构：金融 <b>6</b>（IBN、WRB、SKWD 历史新高，RLI、PLMR 52 周新高，DGICB +21.58%）、可选消费 4（FCN、IPAR、EXPO、HZO）、其它 1（ENR）。赛道<b>清一色「其它」</b>——成长赛道连续 3 个交易日零新高。highs-log.json <b>207 条 / 7 个交易日</b>、highs-track.json <b>104 只</b>（其中 12 只 lastD=11-20），无重复，当日已并入。口径仍为「当日盘中最高价严格大于基准」。"
-    ],
-    [
-     "<b>周末变量：霍尔木兹两艘 VLCC 触雷，油价却没涨——周一看 VIX 与油的分歧。</b>",
-     "11-22 晚伊朗称两艘超大型油轮在霍尔木兹海峡东部禁航区触雷起火；特朗普表示若新年后仍未达成协议、倾向对伊朗动武，内塔尼亚胡被曝考虑单独动武。<b>但亚盘前 WTI 仅 83.3 美元（周五 83.98，-0.8%）、布伦特 89.95，地缘溢价没有兑现</b>；黄金反弹 +2.3% 至 3,597、BTC 60,867（+3.5%）。盘后 227 只异动股中 <b>88% 反弹</b>、中位数 <b>+3.62%</b>（ZS +16.34%、CAPR -78.52%）。<b>操作：净敞口保持最低</b>——① 6,910 是第一道支撑，跌破看 6,700；② 真修复的信号是 VIX 回落 30 下方 + 新高回到 30 只以上 + 量能温和；③ 油若不涨反跌，说明需求担忧压过供给冲击，对能源股是双刃剑。"
-    ]
-   ],
-   "snapshot": {
-    "spx": -3.7,
-    "ndx": -5.28,
-    "vix": 35.89,
-    "btc": 61911,
-    "us10y": 4.912
-   },
-   "t": "2026-11-23T01:23:56.626Z"
   },
   {
    "d": "2026-11-20",
@@ -684,6 +1324,51 @@ window.NEWS_DATA = {
     ]
    ],
    "period": "2026-11-16~2026-11-20",
+   "snapshot": {
+    "spx": -3.7,
+    "ndx": -5.28,
+    "vix": 35.89,
+    "btc": 61911,
+    "us10y": 4.912
+   },
+   "t": "2026-11-23T01:23:56.626Z"
+  },
+  {
+   "d": "2026-11-20",
+   "kind": "daily",
+   "source": "manual",
+   "stance": "去杠杆式崩塌：标普 -3.70%、费半 -10.73%，VIX +26% 至 35.89，黄金同跌 -4.62%",
+   "stanceNote": "11-20 标普 <b>-3.70%</b>（6,910.39）、纳指综 <b>-5.28%</b>（22,617.73）、纳指 100 -5.61%、道指 <b>-1.93%</b>（48,147.33）、罗素 2000 -2.76%、费半 <b>-10.73%</b>（8,408.59），VIX <b>+26.2%</b> 至 <b>35.89</b>（5 日 +86%、20 日 +88.6%）。11 板块<b>仅必需消费 +0.67% 收红</b>，信息技术 <b>-7.27%</b> 垫底、工业 -3.09%。AMD <b>-13.25%</b>（424.39）、IREN -17.97%（20 日 -53.7%）、NBIS -16.11%、CRWV -12.02%。<b>黄金 -4.62%</b>（3,515.4）、白银 -7.33%、铜 -2.66%，只有美债涨（10Y -14bp 至 4.912%）——<b>无差别抛售、现金为王</b>；量能 <b>120%</b> 20 日均量（放量下跌）。全球同步：日经 -5.06%、韩国 -3.84%、DAX -2.60%、恒生 -1.89%、上证 -1.23%。盘后 227 只异动中 88% 反弹、中位数 +3.62%。",
+   "conclusions": [
+    [
+     "<b>周五定调：五连阴的加速段，标普 -3.70%、纳指 -5.28%、费半 -10.73%。</b>",
+     "标普 <b>-3.70%</b>（6,910.39）、纳指综 <b>-5.28%</b>（22,617.73）、纳指 100 -5.61%（25,028.98）、道指 <b>-1.93%</b>（48,147.33）、罗素 2000 -2.76%、费半 <b>-10.73%</b>（8,408.59）。VIX <b>+26.2%</b> 至 <b>35.89</b>，5 日 +86%、20 日 +88.6%。连续第 5 根阴线且跌幅逐日扩大（-1.92 → -1.03 → -0.23 → -2.02 → <b>-3.70</b>），周线标普 <b>-8.61%</b>、费半 <b>-17.13%</b>。全球同步：日经 <b>-5.06%</b>、韩国 -3.84%、DAX -2.60%、恒生 -1.89%、上证 -1.23%——这是<b>全球性风险资产重定价</b>，不是美股的独立事件。"
+    ],
+    [
+     "<b>关键修正：这不是避险，是去杠杆——黄金 -4.62%、白银 -7.33%、铜 -2.66%，只有美债涨。</b>",
+     "上一场（11-21）因期货结算未完成，把黄金误读为 +4.14%；本轮全量结算后修正为<b>黄金 -4.62%</b>（3,515.4）、白银 <b>-7.33%</b>（41.07）、铜 -2.66%，BTC 同步 -5.0%（58,799）。另一端美债走强：10Y <b>-14bp 至 4.912%</b>（周 -24.2bp），美元指数 103.81 微跌。<b>股跌、商品跌、加密跌，只有国债涨</b>——这是抵押品被抛售换现金的流动性挤压，不是「避险买国债」的教科书式 risk-off；也正因为如此，周五没有板块能躲，连防御股也被卖。"
+    ],
+    [
+     "<b>震中仍是 AI 算力：AMD -13.25%、TSM -9.48%，算力租赁链第三个崩塌周。</b>",
+     "AMD <b>-13.25%</b>（424.39，20 日 -16.45%），TSM <b>-9.48%</b>（318.71）、ONTO -13.15%、BE -15.30%、LITE -13.94%、TER -9.96%；META -5.93%、TSLA -7.64%。算力租赁：IREN <b>-17.97%</b>（11.82，20 日 <b>-53.67%</b>）、NBIS <b>-16.11%</b>（20 日 -48.92%）、CRWV <b>-12.02%</b>（20 日 -28.94%）。板块印证：信息技术 <b>-7.27%</b>（周 -12.49%）垫底，工业 -3.09%、可选消费 -2.95%、通信 -2.66%；仅必需消费 <b>+0.67%</b> 收红，医疗 -0.12%、能源 -0.62%、公用事业 -0.74% 抗跌。<b>连软件也没躲</b>（OKTA、RBRK 均跌 6% 以上）。"
+    ],
+    [
+     "<b>量能修正：周五是 120% 放量下跌，不是「缩量卖压衰竭」。</b>",
+     "上一场读到 47.3 亿股（20 日均量的 85%）属盘中未结算残量；本轮完整结算为 <b>66.8 亿股 / 20 日均量 120.1%</b>。<b>放量下跌意味着卖压仍在释放而非衰竭</b>，直接推翻了「等量能萎缩再抄底」的判断，也说明周五低点缺乏承接。等权 RSP 5 日 -6.20% vs SPY -8.56%（<b>+2.35pp</b>）、20 日 +5.03pp 不变：跌的依然是权重，中位数个股跌幅小于指数。"
+    ],
+    [
+     "<b>财报接力：11-19 盘后 9 家、11-20 盘前 2 家，beat 也照杀。</b>",
+     "11-19 盘后（EPS 全部披露）：GAP 0.82 vs 0.78（+5.1%）→ 次日 <b>+11.44%</b>，唯一正接力；INTU 2.91 vs 2.65（+9.9%）→ <b>-12.77%</b>、KEYS 3.61 vs 3.38（+6.8%）→ -7.07%、ESE 2.67（+2.8%）→ -5.62%、BULL 0.106 vs 0.065（+62.6%）→ -9.19%；miss 端 GRSD 0.10 vs 0.11 → <b>-43.45%</b>、GEOS -0.56 → -31.42%、EARN 0.17 → -22.47%、GRRR -0.41 vs -0.22 → -16.32%。11-20 盘前 2 家：BJ 1.74 vs 1.26（<b>+38.5%</b>）→ <b>-5.35%</b>、WRD -1.04 vs -0.99（-5.5%）→ -8.58%。<b>指数 -3.7% 的环境里，业绩不是定价变量，beta 才是。</b>盘前表「开盘跳空→收盘」gap 列仍为 null（Yahoo 已不供 preMarketPrice），dayChg 2/2 已回填。"
+    ],
+    [
+     "<b>新高只剩防御：本轮复现 11 只（52 周 7 / 历史 4），赛道连续 3 天全是「其它」。</b>",
+     "全市场 <b>3,697 只</b>扫描，当日新高 <b>11 只</b>（52 周 7 / 历史新高 4，占 <b>0.30%</b>）；并入日志的 11-20 记录为 <b>12 只</b>（周六场次扫到的 JXG 仍在日志内），占比 0.32%。结构：金融 <b>6</b>（IBN、WRB、SKWD 历史新高，RLI、PLMR 52 周新高，DGICB +21.58%）、可选消费 4（FCN、IPAR、EXPO、HZO）、其它 1（ENR）。赛道<b>清一色「其它」</b>——成长赛道连续 3 个交易日零新高。highs-log.json <b>207 条 / 7 个交易日</b>、highs-track.json <b>104 只</b>（其中 12 只 lastD=11-20），无重复，当日已并入。口径仍为「当日盘中最高价严格大于基准」。"
+    ],
+    [
+     "<b>周末变量：霍尔木兹两艘 VLCC 触雷，油价却没涨——周一看 VIX 与油的分歧。</b>",
+     "11-22 晚伊朗称两艘超大型油轮在霍尔木兹海峡东部禁航区触雷起火；特朗普表示若新年后仍未达成协议、倾向对伊朗动武，内塔尼亚胡被曝考虑单独动武。<b>但亚盘前 WTI 仅 83.3 美元（周五 83.98，-0.8%）、布伦特 89.95，地缘溢价没有兑现</b>；黄金反弹 +2.3% 至 3,597、BTC 60,867（+3.5%）。盘后 227 只异动股中 <b>88% 反弹</b>、中位数 <b>+3.62%</b>（ZS +16.34%、CAPR -78.52%）。<b>操作：净敞口保持最低</b>——① 6,910 是第一道支撑，跌破看 6,700；② 真修复的信号是 VIX 回落 30 下方 + 新高回到 30 只以上 + 量能温和；③ 油若不涨反跌，说明需求担忧压过供给冲击，对能源股是双刃剑。"
+    ]
+   ],
    "snapshot": {
     "spx": -3.7,
     "ndx": -5.28,

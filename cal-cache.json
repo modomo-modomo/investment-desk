@@ -596,5 +596,41 @@
  "2026-11-20|time-after-hours": {
   "at": "2026-11-24T00:59:09.153Z",
   "symbols": []
+ },
+ "2026-11-24|time-pre-market": {
+  "at": "2026-11-24T13:48:51.155Z",
+  "symbols": [
+   "ADI",
+   "MDT",
+   "DLTR",
+   "BBY",
+   "BURL",
+   "SJM",
+   "DKS",
+   "DY",
+   "VIPS",
+   "ANF",
+   "CMBT",
+   "MMED",
+   "BILI",
+   "BWLP",
+   "KSS",
+   "KC",
+   "ITRN",
+   "TIGR",
+   "MOV",
+   "VALN",
+   "TITN",
+   "EMBC",
+   "ZH",
+   "BZUN",
+   "FLX"
+  ]
+ },
+ "2026-11-23|time-after-hours": {
+  "at": "2026-11-24T13:48:54.174Z",
+  "symbols": [
+   "FSCO"
+  ]
  }
 }
