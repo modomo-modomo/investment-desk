@@ -626,5 +626,27 @@
   "symbols": [
    "FSCO"
   ]
+ },
+ "2026-11-25|time-pre-market": {
+  "at": "2026-11-25T13:51:13.342Z",
+  "symbols": [
+   "DE",
+   "LI",
+   "BZ",
+   "GDS",
+   "HDL",
+   "GOTU",
+   "PSNY",
+   "DSX",
+   "GASS",
+   "OMSE",
+   "YSG",
+   "NNOX",
+   "ADXN"
+  ]
+ },
+ "2026-11-24|time-after-hours": {
+  "at": "2026-11-25T13:51:16.396Z",
+  "symbols": []
  }
 }
