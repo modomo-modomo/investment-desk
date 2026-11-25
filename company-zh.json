@@ -7390,5 +7390,695 @@
   "desc": "联合航空控股公司通过其子公司在美国、加拿大、大西洋、太平洋和拉丁美洲提供航空运输服务。它通过其干线和支线船队运输人员和货物。该公司还提供地面服务、飞行学院、免费服务",
   "en": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin Am",
   "at": "2026-11-24T23:34:02.749Z"
+ },
+ "DLTR": {
+  "ind": "折扣店",
+  "desc": "Dollar Tree, Inc. 在美国和加拿大以 Dollar Tree 和 Dollar Tree Canada 品牌经营零售折扣店。该公司提供消费品，包括日常消耗品，如生活用纸和化学品、食品、糖果、健康、个人护理",
+  "en": "Dollar Tree, Inc. operates retail discount stores under the Dollar Tree and Dollar Tree Canada brands in the United States and Canada. The company offers consum",
+  "at": "2026-11-25T00:13:01.020Z"
+ },
+ "DKS": {
+  "ind": "专业零售",
+  "desc": "DICK'S Sporting Goods, Inc. 及其子公司主要在美国作为全渠道体育用品零售商运营。提供硬品产品，包括体育用品器材、健身器材、高尔夫器材、渔具产品；和服装。公司还提供",
+  "en": "DICK'S Sporting Goods, Inc., together with its subsidiaries, operates as an omni-channel sporting goods retailer primarily in the United States. It provides har",
+  "at": "2026-11-25T00:13:01.411Z"
+ },
+ "ANF": {
+  "ind": "服装零售",
+  "desc": "Abercrombie & Fitch Co. 通过其子公司在美洲、欧洲、中东、非洲和亚太地区作为全渠道零售商运营。它提供各种男士、女士和儿童服装、个人护理产品和配饰，隶属于 Abercrombie & Fitch、ab",
+  "en": "Abercrombie & Fitch Co., through its subsidiaries, operates as an omnichannel retailer in the Americas, Europe, the Middle East, Africa, and the Asia-Pacific. I",
+  "at": "2026-11-25T00:13:02.029Z"
+ },
+ "ADI": {
+  "ind": "半导体",
+  "desc": "Analog Devices, Inc. 在美国、北美和南美其他地区、欧洲、日本、中国和亚洲其他地区从事集成电路 (IC)、软件和子系统产品的设计、制造、测试和营销。它提供数据转换器产品，可翻译现实世界的数据",
+  "en": "Analog Devices, Inc. engages in the design, manufacture, testing, and marketing of integrated circuits (ICs), software, and subsystems products in the United St",
+  "at": "2026-11-25T00:13:02.577Z"
+ },
+ "DY": {
+  "ind": "工程建筑",
+  "desc": "Dycom Industries, Inc. 为美国的数字基础设施、电信基础设施和公用事业行业提供专业承包服务。它通过通信和建筑系统部门运营。该公司为电信提供工程服务",
+  "en": "Dycom Industries, Inc. provides specialty contracting services to the digital infrastructure, telecommunications infrastructure, and utility industries in the U",
+  "at": "2026-11-25T00:13:02.816Z"
+ },
+ "KC": {
+  "ind": "软件 - 应用程序",
+  "desc": "金山云控股有限公司主要为中国的企业和组织提供云服务。该公司的产品组合包括云产品，例如基础设施即服务（IaaS）基础设施、平台即服务（PaaS）中间件、软件即服务（SaaS）应用程序",
+  "en": "Kingsoft Cloud Holdings Limited provides cloud services to businesses and organizations primarily in China. The company's product portfolio includes cloud produ",
+  "at": "2026-11-25T00:13:03.273Z"
+ },
+ "URBN": {
+  "ind": "服装零售",
+  "desc": "Urban Outfitters, Inc. 在美国和国际上提供生活方式产品和服务。该公司通过三个部门运营：零售、批发和订阅。它经营 Urban Outfitters 商店，提供男女时尚服装、运动服、内衣、鞋类",
+  "en": "Urban Outfitters, Inc. offers lifestyle products and services in the United States and internationally. The company operates through three segments: Retail, Who",
+  "at": "2026-11-25T00:13:03.665Z"
+ },
+ "OC": {
+  "ind": "建筑产品和设备",
+  "desc": "欧文斯科宁在美国、欧洲、亚太地区和国际上提供住宅和商业建筑产品。它通过三个部分运营：屋顶、隔热和门。该公司提供层压板和条状沥青屋顶瓦、屋顶组件和氧化层",
+  "en": "Owens Corning provides residential and commercial building products in the United States, Europe, the Asia Pacific, and internationally. It operates through thr",
+  "at": "2026-11-25T00:13:04.257Z"
+ },
+ "STGW": {
+  "ind": "广告公司",
+  "desc": "Stagwell Inc. 在美国、英国和国际上提供数字化转型、营销、媒体和商务、营销云以及通信服务。该公司提供创意、研究、体验和社交媒体解决方案，旨在构建和提升品牌",
+  "en": "Stagwell Inc. provides digital transformation, marketing, media and commerce, marketing cloud, and communications services in the United States, the United King",
+  "at": "2026-11-25T00:13:05.046Z"
+ },
+ "NTNX": {
+  "ind": "软件 - 基础设施",
+  "desc": "Nutanix, Inc. 在北美、欧洲、亚太地区、中东、拉丁美洲和非洲提供云和人工智能平台 (AI)。它提供超融合基础设施软件（HCI）；用于构建混合多云基础设施的 Nutanix 云平台； Nutanix 云",
+  "en": "Nutanix, Inc. provides a cloud and artificial intelligence platform (AI) in North America, Europe, the Asia Pacific, the Middle East, Latin America, and Africa.",
+  "at": "2026-11-25T00:13:05.415Z"
+ },
+ "RACE": {
+  "ind": "汽车制造商",
+  "desc": "Ferrari N.V. 通过其子公司在全球范围内从事豪华高性能跑车的设计、工程、生产和销售。它提供运动车、赛道车、一次性车、公路车以及超级跑车。公司还提供备件和发动机，以及售后、维修、维护",
+  "en": "Ferrari N.V., through its subsidiaries, engages in design, engineering, production, and sale of luxury performance sports cars worldwide. It offers sports, trac",
+  "at": "2026-11-25T00:13:06.263Z"
+ },
+ "GGB": {
+  "ind": "钢",
+  "desc": "Gerdau S.A. 及其子公司作为一家钢铁生产公司运营。它通过巴西业务、北美业务和南美业务部门运营。该公司提供螺纹钢、棒材、线材、厚板、热轧卷材、钢坯、大方坯、板材、线材和结构件",
+  "en": "Gerdau S.A., together with its subsidiaries, operates as a steel producer company. It operates through Brazil Business, North America Business, and South Americ",
+  "at": "2026-11-25T00:13:06.526Z"
+ },
+ "WDAY": {
+  "ind": "软件 - 应用程序",
+  "desc": "Workday, Inc. 在美国和国际上提供企业云应用程序。该公司提供一套财务管理应用程序来维护会计信息；管理财务流程，例如应付账款和应收账款；识别实时财务、运营、",
+  "en": "Workday, Inc. provides enterprise cloud applications in the United States and internationally. The company offers a suite of financial management applications t",
+  "at": "2026-11-25T00:13:06.897Z"
+ },
+ "GDV": {
+  "ind": "资产管理",
+  "desc": "Gabelli Dividend & Income Trust 是 GAMCO Investors, Inc. 推出的封闭式股票共同基金。该基金由 Gabelli Funds, LLC 管理。它投资于美国公共股票市场。该",
+  "en": "The Gabelli Dividend & Income Trust is a closed ended equity mutual fund launched by GAMCO Investors, Inc. The fund is managed by Gabelli Funds, LLC. It invests",
+  "at": "2026-11-25T00:13:08.248Z"
+ },
+ "FDS": {
+  "ind": "财务数据和证券交易所",
+  "desc": "FactSet Research Systems Inc. 及其子公司是一家全球数据和人工智能解决方案提供商，为美洲、欧洲、中东、非洲和亚太地区的金融市场提供服务。它提供数据、产品和分析应用程序；和工作站",
+  "en": "FactSet Research Systems Inc., together with its subsidiaries, operates as a global data and artificial intelligence solutions provider for the financial market",
+  "at": "2026-11-25T00:13:09.012Z"
+ },
+ "JMSB": {
+  "ind": "银行 - 区域",
+  "desc": "John Marshall Bancorp, Inc. 是 John Marshall Bank 的银行控股公司，在阿灵顿、费尔法克斯、劳登、威廉王子、蒙哥马利、哥伦比亚特区提供银行产品和金融服务。该公司提供支票账户、N",
+  "en": "John Marshall Bancorp, Inc. operates as the bank holding company for John Marshall Bank that provides banking products and financial services in Arlington, Fair",
+  "at": "2026-11-25T00:13:09.482Z"
+ },
+ "JLHL": {
+  "ind": "建筑产品和设备",
+  "desc": "聚龙控股有限公司为中国各类基础设施项目提供智能化综合服务和解决方案。公司提供智能化综合解决方案，如智能安防系统、消防系统、停车系统、收费系统、广播系统",
+  "en": "Julong Holding Limited provides intelligent integrated services and solutions to various infrastructure projects in China. The company offers intelligent integr",
+  "at": "2026-11-25T00:13:09.960Z"
+ },
+ "CTRI": {
+  "ind": "公用事业 - 受监管的燃气",
+  "desc": "Centuri Holdings, Inc. 在北美运营一家公用事业基础设施服务公司。它通过四个部门运营：美国天然气公用事业服务部门；加拿大业务；联合电力公用事业服务公司；和非联合电力公用事业服务。该公司提供燃气公用事业",
+  "en": "Centuri Holdings, Inc. operates as a utility infrastructure services company in North America. It operates through four segments: U.S. Gas Utility Services; Can",
+  "at": "2026-11-25T00:13:10.736Z"
+ },
+ "VNDA": {
+  "ind": "生物技术",
+  "desc": "Vanda Pharmaceuticals Inc. 是一家生物制药公司，专注于疗法的开发和商业化，以满足全球未满足的医疗需求。该公司的商业产品组合包括用于急性治疗与 I 型双相情感障碍相关的躁狂或混合发作的 Fanap",
+  "en": "Vanda Pharmaceuticals Inc., a biopharmaceutical company, focuses on the development and commercialization of therapies to address high unmet medical needs world",
+  "at": "2026-11-25T00:13:11.092Z"
+ },
+ "AGEN": {
+  "ind": "生物技术",
+  "desc": "Agenus Inc. 是一家临床阶段生物技术公司，在美国和国际上发现和开发癌症和传染病的免疫疗法。它提供逆转录细胞展示，一种抗体表达平台，用于鉴定全人源​​和人源化单克隆抗体",
+  "en": "Agenus Inc., a clinical-stage biotechnology company, discovers and develops immunotherapies for cancer and infectious diseases in the United States and internat",
+  "at": "2026-11-25T00:13:11.714Z"
+ },
+ "TRXB": {
+  "ind": "生物技术",
+  "desc": "TRex Bio, Inc. 在美国和国际上开发用于自身免疫和炎症疾病的免疫调节生物制剂。该公司运营着 Deep Biology Platform，这是一个药物发现和设计平台，它将组织层面的见解整合到人类生物学和 Tre",
+  "en": "TRex Bio, Inc. develops immunoregulatory biologics for autoimmune and inflammatory diseases in United States and Internationally. The company operates the Deep ",
+  "at": "2026-11-25T00:13:12.226Z"
+ },
+ "APG": {
+  "ind": "工程建筑",
+  "desc": "APi Group Corporation 在全球范围内提供消防和生命安全、安保、电梯和自动扶梯以及专业服务。它分为两个部门：安全服务部门和专业服务部门。公司提供消防解决方案；电子安全系统；以及电梯和自动扶梯，包括",
+  "en": "APi Group Corporation provides fire and life safety, security, elevator and escalator, and specialty services worldwide. It operates in two segments, Safety Ser",
+  "at": "2026-11-25T00:13:12.821Z"
+ },
+ "TORO": {
+  "ind": "石油和天然气中游",
+  "desc": "Toro Corp. 是一家航运公司，在全球范围内收购、拥有、租赁和运营 MR 油轮。该公司运营和维护一支由两艘 MR 油轮组成的船队，总载货量为 10 万载重吨。该公司原名为 Tankco Shipping Inc.，",
+  "en": "Toro Corp., a shipping company, acquires, owns, charters, and operates MR tankers worldwide. It operates and maintains a fleet of two MR tankers with an aggrega",
+  "at": "2026-11-25T00:13:13.492Z"
+ },
+ "KXIN": {
+  "ind": "汽车和卡车经销商",
+  "desc": "开心控股是一家投资控股公司，在中华人民共和国销售国产和进口汽车。它还通过经销商网络销售新车和二手车，重点关注奥迪、宝马、梅赛德斯-奔驰、路虎、宾利、劳斯莱斯和 P 等汽车品牌。",
+  "en": "Kaixin Holdings, an investment holding company, sells domestic and imported automobiles in the People's Republic of China. It also sells new and used vehicles t",
+  "at": "2026-11-25T00:13:13.972Z"
+ },
+ "RC": {
+  "ind": "房地产投资信托基金 - 抵押贷款",
+  "desc": "Ready Capital Corporation 在美国经营一家房地产金融公司。该公司通过两个部门运营：LMM 商业房地产部门和小企业贷款部门。其 LMM 商业房地产部门在 LLM 财产的整个生命周期内提供 LLM 贷",
+  "en": "Ready Capital Corporation operates as a real estate finance company in the United States. The company operates through two segments: LMM Commercial Real Estate ",
+  "at": "2026-11-25T00:13:14.532Z"
+ },
+ "ADSK": {
+  "ind": "软件 - 应用程序",
+  "desc": "Autodesk, Inc. 在全球范围内提供 3D 设计、工程和娱乐技术解决方案。该公司提供 AutoCAD Civil 3D，这是一种测量、设计、分析和文档解决方案； Autodesk Build，一个用于管理、共享",
+  "en": "Autodesk, Inc. engages in the provision of 3D design, engineering, and entertainment technology solutions worldwide. The company offers AutoCAD Civil 3D, a surv",
+  "at": "2026-11-25T00:13:14.834Z"
+ },
+ "PUBM": {
+  "ind": "软件 - 应用程序",
+  "desc": "PubMatic, Inc. 是一家技术公司，致力于提供云基础设施平台，为全球数字内容创作者、广告商、代理商、代理商交易平台和需求方平台提供实时程序化广告交易。它的 PubMatic SSP 是一个销售系统",
+  "en": "PubMatic, Inc., a technology company, engages in the provision of a cloud infrastructure platform that enables real time programmatic advertising transactions f",
+  "at": "2026-11-25T00:13:15.324Z"
+ },
+ "GLDI": {
+  "ind": "—",
+  "desc": "该指数通过反映 GLD 股票价格的变化以及出售 GLD 股票每月看涨期权收到的名义期权溢价减去产生的名义交易成本来衡量 SPDR® Gold Trust 股票（“GLD 股票”）的“备兑看涨”策略的回报",
+  "en": "The index measures the return of a “covered call” strategy on the shares of the SPDR® Gold Trust (the “GLD Shares”) by reflecting changes in the price of the GL",
+  "at": "2026-11-25T00:13:15.546Z"
+ },
+ "MRX": {
+  "ind": "资本市场",
+  "desc": "Marex Group Limited 是一家金融服务平台公司，为英国、美国和国际商品和金融市场的客户提供流动性、市场准入和基础设施服务。它通过清算、代理和执行、做市商运作",
+  "en": "Marex Group Limited, a financial services platform company, provides liquidity, market access, and infrastructure services to clients in the commodity and finan",
+  "at": "2026-11-25T00:13:16.016Z"
+ },
+ "BTX": {
+  "ind": "资产管理",
+  "desc": "BlackRock Technology and Private Equity Term Trust 是 BlackRock, Inc. 推出的共同基金。该基金由 BlackRock Advisors, LLC 管理。 ",
+  "en": "BlackRock Technology and Private Equity Term Trust is a mutual fund launched by BlackRock, Inc. The fund is managed by BlackRock Advisors, LLC. BlackRock Techno",
+  "at": "2026-11-25T00:13:16.356Z"
+ },
+ "AGIO": {
+  "ind": "生物技术",
+  "desc": "Agios Pharmaceuticals, Inc. 是一家生物制药公司，在美国发现和开发细胞代谢领域的药物。其主导产品包括 PYRUKYND (mitapivat)，一种野生型和突变型丙酮酸激酶 (PK) 的激活剂，",
+  "en": "Agios Pharmaceuticals, Inc., a biopharmaceutical company, discovers and develops medicines in the field of cellular metabolism in the United States. Its lead pr",
+  "at": "2026-11-25T00:13:16.831Z"
+ },
+ "SOLS": {
+  "ind": "特种化学品",
+  "desc": "Solstice Advanced Materials, Inc. 是一家在美国和国际上运营的特种化学品和先进材料公司。该公司分为两个业务部门：制冷剂和应用解决方案（RAS）部门以及电子和特种材料（ESM）部门。 RAS",
+  "en": "Solstice Advanced Materials, Inc. operates as a specialty chemicals and advanced materials company in the United States and internationally. It operates in two ",
+  "at": "2026-11-25T00:13:17.462Z"
+ },
+ "RYAM": {
+  "ind": "化学品",
+  "desc": "Rayonier Advanced Materials Inc. 在美国、中国、欧洲、日本、亚洲其他地区、加拿大、拉丁美洲和国际上生产和销售纤维素特种产品。它通过纤维素特种产品、生物材料、纤维素商品、纸板和高产纸浆开展业",
+  "en": "Rayonier Advanced Materials Inc. manufactures and sells cellulose specialty products in the United States, China, Europe, Japan, rest of Asia, Canada, Latin Ame",
+  "at": "2026-11-25T00:13:18.005Z"
+ },
+ "MTRX": {
+  "ind": "工程建筑",
+  "desc": "Matrix Service Company 提供工程、制造、施工和维护服务，为美国、加拿大和国际上的关键能源基础设施和工业市场提供支持。它通过三个部门运营：存储和终端解决方案部门、公用事业和电力部门",
+  "en": "Matrix Service Company provides engineering, fabrication, construction, and maintenance services to support critical energy infrastructure and industrial market",
+  "at": "2026-11-25T00:13:18.357Z"
+ },
+ "ROMA": {
+  "ind": "咨询服务",
+  "desc": "罗马绿色金融有限公司通过其子公司在香港和新加坡提供环境、社会和治理（ESG）、可持续发展和气候变化相关的咨询服务。它提供可持续发展计划开发服务，例如规划、利益相关者参与、格式化",
+  "en": "Roma Green Finance Limited, through its subsidiaries, provides environmental, social and governance (ESG), sustainability, and climate change related advisory s",
+  "at": "2026-11-25T00:13:19.266Z"
+ },
+ "HUN": {
+  "ind": "化学品",
+  "desc": "亨斯迈公司在全球生产和销售多元化的有机化工产品。该公司分为三个部门：聚氨酯部门、高性能产品部门和先进材料部门。聚氨酯部门提供聚氨酯化学品，包括甲基二苯基二异氰酸酯、聚醚",
+  "en": "Huntsman Corporation manufactures and sells diversified organic chemical products worldwide. The company operates in three segments: Polyurethanes, Performance ",
+  "at": "2026-11-25T00:13:19.743Z"
+ },
+ "CDZI": {
+  "ind": "污染与处理控制",
+  "desc": "Cadiz Inc. 及其子公司在美国提供水务解决方案。该公司分为两个部门：土地部门和水资源部门；和水过滤技术。它提供供水、储水、输水和废水处理服务，以及当地",
+  "en": "Cadiz Inc., together with its subsidiaries, provides water solutions in the United States. The company operates in two segments, Land and Water Resources; and W",
+  "at": "2026-11-25T00:13:20.332Z"
+ },
+ "SHOE": {
+  "ind": "服装零售",
+  "desc": "Shoe Station Group Inc. 及其子公司在美国零售鞋类。其产品包括鞋、运动鞋、高跟鞋、凉鞋、靴子、工作鞋和安全鞋以及运动鞋；以及男士、女士和儿童配饰。它通过商店、在线和移动应用程序销售其产品",
+  "en": "Shoe Station Group Inc., together with its subsidiaries, retails footwear in the United States. Its products include shoes, sneakers, heels, sandals, boots, wor",
+  "at": "2026-11-25T00:13:20.789Z"
+ },
+ "RZAI": {
+  "ind": "软件 - 基础设施",
+  "desc": "Roze AI Inc. 通过其子公司开发集成无线传感、数字孪生软件和数据分析的人工智能消防和防灾技术。该公司提供灾难人工智能平台（DAP），这是一个用于火灾和灾难监测的数字孪生人工智能无线消防系统，",
+  "en": "Roze AI Inc., through its subsidiary, develops AI-enabled fire and disaster-prevention technologies integrating wireless sensing, digital-twin software, and dat",
+  "at": "2026-11-25T00:13:21.296Z"
+ },
+ "INSM": {
+  "ind": "生物技术",
+  "desc": "Insmed Incorporated 在美国、欧洲、日本和国际上为患有严重和罕见疾病的患者开发治疗方法并将其商业化。该公司提供 ARIKAYCE 用于治疗难治性非结核分枝杆菌肺部感染，并处于 3 期临床阶段",
+  "en": "Insmed Incorporated develops and commercializes therapies for patients with serious and rare diseases in the United States, Europe, Japan, and internationally. ",
+  "at": "2026-11-25T00:13:21.702Z"
+ },
+ "RDIB": {
+  "ind": "娱乐",
+  "desc": "Reading International, Inc. 及其子公司专注于美国、澳大利亚和新西兰的娱乐和房地产资产的所有权、开发和运营。它分为两个部门：电影展览部门和房地产部门。电影展览部分",
+  "en": "Reading International, Inc., together with its subsidiaries, focuses on the ownership, development, and operation of entertainment and real property assets in t",
+  "at": "2026-11-25T00:13:22.539Z"
+ },
+ "EMBC": {
+  "ind": "医疗器械及用品",
+  "desc": "Emecta Corp. 是一家医疗器械公司，为改善美国和国际糖尿病患者的健康和福祉提供解决方案。该公司的产品包括笔用针头、注射器和安全注射装置，以及帮助人们的数字应用程序",
+  "en": "Embecta Corp., a medical device company, provides solutions to improve the health and wellbeing of people living with diabetes in the United States and internat",
+  "at": "2026-11-25T00:13:22.885Z"
+ },
+ "INN": {
+  "ind": "房地产投资信托基金 - 酒店和汽车旅馆",
+  "desc": "Summit Hotel Properties, Inc. 是一家公开交易的房地产投资信托公司，专注于拥有优质品牌的住宿设施，其高效的运营模式主要集中在住宿行业的高端领域。截至2026年10月27日，公司的投资组合包括9",
+  "en": "Summit Hotel Properties, Inc. is a publicly traded real estate investment trust focused on owning premium-branded lodging facilities with efficient operating mo",
+  "at": "2026-11-25T00:13:23.545Z"
+ },
+ "LIF": {
+  "ind": "软件 - 应用程序",
+  "desc": "Life360, Inc. 运营一个技术平台，用于定位北美、欧洲、中东、非洲和国际范围内的人、宠物和物品。该公司以免费增值模式提供 Life360 移动应用程序，提供通信、驾驶安全、数字安全和定位服务。",
+  "en": "Life360, Inc. operates a technology platform to locate people, pets, and things in North America, Europe, the Middle East, Africa, and internationally. The comp",
+  "at": "2026-11-25T00:13:24.043Z"
+ },
+ "VTEX": {
+  "ind": "软件 - 应用程序",
+  "desc": "VTEX 及其子公司为企业品牌和零售商提供软件即服务数字商务平台。它提供 VTEX 平台，使客户能够执行商务策略，包括建立在线商店以及跨渠道集成和管理订单，例如",
+  "en": "VTEX, together with its subsidiaries, provides software-as-a-service digital commerce platform for enterprise brands and retailers. It provides VTEX platform th",
+  "at": "2026-11-25T00:13:24.614Z"
+ },
+ "CNL": {
+  "ind": "金子",
+  "desc": "Collective Mining Ltd. 从事哥伦比亚矿产的收购、勘探和开发。该公司勘探金、银、铜和钨矿床。它持有其旗舰项目瓜亚巴莱斯项目 100% 的权益，该项目包括勘探权、explora",
+  "en": "Collective Mining Ltd. engages in the acquisition, exploration, and development of mineral properties located in Colombia. The company explores gold, silver, co",
+  "at": "2026-11-25T00:13:24.850Z"
+ },
+ "SWVL": {
+  "ind": "铁路",
+  "desc": "Swvl Holdings Corp. 是一家技术驱动的颠覆性出行公司，在埃及、沙特阿拉伯王国、阿拉伯联合酋长国、英国和科威特提供公共交通解决方案。该公司提供 B2C 产品，为乘客提供小巴和其他车辆运营网络",
+  "en": "Swvl Holdings Corp., a technology-driven disruptive mobility company, provides mass transit solutions in Egypt, the Kingdom of Saudi Arabia, the United Arab Emi",
+  "at": "2026-11-25T00:13:25.956Z"
+ },
+ "SNY": {
+  "ind": "药品制造商 - 一般",
+  "desc": "赛诺菲在芬兰和德国从事治疗解决方案的研究、开发、制造和营销。它提供免疫学和炎症、罕见疾病神经学、肿瘤学和其他疫苗。它还提供脊髓灰质炎、百日咳和 b 型流感嗜血杆菌 (Hib) pe",
+  "en": "Sanofi engages in the research, development, manufacture, and marketing of therapeutic solutions in Finland and Germany. It provides immunology and inflammation",
+  "at": "2026-11-25T00:13:26.449Z"
+ },
+ "ETR": {
+  "ind": "公用事业 - 受监管的电力",
+  "desc": "Entergy Corporation 及其子公司在美国从事电力生产和零售业务。它在阿肯色州、路易斯安那州、密西西比州和德克萨斯州的部分地区（包括新奥尔良市）生产、传输、分配和销售电力。它",
+  "en": "Entergy Corporation, together with its subsidiaries, engages in the production and retail distribution of electricity in the United States. It generates, transm",
+  "at": "2026-11-25T00:13:27.110Z"
+ },
+ "TG": {
+  "ind": "金属加工",
+  "desc": "Tredegar Corporation 通过其子公司在美国和国际上生产和销售铝型材以及聚乙烯和聚丙烯塑料薄膜。它通过铝型材和高性能薄膜部门运营。铝型材部门生产",
+  "en": "Tredegar Corporation, through its subsidiaries, manufactures and sells aluminum extrusions, and polyethylene and polypropylene plastic films in the United State",
+  "at": "2026-11-25T00:13:28.115Z"
+ },
+ "FCF": {
+  "ind": "银行 - 区域",
+  "desc": "第一联邦金融公司是一家金融控股公司，在美国提供各种消费者和商业银行产品和服务。该公司的消费者服务包括互联网、移动和电话银行；自动柜员机网络；个人支票",
+  "en": "First Commonwealth Financial Corporation, a financial holding company, provides various consumer and commercial banking products and services in the United Stat",
+  "at": "2026-11-25T00:13:28.799Z"
+ },
+ "AURA": {
+  "ind": "生物技术",
+  "desc": "Aura Biosciences, Inc. 是一家临床阶段生物技术公司，开发治疗实体瘤的精准疗法。该公司的专有平台能够使用与药物缀合或负载核酸的病毒样颗粒来靶向一系列实体瘤，以创建病毒样药物",
+  "en": "Aura Biosciences, Inc., a clinical-stage biotechnology company, develops precision therapies to treat solid tumors. The company's proprietary platform enables t",
+  "at": "2026-11-25T00:13:29.186Z"
+ },
+ "PNNT": {
+  "ind": "资产管理",
+  "desc": "PennantPark Investment Corporation 是一家业务开发公司，是一家私募股权基金，专门从事对中间市场公司的直接投资和夹层投资。它以夹层债务、高级担保贷款和股权投资的形式进行投资。该基金通常投资",
+  "en": "PennantPark Investment Corporation, a business development company is a private equity fund specializes in direct and mezzanine investments in middle market com",
+  "at": "2026-11-25T00:13:29.802Z"
+ },
+ "AMH": {
+  "ind": "房地产投资信托基金 - 住宅",
+  "desc": "American Homes 4 Rent 是一家领先的大型综合性独户租赁住宅业主、运营商和开发商。我们是一家内部管理的马里兰州房地产投资信托基金 (REIT)，专注于开发、翻新、租赁和管理房屋作为出租物业。截至 202",
+  "en": "American Homes 4 Rent is a leading large-scale integrated owner, operator and developer of single-family rental homes. We're an internally managed Maryland real",
+  "at": "2026-11-25T00:13:31.643Z"
+ },
+ "ZBRA": {
+  "ind": "通讯设备",
+  "desc": "Zebra Technologies Corporation 及其子公司在全球范围内从事自动识别和数据采集解决方案行业。它分为两个部分：Connected Frontline 和 Asset Visibility and",
+  "en": "Zebra Technologies Corporation, together with its subsidiaries, operates in the automatic identification and data capture solutions industry worldwide. It opera",
+  "at": "2026-11-25T00:13:32.030Z"
+ },
+ "GFUZ": {
+  "ind": "特种工业机械",
+  "desc": "General Fusion Group Ltd. 及其子公司在加拿大从事商用融合机的研发。公司核心技术基于磁化靶聚变（MTF），将磁约束与快速机械压缩相结合，实现聚变",
+  "en": "General Fusion Group Ltd., together with its subsidiaries, engages in the research and development of commercial fusion machines in Canada. The company's core t",
+  "at": "2026-11-25T00:13:32.764Z"
+ },
+ "ACIU": {
+  "ind": "生物技术",
+  "desc": "AC Immune SA 是一家临床阶段的生物制药公司，致力于发现、设计和开发用于预防和治疗与蛋白质错误折叠相关的神经退行性疾病的药物以及治疗和诊断产品。该公司的 SupraAntigen 和 Morphomer 平台是",
+  "en": "AC Immune SA, a clinical stage biopharmaceutical company, discovers, designs, and develops medicines, and therapeutic and diagnostic products for the prevention",
+  "at": "2026-11-25T00:13:33.253Z"
+ },
+ "PPG": {
+  "ind": "特种化学品",
+  "desc": "PPG Industries, Inc. 在美国、加拿大、亚太地区、拉丁美洲、欧洲、中东和非洲生产和销售油漆、涂料和特种材料。它通过三个部门运营：全球建筑涂料部门、高性能涂料部门和工业涂料部门",
+  "en": "PPG Industries, Inc. manufactures and distributes paints, coatings, and specialty materials in the United States, Canada, the Asia Pacific, Latin America, Europ",
+  "at": "2026-11-25T00:13:33.579Z"
+ },
+ "GFS": {
+  "ind": "半导体",
+  "desc": "GLOBALFOUNDRIES Inc. 是一家半导体代工厂，在美国、欧洲、中东、非洲和国际上提供一系列主流晶圆制造服务和技术。它提供半导体器件，包括微处理器、移动应用处理器、基带处理器",
+  "en": "GLOBALFOUNDRIES Inc., a semiconductor foundry, provides range of mainstream wafer fabrication services and technologies in the United States, Europe, the Middle",
+  "at": "2026-11-25T00:13:33.962Z"
+ },
+ "MCHB": {
+  "ind": "银行 - 区域",
+  "desc": "Mechanics Bancorp 作为 Mechanics Bank 的控股公司运营，在加利福尼亚州、俄勒冈州、华盛顿州和夏威夷提供银行服务。它提供各种支票和储蓄账户、退休账户、货币市场账户、定期存款证和保险箱。 co",
+  "en": "Mechanics Bancorp operates as the holding company for Mechanics Bank that provides banking services in California, Oregon, Washington, and Hawaii.It offers vari",
+  "at": "2026-11-25T00:13:34.388Z"
+ },
+ "MT": {
+  "ind": "钢",
+  "desc": "ArcelorMittal S.A. 及其子公司作为综合钢铁和采矿公司在美洲、欧洲、亚洲和非洲开展业务。它提供半成品板材，包括板坯；扁平材成品，包括板材、热轧和冷轧卷材和薄板、热浸镀和电镀锌",
+  "en": "ArcelorMittal S.A., together with its subsidiaries, operates as integrated steel and mining companies in the Americas, Europe, Asia, and Africa. It offers semi-",
+  "at": "2026-11-25T00:13:34.618Z"
+ },
+ "ZION": {
+  "ind": "银行 - 区域",
+  "desc": "Zions Bancorporation, National Association 主要在亚利桑那州、加利福尼亚州、科罗拉多州、爱达荷州、内华达州、新墨西哥州、俄勒冈州、德克萨斯州、犹他州、华盛顿州和怀俄明州提供各种银",
+  "en": "Zions Bancorporation, National Association provides various banking products and related services primarily in the states of Arizona, California, Colorado, Idah",
+  "at": "2026-11-25T00:13:34.830Z"
+ },
+ "ANT": {
+  "ind": "软件 - 应用程序",
+  "desc": "Anthropic，PBC 在美国和国际上开发和维护先进的人工智能 (AI) 模型。该公司的 Claude Platform 允许开发人员和企业在基础设施上构建、管理和部署代理人工智能应用程序。其直接应用和集成包括",
+  "en": "Anthropic, PBC develops and maintains advanced artificial intelligence (AI) models in the United States and internationally. The company's Claude Platform lets ",
+  "at": "2026-11-25T00:13:35.187Z"
+ },
+ "REF": {
+  "ind": "服装零售",
+  "desc": "Reformation Inc. 在美国和国际上生产和销售可持续女装和配饰。它提供连衣裙、上衣、裤子、裙子、短裤、牛仔裤、毛衣、鞋子、连身裤、两件套、外套、睡衣和家居服、泳衣和配饰。公司全部",
+  "en": "Reformation Inc. manufactures and sells sustainable women's clothing and accessories in the United States and Internationally. It offers dresses, tops, pants, s",
+  "at": "2026-11-25T00:13:35.715Z"
+ },
+ "NEXT": {
+  "ind": "石油和天然气设备与服务",
+  "desc": "NextDecade Corporation是一家能源公司，在美国从事与天然气液化相关的建设和开发活动。该公司在德克萨斯州布朗斯维尔附近的里奥格兰德河谷建造和开发天然气液化和出口设施",
+  "en": "NextDecade Corporation, an energy company, engages in the construction and development activities related to the liquefaction of natural gas in the United State",
+  "at": "2026-11-25T00:13:36.365Z"
+ },
+ "ACRE": {
+  "ind": "房地产投资信托基金 - 抵押贷款",
+  "desc": "Ares Commercial Real Estate Corporation 是一家专业金融公司，在美国从事商业房地产 (CRE) 贷款及相关投资的发起和投资。该公司为商业地产物业的业主、运营商和赞助商提供贷款机会。它",
+  "en": "Ares Commercial Real Estate Corporation, a specialty finance company, engages in the originating and investing in commercial real estate (CRE) loans and related",
+  "at": "2026-11-25T00:13:36.865Z"
+ },
+ "YEXT": {
+  "ind": "软件 - 基础设施",
+  "desc": "Yext, Inc. 运营的平台为北美和国际消费者的问题提供解答。该公司运营 Yext Digital Presence 平台，这是一个基于云的平台，允许客户回答消费者的问题，控制有关其业务的信息",
+  "en": "Yext, Inc. operates a platform that offers answers to consumer questions in North America and internationally. The company operates Yext Digital Presence platfo",
+  "at": "2026-11-25T00:13:37.251Z"
+ },
+ "MDT": {
+  "ind": "医疗器械",
+  "desc": "美敦力公司（Medtronic plc）为美国、爱尔兰和国际上的医疗保健系统、医生、临床医生和患者开发、制造和销售基于设备的医疗疗法。它通过三个部门运营：心血管部门、神经科学部门和医疗外科部门",
+  "en": "Medtronic plc develops, manufactures, and sells device-based medical therapies to healthcare systems, physicians, clinicians, and patients in the United States,",
+  "at": "2026-11-25T00:13:37.475Z"
+ },
+ "PZZA": {
+  "ind": "餐饮",
+  "desc": "Papa John's International, Inc. 在美国、加拿大和国际上以 Papa Johns 商标经营和特许经营披萨外卖和外卖餐厅。它通过四个部门运营：国内公司自营餐厅部门、北美特许经营部门、北美食品部",
+  "en": "Papa John's International, Inc. operates and franchises pizza delivery and carryout restaurants under the Papa Johns trademark in the United States, Canada, and",
+  "at": "2026-11-25T00:13:37.839Z"
+ },
+ "TLYS": {
+  "ind": "服装零售",
+  "desc": "Tilly's, Inc. 是一家专业零售商，为美国年轻男女、男孩和女孩提供休闲服装、鞋类、配饰和耐用品。其服装产品包括上衣、外套、下装、泳衣和连衣裙的品牌、时装和款式；及配件商品",
+  "en": "Tilly's, Inc. operates as a specialty retailer of casual apparel, footwear, accessories, and hardgoods for young men and women, boys, and girls in the United St",
+  "at": "2026-11-25T00:13:38.721Z"
+ },
+ "SLG": {
+  "ind": "房地产投资信托基金 - 办公室",
+  "desc": "SL Green Realty Corp. 是曼哈顿最大的写字楼业主，是一家完全一体化的房地产投资信托基金 (REIT)，主要致力于收购、管理曼哈顿商业地产并使其价值最大化。截至2026年6月30日，SL Green持有",
+  "en": "SL Green Realty Corp., Manhattan's largest office landlord, is a fully integrated real estate investment trust, or REIT, that is focused primarily on acquiring,",
+  "at": "2026-11-25T00:13:40.033Z"
+ },
+ "NEWP": {
+  "ind": "银",
+  "desc": "新太平洋金属公司及其子公司在玻利维亚从事矿产勘探和开发。该公司主要勘探银矿和金矿。其旗舰物业为100%拥有的Silver Sand物业，面积5.42平方公里",
+  "en": "New Pacific Metals Corp., together with its subsidiaries, engages in the exploration and development of mineral properties in Bolivia. The company primarily exp",
+  "at": "2026-11-25T00:13:40.427Z"
+ },
+ "PAGS": {
+  "ind": "软件 - 基础设施",
+  "desc": "PagSeguro Digital Ltd. 及其子公司为巴西和国际消费者、个体企业家、小商户和中小型公司提供金融和支付解决方案。该公司提供数字银行解决方案，包括账单支付、depo",
+  "en": "PagSeguro Digital Ltd., together with its subsidiaries, provides financial and payment solutions for consumers, individual entrepreneurs, micro-merchants, and s",
+  "at": "2026-11-25T00:13:40.898Z"
+ },
+ "FLWS": {
+  "ind": "专业零售",
+  "desc": "1-800-FLOWERS.COM, Inc. 在美国提供适合各种场合的礼品。该公司通过三个部门运营：消费花卉和礼品部门、美食和礼品篮部门以及 BloomNet 部门。该公司提供一系列产品，包括鲜切花、插花和水果布置、植",
+  "en": "1-800-FLOWERS.COM, Inc. provides gifts for various occasions in the United States. It operates through three segments: Consumer Floral & Gifts, Gourmet Foods & ",
+  "at": "2026-11-25T00:13:41.187Z"
+ },
+ "KD": {
+  "ind": "信息技术服务",
+  "desc": "Kyndryl Holdings, Inc. 在美国、日本和国际上作为一家技术服务公司和 IT 基础设施服务提供商运营。它提供云服务；核心企业服务；应用、数据和人工智能服务；数字工作场所服务；安全",
+  "en": "Kyndryl Holdings, Inc. operates as a technology services company and IT infrastructure services provider in the United States, Japan, and internationally. It of",
+  "at": "2026-11-25T00:13:41.600Z"
+ },
+ "ERII": {
+  "ind": "污染与处理控制",
+  "desc": "Energy Recovery, Inc. 及其子公司在美国、北美、南美和拉丁美洲、中东、北非、亚洲和欧洲设计、制造和销售能源效率技术解决方案。它通过水和新兴技术部门运营。的c",
+  "en": "Energy Recovery, Inc., together with its subsidiaries, designs, manufactures, and sells energy efficiency technology solutions in the United States, North, Sout",
+  "at": "2026-11-25T00:13:42.179Z"
+ },
+ "XNCR": {
+  "ind": "生物技术",
+  "desc": "Xencor, Inc. 是一家临床阶段的生物制药公司，专注于发现和开发用于治疗癌症和自身免疫性疾病的工程抗体。该公司提供 Ultomiris 来治疗非典型溶血性尿毒症综合征、全身性重症肌无力、",
+  "en": "Xencor, Inc., a clinical-stage biopharmaceutical company, focuses on the discovery and development of engineered antibodies for the treatment of cancer and auto",
+  "at": "2026-11-25T00:13:42.571Z"
+ },
+ "ADEA": {
+  "ind": "软件 - 应用程序",
+  "desc": "Adeia Inc. 及其子公司在美国、亚洲、加拿大、欧洲、中东和国际上作为媒体和半导体知识产权许可平台公司运营。该公司在多个市场授权其专利组合，包括多渠道",
+  "en": "Adeia Inc., together with its subsidiaries, operates as a media and semiconductor intellectual property licensing platform company in the United States, Asia, C",
+  "at": "2026-11-25T00:13:43.749Z"
+ },
+ "IEP": {
+  "ind": "石油和天然气精炼与营销",
+  "desc": "Icahn Enterprises L.P. 通过其子公司在美国和国际上从事投资、能源、汽车、食品包装、房地产、家居时尚和制药业务。投资部门通过各种私人投资基金投资其自有资本；它提供了",
+  "en": "Icahn Enterprises L.P., through its subsidiaries engages in the investment, energy, automotive, food packaging, real estate, home fashion and pharma in the Unit",
+  "at": "2026-11-25T00:13:44.592Z"
+ },
+ "FRT": {
+  "ind": "房地产投资信托基金 - 零售",
+  "desc": "联邦房地产投资信托公司是高品质零售地产的所有权、运营和再开发领域公认的领导者，这些地产主要位于主要沿海市场以及经济和人口基础强劲的特定服务欠缺地区。联邦地产的使命是",
+  "en": "Federal Realty Investment Trust is a recognized leader in the ownership, operation and redevelopment of high-quality retail-based properties located primarily i",
+  "at": "2026-11-25T00:13:45.494Z"
+ },
+ "NAUT": {
+  "ind": "生物技术",
+  "desc": "Nautilus Biotechnology, Inc. 是一家处于开发阶段的生命科学公司，致力于在美国创建用于量化和解锁蛋白质组复杂性的平台技术。该公司开发了 Nautilus Voyager 平台，其中包括一个端到端",
+  "en": "Nautilus Biotechnology, Inc., a development stage life sciences company, engages in creating a platform technology for quantifying and unlocking the complexity ",
+  "at": "2026-11-25T00:13:45.998Z"
+ },
+ "XP": {
+  "ind": "资本市场",
+  "desc": "XP Inc. 在巴西从事提供金融产品和服务。它运营 XP Platform，这是一个开放产品平台，为客户提供市场上的投资产品，包括经纪证券、固定收益证券、共同基金、对冲基金和私募股权基金；衍生物",
+  "en": "XP Inc. engages in the provision of financial products and services in Brazil. It operates XP Platform, an open product platform that provides clients to access",
+  "at": "2026-11-25T00:13:46.472Z"
+ },
+ "AA": {
+  "ind": "铝",
+  "desc": "美国铝业公司及其子公司在澳大利亚、巴西、加拿大、冰岛、挪威、西班牙、美国和国际上从事铝土矿开采、氧化铝精炼、铝生产和能源发电业务。该公司通过两个部门运营：氧化铝部门和",
+  "en": "Alcoa Corporation, together with its subsidiaries, engages in the bauxite mining, alumina refining, aluminum production, and energy generation business in Austr",
+  "at": "2026-11-25T00:13:46.667Z"
+ },
+ "FBYD": {
+  "ind": "企业集团",
+  "desc": "Falcon's Beyond Global, Inc. 在美国和国际上作为一家娱乐公司运营。它提供创意和咨询服务，包括目的地战略、总体规划、体验和景点设计、数字媒体、互动软件、IP 开发和创意。",
+  "en": "Falcon's Beyond Global, Inc. operates as an entertainment company in the United States and internationally. It provides creative and advisory services including",
+  "at": "2026-11-25T00:13:47.651Z"
+ },
+ "EQIX": {
+  "ind": "房地产投资信托基金 - 专业",
+  "desc": "Equinix, Inc. 拥有数字基础设施、数据中心足迹和互联生态系统，支持创新，改善工作、生活和地球。该公司连接经济体、国家、组织和社区，快速、高效地提供无缝数字体验和尖端人工智能",
+  "en": "Equinix, Inc. has its digital infrastructure, data center footprint and interconnected ecosystems empower innovations that enhance work, life and planet. The fi",
+  "at": "2026-11-25T00:13:48.634Z"
+ },
+ "SNX": {
+  "ind": "电子及电脑分销",
+  "desc": "TD SYNNEX Corporation 是美国、欧洲和国际信息技术生态系统的分销商和解决方案聚合商。它提供个人计算设备和外围设备、移动电话和配件、打印机和耗材；和数据中心技术",
+  "en": "TD SYNNEX Corporation operates as a distributor and solutions aggregator for the information technology ecosystem in the United States, Europe, and internationa",
+  "at": "2026-11-25T00:13:49.340Z"
+ },
+ "CLNE": {
+  "ind": "石油和天然气精炼与营销",
+  "desc": "清洁能源燃料公司为美国和加拿大的车队提供天然气作为替代燃料以及相关的燃料解决方案。它为中型和重型车辆供应可再生天然气（RNG）、压缩天然气（CNG）和液化天然气（LNG）；并提供o",
+  "en": "Clean Energy Fuels Corp. offers natural gas as alternative fuels for vehicle fleets and related fueling solutions in the United States and Canada. It supplies r",
+  "at": "2026-11-25T00:13:49.878Z"
+ },
+ "DG": {
+  "ind": "折扣店",
+  "desc": "Dollar General Corporation 是一家折扣零售商，在美国南部、西南部、中西部和东部提供各种商品。它提供消耗品，包括纸巾、浴巾、纸质餐具、垃圾袋和储物袋、消毒剂和洗衣产品。",
+  "en": "Dollar General Corporation, a discount retailer, provides various merchandise products in the southern, southwestern, midwestern, and eastern United States. It ",
+  "at": "2026-11-25T00:13:50.332Z"
+ },
+ "BRCC": {
+  "ind": "包装食品",
+  "desc": "BRC Inc. 通过其子公司在美国采购、烘焙和销售咖啡和咖啡配件。该公司提供服装、黑色步枪品牌服装、咖啡冲泡设备以及户外和生活方式装备。它通过批发、直接面向消费者以及其他方式销售其产品",
+  "en": "BRC Inc., through its subsidiaries, purchases, roasts, and sells coffee and coffee accessories in the United States. The company offers apparels, black rifle br",
+  "at": "2026-11-25T00:13:50.978Z"
+ },
+ "QCOM": {
+  "ind": "半导体",
+  "desc": "高通公司在中国、美国、韩国和国际上从事无线行业基础技术的开发和商业化。该公司通过三个部门运营：Qualcomm CDMA Technologies (QCT)；高通技术许可（QTL）；和",
+  "en": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry in China, the United States, South",
+  "at": "2026-11-25T00:13:51.420Z"
+ },
+ "SJM": {
+  "ind": "包装食品",
+  "desc": "J. M. Smucker 公司在全球生产和销售品牌食品和饮料产品。该公司通过五个部门运营：美国零售咖啡部门、美国零售冷冻手持设备和涂抹酱部门、美国零售宠物食品部门、甜烘焙零食部门和户外用品部门。提供咖啡、甜烘焙食品",
+  "en": "The J. M. Smucker Company manufactures and markets branded food and beverage products worldwide. The company operates through five segments: U.S. Retail Coffee,",
+  "at": "2026-11-25T00:13:52.071Z"
+ },
+ "GEV": {
+  "ind": "特种工业机械",
+  "desc": "GE Vernova Inc. 是一家能源公司，在美国、欧洲、亚洲、中东和非洲提供各种发电、传输、协调、转换和存储电力的产品和服务。该公司通过三个部门运营：电力部门、风能部门和电气部门",
+  "en": "GE Vernova Inc., an energy company, engages in the provision of various products and services that generate, transfer, orchestrate, convert, and store electrici",
+  "at": "2026-11-25T00:13:52.413Z"
+ },
+ "PLXS": {
+  "ind": "电子元件",
+  "desc": "Plexus Corp. 在美国、亚太地区、欧洲、中东和非洲提供电子制造服务。该公司提供设计、开发、供应链、新产品推出、制造解决方案以及持续服务。它服务于航空航天/国防",
+  "en": "Plexus Corp. provides electronic manufacturing services in the United States, the Asia-Pacific, Europe, the Middle East, and Africa. The company offers design, ",
+  "at": "2026-11-25T00:13:52.656Z"
+ },
+ "RARE": {
+  "ind": "生物技术",
+  "desc": "Ultragenyx Pharmaceutical Inc. 是一家生物制药公司，专注于北美、拉丁美洲、欧洲、中东、非洲和亚太地区用于治疗罕见和超罕见遗传病的新产品的鉴定、收购、开发和商业化",
+  "en": "Ultragenyx Pharmaceutical Inc., a biopharmaceutical company, focuses on the identification, acquisition, development, and commercialization of novel products fo",
+  "at": "2026-11-25T00:13:53.170Z"
+ },
+ "EXLS": {
+  "ind": "信息技术服务",
+  "desc": "ExlService Holdings, Inc. 是一家数据和人工智能 (“AI”) 公司，业务遍及北美、英国、欧洲和国际市场。公司通过保险运营；医疗保健和生命科学；银行业、资本市场和多元化行业；和国际",
+  "en": "ExlService Holdings, Inc., operates as a data and artificial intelligence (AI) company in the North America, the United Kingdom, Europe, and internationally. ",
+  "at": "2026-11-25T00:13:53.634Z"
+ },
+ "PBR": {
+  "ind": "油气一体化",
+  "desc": "Petrobras S.A. - Petrobras 在巴西、中国、美国、美洲、亚洲、欧洲、新加坡和国际上勘探、生产和销售石油和天然气。它通过三个部门运营：勘探和生产；炼油、运输和营销；以及燃气和低碳E",
+  "en": "Petróleo Brasileiro S.A. - Petrobras explores, produces, and sells oil and gas in Brazil, China, the United States, the Americas, Asia, Europe, Singapore, and i",
+  "at": "2026-11-25T00:13:54.292Z"
+ },
+ "TEAM": {
+  "ind": "软件 - 应用程序",
+  "desc": "Atlassian Corporation 提供一款协作软件，使组织能够通过工作系统连接所有团队，从而在全球范围内大规模释放生产力。该公司的产品组合包括 Jira、Confluence、Loom、Jira Service",
+  "en": "Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at sc",
+  "at": "2026-11-25T00:13:54.892Z"
+ },
+ "CMBT": {
+  "ind": "石油和天然气中游",
+  "desc": "Cmb.Tech NV 在比利时从事海运业务。它通过三个部门运营：Marine、H2 Infra 和 H2 Industry。海事部门设计、建造、拥有和运营各种低碳和零碳船舶，例如船员转运船、渡轮、调试服务船",
+  "en": "Cmb.Tech NV engages in marine transportation business in Belgium. It operates through three divisions: Marine, H2 Infra, and H2 Industry. The Marine division de",
+  "at": "2026-11-25T00:13:56.178Z"
+ },
+ "NXPI": {
+  "ind": "半导体",
+  "desc": "NXP Semiconductors N.V. 在美国、德国、日本、韩国、台湾、新加坡、荷兰、中国大陆、香港和国际上提供半导体产品。该公司的产品组合包括微控制器；应用处理器；通讯处理器；",
+  "en": "NXP Semiconductors N.V. provides semiconductor products in the United States, Germany, Japan, South Korea, Taiwan, Singapore, the Netherlands, Mainland China, H",
+  "at": "2026-11-25T00:13:56.661Z"
+ },
+ "MDB": {
+  "ind": "软件 - 基础设施",
+  "desc": "MongoDB, Inc. 及其子公司在全球范围内提供通用数据库平台。该公司提供 MongoDB Atlas，这是一种托管的多云数据库即服务解决方案； MongoDB Enterprise Advanced，一款商业数据",
+  "en": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud data",
+  "at": "2026-11-25T00:13:57.085Z"
+ },
+ "TSHA": {
+  "ind": "生物技术",
+  "desc": "Taysha Gene Therapies, Inc.是一家临床阶段的生物技术公司，专注于开发和商业化基于腺相关病毒的基因疗法，用于治疗中枢神经系统的严重单基因疾病。公司主要开发TSHA-120，用于治疗巨人症",
+  "en": "Taysha Gene Therapies, Inc., a clinical-stage biotechnology company, focuses on developing and commercializing adeno-associated virus-based gene therapies for t",
+  "at": "2026-11-25T00:13:57.587Z"
+ },
+ "PWR": {
+  "ind": "工程建筑",
+  "desc": "Quanta Services, Inc. 为电力和燃气公用事业、发电、负荷中心、制造、通信、管道和能源行业提供基础设施解决方案。该公司的电力基础设施解决方案部门从事设计、采购、施工、升级、改造",
+  "en": "Quanta Services, Inc. offers infrastructure solutions for the electric and gas utility, power generation, load center, manufacturing, communications, pipeline, ",
+  "at": "2026-11-25T00:13:58.052Z"
+ },
+ "SWKS": {
+  "ind": "半导体",
+  "desc": "Skyworks Solutions, Inc. 及其子公司在美国、台湾、中国、韩国、欧洲、中东、非洲和亚太地区开发、制造和销售模拟和混合信号半导体产品及解决方案。本公司提供放大器、天线等",
+  "en": "Skyworks Solutions, Inc., together with its subsidiaries, develops, manufactures, and markets analog and mixed-signal semiconductor products and solutions in th",
+  "at": "2026-11-25T00:13:58.303Z"
+ },
+ "PLX": {
+  "ind": "生物技术",
+  "desc": "Protalix BioTherapeutics, Inc.是一家生物制药公司，致力于基于ProCellEx植物细胞蛋白表达系统的重组治疗蛋白的开发、生产和商业化。该公司提供Elelyso用于治疗戈谢病；和精灵",
+  "en": "Protalix BioTherapeutics, Inc., a biopharmaceutical company, engages in the development, production, and commercialization of recombinant therapeutic proteins b",
+  "at": "2026-11-25T00:13:58.752Z"
+ },
+ "BBY": {
+  "ind": "专业零售",
+  "desc": "Best Buy Co., Inc. 在美国、加拿大和国际上提供技术产品和解决方案。该公司提供计算和移动电话产品，如台式机、笔记本电脑和外围设备；包含相关移动网络运营商佣金的移动电话；网络产品",
+  "en": "Best Buy Co., Inc. offers technology products and solutions in the United States, Canada, and internationally. The company provides computing and mobile phone p",
+  "at": "2026-11-25T00:13:59.316Z"
+ },
+ "GTE": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "Gran Tierra Energy Inc. 及其子公司参与哥伦比亚、加拿大和厄瓜多尔的石油和天然气勘探和生产。该公司与 Ecopetrol S.A. 建立了战略合作伙伴关系，共同开发马格达莱纳山谷中部的油田。该公司是",
+  "en": "Gran Tierra Energy Inc., together with its subsidiaries, is involved in the exploration and production of oil and gas properties in Colombia, Canada, and Ecuado",
+  "at": "2026-11-25T00:14:00.263Z"
+ },
+ "ASO": {
+  "ind": "专业零售",
+  "desc": "Academy Sports and Outdoors, Inc. 通过其子公司在美国经营体育用品和户外休闲零售商。该公司的户外部门包括露营产品，如冷却器和饮具、露营配件和设备以及水上运动和装备",
+  "en": "Academy Sports and Outdoors, Inc., through its subsidiaries, operates as a sporting goods and outdoor recreational retailer in the United States. The company's ",
+  "at": "2026-11-25T00:14:00.867Z"
+ },
+ "VIPS": {
+  "ind": "网络零售",
+  "desc": "唯品会控股有限公司在中华人民共和国运营在线平台。该公司通过唯品会、杉杉奥特莱斯和其他部门运营。提供女装、男装、运动服及体育用品、婴童用品、鞋包、护肤品及化妆品、家居用品等。",
+  "en": "Vipshop Holdings Limited operates online platforms in the People's Republic of China. The company operates through Vip.com, Shan Shan Outlets, and Others segmen",
+  "at": "2026-11-25T00:14:02.107Z"
+ },
+ "BILI": {
+  "ind": "互联网内容和信息",
+  "desc": "Bilibili Inc. 为中华人民共和国的年轻一代提供在线娱乐服务。它提供一系列数字内容，包括专业用户生成视频（PUGV）、手机游戏以及直播、职业生成视频等增值服务。",
+  "en": "Bilibili Inc. provides online entertainment services for the young generations in the People's Republic of China. It offers a range of digital content, includin",
+  "at": "2026-11-25T00:14:04.000Z"
+ },
+ "ITRN": {
+  "ind": "科学技术仪器",
+  "desc": "Ituran Location and Control Ltd. 及其子公司在以色列、巴西和国际上提供基于位置的远程信息处理服务和机器对机器远程信息处理产品。它分为两个部门：远程信息处理服务和远程信息处理产品。远程信息处",
+  "en": "Ituran Location and Control Ltd., together with its subsidiaries, provides location-based telematics services and machine-to-machine telematics products in Isra",
+  "at": "2026-11-25T00:14:04.717Z"
+ },
+ "TIGR": {
+  "ind": "资本市场",
+  "desc": "UP Fintech Holding Limited 为新西兰、开曼群岛、新加坡、美国和国际上的中国投资者提供在线经纪服务。该公司开发了一个经纪平台 Tiger Trade，允许投资者交易股票、期权、权证和",
+  "en": "UP Fintech Holding Limited provides online brokerage services focusing on Chinese investors in New Zealand, the Cayman Island, Singapore, the United States, and",
+  "at": "2026-11-25T00:14:05.293Z"
+ },
+ "MOV": {
+  "ind": "奢侈品",
+  "desc": "摩凡陀集团 (Movado Group, Inc.) 在全球范围内设计、采购、营销和分销手表。它分为两个部门：手表和配饰品牌以及公司商店。该公司提供 Movado、Concord、Ebel、Olivia Burton 和",
+  "en": "Movado Group, Inc. designs, sources, markets, and distributes watches worldwide. It operates in two segments, Watch and Accessory Brands, and Company Stores. Th",
+  "at": "2026-11-25T00:14:05.703Z"
+ },
+ "VALN": {
+  "ind": "生物技术",
+  "desc": "Valneva SE 是一家特种疫苗公司，针对需求未得到满足的传染病开发、生产和商业化预防性疫苗。它提供 IXIARO，一种灭活的 Vero 细胞培养衍生的日本脑炎疫苗，适用于针对日本脑炎的主动免疫",
+  "en": "Valneva SE, a specialty vaccine company, develops, manufactures, and commercializes prophylactic vaccines for infectious diseases with unmet needs. It offers IX",
+  "at": "2026-11-25T00:14:06.104Z"
+ },
+ "TITN": {
+  "ind": "产业分布",
+  "desc": "Titan Machinery Inc. 在美国、欧洲和澳大利亚拥有并经营全方位服务的农业和建筑设备商店网络。该公司通过四个部门运营：农业部门、建筑部门、欧洲部门和澳大利亚部门。它销售新设备和二手设备，包括农业设备",
+  "en": "Titan Machinery Inc. owns and operates a network of full service agricultural and construction equipment stores in the United States, Europe, and Australia. The",
+  "at": "2026-11-25T00:14:06.408Z"
+ },
+ "FSCO": {
+  "ind": "资产管理",
+  "desc": "FS Credit Opportunities Corp. 是一家业务开发公司。它是由 Franklin Square Capital Partners 推出的封闭式固定收益基金。该基金由 FS Global Advis",
+  "en": "FS Credit Opportunities Corp. is a business development company. It acts as a close ended fixed income fund launched by Franklin Square Capital Partners. The fu",
+  "at": "2026-11-25T00:14:06.930Z"
  }
 }
