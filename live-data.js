@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-26T00:14:43.203Z",
+  "syncedAt": "2026-11-26T00:33:55.029Z",
   "source": "Yahoo Finance",
   "stockDate": "20261125",
   "indexDate": "20261125",
@@ -18,7 +18,7 @@ window.WIND_LIVE = {
    "ytd": -13.22,
    "mcap": 1502601543680,
    "pre": null,
-   "post": 0.49
+   "post": 0.74
   },
   "META.O": {
    "name": "脸书(META PLATFORMS)",
@@ -31,7 +31,7 @@ window.WIND_LIVE = {
    "ytd": -6.23,
    "mcap": 1559025942528,
    "pre": null,
-   "post": 0.18
+   "post": 0.39
   },
   "IREN.O": {
    "name": "IREN",
@@ -44,7 +44,7 @@ window.WIND_LIVE = {
    "ytd": -69.91,
    "mcap": 5452992512,
    "pre": null,
-   "post": 3.89
+   "post": 3.66
   },
   "NBIS.O": {
    "name": "NEBIUS",
@@ -57,7 +57,7 @@ window.WIND_LIVE = {
    "ytd": -5.51,
    "mcap": 24893773824,
    "pre": null,
-   "post": 4.07
+   "post": 3.84
   },
   "CRWV.O": {
    "name": "COREWEAVE",
@@ -70,7 +70,7 @@ window.WIND_LIVE = {
    "ytd": -46.33,
    "mcap": 23674269696,
    "pre": null,
-   "post": 2.18
+   "post": 2.7
   },
   "BE.N": {
    "name": "BLOOM ENERGY",
@@ -83,7 +83,7 @@ window.WIND_LIVE = {
    "ytd": 54.92,
    "mcap": 45202952192,
    "pre": null,
-   "post": 2.69
+   "post": 3.34
   },
   "AMD.O": {
    "name": "超威半导体(AMD)",
@@ -96,7 +96,7 @@ window.WIND_LIVE = {
    "ytd": 81.69,
    "mcap": 672006275072,
    "pre": null,
-   "post": 1.47
+   "post": 2.85
   },
   "TSM.N": {
    "name": "台积电(TAIWAN SEMICONDUCTOR MANUFACTURING)",
@@ -109,7 +109,7 @@ window.WIND_LIVE = {
    "ytd": 7.11,
    "mcap": 1775537094656,
    "pre": null,
-   "post": 1.51
+   "post": 1.8
   },
   "TER.O": {
    "name": "泰瑞达(TERADYNE)",
@@ -122,7 +122,7 @@ window.WIND_LIVE = {
    "ytd": 2.21,
    "mcap": 33121865728,
    "pre": null,
-   "post": 1.74
+   "post": 2.18
   },
   "ONTO.N": {
    "name": "ONTO INNOVATION",
@@ -135,7 +135,7 @@ window.WIND_LIVE = {
    "ytd": 3.79,
    "mcap": 8449866752,
    "pre": null,
-   "post": 0
+   "post": 1.71
   },
   "NET.N": {
    "name": "CLOUDFLARE",
@@ -148,7 +148,7 @@ window.WIND_LIVE = {
    "ytd": 44.53,
    "mcap": 101532524544,
    "pre": null,
-   "post": 0.44
+   "post": 0.95
   },
   "RBRK.N": {
    "name": "RUBRIK",
@@ -174,7 +174,7 @@ window.WIND_LIVE = {
    "ytd": 141.24,
    "mcap": 35273617408,
    "pre": null,
-   "post": 0.61
+   "post": 0.93
   },
   "CHKP.O": {
    "name": "CHECK POINT SOFTWARE TECHNOLOGIES",
@@ -200,7 +200,7 @@ window.WIND_LIVE = {
    "ytd": -20.82,
    "mcap": 1730770894848,
    "pre": null,
-   "post": 0.83
+   "post": 1.17
   },
   "2105.HK": {
    "name": "来凯医药(LAEKNA)",
@@ -265,7 +265,7 @@ window.WIND_LIVE = {
    "ytd": 28.87,
    "mcap": 1240112955392,
    "pre": null,
-   "post": 0.27
+   "post": 0.23
   },
   "688825.SH": {
    "name": "长鑫科技(CXMT)",
@@ -343,7 +343,7 @@ window.WIND_LIVE = {
    "ytd": -42.9,
    "mcap": 59234316288,
    "pre": null,
-   "post": 3.03
+   "post": 2.46
   },
   "SOFI.O": {
    "name": "SOFI TECHNOLOGIES",
@@ -356,7 +356,7 @@ window.WIND_LIVE = {
    "ytd": -52.4,
    "mcap": 16962772992,
    "pre": null,
-   "post": 0.99
+   "post": 1.61
   },
   "ABCL.O": {
    "name": "ABCELLERA BIOLOGICS",
@@ -382,7 +382,7 @@ window.WIND_LIVE = {
    "ytd": 233.65,
    "mcap": 7368070656,
    "pre": null,
-   "post": 0.12
+   "post": 1.68
   },
   "MRNA.O": {
    "name": "MODERNA",
@@ -395,7 +395,7 @@ window.WIND_LIVE = {
    "ytd": 615.62,
    "mcap": 89356492800,
    "pre": null,
-   "post": 0.36
+   "post": 1.02
   },
   "LITE.O": {
    "name": "LUMENTUM",
@@ -408,7 +408,7 @@ window.WIND_LIVE = {
    "ytd": 23.43,
    "mcap": 43218612224,
    "pre": null,
-   "post": 2.36
+   "post": 2.65
   },
   "AEHR.O": {
    "name": "AEHR TEST SYSTEMS",
@@ -421,7 +421,7 @@ window.WIND_LIVE = {
    "ytd": 87,
    "mcap": 1359016192,
    "pre": null,
-   "post": 0.05
+   "post": 4.2
   },
   "FROG.O": {
    "name": "JFROG",
@@ -628,21 +628,21 @@ window.WIND_LIVE = {
   "N225.GI": {
    "name": "日经225",
    "date": "20261125",
-   "level": 57011.62,
+   "level": 57881.28,
    "prev": 58644.63,
-   "chg": -2.78,
-   "d5": -4.44,
-   "d20": -9.37,
+   "chg": -1.3,
+   "d5": -1.66,
+   "d20": -7.68,
    "amount": null
   },
   "KS11.GI": {
    "name": "韩国综合指数",
    "date": "20261125",
-   "level": 4697.51,
+   "level": 4753.23,
    "prev": 5006.03,
-   "chg": -6.16,
-   "d5": -5.45,
-   "d20": -14.11,
+   "chg": -5.05,
+   "d5": -6.2,
+   "d20": -15.7,
    "amount": null
   },
   "GDAXI.GI": {

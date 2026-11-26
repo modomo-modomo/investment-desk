@@ -2,7 +2,7 @@
  {
   "date": "2026-11-25",
   "session": "post",
-  "ts": "2026-11-26T00:16:29.156Z",
+  "ts": "2026-11-26T00:39:00.942Z",
   "state": "POST",
   "rows": [
    {
@@ -29,7 +29,7 @@
     "zh": "GMEX Robotics Corporation 是一家科技公司，专注于为澳大利亚消费市场设计、制造和商业化人工智能驱动的机器人解决方案。该公司开发直观的交互式机器人，旨在协助完成日常任务；并提供智能家居集成，",
     "track": "其它",
     "mcap": 174526581,
-    "mv": -15.53,
+    "mv": -16.96,
     "px": 0.14,
     "prePx": null,
     "postPx": 0.12,
@@ -45,10 +45,10 @@
     "zh": "Vera Therapeutics, Inc. 是一家临床阶段生物技术公司，专注于免疫性疾病患者变革性治疗的开发和商业化。该公司提供 atacicept，一种完全人源化的 TACI-Fc 融合蛋白，可结合 B 细胞激活因",
     "track": "其它",
     "mcap": 2098110305,
-    "mv": 15.08,
+    "mv": 16.77,
     "px": 29.5,
     "prePx": null,
-    "postPx": 33.95,
+    "postPx": 34.45,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -134,6 +134,22 @@
     "earn": false
    },
    {
+    "sym": "SLSN",
+    "name": "Solesence",
+    "sec": "可选消费",
+    "ind": "家居及个人产品",
+    "zh": "Solesence, Inc. 是一家科学驱动型公司，在美国提供工程材料、配方开发和商业制造服务。该公司从事表面工程氧化锌和二氧化钛成分的制造和供应。它还提供皮肤钙",
+    "track": "其它",
+    "mcap": 114448213,
+    "mv": 8.07,
+    "px": 2.26,
+    "prePx": null,
+    "postPx": 2.44,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "OPAL",
     "name": "OPAL Fuels",
     "sec": "公用事业",
@@ -150,17 +166,17 @@
     "earn": false
    },
    {
-    "sym": "AGLT",
-    "name": "Agility Robotics",
-    "sec": "工业",
-    "ind": "电脑硬件",
-    "zh": "Agility Robotics, Inc. 为美国工业自动化生产仿人机器人和基于云的车队管理软件。该公司生产 Digit，这是一款专为仓库和工业环境设计的人形机器人，可自动执行重复的物料搬运任务。它还提供敏捷",
+    "sym": "ARHS",
+    "name": "Arhaus",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
     "track": "其它",
-    "mcap": 1450392998,
-    "mv": 7.4,
-    "px": 6.49,
+    "mcap": 1798881026,
+    "mv": 7.36,
+    "px": 13.04,
     "prePx": null,
-    "postPx": 6.97,
+    "postPx": 14,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -173,26 +189,10 @@
     "zh": "",
     "track": "生物医药",
     "mcap": 142002901680,
-    "mv": -7.37,
+    "mv": -7.29,
     "px": 564.12,
     "prePx": null,
-    "postPx": 522.55,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "ARHS",
-    "name": "Arhaus",
-    "sec": "可选消费",
-    "ind": "",
-    "zh": "",
-    "track": "其它",
-    "mcap": 1798881026,
-    "mv": 7.36,
-    "px": 13.04,
-    "prePx": null,
-    "postPx": 14,
+    "postPx": 523,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -262,6 +262,38 @@
     "earn": false
    },
    {
+    "sym": "GLXY",
+    "name": "Galaxy Digital",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "Galaxy Digital Inc.在北美和国际上从事数字资产和数据中心基础设施业务。它通过数字资产、数据中心、财务和企业部门运营。数字资产部门提供场外现货和衍生品交易，",
+    "track": "其它",
+    "mcap": 4435974764,
+    "mv": 7.09,
+    "px": 11.56,
+    "prePx": null,
+    "postPx": 12.38,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "KNTK",
+    "name": "Kinetik",
+    "sec": "公用事业",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 8751835158,
+    "mv": 7.09,
+    "px": 54.7,
+    "prePx": null,
+    "postPx": 58.58,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "DTIL",
     "name": "Precision BioSciences",
     "sec": "医疗",
@@ -285,7 +317,7 @@
     "zh": "Strive, Inc. 是一家私营投资管理公司。它主要为投资公司提供服务。该公司是一家大型咨询公司，是一家投资公司的投资顾问，为投资公司提供投资组合管理。该公司投资于交易所交易基金。",
     "track": "其它",
     "mcap": 1801735192,
-    "mv": 6.69,
+    "mv": 6.68,
     "px": 14.95,
     "prePx": null,
     "postPx": 15.95,
@@ -321,22 +353,6 @@
     "px": 1.83,
     "prePx": null,
     "postPx": 1.95,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "KNTK",
-    "name": "Kinetik",
-    "sec": "公用事业",
-    "ind": "",
-    "zh": "",
-    "track": "其它",
-    "mcap": 8751835158,
-    "mv": 6.53,
-    "px": 54.7,
-    "prePx": null,
-    "postPx": 58.27,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -390,22 +406,6 @@
     "earn": false
    },
    {
-    "sym": "SLSN",
-    "name": "Solesence",
-    "sec": "可选消费",
-    "ind": "家居及个人产品",
-    "zh": "Solesence, Inc. 是一家科学驱动型公司，在美国提供工程材料、配方开发和商业制造服务。该公司从事表面工程氧化锌和二氧化钛成分的制造和供应。它还提供皮肤钙",
-    "track": "其它",
-    "mcap": 114448213,
-    "mv": 6.19,
-    "px": 2.26,
-    "prePx": null,
-    "postPx": 2.4,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "PALI",
     "name": "Palisade Bio",
     "sec": "医疗",
@@ -417,6 +417,22 @@
     "px": 0.96,
     "prePx": null,
     "postPx": 0.9,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LVWR",
+    "name": "LiveWire",
+    "sec": "可选消费",
+    "ind": "房车",
+    "zh": "LiveWire Group, Inc. 在美国、奥地利和国际上生产和销售电动摩托车。该公司经营两个业务部门：电动摩托车部门和 STACYC 部门。它设计和销售电动摩托车及其零部件、配件和服装；儿童电动平衡车；",
+    "track": "其它",
+    "mcap": 371798705,
+    "mv": 6.03,
+    "px": 1.99,
+    "prePx": null,
+    "postPx": 2.11,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -502,6 +518,22 @@
     "earn": false
    },
    {
+    "sym": "AGLT",
+    "name": "Agility Robotics",
+    "sec": "工业",
+    "ind": "电脑硬件",
+    "zh": "Agility Robotics, Inc. 为美国工业自动化生产仿人机器人和基于云的车队管理软件。该公司生产 Digit，这是一款专为仓库和工业环境设计的人形机器人，可自动执行重复的物料搬运任务。它还提供敏捷",
+    "track": "其它",
+    "mcap": 1450392998,
+    "mv": 4.78,
+    "px": 6.49,
+    "prePx": null,
+    "postPx": 6.8,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "HITI",
     "name": "High Tide Common Shares",
     "sec": "可选消费",
@@ -550,65 +582,33 @@
     "earn": false
    },
    {
-    "sym": "TMCR",
-    "name": "The Metals Royalty",
-    "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "sym": "AEHR",
+    "name": "Aehr Test Systems",
+    "sec": "工业",
+    "ind": "半导体设备",
+    "zh": "Aehr Test Systems, Inc. 在美国、亚洲、欧洲和中东提供晶圆级、单片化和封装级测试、老化和半导体器件的测试解决方案。该公司提供 FOX-XP 和 FOX-NP 系统，它们是全晶圆接触和单片化芯片/模块",
     "track": "其它",
-    "mcap": 101795173,
-    "mv": 4.11,
-    "px": 2.19,
+    "mcap": 1364263306,
+    "mv": 4.2,
+    "px": 41.44,
     "prePx": null,
-    "postPx": 2.28,
+    "postPx": 43.18,
     "closeChg": null,
     "closePx": null,
     "earn": false
    },
    {
-    "sym": "AVR",
-    "name": "Anteris Technologies Global",
-    "sec": "医疗",
-    "ind": "医疗器械",
-    "zh": "Anteris Technologies Global Corp. 是一家结构心脏公司，开发并商业化用于治疗心脏瓣膜疾病的微创医疗设备。它提供 DurAVR 经导管心脏瓣膜系统，这是一种新型经导管主动脉瓣膜，用于治疗严重",
-    "track": "其它",
-    "mcap": 580085903,
-    "mv": 4.07,
-    "px": 5.89,
-    "prePx": null,
-    "postPx": 6.13,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "MSTR",
-    "name": "Strategy",
-    "sec": "加密",
-    "ind": "软件 - 应用程序",
-    "zh": "Strategy Inc 及其子公司作为一家比特币财务公司在美国、欧洲、中东、非洲和国际上运营。它通过提供一系列证券（包括股票和固定收益）为投资者提供不同程度的比特币经济风险。",
-    "track": "其它",
-    "mcap": 32698693674,
-    "mv": 4.05,
-    "px": 79.96,
-    "prePx": null,
-    "postPx": 83.2,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "GDS",
-    "name": "GDS ADS",
-    "sec": "科技",
+    "sym": "WYFI",
+    "name": "WhiteFiber",
+    "sec": "金融",
     "ind": "信息技术服务",
-    "zh": "万国数据控股有限公司及其子公司在中华人民共和国从事数据中心的开发和运营。它提供托管服务，包括关键设施空间、客户可用电源、机架和冷却；托管服务，包括 bu",
+    "zh": "WhiteFiber, Inc. 提供人工智能 (AI) 基础设施解决方案。它通过两个部门运营：云服务和托管服务。该公司设计、开发和运营数据中心。它还提供托管、托管和基于云的高性能计算 (HPC) 服务",
     "track": "其它",
-    "mcap": 2811618515,
-    "mv": -3.84,
-    "px": 13.8,
+    "mcap": 305692319,
+    "mv": 4.2,
+    "px": 6.5,
     "prePx": null,
-    "postPx": 13.27,
+    "postPx": 6.77,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -621,10 +621,26 @@
     "zh": "Palo Alto Networks, Inc. 在美洲、欧洲、中东、非洲、亚太地区和日本提供网络安全解决方案。它提供 Prisma Access，一种安全访问服务边缘解决方案； Strata Cloud Manager",
     "track": "网安",
     "mcap": 288171000000,
-    "mv": -3.83,
+    "mv": -4.05,
     "px": 356.14,
     "prePx": null,
-    "postPx": 342.5,
+    "postPx": 341.71,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "APLD",
+    "name": "Applied Digital",
+    "sec": "AI基建",
+    "ind": "信息技术服务",
+    "zh": "Applied Digital Corporation 为北美的高性能计算 (HPC) 和人工智能行业设计、开发和运营数字基础设施解决方案。它通过以下方式运营：数据中心托管和 HPC 托管业务。该公司提供充满活力的基础设",
+    "track": "AI基础设施/数据中心",
+    "mcap": 3628645680,
+    "mv": 3.82,
+    "px": 12.29,
+    "prePx": null,
+    "postPx": 12.76,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -678,6 +694,22 @@
     "earn": false
    },
    {
+    "sym": "FPS",
+    "name": "Forgent Power Solutions",
+    "sec": "能源",
+    "ind": "电气设备及零件",
+    "zh": "Forgent Power Solutions, Inc. 从事数据中心、电网和能源密集型工业设施中使用的配电设备的设计和制造。公司产品包括干式变压器、液浸式变压器、开关柜、配电盘、屏柜",
+    "track": "其它",
+    "mcap": 5683108943,
+    "mv": 3.67,
+    "px": 18.82,
+    "prePx": null,
+    "postPx": 19.51,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "BMMX",
     "name": "Black Mammoth Metals Common Shares",
     "sec": "科技",
@@ -710,33 +742,17 @@
     "earn": false
    },
    {
-    "sym": "HYLN",
-    "name": "Hyliion",
+    "sym": "ASTS",
+    "name": "AST SpaceMobile",
     "sec": "可选消费",
-    "ind": "电气设备及零件",
-    "zh": "Hyliion Holdings Corp. 设计和开发用于固定和移动应用的发电机。其主要产品包括 KARNO 电源模块，这是一种与燃料无关的发电解决方案，可使用天然气、丙烷或二氧化氮等传统燃料进行分布式发电。",
+    "ind": "通讯设备",
+    "zh": "AST SpaceMobile, Inc. 及其子公司在美国设计和开发蓝鸟卫星星座。该公司在太空提供蜂窝宽带网络，可通过智能手机直接访问，用于商业用途和其他应用，以及政府",
     "track": "其它",
-    "mcap": 348901451,
-    "mv": 3.55,
-    "px": 1.97,
-    "prePx": null,
-    "postPx": 2.04,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "NBIS",
-    "name": "NEBIUS",
-    "sec": "AI基建",
-    "ind": "互联网内容和信息",
-    "zh": "Nebius Group N.V.是一家科技公司，致力于构建全栈基础设施，服务于美国、英国和国际上的全球人工智能行业。 Nebius为AI构建全栈基础设施，包括大规模GPU集群、云平台、",
-    "track": "AI基础设施/数据中心",
-    "mcap": 25160316590,
+    "mcap": 9396642827,
     "mv": 3.54,
-    "px": 84.99,
+    "px": 26.02,
     "prePx": null,
-    "postPx": 88,
+    "postPx": 26.94,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -758,49 +774,17 @@
     "earn": false
    },
    {
-    "sym": "LVWR",
-    "name": "LiveWire",
-    "sec": "可选消费",
-    "ind": "房车",
-    "zh": "LiveWire Group, Inc. 在美国、奥地利和国际上生产和销售电动摩托车。该公司经营两个业务部门：电动摩托车部门和 STACYC 部门。它设计和销售电动摩托车及其零部件、配件和服装；儿童电动平衡车；",
-    "track": "其它",
-    "mcap": 371798705,
-    "mv": 3.52,
-    "px": 1.99,
+    "sym": "NBIS",
+    "name": "NEBIUS",
+    "sec": "AI基建",
+    "ind": "互联网内容和信息",
+    "zh": "Nebius Group N.V.是一家科技公司，致力于构建全栈基础设施，服务于美国、英国和国际上的全球人工智能行业。 Nebius为AI构建全栈基础设施，包括大规模GPU集群、云平台、",
+    "track": "AI基础设施/数据中心",
+    "mcap": 25160316590,
+    "mv": 3.53,
+    "px": 84.99,
     "prePx": null,
-    "postPx": 2.06,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "PS",
-    "name": "Pershing Square",
-    "sec": "金融",
-    "ind": "资产管理",
-    "zh": "Pershing Square Inc. 是一家另类资产管理公司。该公司前身为 Pershing Square Holdco, L.P.。该公司成立于 2024 年，总部位于纽约州纽约市。 Pershing Square",
-    "track": "其它",
-    "mcap": 12881280000,
-    "mv": 3.52,
-    "px": 32.36,
-    "prePx": null,
-    "postPx": 33.5,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "NAK",
-    "name": "Northern Dynasty Minerals",
-    "sec": "原材料",
-    "ind": "其他工业金属和采矿",
-    "zh": "Northern Dynasty Minerals Ltd. 在美国从事矿产收购、勘探和开发业务。主要勘探铜、金、钼、银和铼矿床。公司持有Pebble铜金钼银铼项目100%权益",
-    "track": "其它",
-    "mcap": 240500892,
-    "mv": 3.47,
-    "px": 0.42,
-    "prePx": null,
-    "postPx": 0.43,
+    "postPx": 87.99,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -822,17 +806,33 @@
     "earn": false
    },
    {
-    "sym": "IREN",
-    "name": "IREN",
-    "sec": "AI基建",
-    "ind": "资本市场",
-    "zh": "IREN Limited 在澳大利亚和加拿大作为垂直整合的人工智能云服务平台运营。它开发、拥有和运营数据中心，包括相关土地、电网连接和变电站，以及建筑物和冷却。该公司还拥有并运营计算层、su",
+    "sym": "AAOI",
+    "name": "Applied Optoelectronics",
+    "sec": "科技",
+    "ind": "通讯设备",
+    "zh": "Applied Opto electronics, Inc. 在美国、台湾和中国从事光纤网络产品的设计、制造和销售。该公司提供光学模块、光学滤波器、激光器、激光元件、组件、发射器和收发器、交钥匙设备、头",
     "track": "AI基础设施/数据中心",
-    "mcap": 5380851616,
-    "mv": 3.35,
-    "px": 12.85,
+    "mcap": 3432978357,
+    "mv": 3.44,
+    "px": 37.02,
     "prePx": null,
-    "postPx": 13.28,
+    "postPx": 38.29,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RCT",
+    "name": "RedCloud",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "RedCloud Holdings plc 主要在阿根廷、英国、巴西、尼日利亚、南非和国际上运营基于云的企业对企业开放商务平台。该公司开发并运营 RedAI 基础设施和相关产品，以促进交易",
+    "track": "其它",
+    "mcap": 232001000,
+    "mv": 3.4,
+    "px": 1.47,
+    "prePx": null,
+    "postPx": 1.52,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -854,6 +854,22 @@
     "earn": false
    },
    {
+    "sym": "ALEC",
+    "name": "Alector",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Alector, Inc. 是一家临床阶段生物技术公司，在美国开发对抗神经退行性疾病进展的疗法。其产品线包括 Nivisnebart，一种用于治疗流行的神经退行性疾病的研究性人类重组单克隆抗体； AL137，一个",
+    "track": "其它",
+    "mcap": 399437190,
+    "mv": -3.3,
+    "px": 2.73,
+    "prePx": null,
+    "postPx": 2.64,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "HST",
     "name": "Host Hotels & Resorts",
     "sec": "房地产",
@@ -870,17 +886,33 @@
     "earn": false
    },
    {
-    "sym": "MUFG",
-    "name": "Mitsubishi UFJ Financial",
-    "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "sym": "NANO",
+    "name": "Forge Nano",
+    "sec": "科技",
+    "ind": "半导体设备",
+    "zh": "Forge Nano Holdings Inc. 开发和制造原子层沉积设备，并为研究和商业规模的材料提供表面工程解决方案。该公司提供原子层沉积设备和解决方案，用于将精密涂层应用于诸如",
     "track": "其它",
-    "mcap": 222319544475,
-    "mv": 3.26,
-    "px": 19.56,
+    "mcap": 796720217,
+    "mv": 3.27,
+    "px": 3.97,
     "prePx": null,
-    "postPx": 20.2,
+    "postPx": 4.1,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CRDO",
+    "name": "Credo Technology",
+    "sec": "科技",
+    "ind": "半导体",
+    "zh": "Credo Technology Group Holding Ltd 为美国、台湾、中国大陆、香港和其他国际市场的光电以太网和 PCIe 应用提供各种高速连接解决方​​案。该公司提供 ZeroFlap (ZF) 有源电缆",
+    "track": "其它",
+    "mcap": 19919144270,
+    "mv": 3.26,
+    "px": 106.8,
+    "prePx": null,
+    "postPx": 110.28,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -902,22 +934,6 @@
     "earn": false
    },
    {
-    "sym": "ASTS",
-    "name": "AST SpaceMobile",
-    "sec": "可选消费",
-    "ind": "通讯设备",
-    "zh": "AST SpaceMobile, Inc. 及其子公司在美国设计和开发蓝鸟卫星星座。该公司在太空提供蜂窝宽带网络，可通过智能手机直接访问，用于商业用途和其他应用，以及政府",
-    "track": "其它",
-    "mcap": 9396642827,
-    "mv": 3.25,
-    "px": 26.02,
-    "prePx": null,
-    "postPx": 26.87,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "LOCO",
     "name": "El Pollo Loco",
     "sec": "可选消费",
@@ -934,17 +950,65 @@
     "earn": false
    },
    {
-    "sym": "VFF",
-    "name": "Village Farms International Common Shares",
-    "sec": "必需消费",
-    "ind": "农产品",
-    "zh": "Village Farms International, Inc. 及其子公司在北美和荷兰生产、销售和分销温室种植的西红柿、甜椒和黄瓜。它分为五个部门：加拿大大麻、美国大麻、荷兰大麻、农产品和清洁能源",
+    "sym": "MSTR",
+    "name": "Strategy",
+    "sec": "加密",
+    "ind": "软件 - 应用程序",
+    "zh": "Strategy Inc 及其子公司作为一家比特币财务公司在美国、欧洲、中东、非洲和国际上运营。它通过提供一系列证券（包括股票和固定收益）为投资者提供不同程度的比特币经济风险。",
     "track": "其它",
-    "mcap": 258093833,
-    "mv": 3.18,
-    "px": 2.19,
+    "mcap": 32698693674,
+    "mv": 3.25,
+    "px": 79.96,
     "prePx": null,
-    "postPx": 2.26,
+    "postPx": 82.56,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "COHR",
+    "name": "Coherent",
+    "sec": "科技",
+    "ind": "科学技术仪器",
+    "zh": "相干公司 (Coherent Corp.) 在全球范围内开发、制造和销售激光器、收发器、其他光学和光电设备、模块和系统。其产品包括由探测器、无源光学器件、热解决方案和 PICS 组成的关键组件；硅光子学和其他先进光学",
+    "track": "AI基础设施/数据中心",
+    "mcap": 38200133853,
+    "mv": 3.21,
+    "px": 196.19,
+    "prePx": null,
+    "postPx": 202.49,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "IREN",
+    "name": "IREN",
+    "sec": "AI基建",
+    "ind": "资本市场",
+    "zh": "IREN Limited 在澳大利亚和加拿大作为垂直整合的人工智能云服务平台运营。它开发、拥有和运营数据中心，包括相关土地、电网连接和变电站，以及建筑物和冷却。该公司还拥有并运营计算层、su",
+    "track": "AI基础设施/数据中心",
+    "mcap": 5380851616,
+    "mv": 3.19,
+    "px": 12.85,
+    "prePx": null,
+    "postPx": 13.26,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CRML",
+    "name": "Critical Metals",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Critical Metals Corp. 是一家采矿勘探和开发公司，在德国、澳大利亚、奥地利和格陵兰岛运营。该公司勘探锂和稀土元素矿藏。其旗舰项目是位于格陵兰岛南部Kujalleq地区的Tanbreez项目。康帕",
+    "track": "其它",
+    "mcap": 623445016,
+    "mv": 3.17,
+    "px": 2.84,
+    "prePx": null,
+    "postPx": 2.93,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -961,22 +1025,6 @@
     "px": 5.69,
     "prePx": null,
     "postPx": 5.87,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "COIN",
-    "name": "Coinbase",
-    "sec": "加密",
-    "ind": "财务数据和证券交易所",
-    "zh": "Coinbase Global, Inc. 在美国和国际上运营加密资产平台。它为消费者提供加密经济中的主要金融账户；为机构提供跨加密货币市场流动性池的经纪平台；和一套产品",
-    "track": "金融科技",
-    "mcap": 27034277751,
-    "mv": 3.16,
-    "px": 103.72,
-    "prePx": null,
-    "postPx": 107,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -1001,8 +1049,8 @@
     "sym": "ADTN",
     "name": "ADTRAN",
     "sec": "公用事业",
-    "ind": "通讯设备",
-    "zh": "ADTRAN Holdings, Inc. 在美国、德国、英国和国际上提供网络和通信平台、软件、系统和服务。它通过两个部门运营：网络解决方案部门和服务与支持部门。它提供住宅网关；以太网被动",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 350432048,
     "mv": -3.14,
@@ -1014,17 +1062,33 @@
     "earn": false
    },
    {
-    "sym": "USDE",
-    "name": "StablecoinX",
-    "sec": "金融",
-    "ind": "资本市场",
-    "zh": "StablecoinX Inc.是一家稳定币基础设施公司，专注于 Ethena 数字美元生态系统。它提供基础设施服务、稳定币中间件软件和稳定币分发服务。该公司总部位于德克萨斯州弗里斯科。",
+    "sym": "NAK",
+    "name": "Northern Dynasty Minerals",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Northern Dynasty Minerals Ltd. 在美国从事矿产收购、勘探和开发业务。主要勘探铜、金、钼、银和铼矿床。公司持有Pebble铜金钼银铼项目100%权益",
     "track": "其它",
-    "mcap": 100181201,
+    "mcap": 240500892,
     "mv": 3.14,
-    "px": 3.82,
+    "px": 0.42,
     "prePx": null,
-    "postPx": 3.94,
+    "postPx": 0.43,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SNDK",
+    "name": "Sandisk",
+    "sec": "科技",
+    "ind": "电脑硬件",
+    "zh": "Sandisk Corporation 在美洲、欧洲、中东、非洲、亚洲和国际上开发、制造和销售使用 NAND 闪存技术的数据存储设备和解决方案。该公司为台式机和笔记本电脑、游戏机和机顶盒提供固态硬盘；",
+    "track": "其它",
+    "mcap": 97902295521,
+    "mv": 3.14,
+    "px": 73.61,
+    "prePx": null,
+    "postPx": 75.92,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -1062,33 +1126,17 @@
     "earn": false
    },
    {
-    "sym": "QNT",
-    "name": "Quantinuum",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Quantinuum Inc. 在美国和国际上制造和开发量子计算硬件和软件。该公司开发量子计算平台，提供解决方案，如硬件平台、开发者工具、应用程序库和针对解决方案的知识产权",
+    "sym": "AVR",
+    "name": "Anteris Technologies Global",
+    "sec": "医疗",
+    "ind": "医疗器械",
+    "zh": "Anteris Technologies Global Corp. 是一家结构心脏公司，开发并商业化用于治疗心脏瓣膜疾病的微创医疗设备。它提供 DurAVR 经导管心脏瓣膜系统，这是一种新型经导管主动脉瓣膜，用于治疗严重",
     "track": "其它",
-    "mcap": 8064859169,
-    "mv": 3.08,
-    "px": 32.49,
+    "mcap": 580085903,
+    "mv": 3.06,
+    "px": 5.89,
     "prePx": null,
-    "postPx": 33.49,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "HOOD",
-    "name": "Robinhood",
-    "sec": "加密",
-    "ind": "资本市场",
-    "zh": "Robinhood Markets, Inc. 在美国运营金融服务平台。该公司的平台允许用户投资股票、交易所交易基金（ETF）和美国存托凭证。它提供分数交易、经常性投资、保证金投资、全额支付服务",
-    "track": "金融科技",
-    "mcap": 58585962482,
-    "mv": 3.07,
-    "px": 65.78,
-    "prePx": null,
-    "postPx": 67.8,
+    "postPx": 6.07,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -1110,33 +1158,33 @@
     "earn": false
    },
    {
-    "sym": "KB",
-    "name": "KB Financial",
-    "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "sym": "QNT",
+    "name": "Quantinuum",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Quantinuum Inc. 在美国和国际上制造和开发量子计算硬件和软件。该公司开发量子计算平台，提供解决方案，如硬件平台、开发者工具、应用程序库和针对解决方案的知识产权",
     "track": "其它",
-    "mcap": 39210728994,
-    "mv": -3.04,
-    "px": 110.35,
+    "mcap": 8064859169,
+    "mv": 3.05,
+    "px": 32.49,
     "prePx": null,
-    "postPx": 107,
+    "postPx": 33.48,
     "closeChg": null,
     "closePx": null,
     "earn": false
    },
    {
-    "sym": "ALEC",
-    "name": "Alector",
-    "sec": "医疗",
-    "ind": "生物技术",
-    "zh": "Alector, Inc. 是一家临床阶段生物技术公司，在美国开发对抗神经退行性疾病进展的疗法。其产品线包括 Nivisnebart，一种用于治疗流行的神经退行性疾病的研究性人类重组单克隆抗体； AL137，一个",
+    "sym": "RDW",
+    "name": "Redwire",
+    "sec": "工业",
+    "ind": "航空航天与国防",
+    "zh": "Redwire Corporation 为美国、欧洲和国际上的政府和商业客户提供关键的空间解决方案和空间基础设施。它分为太空和国防技术两个部门。该公司提供传感器和航空电子系统，包括星跟踪器和卫星",
     "track": "其它",
-    "mcap": 399437190,
-    "mv": -3.03,
-    "px": 2.73,
+    "mcap": 1471264556,
+    "mv": 3.04,
+    "px": 5.89,
     "prePx": null,
-    "postPx": 2.65,
+    "postPx": 6.07,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -1158,33 +1206,17 @@
     "earn": false
    },
    {
-    "sym": "AXTI",
-    "name": "AXT",
-    "sec": "科技",
-    "ind": "半导体设备",
-    "zh": "AXT, Inc. 设计、开发、制造和分销化合物和单元素半导体衬底。该公司提供磷化铟，用于使用光/激光器的数据中心连接、数据中心的高速数据传输、5G 通信、光纤激光器和探测器",
-    "track": "其它",
-    "mcap": 2053823469,
+    "sym": "COIN",
+    "name": "Coinbase",
+    "sec": "加密",
+    "ind": "",
+    "zh": "",
+    "track": "金融科技",
+    "mcap": 27034277751,
     "mv": 3,
-    "px": 31.98,
+    "px": 103.72,
     "prePx": null,
-    "postPx": 32.94,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "VOYG",
-    "name": "Voyager Technologies",
-    "sec": "工业",
-    "ind": "航空航天与国防",
-    "zh": "Voyager Technologies, Inc. 是一家国防技术和空间解决方案公司，业务遍及美国、欧洲、中东和国际市场。该公司通过三个部门运营：国防与国家安全部门、太空解决方案部门和 Starlab 空间站部门。国防",
-    "track": "其它",
-    "mcap": 1108456172,
-    "mv": 3,
-    "px": 18.3,
-    "prePx": null,
-    "postPx": 18.85,
+    "postPx": 106.83,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -9954,7 +9986,7 @@
  {
   "date": "2026-11-24",
   "session": "post",
-  "ts": "2026-11-25T00:14:47.461Z",
+  "ts": "2026-11-24T23:36:12.138Z",
   "state": "POST",
   "rows": [
    {
@@ -9965,10 +9997,10 @@
     "zh": "Ambarella, Inc. 开发用于边缘和物理人工智能、应用和智能自动化的低功耗片上系统、半导体和软件。该公司的片上系统（SOC）集成了第三代CVflow技术和先进的视频处理、图像信号处理",
     "track": "其它",
     "mcap": 2452472349,
-    "mv": -36.95,
+    "mv": -37.49,
     "px": 44.47,
     "prePx": null,
-    "postPx": 28.04,
+    "postPx": 27.8,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -9981,26 +10013,10 @@
     "zh": "美国资源公司从事为基础设施和电气化市场生产稀土和关键精矿的业务。它通过电气化材料和企业部门运营。电气化材料部门聚集并加工用于再利用的金属",
     "track": "其它",
     "mcap": 111280450,
-    "mv": -29.91,
+    "mv": -15.89,
     "px": 1.07,
     "prePx": null,
-    "postPx": 0.75,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "CNDT",
-    "name": "Conduent",
-    "sec": "可选消费",
-    "ind": "信息技术服务",
-    "zh": "Conduent Incorporated 为美国、欧洲和国际上的商业、政府和运输领域提供数字业务解决方案和服务。它通过三个部门运营：商业部门、政府部门和运输部门。商业部门提供业务",
-    "track": "其它",
-    "mcap": 158795356,
-    "mv": 13.43,
-    "px": 0.93,
-    "prePx": null,
-    "postPx": 1.05,
+    "postPx": 0.9,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10029,10 +10045,10 @@
     "zh": "Urban Outfitters, Inc. 在美国和国际上提供生活方式产品和服务。该公司通过三个部门运营：零售、批发和订阅。它经营 Urban Outfitters 商店，提供男女时尚服装、运动服、内衣、鞋类",
     "track": "其它",
     "mcap": 7305956837,
-    "mv": -11.78,
+    "mv": -12.17,
     "px": 85.58,
     "prePx": null,
-    "postPx": 75.5,
+    "postPx": 75.17,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10054,22 +10070,6 @@
     "earn": false
    },
    {
-    "sym": "SPRY",
-    "name": "ARS Pharmaceuticals",
-    "sec": "医疗",
-    "ind": "生物技术",
-    "zh": "ARS Pharmaceuticals, Inc. 是一家生物制药公司，在美国和国际上开发和商业化严重过敏反应的治疗方法。该公司参与开发neffy，一种无针鼻内输送肾上腺素的药物，用于紧急治疗",
-    "track": "其它",
-    "mcap": 271426680,
-    "mv": -11.37,
-    "px": 2.9,
-    "prePx": null,
-    "postPx": 2.57,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "OC",
     "name": "Owens Corning New",
     "sec": "工业",
@@ -10081,22 +10081,6 @@
     "px": 115.87,
     "prePx": null,
     "postPx": 103.19,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "VELO",
-    "name": "Velo3D",
-    "sec": "科技",
-    "ind": "电脑硬件",
-    "zh": "Velo3D, Inc. 在美洲、欧洲和国际上生产和销售金属增材三维打印机。其打印机能够生产太空火箭、喷气发动机、燃料输送系统和其他金属部件的部件。该公司还提供 Flow，一种专有软件",
-    "track": "其它",
-    "mcap": 108719132,
-    "mv": 10.42,
-    "px": 3,
-    "prePx": null,
-    "postPx": 3.31,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10118,6 +10102,22 @@
     "earn": false
    },
    {
+    "sym": "MINE",
+    "name": "Mayfair Gold Common Shares",
+    "sec": "能源",
+    "ind": "金子",
+    "zh": "Mayfair Gold Corp. 在加拿大从事矿产收购、勘探、开发和运营。它主要勘探金矿。其旗舰项目是100%拥有的Fenn-Gib金矿项目，该项目包括21个简单专利矿产、145个非专利采矿权",
+    "track": "其它",
+    "mcap": 146424484,
+    "mv": -10.09,
+    "px": 2.06,
+    "prePx": null,
+    "postPx": 1.85,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "PSQL",
     "name": "Pasqal SA Ordinary Share",
     "sec": "科技",
@@ -10134,22 +10134,6 @@
     "earn": false
    },
    {
-    "sym": "PYPD",
-    "name": "PolyPid",
-    "sec": "医疗",
-    "ind": "生物技术",
-    "zh": "PolyPid Ltd. 是一家生物制药公司，利用其专有的聚合物脂质封装基质 (PLEX) 技术开发靶向、局部给药和缓释疗法，以满足未满足的医疗需求。其主要候选产品是 D-PLEX100，目前正处于关键的 3 期临床试验",
-    "track": "其它",
-    "mcap": 117198890,
-    "mv": -9.29,
-    "px": 5.54,
-    "prePx": null,
-    "postPx": 5.03,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "NTNX",
     "name": "Nutanix",
     "sec": "科技",
@@ -10157,10 +10141,10 @@
     "zh": "Nutanix, Inc. 在北美、欧洲、亚太地区、中东、拉丁美洲和非洲提供云和人工智能平台 (AI)。它提供超融合基础设施软件（HCI）；用于构建混合多云基础设施的 Nutanix 云平台； Nutanix 云",
     "track": "其它",
     "mcap": 15698470209,
-    "mv": -8.77,
+    "mv": -9.51,
     "px": 54.59,
     "prePx": null,
-    "postPx": 49.8,
+    "postPx": 49.4,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10182,33 +10166,49 @@
     "earn": false
    },
    {
-    "sym": "MINE",
-    "name": "Mayfair Gold Common Shares",
-    "sec": "能源",
-    "ind": "金子",
-    "zh": "Mayfair Gold Corp. 在加拿大从事矿产收购、勘探、开发和运营。它主要勘探金矿。其旗舰项目是100%拥有的Fenn-Gib金矿项目，该项目包括21个简单专利矿产、145个非专利采矿权",
-    "track": "其它",
-    "mcap": 146424484,
-    "mv": -8.52,
-    "px": 2.06,
-    "prePx": null,
-    "postPx": 1.88,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "GGB",
     "name": "Gerdau S.A.",
     "sec": "工业",
     "ind": "钢",
-    "zh": "Gerdau S.A. 及其子公司作为一家钢铁生产公司运营。它通过巴西业务、北美业务和南美业务部门运营。该公司提供螺纹钢、棒材、线材、厚板、热轧卷材、钢坯、大方坯、板材、线材和结构件",
+    "zh": "Gerdau S.A. 及其子公司作为一家钢铁生产公司运营。它通过巴西业务部、北美业务部和南美业务部运营。该公司提供螺纹钢、棒材、线材、厚板、热轧卷材、钢坯、大方坯、板材、线材和结构件",
     "track": "其它",
     "mcap": 8446137069,
     "mv": 8.44,
     "px": 4.27,
     "prePx": null,
     "postPx": 4.63,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "USBC",
+    "name": "USBC",
+    "sec": "金融",
+    "ind": "科学技术仪器",
+    "zh": "USBC, Inc. 及其子公司在美国从事数字金融技术业务。该公司开发变革性金融服务，包括数字资产、银行解决方案和非侵入性健康监测研究。它服务于零售用户、金融科技合作伙伴",
+    "track": "其它",
+    "mcap": 128484206,
+    "mv": 8.09,
+    "px": 0.34,
+    "prePx": null,
+    "postPx": 0.37,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "WDAY",
+    "name": "Workday",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Workday, Inc. 在美国和国际上提供企业云应用程序。该公司提供一套财务管理应用程序来维护会计信息；管理财务流程，例如应付账款和应收账款；识别实时财务、运营、",
+    "track": "其它",
+    "mcap": 42435280000,
+    "mv": -7.66,
+    "px": 179.23,
+    "prePx": null,
+    "postPx": 165.5,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10230,33 +10230,33 @@
     "earn": false
    },
    {
-    "sym": "GMEX",
-    "name": "GMEX ROBOTICS",
-    "sec": "可选消费",
-    "ind": "消费电子产品",
-    "zh": "GMEX Robotics Corporation 是一家科技公司，专注于为澳大利亚消费市场设计、制造和商业化人工智能驱动的机器人解决方案。该公司开发直观的交互式机器人，旨在协助完成日常任务；并提供智能家居集成，",
+    "sym": "PRAX",
+    "name": "Praxis Precision Medicines",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Praxis Precision Medicines, Inc. 是一家临床阶段的生物制药公司，在美国致力于开发以神经元兴奋抑制失衡为特征的中枢神经系统 (CNS) 疾病的疗法。该公司的平台包括 Cebrum，一种小分子",
     "track": "其它",
-    "mcap": 299932374,
-    "mv": -7.35,
-    "px": 0.13,
+    "mcap": 8581126771,
+    "mv": -7.51,
+    "px": 344.49,
     "prePx": null,
-    "postPx": 0.12,
+    "postPx": 318.61,
     "closeChg": null,
     "closePx": null,
     "earn": false
    },
    {
-    "sym": "WDAY",
-    "name": "Workday",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Workday, Inc. 在美国和国际上提供企业云应用程序。该公司提供一套财务管理应用程序来维护会计信息；管理财务流程，例如应付账款和应收账款；识别实时财务、运营、",
+    "sym": "PYPD",
+    "name": "PolyPid",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "PolyPid Ltd. 是一家生物制药公司，利用其专有的聚合物脂质封装基质 (PLEX) 技术开发靶向、局部给药和缓释疗法，以满足未满足的医疗需求。其主要候选产品是 D-PLEX100，目前正处于关键的 3 期临床试验",
     "track": "其它",
-    "mcap": 42435280000,
-    "mv": -6.94,
-    "px": 179.23,
+    "mcap": 117198890,
+    "mv": -7.3,
+    "px": 5.54,
     "prePx": null,
-    "postPx": 166.8,
+    "postPx": 5.14,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10310,22 +10310,6 @@
     "earn": false
    },
    {
-    "sym": "CTRI",
-    "name": "Centuri",
-    "sec": "公用事业",
-    "ind": "公用事业 - 受监管的燃气",
-    "zh": "Centuri Holdings, Inc. 在北美运营一家公用事业基础设施服务公司。它通过四个部门运营：美国天然气公用事业服务部门；加拿大业务；联合电力公用事业服务公司；和非联合电力公用事业服务。该公司提供燃气公用事业",
-    "track": "其它",
-    "mcap": 2232393525,
-    "mv": 6.61,
-    "px": 20.87,
-    "prePx": null,
-    "postPx": 22.25,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "JLHL",
     "name": "Julong",
     "sec": "可选消费",
@@ -10342,6 +10326,22 @@
     "earn": false
    },
    {
+    "sym": "CTRI",
+    "name": "Centuri",
+    "sec": "公用事业",
+    "ind": "公用事业 - 受监管的燃气",
+    "zh": "Centuri Holdings, Inc. 在北美运营一家公用事业基础设施服务公司。它通过四个部门运营：美国天然气公用事业服务部门；加拿大业务；联合电力公用事业服务公司；和非联合电力公用事业服务。该公司提供燃气公用事业",
+    "track": "其它",
+    "mcap": 2232393525,
+    "mv": 6.37,
+    "px": 20.87,
+    "prePx": null,
+    "postPx": 22.2,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "ACLS",
     "name": "Axcelis Technologies",
     "sec": "科技",
@@ -10353,22 +10353,6 @@
     "px": 96.84,
     "prePx": null,
     "postPx": 90.8,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "MNTN",
-    "name": "MNTN",
-    "sec": "可选消费",
-    "ind": "软件 - 应用程序",
-    "zh": "MNTN, Inc. 运营一个技术平台，为联网电视带来效果营销。其自助服务技术使投放电视广告像搜索和社交广告一样简单，并帮助品牌推动可衡量的转化、收入、网站访问量等。该公司前身为 MNTN Digital，I",
-    "track": "其它",
-    "mcap": 354316899,
-    "mv": -6.22,
-    "px": 4.88,
-    "prePx": null,
-    "postPx": 4.58,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10422,33 +10406,17 @@
     "earn": false
    },
    {
-    "sym": "USBC",
-    "name": "USBC",
-    "sec": "金融",
-    "ind": "科学技术仪器",
-    "zh": "USBC, Inc. 及其子公司在美国从事数字金融技术业务。该公司开发变革性金融服务，包括数字资产、银行解决方案和非侵入性健康监测研究。它服务于零售用户、金融科技合作伙伴",
+    "sym": "GMEX",
+    "name": "GMEX ROBOTICS",
+    "sec": "可选消费",
+    "ind": "消费电子产品",
+    "zh": "GMEX Robotics Corporation 是一家科技公司，专注于为澳大利亚消费市场设计、制造和商业化人工智能驱动的机器人解决方案。该公司开发直观的交互式机器人，旨在协助完成日常任务；并提供智能家居集成，",
     "track": "其它",
-    "mcap": 128484206,
-    "mv": 5.94,
-    "px": 0.34,
+    "mcap": 299932374,
+    "mv": -5.72,
+    "px": 0.13,
     "prePx": null,
-    "postPx": 0.36,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "NEOV",
-    "name": "NeoVolta",
-    "sec": "Miscellaneous",
-    "ind": "电气设备及零件",
-    "zh": "NeoVolta Inc.在美国从事储能系统的设计、制造和销售。该公司提供 NV14、NV24、NVPlus 和 NV7600 储能系统，通过电池和逆变器在住宅、商业和工业以及公用事业中存储和使用能源",
-    "track": "其它",
-    "mcap": 124707718,
-    "mv": 5.76,
-    "px": 1.91,
-    "prePx": null,
-    "postPx": 2.02,
+    "postPx": 0.13,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10502,6 +10470,22 @@
     "earn": false
    },
    {
+    "sym": "LXEO",
+    "name": "Lexeo Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Lexeo Therapeutics, Inc. 是一家临床阶段基因医学公司，专注于美国需求未得到满足的遗传性和获得性疾病。其产品线包括 LX2006，这是一种基于 AAVrh10 的基因治疗候选药物，目前正处于治疗 F",
+    "track": "其它",
+    "mcap": 269062947,
+    "mv": -5.54,
+    "px": 3.79,
+    "prePx": null,
+    "postPx": 3.58,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "GENB",
     "name": "Generate Biomedicines",
     "sec": "医疗",
@@ -10518,49 +10502,33 @@
     "earn": false
    },
    {
-    "sym": "BLND",
-    "name": "Blend Labs",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Blend Labs, Inc. 为美国、印度和墨西哥的金融服务公司提供基于云的软件平台。该公司提供一套产品，为抵押贷款、房屋净值贷款和信贷额度、车辆贷款、快速住房贷款、",
+    "sym": "DEFT",
+    "name": "Defi Technologies",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "DeFi Technologies Inc. 是一家科技公司，开发交易所交易产品，综合跟踪加拿大单个 DeFi 协议或一篮子协议的价值。它提供资产管理服务，例如间接投资底层数字资产、数字资产指数或其他资产",
     "track": "其它",
-    "mcap": 216278115,
-    "mv": 5.35,
-    "px": 0.79,
+    "mcap": 112325530,
+    "mv": 4.99,
+    "px": 0.26,
     "prePx": null,
-    "postPx": 0.84,
+    "postPx": 0.27,
     "closeChg": null,
     "closePx": null,
     "earn": false
    },
    {
-    "sym": "DUOT",
-    "name": "Duos Technologies",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Duos Technologies Group, Inc. 在北美设计、开发、部署和运营智能技术解决方案。其解决方案包括实时数据采集和分析的应用程序，包括快速移动车辆的检查和监控，以及分布式部署",
+    "sym": "LVWR",
+    "name": "LiveWire",
+    "sec": "可选消费",
+    "ind": "房车",
+    "zh": "LiveWire Group, Inc. 在美国、奥地利和国际上生产和销售电动摩托车。该公司经营两个业务部门：电动摩托车部门和 STACYC 部门。它设计和销售电动摩托车及其零部件、配件和服装；儿童电动平衡车；",
     "track": "其它",
-    "mcap": 102164726,
-    "mv": 5.17,
-    "px": 2.71,
+    "mcap": 199271781,
+    "mv": -4.81,
+    "px": 1.87,
     "prePx": null,
-    "postPx": 2.85,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "LXEO",
-    "name": "Lexeo Therapeutics",
-    "sec": "医疗",
-    "ind": "生物技术",
-    "zh": "Lexeo Therapeutics, Inc. 是一家临床阶段基因医学公司，专注于美国需求未得到满足的遗传性和获得性疾病。其产品线包括 LX2006，这是一种基于 AAVrh10 的基因治疗候选药物，目前正处于治疗 F",
-    "track": "其它",
-    "mcap": 269062947,
-    "mv": -4.84,
-    "px": 3.79,
-    "prePx": null,
-    "postPx": 3.61,
+    "postPx": 1.78,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10586,29 +10554,13 @@
     "name": "APi",
     "sec": "可选消费",
     "ind": "工程建筑",
-    "zh": "APi Group Corporation 在全球范围内提供消防和生命安全、安保、电梯和自动扶梯以及专业服务。它分为两个部门：安全服务部门和专业服务部门。公司提供消防解决方案；电子安全系统；以及电梯和自动扶梯，包括",
+    "zh": "APi Group Corporation 在全球范围内提供消防和生命安全、保安、电梯和自动扶梯以及专业服务。它分为两个部门：安全服务部门和专业服务部门。公司提供消防解决方案；电子安全系统；以及电梯和自动扶梯，包括",
     "track": "其它",
     "mcap": 19391785457,
     "mv": -4.53,
     "px": 45.04,
     "prePx": null,
     "postPx": 43,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "OPAL",
-    "name": "OPAL Fuels",
-    "sec": "公用事业",
-    "ind": "工程建筑",
-    "zh": "OPAL Fuels Inc. 及其子公司从事可再生天然气 (RNG) 的生产和分销，用作全美重型和中型卡车车队的车辆燃料。它通过三个部门运营：RNG 燃料部门、加油站服务部门和可再生能源部门",
-    "track": "其它",
-    "mcap": 204498170,
-    "mv": -4.45,
-    "px": 0.78,
-    "prePx": null,
-    "postPx": 0.74,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10682,7 +10634,7 @@
     "name": "Ready Capital",
     "sec": "房地产",
     "ind": "房地产投资信托基金 - 抵押贷款",
-    "zh": "Ready Capital Corporation 在美国经营一家房地产金融公司。该公司通过两个部门运营：LMM 商业房地产部门和小企业贷款部门。其 LMM 商业房地产部门在 LLM 财产的整个生命周期内提供 LLM 贷",
+    "zh": "Ready Capital Corporation 在美国作为一家房地产金融公司运营。该公司通过两个部门运营：LMM 商业房地产部门和小企业贷款部门。其 LMM 商业房地产部门在 LLM 财产的整个生命周期内提供 LLM",
     "track": "其它",
     "mcap": 104629386,
     "mv": -4.17,
@@ -10710,17 +10662,33 @@
     "earn": false
    },
    {
-    "sym": "CIX",
-    "name": "CompX International",
-    "sec": "可选消费",
-    "ind": "安全与保护服务",
-    "zh": "CompX International Inc. 主要在北美生产和销售安全产品和娱乐船舶部件。它分为两个部门：安全产品部门和船舶零部件部门。安全产品部门生产机械和电气柜锁以及其他锁具",
+    "sym": "ADSK",
+    "name": "Autodesk",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "Autodesk, Inc. 在全球范围内提供 3D 设计、工程和娱乐技术解决方案。该公司提供 AutoCAD Civil 3D，这是一种测量、设计、分析和文档解决方案； Autodesk Build，一个用于管理、共享",
     "track": "其它",
-    "mcap": 517152661,
-    "mv": 3.78,
-    "px": 41.82,
+    "mcap": 53363970000,
+    "mv": -3.83,
+    "px": 255.7,
     "prePx": null,
-    "postPx": 43.4,
+    "postPx": 245.91,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OPAL",
+    "name": "OPAL Fuels",
+    "sec": "公用事业",
+    "ind": "工程建筑",
+    "zh": "OPAL Fuels Inc. 及其子公司从事可再生天然气 (RNG) 的生产和分销，用作全美重型和中型卡车车队的车辆燃料。它通过三个部门运营：RNG 燃料部门、加油站服务部门和可再生能源部门",
+    "track": "其它",
+    "mcap": 204498170,
+    "mv": -3.81,
+    "px": 0.78,
+    "prePx": null,
+    "postPx": 0.75,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10737,6 +10705,22 @@
     "px": 19.46,
     "prePx": null,
     "postPx": 18.72,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BKKT",
+    "name": "Bakkt",
+    "sec": "金融",
+    "ind": "软件 - 基础设施",
+    "zh": "Bakkt, Inc.从事数字建筑金融基础设施业务。该公司提供 Bakkt Market 解决方案，使机构能够通过即插即用平台推出安全、合规且先进的数字资产经纪、交易和支付功能； Bakkt代理提供",
+    "track": "其它",
+    "mcap": 111237345,
+    "mv": 3.77,
+    "px": 2.12,
+    "prePx": null,
+    "postPx": 2.2,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10806,22 +10790,6 @@
     "earn": false
    },
    {
-    "sym": "ADSK",
-    "name": "Autodesk",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Autodesk, Inc. 在全球范围内提供 3D 设计、工程和娱乐技术解决方案。该公司提供 AutoCAD Civil 3D，这是一种测量、设计、分析和文档解决方案； Autodesk Build，一个用于管理、共享",
-    "track": "其它",
-    "mcap": 53363970000,
-    "mv": -3.58,
-    "px": 255.7,
-    "prePx": null,
-    "postPx": 246.55,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
     "sym": "BUUU",
     "name": "BUUU Ordinary Share",
     "sec": "可选消费",
@@ -10854,6 +10822,22 @@
     "earn": false
    },
    {
+    "sym": "CHPT",
+    "name": "ChargePoint",
+    "sec": "Miscellaneous",
+    "ind": "专业零售",
+    "zh": "ChargePoint Holdings, Inc. 及其子公司在美国和国际上提供电动汽车 (EV) 充电技术解决方案。该公司提供一系列网络充电系统；充电器管理系统、支持和电动汽车服务提供商解决方案；",
+    "track": "其它",
+    "mcap": 247559987,
+    "mv": 3.53,
+    "px": 8.61,
+    "prePx": null,
+    "postPx": 8.91,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
     "sym": "SRTA",
     "name": "Strata Critical Medical",
     "sec": "医疗",
@@ -10865,22 +10849,6 @@
     "px": 4.79,
     "prePx": null,
     "postPx": 4.95,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "LIF",
-    "name": "Life360",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Life360, Inc. 运营一个技术平台，用于定位北美、欧洲、中东、非洲和国际范围内的人、宠物和物品。该公司以免费增值模式提供 Life360 移动应用程序，提供通信、驾驶安全、数字安全和定位服务。",
-    "track": "其它",
-    "mcap": 3384670248,
-    "mv": -3.43,
-    "px": 40.41,
-    "prePx": null,
-    "postPx": 39.02,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10934,49 +10902,17 @@
     "earn": false
    },
    {
-    "sym": "WRN",
-    "name": "Western Copper and Gold",
-    "sec": "原材料",
-    "ind": "其他工业金属和采矿",
-    "zh": "西部铜金公司是一家勘探阶段公司，在加拿大从事矿产勘探和开发。它勘探金、铜、银和钼矿床。其主要财产是位于加拿大育空地区的赌场矿产。公司是",
-    "track": "其它",
-    "mcap": 285107975,
-    "mv": 3.39,
-    "px": 1.18,
-    "prePx": null,
-    "postPx": 1.22,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "WING",
-    "name": "Wingstop",
-    "sec": "可选消费",
-    "ind": "餐饮",
-    "zh": "Wingstop Inc. 及其子公司在美国、澳大利亚、巴林、科威特、波多黎各、沙特阿拉伯和荷兰以 Wingstop 品牌特许经营和经营餐厅。其餐厅提供经典鸡翅、无骨鸡翅、嫩鸡翅和手工腌制鸡翅",
-    "track": "其它",
-    "mcap": 3949757418,
-    "mv": 3.36,
-    "px": 154.81,
-    "prePx": null,
-    "postPx": 160.01,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "GDRX",
-    "name": "GoodRx",
+    "sym": "SLNH",
+    "name": "Soluna",
     "sec": "科技",
-    "ind": "健康信息服务",
-    "zh": "GoodRx Holdings, Inc. 及其子公司提供信息和工具，使消费者能够比较价格并节省在美国购买处方药的费用。该公司运营一个价格比较平台，为消费者提供精心策划的、地理相关的价格比较平台",
+    "ind": "资本市场",
+    "zh": "Soluna Holdings, Inc. 及其子公司通过数据中心从事加密货币开采。它通过三个部门运营：加密货币挖矿、数据中心托管和高性能计算服务。该公司还从事区块链业务",
     "track": "其它",
-    "mcap": 1033670526,
-    "mv": -3.33,
-    "px": 3,
+    "mcap": 102081621,
+    "mv": 3.33,
+    "px": 0.32,
     "prePx": null,
-    "postPx": 2.9,
+    "postPx": 0.33,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -10993,22 +10929,6 @@
     "px": 4.84,
     "prePx": null,
     "postPx": 5,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "IEP",
-    "name": "Icahn Enterprises L.P.",
-    "sec": "能源",
-    "ind": "石油和天然气精炼与营销",
-    "zh": "Icahn Enterprises L.P. 通过其子公司在美国和国际上从事投资、能源、汽车、食品包装、房地产、家居时尚和制药业务。投资部门通过各种私人投资基金投资其自有资本；它提供了",
-    "track": "其它",
-    "mcap": 2255744602,
-    "mv": 3.3,
-    "px": 2.73,
-    "prePx": null,
-    "postPx": 2.82,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -11057,22 +10977,6 @@
     "px": 4.7,
     "prePx": null,
     "postPx": 4.85,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "URG",
-    "name": "Ur Energy Common Shares (Canada)",
-    "sec": "原材料",
-    "ind": "铀",
-    "zh": "Ur-Energy Inc. 在美国从事铀矿产的收购、勘探、开发和运营。它拥有位于美国的 12 个项目的权益。该公司的旗舰项目是 Lost Creek 项目，占地约 1,800 unp",
-    "track": "其它",
-    "mcap": 190438788,
-    "mv": 3.19,
-    "px": 0.46,
-    "prePx": null,
-    "postPx": 0.47,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -11130,7 +11034,7 @@
     "name": "Huntsman",
     "sec": "工业",
     "ind": "化学品",
-    "zh": "亨斯迈公司在全球生产和销售多元化的有机化工产品。该公司分为三个部门：聚氨酯部门、高性能产品部门和先进材料部门。聚氨酯部门提供聚氨酯化学品，包括甲基二苯基二异氰酸酯、聚醚",
+    "zh": "Huntsman Corporation manufactures and sells diversified organic chemical products worldwide.该公司分为三个部门：聚氨酯部门、高性",
     "track": "其它",
     "mcap": 1495602014,
     "mv": 3.09,
@@ -11174,33 +11078,17 @@
     "earn": false
    },
    {
-    "sym": "ANT",
-    "name": "Anthropic PBC",
-    "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Anthropic，PBC 在美国和国际上开发和维护先进的人工智能 (AI) 模型。该公司的 Claude Platform 允许开发人员和企业在基础设施上构建、管理和部署代理人工智能应用程序。其直接应用和集成包括",
+    "sym": "NAK",
+    "name": "Northern Dynasty Minerals",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Northern Dynasty Minerals Ltd. 在美国从事矿产收购、勘探和开发业务。主要勘探铜、金、钼、银和铼矿床。公司持有Pebble铜金钼银铼项目100%权益",
     "track": "其它",
-    "mcap": 1146915986051,
-    "mv": -3.05,
-    "px": 81.91,
+    "mcap": 245450396,
+    "mv": 3.06,
+    "px": 0.41,
     "prePx": null,
-    "postPx": 79.41,
-    "closeChg": null,
-    "closePx": null,
-    "earn": false
-   },
-   {
-    "sym": "GEMI",
-    "name": "Gemini Space Station",
-    "sec": "金融",
-    "ind": "资本市场",
-    "zh": "Gemini Space Station, Inc. 在美国和国际上运营着一个加密货币平台。该公司提供 Gemini，一个使用户能够交易、托管和赚取一系列数字资产和产品的平台； Gemini ActiveTrader 用",
-    "track": "其它",
-    "mcap": 205055145,
-    "mv": 3.05,
-    "px": 1.31,
-    "prePx": null,
-    "postPx": 1.35,
+    "postPx": 0.42,
     "closeChg": null,
     "closePx": null,
     "earn": false
@@ -11225,8 +11113,8 @@
     "px": 0.21,
     "prePx": 0.14,
     "postPx": null,
-    "closeChg": -36.79,
-    "closePx": 0.13,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11241,8 +11129,8 @@
     "px": 14.19,
     "prePx": 10.85,
     "postPx": null,
-    "closeChg": -18.39,
-    "closePx": 11.58,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11257,8 +11145,8 @@
     "px": 3.8,
     "prePx": 4.69,
     "postPx": null,
-    "closeChg": 7.89,
-    "closePx": 4.1,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11273,8 +11161,8 @@
     "px": 1.99,
     "prePx": 2.28,
     "postPx": null,
-    "closeChg": -17.59,
-    "closePx": 1.64,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11289,8 +11177,8 @@
     "px": 149.09,
     "prePx": 170.53,
     "postPx": null,
-    "closeChg": 14.13,
-    "closePx": 170.15,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11305,8 +11193,8 @@
     "px": 12.46,
     "prePx": 10.73,
     "postPx": null,
-    "closeChg": -14.45,
-    "closePx": 10.66,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11321,8 +11209,8 @@
     "px": 48.02,
     "prePx": 41.77,
     "postPx": null,
-    "closeChg": -16.31,
-    "closePx": 40.19,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11337,8 +11225,8 @@
     "px": 133.67,
     "prePx": 151,
     "postPx": null,
-    "closeChg": 14.59,
-    "closePx": 153.17,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11353,8 +11241,8 @@
     "px": 2.28,
     "prePx": 2,
     "postPx": null,
-    "closeChg": 3.95,
-    "closePx": 2.37,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11369,8 +11257,8 @@
     "px": 5.75,
     "prePx": 6.4,
     "postPx": null,
-    "closeChg": 40.64,
-    "closePx": 8.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11385,8 +11273,8 @@
     "px": 140.45,
     "prePx": 155.98,
     "postPx": null,
-    "closeChg": 19.69,
-    "closePx": 168.1,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11394,15 +11282,15 @@
     "name": "Analog Devices",
     "sec": "科技",
     "ind": "半导体",
-    "zh": "Analog Devices, Inc. 在美国、北美和南美其他地区、欧洲、日本、中国和亚洲其他地区从事集成电路 (IC)、软件和子系统产品的设计、制造、测试和营销。它提供数据转换器产品，可翻译现实世界的数据",
+    "zh": "Analog Devices, Inc. 设计、制造、测试和销售解决方案组合，包括集成电路 (IC)；软件和子系统；模拟和混合信号；以及美国、北美和南美其他地区、欧洲、日本、中国和亚洲其他地区的数字技术产品。",
     "track": "AI基础设施/数据中心",
     "mcap": 183529169869,
     "mv": -10.89,
     "px": 378.75,
     "prePx": 337.49,
     "postPx": null,
-    "closeChg": -17.37,
-    "closePx": 312.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11417,8 +11305,8 @@
     "px": 7.5,
     "prePx": 6.7,
     "postPx": null,
-    "closeChg": -2.13,
-    "closePx": 7.34,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11433,8 +11321,8 @@
     "px": 10.59,
     "prePx": 9.48,
     "postPx": null,
-    "closeChg": -7.37,
-    "closePx": 9.81,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11449,8 +11337,8 @@
     "px": 104.13,
     "prePx": 93.35,
     "postPx": null,
-    "closeChg": -16.97,
-    "closePx": 86.46,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11465,8 +11353,8 @@
     "px": 3.21,
     "prePx": 3.54,
     "postPx": null,
-    "closeChg": -0.93,
-    "closePx": 3.18,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11481,8 +11369,8 @@
     "px": 0.55,
     "prePx": 0.61,
     "postPx": null,
-    "closeChg": 13.08,
-    "closePx": 0.63,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11497,8 +11385,8 @@
     "px": 41.4,
     "prePx": 37.5,
     "postPx": null,
-    "closeChg": -2.4,
-    "closePx": 40.41,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11513,8 +11401,8 @@
     "px": 20.67,
     "prePx": 18.8,
     "postPx": null,
-    "closeChg": -3.24,
-    "closePx": 20,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11529,8 +11417,8 @@
     "px": 1.33,
     "prePx": 1.45,
     "postPx": null,
-    "closeChg": -1.5,
-    "closePx": 1.31,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11545,8 +11433,8 @@
     "px": 3.36,
     "prePx": 3.06,
     "postPx": null,
-    "closeChg": 5.95,
-    "closePx": 3.56,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11561,8 +11449,8 @@
     "px": 5.77,
     "prePx": 5.29,
     "postPx": null,
-    "closeChg": -7.19,
-    "closePx": 5.36,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11577,8 +11465,8 @@
     "px": 21.2,
     "prePx": 22.96,
     "postPx": null,
-    "closeChg": 19.48,
-    "closePx": 25.33,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11593,8 +11481,8 @@
     "px": 3.39,
     "prePx": 3.11,
     "postPx": null,
-    "closeChg": -17.99,
-    "closePx": 2.78,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11609,8 +11497,8 @@
     "px": 4.01,
     "prePx": 3.69,
     "postPx": null,
-    "closeChg": 2.49,
-    "closePx": 4.11,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11625,8 +11513,8 @@
     "px": 4.18,
     "prePx": 3.86,
     "postPx": null,
-    "closeChg": -3.35,
-    "closePx": 4.04,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11641,8 +11529,8 @@
     "px": 10.08,
     "prePx": 9.31,
     "postPx": null,
-    "closeChg": -8.83,
-    "closePx": 9.19,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11657,8 +11545,8 @@
     "px": 1.19,
     "prePx": 1.28,
     "postPx": null,
-    "closeChg": 1.68,
-    "closePx": 1.21,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11673,8 +11561,8 @@
     "px": 4.1,
     "prePx": 4.41,
     "postPx": null,
-    "closeChg": 4.63,
-    "closePx": 4.29,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11689,8 +11577,8 @@
     "px": 334.91,
     "prePx": 310.58,
     "postPx": null,
-    "closeChg": -11.83,
-    "closePx": 295.28,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11705,8 +11593,8 @@
     "px": 10.4,
     "prePx": 9.64,
     "postPx": null,
-    "closeChg": -3.85,
-    "closePx": 10,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11721,8 +11609,8 @@
     "px": 0.44,
     "prePx": 0.47,
     "postPx": null,
-    "closeChg": -7.34,
-    "closePx": 0.41,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11737,8 +11625,8 @@
     "px": 46.77,
     "prePx": 50.2,
     "postPx": null,
-    "closeChg": 10.97,
-    "closePx": 51.9,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11753,8 +11641,8 @@
     "px": 107.28,
     "prePx": 115,
     "postPx": null,
-    "closeChg": -1.24,
-    "closePx": 105.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11769,8 +11657,8 @@
     "px": 139.1,
     "prePx": 148.95,
     "postPx": null,
-    "closeChg": 11.18,
-    "closePx": 154.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -11785,8 +11673,8 @@
     "px": 15.12,
     "prePx": 14.05,
     "postPx": null,
-    "closeChg": -8.8,
-    "closePx": 13.79,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11801,8 +11689,8 @@
     "px": 41.17,
     "prePx": 38.27,
     "postPx": null,
-    "closeChg": -12.37,
-    "closePx": 36.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11817,8 +11705,8 @@
     "px": 5.56,
     "prePx": 5.95,
     "postPx": null,
-    "closeChg": -0.18,
-    "closePx": 5.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11833,8 +11721,8 @@
     "px": 20.28,
     "prePx": 18.86,
     "postPx": null,
-    "closeChg": 0.2,
-    "closePx": 20.32,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11849,8 +11737,8 @@
     "px": 29.66,
     "prePx": 27.59,
     "postPx": null,
-    "closeChg": -9.54,
-    "closePx": 26.83,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11865,8 +11753,8 @@
     "px": 50.31,
     "prePx": 46.85,
     "postPx": null,
-    "closeChg": -16.74,
-    "closePx": 41.89,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11881,8 +11769,8 @@
     "px": 61.54,
     "prePx": 57.31,
     "postPx": null,
-    "closeChg": -6.42,
-    "closePx": 57.59,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11897,8 +11785,8 @@
     "px": 7,
     "prePx": 7.48,
     "postPx": null,
-    "closeChg": 9.57,
-    "closePx": 7.67,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11913,8 +11801,8 @@
     "px": 707.7,
     "prePx": 659.56,
     "postPx": null,
-    "closeChg": -11.01,
-    "closePx": 629.79,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11929,8 +11817,8 @@
     "px": 4.08,
     "prePx": 3.8,
     "postPx": null,
-    "closeChg": -9.45,
-    "closePx": 3.69,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11945,8 +11833,8 @@
     "px": 7.59,
     "prePx": 7.08,
     "postPx": null,
-    "closeChg": 12.38,
-    "closePx": 8.53,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11961,8 +11849,8 @@
     "px": 2.22,
     "prePx": 2.07,
     "postPx": null,
-    "closeChg": -6.76,
-    "closePx": 2.07,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11977,8 +11865,8 @@
     "px": 2.56,
     "prePx": 2.73,
     "postPx": null,
-    "closeChg": 7.03,
-    "closePx": 2.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -11993,8 +11881,8 @@
     "px": 81.57,
     "prePx": 76.19,
     "postPx": null,
-    "closeChg": -10.14,
-    "closePx": 73.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12002,15 +11890,15 @@
     "name": "Ready Capital",
     "sec": "房地产",
     "ind": "房地产投资信托基金 - 抵押贷款",
-    "zh": "Ready Capital Corporation 在美国经营一家房地产金融公司。该公司通过两个部门运营：LMM 商业房地产部门和小企业贷款部门。其 LMM 商业房地产部门在 LLM 财产的整个生命周期内提供 LLM 贷",
+    "zh": "Ready Capital Corporation 在美国作为一家房地产金融公司运营。该公司通过两个部门运营：LMM 商业房地产部门和小企业贷款部门。其 LMM 商业房地产部门在 LLM 财产的整个生命周期内提供 LLM",
     "track": "其它",
     "mcap": 104629386,
     "mv": -6.58,
     "px": 0.66,
     "prePx": 0.61,
     "postPx": null,
-    "closeChg": -5.26,
-    "closePx": 0.63,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12025,8 +11913,8 @@
     "px": 2.86,
     "prePx": 2.7,
     "postPx": null,
-    "closeChg": -5.94,
-    "closePx": 2.69,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12041,8 +11929,8 @@
     "px": 7.68,
     "prePx": 7.18,
     "postPx": null,
-    "closeChg": -5.73,
-    "closePx": 7.24,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12057,8 +11945,8 @@
     "px": 142.04,
     "prePx": 133,
     "postPx": null,
-    "closeChg": -11.61,
-    "closePx": 125.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12073,8 +11961,8 @@
     "px": 34.81,
     "prePx": 32.62,
     "postPx": null,
-    "closeChg": -8.62,
-    "closePx": 31.81,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12089,8 +11977,8 @@
     "px": 24.81,
     "prePx": 23.25,
     "postPx": null,
-    "closeChg": -10.16,
-    "closePx": 22.29,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12105,8 +11993,8 @@
     "px": 1.2,
     "prePx": 1.12,
     "postPx": null,
-    "closeChg": -9.17,
-    "closePx": 1.09,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12121,8 +12009,8 @@
     "px": 48.51,
     "prePx": 45.48,
     "postPx": null,
-    "closeChg": -13.65,
-    "closePx": 41.89,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12137,8 +12025,8 @@
     "px": 87.71,
     "prePx": 82.3,
     "postPx": null,
-    "closeChg": -11.13,
-    "closePx": 77.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12153,8 +12041,8 @@
     "px": 29.3,
     "prePx": 27.5,
     "postPx": null,
-    "closeChg": -8.5,
-    "closePx": 26.81,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12169,8 +12057,8 @@
     "px": 45.17,
     "prePx": 42.4,
     "postPx": null,
-    "closeChg": -10.69,
-    "closePx": 40.34,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12185,8 +12073,8 @@
     "px": 1.63,
     "prePx": 1.53,
     "postPx": null,
-    "closeChg": -5.52,
-    "closePx": 1.54,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12201,8 +12089,8 @@
     "px": 59.66,
     "prePx": 56.05,
     "postPx": null,
-    "closeChg": -8.15,
-    "closePx": 54.8,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12217,8 +12105,8 @@
     "px": 38.02,
     "prePx": 35.73,
     "postPx": null,
-    "closeChg": -16.94,
-    "closePx": 31.58,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12233,8 +12121,8 @@
     "px": 82.56,
     "prePx": 77.6,
     "postPx": null,
-    "closeChg": -12.17,
-    "closePx": 72.51,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12249,8 +12137,8 @@
     "px": 2.92,
     "prePx": 2.74,
     "postPx": null,
-    "closeChg": -4.97,
-    "closePx": 2.77,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12265,8 +12153,8 @@
     "px": 214.07,
     "prePx": 201.28,
     "postPx": null,
-    "closeChg": -6.93,
-    "closePx": 199.23,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12281,8 +12169,8 @@
     "px": 32.1,
     "prePx": 34,
     "postPx": null,
-    "closeChg": 2.18,
-    "closePx": 32.8,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12297,8 +12185,8 @@
     "px": 20.65,
     "prePx": 21.84,
     "postPx": null,
-    "closeChg": 20.1,
-    "closePx": 24.8,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12313,8 +12201,8 @@
     "px": 41.99,
     "prePx": 39.51,
     "postPx": null,
-    "closeChg": -9.88,
-    "closePx": 37.84,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12329,8 +12217,8 @@
     "px": 9.77,
     "prePx": 10.34,
     "postPx": null,
-    "closeChg": 3.89,
-    "closePx": 10.15,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12345,8 +12233,8 @@
     "px": 0.94,
     "prePx": 1,
     "postPx": null,
-    "closeChg": 7.94,
-    "closePx": 1.02,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12361,8 +12249,8 @@
     "px": 176.04,
     "prePx": 186.49,
     "postPx": null,
-    "closeChg": 4.25,
-    "closePx": 183.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12377,8 +12265,8 @@
     "px": 122.46,
     "prePx": 115.36,
     "postPx": null,
-    "closeChg": -13.07,
-    "closePx": 106.46,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12393,8 +12281,8 @@
     "px": 68.57,
     "prePx": 64.6,
     "postPx": null,
-    "closeChg": -13.34,
-    "closePx": 59.42,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12409,8 +12297,8 @@
     "px": 1.04,
     "prePx": 0.98,
     "postPx": null,
-    "closeChg": 2.88,
-    "closePx": 1.07,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12425,8 +12313,8 @@
     "px": 5.78,
     "prePx": 5.45,
     "postPx": null,
-    "closeChg": -8.13,
-    "closePx": 5.31,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12441,8 +12329,8 @@
     "px": 320.22,
     "prePx": 301.97,
     "postPx": null,
-    "closeChg": -1.64,
-    "closePx": 314.97,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12457,8 +12345,8 @@
     "px": 1.23,
     "prePx": 1.3,
     "postPx": null,
-    "closeChg": 9.76,
-    "closePx": 1.35,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12473,8 +12361,8 @@
     "px": 52.3,
     "prePx": 49.31,
     "postPx": null,
-    "closeChg": -3.5,
-    "closePx": 50.47,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12489,8 +12377,8 @@
     "px": 49.71,
     "prePx": 46.9,
     "postPx": null,
-    "closeChg": -3.98,
-    "closePx": 47.73,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12505,8 +12393,8 @@
     "px": 1.6,
     "prePx": 1.51,
     "postPx": null,
-    "closeChg": -9.37,
-    "closePx": 1.45,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12521,8 +12409,8 @@
     "px": 34.97,
     "prePx": 33,
     "postPx": null,
-    "closeChg": 6.92,
-    "closePx": 37.39,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12537,8 +12425,8 @@
     "px": 1.61,
     "prePx": 1.52,
     "postPx": null,
-    "closeChg": -2.48,
-    "closePx": 1.57,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12553,8 +12441,8 @@
     "px": 7.33,
     "prePx": 6.92,
     "postPx": null,
-    "closeChg": -11.19,
-    "closePx": 6.51,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12569,8 +12457,8 @@
     "px": 4.5,
     "prePx": 4.25,
     "postPx": null,
-    "closeChg": -6.67,
-    "closePx": 4.2,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12585,8 +12473,8 @@
     "px": 544.38,
     "prePx": 514.2,
     "postPx": null,
-    "closeChg": -10.52,
-    "closePx": 487.12,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12601,8 +12489,8 @@
     "px": 4.34,
     "prePx": 4.1,
     "postPx": null,
-    "closeChg": -5.3,
-    "closePx": 4.11,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12617,8 +12505,8 @@
     "px": 44.43,
     "prePx": 41.99,
     "postPx": null,
-    "closeChg": -7.16,
-    "closePx": 41.25,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12633,8 +12521,8 @@
     "px": 27.9,
     "prePx": 26.37,
     "postPx": null,
-    "closeChg": -10.43,
-    "closePx": 24.99,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12649,8 +12537,8 @@
     "px": 25.53,
     "prePx": 24.13,
     "postPx": null,
-    "closeChg": -4,
-    "closePx": 24.51,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12665,8 +12553,8 @@
     "px": 7.96,
     "prePx": 7.52,
     "postPx": null,
-    "closeChg": 0.57,
-    "closePx": 8,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12681,8 +12569,8 @@
     "px": 42.24,
     "prePx": 39.94,
     "postPx": null,
-    "closeChg": -11.06,
-    "closePx": 37.57,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12697,8 +12585,8 @@
     "px": 3.94,
     "prePx": 3.73,
     "postPx": null,
-    "closeChg": -9.14,
-    "closePx": 3.58,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12713,8 +12601,8 @@
     "px": 4.37,
     "prePx": 4.12,
     "postPx": null,
-    "closeChg": -18.08,
-    "closePx": 3.58,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12729,8 +12617,8 @@
     "px": 0.61,
     "prePx": 0.64,
     "postPx": null,
-    "closeChg": 5.57,
-    "closePx": 0.64,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12745,8 +12633,8 @@
     "px": 25.47,
     "prePx": 24.1,
     "postPx": null,
-    "closeChg": -9.54,
-    "closePx": 23.04,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12761,8 +12649,8 @@
     "px": 137.39,
     "prePx": 130,
     "postPx": null,
-    "closeChg": -4.56,
-    "closePx": 131.13,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12777,8 +12665,8 @@
     "px": 144.74,
     "prePx": 136.95,
     "postPx": null,
-    "closeChg": -9.1,
-    "closePx": 131.57,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12793,8 +12681,8 @@
     "px": 168.15,
     "prePx": 159.22,
     "postPx": null,
-    "closeChg": -6.98,
-    "closePx": 156.41,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12809,8 +12697,8 @@
     "px": 233.51,
     "prePx": 221.15,
     "postPx": null,
-    "closeChg": -8.69,
-    "closePx": 213.22,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12825,8 +12713,8 @@
     "px": 291.19,
     "prePx": 275.78,
     "postPx": null,
-    "closeChg": -11.25,
-    "closePx": 258.44,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12841,8 +12729,8 @@
     "px": 329.22,
     "prePx": 312,
     "postPx": null,
-    "closeChg": -11.88,
-    "closePx": 290.12,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12857,8 +12745,8 @@
     "px": 48.33,
     "prePx": 45.8,
     "postPx": null,
-    "closeChg": -11.85,
-    "closePx": 42.6,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12873,8 +12761,8 @@
     "px": 23.36,
     "prePx": 22.15,
     "postPx": null,
-    "closeChg": -6.89,
-    "closePx": 21.75,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12889,8 +12777,8 @@
     "px": 1.34,
     "prePx": 1.27,
     "postPx": null,
-    "closeChg": -5.97,
-    "closePx": 1.26,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12905,8 +12793,8 @@
     "px": 2.11,
     "prePx": 2,
     "postPx": null,
-    "closeChg": 15.64,
-    "closePx": 2.44,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12921,8 +12809,8 @@
     "px": 4.61,
     "prePx": 4.85,
     "postPx": null,
-    "closeChg": 33.19,
-    "closePx": 6.14,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12937,8 +12825,8 @@
     "px": 438.82,
     "prePx": 416,
     "postPx": null,
-    "closeChg": -13.79,
-    "closePx": 378.29,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12953,8 +12841,8 @@
     "px": 75.68,
     "prePx": 71.75,
     "postPx": null,
-    "closeChg": -9.14,
-    "closePx": 68.76,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12969,8 +12857,8 @@
     "px": 222.12,
     "prePx": 210.62,
     "postPx": null,
-    "closeChg": -13.88,
-    "closePx": 191.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -12985,8 +12873,8 @@
     "px": 453.46,
     "prePx": 430,
     "postPx": null,
-    "closeChg": -8.86,
-    "closePx": 413.27,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13001,8 +12889,8 @@
     "px": 2.32,
     "prePx": 2.2,
     "postPx": null,
-    "closeChg": -1.29,
-    "closePx": 2.29,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13017,8 +12905,8 @@
     "px": 297.25,
     "prePx": 281.87,
     "postPx": null,
-    "closeChg": -7.84,
-    "closePx": 273.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13033,8 +12921,8 @@
     "px": 209.76,
     "prePx": 198.95,
     "postPx": null,
-    "closeChg": -6.48,
-    "closePx": 196.16,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13049,8 +12937,8 @@
     "px": 0.7,
     "prePx": 0.74,
     "postPx": null,
-    "closeChg": 3.59,
-    "closePx": 0.73,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13065,8 +12953,8 @@
     "px": 10.64,
     "prePx": 11.18,
     "postPx": null,
-    "closeChg": 0.94,
-    "closePx": 10.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13081,8 +12969,8 @@
     "px": 120.62,
     "prePx": 114.5,
     "postPx": null,
-    "closeChg": 0.66,
-    "closePx": 121.42,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13097,8 +12985,8 @@
     "px": 17.08,
     "prePx": 16.21,
     "postPx": null,
-    "closeChg": -2.17,
-    "closePx": 16.71,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13113,8 +13001,8 @@
     "px": 346.87,
     "prePx": 329.35,
     "postPx": null,
-    "closeChg": -6.66,
-    "closePx": 323.76,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13129,8 +13017,8 @@
     "px": 165.05,
     "prePx": 156.75,
     "postPx": null,
-    "closeChg": -5.86,
-    "closePx": 155.38,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13145,8 +13033,8 @@
     "px": 38.95,
     "prePx": 37,
     "postPx": null,
-    "closeChg": -6.5,
-    "closePx": 36.42,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13161,8 +13049,8 @@
     "px": 11.48,
     "prePx": 12.05,
     "postPx": null,
-    "closeChg": 5.23,
-    "closePx": 12.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13177,8 +13065,8 @@
     "px": 24.53,
     "prePx": 23.3,
     "postPx": null,
-    "closeChg": -7.79,
-    "closePx": 22.62,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13193,8 +13081,8 @@
     "px": 30,
     "prePx": 28.51,
     "postPx": null,
-    "closeChg": 1.1,
-    "closePx": 30.33,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13209,8 +13097,8 @@
     "px": 43.49,
     "prePx": 41.33,
     "postPx": null,
-    "closeChg": -8.71,
-    "closePx": 39.7,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13225,8 +13113,8 @@
     "px": 143.32,
     "prePx": 136.2,
     "postPx": null,
-    "closeChg": -4.51,
-    "closePx": 136.85,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13241,8 +13129,8 @@
     "px": 14.3,
     "prePx": 15,
     "postPx": null,
-    "closeChg": 1.19,
-    "closePx": 14.47,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13257,8 +13145,8 @@
     "px": 59.02,
     "prePx": 56.14,
     "postPx": null,
-    "closeChg": -5.32,
-    "closePx": 55.88,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13273,8 +13161,8 @@
     "px": 97.8,
     "prePx": 93.01,
     "postPx": null,
-    "closeChg": -10.73,
-    "closePx": 87.31,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13289,8 +13177,8 @@
     "px": 6.75,
     "prePx": 6.42,
     "postPx": null,
-    "closeChg": -6.07,
-    "closePx": 6.34,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13305,8 +13193,8 @@
     "px": 17.88,
     "prePx": 17.01,
     "postPx": null,
-    "closeChg": -5.93,
-    "closePx": 16.82,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13321,8 +13209,8 @@
     "px": 186.35,
     "prePx": 177.27,
     "postPx": null,
-    "closeChg": -6.67,
-    "closePx": 173.82,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13337,8 +13225,8 @@
     "px": 5.58,
     "prePx": 5.31,
     "postPx": null,
-    "closeChg": -3.05,
-    "closePx": 5.41,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13353,8 +13241,8 @@
     "px": 3.53,
     "prePx": 3.7,
     "postPx": null,
-    "closeChg": 3.68,
-    "closePx": 3.66,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13369,8 +13257,8 @@
     "px": 231.3,
     "prePx": 220.18,
     "postPx": null,
-    "closeChg": -13.45,
-    "closePx": 200.2,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13385,8 +13273,8 @@
     "px": 62.32,
     "prePx": 65.3,
     "postPx": null,
-    "closeChg": 0.43,
-    "closePx": 62.59,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13401,8 +13289,8 @@
     "px": 87.64,
     "prePx": 83.5,
     "postPx": null,
-    "closeChg": -6.54,
-    "closePx": 81.91,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13417,8 +13305,8 @@
     "px": 43.62,
     "prePx": 41.56,
     "postPx": null,
-    "closeChg": -8.92,
-    "closePx": 39.73,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13433,8 +13321,8 @@
     "px": 14.64,
     "prePx": 13.95,
     "postPx": null,
-    "closeChg": -11.54,
-    "closePx": 12.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13449,8 +13337,8 @@
     "px": 13.66,
     "prePx": 13.02,
     "postPx": null,
-    "closeChg": -9.37,
-    "closePx": 12.38,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13465,8 +13353,8 @@
     "px": 18.21,
     "prePx": 19,
     "postPx": null,
-    "closeChg": 7.47,
-    "closePx": 19.57,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13481,8 +13369,8 @@
     "px": 7.08,
     "prePx": 7.41,
     "postPx": null,
-    "closeChg": -0.99,
-    "closePx": 7.01,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13497,8 +13385,8 @@
     "px": 150.37,
     "prePx": 157.32,
     "postPx": null,
-    "closeChg": 15.66,
-    "closePx": 173.92,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13513,8 +13401,8 @@
     "px": 51.37,
     "prePx": 49,
     "postPx": null,
-    "closeChg": -6.09,
-    "closePx": 48.24,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13529,8 +13417,8 @@
     "px": 145.85,
     "prePx": 139.13,
     "postPx": null,
-    "closeChg": -8.36,
-    "closePx": 133.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13545,8 +13433,8 @@
     "px": 2.96,
     "prePx": 3.1,
     "postPx": null,
-    "closeChg": 5.74,
-    "closePx": 3.13,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13561,8 +13449,8 @@
     "px": 170.81,
     "prePx": 163,
     "postPx": null,
-    "closeChg": -6.54,
-    "closePx": 159.63,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13577,8 +13465,8 @@
     "px": 47.27,
     "prePx": 45.11,
     "postPx": null,
-    "closeChg": -9.33,
-    "closePx": 42.86,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13593,8 +13481,8 @@
     "px": 8.1,
     "prePx": 7.72,
     "postPx": null,
-    "closeChg": -6.24,
-    "closePx": 7.59,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13609,8 +13497,8 @@
     "px": 101.01,
     "prePx": 96.52,
     "postPx": null,
-    "closeChg": -8.72,
-    "closePx": 92.2,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13625,8 +13513,8 @@
     "px": 8.82,
     "prePx": 9.22,
     "postPx": null,
-    "closeChg": 3.4,
-    "closePx": 9.12,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13641,8 +13529,8 @@
     "px": 12.36,
     "prePx": 11.8,
     "postPx": null,
-    "closeChg": -11.08,
-    "closePx": 10.99,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13657,8 +13545,8 @@
     "px": 19.41,
     "prePx": 18.53,
     "postPx": null,
-    "closeChg": -13.65,
-    "closePx": 16.76,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13673,8 +13561,8 @@
     "px": 73.94,
     "prePx": 70.6,
     "postPx": null,
-    "closeChg": -10.14,
-    "closePx": 66.44,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13689,8 +13577,8 @@
     "px": 100.5,
     "prePx": 95.97,
     "postPx": null,
-    "closeChg": -3.64,
-    "closePx": 96.84,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13705,8 +13593,8 @@
     "px": 5.78,
     "prePx": 6.04,
     "postPx": null,
-    "closeChg": 1.73,
-    "closePx": 5.88,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13721,8 +13609,8 @@
     "px": 61.23,
     "prePx": 58.49,
     "postPx": null,
-    "closeChg": -7.68,
-    "closePx": 56.53,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13737,8 +13625,8 @@
     "px": 7.38,
     "prePx": 7.05,
     "postPx": null,
-    "closeChg": -8.74,
-    "closePx": 6.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13753,8 +13641,8 @@
     "px": 4.15,
     "prePx": 3.96,
     "postPx": null,
-    "closeChg": -7.95,
-    "closePx": 3.82,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13769,8 +13657,8 @@
     "px": 100.1,
     "prePx": 95.64,
     "postPx": null,
-    "closeChg": -5.5,
-    "closePx": 94.59,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13785,8 +13673,8 @@
     "px": 3.69,
     "prePx": 3.85,
     "postPx": null,
-    "closeChg": 3.25,
-    "closePx": 3.81,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13801,8 +13689,8 @@
     "px": 9.21,
     "prePx": 8.81,
     "postPx": null,
-    "closeChg": -6.51,
-    "closePx": 8.61,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13817,8 +13705,8 @@
     "px": 61.22,
     "prePx": 58.5,
     "postPx": null,
-    "closeChg": -7.94,
-    "closePx": 56.36,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13833,8 +13721,8 @@
     "px": 142.06,
     "prePx": 135.76,
     "postPx": null,
-    "closeChg": -10.02,
-    "closePx": 127.82,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13849,8 +13737,8 @@
     "px": 26.47,
     "prePx": 25.3,
     "postPx": null,
-    "closeChg": -7.37,
-    "closePx": 24.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13865,8 +13753,8 @@
     "px": 4.32,
     "prePx": 4.13,
     "postPx": null,
-    "closeChg": -6.02,
-    "closePx": 4.06,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13881,8 +13769,8 @@
     "px": 0.98,
     "prePx": 0.93,
     "postPx": null,
-    "closeChg": -11.4,
-    "closePx": 0.87,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13897,8 +13785,8 @@
     "px": 215.81,
     "prePx": 206.34,
     "postPx": null,
-    "closeChg": -9.07,
-    "closePx": 196.24,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13913,8 +13801,8 @@
     "px": 136.81,
     "prePx": 130.81,
     "postPx": null,
-    "closeChg": -9.75,
-    "closePx": 123.47,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13929,8 +13817,8 @@
     "px": 3.44,
     "prePx": 3.59,
     "postPx": null,
-    "closeChg": 6.4,
-    "closePx": 3.66,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13945,8 +13833,8 @@
     "px": 108.31,
     "prePx": 103.57,
     "postPx": null,
-    "closeChg": -5.95,
-    "closePx": 101.87,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13961,8 +13849,8 @@
     "px": 218.48,
     "prePx": 209,
     "postPx": null,
-    "closeChg": -7.48,
-    "closePx": 202.14,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13977,8 +13865,8 @@
     "px": 5.53,
     "prePx": 5.29,
     "postPx": null,
-    "closeChg": -7.5,
-    "closePx": 5.12,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -13993,8 +13881,8 @@
     "px": 1333.88,
     "prePx": 1276.26,
     "postPx": null,
-    "closeChg": -10.77,
-    "closePx": 1190.16,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14009,8 +13897,8 @@
     "px": 311.44,
     "prePx": 298,
     "postPx": null,
-    "closeChg": -6.18,
-    "closePx": 292.19,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14025,8 +13913,8 @@
     "px": 1.85,
     "prePx": 1.93,
     "postPx": null,
-    "closeChg": 2.7,
-    "closePx": 1.9,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14041,8 +13929,8 @@
     "px": 1.16,
     "prePx": 1.11,
     "postPx": null,
-    "closeChg": 31.03,
-    "closePx": 1.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14057,8 +13945,8 @@
     "px": 12.55,
     "prePx": 12.01,
     "postPx": null,
-    "closeChg": 1.67,
-    "closePx": 12.76,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14073,8 +13961,8 @@
     "px": 4.96,
     "prePx": 4.75,
     "postPx": null,
-    "closeChg": -3.53,
-    "closePx": 4.79,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14089,8 +13977,8 @@
     "px": 7.41,
     "prePx": 7.09,
     "postPx": null,
-    "closeChg": 1.08,
-    "closePx": 7.49,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14105,8 +13993,8 @@
     "px": 13.82,
     "prePx": 13.23,
     "postPx": null,
-    "closeChg": -11.58,
-    "closePx": 12.22,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14121,8 +14009,8 @@
     "px": 100.72,
     "prePx": 96.5,
     "postPx": null,
-    "closeChg": -4.56,
-    "closePx": 96.13,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -14137,8 +14025,8 @@
     "px": 78.98,
     "prePx": 75.61,
     "postPx": null,
-    "closeChg": -6.29,
-    "closePx": 74.01,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14153,8 +14041,8 @@
     "px": 7.78,
     "prePx": 7.45,
     "postPx": null,
-    "closeChg": -8.74,
-    "closePx": 7.1,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14169,8 +14057,8 @@
     "px": 66.77,
     "prePx": 63.96,
     "postPx": null,
-    "closeChg": -7.91,
-    "closePx": 61.49,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14185,8 +14073,8 @@
     "px": 0.57,
     "prePx": 0.54,
     "postPx": null,
-    "closeChg": -14.22,
-    "closePx": 0.49,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14201,8 +14089,8 @@
     "px": 19.27,
     "prePx": 18.46,
     "postPx": null,
-    "closeChg": 2.54,
-    "closePx": 19.76,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14217,8 +14105,8 @@
     "px": 3.83,
     "prePx": 4,
     "postPx": null,
-    "closeChg": 5.22,
-    "closePx": 4.03,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14233,8 +14121,8 @@
     "px": 46.95,
     "prePx": 44.98,
     "postPx": null,
-    "closeChg": 0.75,
-    "closePx": 47.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14249,8 +14137,8 @@
     "px": 205.33,
     "prePx": 196.83,
     "postPx": null,
-    "closeChg": -6.82,
-    "closePx": 191.32,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14265,8 +14153,8 @@
     "px": 33.64,
     "prePx": 32.25,
     "postPx": null,
-    "closeChg": -8.71,
-    "closePx": 30.71,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14281,8 +14169,8 @@
     "px": 4.36,
     "prePx": 4.18,
     "postPx": null,
-    "closeChg": -7.11,
-    "closePx": 4.05,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14297,8 +14185,8 @@
     "px": 14.61,
     "prePx": 14.01,
     "postPx": null,
-    "closeChg": -3.97,
-    "closePx": 14.03,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14313,8 +14201,8 @@
     "px": 37.24,
     "prePx": 35.71,
     "postPx": null,
-    "closeChg": -2.98,
-    "closePx": 36.13,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14329,8 +14217,8 @@
     "px": 114.68,
     "prePx": 110.01,
     "postPx": null,
-    "closeChg": -4.6,
-    "closePx": 109.4,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14345,8 +14233,8 @@
     "px": 7.68,
     "prePx": 7.36,
     "postPx": null,
-    "closeChg": -2.08,
-    "closePx": 7.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14361,8 +14249,8 @@
     "px": 57.65,
     "prePx": 55.32,
     "postPx": null,
-    "closeChg": -0.66,
-    "closePx": 57.27,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14377,8 +14265,8 @@
     "px": 9.19,
     "prePx": 8.82,
     "postPx": null,
-    "closeChg": -10.12,
-    "closePx": 8.26,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14393,8 +14281,8 @@
     "px": 313.55,
     "prePx": 300.9,
     "postPx": null,
-    "closeChg": -3.98,
-    "closePx": 301.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14409,8 +14297,8 @@
     "px": 2.98,
     "prePx": 2.86,
     "postPx": null,
-    "closeChg": -9.06,
-    "closePx": 2.71,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14425,8 +14313,8 @@
     "px": 21.29,
     "prePx": 20.44,
     "postPx": null,
-    "closeChg": -5.4,
-    "closePx": 20.14,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14441,8 +14329,8 @@
     "px": 3.77,
     "prePx": 3.62,
     "postPx": null,
-    "closeChg": -0.8,
-    "closePx": 3.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14457,8 +14345,8 @@
     "px": 3.53,
     "prePx": 3.39,
     "postPx": null,
-    "closeChg": -6.52,
-    "closePx": 3.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14473,8 +14361,8 @@
     "px": 3.74,
     "prePx": 3.59,
     "postPx": null,
-    "closeChg": 4.55,
-    "closePx": 3.91,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14489,8 +14377,8 @@
     "px": 6.35,
     "prePx": 6.1,
     "postPx": null,
-    "closeChg": -4.57,
-    "closePx": 6.06,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14505,8 +14393,8 @@
     "px": 84.11,
     "prePx": 80.8,
     "postPx": null,
-    "closeChg": -6.61,
-    "closePx": 78.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14521,8 +14409,8 @@
     "px": 520.1,
     "prePx": 499.84,
     "postPx": null,
-    "closeChg": -7.23,
-    "closePx": 482.48,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14537,8 +14425,8 @@
     "px": 8.48,
     "prePx": 8.15,
     "postPx": null,
-    "closeChg": 8.14,
-    "closePx": 9.17,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14553,8 +14441,8 @@
     "px": 2.57,
     "prePx": 2.47,
     "postPx": null,
-    "closeChg": -11.67,
-    "closePx": 2.27,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14569,8 +14457,8 @@
     "px": 7.18,
     "prePx": 6.9,
     "postPx": null,
-    "closeChg": -5.29,
-    "closePx": 6.8,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14585,8 +14473,8 @@
     "px": 6.2,
     "prePx": 5.96,
     "postPx": null,
-    "closeChg": -10.97,
-    "closePx": 5.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14601,8 +14489,8 @@
     "px": 276.19,
     "prePx": 265.5,
     "postPx": null,
-    "closeChg": -6.04,
-    "closePx": 259.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14617,8 +14505,8 @@
     "px": 178.31,
     "prePx": 171.28,
     "postPx": null,
-    "closeChg": -5.47,
-    "closePx": 168.56,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14633,8 +14521,8 @@
     "px": 213.31,
     "prePx": 205,
     "postPx": null,
-    "closeChg": -7.81,
-    "closePx": 196.64,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14649,8 +14537,8 @@
     "px": 1.82,
     "prePx": 1.75,
     "postPx": null,
-    "closeChg": -2.2,
-    "closePx": 1.78,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14665,8 +14553,8 @@
     "px": 2.61,
     "prePx": 2.51,
     "postPx": null,
-    "closeChg": 1.15,
-    "closePx": 2.64,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14681,8 +14569,8 @@
     "px": 7.31,
     "prePx": 7.03,
     "postPx": null,
-    "closeChg": -7.8,
-    "closePx": 6.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14697,8 +14585,8 @@
     "px": 264.73,
     "prePx": 254.49,
     "postPx": null,
-    "closeChg": -9.62,
-    "closePx": 239.27,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14713,8 +14601,8 @@
     "px": 21.18,
     "prePx": 21.99,
     "postPx": null,
-    "closeChg": 0,
-    "closePx": 21.18,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14729,8 +14617,8 @@
     "px": 31.6,
     "prePx": 30.4,
     "postPx": null,
-    "closeChg": -16.49,
-    "closePx": 26.39,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14745,8 +14633,8 @@
     "px": 15.66,
     "prePx": 15.07,
     "postPx": null,
-    "closeChg": -0.06,
-    "closePx": 15.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14761,8 +14649,8 @@
     "px": 9.47,
     "prePx": 9.11,
     "postPx": null,
-    "closeChg": -6.65,
-    "closePx": 8.84,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14777,8 +14665,8 @@
     "px": 6.86,
     "prePx": 6.6,
     "postPx": null,
-    "closeChg": -2.77,
-    "closePx": 6.67,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14793,8 +14681,8 @@
     "px": 84.4,
     "prePx": 81.2,
     "postPx": null,
-    "closeChg": -8.12,
-    "closePx": 77.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14809,8 +14697,8 @@
     "px": 35.17,
     "prePx": 36.5,
     "postPx": null,
-    "closeChg": 8.56,
-    "closePx": 38.18,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14825,8 +14713,8 @@
     "px": 14.08,
     "prePx": 13.55,
     "postPx": null,
-    "closeChg": -4.12,
-    "closePx": 13.5,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14841,8 +14729,8 @@
     "px": 170.92,
     "prePx": 164.5,
     "postPx": null,
-    "closeChg": -2.86,
-    "closePx": 166.04,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14857,8 +14745,8 @@
     "px": 8.27,
     "prePx": 7.96,
     "postPx": null,
-    "closeChg": -6.41,
-    "closePx": 7.74,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14873,8 +14761,8 @@
     "px": 5.74,
     "prePx": 5.53,
     "postPx": null,
-    "closeChg": -5.23,
-    "closePx": 5.44,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14889,8 +14777,8 @@
     "px": 3.23,
     "prePx": 3.11,
     "postPx": null,
-    "closeChg": -9.91,
-    "closePx": 2.91,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14905,8 +14793,8 @@
     "px": 1.08,
     "prePx": 1.12,
     "postPx": null,
-    "closeChg": -1.85,
-    "closePx": 1.06,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14921,8 +14809,8 @@
     "px": 107.92,
     "prePx": 104,
     "postPx": null,
-    "closeChg": -4.14,
-    "closePx": 103.45,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14937,8 +14825,8 @@
     "px": 2.7,
     "prePx": 2.6,
     "postPx": null,
-    "closeChg": 7.41,
-    "closePx": 2.9,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14953,8 +14841,8 @@
     "px": 2.98,
     "prePx": 3.09,
     "postPx": null,
-    "closeChg": -8.39,
-    "closePx": 2.73,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14969,8 +14857,8 @@
     "px": 20.67,
     "prePx": 19.95,
     "postPx": null,
-    "closeChg": -11.95,
-    "closePx": 18.2,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -14985,8 +14873,8 @@
     "px": 3.72,
     "prePx": 3.86,
     "postPx": null,
-    "closeChg": -9.41,
-    "closePx": 3.37,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15001,8 +14889,8 @@
     "px": 10.91,
     "prePx": 10.51,
     "postPx": null,
-    "closeChg": -8.25,
-    "closePx": 10.01,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15017,8 +14905,8 @@
     "px": 55.56,
     "prePx": 53.53,
     "postPx": null,
-    "closeChg": -19.96,
-    "closePx": 44.47,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15033,8 +14921,8 @@
     "px": 110.54,
     "prePx": 106.52,
     "postPx": null,
-    "closeChg": 1.82,
-    "closePx": 112.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15049,8 +14937,8 @@
     "px": 77.41,
     "prePx": 74.61,
     "postPx": null,
-    "closeChg": -5.09,
-    "closePx": 73.47,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15065,8 +14953,8 @@
     "px": 2.21,
     "prePx": 2.13,
     "postPx": null,
-    "closeChg": 0,
-    "closePx": 2.21,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15081,8 +14969,8 @@
     "px": 13.56,
     "prePx": 14.05,
     "postPx": null,
-    "closeChg": 0.88,
-    "closePx": 13.68,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15097,8 +14985,8 @@
     "px": 23.34,
     "prePx": 22.52,
     "postPx": null,
-    "closeChg": -4.03,
-    "closePx": 22.4,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15113,8 +15001,8 @@
     "px": 1.25,
     "prePx": 1.21,
     "postPx": null,
-    "closeChg": 9.56,
-    "closePx": 1.38,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15129,8 +15017,8 @@
     "px": 6.42,
     "prePx": 6.19,
     "postPx": null,
-    "closeChg": -8.1,
-    "closePx": 5.9,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15145,8 +15033,8 @@
     "px": 2.8,
     "prePx": 2.9,
     "postPx": null,
-    "closeChg": 13.21,
-    "closePx": 3.17,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15161,8 +15049,8 @@
     "px": 1.67,
     "prePx": 1.61,
     "postPx": null,
-    "closeChg": -3.59,
-    "closePx": 1.61,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15177,8 +15065,8 @@
     "px": 3.68,
     "prePx": 3.55,
     "postPx": null,
-    "closeChg": -7.88,
-    "closePx": 3.39,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15193,8 +15081,8 @@
     "px": 2.64,
     "prePx": 2.55,
     "postPx": null,
-    "closeChg": -5.3,
-    "closePx": 2.5,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15209,8 +15097,8 @@
     "px": 12.55,
     "prePx": 12.11,
     "postPx": null,
-    "closeChg": -7.97,
-    "closePx": 11.55,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15225,8 +15113,8 @@
     "px": 242.24,
     "prePx": 233.79,
     "postPx": null,
-    "closeChg": -6.42,
-    "closePx": 226.69,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15241,8 +15129,8 @@
     "px": 111.92,
     "prePx": 108.01,
     "postPx": null,
-    "closeChg": -6.56,
-    "closePx": 104.58,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15257,8 +15145,8 @@
     "px": 35.39,
     "prePx": 34.13,
     "postPx": null,
-    "closeChg": -3.39,
-    "closePx": 34.19,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15273,8 +15161,8 @@
     "px": 4.06,
     "prePx": 4.2,
     "postPx": null,
-    "closeChg": 2.22,
-    "closePx": 4.15,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15289,8 +15177,8 @@
     "px": 999.4,
     "prePx": 965,
     "postPx": null,
-    "closeChg": -1.66,
-    "closePx": 982.77,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15305,8 +15193,8 @@
     "px": 14.39,
     "prePx": 13.9,
     "postPx": null,
-    "closeChg": -6.88,
-    "closePx": 13.4,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15321,8 +15209,8 @@
     "px": 61.44,
     "prePx": 59.33,
     "postPx": null,
-    "closeChg": 0.13,
-    "closePx": 61.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15337,8 +15225,8 @@
     "px": 3.22,
     "prePx": 3.33,
     "postPx": null,
-    "closeChg": 9.63,
-    "closePx": 3.53,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15353,8 +15241,8 @@
     "px": 1158.53,
     "prePx": 1119.9,
     "postPx": null,
-    "closeChg": -5.35,
-    "closePx": 1096.56,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15369,8 +15257,8 @@
     "px": 206.28,
     "prePx": 199.28,
     "postPx": null,
-    "closeChg": -3.96,
-    "closePx": 198.12,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15385,8 +15273,8 @@
     "px": 231.55,
     "prePx": 223.7,
     "postPx": null,
-    "closeChg": -6.15,
-    "closePx": 217.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15401,8 +15289,8 @@
     "px": 1.48,
     "prePx": 1.53,
     "postPx": null,
-    "closeChg": -4.05,
-    "closePx": 1.42,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15417,8 +15305,8 @@
     "px": 134.18,
     "prePx": 138.7,
     "postPx": null,
-    "closeChg": 3.33,
-    "closePx": 138.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15433,8 +15321,8 @@
     "px": 7.17,
     "prePx": 6.9,
     "postPx": null,
-    "closeChg": 4.88,
-    "closePx": 7.52,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15449,8 +15337,8 @@
     "px": 1.19,
     "prePx": 1.15,
     "postPx": null,
-    "closeChg": -10.08,
-    "closePx": 1.07,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15465,8 +15353,8 @@
     "px": 60.12,
     "prePx": 58.1,
     "postPx": null,
-    "closeChg": -7.93,
-    "closePx": 55.35,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15481,8 +15369,8 @@
     "px": 165.38,
     "prePx": 159.9,
     "postPx": null,
-    "closeChg": -0.25,
-    "closePx": 164.96,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15497,8 +15385,8 @@
     "px": 49.63,
     "prePx": 47.98,
     "postPx": null,
-    "closeChg": -7.35,
-    "closePx": 45.98,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15513,8 +15401,8 @@
     "px": 7.23,
     "prePx": 6.99,
     "postPx": null,
-    "closeChg": -2.07,
-    "closePx": 7.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15529,8 +15417,8 @@
     "px": 80.16,
     "prePx": 77.51,
     "postPx": null,
-    "closeChg": -6.37,
-    "closePx": 75.05,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15545,8 +15433,8 @@
     "px": 113.68,
     "prePx": 110,
     "postPx": null,
-    "closeChg": -3.68,
-    "closePx": 109.5,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15561,8 +15449,8 @@
     "px": 5.13,
     "prePx": 4.96,
     "postPx": null,
-    "closeChg": -8.38,
-    "closePx": 4.7,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15577,8 +15465,8 @@
     "px": 132.78,
     "prePx": 128.4,
     "postPx": null,
-    "closeChg": -1.45,
-    "closePx": 130.85,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -15593,8 +15481,8 @@
     "px": 756.71,
     "prePx": 732.12,
     "postPx": null,
-    "closeChg": -4.77,
-    "closePx": 720.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15609,8 +15497,8 @@
     "px": 202.45,
     "prePx": 195.8,
     "postPx": null,
-    "closeChg": -7.38,
-    "closePx": 187.51,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15625,8 +15513,8 @@
     "px": 4.72,
     "prePx": 4.57,
     "postPx": null,
-    "closeChg": -7.51,
-    "closePx": 4.37,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15641,8 +15529,8 @@
     "px": 17.42,
     "prePx": 17.99,
     "postPx": null,
-    "closeChg": 3.99,
-    "closePx": 18.11,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15657,8 +15545,8 @@
     "px": 2.39,
     "prePx": 2.31,
     "postPx": null,
-    "closeChg": -3.77,
-    "closePx": 2.3,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15673,8 +15561,8 @@
     "px": 43.08,
     "prePx": 44.48,
     "postPx": null,
-    "closeChg": 1.76,
-    "closePx": 43.84,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15689,8 +15577,8 @@
     "px": 203.89,
     "prePx": 197.05,
     "postPx": null,
-    "closeChg": -8.29,
-    "closePx": 186.99,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15705,8 +15593,8 @@
     "px": 15.81,
     "prePx": 16.31,
     "postPx": null,
-    "closeChg": -0.89,
-    "closePx": 15.67,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15721,8 +15609,8 @@
     "px": 64.29,
     "prePx": 62.2,
     "postPx": null,
-    "closeChg": -6.84,
-    "closePx": 59.89,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15737,8 +15625,8 @@
     "px": 14.44,
     "prePx": 14.91,
     "postPx": null,
-    "closeChg": -1.94,
-    "closePx": 14.16,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15753,8 +15641,8 @@
     "px": 139.58,
     "prePx": 135.04,
     "postPx": null,
-    "closeChg": 0.88,
-    "closePx": 140.81,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15769,8 +15657,8 @@
     "px": 25.67,
     "prePx": 24.84,
     "postPx": null,
-    "closeChg": -8.06,
-    "closePx": 23.6,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15785,8 +15673,8 @@
     "px": 17.09,
     "prePx": 16.54,
     "postPx": null,
-    "closeChg": -0.64,
-    "closePx": 16.98,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15801,8 +15689,8 @@
     "px": 98.51,
     "prePx": 95.35,
     "postPx": null,
-    "closeChg": -9.88,
-    "closePx": 88.78,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15817,8 +15705,8 @@
     "px": 16.83,
     "prePx": 17.36,
     "postPx": null,
-    "closeChg": 4.22,
-    "closePx": 17.54,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -15833,8 +15721,8 @@
     "px": 256.03,
     "prePx": 247.81,
     "postPx": null,
-    "closeChg": -6.5,
-    "closePx": 239.4,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15849,8 +15737,8 @@
     "px": 17.15,
     "prePx": 16.6,
     "postPx": null,
-    "closeChg": -4.72,
-    "closePx": 16.34,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15865,8 +15753,8 @@
     "px": 58.41,
     "prePx": 56.54,
     "postPx": null,
-    "closeChg": 1.76,
-    "closePx": 59.44,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15881,8 +15769,8 @@
     "px": 4.81,
     "prePx": 4.66,
     "postPx": null,
-    "closeChg": -5.61,
-    "closePx": 4.54,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15897,8 +15785,8 @@
     "px": 278.77,
     "prePx": 269.9,
     "postPx": null,
-    "closeChg": -8.11,
-    "closePx": 256.15,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15913,8 +15801,8 @@
     "px": 1.58,
     "prePx": 1.53,
     "postPx": null,
-    "closeChg": -9.49,
-    "closePx": 1.43,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15929,8 +15817,8 @@
     "px": 13.05,
     "prePx": 13.46,
     "postPx": null,
-    "closeChg": -6.28,
-    "closePx": 12.23,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15945,8 +15833,8 @@
     "px": 4.24,
     "prePx": 4.37,
     "postPx": null,
-    "closeChg": 4.95,
-    "closePx": 4.45,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15961,8 +15849,8 @@
     "px": 7.76,
     "prePx": 7.51,
     "postPx": null,
-    "closeChg": -2.96,
-    "closePx": 7.53,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15977,8 +15865,8 @@
     "px": 1.9,
     "prePx": 1.84,
     "postPx": null,
-    "closeChg": -3.68,
-    "closePx": 1.83,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -15993,8 +15881,8 @@
     "px": 67.37,
     "prePx": 65.28,
     "postPx": null,
-    "closeChg": -2.55,
-    "closePx": 65.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16009,8 +15897,8 @@
     "px": 312.69,
     "prePx": 303,
     "postPx": null,
-    "closeChg": -1.34,
-    "closePx": 308.5,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16025,8 +15913,8 @@
     "px": 13.46,
     "prePx": 13.88,
     "postPx": null,
-    "closeChg": 3.12,
-    "closePx": 13.88,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16041,8 +15929,8 @@
     "px": 3.88,
     "prePx": 3.76,
     "postPx": null,
-    "closeChg": 5.15,
-    "closePx": 4.08,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16057,8 +15945,8 @@
     "px": 9.75,
     "prePx": 9.45,
     "postPx": null,
-    "closeChg": -8.41,
-    "closePx": 8.93,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16073,8 +15961,8 @@
     "px": 609,
     "prePx": 590.38,
     "postPx": null,
-    "closeChg": -3.18,
-    "closePx": 589.64,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16089,8 +15977,8 @@
     "px": 291.13,
     "prePx": 282.01,
     "postPx": null,
-    "closeChg": -1.32,
-    "closePx": 287.29,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16098,15 +15986,15 @@
     "name": "Skyworks Solutions",
     "sec": "科技",
     "ind": "半导体",
-    "zh": "Skyworks Solutions, Inc. 及其子公司在美国、台湾、中国、韩国、欧洲、中东、非洲和亚太地区开发、制造和销售模拟和混合信号半导体产品及解决方案。本公司提供放大器、天线等",
+    "zh": "Skyworks Solutions, Inc. 及其子公司在美国、台湾、中国、韩国、欧洲、中东、非洲和亚太地区开发、制造和销售模拟和混合信号半导体产品和解决方案。本公司提供放大器、天线等",
     "track": "AI基础设施/数据中心",
     "mcap": 18111988294,
     "mv": -3.07,
     "px": 77.12,
     "prePx": 74.75,
     "postPx": null,
-    "closeChg": 4.97,
-    "closePx": 80.95,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16121,8 +16009,8 @@
     "px": 295.31,
     "prePx": 286,
     "postPx": null,
-    "closeChg": -8.2,
-    "closePx": 271.1,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16137,8 +16025,8 @@
     "px": 2.94,
     "prePx": 3.03,
     "postPx": null,
-    "closeChg": 7.82,
-    "closePx": 3.17,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16153,8 +16041,8 @@
     "px": 2.26,
     "prePx": 2.19,
     "postPx": null,
-    "closeChg": 0.88,
-    "closePx": 2.28,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16169,8 +16057,8 @@
     "px": 18.4,
     "prePx": 17.84,
     "postPx": null,
-    "closeChg": -1.03,
-    "closePx": 18.21,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16185,8 +16073,8 @@
     "px": 97,
     "prePx": 99.9,
     "postPx": null,
-    "closeChg": 2.7,
-    "closePx": 99.62,
+    "closeChg": null,
+    "closePx": null,
     "earn": true
    },
    {
@@ -16201,8 +16089,8 @@
     "px": 14.42,
     "prePx": 13.97,
     "postPx": null,
-    "closeChg": -8.6,
-    "closePx": 13.18,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16217,8 +16105,8 @@
     "px": 19.14,
     "prePx": 18.56,
     "postPx": null,
-    "closeChg": -5.02,
-    "closePx": 18.18,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16233,8 +16121,8 @@
     "px": 16.28,
     "prePx": 15.79,
     "postPx": null,
-    "closeChg": -3.99,
-    "closePx": 15.63,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16249,8 +16137,8 @@
     "px": 8.62,
     "prePx": 8.9,
     "postPx": null,
-    "closeChg": 0.35,
-    "closePx": 8.65,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    },
    {
@@ -16265,8 +16153,8 @@
     "px": 69.28,
     "prePx": 71.36,
     "postPx": null,
-    "closeChg": 4.27,
-    "closePx": 72.24,
+    "closeChg": null,
+    "closePx": null,
     "earn": false
    }
   ]
@@ -26641,8 +26529,8 @@
     "sym": "MBLY",
     "name": "Mobileye Global",
     "sec": "科技",
-    "ind": "汽车配件",
-    "zh": "Mobileye Global Inc. 在美国、欧洲、中国和国际上开发和部署高级驾驶辅助系统 (ADAS) 以及自动驾驶技术和解决方案。它通过两个部门运营：Mobileye 和 Moovit。它提供端到端 ADAS 和",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 3885285396,
     "mv": 4.16,
@@ -26690,7 +26578,7 @@
     "name": "Analog Devices",
     "sec": "科技",
     "ind": "半导体",
-    "zh": "Analog Devices, Inc. 在美国、北美和南美其他地区、欧洲、日本、中国和亚洲其他地区从事集成电路 (IC)、软件和子系统产品的设计、制造、测试和营销。它提供数据转换器产品，可翻译现实世界的数据",
+    "zh": "Analog Devices, Inc. 设计、制造、测试和销售解决方案组合，包括集成电路 (IC)；软件和子系统；模拟和混合信号；以及美国、北美和南美其他地区、欧洲、日本、中国和亚洲其他地区的数字技术产品。",
     "track": "AI基础设施/数据中心",
     "mcap": 167620885653,
     "mv": 4.13,
@@ -26705,8 +26593,8 @@
     "sym": "PLTR",
     "name": "Palantir",
     "sec": "软件",
-    "ind": "软件 - 基础设施",
-    "zh": "Palantir Technologies Inc. 为情报界构建和部署软件平台，以协助美国、英国和国际上的反恐调查和行动。它提供 Palantir Gotham 与其他国防产品平台的集成",
+    "ind": "",
+    "zh": "",
     "track": "AI应用",
     "mcap": 345738792544,
     "mv": 4.13,
@@ -26817,8 +26705,8 @@
     "sym": "BEAM",
     "name": "Beam Therapeutics",
     "sec": "医疗",
-    "ind": "生物技术",
-    "zh": "Beam Therapeutics Inc.是一家生物技术公司，致力于为美国患有严重疾病的患者开发精准基因药物。其血液学和遗传疾病组合项目包括 Ristoglogene autogetemcel，一种患者特异性自体 he",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 2163058960,
     "mv": 4.07,
@@ -26929,8 +26817,8 @@
     "sym": "RDDT",
     "name": "Reddit",
     "sec": "科技",
-    "ind": "互联网内容和信息",
-    "zh": "Reddit, Inc. 在美国和国际上运营着一个数字社区。该公司的平台使用户能够参与对话、探索激情、研究新的爱好、交换商品和服务、创建新的社区和体验、分享欢笑并找到归属感。它也o",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 16469929786,
     "mv": 4.04,
@@ -26961,8 +26849,8 @@
     "sym": "ADTN",
     "name": "ADTRAN",
     "sec": "公用事业",
-    "ind": "通讯设备",
-    "zh": "ADTRAN Holdings, Inc. 在美国、德国、英国和国际上提供网络和通信平台、软件、系统和服务。它通过两个部门运营：网络解决方案部门和服务与支持部门。它提供住宅网关；以太网被动",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 325168342,
     "mv": 4.01,
@@ -27025,8 +26913,8 @@
     "sym": "CRSR",
     "name": "Corsair Gaming",
     "sec": "科技",
-    "ind": "电脑硬件",
-    "zh": "Corsair Gaming, Inc. 及其子公司在欧洲、中东、北非、北美、拉丁美洲和亚太地区设计和销售游戏和流媒体外围设备、组件和系统。该公司分为两个部门：游戏玩家和创作者外设部门以及 Gam",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 1176643555,
     "mv": 3.99,
@@ -27153,8 +27041,8 @@
     "sym": "TENB",
     "name": "Tenable",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "Tenable Holdings, Inc. 在美洲、欧洲、中东、非洲、亚太地区和日本提供网络暴露管理解决方案。其平台包括 Tenable AI Exposure，这是一种帮助组织识别、评估和减少与艺术使用相关的安全风险",
+    "ind": "",
+    "zh": "",
     "track": "网安",
     "mcap": 4388275090,
     "mv": 3.95,
@@ -27249,8 +27137,8 @@
     "sym": "COIN",
     "name": "Coinbase",
     "sec": "加密",
-    "ind": "财务数据和证券交易所",
-    "zh": "Coinbase Global, Inc. 在美国和国际上运营加密资产平台。它为消费者提供加密经济中的主要金融账户；为机构提供跨加密货币市场流动性池的经纪平台；和一套产品",
+    "ind": "",
+    "zh": "",
     "track": "金融科技",
     "mcap": 26997925733,
     "mv": 3.9,
@@ -27265,8 +27153,8 @@
     "sym": "DDOG",
     "name": "Datadog",
     "sec": "软件",
-    "ind": "软件 - 应用程序",
-    "zh": "Datadog, Inc. 在美国和国际上运营着一个针对云应用程序的可观察性和安全平台。该公司的产品包括基础设施和应用程序性能监控、日志管理、可观测性管道、合成、真实用户监控、产品分析",
+    "ind": "",
+    "zh": "",
     "track": "AI应用",
     "mcap": 56817265307,
     "mv": 3.9,
@@ -27281,8 +27169,8 @@
     "sym": "CDNS",
     "name": "Cadence Design Systems",
     "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Cadence Design Systems, Inc. 开发计算、人工智能驱动的软件、硬件和硅知识产权产品和解决方案。公司提供功能验证服务，如形式化验证平台Jasper； Xcelium，并行逻辑仿真平台；维里西姆，一",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 77259638820,
     "mv": 3.89,
@@ -27633,8 +27521,8 @@
     "sym": "SAIL",
     "name": "SailPoint",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "SailPoint, Inc. 提供解决方案，为美洲、欧洲、中东、非洲、亚太地区和国际上的企业提供身份安全保障。其解决方案使组织能够建立、控制和自动化策略，帮助定义和维护强大的安全策略",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 12171836016,
     "mv": 3.8,
@@ -27793,8 +27681,8 @@
     "sym": "LFUS",
     "name": "Littelfuse",
     "sec": "能源",
-    "ind": "电子元件",
-    "zh": "Littelfuse, Inc. 设计、制造和销售电子元件、模块和组件。它通过三个部门运营：电子部门、运输部门和工业部门。其电子部门提供保险丝和保险丝配件、系数自恢复保险丝、开关和互连解决方案",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 9083800336,
     "mv": 3.75,
@@ -27825,8 +27713,8 @@
     "sym": "VST",
     "name": "Vistra",
     "sec": "公用事业",
-    "ind": "公用事业 - 独立电力生产商",
-    "zh": "瑞致达公司及其子公司在美国作为一家综合零售电力和发电公司运营。该公司通过五个部门运营：零售部门、德克萨斯部门、东部部门、西部部门和资产关闭部门。该公司向住宅、商业零售电力和天然气",
+    "ind": "",
+    "zh": "",
     "track": "AI基础设施/数据中心",
     "mcap": 39111843269,
     "mv": 3.74,
@@ -27841,8 +27729,8 @@
     "sym": "BB",
     "name": "BlackBerry",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "BlackBerry Limited 为全球企业和政府提供智能软件和服务。该公司通过三个部门运营：安全通信部门、QNX 部门和许可部门。该公司提供 BlackBerry Dynamics、移动应用程序开发平台和安全容器；",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 4564175969,
     "mv": 3.73,
@@ -27937,8 +27825,8 @@
     "sym": "AKAM",
     "name": "Akamai Technologies",
     "sec": "可选消费",
-    "ind": "软件 - 基础设施",
-    "zh": "Akamai Technologies, Inc. 在美国和国际范围内提供安全、交付和云计算解决方案。它提供的安全解决方案包括 Web 应用程序和应用程序编程接口 (API) 保护解决方案，可保护 Web、API 和 m",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 12275345084,
     "mv": 3.69,
@@ -28033,8 +27921,8 @@
     "sym": "ESAB",
     "name": "ESAB",
     "sec": "工业",
-    "ind": "金属加工",
-    "zh": "ESAB Corporation 从事切割、连接、自动化焊接和气体控制设备等消耗品和设备的配制、开发、制造和供应。它通过独立分销商和直销人员提供产品。它在欧洲、亚洲开展业务",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 4649227374,
     "mv": 3.67,
@@ -28273,8 +28161,8 @@
     "sym": "CEG",
     "name": "Constellation Energy",
     "sec": "AI电力",
-    "ind": "公用事业 - 独立电力生产商",
-    "zh": "星座能源公司在美国生产和销售能源产品和服务。该公司通过五个部门运营：中大西洋部门、中西部部门、纽约部门、ERCOT 部门和其他电力区域部门。它提供电力、天然气、能源相关产品和可持续解决方案。",
+    "ind": "",
+    "zh": "",
     "track": "AI基础设施/数据中心",
     "mcap": 83475374935,
     "mv": 3.62,
@@ -28465,8 +28353,8 @@
     "sym": "RIVN",
     "name": "Rivian",
     "sec": "汽车",
-    "ind": "汽车制造商",
-    "zh": "Rivian Automotive, Inc. 及其子公司开发、制造和销售定义类别的电动汽车。它通过两个部门运营：汽车部门、软件和服务部门。该公司提供消费类车辆，包括 R1 下的两排五座皮卡车",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 15077757231,
     "mv": 3.58,
@@ -28529,8 +28417,8 @@
     "sym": "FTNT",
     "name": "Fortinet",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "Fortinet, Inc. 在全球范围内提供网络安全以及网络和安全解决方案的融合。该公司提供 FortiOS，这是一个旨在解决网络安全威胁的统一操作系统；基于 FortiASIC 应用专用集成电路 (ASIC) 的安全",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 91515445339,
     "mv": 3.56,
@@ -28705,8 +28593,8 @@
     "sym": "EVGO",
     "name": "EVgo",
     "sec": "可选消费",
-    "ind": "专业零售",
-    "zh": "EVgo, Inc. 在美国拥有并运营电动汽车直流快速充电网络。它直接为驾驶员提供电力；原始设备制造商充电及相关服务；和商业充电。该公司还提供辅助服务，例如客户",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 450351788,
     "mv": 3.5,
@@ -28785,8 +28673,8 @@
     "sym": "CAT",
     "name": "Caterpillar",
     "sec": "工业",
-    "ind": "农用和重型工程机械",
-    "zh": "Caterpillar Inc. 在美国和国际上提供建筑和采矿设备、非公路柴油和天然气发动机、工业燃气轮机以及柴电机车。建筑工业部门提供沥青摊铺机、冷刨机、压实机、林业机械",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 233757407846,
     "mv": 3.48,
@@ -28929,8 +28817,8 @@
     "sym": "ATRO",
     "name": "Astronics",
     "sec": "工业",
-    "ind": "航空航天与国防",
-    "zh": "Astronics Corporation 通过其子公司为美国、北美其他地区、亚洲、欧洲、南美和国际上的航空航天、国防和电子行业设计和制造产品。它分为航空航天和测试系统两个部门。航空航天飞机",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 2377144200,
     "mv": 3.39,
@@ -29042,7 +28930,7 @@
     "name": "Skyworks Solutions",
     "sec": "科技",
     "ind": "半导体",
-    "zh": "Skyworks Solutions, Inc. 及其子公司在美国、台湾、中国、韩国、欧洲、中东、非洲和亚太地区开发、制造和销售模拟和混合信号半导体产品及解决方案。本公司提供放大器、天线等",
+    "zh": "Skyworks Solutions, Inc. 及其子公司在美国、台湾、中国、韩国、欧洲、中东、非洲和亚太地区开发、制造和销售模拟和混合信号半导体产品和解决方案。本公司提供放大器、天线等",
     "track": "AI基础设施/数据中心",
     "mcap": 17358104964,
     "mv": 3.37,
@@ -29233,8 +29121,8 @@
     "sym": "AVT",
     "name": "Avnet",
     "sec": "科技",
-    "ind": "电子及电脑分销",
-    "zh": "Avnet, Inc. 在美洲、欧洲、中东、非洲和亚太地区从事电子元件技术的分销。该公司通过两个部门运营：电子元件部门和 Farnell 部门。它营销、销售和分销半导体；互连、无源和",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 6040153405,
     "mv": 3.31,
@@ -29393,8 +29281,8 @@
     "sym": "MGNI",
     "name": "Magnite",
     "sec": "科技",
-    "ind": "广告公司",
-    "zh": "Magnite, Inc. 及其子公司在美国和国际上运营独立的全渠道卖方广告平台。该公司的平台为数字广告库存卖家或拥有和运营 CTV 频道的出版商提供应用程序和服务",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 3557403617,
     "mv": 3.23,
@@ -29425,8 +29313,8 @@
     "sym": "TMDX",
     "name": "TransMedics",
     "sec": "医疗",
-    "ind": "医疗器械",
-    "zh": "TransMedics Group, Inc. 是一家商业阶段的医疗技术公司，致力于改变美国和国际上终末期器官衰竭患者的器官移植疗法。该公司提供器官护理系统 (OCS)，这是一种便携式器官灌注、优化和监测系统",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 2961063526,
     "mv": 3.23,
@@ -29473,8 +29361,8 @@
     "sym": "FIG",
     "name": "Figma",
     "sec": "科技",
-    "ind": "软件 - 应用程序",
-    "zh": "Figma, Inc. 开发并销售基于浏览器的协作平台，用于设计、原型制作、构建数字体验以及订阅访问其平台。该公司提供Figma Design，这是一种协作设计工具，供团队探索想法、收集反馈、构建现实的设计。",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 8457666355,
     "mv": 3.2,
@@ -29553,8 +29441,8 @@
     "sym": "RILY",
     "name": "BRC",
     "sec": "金融",
-    "ind": "金融集团",
-    "zh": "BRC Group Holdings, Inc. 通过其子公司在北美、澳大利亚、欧洲、中东、非洲、亚洲和拉丁美洲提供金融服务。资本市场部门提供投资银行和机构经纪服务；面向中间市场的直接贷款服务",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 112961312,
     "mv": 3.2,
@@ -29889,8 +29777,8 @@
     "sym": "IOT",
     "name": "Samsara",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "Samsara Inc. 提供将物理运营数据连接到其在​​美国和国际上的互联运营平台的解决方案。该公司的互联运营平台包括数据平台，该平台从其物联网设备和不断发展的生态系统中摄取、聚合和丰富数据。",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 21960195338,
     "mv": 3.15,
@@ -29937,8 +29825,8 @@
     "sym": "ETN",
     "name": "Eaton",
     "sec": "科技",
-    "ind": "特种工业机械",
-    "zh": "伊顿公司是一家电源管理公司，业务遍及美国、加拿大、拉丁美洲、欧洲和亚太地区。该公司通过 Electrical Americas、Electrical Global、航空航天、车辆和电动交通部门运营。该公司提供电气和工业元",
+    "ind": "",
+    "zh": "",
     "track": "AI基础设施/数据中心",
     "mcap": 120885660000,
     "mv": 3.14,
@@ -30273,8 +30161,8 @@
     "sym": "IR",
     "name": "Ingersoll Rand",
     "sec": "工业",
-    "ind": "特种工业机械",
-    "zh": "Ingersoll Rand Inc. 在全球范围内提供关键任务空气、流体、清洁能源和医疗技术服务和解决方案。它分为两个部门：工业技术和服务部门以及精密和科学技术部门。工业技术和服务部门设计、制造",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 30068748617,
     "mv": 3.1,
@@ -30401,8 +30289,8 @@
     "sym": "HLIT",
     "name": "Harmonic",
     "sec": "科技",
-    "ind": "通讯设备",
-    "zh": "Harmonic Inc. 及其子公司在全球范围内提供宽带接入解决方案。公司提供基于软件的宽带接入解决方案，包括向宽带运营商提供基于cOS软件的宽带接入解决方案，由虚拟化云原生服务组成的端到端解决方案。",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 1011107219,
     "mv": 3.08,
@@ -30673,8 +30561,8 @@
     "sym": "SNPS",
     "name": "Synopsys",
     "sec": "科技",
-    "ind": "软件 - 基础设施",
-    "zh": "Synopsys, Inc. 为半导体和电子行业提供设计 IP 解决方案。它分为两个部分：设计自动化和设计IP。该公司提供数字和定制IC设计解决方案，提供数字设计实施方案；提供的验证解决方案",
+    "ind": "",
+    "zh": "",
     "track": "其它",
     "mcap": 75920690046,
     "mv": 3,
