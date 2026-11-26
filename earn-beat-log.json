@@ -26,7 +26,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-26T00:42:24.979Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-25",
@@ -52,7 +52,7 @@
   "q": "2026Q4",
   "addedAt": "2026-11-26T00:42:25.978Z",
   "zhDone": true,
-  "isNew": true
+  "isNew": false
  },
  {
   "d": "2026-11-24",
