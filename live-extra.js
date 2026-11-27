@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-27T00:23:46.902Z",
+  "syncedAt": "2026-11-27T01:19:56.123Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-26",
   "postDate": "2026-11-25"
@@ -10656,7 +10656,7 @@ window.YF_DATA = {
   ]
  },
  "earnBeat": {
-  "updatedAt": "2026-11-27T00:23:46.902Z",
+  "updatedAt": "2026-11-27T01:19:56.123Z",
   "quarters": [
    {
     "q": "2026Q4",
@@ -12912,7 +12912,7 @@ window.YF_DATA = {
  "movers": {
   "date": "20261126",
   "closeDate": "2026-11-25",
-  "ts": "2026-11-27T00:22:42.356Z",
+  "ts": "2026-11-27T01:16:27.279Z",
   "pool": 3687,
   "universe": 3691,
   "preTotal": 0,
