@@ -1,6 +1,1182 @@
 [
  {
   "date": "2026-11-27",
+  "session": "post",
+  "ts": "2026-11-27T23:35:42.171Z",
+  "state": "POST",
+  "rows": [
+   {
+    "sym": "SLGL",
+    "name": "Sol-Gel Technologies",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Sol-Gel Technologies Ltd. 与其子公司 Sol-Gel Technologies Inc. 一起为以色列、中国、瑞士、加拿大、美国和国际上患有严重皮肤病的患者开发外用皮肤病药物。该公司提供 Twy",
+    "track": "其它",
+    "mcap": 187600143,
+    "mv": 58.52,
+    "px": 54.78,
+    "prePx": null,
+    "postPx": 86.84,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LAES",
+    "name": "SEALSQ",
+    "sec": "科技",
+    "ind": "半导体",
+    "zh": "SEALSQ Corp 及其子公司在北美、欧洲、中东、非洲、亚太地区和拉丁美洲设计、开发和销售半导体。它提供半导体，例如 VaultIC 安全元件、抗量子 RISC-V 安全芯片、安全 ARM 平台、",
+    "track": "其它",
+    "mcap": 238368179,
+    "mv": 21.92,
+    "px": 1.37,
+    "prePx": null,
+    "postPx": 1.67,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RVTY",
+    "name": "Revvity",
+    "sec": "工业",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 16841822881,
+    "mv": 19.83,
+    "px": 151.27,
+    "prePx": null,
+    "postPx": 181.26,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BXBL",
+    "name": "BOXABL",
+    "sec": "可选消费",
+    "ind": "住宅建设",
+    "zh": "Boxabl Inc. 在美国开发和销售模块化住宅。它提供建筑盒子，它由房间模块组成，可以低成本运送到现场，可以堆叠和连接以建造各种形状和风格的成品建筑。该公司的产品包括包含kitc的casita Box",
+    "track": "其它",
+    "mcap": 239182072,
+    "mv": 14.78,
+    "px": 0.91,
+    "prePx": null,
+    "postPx": 1.05,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "QNC",
+    "name": "Quantum eMotion Common Shares",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "Quantum eMotion Corp. 在加拿大从事基于量子的加密解决方案的开发。它提供硬件和软件产品。该公司提供下一代量子安全加密平台Sentry-Q，可保护网络和应用程序中的敏感数据； eFlux-Q，云",
+    "track": "其它",
+    "mcap": 187077211,
+    "mv": 10.43,
+    "px": 0.89,
+    "prePx": null,
+    "postPx": 0.98,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AEHL",
+    "name": "Antelope Enterprise",
+    "sec": "可选消费",
+    "ind": "建筑产品和设备",
+    "zh": "羚羊企业控股有限公司通过其子公司在中华人民共和国和美国提供直播电子商务、企业管理和信息系统咨询服务。该公司运营消费品社交媒体和电子商务平台",
+    "track": "其它",
+    "mcap": 135766072,
+    "mv": 9.98,
+    "px": 12.9,
+    "prePx": null,
+    "postPx": 14.19,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SLM",
+    "name": "SLM",
+    "sec": "金融",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 3082364977,
+    "mv": -9.83,
+    "px": 17.3,
+    "prePx": null,
+    "postPx": 15.6,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "YUMC",
+    "name": "Yum China",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 17621156068,
+    "mv": -8.63,
+    "px": 52.72,
+    "prePx": null,
+    "postPx": 48.17,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DEFT",
+    "name": "Defi Technologies",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "DeFi Technologies Inc. 是一家科技公司，开发交易所交易产品，综合跟踪加拿大单个 DeFi 协议或一篮子协议的价值。它提供资产管理服务，例如间接投资底层数字资产、数字资产指数或其他资产",
+    "track": "其它",
+    "mcap": 106458648,
+    "mv": 8.6,
+    "px": 0.26,
+    "prePx": null,
+    "postPx": 0.28,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FUFU",
+    "name": "BitFuFu",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "BitFuFu Inc. 及其子公司在北美、亚洲、非洲、大洋洲、欧洲和国际上提供数字资产挖矿解决方案。该公司为机构客户和个人数字资产爱好者提供云挖矿和矿机托管服务。它还提供",
+    "track": "其它",
+    "mcap": 149371620,
+    "mv": 7.72,
+    "px": 0.97,
+    "prePx": null,
+    "postPx": 1.04,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PNBK",
+    "name": "Patriot National Bancorp",
+    "sec": "金融",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 103439949,
+    "mv": 7.72,
+    "px": 0.82,
+    "prePx": null,
+    "postPx": 0.88,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TPL",
+    "name": "Texas Pacific Land",
+    "sec": "能源",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 18025153908,
+    "mv": 6.14,
+    "px": 263.51,
+    "prePx": null,
+    "postPx": 279.69,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ZNTL",
+    "name": "Zentalis Pharmaceuticals",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Zentalis Pharmaceuticals, Inc. 是一家临床阶段的生物制药公司，在美国专注于发现和开发用于治疗各种癌症的小分子疗法。它开发了 azenosertib，该药物正处于治疗卵巢癌的 3 期临床试验中",
+    "track": "其它",
+    "mcap": 162138674,
+    "mv": 6.02,
+    "px": 1.66,
+    "prePx": null,
+    "postPx": 1.76,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ZOAR",
+    "name": "Zoar",
+    "sec": "医疗",
+    "ind": "药品制造商 - 一般",
+    "zh": "Zoar Limited 是一家制药公司，在非洲、中东、印度、中南美洲、亚洲和欧洲从事药物成分 (API) 和中间体的开发、制造和分销。该公司提供用于抗癌、呼吸系统疾病、医疗保健等领域的原料药（API）。",
+    "track": "其它",
+    "mcap": 535998000,
+    "mv": -6.02,
+    "px": 2.66,
+    "prePx": null,
+    "postPx": 2.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RCT",
+    "name": "RedCloud",
+    "sec": "科技",
+    "ind": "软件 - 应用程序",
+    "zh": "RedCloud Holdings plc 主要在阿根廷、英国、巴西、尼日利亚、南非和国际上运营基于云的企业对企业开放商务平台。该公司开发并运营 RedAI 基础设施和相关产品，以促进交易",
+    "track": "其它",
+    "mcap": 211827000,
+    "mv": 6.01,
+    "px": 1.49,
+    "prePx": null,
+    "postPx": 1.58,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LAB",
+    "name": "Standard BioTools",
+    "sec": "工业",
+    "ind": "医疗器械",
+    "zh": "Standard BioTools Inc. 及其子公司开发、制造并向科学家和生物医学研究人员销售一系列仪器、消耗品和服务，以在美洲、欧洲、中东、非洲和亚太地区开发治疗方法。公司经营",
+    "track": "其它",
+    "mcap": 250257661,
+    "mv": 6,
+    "px": 0.65,
+    "prePx": null,
+    "postPx": 0.69,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "IMRX",
+    "name": "Immuneering",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Immuneering Corporation 是一家后期肿瘤学公司，为美国广大癌症患者开发药物。该公司开发了 IMM-1-104（atebimetinib），这是一种双 MEK 抑制剂，处于 3 期临床试验中，用于治疗",
+    "track": "其它",
+    "mcap": 262938409,
+    "mv": 5.91,
+    "px": 4.09,
+    "prePx": null,
+    "postPx": 4.33,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CXDO",
+    "name": "Crexendo",
+    "sec": "通信服务",
+    "ind": "电信服务",
+    "zh": "Crexendo, Inc. 在美国和国际上提供云通信平台软件和统一通信即服务。它通过云电信服务和软件解决方案两个部门运营。公司提供硬件、软件和统一的互联网协议",
+    "track": "其它",
+    "mcap": 150190137,
+    "mv": -5.86,
+    "px": 4.61,
+    "prePx": null,
+    "postPx": 4.34,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "EQPT",
+    "name": "EquipmentShare.com",
+    "sec": "可选消费",
+    "ind": "租赁服务",
+    "zh": "EquipmentShare.com Inc. 提供涵盖设备租赁、销售和技术的集成、全方位服务施工解决方案。它提供高空作业平台、电动和液压动力工具、车辆、拖车、附件、农业和园林绿化设备、气候控制、通信设备的租赁。",
+    "track": "其它",
+    "mcap": 3755355596,
+    "mv": -5.44,
+    "px": 16.29,
+    "prePx": null,
+    "postPx": 15.4,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "QSR",
+    "name": "Restaurant Brands International Common Shares",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 34588126431,
+    "mv": -5.34,
+    "px": 76.66,
+    "prePx": null,
+    "postPx": 72.57,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ALOY",
+    "name": "REalloys",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "REalloys Inc. 是一家在北美运营的稀土金属和材料公司。该公司生产稀土金属，包括钕、镨、镝、铽、钐、钆、钇和钪，以及磁体，例如NdFeB、SmFe12和MnBi磁体。公司",
+    "track": "其它",
+    "mcap": 269610017,
+    "mv": 5.19,
+    "px": 4.04,
+    "prePx": null,
+    "postPx": 4.25,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FLNT",
+    "name": "Fluent",
+    "sec": "可选消费",
+    "ind": "广告公司",
+    "zh": "Fluent, Inc. 在美国和国际上提供数字营销服务。该公司通过开展数字营销活动提供客户获取服务，通过该活动将广告商客户与消费者联系起来。它还提供绩效活动，例如",
+    "track": "其它",
+    "mcap": 116067512,
+    "mv": 5.17,
+    "px": 3.48,
+    "prePx": null,
+    "postPx": 3.66,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BTQ",
+    "name": "BTQ Technologies",
+    "sec": "科技",
+    "ind": "软件 - 基础设施",
+    "zh": "BTQ Technologies Corp. 在加拿大、台湾、澳大利亚和美国从事与后量子密码学相关的计算机技术的开发，用于区块链及相关技术的应用。该公司的旗舰硬件产品是量子内存计算，一个准",
+    "track": "其它",
+    "mcap": 169237297,
+    "mv": 5.15,
+    "px": 1.36,
+    "prePx": null,
+    "postPx": 1.43,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "MTD",
+    "name": "Mettler-Toledo International",
+    "sec": "工业",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 33079334747,
+    "mv": -5.04,
+    "px": 1680.49,
+    "prePx": null,
+    "postPx": 1595.76,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FNKO",
+    "name": "Funko",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 323975966,
+    "mv": 4.87,
+    "px": 5.96,
+    "prePx": null,
+    "postPx": 6.25,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "IVA",
+    "name": "Inventiva S.A. American Depository Shares",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Inventiva S.A.是一家临床阶段的生物制药公司，专注于开发口服小分子疗法，用于治疗法国和国际上代谢功能障碍相关的脂肪性肝炎（MASH）和其他疾病。它开发了 Lanifibranor，一种新型过氧化物酶体增殖剂",
+    "track": "其它",
+    "mcap": 817529499,
+    "mv": 4.86,
+    "px": 3.62,
+    "prePx": null,
+    "postPx": 3.8,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NSLR",
+    "name": "Neostellar Capital",
+    "sec": "金融",
+    "ind": "资产管理",
+    "zh": "Neostellar Capital Corp.，前身为SuRo Capital Corp.，是一家专门从事成长资本、新兴成长和后期公司的二级（直接）和业务开发公司。它更喜欢投资能源和公用事业、消费、技术、媒体和通信领域",
+    "track": "其它",
+    "mcap": 135542897,
+    "mv": 4.72,
+    "px": 5.13,
+    "prePx": null,
+    "postPx": 5.37,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TEO",
+    "name": "Telecom Argentina SA",
+    "sec": "通信服务",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 4436597301,
+    "mv": 4.58,
+    "px": 10.49,
+    "prePx": null,
+    "postPx": 10.97,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "RYDE",
+    "name": "Ryde",
+    "sec": "可选消费",
+    "ind": "软件 - 应用程序",
+    "zh": "Ryde Group Ltd 在新加坡从事提供移动和快速商务解决方案。该公司提供按需和预约的拼车和叫车服务；将乘客与其司机合作伙伴匹配；以及按需、定时和多站包裹递送服务。它还经营",
+    "track": "其它",
+    "mcap": 123436997,
+    "mv": -4.44,
+    "px": 0.29,
+    "prePx": null,
+    "postPx": 0.28,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NAK",
+    "name": "Northern Dynasty Minerals",
+    "sec": "原材料",
+    "ind": "其他工业金属和采矿",
+    "zh": "Northern Dynasty Minerals Ltd. 在美国从事矿产收购、勘探和开发业务。主要勘探铜、金、钼、银和铼矿床。公司持有Pebble铜金钼银铼项目100%权益",
+    "track": "其它",
+    "mcap": 233245369,
+    "mv": 4.28,
+    "px": 0.47,
+    "prePx": null,
+    "postPx": 0.48,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VFF",
+    "name": "Village Farms International Common Shares",
+    "sec": "必需消费",
+    "ind": "农产品",
+    "zh": "Village Farms International, Inc. 及其子公司在北美和荷兰生产、销售和分销温室种植的西红柿、甜椒和黄瓜。它分为五个部门：加拿大大麻、美国大麻、荷兰大麻、农产品和清洁能源",
+    "track": "其它",
+    "mcap": 267879381,
+    "mv": 4.22,
+    "px": 2.37,
+    "prePx": null,
+    "postPx": 2.47,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "LVWR",
+    "name": "LiveWire",
+    "sec": "可选消费",
+    "ind": "房车",
+    "zh": "LiveWire Group, Inc. 在美国、奥地利和国际上生产和销售电动摩托车。该公司经营两个业务部门：电动摩托车部门和 STACYC 部门。它设计和销售电动摩托车及其零部件、配件和服装；儿童电动平衡车；",
+    "track": "其它",
+    "mcap": 398502479,
+    "mv": -4.17,
+    "px": 1.67,
+    "prePx": null,
+    "postPx": 1.6,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DTIL",
+    "name": "Precision BioSciences",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Precision BioSciences, Inc.是一家临床阶段基因编辑公司，在美国开发用于基因编辑的体内基因编辑疗法，包括基因插入、切除和消除。该公司提供 ARCUS，这是一个用于 DNA 基因组插入、删除和修复的",
+    "track": "其它",
+    "mcap": 311125639,
+    "mv": 4.15,
+    "px": 8.56,
+    "prePx": null,
+    "postPx": 8.92,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TII",
+    "name": "Titan Mining Common Shares",
+    "sec": "科技",
+    "ind": "其他工业金属和采矿",
+    "zh": "Titan Mining Corporation 是一家自然资源公司，收购、勘探、开发、生产和提取矿产。该公司勘探锌和石墨以及氧化铁铜金矿床。其主要资产是帝国州矿山项目，占地约",
+    "track": "其它",
+    "mcap": 143095015,
+    "mv": 4.11,
+    "px": 1.46,
+    "prePx": null,
+    "postPx": 1.52,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "MNTK",
+    "name": "Montauk Renewables",
+    "sec": "公用事业",
+    "ind": "特种化学品",
+    "zh": "Montauk Renewables, Inc. 是一家可再生能源公司，致力于从垃圾填埋场和其他非化石燃料来源回收和加工沼气。它分为两个部门：可再生天然气部门和可再生发电部门。该公司开发、拥有和经营可再生天然气",
+    "track": "其它",
+    "mcap": 142326905,
+    "mv": -4.03,
+    "px": 0.99,
+    "prePx": null,
+    "postPx": 0.95,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "CNTN",
+    "name": "Canton Strategic",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Canton Strategy Holdings, Inc. 专注于推进美国机构区块链的采用和数字化金融市场。该公司作为 Canton Network 上的验证者和超级验证者运营，为网络提供验证和活跃服务。它还提供",
+    "track": "其它",
+    "mcap": 102048431,
+    "mv": -3.88,
+    "px": 1.29,
+    "prePx": null,
+    "postPx": 1.24,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "TXG",
+    "name": "10x Genomics",
+    "sec": "工业",
+    "ind": "医疗器械",
+    "zh": "10x Genomics, Inc. 在美国、美洲其他地区、欧洲、中东、非洲、中国和亚太地区其他地区开发和销售用于分析生物系统的仪器、耗材和软件。该公司提供 Chromium 平台，这是一个单细胞产品组合，使",
+    "track": "其它",
+    "mcap": 7323823644,
+    "mv": -3.84,
+    "px": 56.53,
+    "prePx": null,
+    "postPx": 54.36,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SEPN",
+    "name": "Septerna",
+    "sec": "医疗",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 2142092496,
+    "mv": -3.83,
+    "px": 45.75,
+    "prePx": null,
+    "postPx": 44,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OTLK",
+    "name": "Outlook Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Outlook Therapeutics, Inc. 是一家临床阶段生物制药公司，专注于开发和商业化用于眼科适应症的单克隆抗体。其主要候选产品是 ONS-5010，这是一种眼科贝伐单抗产品配方，",
+    "track": "其它",
+    "mcap": 108309817,
+    "mv": 3.67,
+    "px": 0.47,
+    "prePx": null,
+    "postPx": 0.49,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ADUR",
+    "name": "Aduro Clean Technologies",
+    "sec": "工业",
+    "ind": "污染与处理控制",
+    "zh": "Aduro Clean Technologies Inc. 在加拿大和荷兰从事水基化学品回收技术的开发。该公司的平台将报废塑料和轮胎橡胶转化为化学品和燃料；升级重质原油；并将可再生石油转化为可再生燃料和化学品",
+    "track": "其它",
+    "mcap": 290154114,
+    "mv": 3.65,
+    "px": 8.23,
+    "prePx": null,
+    "postPx": 8.53,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DRUG",
+    "name": "Bright Minds Biosciences",
+    "sec": "医疗",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 223885991,
+    "mv": 3.65,
+    "px": 23.68,
+    "prePx": null,
+    "postPx": 24.54,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "NEOV",
+    "name": "NeoVolta",
+    "sec": "Miscellaneous",
+    "ind": "电气设备及零件",
+    "zh": "NeoVolta Inc.在美国从事储能系统的设计、制造和销售。该公司提供 NV14、NV24、NVPlus 和 NV7600 储能系统，通过电池和逆变器在住宅、商业和工业以及公用事业中存储和使用能源",
+    "track": "其它",
+    "mcap": 108158827,
+    "mv": 3.59,
+    "px": 1.99,
+    "prePx": null,
+    "postPx": 2.06,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "IE",
+    "name": "Ivanhoe Electric",
+    "sec": "原材料",
+    "ind": "铜",
+    "zh": "艾芬豪电气公司在美国、加拿大和中国从事矿产勘探和开发。主要勘探铜、金、银、镍、钴、铂族元素矿床。该公司的旗舰项目是圣克鲁斯项目，一个铜矿勘探项目",
+    "track": "其它",
+    "mcap": 919449625,
+    "mv": -3.55,
+    "px": 5.92,
+    "prePx": null,
+    "postPx": 5.71,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GEMI",
+    "name": "Gemini Space Station",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "Gemini Space Station, Inc. 在美国和国际上运营着一个加密货币平台。该公司提供 Gemini，一个使用户能够交易、托管和赚取一系列数字资产和产品的平台； Gemini ActiveTrader 用",
+    "track": "其它",
+    "mcap": 184091041,
+    "mv": 3.52,
+    "px": 1.43,
+    "prePx": null,
+    "postPx": 1.48,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GTE",
+    "name": "Gran Tierra Energy",
+    "sec": "能源",
+    "ind": "石油和天然气勘探与生产",
+    "zh": "Gran Tierra Energy Inc. 及其子公司参与哥伦比亚、加拿大和厄瓜多尔的石油和天然气勘探和生产。该公司与 Ecopetrol S.A. 建立了战略合作伙伴关系，共同开发马格达莱纳山谷中部的油田。该公司是",
+    "track": "其它",
+    "mcap": 315075027,
+    "mv": 3.51,
+    "px": 9.12,
+    "prePx": null,
+    "postPx": 9.44,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "KEEL",
+    "name": "Keel Infrastructure",
+    "sec": "金融",
+    "ind": "信息技术服务",
+    "zh": "Keel Infrastructure Corp. 在北美、加拿大和美国运营数字和能源基础设施，重点关注高性能计算 (HPC) 和人工智能 (AI) 工作负载。它主要拥有并运营装有计算机的数据中心，以验证网络上的交易",
+    "track": "其它",
+    "mcap": 852679756,
+    "mv": 3.5,
+    "px": 1.41,
+    "prePx": null,
+    "postPx": 1.46,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SLDP",
+    "name": "Solid Power",
+    "sec": "Miscellaneous",
+    "ind": "汽车配件",
+    "zh": "Solid Power, Inc. 是一家研发阶段公司，为美国电动汽车市场开发固态电池技术。它从事硫化物基固体电解质的开发。该公司成立于 2011 年，总部位于科罗拉多州路易斯维尔",
+    "track": "其它",
+    "mcap": 320863665,
+    "mv": 3.5,
+    "px": 1.43,
+    "prePx": null,
+    "postPx": 1.48,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AIRJ",
+    "name": "AirJoule Technologies",
+    "sec": "工业",
+    "ind": "建筑产品和设备",
+    "zh": "AirJoule Technologies Corporation 是一家大气可再生能源和水收集技术公司。它提供能源和除湿、集水系统、水回收系统、蒸发热泵系统、水加热系统、低相对湿度干燥系统",
+    "track": "其它",
+    "mcap": 140623632,
+    "mv": 3.49,
+    "px": 1.72,
+    "prePx": null,
+    "postPx": 1.78,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ULTA",
+    "name": "Ulta Beauty",
+    "sec": "可选消费",
+    "ind": "专业零售",
+    "zh": "Ulta Beauty, Inc. 是一家专业美容零售商，在美国、墨西哥和科威特开展业务。该公司通过其提供品牌和自有品牌美容产品，包括化妆品、香水、护发、护肤、沐浴和身体产品、专业美发产品和沙龙造型工具",
+    "track": "其它",
+    "mcap": 27477661163,
+    "mv": -3.47,
+    "px": 642.5,
+    "prePx": null,
+    "postPx": 620.22,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "DUOL",
+    "name": "Duolingo",
+    "sec": "科技",
+    "ind": "",
+    "zh": "",
+    "track": "AI应用",
+    "mcap": 7239503997,
+    "mv": -3.44,
+    "px": 155.34,
+    "prePx": null,
+    "postPx": 150,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "ARLO",
+    "name": "Arlo Technologies",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 1353817745,
+    "mv": -3.41,
+    "px": 12.89,
+    "prePx": null,
+    "postPx": 12.45,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SID",
+    "name": "Companhia Siderurgica Nacional S.A.",
+    "sec": "工业",
+    "ind": "钢",
+    "zh": "Companhia Siderúrgica Nacional 及其子公司在巴西和国际上作为一家综合钢铁生产商运营。它通过五个部门运营：钢铁工业、采矿、物流、能源和水泥。钢铁部门提供扁钢和长钢的生产和销售。敏",
+    "track": "其它",
+    "mcap": 722853811,
+    "mv": 3.39,
+    "px": 0.63,
+    "prePx": null,
+    "postPx": 0.65,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "HYLN",
+    "name": "Hyliion",
+    "sec": "可选消费",
+    "ind": "电气设备及零件",
+    "zh": "Hyliion Holdings Corp. 设计和开发用于固定和移动应用的发电机。其主要产品包括 KARNO 电源模块，这是一种与燃料无关的发电解决方案，可使用天然气、丙烷或二氧化氮等传统燃料进行分布式发电。",
+    "track": "其它",
+    "mcap": 349796070,
+    "mv": 3.37,
+    "px": 2.08,
+    "prePx": null,
+    "postPx": 2.15,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GORO",
+    "name": "Goldgroup Mining Common Shares",
+    "sec": "原材料",
+    "ind": "金子",
+    "zh": "Goldgroup Mining Inc. 是一家采矿和金属公司，专注于墨西哥的黄金生产和勘探。该公司持有位于索诺拉州旧金山项目100%的权益。它还拥有生产 Cerro Prieto 堆浸金矿的 100% 权益，该矿位于",
+    "track": "其它",
+    "mcap": 490936645,
+    "mv": -3.36,
+    "px": 3.04,
+    "prePx": null,
+    "postPx": 2.94,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OPTX",
+    "name": "Syntec Optics",
+    "sec": "科技",
+    "ind": "电子元件",
+    "zh": "Syntec Optics Holdings, Inc. 为美国和欧洲的国防、医疗、工业和消费终端市场制造和供应光学和光子元件、子系统和光学系统。它提供基于聚合物的光学器件；和光学组件、电光组件、模具",
+    "track": "其它",
+    "mcap": 286792731,
+    "mv": -3.33,
+    "px": 7.5,
+    "prePx": null,
+    "postPx": 7.25,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OGG",
+    "name": "Osisko Gold Common Shares",
+    "sec": "原材料",
+    "ind": "金子",
+    "zh": "Osisko Gold Group Inc. 及其子公司在加拿大、墨西哥和美国收购、勘探和开发贵金属资源。该公司勘探贵金属和贱金属、金、银、锂、铜、铅和锌矿床。其旗舰资产是 1",
+    "track": "其它",
+    "mcap": 650726710,
+    "mv": 3.29,
+    "px": 2.13,
+    "prePx": null,
+    "postPx": 2.2,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PPC",
+    "name": "Pilgrim's Pride",
+    "sec": "必需消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 6955251812,
+    "mv": -3.29,
+    "px": 29.47,
+    "prePx": null,
+    "postPx": 28.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "MUX",
+    "name": "McEwen",
+    "sec": "原材料",
+    "ind": "其他贵金属和采矿业",
+    "zh": "McEwen Inc. 在美国、加拿大、墨西哥和阿根廷从事金银矿床的勘探、开发、生产和销售。它还勘探铜矿床。公司拥有位于内华达州Gold Bar金矿100%权益；狐狸情结包括",
+    "track": "其它",
+    "mcap": 578126295,
+    "mv": -3.27,
+    "px": 9.93,
+    "prePx": null,
+    "postPx": 9.61,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PRCH",
+    "name": "Porch",
+    "sec": "科技",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 2850521408,
+    "mv": -3.24,
+    "px": 22.22,
+    "prePx": null,
+    "postPx": 21.5,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "GPK",
+    "name": "Graphic Packaging",
+    "sec": "可选消费",
+    "ind": "包装与容器",
+    "zh": "Graphic Packaging Holding Company 及其子公司为美洲、欧洲和亚太地区的食品、饮料、餐饮服务、家居和其他消费品品牌设计、生产和销售消费包装产品。它通过两个部门运作",
+    "track": "其它",
+    "mcap": 3410957307,
+    "mv": -3.19,
+    "px": 11.9,
+    "prePx": null,
+    "postPx": 11.52,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VRXA",
+    "name": "Veraxa Biotech",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Veraxa Biotech AG 开发用于癌症治疗的抗体疗法和抗体药物偶联物。该公司开发基于抗体的疗法，包括抗体药物偶联物和双特异性抗体形式，并提供用于功能性抗体筛选的专有技术平台",
+    "track": "其它",
+    "mcap": 192314626,
+    "mv": 3.18,
+    "px": 1.57,
+    "prePx": null,
+    "postPx": 1.62,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PACB",
+    "name": "Pacific Biosciences of California",
+    "sec": "工业",
+    "ind": "医疗器械",
+    "zh": "Pacific Biosciences of California, Inc. 设计、开发和制造测序解决方案来解决复杂的遗传问题。公司提供测序系统；消耗品，包括单分子实时（SMRT）技术；长读长测序；以及各种试剂盒",
+    "track": "其它",
+    "mcap": 494424233,
+    "mv": 3.14,
+    "px": 1.59,
+    "prePx": null,
+    "postPx": 1.64,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VUZI",
+    "name": "Vuzix",
+    "sec": "科技",
+    "ind": "消费电子产品",
+    "zh": "Vuzix Corporation 在北美、欧洲、亚太地区和国际范围内设计、制造和销售人工智能 (AI) 驱动的智能眼镜、波导和增强现实 (AR) 技术。该公司提供的智能眼镜包括 M 系列、Vuzix Blade、Vuz",
+    "track": "其它",
+    "mcap": 100485114,
+    "mv": 3.13,
+    "px": 1.28,
+    "prePx": null,
+    "postPx": 1.32,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "BSVN",
+    "name": "Bank7",
+    "sec": "金融",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 606016120,
+    "mv": -3.12,
+    "px": 56.98,
+    "prePx": null,
+    "postPx": 55.2,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "OPEN",
+    "name": "Opendoor Technologies",
+    "sec": "金融",
+    "ind": "房地产服务",
+    "zh": "Opendoor Technologies Inc. 在美国运营一个住宅房地产交易数字平台。它通过在线电子商务平台买卖房屋。该公司还将房屋转售给购房者。此外，它还提供房地产经纪、产权保险和结算服务",
+    "track": "其它",
+    "mcap": 1172101038,
+    "mv": -3.12,
+    "px": 1.28,
+    "prePx": null,
+    "postPx": 1.24,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SVIA",
+    "name": "Silvia",
+    "sec": "金融",
+    "ind": "资本市场",
+    "zh": "Silvia, Inc. 设计、开发和运营人工智能驱动的个人 CFO 平台，帮助投资者实时管理、监控和分析其财务状况。该公司的平台提供个人财务管理工具、投资组合跟踪、投资分析、税务分析和人工智能-",
+    "track": "其它",
+    "mcap": 174933556,
+    "mv": 3.11,
+    "px": 2.34,
+    "prePx": null,
+    "postPx": 2.41,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AGI",
+    "name": "Alamos Gold Common Shares",
+    "sec": "原材料",
+    "ind": "金子",
+    "zh": "Alamos Gold Inc. 在加拿大和墨西哥经营黄金生产商。它主要勘探金矿。该公司成立于 2003 年，总部位于加拿大多伦多。",
+    "track": "其它",
+    "mcap": 10997695793,
+    "mv": -3.09,
+    "px": 27.86,
+    "prePx": null,
+    "postPx": 27,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "FCEL",
+    "name": "FuelCell Energy",
+    "sec": "能源",
+    "ind": "电气设备及零件",
+    "zh": "FuelCell Energy, Inc.是一家清洁能源科技公司，从事清洁发电用高温燃料电池的设计、开发、生产、建设、运营和服务。涉及提供碳酸盐燃料电池技术；和商业化",
+    "track": "其它",
+    "mcap": 594859218,
+    "mv": -3.09,
+    "px": 8,
+    "prePx": null,
+    "postPx": 7.75,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "EDIT",
+    "name": "Editas Medicine",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Editas Medicine, Inc. 是一家临床阶段基因组编辑公司，专注于开发变革性基因组药物来治疗一系列严重疾病。该公司开发了基于CRISPR技术的专有基因编辑平台。其主导项目是 EDIT-401，这是一种旨在",
+    "track": "其它",
+    "mcap": 276268149,
+    "mv": 3.07,
+    "px": 1.82,
+    "prePx": null,
+    "postPx": 1.88,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "VRDN",
+    "name": "Viridian Therapeutics",
+    "sec": "医疗",
+    "ind": "生物技术",
+    "zh": "Viridian Therapeutics, Inc. 致力于发现、开发和商业化严重和罕见疾病的治疗方法。该公司开发 IGF-1R 疗法来治疗甲状腺眼病 (TED)，其中包括 Veligrotrug，这是一种针对 IGF",
+    "track": "其它",
+    "mcap": 4305000802,
+    "mv": 3.04,
+    "px": 38.82,
+    "prePx": null,
+    "postPx": 40,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "AKBA",
+    "name": "Akebia Therapeutics",
+    "sec": "医疗",
+    "ind": "药品制造商 - 特种药品和非专利药品",
+    "zh": "Akebia Therapeutics, Inc. 是一家生物制药公司，专注于肾病患者治疗药物的开发和商业化。其产品组合包括 Vafseo（vadadustat），一种口服缺氧诱导因子脯氨酰羟化酶，用于治疗慢性贫血",
+    "track": "其它",
+    "mcap": 119367700,
+    "mv": 3.02,
+    "px": 0.45,
+    "prePx": null,
+    "postPx": 0.46,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "PLAY",
+    "name": "Dave & Buster's Entertainment",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 205849106,
+    "mv": -3.02,
+    "px": 6.3,
+    "prePx": null,
+    "postPx": 6.11,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   },
+   {
+    "sym": "SGI",
+    "name": "Somnigroup International",
+    "sec": "可选消费",
+    "ind": "",
+    "zh": "",
+    "track": "其它",
+    "mcap": 14632383115,
+    "mv": 3.02,
+    "px": 64.85,
+    "prePx": null,
+    "postPx": 66.81,
+    "closeChg": null,
+    "closePx": null,
+    "earn": false
+   }
+  ]
+ },
+ {
+  "date": "2026-11-27",
   "session": "pre",
   "ts": "2026-11-27T13:50:41.722Z",
   "state": "PRE",
@@ -17,8 +1193,8 @@
     "px": 0.54,
     "prePx": 0.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.49,
+    "closePx": 0.63,
     "earn": false
    },
    {
@@ -33,8 +1209,8 @@
     "px": 4.01,
     "prePx": 4.93,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.21,
+    "closePx": 4.66,
     "earn": false
    },
    {
@@ -49,8 +1225,8 @@
     "px": 13.83,
     "prePx": 17,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.46,
+    "closePx": 15,
     "earn": false
    },
    {
@@ -65,24 +1241,24 @@
     "px": 14.39,
     "prePx": 16.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 18.07,
+    "closePx": 16.99,
     "earn": false
    },
    {
     "sym": "AFYA",
     "name": "Afya Common Shares",
     "sec": "房地产",
-    "ind": "",
-    "zh": "",
+    "ind": "教育与培训服务",
+    "zh": "Afya Limited 是巴西的一家医学教育集团。该公司分为三个部门：本科部门、继续教育部门和医疗实践解决方案部门。本科部分通过与医学院、健康科学、",
     "track": "其它",
     "mcap": 952223963,
     "mv": 17.13,
     "px": 10.16,
     "prePx": 11.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.93,
+    "closePx": 11.88,
     "earn": false
    },
    {
@@ -97,8 +1273,8 @@
     "px": 10.05,
     "prePx": 11.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.92,
+    "closePx": 11.75,
     "earn": false
    },
    {
@@ -113,8 +1289,8 @@
     "px": 29.5,
     "prePx": 33.79,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.14,
+    "closePx": 34.26,
     "earn": false
    },
    {
@@ -129,8 +1305,8 @@
     "px": 0.71,
     "prePx": 0.81,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.54,
+    "closePx": 0.82,
     "earn": false
    },
    {
@@ -145,8 +1321,8 @@
     "px": 5.26,
     "prePx": 5.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.32,
+    "closePx": 5.54,
     "earn": false
    },
    {
@@ -161,8 +1337,8 @@
     "px": 7.72,
     "prePx": 8.73,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.92,
+    "closePx": 8.1,
     "earn": false
    },
    {
@@ -177,8 +1353,8 @@
     "px": 7.7,
     "prePx": 8.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.4,
+    "closePx": 8.27,
     "earn": false
    },
    {
@@ -193,8 +1369,8 @@
     "px": 0.86,
     "prePx": 0.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.02,
+    "closePx": 0.89,
     "earn": false
    },
    {
@@ -209,8 +1385,8 @@
     "px": 3.59,
     "prePx": 4.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -5.57,
+    "closePx": 3.39,
     "earn": false
    },
    {
@@ -225,24 +1401,24 @@
     "px": 2.04,
     "prePx": 2.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.67,
+    "closePx": 2.12,
     "earn": false
    },
    {
     "sym": "AAPG",
     "name": "Ascentage Pharma International American Depository Shares",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "亚盛医药集团国际是一家临床阶段的生物技术公司，在中国大陆开发癌症、慢性乙型肝炎病毒（HBV）和年龄相关疾病的治疗方法。该公司的主要候选产品是 HQP1351，这是一种针对 BCR-ABL1 突变体的 BCR-ABL 抑制",
     "track": "其它",
     "mcap": 1148899046,
     "mv": 11.85,
     "px": 12.07,
     "prePx": 13.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.68,
+    "closePx": 13.6,
     "earn": false
    },
    {
@@ -257,8 +1433,8 @@
     "px": 1.47,
     "prePx": 1.64,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.36,
+    "closePx": 1.49,
     "earn": false
    },
    {
@@ -273,8 +1449,8 @@
     "px": 12.36,
     "prePx": 13.77,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.45,
+    "closePx": 12.91,
     "earn": false
    },
    {
@@ -289,8 +1465,8 @@
     "px": 16.05,
     "prePx": 17.81,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.92,
+    "closePx": 16.84,
     "earn": false
    },
    {
@@ -305,8 +1481,8 @@
     "px": 73.61,
     "prePx": 81.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 15.96,
+    "closePx": 85.36,
     "earn": false
    },
    {
@@ -321,24 +1497,24 @@
     "px": 0.42,
     "prePx": 0.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.45,
+    "closePx": 0.47,
     "earn": false
    },
    {
     "sym": "ALVO",
     "name": "Alvotech",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "药品制造商 - 特种药品和非专利药品",
+    "zh": "Alvotech 通过其子公司为全球患者开发和生产生物仿制药。它在自身免疫、眼科、骨骼疾病以及癌症的治疗领域提供生物仿制药产品。该公司提供AVT02，一种高浓度、低容量的阿达木单抗配方",
     "track": "其它",
     "mcap": 1643716531,
     "mv": -9.74,
     "px": 4.21,
     "prePx": 3.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -12.35,
+    "closePx": 3.69,
     "earn": false
    },
    {
@@ -353,8 +1529,8 @@
     "px": 1.44,
     "prePx": 1.58,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.42,
+    "closePx": 1.59,
     "earn": false
    },
    {
@@ -369,8 +1545,8 @@
     "px": 9.42,
     "prePx": 8.51,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.31,
+    "closePx": 9.92,
     "earn": false
    },
    {
@@ -385,8 +1561,8 @@
     "px": 0.58,
     "prePx": 0.64,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 37.96,
+    "closePx": 0.81,
     "earn": false
    },
    {
@@ -401,8 +1577,8 @@
     "px": 37.02,
     "prePx": 40.49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.48,
+    "closePx": 40.9,
     "earn": false
    },
    {
@@ -417,8 +1593,8 @@
     "px": 5.21,
     "prePx": 5.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.6,
+    "closePx": 5.71,
     "earn": false
    },
    {
@@ -433,8 +1609,8 @@
     "px": 31.98,
     "prePx": 34.85,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 13.73,
+    "closePx": 36.37,
     "earn": false
    },
    {
@@ -449,8 +1625,8 @@
     "px": 1.91,
     "prePx": 2.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.75,
+    "closePx": 2.23,
     "earn": false
    },
    {
@@ -465,8 +1641,8 @@
     "px": 3.05,
     "prePx": 3.32,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.64,
+    "closePx": 3.1,
     "earn": false
    },
    {
@@ -481,8 +1657,8 @@
     "px": 6.49,
     "prePx": 7.06,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.47,
+    "closePx": 6.65,
     "earn": false
    },
    {
@@ -497,8 +1673,8 @@
     "px": 7.41,
     "prePx": 8.06,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.26,
+    "closePx": 7.8,
     "earn": false
    },
    {
@@ -513,8 +1689,8 @@
     "px": 3.68,
     "prePx": 4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.53,
+    "closePx": 3.81,
     "earn": false
    },
    {
@@ -529,8 +1705,8 @@
     "px": 2.52,
     "prePx": 2.74,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.95,
+    "closePx": 2.65,
     "earn": false
    },
    {
@@ -545,8 +1721,8 @@
     "px": 2.84,
     "prePx": 3.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.28,
+    "closePx": 2.99,
     "earn": false
    },
    {
@@ -561,8 +1737,8 @@
     "px": 41.44,
     "prePx": 44.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.21,
+    "closePx": 43.6,
     "earn": false
    },
    {
@@ -577,8 +1753,8 @@
     "px": 1.89,
     "prePx": 2.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.06,
+    "closePx": 1.91,
     "earn": false
    },
    {
@@ -593,8 +1769,8 @@
     "px": 564.12,
     "prePx": 518.31,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -5.24,
+    "closePx": 534.57,
     "earn": false
    },
    {
@@ -609,8 +1785,8 @@
     "px": 7.79,
     "prePx": 8.42,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.59,
+    "closePx": 8.07,
     "earn": false
    },
    {
@@ -625,8 +1801,8 @@
     "px": 5.57,
     "prePx": 6.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.77,
+    "closePx": 6.17,
     "earn": false
    },
    {
@@ -641,8 +1817,8 @@
     "px": 19.86,
     "prePx": 21.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 15.01,
+    "closePx": 22.84,
     "earn": false
    },
    {
@@ -657,8 +1833,8 @@
     "px": 0.47,
     "prePx": 0.51,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.4,
+    "closePx": 0.49,
     "earn": false
    },
    {
@@ -673,8 +1849,8 @@
     "px": 0.48,
     "prePx": 0.52,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.25,
+    "closePx": 0.48,
     "earn": false
    },
    {
@@ -689,24 +1865,24 @@
     "px": 16.71,
     "prePx": 18.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.41,
+    "closePx": 17.28,
     "earn": false
    },
    {
     "sym": "BGR",
     "name": "BlackRock Energy and Resources Trust",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "资产管理",
+    "zh": "贝莱德能源和资源信托基金是贝莱德公司推出的封闭式股票共同基金。该基金由贝莱德顾问有限责任公司和贝莱德国际有限公司共同管理。它投资于全球公共股票市场，重点关注美国。该基金旨在",
     "track": "其它",
     "mcap": 2220901858,
     "mv": -7.98,
     "px": 16.29,
     "prePx": 14.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.47,
+    "closePx": 16.53,
     "earn": false
    },
    {
@@ -721,8 +1897,8 @@
     "px": 1.76,
     "prePx": 1.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.82,
+    "closePx": 1.88,
     "earn": false
    },
    {
@@ -737,8 +1913,8 @@
     "px": 2.27,
     "prePx": 2.45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.76,
+    "closePx": 2.31,
     "earn": false
    },
    {
@@ -753,8 +1929,8 @@
     "px": 5.69,
     "prePx": 6.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.1,
+    "closePx": 5.98,
     "earn": false
    },
    {
@@ -769,8 +1945,8 @@
     "px": 476.58,
     "prePx": 514.04,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.98,
+    "closePx": 514.63,
     "earn": false
    },
    {
@@ -785,8 +1961,8 @@
     "px": 42.05,
     "prePx": 45.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.61,
+    "closePx": 44.83,
     "earn": false
    },
    {
@@ -801,8 +1977,8 @@
     "px": 1.15,
     "prePx": 1.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 13.04,
+    "closePx": 1.3,
     "earn": false
    },
    {
@@ -817,8 +1993,8 @@
     "px": 72.33,
     "prePx": 77.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.85,
+    "closePx": 74.39,
     "earn": false
    },
    {
@@ -833,8 +2009,8 @@
     "px": 3.58,
     "prePx": 3.86,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.38,
+    "closePx": 3.88,
     "earn": false
    },
    {
@@ -849,8 +2025,8 @@
     "px": 40.28,
     "prePx": 43.38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.8,
+    "closePx": 43.42,
     "earn": false
    },
    {
@@ -865,8 +2041,8 @@
     "px": 6.14,
     "prePx": 6.61,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.89,
+    "closePx": 6.87,
     "earn": false
    },
    {
@@ -881,8 +2057,8 @@
     "px": 1.05,
     "prePx": 1.13,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.62,
+    "closePx": 1.13,
     "earn": false
    },
    {
@@ -897,8 +2073,8 @@
     "px": 4.47,
     "prePx": 4.81,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.94,
+    "closePx": 4.78,
     "earn": false
    },
    {
@@ -913,8 +2089,8 @@
     "px": 2.5,
     "prePx": 2.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.4,
+    "closePx": 2.61,
     "earn": false
    },
    {
@@ -929,8 +2105,8 @@
     "px": 3.69,
     "prePx": 3.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.38,
+    "closePx": 4.11,
     "earn": false
    },
    {
@@ -945,8 +2121,8 @@
     "px": 3.16,
     "prePx": 3.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.38,
+    "closePx": 3.33,
     "earn": false
    },
    {
@@ -961,8 +2137,8 @@
     "px": 7.51,
     "prePx": 8.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.58,
+    "closePx": 8.38,
     "earn": false
    },
    {
@@ -977,8 +2153,8 @@
     "px": 9.14,
     "prePx": 9.83,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.41,
+    "closePx": 10,
     "earn": false
    },
    {
@@ -993,8 +2169,8 @@
     "px": 55.68,
     "prePx": 59.88,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.53,
+    "closePx": 56.53,
     "earn": false
    },
    {
@@ -1009,8 +2185,8 @@
     "px": 196.19,
     "prePx": 210.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 14.07,
+    "closePx": 223.79,
     "earn": false
    },
    {
@@ -1025,8 +2201,8 @@
     "px": 58.17,
     "prePx": 62.53,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.58,
+    "closePx": 63.16,
     "earn": false
    },
    {
@@ -1041,8 +2217,8 @@
     "px": 1.07,
     "prePx": 1.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 28.04,
+    "closePx": 1.37,
     "earn": false
    },
    {
@@ -1057,8 +2233,8 @@
     "px": 2.21,
     "prePx": 2.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.26,
+    "closePx": 2.26,
     "earn": false
    },
    {
@@ -1073,8 +2249,8 @@
     "px": 12.85,
     "prePx": 13.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.91,
+    "closePx": 13.61,
     "earn": false
    },
    {
@@ -1089,8 +2265,8 @@
     "px": 0.77,
     "prePx": 0.83,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.1,
+    "closePx": 0.77,
     "earn": false
    },
    {
@@ -1105,8 +2281,8 @@
     "px": 17.81,
     "prePx": 19.12,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.01,
+    "closePx": 18.88,
     "earn": false
    },
    {
@@ -1121,8 +2297,8 @@
     "px": 0.83,
     "prePx": 0.89,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.42,
+    "closePx": 0.86,
     "earn": false
    },
    {
@@ -1137,8 +2313,8 @@
     "px": 216.86,
     "prePx": 232.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.37,
+    "closePx": 222.01,
     "earn": false
    },
    {
@@ -1153,8 +2329,8 @@
     "px": 152.89,
     "prePx": 164,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.63,
+    "closePx": 163.02,
     "earn": false
    },
    {
@@ -1169,8 +2345,8 @@
     "px": 11.56,
     "prePx": 12.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.12,
+    "closePx": 11.69,
     "earn": false
    },
    {
@@ -1185,8 +2361,8 @@
     "px": 1.38,
     "prePx": 1.48,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.17,
+    "closePx": 1.41,
     "earn": false
    },
    {
@@ -1201,8 +2377,8 @@
     "px": 62.94,
     "prePx": 67.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.18,
+    "closePx": 68.09,
     "earn": false
    },
    {
@@ -1217,8 +2393,8 @@
     "px": 1.88,
     "prePx": 2.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.72,
+    "closePx": 1.95,
     "earn": false
    },
    {
@@ -1233,8 +2409,8 @@
     "px": 0.9,
     "prePx": 0.96,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.72,
+    "closePx": 0.97,
     "earn": false
    },
    {
@@ -1249,8 +2425,8 @@
     "px": 5.69,
     "prePx": 6.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.26,
+    "closePx": 6.16,
     "earn": false
    },
    {
@@ -1265,24 +2441,24 @@
     "px": 6.8,
     "prePx": 7.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.76,
+    "closePx": 7.26,
     "earn": false
    },
    {
     "sym": "MELI",
     "name": "MercadoLibre",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "网络零售",
+    "zh": "MercadoLibre, Inc. 在巴西、墨西哥、阿根廷和国际上运营在线商务平台。该公司运营 Mercado Libre Marketplace，这是一个可以通过移动应用程序或网站访问的在线商务平台；和Mercado",
     "track": "金融科技",
     "mcap": 74387417575,
     "mv": 7.15,
     "px": 1467.3,
     "prePx": 1572.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.47,
+    "closePx": 1532.92,
     "earn": false
    },
    {
@@ -1297,8 +2473,8 @@
     "px": 121.74,
     "prePx": 130.44,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.69,
+    "closePx": 129.89,
     "earn": false
    },
    {
@@ -1313,8 +2489,8 @@
     "px": 1.4,
     "prePx": 1.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.86,
+    "closePx": 1.44,
     "earn": false
    },
    {
@@ -1329,8 +2505,8 @@
     "px": 7.44,
     "prePx": 7.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.53,
+    "closePx": 8,
     "earn": false
    },
    {
@@ -1345,8 +2521,8 @@
     "px": 84.99,
     "prePx": 91.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.26,
+    "closePx": 89.46,
     "earn": false
    },
    {
@@ -1361,8 +2537,8 @@
     "px": 13.72,
     "prePx": 14.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 14.94,
+    "closePx": 15.77,
     "earn": false
    },
    {
@@ -1377,8 +2553,8 @@
     "px": 3.82,
     "prePx": 4.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.71,
+    "closePx": 4,
     "earn": false
    },
    {
@@ -1393,8 +2569,8 @@
     "px": 3.41,
     "prePx": 3.65,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.16,
+    "closePx": 3.62,
     "earn": false
    },
    {
@@ -1409,24 +2585,24 @@
     "px": 2.85,
     "prePx": 3.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -6.67,
+    "closePx": 2.66,
     "earn": false
    },
    {
     "sym": "PAM",
     "name": "Pampa Energia S.A.",
     "sec": "公用事业",
-    "ind": "",
-    "zh": "",
+    "ind": "企业集团",
+    "zh": "Pampa Energía S.A. 在阿根廷作为一家综合电力公司运营。该公司通过石油和天然气开展业务；一代;石油化工；以及控股、运输和其他部门。它通过火力发电厂、水力发电厂和风电场发电，发电量为 5,472 兆瓦",
     "track": "其它",
     "mcap": 3395165734,
     "mv": 6.99,
     "px": 62.32,
     "prePx": 66.68,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.43,
+    "closePx": 63.21,
     "earn": false
    },
    {
@@ -1441,8 +2617,8 @@
     "px": 2.29,
     "prePx": 2.45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.99,
+    "closePx": 2.45,
     "earn": false
    },
    {
@@ -1457,8 +2633,8 @@
     "px": 9.89,
     "prePx": 10.58,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.48,
+    "closePx": 10.63,
     "earn": false
    },
    {
@@ -1473,8 +2649,8 @@
     "px": 9.82,
     "prePx": 10.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.72,
+    "closePx": 10.48,
     "earn": false
    },
    {
@@ -1489,8 +2665,8 @@
     "px": 0.59,
     "prePx": 0.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.45,
+    "closePx": 0.65,
     "earn": false
    },
    {
@@ -1505,8 +2681,8 @@
     "px": 0.68,
     "prePx": 0.72,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.48,
+    "closePx": 0.76,
     "earn": false
    },
    {
@@ -1521,8 +2697,8 @@
     "px": 18.14,
     "prePx": 19.38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.17,
+    "closePx": 19.44,
     "earn": false
    },
    {
@@ -1537,8 +2713,8 @@
     "px": 1.9,
     "prePx": 2.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.32,
+    "closePx": 2.02,
     "earn": false
    },
    {
@@ -1553,8 +2729,8 @@
     "px": 125.45,
     "prePx": 134.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.56,
+    "closePx": 131.17,
     "earn": false
    },
    {
@@ -1569,8 +2745,8 @@
     "px": 190.34,
     "prePx": 203.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.67,
+    "closePx": 206.84,
     "earn": false
    },
    {
@@ -1585,8 +2761,8 @@
     "px": 3.17,
     "prePx": 3.38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.79,
+    "closePx": 3.38,
     "earn": false
    },
    {
@@ -1601,8 +2777,8 @@
     "px": 11.23,
     "prePx": 11.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.8,
+    "closePx": 12.33,
     "earn": false
    },
    {
@@ -1617,8 +2793,8 @@
     "px": 3.7,
     "prePx": 3.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.97,
+    "closePx": 3.81,
     "earn": false
    },
    {
@@ -1633,8 +2809,8 @@
     "px": 3.25,
     "prePx": 3.47,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.08,
+    "closePx": 3.48,
     "earn": false
    },
    {
@@ -1649,8 +2825,8 @@
     "px": 17.94,
     "prePx": 19.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.85,
+    "closePx": 18.63,
     "earn": false
    },
    {
@@ -1665,8 +2841,8 @@
     "px": 25.77,
     "prePx": 27.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.55,
+    "closePx": 28.23,
     "earn": false
    },
    {
@@ -1681,8 +2857,8 @@
     "px": 3.98,
     "prePx": 4.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.78,
+    "closePx": 4.21,
     "earn": false
    },
    {
@@ -1697,8 +2873,8 @@
     "px": 37.03,
     "prePx": 39.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.27,
+    "closePx": 39.35,
     "earn": false
    },
    {
@@ -1713,8 +2889,8 @@
     "px": 386.13,
     "prePx": 411.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.04,
+    "closePx": 413.31,
     "earn": false
    },
    {
@@ -1729,8 +2905,8 @@
     "px": 61.42,
     "prePx": 65.51,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.8,
+    "closePx": 64.98,
     "earn": false
    },
    {
@@ -1745,8 +2921,8 @@
     "px": 3.61,
     "prePx": 3.85,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.36,
+    "closePx": 4.02,
     "earn": false
    },
    {
@@ -1761,8 +2937,8 @@
     "px": 4.22,
     "prePx": 4.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.21,
+    "closePx": 4.44,
     "earn": false
    },
    {
@@ -1777,24 +2953,24 @@
     "px": 6.96,
     "prePx": 7.42,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.46,
+    "closePx": 7.34,
     "earn": false
    },
    {
     "sym": "OCGN",
     "name": "Ocugen",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Ocugen, Inc. 是一家生物制药公司，专注于发现、开发和商业化可改善患者健康的新型基因和细胞疗法、生物制剂和疫苗。该公司的管道产品包括 OCU400，这是一种新型基因治疗候选产品，可恢复视网膜完整性和",
     "track": "其它",
     "mcap": 286442634,
     "mv": 6.61,
     "px": 0.84,
     "prePx": 0.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -7.25,
+    "closePx": 0.78,
     "earn": false
    },
    {
@@ -1809,8 +2985,8 @@
     "px": 5.6,
     "prePx": 5.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -4.11,
+    "closePx": 5.37,
     "earn": false
    },
    {
@@ -1825,8 +3001,8 @@
     "px": 1.15,
     "prePx": 1.22,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 13.54,
+    "closePx": 1.3,
     "earn": false
    },
    {
@@ -1841,8 +3017,8 @@
     "px": 3.52,
     "prePx": 3.75,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.95,
+    "closePx": 3.8,
     "earn": false
    },
    {
@@ -1857,24 +3033,24 @@
     "px": 15.21,
     "prePx": 16.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.99,
+    "closePx": 16.73,
     "earn": false
    },
    {
     "sym": "FLR",
     "name": "Fluor",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "工程建筑",
+    "zh": "福陆公司提供工程、采购和施工 (EPC)；制造和模块化；和全球项目管理服务。该公司通过三个部门运营：城市解决方案部门、能源解决方案部门和使命解决方案部门。城市解决方案部门提供 EPC 和项目",
     "track": "其它",
     "mcap": 5887503062,
     "mv": 6.48,
     "px": 45.96,
     "prePx": 48.94,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.09,
+    "closePx": 47.38,
     "earn": false
    },
    {
@@ -1889,8 +3065,8 @@
     "px": 0.39,
     "prePx": 0.41,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 18.84,
+    "closePx": 0.46,
     "earn": false
    },
    {
@@ -1905,8 +3081,8 @@
     "px": 16.56,
     "prePx": 17.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.27,
+    "closePx": 17.93,
     "earn": false
    },
    {
@@ -1921,8 +3097,8 @@
     "px": 6.78,
     "prePx": 7.22,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.26,
+    "closePx": 7.34,
     "earn": false
    },
    {
@@ -1937,8 +3113,8 @@
     "px": 0.73,
     "prePx": 0.78,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.95,
+    "closePx": 0.79,
     "earn": false
    },
    {
@@ -1953,8 +3129,8 @@
     "px": 12.29,
     "prePx": 13.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.7,
+    "closePx": 12.99,
     "earn": false
    },
    {
@@ -1969,8 +3145,8 @@
     "px": 472.33,
     "prePx": 502.77,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.9,
+    "closePx": 509.66,
     "earn": false
    },
    {
@@ -1985,8 +3161,8 @@
     "px": 2.25,
     "prePx": 2.39,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4,
+    "closePx": 2.34,
     "earn": false
    },
    {
@@ -2001,8 +3177,8 @@
     "px": 3.74,
     "prePx": 3.98,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.29,
+    "closePx": 4.05,
     "earn": false
    },
    {
@@ -2017,8 +3193,8 @@
     "px": 0.59,
     "prePx": 0.62,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.19,
+    "closePx": 0.58,
     "earn": false
    },
    {
@@ -2033,8 +3209,8 @@
     "px": 1.56,
     "prePx": 1.66,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.41,
+    "closePx": 1.66,
     "earn": false
    },
    {
@@ -2049,8 +3225,8 @@
     "px": 12.09,
     "prePx": 12.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.5,
+    "closePx": 13.36,
     "earn": false
    },
    {
@@ -2065,24 +3241,24 @@
     "px": 272.45,
     "prePx": 289.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.22,
+    "closePx": 292.11,
     "earn": false
    },
    {
     "sym": "FIP",
     "name": "FTAI Infrastructure",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "企业集团",
+    "zh": "FTAI Infrastructure Inc. 致力于收购、开发和运营代表北美运输、能源和工业产品行业客户基础设施的资产和业务。它通过四个部门运营：铁路、港口和码头、电力和G",
     "track": "其它",
     "mcap": 444363331,
     "mv": 6.38,
     "px": 3.76,
     "prePx": 4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.26,
+    "closePx": 3.92,
     "earn": false
    },
    {
@@ -2097,8 +3273,8 @@
     "px": 1.1,
     "prePx": 1.17,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 20,
+    "closePx": 1.32,
     "earn": false
    },
    {
@@ -2113,8 +3289,8 @@
     "px": 1.1,
     "prePx": 1.17,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.36,
+    "closePx": 1.17,
     "earn": false
    },
    {
@@ -2129,8 +3305,8 @@
     "px": 5.66,
     "prePx": 6.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.71,
+    "closePx": 6.04,
     "earn": false
    },
    {
@@ -2145,8 +3321,8 @@
     "px": 3.33,
     "prePx": 3.54,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.5,
+    "closePx": 3.48,
     "earn": false
    },
    {
@@ -2161,8 +3337,8 @@
     "px": 32.83,
     "prePx": 34.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.64,
+    "closePx": 34.68,
     "earn": false
    },
    {
@@ -2177,8 +3353,8 @@
     "px": 31.89,
     "prePx": 33.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.35,
+    "closePx": 32.64,
     "earn": false
    },
    {
@@ -2193,8 +3369,8 @@
     "px": 12.41,
     "prePx": 13.19,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.81,
+    "closePx": 14,
     "earn": false
    },
    {
@@ -2209,8 +3385,8 @@
     "px": 172.15,
     "prePx": 182.98,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.64,
+    "closePx": 178.42,
     "earn": false
    },
    {
@@ -2225,8 +3401,8 @@
     "px": 7.79,
     "prePx": 8.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.86,
+    "closePx": 8.48,
     "earn": false
    },
    {
@@ -2241,8 +3417,8 @@
     "px": 25.64,
     "prePx": 27.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.83,
+    "closePx": 26.11,
     "earn": false
    },
    {
@@ -2257,8 +3433,8 @@
     "px": 3.66,
     "prePx": 3.89,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.28,
+    "closePx": 3.89,
     "earn": false
    },
    {
@@ -2273,8 +3449,8 @@
     "px": 1.27,
     "prePx": 1.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.72,
+    "closePx": 1.33,
     "earn": false
    },
    {
@@ -2289,8 +3465,8 @@
     "px": 0.51,
     "prePx": 0.54,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 14.58,
+    "closePx": 0.59,
     "earn": false
    },
    {
@@ -2305,8 +3481,8 @@
     "px": 4.1,
     "prePx": 4.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.66,
+    "closePx": 4.25,
     "earn": false
    },
    {
@@ -2321,8 +3497,8 @@
     "px": 1.97,
     "prePx": 2.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.58,
+    "closePx": 2.08,
     "earn": false
    },
    {
@@ -2337,8 +3513,8 @@
     "px": 58.23,
     "prePx": 61.84,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.75,
+    "closePx": 61.58,
     "earn": false
    },
    {
@@ -2353,8 +3529,8 @@
     "px": 8.22,
     "prePx": 8.73,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.09,
+    "closePx": 8.31,
     "earn": false
    },
    {
@@ -2369,8 +3545,8 @@
     "px": 1.94,
     "prePx": 2.06,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.76,
+    "closePx": 2.11,
     "earn": false
    },
    {
@@ -2385,8 +3561,8 @@
     "px": 37.8,
     "prePx": 40.13,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.62,
+    "closePx": 39.17,
     "earn": false
    },
    {
@@ -2401,8 +3577,8 @@
     "px": 3.9,
     "prePx": 4.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.62,
+    "closePx": 4.08,
     "earn": false
    },
    {
@@ -2417,8 +3593,8 @@
     "px": 11.28,
     "prePx": 11.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.45,
+    "closePx": 12.12,
     "earn": false
    },
    {
@@ -2433,8 +3609,8 @@
     "px": 12.6,
     "prePx": 13.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.65,
+    "closePx": 13.06,
     "earn": false
    },
    {
@@ -2449,8 +3625,8 @@
     "px": 14.61,
     "prePx": 15.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.61,
+    "closePx": 15.43,
     "earn": false
    },
    {
@@ -2465,8 +3641,8 @@
     "px": 130.93,
     "prePx": 138.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.34,
+    "closePx": 140.54,
     "earn": false
    },
    {
@@ -2481,8 +3657,8 @@
     "px": 14.95,
     "prePx": 15.86,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.28,
+    "closePx": 15.59,
     "earn": false
    },
    {
@@ -2497,8 +3673,8 @@
     "px": 3.9,
     "prePx": 4.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.13,
+    "closePx": 4.1,
     "earn": false
    },
    {
@@ -2513,8 +3689,8 @@
     "px": 0.66,
     "prePx": 0.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.32,
+    "closePx": 0.74,
     "earn": false
    },
    {
@@ -2529,8 +3705,8 @@
     "px": 9.07,
     "prePx": 9.62,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.51,
+    "closePx": 9.57,
     "earn": false
    },
    {
@@ -2545,8 +3721,8 @@
     "px": 1.41,
     "prePx": 1.49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.78,
+    "closePx": 1.43,
     "earn": false
    },
    {
@@ -2561,8 +3737,8 @@
     "px": 138.57,
     "prePx": 146.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.81,
+    "closePx": 145.23,
     "earn": false
    },
    {
@@ -2577,8 +3753,8 @@
     "px": 92.93,
     "prePx": 98.52,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.77,
+    "closePx": 97.36,
     "earn": false
    },
    {
@@ -2593,8 +3769,8 @@
     "px": 15.68,
     "prePx": 16.62,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.02,
+    "closePx": 15.84,
     "earn": false
    },
    {
@@ -2609,8 +3785,8 @@
     "px": 5.67,
     "prePx": 6.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.29,
+    "closePx": 6.14,
     "earn": false
    },
    {
@@ -2625,8 +3801,8 @@
     "px": 18.82,
     "prePx": 19.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.46,
+    "closePx": 19.66,
     "earn": false
    },
    {
@@ -2641,24 +3817,24 @@
     "px": 8.68,
     "prePx": 9.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.35,
+    "closePx": 8.71,
     "earn": false
    },
    {
     "sym": "PAX",
     "name": "Patria Investments Common Shares",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "资产管理",
+    "zh": "Patria Investments Limited 是一家私人市场投资公司。它专门从事私募股权、二级直接和间接投资以及风险投资，重点关注中间市场、收购和成长资本投资。它力求与行业无关，重点关注农业综合企业、p",
     "track": "其它",
     "mcap": 1517380841,
     "mv": 5.99,
     "px": 9.35,
     "prePx": 9.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.2,
+    "closePx": 9.93,
     "earn": false
    },
    {
@@ -2673,8 +3849,8 @@
     "px": 5.18,
     "prePx": 5.49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.58,
+    "closePx": 5.15,
     "earn": false
    },
    {
@@ -2689,24 +3865,24 @@
     "px": 48.83,
     "prePx": 51.75,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.43,
+    "closePx": 52.46,
     "earn": false
    },
    {
     "sym": "TBLA",
     "name": "Taboola.com",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "互联网内容和信息",
+    "zh": "Taboola.com Ltd. 及其子公司在以色列、美国、英国、德国和国际上运营基于人工智能的算法引擎平台。它提供 Taboola，这是一个与网站、设备和移动应用程序合作的平台，用于识别",
     "track": "其它",
     "mcap": 524558403,
     "mv": 5.98,
     "px": 1.97,
     "prePx": 2.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.03,
+    "closePx": 2.01,
     "earn": false
    },
    {
@@ -2721,8 +3897,8 @@
     "px": 11.75,
     "prePx": 12.45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.6,
+    "closePx": 12.76,
     "earn": false
    },
    {
@@ -2737,8 +3913,8 @@
     "px": 8.4,
     "prePx": 8.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.9,
+    "closePx": 8.98,
     "earn": false
    },
    {
@@ -2753,8 +3929,8 @@
     "px": 5.89,
     "prePx": 6.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.17,
+    "closePx": 6.43,
     "earn": false
    },
    {
@@ -2769,8 +3945,8 @@
     "px": 162.36,
     "prePx": 172.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.98,
+    "closePx": 170.44,
     "earn": false
    },
    {
@@ -2785,8 +3961,8 @@
     "px": 2.69,
     "prePx": 2.85,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 13.38,
+    "closePx": 3.05,
     "earn": false
    },
    {
@@ -2801,8 +3977,8 @@
     "px": 35.21,
     "prePx": 37.3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.07,
+    "closePx": 36.29,
     "earn": false
    },
    {
@@ -2817,8 +3993,8 @@
     "px": 2.86,
     "prePx": 3.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.39,
+    "closePx": 3.1,
     "earn": false
    },
    {
@@ -2833,8 +4009,8 @@
     "px": 27.66,
     "prePx": 29.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.05,
+    "closePx": 30.44,
     "earn": false
    },
    {
@@ -2849,8 +4025,8 @@
     "px": 6.49,
     "prePx": 6.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.63,
+    "closePx": 7.05,
     "earn": false
    },
    {
@@ -2865,8 +4041,8 @@
     "px": 4.28,
     "prePx": 4.53,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.67,
+    "closePx": 4.48,
     "earn": false
    },
    {
@@ -2881,8 +4057,8 @@
     "px": 2.65,
     "prePx": 2.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.43,
+    "closePx": 2.81,
     "earn": false
    },
    {
@@ -2897,8 +4073,8 @@
     "px": 4.54,
     "prePx": 4.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.33,
+    "closePx": 4.52,
     "earn": false
    },
    {
@@ -2913,8 +4089,8 @@
     "px": 1.11,
     "prePx": 1.18,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 21.97,
+    "closePx": 1.36,
     "earn": false
    },
    {
@@ -2929,8 +4105,8 @@
     "px": 15.97,
     "prePx": 16.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.95,
+    "closePx": 17.4,
     "earn": false
    },
    {
@@ -2945,8 +4121,8 @@
     "px": 212.15,
     "prePx": 224.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.1,
+    "closePx": 222.96,
     "earn": false
    },
    {
@@ -2961,8 +4137,8 @@
     "px": 13.8,
     "prePx": 14.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.87,
+    "closePx": 14.61,
     "earn": false
    },
    {
@@ -2977,8 +4153,8 @@
     "px": 18.99,
     "prePx": 20.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 13.32,
+    "closePx": 21.52,
     "earn": false
    },
    {
@@ -2993,8 +4169,8 @@
     "px": 83.19,
     "prePx": 88,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.69,
+    "closePx": 85.43,
     "earn": false
    },
    {
@@ -3009,8 +4185,8 @@
     "px": 25.93,
     "prePx": 27.43,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.38,
+    "closePx": 29.14,
     "earn": false
    },
    {
@@ -3025,8 +4201,8 @@
     "px": 10.03,
     "prePx": 10.61,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.38,
+    "closePx": 10.77,
     "earn": false
    },
    {
@@ -3041,8 +4217,8 @@
     "px": 242.79,
     "prePx": 256.79,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.68,
+    "closePx": 256.58,
     "earn": false
    },
    {
@@ -3057,8 +4233,8 @@
     "px": 27.23,
     "prePx": 28.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.38,
+    "closePx": 28.15,
     "earn": false
    },
    {
@@ -3073,8 +4249,8 @@
     "px": 3.48,
     "prePx": 3.68,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.6,
+    "closePx": 3.64,
     "earn": false
    },
    {
@@ -3089,8 +4265,8 @@
     "px": 1.22,
     "prePx": 1.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.38,
+    "closePx": 1.31,
     "earn": false
    },
    {
@@ -3105,24 +4281,24 @@
     "px": 10.61,
     "prePx": 11.22,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.56,
+    "closePx": 11.2,
     "earn": false
    },
    {
     "sym": "TH",
     "name": "Target Hospitality",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "专业商业服务",
+    "zh": "Target Hospitality Corp. 在北美经营一家专业租赁和酒店服务公司。它通过酒店和设施服务部、South、Workforce Hospitality Solutions 和政府部门运营。该公司拥有专业租",
     "track": "其它",
     "mcap": 1177134635,
     "mv": 5.74,
     "px": 12.02,
     "prePx": 12.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.58,
+    "closePx": 12.33,
     "earn": false
    },
    {
@@ -3137,8 +4313,8 @@
     "px": 3.65,
     "prePx": 3.86,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.49,
+    "closePx": 3.96,
     "earn": false
    },
    {
@@ -3153,8 +4329,8 @@
     "px": 7,
     "prePx": 7.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.29,
+    "closePx": 7.58,
     "earn": false
    },
    {
@@ -3169,24 +4345,24 @@
     "px": 8.86,
     "prePx": 9.36,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.74,
+    "closePx": 9.54,
     "earn": false
    },
    {
     "sym": "BMA",
     "name": "Banco Macro S.A. (representing Ten Common Shares)",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "Banks - Regional",
+    "zh": "Banco Macro S.A. provides various banking products and services to retail and corporate customers in Argentina",
     "track": "其它",
     "mcap": 3152034872,
     "mv": 5.68,
     "px": 50.35,
     "prePx": 53.21,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.03,
+    "closePx": 52.38,
     "earn": false
    },
    {
@@ -3201,8 +4377,8 @@
     "px": 11.69,
     "prePx": 11.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.96,
+    "closePx": 12.27,
     "earn": false
    },
    {
@@ -3217,8 +4393,8 @@
     "px": 29.53,
     "prePx": 31.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.06,
+    "closePx": 31.32,
     "earn": false
    },
    {
@@ -3233,8 +4409,8 @@
     "px": 57.73,
     "prePx": 61,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.2,
+    "closePx": 59.58,
     "earn": false
    },
    {
@@ -3249,8 +4425,8 @@
     "px": 1.06,
     "prePx": 1.12,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.77,
+    "closePx": 1.1,
     "earn": false
    },
    {
@@ -3265,8 +4441,8 @@
     "px": 5.49,
     "prePx": 5.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.46,
+    "closePx": 5.79,
     "earn": false
    },
    {
@@ -3281,8 +4457,8 @@
     "px": 197.03,
     "prePx": 208.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.06,
+    "closePx": 207,
     "earn": false
    },
    {
@@ -3297,8 +4473,8 @@
     "px": 48.27,
     "prePx": 50.98,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.11,
+    "closePx": 49.29,
     "earn": false
    },
    {
@@ -3313,8 +4489,8 @@
     "px": 185.01,
     "prePx": 195.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.15,
+    "closePx": 192.69,
     "earn": false
    },
    {
@@ -3329,8 +4505,8 @@
     "px": 79.96,
     "prePx": 84.43,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.08,
+    "closePx": 81.62,
     "earn": false
    },
    {
@@ -3345,8 +4521,8 @@
     "px": 19.47,
     "prePx": 20.56,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.09,
+    "closePx": 20.85,
     "earn": false
    },
    {
@@ -3361,8 +4537,8 @@
     "px": 12.89,
     "prePx": 13.61,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.37,
+    "closePx": 13.84,
     "earn": false
    },
    {
@@ -3377,8 +4553,8 @@
     "px": 1.79,
     "prePx": 1.89,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.82,
+    "closePx": 1.93,
     "earn": false
    },
    {
@@ -3393,8 +4569,8 @@
     "px": 17.24,
     "prePx": 18.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.95,
+    "closePx": 18.61,
     "earn": false
    },
    {
@@ -3409,8 +4585,8 @@
     "px": 32.02,
     "prePx": 33.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.21,
+    "closePx": 34.33,
     "earn": false
    },
    {
@@ -3425,8 +4601,8 @@
     "px": 0.57,
     "prePx": 0.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -1.64,
+    "closePx": 0.56,
     "earn": false
    },
    {
@@ -3441,8 +4617,8 @@
     "px": 11.33,
     "prePx": 11.96,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.12,
+    "closePx": 11.91,
     "earn": false
    },
    {
@@ -3457,8 +4633,8 @@
     "px": 5.51,
     "prePx": 5.82,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.09,
+    "closePx": 5.68,
     "earn": false
    },
    {
@@ -3473,8 +4649,8 @@
     "px": 6.85,
     "prePx": 7.23,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.71,
+    "closePx": 7.57,
     "earn": false
    },
    {
@@ -3489,8 +4665,8 @@
     "px": 183.82,
     "prePx": 194,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.12,
+    "closePx": 189.55,
     "earn": false
    },
    {
@@ -3505,8 +4681,8 @@
     "px": 106.8,
     "prePx": 112.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.22,
+    "closePx": 115.57,
     "earn": false
    },
    {
@@ -3521,8 +4697,8 @@
     "px": 68.86,
     "prePx": 72.67,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.61,
+    "closePx": 73.41,
     "earn": false
    },
    {
@@ -3537,8 +4713,8 @@
     "px": 36.4,
     "prePx": 38.41,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.54,
+    "closePx": 37.69,
     "earn": false
    },
    {
@@ -3553,8 +4729,8 @@
     "px": 11.09,
     "prePx": 11.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 24.12,
+    "closePx": 13.77,
     "earn": false
    },
    {
@@ -3569,24 +4745,24 @@
     "px": 1099.58,
     "prePx": 1160,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.64,
+    "closePx": 1128.64,
     "earn": false
    },
    {
     "sym": "LPL",
     "name": "LG Display AMERICAN DEPOSITORY SHARES",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "消费电子产品",
+    "zh": "LG Display 及其子公司在韩国、中国、亚洲其他地区、北美和欧洲从事有机发光二极管 (OLED) 和薄膜晶体管液晶显示 (TFT-LCD) 面板的研究、开发、制造和销售。公司的",
     "track": "其它",
     "mcap": 2380000000,
     "mv": 5.49,
     "px": 2.38,
     "prePx": 2.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.04,
+    "closePx": 2.5,
     "earn": false
    },
    {
@@ -3601,8 +4777,8 @@
     "px": 260.7,
     "prePx": 275,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.43,
+    "closePx": 272.25,
     "earn": false
    },
    {
@@ -3617,8 +4793,8 @@
     "px": 19.15,
     "prePx": 20.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.26,
+    "closePx": 20.54,
     "earn": false
    },
    {
@@ -3633,8 +4809,8 @@
     "px": 1.83,
     "prePx": 1.93,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.74,
+    "closePx": 1.99,
     "earn": false
    },
    {
@@ -3649,8 +4825,8 @@
     "px": 6.59,
     "prePx": 6.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.75,
+    "closePx": 6.71,
     "earn": false
    },
    {
@@ -3665,8 +4841,8 @@
     "px": 9.07,
     "prePx": 9.56,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.49,
+    "closePx": 9.84,
     "earn": false
    },
    {
@@ -3681,8 +4857,8 @@
     "px": 7.92,
     "prePx": 8.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.94,
+    "closePx": 8.47,
     "earn": false
    },
    {
@@ -3697,8 +4873,8 @@
     "px": 65.78,
     "prePx": 69.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.25,
+    "closePx": 67.92,
     "earn": false
    },
    {
@@ -3713,8 +4889,8 @@
     "px": 15.51,
     "prePx": 16.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.9,
+    "closePx": 15.37,
     "earn": false
    },
    {
@@ -3729,8 +4905,8 @@
     "px": 32.56,
     "prePx": 34.32,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.43,
+    "closePx": 34.98,
     "earn": false
    },
    {
@@ -3745,8 +4921,8 @@
     "px": 21.23,
     "prePx": 22.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.24,
+    "closePx": 22.98,
     "earn": false
    },
    {
@@ -3761,24 +4937,24 @@
     "px": 89.68,
     "prePx": 94.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.08,
+    "closePx": 94.24,
     "earn": false
    },
    {
     "sym": "OTLK",
     "name": "Outlook Therapeutics",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Outlook Therapeutics, Inc. 是一家临床阶段生物制药公司，专注于开发和商业化用于眼科适应症的单克隆抗体。其主要候选产品是 ONS-5010，这是一种眼科贝伐单抗产品配方，",
     "track": "其它",
     "mcap": 108309817,
     "mv": 5.37,
     "px": 0.44,
     "prePx": 0.47,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.26,
+    "closePx": 0.47,
     "earn": false
    },
    {
@@ -3793,8 +4969,8 @@
     "px": 8.77,
     "prePx": 9.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.17,
+    "closePx": 8.96,
     "earn": false
    },
    {
@@ -3809,8 +4985,8 @@
     "px": 5.41,
     "prePx": 5.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.11,
+    "closePx": 5.47,
     "earn": false
    },
    {
@@ -3825,24 +5001,24 @@
     "px": 199.94,
     "prePx": 210.65,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.81,
+    "closePx": 209.55,
     "earn": false
    },
    {
     "sym": "ANNA",
     "name": "AleAnna",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气勘探与生产",
+    "zh": "AleAnna, Inc. 是一家处于开发阶段的天然气资源公司，专注于在欧洲和意大利提供关键的天然气供应。它分为两个部分：常规部分和可再生部分。公司涉足陆上常规天然气勘探开发和可再生能源",
     "track": "其它",
     "mcap": 125573767,
     "mv": 5.35,
     "px": 1.87,
     "prePx": 1.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.6,
+    "closePx": 1.9,
     "earn": false
    },
    {
@@ -3857,24 +5033,24 @@
     "px": 4.67,
     "prePx": 4.92,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.07,
+    "closePx": 4.86,
     "earn": false
    },
    {
     "sym": "DHC",
     "name": "Diversified Healthcare Trust Common Shares of Beneficial Interest",
     "sec": "房地产",
-    "ind": "",
-    "zh": "",
+    "ind": "房地产投资信托基金 - 医疗保健设施",
+    "zh": "多元化医疗保健信托是一家房地产投资信托（REIT），专注于拥有遍布美国的优质医疗保健物业。 DHC 的投资组合以战略性策划的老年住房、医疗办公室和生命科学资产组合为基础，这些资产结合了高品质",
     "track": "其它",
     "mcap": 1770462846,
     "mv": 5.34,
     "px": 7.3,
     "prePx": 7.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.1,
+    "closePx": 7.38,
     "earn": false
    },
    {
@@ -3889,8 +5065,8 @@
     "px": 5.24,
     "prePx": 5.52,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.1,
+    "closePx": 5.35,
     "earn": false
    },
    {
@@ -3905,8 +5081,8 @@
     "px": 9,
     "prePx": 9.48,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.28,
+    "closePx": 9.56,
     "earn": false
    },
    {
@@ -3921,8 +5097,8 @@
     "px": 4.72,
     "prePx": 4.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.96,
+    "closePx": 5.19,
     "earn": false
    },
    {
@@ -3937,8 +5113,8 @@
     "px": 47.85,
     "prePx": 50.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.68,
+    "closePx": 49.13,
     "earn": false
    },
    {
@@ -3953,8 +5129,8 @@
     "px": 6.77,
     "prePx": 7.13,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.62,
+    "closePx": 6.88,
     "earn": false
    },
    {
@@ -3969,8 +5145,8 @@
     "px": 16,
     "prePx": 16.85,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.38,
+    "closePx": 17.34,
     "earn": false
    },
    {
@@ -3985,8 +5161,8 @@
     "px": 6.6,
     "prePx": 6.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.58,
+    "closePx": 7.1,
     "earn": false
    },
    {
@@ -4001,8 +5177,8 @@
     "px": 6.43,
     "prePx": 6.77,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.02,
+    "closePx": 6.56,
     "earn": false
    },
    {
@@ -4017,8 +5193,8 @@
     "px": 7.94,
     "prePx": 8.36,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -1.26,
+    "closePx": 7.84,
     "earn": false
    },
    {
@@ -4033,8 +5209,8 @@
     "px": 311.18,
     "prePx": 327.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.49,
+    "closePx": 322.04,
     "earn": false
    },
    {
@@ -4049,8 +5225,8 @@
     "px": 11.01,
     "prePx": 11.59,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.63,
+    "closePx": 11.41,
     "earn": false
    },
    {
@@ -4065,8 +5241,8 @@
     "px": 2,
     "prePx": 2.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.25,
+    "closePx": 2.02,
     "earn": false
    },
    {
@@ -4081,8 +5257,8 @@
     "px": 3.52,
     "prePx": 3.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.67,
+    "closePx": 3.76,
     "earn": false
    },
    {
@@ -4097,8 +5273,8 @@
     "px": 27.13,
     "prePx": 28.54,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.87,
+    "closePx": 28.45,
     "earn": false
    },
    {
@@ -4113,8 +5289,8 @@
     "px": 71.72,
     "prePx": 75.43,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.45,
+    "closePx": 73.48,
     "earn": false
    },
    {
@@ -4129,8 +5305,8 @@
     "px": 161.2,
     "prePx": 169.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.51,
+    "closePx": 173.3,
     "earn": false
    },
    {
@@ -4145,8 +5321,8 @@
     "px": 2.69,
     "prePx": 2.83,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.74,
+    "closePx": 2.92,
     "earn": false
    },
    {
@@ -4161,24 +5337,24 @@
     "px": 2.94,
     "prePx": 3.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.04,
+    "closePx": 3,
     "earn": false
    },
    {
     "sym": "SLVO",
     "name": "UBS ETRACS Silver Shares Covered Call ETNs due April 21 2033",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "—",
+    "zh": "该指数通过反映 SLV 股票价格的变化以及从 SLV 股票每月看涨期权名义出售中收到的名义期权溢价减去名义交易额来衡量 iShares® Silver Trust 股票（“SLV 股票”）的“备兑看涨”策略的回报。",
     "track": "其它",
     "mcap": 267774106,
     "mv": 5.09,
     "px": 42.85,
     "prePx": 45.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.84,
+    "closePx": 45.78,
     "earn": false
    },
    {
@@ -4193,8 +5369,8 @@
     "px": 173.37,
     "prePx": 182.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.08,
+    "closePx": 178.71,
     "earn": false
    },
    {
@@ -4209,8 +5385,8 @@
     "px": 5.33,
     "prePx": 5.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -1.5,
+    "closePx": 5.25,
     "earn": false
    },
    {
@@ -4225,8 +5401,8 @@
     "px": 29.27,
     "prePx": 30.75,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.6,
+    "closePx": 30.91,
     "earn": false
    },
    {
@@ -4241,8 +5417,8 @@
     "px": 47.02,
     "prePx": 49.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.21,
+    "closePx": 50.88,
     "earn": false
    },
    {
@@ -4257,8 +5433,8 @@
     "px": 2.57,
     "prePx": 2.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.39,
+    "closePx": 2.58,
     "earn": false
    },
    {
@@ -4273,8 +5449,8 @@
     "px": 51.55,
     "prePx": 54.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.69,
+    "closePx": 53.97,
     "earn": false
    },
    {
@@ -4289,8 +5465,8 @@
     "px": 134.2,
     "prePx": 140.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.96,
+    "closePx": 140.86,
     "earn": false
    },
    {
@@ -4305,8 +5481,8 @@
     "px": 1.57,
     "prePx": 1.65,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.18,
+    "closePx": 1.62,
     "earn": false
    },
    {
@@ -4321,8 +5497,8 @@
     "px": 289.7,
     "prePx": 304.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.18,
+    "closePx": 307.59,
     "earn": false
    },
    {
@@ -4337,8 +5513,8 @@
     "px": 4.59,
     "prePx": 4.82,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.23,
+    "closePx": 4.83,
     "earn": false
    },
    {
@@ -4353,8 +5529,8 @@
     "px": 1.4,
     "prePx": 1.47,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.14,
+    "closePx": 1.43,
     "earn": false
    },
    {
@@ -4369,8 +5545,8 @@
     "px": 34.52,
     "prePx": 36.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.85,
+    "closePx": 36.54,
     "earn": false
    },
    {
@@ -4385,8 +5561,8 @@
     "px": 191.95,
     "prePx": 201.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.88,
+    "closePx": 203.24,
     "earn": false
    },
    {
@@ -4401,8 +5577,8 @@
     "px": 0.88,
     "prePx": 0.92,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.97,
+    "closePx": 0.91,
     "earn": false
    },
    {
@@ -4417,8 +5593,8 @@
     "px": 10.07,
     "prePx": 10.57,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.69,
+    "closePx": 10.24,
     "earn": false
    },
    {
@@ -4433,8 +5609,8 @@
     "px": 3.43,
     "prePx": 3.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.79,
+    "closePx": 3.56,
     "earn": false
    },
    {
@@ -4449,8 +5625,8 @@
     "px": 6.86,
     "prePx": 7.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.73,
+    "closePx": 6.81,
     "earn": false
    },
    {
@@ -4465,8 +5641,8 @@
     "px": 22.67,
     "prePx": 23.79,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.1,
+    "closePx": 24.96,
     "earn": false
    },
    {
@@ -4481,8 +5657,8 @@
     "px": 205.85,
     "prePx": 216.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.9,
+    "closePx": 215.93,
     "earn": false
    },
    {
@@ -4497,8 +5673,8 @@
     "px": 48.55,
     "prePx": 50.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.57,
+    "closePx": 50.77,
     "earn": false
    },
    {
@@ -4513,24 +5689,24 @@
     "px": 1.32,
     "prePx": 1.38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.58,
+    "closePx": 1.42,
     "earn": false
    },
    {
     "sym": "PRGS",
     "name": "Progress Software (DE)",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "软件 - 基础设施",
+    "zh": "Progress Software Corporation 提供在美国和国际上开发、部署和管理人工智能 (AI) 支持的应用程序和数字体验的软件产品。该公司提供 Agentic RAG，这是下一代 Agentic Rag",
     "track": "其它",
     "mcap": 1753094095,
     "mv": 4.92,
     "px": 42.89,
     "prePx": 45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.28,
+    "closePx": 43.44,
     "earn": false
    },
    {
@@ -4545,8 +5721,8 @@
     "px": 75.7,
     "prePx": 79.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.38,
+    "closePx": 79.77,
     "earn": false
    },
    {
@@ -4561,24 +5737,24 @@
     "px": 23.54,
     "prePx": 24.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.07,
+    "closePx": 24.97,
     "earn": false
    },
    {
     "sym": "SLGL",
     "name": "Sol-Gel Technologies",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Sol-Gel Technologies Ltd. 与其子公司 Sol-Gel Technologies Inc. 一起为以色列、中国、瑞士、加拿大、美国和国际上患有严重皮肤病的患者开发外用皮肤病药物。该公司提供 Twy",
     "track": "其它",
     "mcap": 187600143,
     "mv": 4.89,
     "px": 57.3,
     "prePx": 60.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -4.4,
+    "closePx": 54.78,
     "earn": false
    },
    {
@@ -4593,8 +5769,8 @@
     "px": 95.67,
     "prePx": 100.34,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.67,
+    "closePx": 99.18,
     "earn": false
    },
    {
@@ -4609,8 +5785,8 @@
     "px": 32.36,
     "prePx": 33.94,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.06,
+    "closePx": 33.35,
     "earn": false
    },
    {
@@ -4625,8 +5801,8 @@
     "px": 0.49,
     "prePx": 0.47,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.87,
+    "closePx": 0.48,
     "earn": false
    },
    {
@@ -4641,8 +5817,8 @@
     "px": 61.55,
     "prePx": 64.55,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.93,
+    "closePx": 63.97,
     "earn": false
    },
    {
@@ -4657,8 +5833,8 @@
     "px": 5.76,
     "prePx": 6.04,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.78,
+    "closePx": 5.92,
     "earn": false
    },
    {
@@ -4673,8 +5849,8 @@
     "px": 98.23,
     "prePx": 103,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.49,
+    "closePx": 103.62,
     "earn": false
    },
    {
@@ -4689,8 +5865,8 @@
     "px": 7.85,
     "prePx": 8.23,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.66,
+    "closePx": 8.53,
     "earn": false
    },
    {
@@ -4705,8 +5881,8 @@
     "px": 42.57,
     "prePx": 44.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.71,
+    "closePx": 44.15,
     "earn": false
    },
    {
@@ -4721,8 +5897,8 @@
     "px": 2.89,
     "prePx": 3.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.19,
+    "closePx": 3.04,
     "earn": false
    },
    {
@@ -4737,8 +5913,8 @@
     "px": 140.99,
     "prePx": 147.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.26,
+    "closePx": 146.99,
     "earn": false
    },
    {
@@ -4753,8 +5929,8 @@
     "px": 1.04,
     "prePx": 1.09,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.77,
+    "closePx": 1.1,
     "earn": false
    },
    {
@@ -4769,8 +5945,8 @@
     "px": 3.74,
     "prePx": 3.92,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -3.74,
+    "closePx": 3.6,
     "earn": false
    },
    {
@@ -4785,8 +5961,8 @@
     "px": 3.74,
     "prePx": 3.92,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.49,
+    "closePx": 4.02,
     "earn": false
    },
    {
@@ -4801,8 +5977,8 @@
     "px": 5.42,
     "prePx": 5.68,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.14,
+    "closePx": 5.59,
     "earn": false
    },
    {
@@ -4817,8 +5993,8 @@
     "px": 68.99,
     "prePx": 72.3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.52,
+    "closePx": 74.18,
     "earn": false
    },
    {
@@ -4833,8 +6009,8 @@
     "px": 1.25,
     "prePx": 1.31,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.8,
+    "closePx": 1.36,
     "earn": false
    },
    {
@@ -4849,8 +6025,8 @@
     "px": 23.39,
     "prePx": 24.51,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.23,
+    "closePx": 25.08,
     "earn": false
    },
    {
@@ -4865,8 +6041,8 @@
     "px": 0.85,
     "prePx": 0.89,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.48,
+    "closePx": 0.88,
     "earn": false
    },
    {
@@ -4881,8 +6057,8 @@
     "px": 13.8,
     "prePx": 14.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.25,
+    "closePx": 13.49,
     "earn": false
    },
    {
@@ -4897,24 +6073,24 @@
     "px": 18.42,
     "prePx": 19.3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.89,
+    "closePx": 19.69,
     "earn": false
    },
    {
     "sym": "ARCO",
     "name": "Arcos Dorados Shares",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "餐饮",
+    "zh": "Arcos Dorados Holdings Inc. 作为麦当劳餐厅的特许经营商运营。它在拉丁美洲和加勒比地区21个国家和地区拥有麦当劳餐厅的独家拥有、经营和特许经营权，包括阿根廷、阿鲁巴、巴西、智利、哥伦比亚、哥斯达",
     "track": "其它",
     "mcap": 1455681724,
     "mv": 4.77,
     "px": 6.92,
     "prePx": 7.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.6,
+    "closePx": 7.1,
     "earn": false
    },
    {
@@ -4929,24 +6105,24 @@
     "px": 19.7,
     "prePx": 20.64,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.6,
+    "closePx": 21,
     "earn": false
    },
    {
     "sym": "CINT",
     "name": "CI&T Common Shares",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "软件 - 基础设施",
+    "zh": "CI&T Inc. 及其子公司在北美、欧洲、拉丁美洲、亚太地区和全球范围内提供战略、设计和软件工程服务。它还通过实施软件解决方案参与可定制软件的开发，包括ma",
     "track": "其它",
     "mcap": 383447015,
     "mv": 4.75,
     "px": 2.94,
     "prePx": 3.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.1,
+    "closePx": 3.09,
     "earn": false
    },
    {
@@ -4961,8 +6137,8 @@
     "px": 101.44,
     "prePx": 106.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.35,
+    "closePx": 106.87,
     "earn": false
    },
    {
@@ -4977,8 +6153,8 @@
     "px": 1.38,
     "prePx": 1.45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.42,
+    "closePx": 1.51,
     "earn": false
    },
    {
@@ -4993,8 +6169,8 @@
     "px": 2.3,
     "prePx": 2.41,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.91,
+    "closePx": 2.39,
     "earn": false
    },
    {
@@ -5009,8 +6185,8 @@
     "px": 35.3,
     "prePx": 36.96,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.44,
+    "closePx": 35.81,
     "earn": false
    },
    {
@@ -5025,8 +6201,8 @@
     "px": 155.04,
     "prePx": 162.32,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.28,
+    "closePx": 158.57,
     "earn": false
    },
    {
@@ -5041,8 +6217,8 @@
     "px": 10.03,
     "prePx": 10.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.3,
+    "closePx": 10.06,
     "earn": false
    },
    {
@@ -5057,8 +6233,8 @@
     "px": 67.23,
     "prePx": 70.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.78,
+    "closePx": 69.77,
     "earn": false
    },
    {
@@ -5073,24 +6249,24 @@
     "px": 14.11,
     "prePx": 14.77,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.32,
+    "closePx": 14.72,
     "earn": false
    },
    {
     "sym": "TTEK",
     "name": "Tetra Tech",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "工程建筑",
+    "zh": "Tetra Tech, Inc. 在美国和国际上提供专注于水、环境和可持续基础设施的咨询和工程服务。它通过两个部门运营：政府服务集团 (GSG) 和商业/国际服务集团 (CIG)。 GSG 部分",
     "track": "其它",
     "mcap": 9639994597,
     "mv": 4.68,
     "px": 38.06,
     "prePx": 39.84,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.47,
+    "closePx": 37.88,
     "earn": false
    },
    {
@@ -5105,8 +6281,8 @@
     "px": 2.57,
     "prePx": 2.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.39,
+    "closePx": 2.58,
     "earn": false
    },
    {
@@ -5121,8 +6297,8 @@
     "px": 28.95,
     "prePx": 30.3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.97,
+    "closePx": 30.39,
     "earn": false
    },
    {
@@ -5137,8 +6313,8 @@
     "px": 3.87,
     "prePx": 4.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.39,
+    "closePx": 4.04,
     "earn": false
    },
    {
@@ -5153,8 +6329,8 @@
     "px": 26.28,
     "prePx": 27.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.01,
+    "closePx": 27.86,
     "earn": false
    },
    {
@@ -5169,8 +6345,8 @@
     "px": 14.65,
     "prePx": 15.33,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.39,
+    "closePx": 15,
     "earn": false
    },
    {
@@ -5185,8 +6361,8 @@
     "px": 1194.63,
     "prePx": 1250,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.89,
+    "closePx": 1265.02,
     "earn": false
    },
    {
@@ -5201,8 +6377,8 @@
     "px": 81.5,
     "prePx": 85.27,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.75,
+    "closePx": 82.93,
     "earn": false
    },
    {
@@ -5217,8 +6393,8 @@
     "px": 3.02,
     "prePx": 2.88,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -17.22,
+    "closePx": 2.5,
     "earn": false
    },
    {
@@ -5233,8 +6409,8 @@
     "px": 6.5,
     "prePx": 6.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.23,
+    "closePx": 6.58,
     "earn": false
    },
    {
@@ -5249,8 +6425,8 @@
     "px": 3.04,
     "prePx": 3.18,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.92,
+    "closePx": 3.22,
     "earn": false
    },
    {
@@ -5265,8 +6441,8 @@
     "px": 103.72,
     "prePx": 108.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.2,
+    "closePx": 107.04,
     "earn": false
    },
    {
@@ -5281,8 +6457,8 @@
     "px": 1.09,
     "prePx": 1.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.59,
+    "closePx": 1.14,
     "earn": false
    },
    {
@@ -5297,8 +6473,8 @@
     "px": 5.47,
     "prePx": 5.72,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.19,
+    "closePx": 5.35,
     "earn": false
    },
    {
@@ -5313,8 +6489,8 @@
     "px": 13.07,
     "prePx": 13.67,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.3,
+    "closePx": 13.37,
     "earn": false
    },
    {
@@ -5329,8 +6505,8 @@
     "px": 180.79,
     "prePx": 188.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.67,
+    "closePx": 185.61,
     "earn": false
    },
    {
@@ -5345,8 +6521,8 @@
     "px": 54.47,
     "prePx": 56.93,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.38,
+    "closePx": 57.4,
     "earn": false
    },
    {
@@ -5361,8 +6537,8 @@
     "px": 47.84,
     "prePx": 50,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.8,
+    "closePx": 48.7,
     "earn": false
    },
    {
@@ -5377,8 +6553,8 @@
     "px": 1.89,
     "prePx": 1.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.39,
+    "closePx": 1.84,
     "earn": false
    },
    {
@@ -5393,8 +6569,8 @@
     "px": 17.02,
     "prePx": 17.78,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.02,
+    "closePx": 19.07,
     "earn": false
    },
    {
@@ -5409,8 +6585,8 @@
     "px": 3.25,
     "prePx": 3.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.92,
+    "closePx": 3.22,
     "earn": false
    },
    {
@@ -5425,8 +6601,8 @@
     "px": 163.99,
     "prePx": 171.3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.55,
+    "closePx": 174.73,
     "earn": false
    },
    {
@@ -5441,40 +6617,40 @@
     "px": 77.94,
     "prePx": 81.42,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.2,
+    "closePx": 82.02,
     "earn": false
    },
    {
     "sym": "VRDN",
     "name": "Viridian Therapeutics",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Viridian Therapeutics, Inc. 致力于发现、开发和商业化严重和罕见疾病的治疗方法。该公司开发 IGF-1R 疗法来治疗甲状腺眼病 (TED)，其中包括 Veligrotrug，这是一种针对 IGF",
     "track": "其它",
     "mcap": 4305000802,
     "mv": 4.46,
     "px": 37.91,
     "prePx": 39.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.4,
+    "closePx": 38.82,
     "earn": false
    },
    {
     "sym": "BMM",
     "name": "Blue Moon Metals Common Shares",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "其他工业金属和采矿",
+    "zh": "Blue Moon Metals Inc. 在挪威和美国从事矿产资源勘探和开发。该公司勘探锌、银、金、铜、铅、锗、镓、钨和钼矿床。其旗舰资产是 Nussir 铜金银项目",
     "track": "其它",
     "mcap": 271106195,
     "mv": 4.45,
     "px": 2.47,
     "prePx": 2.58,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.29,
+    "closePx": 2.65,
     "earn": false
    },
    {
@@ -5489,8 +6665,8 @@
     "px": 4.06,
     "prePx": 4.24,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.72,
+    "closePx": 4.13,
     "earn": false
    },
    {
@@ -5505,8 +6681,8 @@
     "px": 2.03,
     "prePx": 2.12,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 15.76,
+    "closePx": 2.35,
     "earn": false
    },
    {
@@ -5521,8 +6697,8 @@
     "px": 0.51,
     "prePx": 0.53,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.96,
+    "closePx": 0.52,
     "earn": false
    },
    {
@@ -5537,24 +6713,24 @@
     "px": 406.03,
     "prePx": 423.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.56,
+    "closePx": 424.54,
     "earn": false
    },
    {
     "sym": "ATEX",
     "name": "Anterix",
     "sec": "通信服务",
-    "ind": "",
-    "zh": "",
+    "ind": "电信服务",
+    "zh": "Anterix Inc. 作为 900 MHz 许可频谱的持有者运营，覆盖范围涵盖美国、夏威夷、阿拉斯加和波多黎各邻近的公用事业和关键基础设施企业客户。它提供TowerX，塔站接入服务； CatalyX，交钥匙连接管理",
     "track": "其它",
     "mcap": 1488560566,
     "mv": 4.4,
     "px": 75.67,
     "prePx": 79,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.57,
+    "closePx": 83.67,
     "earn": false
    },
    {
@@ -5569,8 +6745,8 @@
     "px": 1.59,
     "prePx": 1.66,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.92,
+    "closePx": 1.7,
     "earn": false
    },
    {
@@ -5585,8 +6761,8 @@
     "px": 13.44,
     "prePx": 14.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.27,
+    "closePx": 13.88,
     "earn": false
    },
    {
@@ -5601,8 +6777,8 @@
     "px": 133.4,
     "prePx": 139.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.28,
+    "closePx": 141.78,
     "earn": false
    },
    {
@@ -5617,8 +6793,8 @@
     "px": 9.57,
     "prePx": 9.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7,
+    "closePx": 10.24,
     "earn": false
    },
    {
@@ -5633,24 +6809,24 @@
     "px": 3.66,
     "prePx": 3.82,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.55,
+    "closePx": 3.79,
     "earn": false
    },
    {
     "sym": "ARW",
     "name": "Arrow Electronics",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "电子及电脑分销",
+    "zh": "Arrow Electronics, Inc. 为美洲、欧洲、中东、非洲和亚太地区的企业计算解决方案制造商、服务提供商和用户采购和设计技术。它分为两个部门：全球组件部门和全球企业计算解决方案部门。",
     "track": "其它",
     "mcap": 8681482830,
     "mv": 4.35,
     "px": 171.73,
     "prePx": 179.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.92,
+    "closePx": 175.03,
     "earn": false
    },
    {
@@ -5665,8 +6841,8 @@
     "px": 100.24,
     "prePx": 104.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.83,
+    "closePx": 105.08,
     "earn": false
    },
    {
@@ -5681,8 +6857,8 @@
     "px": 1.62,
     "prePx": 1.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.47,
+    "closePx": 1.66,
     "earn": false
    },
    {
@@ -5697,8 +6873,8 @@
     "px": 46.91,
     "prePx": 48.94,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.2,
+    "closePx": 48.41,
     "earn": false
    },
    {
@@ -5713,8 +6889,8 @@
     "px": 4.79,
     "prePx": 5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.38,
+    "closePx": 5,
     "earn": false
    },
    {
@@ -5729,8 +6905,8 @@
     "px": 2.05,
     "prePx": 2.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.44,
+    "closePx": 2.1,
     "earn": false
    },
    {
@@ -5745,8 +6921,8 @@
     "px": 22.4,
     "prePx": 23.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.87,
+    "closePx": 23.49,
     "earn": false
    },
    {
@@ -5761,8 +6937,8 @@
     "px": 188.2,
     "prePx": 196.31,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.45,
+    "closePx": 194.7,
     "earn": false
    },
    {
@@ -5777,8 +6953,8 @@
     "px": 295.12,
     "prePx": 307.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.97,
+    "closePx": 306.85,
     "earn": false
    },
    {
@@ -5793,8 +6969,8 @@
     "px": 1.4,
     "prePx": 1.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.14,
+    "closePx": 1.5,
     "earn": false
    },
    {
@@ -5809,8 +6985,8 @@
     "px": 17.26,
     "prePx": 18,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.85,
+    "closePx": 17.58,
     "earn": false
    },
    {
@@ -5825,8 +7001,8 @@
     "px": 2.56,
     "prePx": 2.67,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.56,
+    "closePx": 2.6,
     "earn": false
    },
    {
@@ -5841,8 +7017,8 @@
     "px": 33.47,
     "prePx": 34.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4,
+    "closePx": 34.81,
     "earn": false
    },
    {
@@ -5857,8 +7033,8 @@
     "px": 73.08,
     "prePx": 76.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.82,
+    "closePx": 75.14,
     "earn": false
    },
    {
@@ -5873,8 +7049,8 @@
     "px": 0.86,
     "prePx": 0.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.22,
+    "closePx": 0.87,
     "earn": false
    },
    {
@@ -5889,8 +7065,8 @@
     "px": 11.04,
     "prePx": 11.51,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.87,
+    "closePx": 12.24,
     "earn": false
    },
    {
@@ -5905,8 +7081,8 @@
     "px": 4.48,
     "prePx": 4.67,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.26,
+    "closePx": 4.85,
     "earn": false
    },
    {
@@ -5921,8 +7097,8 @@
     "px": 297.06,
     "prePx": 309.65,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.7,
+    "closePx": 316.96,
     "earn": false
    },
    {
@@ -5937,8 +7113,8 @@
     "px": 2.83,
     "prePx": 2.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 34.28,
+    "closePx": 3.8,
     "earn": false
    },
    {
@@ -5953,8 +7129,8 @@
     "px": 4.49,
     "prePx": 4.68,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.58,
+    "closePx": 4.92,
     "earn": false
    },
    {
@@ -5969,8 +7145,8 @@
     "px": 1.18,
     "prePx": 1.23,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.47,
+    "closePx": 1.28,
     "earn": false
    },
    {
@@ -5985,24 +7161,24 @@
     "px": 122.6,
     "prePx": 127.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.87,
+    "closePx": 131.02,
     "earn": false
    },
    {
     "sym": "WLYB",
     "name": "John Wiley & Sons",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "出版",
+    "zh": "John Wiley & Sons, Inc. 是一家出版商，为美国、英国、德国和国际上的科学发现、创新和学习的进步提供权威的内容和研究情报。它通过研究和学习部门运作。公司'",
     "track": "其它",
     "mcap": 2397056720,
     "mv": -4.22,
     "px": 51.16,
     "prePx": 49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0,
+    "closePx": 51.16,
     "earn": false
    },
    {
@@ -6017,24 +7193,24 @@
     "px": 54.7,
     "prePx": 57,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.25,
+    "closePx": 59.76,
     "earn": false
    },
    {
     "sym": "TRUP",
     "name": "Trupanion",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "保险 - 财产与意外伤害",
+    "zh": "Trupanion, Inc. 及其子公司在美国、加拿大和欧洲大陆以订阅方式为猫和狗提供医疗保险。该公司分为两个部门：订阅业务部门和其他业务部门。它为宠物主人和兽医提供服务。公司简介",
     "track": "其它",
     "mcap": 1577908540,
     "mv": 4.2,
     "px": 36.47,
     "prePx": 38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.31,
+    "closePx": 38.77,
     "earn": false
    },
    {
@@ -6049,8 +7225,8 @@
     "px": 48.24,
     "prePx": 50.27,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.27,
+    "closePx": 50.3,
     "earn": false
    },
    {
@@ -6065,8 +7241,8 @@
     "px": 2.4,
     "prePx": 2.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.83,
+    "closePx": 2.42,
     "earn": false
    },
    {
@@ -6081,8 +7257,8 @@
     "px": 1.23,
     "prePx": 1.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.25,
+    "closePx": 1.27,
     "earn": false
    },
    {
@@ -6097,8 +7273,8 @@
     "px": 6.29,
     "prePx": 6.55,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -7.15,
+    "closePx": 5.84,
     "earn": false
    },
    {
@@ -6113,56 +7289,56 @@
     "px": 54.74,
     "prePx": 57,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.14,
+    "closePx": 55.91,
     "earn": false
    },
    {
     "sym": "KEN",
     "name": "Kenon",
     "sec": "公用事业",
-    "ind": "",
-    "zh": "",
+    "ind": "公用事业 - 独立电力生产商",
+    "zh": "Kenon Holdings Ltd. 通过其子公司，在以色列和美国作为发电设施的所有者、开发商和运营商开展业务。它从事电力和能源的生产和供应；发电厂的开发、建设、运营和能源生产",
     "track": "其它",
     "mcap": 2826880537,
     "mv": 4.11,
     "px": 54.17,
     "prePx": 56.48,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.18,
+    "closePx": 55.35,
     "earn": false
    },
    {
     "sym": "FNV",
     "name": "Franco-Nevada",
     "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "ind": "金子",
+    "zh": "Franco-Nevada Corporation 作为一家特许权使用费和流媒体公司，专注于南美洲、中美洲、墨西哥、美国、加拿大、澳大利亚、欧洲和非洲的贵金属。该公司通过贵金属、其他采矿和能源部门开展业务。它还管理其 p",
     "track": "其它",
     "mcap": 47224742234,
     "mv": 4.1,
     "px": 244.76,
     "prePx": 254.8,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.04,
+    "closePx": 259.55,
     "earn": false
    },
    {
     "sym": "OCUL",
     "name": "Ocular Therapeutix",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Oural Therapeutix, Inc. 是一家生物制药公司，在美国利用其基于生物可吸收水凝胶的配方技术从事视网膜疾病和其他眼部疾病疗法的开发和商业化。该公司销售 DEXTENZA，一种地塞米松眼科药物",
     "track": "其它",
     "mcap": 1342139324,
     "mv": 4.1,
     "px": 6.1,
     "prePx": 6.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -3.77,
+    "closePx": 5.87,
     "earn": false
    },
    {
@@ -6177,8 +7353,8 @@
     "px": 4.63,
     "prePx": 4.82,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.16,
+    "closePx": 4.73,
     "earn": false
    },
    {
@@ -6193,8 +7369,8 @@
     "px": 171.98,
     "prePx": 179,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.87,
+    "closePx": 178.64,
     "earn": false
    },
    {
@@ -6209,8 +7385,8 @@
     "px": 15.74,
     "prePx": 16.38,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.02,
+    "closePx": 16.53,
     "earn": false
    },
    {
@@ -6225,8 +7401,8 @@
     "px": 60.52,
     "prePx": 62.98,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.24,
+    "closePx": 61.88,
     "earn": false
    },
    {
@@ -6241,8 +7417,8 @@
     "px": 378.95,
     "prePx": 394.33,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.35,
+    "closePx": 399.21,
     "earn": false
    },
    {
@@ -6257,8 +7433,8 @@
     "px": 8.65,
     "prePx": 9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.51,
+    "closePx": 9.3,
     "earn": false
    },
    {
@@ -6273,8 +7449,8 @@
     "px": 25.96,
     "prePx": 27.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.81,
+    "closePx": 26.69,
     "earn": false
    },
    {
@@ -6289,24 +7465,24 @@
     "px": 4.95,
     "prePx": 5.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.88,
+    "closePx": 5.34,
     "earn": false
    },
    {
     "sym": "TMCR",
     "name": "The Metals Royalty",
     "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "ind": "其他工业金属和采矿",
+    "zh": "TheMetalsRoyaltyCompanyInc. 在北美从事金属和矿物特许权使用费、矿产资源及其他相关权益的收购和管理。它主要持有位于加利福尼亚州圣地亚哥西南部的多金属结核项目NORI矿产2.0%的权益。这",
     "track": "其它",
     "mcap": 147636708,
     "mv": 4.03,
     "px": 2.19,
     "prePx": 2.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.91,
+    "closePx": 2.17,
     "earn": false
    },
    {
@@ -6321,8 +7497,8 @@
     "px": 20.86,
     "prePx": 21.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.98,
+    "closePx": 21.69,
     "earn": false
    },
    {
@@ -6337,24 +7513,24 @@
     "px": 0.98,
     "prePx": 1.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.1,
+    "closePx": 1.06,
     "earn": false
    },
    {
     "sym": "OGG",
     "name": "Osisko Gold Common Shares",
     "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "ind": "金子",
+    "zh": "Osisko Gold Group Inc. 及其子公司在加拿大、墨西哥和美国收购、勘探和开发贵金属资源。该公司勘探贵金属和贱金属、金、银、锂、铜、铅和锌矿床。其旗舰资产是 1",
     "track": "其它",
     "mcap": 650726710,
     "mv": 4,
     "px": 2,
     "prePx": 2.08,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.5,
+    "closePx": 2.13,
     "earn": false
    },
    {
@@ -6369,8 +7545,8 @@
     "px": 1.03,
     "prePx": 1.07,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.85,
+    "closePx": 1.08,
     "earn": false
    },
    {
@@ -6385,8 +7561,8 @@
     "px": 0.47,
     "prePx": 0.49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.31,
+    "closePx": 0.48,
     "earn": false
    },
    {
@@ -6401,8 +7577,8 @@
     "px": 8.55,
     "prePx": 8.89,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.57,
+    "closePx": 8.77,
     "earn": false
    },
    {
@@ -6417,8 +7593,8 @@
     "px": 32.49,
     "prePx": 33.78,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.71,
+    "closePx": 34.02,
     "earn": false
    },
    {
@@ -6433,8 +7609,8 @@
     "px": 145.71,
     "prePx": 151.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.48,
+    "closePx": 149.33,
     "earn": false
    },
    {
@@ -6449,8 +7625,8 @@
     "px": 25.03,
     "prePx": 26.02,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.87,
+    "closePx": 26.75,
     "earn": false
    },
    {
@@ -6465,8 +7641,8 @@
     "px": 108.07,
     "prePx": 112.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.67,
+    "closePx": 109.88,
     "earn": false
    },
    {
@@ -6481,8 +7657,8 @@
     "px": 1.27,
     "prePx": 1.32,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.66,
+    "closePx": 1.38,
     "earn": false
    },
    {
@@ -6497,24 +7673,24 @@
     "px": 11.92,
     "prePx": 12.39,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.85,
+    "closePx": 12.26,
     "earn": false
    },
    {
     "sym": "PCAR",
     "name": "PACCAR",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "农用和重型工程机械",
+    "zh": "PACCAR Inc 在美国、加拿大、澳大利亚、墨西哥、欧洲、中美洲和南美洲以及国际上设计、制造和分销轻型、中型和重型商用卡车。它通过三个部门运营：卡车部门、零部件部门和金融服务部门。卡车部分设计",
     "track": "其它",
     "mcap": 56836250266,
     "mv": 3.94,
     "px": 107.95,
     "prePx": 112.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.87,
+    "closePx": 109.97,
     "earn": false
    },
    {
@@ -6529,8 +7705,8 @@
     "px": 14.31,
     "prePx": 14.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.33,
+    "closePx": 14.93,
     "earn": false
    },
    {
@@ -6545,8 +7721,8 @@
     "px": 12.57,
     "prePx": 13.06,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.23,
+    "closePx": 12.85,
     "earn": false
    },
    {
@@ -6561,8 +7737,8 @@
     "px": 1.49,
     "prePx": 1.55,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 16.11,
+    "closePx": 1.73,
     "earn": false
    },
    {
@@ -6577,8 +7753,8 @@
     "px": 10.72,
     "prePx": 11.14,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.65,
+    "closePx": 10.79,
     "earn": false
    },
    {
@@ -6593,8 +7769,8 @@
     "px": 104.85,
     "prePx": 108.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.36,
+    "closePx": 111.52,
     "earn": false
    },
    {
@@ -6609,8 +7785,8 @@
     "px": 36.2,
     "prePx": 37.61,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.17,
+    "closePx": 37.71,
     "earn": false
    },
    {
@@ -6625,8 +7801,8 @@
     "px": 7.21,
     "prePx": 7.49,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.41,
+    "closePx": 7.6,
     "earn": false
    },
    {
@@ -6641,8 +7817,8 @@
     "px": 8.27,
     "prePx": 8.59,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 14.51,
+    "closePx": 9.47,
     "earn": false
    },
    {
@@ -6657,24 +7833,24 @@
     "px": 4.41,
     "prePx": 4.58,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.4,
+    "closePx": 4.56,
     "earn": false
    },
    {
     "sym": "MTW",
     "name": "Manitowoc (The)",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "农用和重型工程机械",
+    "zh": "马尼托瓦克公司及其子公司在美洲、欧洲、非洲、中东、亚太地区和国际上提供工程起重解决方案。该公司设计、制造和销售 Manitowoc 品牌的履带式桁架臂起重机",
     "track": "其它",
     "mcap": 826127611,
     "mv": -3.85,
     "px": 22.92,
     "prePx": 22,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.53,
+    "closePx": 23.73,
     "earn": false
    },
    {
@@ -6689,8 +7865,8 @@
     "px": 3.9,
     "prePx": 4.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.85,
+    "closePx": 4.05,
     "earn": false
    },
    {
@@ -6705,24 +7881,24 @@
     "px": 57.66,
     "prePx": 59.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.71,
+    "closePx": 60.37,
     "earn": false
    },
    {
     "sym": "DNLI",
     "name": "Denali Therapeutics",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Denali Therapeutics Inc. 是一家生物制药公司，致力于发现和开发治疗神经退行性疾病和溶酶体贮积病的疗法。公司开发针对外周炎症性疾病的Eclitasertib（SAR443122/DNL758）RIP",
     "track": "其它",
     "mcap": 3367704371,
     "mv": -3.83,
     "px": 21.01,
     "prePx": 20.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.19,
+    "closePx": 20.97,
     "earn": false
    },
    {
@@ -6737,8 +7913,8 @@
     "px": 1.83,
     "prePx": 1.9,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.83,
+    "closePx": 1.9,
     "earn": false
    },
    {
@@ -6753,8 +7929,8 @@
     "px": 8.11,
     "prePx": 8.42,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.48,
+    "closePx": 8.23,
     "earn": false
    },
    {
@@ -6769,8 +7945,8 @@
     "px": 2.89,
     "prePx": 3,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.42,
+    "closePx": 2.96,
     "earn": false
    },
    {
@@ -6785,8 +7961,8 @@
     "px": 7.1,
     "prePx": 7.37,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.35,
+    "closePx": 7.48,
     "earn": false
    },
    {
@@ -6801,8 +7977,8 @@
     "px": 10.59,
     "prePx": 10.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.17,
+    "closePx": 10.82,
     "earn": false
    },
    {
@@ -6817,8 +7993,8 @@
     "px": 4.49,
     "prePx": 4.66,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.22,
+    "closePx": 4.48,
     "earn": false
    },
    {
@@ -6833,8 +8009,8 @@
     "px": 261.11,
     "prePx": 271,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.94,
+    "closePx": 271.41,
     "earn": false
    },
    {
@@ -6849,8 +8025,8 @@
     "px": 342.34,
     "prePx": 355.27,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.21,
+    "closePx": 353.34,
     "earn": false
    },
    {
@@ -6865,24 +8041,24 @@
     "px": 262.19,
     "prePx": 272.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.79,
+    "closePx": 269.5,
     "earn": false
    },
    {
     "sym": "KOS",
     "name": "Kosmos Energy Common Shares (DE)",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气勘探与生产",
+    "zh": "Kosmos Energy Ltd.是一家深水勘探和生产公司，从事石油和天然气资产的勘探、开发和生产。它在加纳、赤道几内亚、毛里塔尼亚、塞内加尔和美洲湾近海拥有石油和天然气生产项目。该公司是为",
     "track": "其它",
     "mcap": 952882242,
     "mv": 3.73,
     "px": 1.61,
     "prePx": 1.67,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.11,
+    "closePx": 1.66,
     "earn": false
    },
    {
@@ -6897,8 +8073,8 @@
     "px": 103.88,
     "prePx": 107.75,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.13,
+    "closePx": 107.13,
     "earn": false
    },
    {
@@ -6913,8 +8089,8 @@
     "px": 23.31,
     "prePx": 24.18,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.93,
+    "closePx": 23.76,
     "earn": false
    },
    {
@@ -6929,8 +8105,8 @@
     "px": 333.11,
     "prePx": 345.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.87,
+    "closePx": 346,
     "earn": false
    },
    {
@@ -6945,24 +8121,24 @@
     "px": 40.82,
     "prePx": 42.32,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.75,
+    "closePx": 42.76,
     "earn": false
    },
    {
     "sym": "VRXA",
     "name": "Veraxa Biotech",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Veraxa Biotech AG 开发用于癌症治疗的抗体疗法和抗体药物偶联物。该公司开发基于抗体的疗法，包括抗体药物偶联物和双特异性抗体形式，并提供用于功能性抗体筛选的专有技术平台",
     "track": "其它",
     "mcap": 192314626,
     "mv": -3.68,
     "px": 1.36,
     "prePx": 1.31,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 15.44,
+    "closePx": 1.57,
     "earn": false
    },
    {
@@ -6977,8 +8153,8 @@
     "px": 292.33,
     "prePx": 303.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.51,
+    "closePx": 302.6,
     "earn": false
    },
    {
@@ -6993,8 +8169,8 @@
     "px": 74.74,
     "prePx": 77.48,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.67,
+    "closePx": 78.23,
     "earn": false
    },
    {
@@ -7009,8 +8185,8 @@
     "px": 25.18,
     "prePx": 26.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.77,
+    "closePx": 26.13,
     "earn": false
    },
    {
@@ -7025,40 +8201,40 @@
     "px": 80.18,
     "prePx": 83.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.2,
+    "closePx": 81.94,
     "earn": false
    },
    {
     "sym": "VFS",
     "name": "VinFast Auto",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "汽车制造商",
+    "zh": "VinFast Auto Ltd. 在越南、加拿大、印度、欧洲和美国从事电动汽车 (EV)、电动踏板车和电动巴士的设计和制造。该公司通过三个部门运营：汽车部门、电动踏板车部门和电动巴士部门。集设计、开发、制造、销售于一体",
     "track": "其它",
     "mcap": 6574096188,
     "mv": 3.64,
     "px": 2.81,
     "prePx": 2.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.49,
+    "closePx": 2.74,
     "earn": false
    },
    {
     "sym": "ZNTL",
     "name": "Zentalis Pharmaceuticals",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Zentalis Pharmaceuticals, Inc. 是一家临床阶段的生物制药公司，在美国专注于发现和开发用于治疗各种癌症的小分子疗法。它开发了 azenosertib，该药物正处于治疗卵巢癌的 3 期临床试验中",
     "track": "其它",
     "mcap": 162138674,
     "mv": 3.64,
     "px": 1.65,
     "prePx": 1.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.61,
+    "closePx": 1.66,
     "earn": false
    },
    {
@@ -7073,8 +8249,8 @@
     "px": 3.04,
     "prePx": 3.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.15,
+    "closePx": 3.08,
     "earn": false
    },
    {
@@ -7089,8 +8265,8 @@
     "px": 2.65,
     "prePx": 2.74,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.1,
+    "closePx": 2.78,
     "earn": false
    },
    {
@@ -7105,8 +8281,8 @@
     "px": 241.28,
     "prePx": 250,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.95,
+    "closePx": 253.22,
     "earn": false
    },
    {
@@ -7121,8 +8297,8 @@
     "px": 2.63,
     "prePx": 2.73,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.85,
+    "closePx": 2.71,
     "earn": false
    },
    {
@@ -7137,8 +8313,8 @@
     "px": 161.21,
     "prePx": 167,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.72,
+    "closePx": 165.59,
     "earn": false
    },
    {
@@ -7153,8 +8329,8 @@
     "px": 67.57,
     "prePx": 69.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.24,
+    "closePx": 69.76,
     "earn": false
    },
    {
@@ -7169,8 +8345,8 @@
     "px": 9.3,
     "prePx": 9.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.66,
+    "closePx": 9.64,
     "earn": false
    },
    {
@@ -7185,8 +8361,8 @@
     "px": 36.24,
     "prePx": 37.52,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.41,
+    "closePx": 38.2,
     "earn": false
    },
    {
@@ -7201,8 +8377,8 @@
     "px": 4.52,
     "prePx": 4.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.21,
+    "closePx": 4.42,
     "earn": false
    },
    {
@@ -7217,8 +8393,8 @@
     "px": 6.74,
     "prePx": 6.98,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.04,
+    "closePx": 7.08,
     "earn": false
    },
    {
@@ -7233,8 +8409,8 @@
     "px": 168.66,
     "prePx": 174.6,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.29,
+    "closePx": 179.27,
     "earn": false
    },
    {
@@ -7249,24 +8425,24 @@
     "px": 0.27,
     "prePx": 0.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -4.56,
+    "closePx": 0.26,
     "earn": false
    },
    {
     "sym": "PTEN",
     "name": "Patterson-UTI Energy",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气钻探",
+    "zh": "Patterson-UTI Energy, Inc. 通过其子公司为美国、加拿大、哥伦比亚和国际上的石油和天然气勘探和生产公司提供钻井和完井服务。该公司通过三个部门运营：钻井服务部门、完井服务部门和钻井服务部门。",
     "track": "其它",
     "mcap": 3790393792,
     "mv": 3.5,
     "px": 9.99,
     "prePx": 10.34,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.65,
+    "closePx": 10.36,
     "earn": false
    },
    {
@@ -7281,8 +8457,8 @@
     "px": 4.58,
     "prePx": 4.74,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.18,
+    "closePx": 4.68,
     "earn": false
    },
    {
@@ -7297,8 +8473,8 @@
     "px": 0.55,
     "prePx": 0.57,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -3.91,
+    "closePx": 0.53,
     "earn": false
    },
    {
@@ -7313,8 +8489,8 @@
     "px": 62.48,
     "prePx": 64.64,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.02,
+    "closePx": 66.24,
     "earn": false
    },
    {
@@ -7329,24 +8505,24 @@
     "px": 2.61,
     "prePx": 2.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.45,
+    "closePx": 2.7,
     "earn": false
    },
    {
     "sym": "HESM",
     "name": "Hess Midstream Representing Partner Interests",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气中游",
+    "zh": "Hess Midstream LP 收购、拥有、运营和开发中游资产，并向美国的赞助商、其子公司和第三方客户提供收费服务。它通过三个部分运作：收集；加工和储存；以及终端和导出。聚会部分",
     "track": "其它",
     "mcap": 3810737657,
     "mv": 3.4,
     "px": 29.69,
     "prePx": 30.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.08,
+    "closePx": 30.01,
     "earn": false
    },
    {
@@ -7361,8 +8537,8 @@
     "px": 1.77,
     "prePx": 1.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.56,
+    "closePx": 1.76,
     "earn": false
    },
    {
@@ -7377,8 +8553,8 @@
     "px": 41.69,
     "prePx": 43.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.09,
+    "closePx": 42.98,
     "earn": false
    },
    {
@@ -7393,8 +8569,8 @@
     "px": 267.69,
     "prePx": 276.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.13,
+    "closePx": 278.74,
     "earn": false
    },
    {
@@ -7409,8 +8585,8 @@
     "px": 715,
     "prePx": 739,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.84,
+    "closePx": 735.31,
     "earn": false
    },
    {
@@ -7425,8 +8601,8 @@
     "px": 5.97,
     "prePx": 6.17,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 11.22,
+    "closePx": 6.64,
     "earn": false
    },
    {
@@ -7441,72 +8617,72 @@
     "px": 7.79,
     "prePx": 8.05,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.01,
+    "closePx": 8.18,
     "earn": false
    },
    {
     "sym": "BKR",
     "name": "Baker Hughes",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气设备与服务",
+    "zh": "贝克休斯公司为能源和工业价值链提供一系列技术和服务。其油田服务和设备部门设计和制造陆上勘探、评估、开发、生产、复兴和退役产品及相关服务",
     "track": "其它",
     "mcap": 46039118008,
     "mv": 3.34,
     "px": 46.36,
     "prePx": 47.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.39,
+    "closePx": 47.47,
     "earn": false
    },
    {
     "sym": "BTU",
     "name": "Peabody Energy",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "动力煤",
+    "zh": "皮博迪能源公司从事冶金煤和动力煤的生产。该公司通过 Seaborne Thermal、Seaborne Metallurgical、Powder River Basin 和其他美国热力部门运营。该公司在澳大利亚新南威尔士",
     "track": "其它",
     "mcap": 2004036000,
     "mv": 3.34,
     "px": 16.45,
     "prePx": 17,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.17,
+    "closePx": 17.3,
     "earn": false
    },
    {
     "sym": "MDA",
     "name": "MDA Space Common Shares",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "航空航天与国防",
+    "zh": "MDA Space Ltd. 在加拿大、美国、欧洲、亚洲、中东和国际上提供空间技术解决方案和服务。它提供卫星通信解决方案，例如天基宽带互联网、直接到设备的卫星通信和物联网连接；丙二醛",
     "track": "其它",
     "mcap": 4420072729,
     "mv": 3.34,
     "px": 27.24,
     "prePx": 28.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 7.01,
+    "closePx": 29.15,
     "earn": false
    },
    {
     "sym": "CLMT",
     "name": "Calumet",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "特种化学品",
+    "zh": "Calumet, Inc. 在北美和国际上生产、配制和销售一系列专业品牌产品和可再生燃料。它通过专业产品和解决方案运营；性能品牌；和蒙大拿州/可再生能源部门。特种产品和解决方案部门",
     "track": "其它",
     "mcap": 2387305124,
     "mv": 3.32,
     "px": 27.1,
     "prePx": 28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.4,
+    "closePx": 27.48,
     "earn": false
    },
    {
@@ -7521,8 +8697,8 @@
     "px": 5.72,
     "prePx": 5.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.14,
+    "closePx": 6.3,
     "earn": false
    },
    {
@@ -7537,8 +8713,8 @@
     "px": 31.97,
     "prePx": 33.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.5,
+    "closePx": 33.41,
     "earn": false
    },
    {
@@ -7553,8 +8729,8 @@
     "px": 2.42,
     "prePx": 2.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.07,
+    "closePx": 2.47,
     "earn": false
    },
    {
@@ -7569,24 +8745,24 @@
     "px": 4.83,
     "prePx": 4.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.31,
+    "closePx": 4.99,
     "earn": false
    },
    {
     "sym": "UWMC",
     "name": "UWM",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "抵押贷款金融",
+    "zh": "UWM Holdings Corporation 在美国从事住宅抵押贷款的发放、销售和服务。该公司通过批发渠道提供抵押贷款。它主要源自合格贷款和政府贷款。公司成立于1986年，总部位于波",
     "track": "其它",
     "mcap": 1953440013,
     "mv": 3.31,
     "px": 1.21,
     "prePx": 1.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -2.48,
+    "closePx": 1.18,
     "earn": false
    },
    {
@@ -7601,8 +8777,8 @@
     "px": 4.55,
     "prePx": 4.7,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 9.45,
+    "closePx": 4.98,
     "earn": false
    },
    {
@@ -7617,24 +8793,24 @@
     "px": 405.09,
     "prePx": 418.45,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.7,
+    "closePx": 420.07,
     "earn": false
    },
    {
     "sym": "BBOT",
     "name": "BridgeBio Oncology Therapeutics",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "BridgeBio Oncology Therapeutics, Inc.是一家临床阶段的生物技术公司，在美国从事治疗肾素-血管紧张素系统和磷酸肌醇3激酶恶性肿瘤的小分子疗法的开发。该公司开发了 BBO-8520，一种口",
     "track": "其它",
     "mcap": 170935199,
     "mv": 3.29,
     "px": 2.13,
     "prePx": 2.2,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.1,
+    "closePx": 2.26,
     "earn": false
    },
    {
@@ -7649,8 +8825,8 @@
     "px": 1.06,
     "prePx": 1.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 8.45,
+    "closePx": 1.16,
     "earn": false
    },
    {
@@ -7665,56 +8841,56 @@
     "px": 565.47,
     "prePx": 584,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.68,
+    "closePx": 580.6,
     "earn": false
    },
    {
     "sym": "WFRD",
     "name": "Weatherford International",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气设备与服务",
+    "zh": "威德福国际公司为全球石油、地热和天然气井的钻探、评估、完井、生产和干预提供设备和服务。它提供控制压力钻井；定向钻井、测井和测量；与旋转相关的服务",
     "track": "其它",
     "mcap": 5612823496,
     "mv": 3.28,
     "px": 77.45,
     "prePx": 79.99,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.11,
+    "closePx": 80.63,
     "earn": false
    },
    {
     "sym": "META",
     "name": "脸书(META)",
     "sec": "平台",
-    "ind": "",
-    "zh": "",
+    "ind": "互联网内容和信息",
+    "zh": "Meta Platforms, Inc. 致力于开发产品，使人们能够在美国、加拿大、欧洲、亚太地区和国际上通过移动设备、个人电脑、虚拟现实 (VR) 耳机和人工智能眼镜与朋友和家人联系和分享。它的运作方式是",
     "track": "其它",
     "mcap": 1559025977792,
     "mv": 3.27,
     "px": 609.89,
     "prePx": 629.81,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.13,
+    "closePx": 628.96,
     "earn": false
    },
    {
     "sym": "VNT",
     "name": "Vontier",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "科学技术仪器",
+    "zh": "Vontier Corporation 在全球范围内提供移动生态系统解决方案。该公司通过三个部门运营：移动技术部门、维修解决方案部门以及环境和燃料解决方案部门。移动技术部门为移动提供数字化设备和操作软件解决方案",
     "track": "其它",
     "mcap": 6041736000,
     "mv": 3.27,
     "px": 45.51,
     "prePx": 47,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.9,
+    "closePx": 45.92,
     "earn": false
    },
    {
@@ -7729,8 +8905,8 @@
     "px": 61.01,
     "prePx": 63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.88,
+    "closePx": 64.6,
     "earn": false
    },
    {
@@ -7745,8 +8921,8 @@
     "px": 8.5,
     "prePx": 8.22,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.88,
+    "closePx": 8.57,
     "earn": false
    },
    {
@@ -7761,8 +8937,8 @@
     "px": 16.65,
     "prePx": 17.19,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.01,
+    "closePx": 17.65,
     "earn": false
    },
    {
@@ -7777,8 +8953,8 @@
     "px": 121.32,
     "prePx": 125.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.1,
+    "closePx": 122.65,
     "earn": false
    },
    {
@@ -7793,8 +8969,8 @@
     "px": 82.79,
     "prePx": 85.46,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.98,
+    "closePx": 91.88,
     "earn": false
    },
    {
@@ -7809,24 +8985,24 @@
     "px": 300.86,
     "prePx": 310.59,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.82,
+    "closePx": 312.34,
     "earn": false
    },
    {
     "sym": "CLOV",
     "name": "Clover Health Investments",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "医疗保健计划",
+    "zh": "Clover Health Investments, Corp. 在美国提供医疗保险优势计划。该公司向符合医疗保险资格的个人提供首选提供商组织和健康维护组织计划。它还运营 Clover Assistant，这是一个供医生",
     "track": "其它",
     "mcap": 2013182050,
     "mv": 3.23,
     "px": 3.76,
     "prePx": 3.88,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.8,
+    "closePx": 3.73,
     "earn": false
    },
    {
@@ -7841,8 +9017,8 @@
     "px": 1.24,
     "prePx": 1.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.03,
+    "closePx": 1.29,
     "earn": false
    },
    {
@@ -7857,24 +9033,24 @@
     "px": 1.24,
     "prePx": 1.28,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -7.26,
+    "closePx": 1.15,
     "earn": false
    },
    {
     "sym": "NUE",
     "name": "Nucor",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "钢",
+    "zh": "纽柯公司从事钢铁及钢铁产品的制造和销售。该公司分为三个部门：钢厂部门、钢铁产品部门和原材料部门。钢厂部门生产热轧、冷轧和镀锌钢板产品；钢板制品；宽法兰",
     "track": "其它",
     "mcap": 55833394173,
     "mv": 3.23,
     "px": 248.34,
     "prePx": 256.35,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.39,
+    "closePx": 256.75,
     "earn": false
    },
    {
@@ -7889,24 +9065,24 @@
     "px": 163.59,
     "prePx": 168.87,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 5.24,
+    "closePx": 172.17,
     "earn": false
    },
    {
     "sym": "EGHT",
     "name": "8x8",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "软件 - 应用程序",
+    "zh": "8x8, Inc. 在全球范围内提供联络中心、语音、视频、聊天和企业级应用程序可编程接口 (API) 解决方案。该公司提供 8x8 Work，这是一种统一的通信即服务解决方案，可实现跨语音、视频、聊天和消息的协作和业务连",
     "track": "其它",
     "mcap": 296172778,
     "mv": 3.21,
     "px": 2.03,
     "prePx": 2.1,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.96,
+    "closePx": 2.09,
     "earn": false
    },
    {
@@ -7921,8 +9097,8 @@
     "px": 317.81,
     "prePx": 328,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.55,
+    "closePx": 325.92,
     "earn": false
    },
    {
@@ -7937,72 +9113,72 @@
     "px": 8.13,
     "prePx": 8.39,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 12.3,
+    "closePx": 9.13,
     "earn": false
    },
    {
     "sym": "PSUS",
     "name": "Pershing Square USA Common Shares",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "资产管理",
+    "zh": "Pershing Square USA, Ltd.是由Pershing Square Capital Management, L.P.发起并管理的封闭式股票基金，投资于北美公开股票市场。该基金投资于多元化行业的公司股票。",
     "track": "其它",
     "mcap": 909366250,
     "mv": 3.2,
     "px": 34.74,
     "prePx": 35.85,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.28,
+    "closePx": 35.88,
     "earn": false
    },
    {
     "sym": "RUN",
     "name": "Sunrun",
     "sec": "Miscellaneous",
-    "ind": "",
-    "zh": "",
+    "ind": "太阳的",
+    "zh": "Sunrun Inc. 在美国设计、开发、安装、销售、拥有和维护住宅太阳能系统。该公司销售太阳能系统和产品，例如面板和支架；以及为客户产生的太阳能销售线索。它提供电池存储和太阳能系统",
     "track": "其它",
     "mcap": 1669528561,
     "mv": 3.19,
     "px": 6.9,
     "prePx": 7.12,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.01,
+    "closePx": 6.97,
     "earn": false
    },
    {
     "sym": "GEVO",
     "name": "Gevo",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "特种化学品",
+    "zh": "Gevo, Inc. 是一家碳减排公司。它分为四个部门：Gevo、GevoFuels、GevoRNG 和 GevoND。该公司提供可持续航空燃料、发动机燃料以及化学品和材料；某些特种燃料、道路燃料和某些用于食品链（包括产",
     "track": "其它",
     "mcap": 388380697,
     "mv": 3.18,
     "px": 1.57,
     "prePx": 1.62,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.82,
+    "closePx": 1.63,
     "earn": false
    },
    {
     "sym": "HAFN",
     "name": "Hafnia Common Shares",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "海运",
+    "zh": "Hafnia Limited. 是一家投资控股公司，在百慕大拥有并经营成品油轮。它通过远程 II、远程 I、中程 (MR) 和便携式尺寸段进行操作。公司向国家一级运输洁净、脏污、成品油、植物油、易化学品",
     "track": "其它",
     "mcap": 4729650746,
     "mv": 3.17,
     "px": 8.84,
     "prePx": 9.12,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.47,
+    "closePx": 8.97,
     "earn": false
    },
    {
@@ -8017,8 +9193,8 @@
     "px": 351.61,
     "prePx": 362.75,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.28,
+    "closePx": 359.64,
     "earn": false
    },
    {
@@ -8033,8 +9209,8 @@
     "px": 91.37,
     "prePx": 94.26,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.83,
+    "closePx": 95.78,
     "earn": false
    },
    {
@@ -8049,8 +9225,8 @@
     "px": 17.84,
     "prePx": 18.4,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.9,
+    "closePx": 18,
     "earn": false
    },
    {
@@ -8065,40 +9241,40 @@
     "px": 543.69,
     "prePx": 560.69,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.32,
+    "closePx": 561.74,
     "earn": false
    },
    {
     "sym": "HRI",
     "name": "Herc",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "租赁服务",
+    "zh": "Herc Holdings Inc. 及其子公司在美国和国际上作为设备租赁供应商运营。它租赁空中、土方、物料搬运、卡车和拖车、空气压缩机、压实和照明设备。该公司提供 ProSolutions，这是一个行业",
     "track": "其它",
     "mcap": 4570095992,
     "mv": 3.13,
     "px": 136.64,
     "prePx": 140.91,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.09,
+    "closePx": 144.96,
     "earn": false
    },
    {
     "sym": "KRMD",
     "name": "KORU Medical Systems (DE)",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "医疗器械及用品",
+    "zh": "KORU Medical Systems, Inc. 主要为美国和国际皮下给药市场开发、制造和商业化皮下输液解决方案。该公司提供 FREEDOM 输液系统，为慢性病患者提供治疗，",
     "track": "其它",
     "mcap": 163240620,
     "mv": 3.13,
     "px": 3.52,
     "prePx": 3.63,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.56,
+    "closePx": 3.61,
     "earn": false
    },
    {
@@ -8113,8 +9289,8 @@
     "px": 154.17,
     "prePx": 159,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.26,
+    "closePx": 157.65,
     "earn": false
    },
    {
@@ -8129,8 +9305,8 @@
     "px": 147.88,
     "prePx": 152.5,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.28,
+    "closePx": 149.77,
     "earn": false
    },
    {
@@ -8145,8 +9321,8 @@
     "px": 1.29,
     "prePx": 1.33,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.1,
+    "closePx": 1.33,
     "earn": false
    },
    {
@@ -8161,8 +9337,8 @@
     "px": 91.51,
     "prePx": 94.36,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.54,
+    "closePx": 93.83,
     "earn": false
    },
    {
@@ -8177,56 +9353,56 @@
     "px": 10.59,
     "prePx": 10.92,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 0.38,
+    "closePx": 10.63,
     "earn": false
    },
    {
     "sym": "BSAC",
     "name": "Banco Santander - Chile ADS",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "银行 - 区域",
+    "zh": "智利桑坦德银行及其子公司在智利提供商业和零售银行产品和服务。它通过零售、财富管理和保险、中间市场、企业和投资银行、企业活动和其他部门开展业务。公司提供",
     "track": "其它",
     "mcap": 14529196376,
     "mv": 3.11,
     "px": 30.83,
     "prePx": 31.79,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.02,
+    "closePx": 32.07,
     "earn": false
    },
    {
     "sym": "IMMX",
     "name": "Immix Biopharma",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Immix Biopharma, Inc.是一家临床阶段的生物制药公司，在美国和澳大利亚从事轻链淀粉样变性和免疫介导疾病的嵌合抗原受体细胞疗法的开发。该公司的主导产品是 NXC-201，用于治疗复发/难治性 AL 淀粉样",
     "track": "其它",
     "mcap": 647870285,
     "mv": 3.11,
     "px": 7.73,
     "prePx": 7.97,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.55,
+    "closePx": 7.85,
     "earn": false
    },
    {
     "sym": "NAVN",
     "name": "Navan",
     "sec": "科技",
-    "ind": "",
-    "zh": "",
+    "ind": "软件 - 应用程序",
+    "zh": "Navan, Inc. 运营一个人工智能驱动的软件平台，以简化差旅和费用体验，使用户、客户和供应商受益。该公司提供人工智能驱动的旅行、支付和费用管理解决方案，以简化旅行生命周期，从预订和政策执行到",
     "track": "其它",
     "mcap": 7059728465,
     "mv": 3.11,
     "px": 27.11,
     "prePx": 27.95,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.02,
+    "closePx": 28.2,
     "earn": false
    },
    {
@@ -8241,8 +9417,8 @@
     "px": 11.97,
     "prePx": 12.34,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.67,
+    "closePx": 12.17,
     "earn": false
    },
    {
@@ -8257,8 +9433,8 @@
     "px": 4.16,
     "prePx": 4.29,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 6.73,
+    "closePx": 4.44,
     "earn": false
    },
    {
@@ -8273,8 +9449,8 @@
     "px": 7.14,
     "prePx": 7.36,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 80.67,
+    "closePx": 12.9,
     "earn": false
    },
    {
@@ -8289,8 +9465,8 @@
     "px": 1.95,
     "prePx": 2.01,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.05,
+    "closePx": 1.99,
     "earn": false
    },
    {
@@ -8305,8 +9481,8 @@
     "px": 10.82,
     "prePx": 11.15,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.99,
+    "closePx": 11.36,
     "earn": false
    },
    {
@@ -8321,8 +9497,8 @@
     "px": 113.55,
     "prePx": 117,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 2.66,
+    "closePx": 116.57,
     "earn": false
    },
    {
@@ -8337,8 +9513,8 @@
     "px": 158.25,
     "prePx": 163.07,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 4.74,
+    "closePx": 165.75,
     "earn": false
    },
    {
@@ -8353,8 +9529,8 @@
     "px": 1.3,
     "prePx": 1.34,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -8.46,
+    "closePx": 1.19,
     "earn": false
    },
    {
@@ -8369,56 +9545,56 @@
     "px": 1,
     "prePx": 1.03,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": -0.69,
+    "closePx": 0.99,
     "earn": false
    },
    {
     "sym": "OMDA",
     "name": "Omada Health",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "健康信息服务",
+    "zh": "Omada Health, Inc. 与其子公司 Physera, Inc. 在美国提供一系列虚拟护理计划。该公司提供针对糖尿病前期、糖尿病和高血压的心脏代谢项目；解决肌肉骨骼疾病的物理治疗计划；其他支持公关",
     "track": "其它",
     "mcap": 733906287,
     "mv": 3.01,
     "px": 11.83,
     "prePx": 12.19,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 3.55,
+    "closePx": 12.25,
     "earn": false
    },
    {
     "sym": "OPK",
     "name": "OPKO Health",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "诊断与研究",
+    "zh": "OPKO Health, Inc. 作为一家医疗保健公司，在美国、爱尔兰、智利、西班牙、以色列、墨西哥和国际上开展业务。该公司经营两个部门：制药部门和诊断部门。制药部门开发了 MDX2001，这是一种针对多种类型的四特异",
     "track": "其它",
     "mcap": 1232560752,
     "mv": 3.01,
     "px": 1.66,
     "prePx": 1.71,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 10.84,
+    "closePx": 1.84,
     "earn": false
    },
    {
     "sym": "ETOR",
     "name": "eToro Common Shares",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "资本市场",
+    "zh": "eToro Group Ltd. 从事贸易业务。其多资产平台支持股票、加密资产、商品、货币和期权的交易和投资，这些资产可以作为资产或与各种基础资产类型相关的衍生品进行交易。该公司还运营 eTor",
     "track": "其它",
     "mcap": 1583540907,
     "mv": 3,
     "px": 19.66,
     "prePx": 20.25,
     "postPx": null,
-    "closeChg": null,
-    "closePx": null,
+    "closeChg": 1.58,
+    "closePx": 19.97,
     "earn": false
    }
   ]
@@ -35145,8 +36321,8 @@
     "sym": "BTU",
     "name": "Peabody Energy",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "动力煤",
+    "zh": "皮博迪能源公司从事冶金煤和动力煤的生产。该公司通过 Seaborne Thermal、Seaborne Metallurgical、Powder River Basin 和其他美国热力部门运营。该公司在澳大利亚新南威尔士",
     "track": "其它",
     "mcap": 1884574000,
     "mv": 4.07,
@@ -35401,8 +36577,8 @@
     "sym": "RUN",
     "name": "Sunrun",
     "sec": "Miscellaneous",
-    "ind": "",
-    "zh": "",
+    "ind": "太阳的",
+    "zh": "Sunrun Inc. 在美国设计、开发、安装、销售、拥有和维护住宅太阳能系统。该公司销售太阳能系统和产品，例如面板和支架；以及为客户产生的太阳能销售线索。它提供电池存储和太阳能系统",
     "track": "其它",
     "mcap": 1596940363,
     "mv": 3.97,
@@ -35449,8 +36625,8 @@
     "sym": "OCUL",
     "name": "Ocular Therapeutix",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Oural Therapeutix, Inc. 是一家生物制药公司，在美国利用其基于生物可吸收水凝胶的配方技术从事视网膜疾病和其他眼部疾病疗法的开发和商业化。该公司销售 DEXTENZA，一种地塞米松眼科药物",
     "track": "其它",
     "mcap": 1225527219,
     "mv": 3.95,
@@ -35625,8 +36801,8 @@
     "sym": "FNV",
     "name": "Franco-Nevada",
     "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "ind": "金子",
+    "zh": "Franco-Nevada Corporation 作为一家特许权使用费和流媒体公司，专注于南美洲、中美洲、墨西哥、美国、加拿大、澳大利亚、欧洲和非洲的贵金属。该公司通过贵金属、其他采矿和能源部门开展业务。它还管理其 p",
     "track": "其它",
     "mcap": 43066449300,
     "mv": 3.89,
@@ -35801,8 +36977,8 @@
     "sym": "TH",
     "name": "Target Hospitality",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "专业商业服务",
+    "zh": "Target Hospitality Corp. 在北美经营一家专业租赁和酒店服务公司。它通过酒店和设施服务部、South、Workforce Hospitality Solutions 和政府部门运营。该公司拥有专业租",
     "track": "其它",
     "mcap": 1094872314,
     "mv": 3.85,
@@ -36009,8 +37185,8 @@
     "sym": "BKR",
     "name": "Baker Hughes",
     "sec": "可选消费",
-    "ind": "",
-    "zh": "",
+    "ind": "石油和天然气设备与服务",
+    "zh": "贝克休斯公司为能源和工业价值链提供一系列技术和服务。其油田服务和设备部门设计和制造陆上勘探、评估、开发、生产、复兴和退役产品及相关服务",
     "track": "其它",
     "mcap": 44499846375,
     "mv": 3.77,
@@ -36297,8 +37473,8 @@
     "sym": "OCGN",
     "name": "Ocugen",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Ocugen, Inc. 是一家生物制药公司，专注于发现、开发和商业化可改善患者健康的新型基因和细胞疗法、生物制剂和疫苗。该公司的管道产品包括 OCU400，这是一种新型基因治疗候选产品，可恢复视网膜完整性和",
     "track": "其它",
     "mcap": 260553540,
     "mv": 3.69,
@@ -36745,8 +37921,8 @@
     "sym": "FLR",
     "name": "Fluor",
     "sec": "工业",
-    "ind": "",
-    "zh": "",
+    "ind": "工程建筑",
+    "zh": "福陆公司提供工程、采购和施工 (EPC)；制造和模块化；和全球项目管理服务。该公司通过三个部门运营：城市解决方案部门、能源解决方案部门和使命解决方案部门。城市解决方案部门提供 EPC 和项目",
     "track": "其它",
     "mcap": 5590115579,
     "mv": 3.58,
@@ -37513,8 +38689,8 @@
     "sym": "SLGL",
     "name": "Sol-Gel Technologies",
     "sec": "医疗",
-    "ind": "",
-    "zh": "",
+    "ind": "生物技术",
+    "zh": "Sol-Gel Technologies Ltd. 与其子公司 Sol-Gel Technologies Inc. 一起为以色列、中国、瑞士、加拿大、美国和国际上患有严重皮肤病的患者开发外用皮肤病药物。该公司提供 Twy",
     "track": "其它",
     "mcap": 180626525,
     "mv": 3.32,
@@ -37753,8 +38929,8 @@
     "sym": "META",
     "name": "脸书(META)",
     "sec": "平台",
-    "ind": "",
-    "zh": "",
+    "ind": "互联网内容和信息",
+    "zh": "Meta Platforms, Inc. 致力于开发产品，使人们能够在美国、加拿大、欧洲、亚太地区和国际上通过移动设备、个人电脑、虚拟现实 (VR) 耳机和人工智能眼镜与朋友和家人联系和分享。它的运作方式是",
     "track": "其它",
     "mcap": 1433642344333,
     "mv": 3.22,
@@ -37945,8 +39121,8 @@
     "sym": "CLMT",
     "name": "Calumet",
     "sec": "能源",
-    "ind": "",
-    "zh": "",
+    "ind": "特种化学品",
+    "zh": "Calumet, Inc. 在北美和国际上生产、配制和销售一系列专业品牌产品和可再生燃料。它通过专业产品和解决方案运营；性能品牌；和蒙大拿州/可再生能源部门。特种产品和解决方案部门",
     "track": "其它",
     "mcap": 2689462193,
     "mv": 3.18,
@@ -38073,8 +39249,8 @@
     "sym": "OGG",
     "name": "Osisko Gold Common Shares",
     "sec": "原材料",
-    "ind": "",
-    "zh": "",
+    "ind": "金子",
+    "zh": "Osisko Gold Group Inc. 及其子公司在加拿大、墨西哥和美国收购、勘探和开发贵金属资源。该公司勘探贵金属和贱金属、金、银、锂、铜、铅和锌矿床。其旗舰资产是 1",
     "track": "其它",
     "mcap": 618190375,
     "mv": 3.17,
@@ -38089,8 +39265,8 @@
     "sym": "UWMC",
     "name": "UWM",
     "sec": "金融",
-    "ind": "",
-    "zh": "",
+    "ind": "抵押贷款金融",
+    "zh": "UWM Holdings Corporation 在美国从事住宅抵押贷款的发放、销售和服务。该公司通过批发渠道提供抵押贷款。它主要源自合格贷款和政府贷款。公司成立于1986年，总部位于波",
     "track": "其它",
     "mcap": 1776585362,
     "mv": 3.17,
