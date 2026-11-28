@@ -8928,10 +8928,10 @@
   "at": "2026-11-27T23:32:28.370Z"
  },
  "BMA": {
-  "ind": "Banks - Regional",
-  "desc": "Banco Macro S.A. provides various banking products and services to retail and corporate customers in Argentina",
+  "ind": "银行 - 区域",
+  "desc": "Banco Macro S.A. 为阿根廷的零售和企业客户提供各种银行产品和服务。它提供各种零售银行产品和服务，例如储蓄和支票账户、定期存款、信用卡和借记卡、消费金融贷款、抵押贷款、汽车贷款",
   "en": "Banco Macro S.A. provides various banking products and services to retail and corporate customers in Argentina. It offers various retail banking products and se",
-  "at": "2026-11-27T23:32:29.528Z"
+  "at": "2026-11-28T00:16:57.038Z"
  },
  "LPL": {
   "ind": "消费电子产品",
@@ -9256,5 +9256,113 @@
   "desc": "eToro Group Ltd. 从事贸易业务。其多资产平台支持股票、加密资产、商品、货币和期权的交易和投资，这些资产可以作为资产或与各种基础资产类型相关的衍生品进行交易。该公司还运营 eTor",
   "en": "eToro Group Ltd. engages in the trading business. Its multi-asset platform supports trading and investing in equities, crypto assets, commodities, currencies, a",
   "at": "2026-11-27T23:33:39.521Z"
+ },
+ "RVTY": {
+  "ind": "诊断与研究",
+  "desc": "Revvity, Inc. 提供健康科学解决方案、技术和服务。该公司提供仪器、试剂、软件、订阅、检测和成像技术、延长保修以及培训和服务；以及仪器、试剂、检测平台和软件产品",
+  "en": "Revvity, Inc. provides health sciences solutions, technologies, and services. The company offers instruments, reagents, software, subscriptions, detection and i",
+  "at": "2026-11-28T00:16:46.411Z"
+ },
+ "SLM": {
+  "ind": "信用服务",
+  "desc": "SLM Corporation 通过其子公司向学生及其家庭发放并提供私人教育贷款，以支付他们在美国的教育费用。它提供零售存款账户，包括高收益储蓄账户、货币市场账户和存款证。",
+  "en": "SLM Corporation, through its subsidiaries, originates and services private education loans to students and their families to finance the cost of their education",
+  "at": "2026-11-28T00:16:47.543Z"
+ },
+ "YUMC": {
+  "ind": "餐饮",
+  "desc": "百胜中国控股有限公司在中华人民共和国拥有、经营和特许经营餐厅。该公司通过肯德基、必胜客和所有其他两个部门运营。该公司经营肯德基、必胜客、Taco Bell、Lavazza、小肥羊和黄记黄概念餐厅。公司",
+  "en": "Yum China Holdings, Inc. owns, operates, and franchises restaurants in the People's Republic of China. The company operates through two KFC, Pizza Hut, and All ",
+  "at": "2026-11-28T00:16:48.038Z"
+ },
+ "PNBK": {
+  "ind": "银行 - 区域",
+  "desc": "Patriot National Bancorp, Inc. 作为爱国者银行 (Patriot Bank, N.A.) 的控股公司运营，为个人、中小型企业和专业人士提供社区银行服务。公司接受消费者和商业存款账户，如支票、",
+  "en": "Patriot National Bancorp, Inc. operates as the holding company for Patriot Bank, N.A. that provides community banking services to individuals, small and medium-",
+  "at": "2026-11-28T00:16:48.484Z"
+ },
+ "TPL": {
+  "ind": "石油和天然气勘探与生产",
+  "desc": "德克萨斯太平洋土地公司从事土地和资源管理以及供水服务和运营业务。土地和资源管理部门管理二叠纪盆地的地表面积以及石油和天然气特许权权益。该部门还从事地役权业务，例如运输",
+  "en": "Texas Pacific Land Corporation engages in the land and resource management, and water services and operations businesses. The Land and Resource Management segme",
+  "at": "2026-11-28T00:16:49.484Z"
+ },
+ "QSR": {
+  "ind": "餐饮",
+  "desc": "Restaurant Brands International Inc. 是一家快餐服务公司，在加拿大、美国和国际上运营。该公司通过六个部门运营：Tim Hortons、汉堡王、Popeyes Louisiana Kit",
+  "en": "Restaurant Brands International Inc. operates as a quick service restaurant company in Canada, the United States, and internationally. It operates through six s",
+  "at": "2026-11-28T00:16:49.893Z"
+ },
+ "MTD": {
+  "ind": "诊断与研究",
+  "desc": "梅特勒-托利多国际公司在美洲、欧洲、亚洲和国际上制造和供应精密仪器并提供服务。该公司通过五个部门运营：美国业务部门、瑞士业务部门、西欧业务部门、中国业务部门和其他业务部门。公司",
+  "en": "Mettler-Toledo International Inc. manufactures and supplies precision instruments and services in the Americas, Europe, Asia, and internationally. It operates t",
+  "at": "2026-11-28T00:16:50.040Z"
+ },
+ "FNKO": {
+  "ind": "闲暇",
+  "desc": "Funko, Inc. 是一家流行文化消费品公司，在美国、欧洲和国际上设计、制造和销售授权的流行文化产品。它提供媒体和娱乐内容，包括电影、电视节目、视频游戏、音乐和体育；数字、手写",
+  "en": "Funko, Inc., a pop culture consumer products company, designs, manufactures, and markets licensed pop culture products in the United States, Europe, and interna",
+  "at": "2026-11-28T00:16:50.450Z"
+ },
+ "TEO": {
+  "ind": "电信服务",
+  "desc": "Telecom Argentina S.A. 及其子公司在阿根廷、巴拉圭、乌拉圭、智利和美国提供电信服务。该公司提供移动电信服务，包括语音通信、高速移动互联网内容和应用程序下载",
+  "en": "Telecom Argentina S.A., together with its subsidiaries, provides telecommunications services in Argentina, Paraguay, Uruguay, Chile and the United States. The c",
+  "at": "2026-11-28T00:16:51.490Z"
+ },
+ "SEPN": {
+  "ind": "生物技术",
+  "desc": "Septerna, Inc. 是一家临床阶段的生物技术公司，发现和开发 G 蛋白偶联受体 (GPCR) 口服小分子产品，用于治疗内分泌、免疫和炎症以及代谢疾病。开发PTH1R计划，口服小分子甲状旁腺激素1",
+  "en": "Septerna, Inc., a clinical-stage biotechnology company, discovers and develops G protein-coupled receptor (GPCR) oral small molecule products for the treatment ",
+  "at": "2026-11-28T00:16:51.791Z"
+ },
+ "DRUG": {
+  "ind": "生物技术",
+  "desc": "Bright Minds Biosciences Inc. 是一家生物技术公司，致力于开发治​​疗方法来改善美国患有严重和改变生活的疾病患者的生活。其产品组合包括 5-HT2 受体，这是治疗癫痫和神经精神疾病的血清素激动",
+  "en": "Bright Minds Biosciences Inc., a biotechnology company, develops therapeutics to improve the lives of patients with severe and life-altering diseases in the Uni",
+  "at": "2026-11-28T00:16:52.285Z"
+ },
+ "DUOL": {
+  "ind": "软件 - 应用程序",
+  "desc": "Duolingo, Inc. 在美国、英国和国际上作为移动学习平台运营。该公司通过其 Duolingo 应用程序提供 250 种语言课程，包括西班牙语、英语、法语、德语、意大利语、葡萄牙语、日语和中文。它还提供了数字 E",
+  "en": "Duolingo, Inc. operates as a mobile learning platform in the United States, the United Kingdom, and internationally. The company offers 250 language courses, in",
+  "at": "2026-11-28T00:16:53.123Z"
+ },
+ "ARLO": {
+  "ind": "建筑产品和设备",
+  "desc": "Arlo Technologies, Inc. 及其子公司在美洲、欧洲、中东、非洲和亚太地区提供基于云的平台服务。该公司提供 Arlo Essential 摄像头和门铃，提供智能家居保护，包括自动隐私防护罩、",
+  "en": "Arlo Technologies, Inc., together with its subsidiaries, provides cloud-based platform services in the Americas, Europe, the Middle East, Africa, and the Asia P",
+  "at": "2026-11-28T00:16:53.683Z"
+ },
+ "PPC": {
+  "ind": "包装食品",
+  "desc": "Pilgrim's Pride Corporation 为美国、欧洲和墨西哥的零售商、分销商和食品服务运营商生产、加工、营销和分销新鲜、冷冻和增值鸡肉和猪肉产品。该公司提供新鲜产品，包括冷藏整体或切块产品",
+  "en": "Pilgrim's Pride Corporation produces, processes, markets, and distributes fresh, frozen, and value-added chicken and pork products to retailers, distributors, a",
+  "at": "2026-11-28T00:16:54.150Z"
+ },
+ "PRCH": {
+  "ind": "保险 - 财产与意外伤害",
+  "desc": "Porch Group, Inc. 在美国开发和销售软件和数据解决方案、管理保险服务并提供与住房所有权相关的消费者服务。它通过四个部门运营：保险服务部门、软件和数据部门、消费者服务部门和互惠部门。保险",
+  "en": "Porch Group, Inc. develops and sells software and data solutions, manages insurance services, and provides consumer services related to homeownership in the Uni",
+  "at": "2026-11-28T00:16:55.107Z"
+ },
+ "BSVN": {
+  "ind": "银行 - 区域",
+  "desc": "Bank7 Corp. 作为 Bank7 的银行控股公司运营，为个人和企业客户提供银行和金融服务。提供商业存款、商业支票、货币市场等存款账户；和零售存款服务，例如存款证、存款证",
+  "en": "Bank7 Corp. operates as a bank holding company for Bank7 that provides banking and financial services to individual and corporate customers. It provides commerc",
+  "at": "2026-11-28T00:16:55.542Z"
+ },
+ "PLAY": {
+  "ind": "娱乐",
+  "desc": "Dave & Buster's Entertainment, Inc. 在北美拥有并经营成人和家庭娱乐和餐饮场所。其场所提供主菜和开胃菜菜单，以及精选的酒精和非酒精饮料；以及各种娱乐景点为中心",
+  "en": "Dave & Buster's Entertainment, Inc. owns and operates entertainment and dining venues for adults and families in North America. Its venues offer a menu of entré",
+  "at": "2026-11-28T00:16:56.005Z"
+ },
+ "SGI": {
+  "ind": "家具、固定装置和电器",
+  "desc": "Somnigroup International Inc. 及其子公司在美国和国际上设计、制造、分销和零售床上用品。它提供床垫、地基和可调节地基、可调节底座以及包括枕头在内的其他产品",
+  "en": "Somnigroup International Inc., together with its subsidiaries, designs, manufactures, distributes, and retails bedding products in the United States and interna",
+  "at": "2026-11-28T00:16:56.609Z"
  }
 }

@@ -1,6 +1,6 @@
 window.YF_DATA = {
  "meta": {
-  "syncedAt": "2026-11-27T23:38:58.710Z",
+  "syncedAt": "2026-11-28T00:18:33.734Z",
   "source": "Yahoo Finance / Nasdaq",
   "preDate": "2026-11-27",
   "postDate": "2026-11-26"
@@ -301,18 +301,18 @@ window.YF_DATA = {
   }
  },
  "btc": {
-  "price": 60495.5703125,
-  "chg": 0.0014205787360221933,
-  "d5": 0.6680864454289726,
-  "d20": -20.13462385593805,
-  "date": "2026-11-26"
+  "price": 59873.609375,
+  "chg": -1.026703909936344,
+  "d5": -0.36689210090921076,
+  "d20": -20.95572768161911,
+  "date": "2026-11-27"
  },
  "eth": {
-  "price": 1687.6099853515625,
-  "chg": -0.007811380617406272,
-  "d5": 0.3213280679679187,
-  "d20": -24.493323359644613,
-  "date": "2026-11-26"
+  "price": 1670.5699462890625,
+  "chg": -1.0174467909365714,
+  "d5": -0.6916307103744246,
+  "d20": -25.255725058259348,
+  "date": "2026-11-27"
  },
  "breadth": {
   "rsp20": -0.7544030421604897,
@@ -12402,7 +12402,7 @@ window.YF_DATA = {
   ]
  },
  "earnBeat": {
-  "updatedAt": "2026-11-27T23:38:58.710Z",
+  "updatedAt": "2026-11-28T00:18:33.734Z",
   "quarters": [
    {
     "q": "2026Q4",
@@ -14658,7 +14658,7 @@ window.YF_DATA = {
  "movers": {
   "date": "20261127",
   "closeDate": "2026-11-27",
-  "ts": "2026-11-27T23:35:42.171Z",
+  "ts": "2026-11-28T00:17:36.090Z",
   "pool": 3686,
   "universe": 3690,
   "preTotal": 0,
@@ -23139,7 +23139,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 19.83,
-    "earn": false
+    "earn": false,
+    "ind": "诊断与研究",
+    "zh": "Revvity, Inc. 提供健康科学解决方案、技术和服务。该公司提供仪器、试剂、软件、订阅、检测和成像技术、延长保修以及培训和服务；以及仪器、试剂、检测平台和软件产品"
    },
    {
     "sym": "BXBL",
@@ -23217,7 +23219,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -9.83,
-    "earn": false
+    "earn": false,
+    "ind": "信用服务",
+    "zh": "SLM Corporation 通过其子公司向学生及其家庭发放并提供私人教育贷款，以支付他们在美国的教育费用。它提供零售存款账户，包括高收益储蓄账户、货币市场账户和存款证。"
    },
    {
     "sym": "YUMC",
@@ -23235,7 +23239,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -8.63,
-    "earn": false
+    "earn": false,
+    "ind": "餐饮",
+    "zh": "百胜中国控股有限公司在中华人民共和国拥有、经营和特许经营餐厅。该公司通过肯德基、必胜客和所有其他两个部门运营。该公司经营肯德基、必胜客、Taco Bell、Lavazza、小肥羊和黄记黄概念餐厅。公司"
    },
    {
     "sym": "DEFT",
@@ -23293,7 +23299,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 7.72,
-    "earn": false
+    "earn": false,
+    "ind": "银行 - 区域",
+    "zh": "Patriot National Bancorp, Inc. 作为爱国者银行 (Patriot Bank, N.A.) 的控股公司运营，为个人、中小型企业和专业人士提供社区银行服务。公司接受消费者和商业存款账户，如支票、"
    },
    {
     "sym": "TPL",
@@ -23311,7 +23319,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 6.14,
-    "earn": false
+    "earn": false,
+    "ind": "石油和天然气勘探与生产",
+    "zh": "德克萨斯太平洋土地公司从事土地和资源管理以及供水服务和运营业务。土地和资源管理部门管理二叠纪盆地的地表面积以及石油和天然气特许权权益。该部门还从事地役权业务，例如运输"
    },
    {
     "sym": "ZNTL",
@@ -23469,7 +23479,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -5.34,
-    "earn": false
+    "earn": false,
+    "ind": "餐饮",
+    "zh": "Restaurant Brands International Inc. 是一家快餐服务公司，在加拿大、美国和国际上运营。该公司通过六个部门运营：Tim Hortons、汉堡王、Popeyes Louisiana Kit"
    },
    {
     "sym": "ALOY",
@@ -23547,7 +23559,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -5.04,
-    "earn": false
+    "earn": false,
+    "ind": "诊断与研究",
+    "zh": "梅特勒-托利多国际公司在美洲、欧洲、亚洲和国际上制造和供应精密仪器并提供服务。该公司通过五个部门运营：美国业务部门、瑞士业务部门、西欧业务部门、中国业务部门和其他业务部门。公司"
    },
    {
     "sym": "FNKO",
@@ -23565,7 +23579,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 4.87,
-    "earn": false
+    "earn": false,
+    "ind": "闲暇",
+    "zh": "Funko, Inc. 是一家流行文化消费品公司，在美国、欧洲和国际上设计、制造和销售授权的流行文化产品。它提供媒体和娱乐内容，包括电影、电视节目、视频游戏、音乐和体育；数字、手写"
    },
    {
     "sym": "IVA",
@@ -23623,7 +23639,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 4.58,
-    "earn": false
+    "earn": false,
+    "ind": "电信服务",
+    "zh": "Telecom Argentina S.A. 及其子公司在阿根廷、巴拉圭、乌拉圭、智利和美国提供电信服务。该公司提供移动电信服务，包括语音通信、高速移动互联网内容和应用程序下载"
    },
    {
     "sym": "RYDE",
@@ -23821,7 +23839,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.83,
-    "earn": false
+    "earn": false,
+    "ind": "生物技术",
+    "zh": "Septerna, Inc. 是一家临床阶段的生物技术公司，发现和开发 G 蛋白偶联受体 (GPCR) 口服小分子产品，用于治疗内分泌、免疫和炎症以及代谢疾病。开发PTH1R计划，口服小分子甲状旁腺激素1"
    },
    {
     "sym": "OTLK",
@@ -23879,7 +23899,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 3.65,
-    "earn": false
+    "earn": false,
+    "ind": "生物技术",
+    "zh": "Bright Minds Biosciences Inc. 是一家生物技术公司，致力于开发治​​疗方法来改善美国患有严重和改变生活的疾病患者的生活。其产品组合包括 5-HT2 受体，这是治疗癫痫和神经精神疾病的血清素激动"
    },
    {
     "sym": "NEOV",
@@ -24057,7 +24079,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.44,
-    "earn": false
+    "earn": false,
+    "ind": "软件 - 应用程序",
+    "zh": "Duolingo, Inc. 在美国、英国和国际上作为移动学习平台运营。该公司通过其 Duolingo 应用程序提供 250 种语言课程，包括西班牙语、英语、法语、德语、意大利语、葡萄牙语、日语和中文。它还提供了数字 E"
    },
    {
     "sym": "ARLO",
@@ -24075,7 +24099,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.41,
-    "earn": false
+    "earn": false,
+    "ind": "建筑产品和设备",
+    "zh": "Arlo Technologies, Inc. 及其子公司在美洲、欧洲、中东、非洲和亚太地区提供基于云的平台服务。该公司提供 Arlo Essential 摄像头和门铃，提供智能家居保护，包括自动隐私防护罩、"
    },
    {
     "sym": "SID",
@@ -24193,7 +24219,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.29,
-    "earn": false
+    "earn": false,
+    "ind": "包装食品",
+    "zh": "Pilgrim's Pride Corporation 为美国、欧洲和墨西哥的零售商、分销商和食品服务运营商生产、加工、营销和分销新鲜、冷冻和增值鸡肉和猪肉产品。该公司提供新鲜产品，包括冷藏整体或切块产品"
    },
    {
     "sym": "MUX",
@@ -24231,7 +24259,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.24,
-    "earn": false
+    "earn": false,
+    "ind": "保险 - 财产与意外伤害",
+    "zh": "Porch Group, Inc. 在美国开发和销售软件和数据解决方案、管理保险服务并提供与住房所有权相关的消费者服务。它通过四个部门运营：保险服务部门、软件和数据部门、消费者服务部门和互惠部门。保险"
    },
    {
     "sym": "GPK",
@@ -24329,7 +24359,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.12,
-    "earn": false
+    "earn": false,
+    "ind": "银行 - 区域",
+    "zh": "Bank7 Corp. 作为 Bank7 的银行控股公司运营，为个人和企业客户提供银行和金融服务。提供商业存款、商业支票、货币市场等存款账户；和零售存款服务，例如存款证、存款证"
    },
    {
     "sym": "OPEN",
@@ -24487,7 +24519,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": -3.02,
-    "earn": false
+    "earn": false,
+    "ind": "娱乐",
+    "zh": "Dave & Buster's Entertainment, Inc. 在北美拥有并经营成人和家庭娱乐和餐饮场所。其场所提供主菜和开胃菜菜单，以及精选的酒精和非酒精饮料；以及各种娱乐景点为中心"
    },
    {
     "sym": "SGI",
@@ -24505,7 +24539,9 @@ window.YF_DATA = {
     "state": "POST",
     "date": "20261127",
     "mv": 3.02,
-    "earn": false
+    "earn": false,
+    "ind": "家具、固定装置和电器",
+    "zh": "Somnigroup International Inc. 及其子公司在美国和国际上设计、制造、分销和零售床上用品。它提供床垫、地基和可调节地基、可调节底座以及包括枕头在内的其他产品"
    }
   ],
   "postDate": "2026-11-27",
@@ -24572,8 +24608,8 @@ window.YF_DATA = {
       "sym": "QSR",
       "name": "Restaurant Brands International Common Shares",
       "sec": "可选消费",
-      "ind": "",
-      "zh": "",
+      "ind": "餐饮",
+      "zh": "Restaurant Brands International Inc. 是一家快餐服务公司，在加拿大、美国和国际上运营。该公司通过六个部门运营：Tim Hortons、汉堡王、Popeyes Louisiana Kit",
       "mcap": 34588126431,
       "mv": -5.34,
       "px": 76.66,
@@ -24586,8 +24622,8 @@ window.YF_DATA = {
       "sym": "MTD",
       "name": "Mettler-Toledo International",
       "sec": "工业",
-      "ind": "",
-      "zh": "",
+      "ind": "诊断与研究",
+      "zh": "梅特勒-托利多国际公司在美洲、欧洲、亚洲和国际上制造和供应精密仪器并提供服务。该公司通过五个部门运营：美国业务部门、瑞士业务部门、西欧业务部门、中国业务部门和其他业务部门。公司",
       "mcap": 33079334747,
       "mv": -5.04,
       "px": 1680.49,
@@ -24614,8 +24650,8 @@ window.YF_DATA = {
       "sym": "TPL",
       "name": "Texas Pacific Land",
       "sec": "能源",
-      "ind": "",
-      "zh": "",
+      "ind": "石油和天然气勘探与生产",
+      "zh": "德克萨斯太平洋土地公司从事土地和资源管理以及供水服务和运营业务。土地和资源管理部门管理二叠纪盆地的地表面积以及石油和天然气特许权权益。该部门还从事地役权业务，例如运输",
       "mcap": 18025153908,
       "mv": 6.14,
       "px": 263.51,
@@ -24628,8 +24664,8 @@ window.YF_DATA = {
       "sym": "YUMC",
       "name": "Yum China",
       "sec": "可选消费",
-      "ind": "",
-      "zh": "",
+      "ind": "餐饮",
+      "zh": "百胜中国控股有限公司在中华人民共和国拥有、经营和特许经营餐厅。该公司通过肯德基、必胜客和所有其他两个部门运营。该公司经营肯德基、必胜客、Taco Bell、Lavazza、小肥羊和黄记黄概念餐厅。公司",
       "mcap": 17621156068,
       "mv": -8.63,
       "px": 52.72,
@@ -24642,8 +24678,8 @@ window.YF_DATA = {
       "sym": "RVTY",
       "name": "Revvity",
       "sec": "工业",
-      "ind": "",
-      "zh": "",
+      "ind": "诊断与研究",
+      "zh": "Revvity, Inc. 提供健康科学解决方案、技术和服务。该公司提供仪器、试剂、软件、订阅、检测和成像技术、延长保修以及培训和服务；以及仪器、试剂、检测平台和软件产品",
       "mcap": 16841822881,
       "mv": 19.83,
       "px": 151.27,
@@ -24656,8 +24692,8 @@ window.YF_DATA = {
       "sym": "SGI",
       "name": "Somnigroup International",
       "sec": "可选消费",
-      "ind": "",
-      "zh": "",
+      "ind": "家具、固定装置和电器",
+      "zh": "Somnigroup International Inc. 及其子公司在美国和国际上设计、制造、分销和零售床上用品。它提供床垫、地基和可调节地基、可调节底座以及包括枕头在内的其他产品",
       "mcap": 14632383115,
       "mv": 3.02,
       "px": 64.85,
@@ -24698,8 +24734,8 @@ window.YF_DATA = {
       "sym": "SLM",
       "name": "SLM",
       "sec": "金融",
-      "ind": "",
-      "zh": "",
+      "ind": "信用服务",
+      "zh": "SLM Corporation 通过其子公司向学生及其家庭发放并提供私人教育贷款，以支付他们在美国的教育费用。它提供零售存款账户，包括高收益储蓄账户、货币市场账户和存款证。",
       "mcap": 3082364977,
       "mv": -9.83,
       "px": 17.3,

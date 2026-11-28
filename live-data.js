@@ -1,6 +1,6 @@
 window.WIND_LIVE = {
  "meta": {
-  "syncedAt": "2026-11-27T23:31:52.019Z",
+  "syncedAt": "2026-11-28T00:16:39.251Z",
   "source": "Yahoo Finance",
   "stockDate": "20261127",
   "indexDate": "20261127",
@@ -661,8 +661,8 @@ window.WIND_LIVE = {
    "level": 10698.81,
    "prev": 10609.3,
    "chg": 0.84,
-   "d5": 3.41,
-   "d20": -0.22,
+   "d5": 2.35,
+   "d20": 0.04,
    "amount": null
   },
   "SX5E.DF": {
